@@ -1,0 +1,98 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"  
+    xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:osys="http://www.bodet-osys.com/facescomponents">
+<h:head>
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- 		<meta http-equiv="X-UA-Compatible" content="EmulateIE8" /> -->
+			<title>evtProduction</title>
+			
+		    <script type="text/javascript"
+				src="../../resources/js/jquery-2.1.3.min.js"></script>
+			<script type="text/javascript"
+				src="../../resources/js/primeui-1.1-min.js"></script>
+		    <script type="text/javascript"
+				src="../../resources/js/primefaces-i18n.js"></script>
+
+		
+			   <link rel="stylesheet" href="../../resources/css/primeui-1.1-min.css" />		
+		       <link rel="stylesheet" href="../../resources/css/theme-tml.css" />
+		       <link rel="stylesheet" href="../../resources/css/style.css" />
+		       <link rel="stylesheet" href="resources/css/bootstrap.min.css" />	
+		       
+			<script type="text/javascript"
+				src="../../resources/js/primeui/button/button.js"></script>
+			<script type="text/javascript"
+				src="../../resources/js/primeui/dialog/dialog.js"></script>
+			<script type="text/javascript" 
+				src="../../resources/js/multitimeline.js"></script>
+			
+			 
+			
+</h:head>
+	<h:body>	
+	    
+	    <p:tabView>
+	        <p:tab title="Terminaux">
+				<p:dataTable paginator="true" rows="10"  rowsPerPageTemplate="5,10,15,20,25"			 	
+			 	height="150">
+			 	<f:facet name="header">List des terminaux</f:facet>	
+				    <p:column headerText="N°">
+				        <h:outputText value="12" />
+				        12
+				    </p:column>
+				 
+				    <p:column headerText="Désignation">
+				        <h:outputText value="CK 3 LAVAL" />
+				    </p:column>
+				 
+				    <p:column headerText="Secteur">
+				        <h:outputText value="LAVGEO_1" />
+				    </p:column>
+				 
+				    <p:column headerText="Atelier">
+				        <h:outputText value="LAVATEL_1" />
+				    </p:column>
+				    
+				    <p:column headerText="Multi Equi.">
+				        <h:outputText value="N" />
+				    </p:column>
+				    
+				    <p:column headerText="Equipement">
+				        <h:outputText value="LAVMACH" />
+				    </p:column>
+				    <p:column headerText="Dernière Connexion">
+				        <h:outputText value="05/12/2014 07:38:24" />
+				    </p:column>
+				</p:dataTable>
+	        </p:tab>
+	        <p:tab title="Recherche">
+	        <br/>
+	        	<h:form id="formTabSearch" prependId="false"> 
+					<div class="row">
+						<div class="col-mod-4 col-md-offset-4">
+							<div class="row">
+								<div class="col-md-1">
+									<h:outputLabel value="Rechercher : " for="inputSearch" />
+								</div>
+								<div class="col-md-4">
+									<h:inputText id="inputSearch" name="inputSearch" class="col-md-9" />
+								</div>
+								<div class="col-md-4">
+									<p:commandButton id="searchTerminal" 
+										value="Rechercher"
+										class="commandButton btnOther col-md-9" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</h:form>
+	        </p:tab>
+	    </p:tabView>
+	
+	</h:body>
+</html>

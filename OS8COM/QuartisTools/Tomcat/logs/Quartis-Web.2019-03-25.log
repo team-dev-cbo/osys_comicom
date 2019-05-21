@@ -1,0 +1,10 @@
+08:06:20.594 DEBUG - TomcatListener contextInitialized - servletContext.realPath : C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web 
+08:06:20.672  INFO - PropertiesDelegate Ouverture du fichier de configuration à l'emplacement : C:\Osys\QuartisTools\Tomcat/conf/quartis-web.properties 
+08:06:20.999  INFO - TomcatListener -----> Supression des fichier temporaires 
+08:06:23.979  INFO - TomcatListener Ouverture du fichier indiquant la base de données : C:\Osys\QuartisTools\Tomcat/conf/datasources.xml... 
+08:06:26.026  INFO - DataSourceManager Création de la datasource : QuartisWeb-PU 
+08:06:27.180 DEBUG - XmlFile saveXmlFile - needsLock : true, pathFicXml : C:/Osys/QUARTIS_PRO/quartis-pro-web/users/Config\utilisateur.xml 
+08:06:27.180 DEBUG - XmlFile saveXmlFile - Verrouillage du fichier 'C:/Osys/QUARTIS_PRO/quartis-pro-web/users/Config\utilisateur.xml'. 
+08:06:28.912  INFO - XmlFile Création d'un sauvegarde pour le fichier utilisateur.xml... 
+08:06:28.943  INFO - XmlFile Sauvegarde créée. 
+08:06:29.021 DEBUG - XmlFile saveXmlFile - Déverrouillage du fichier 'C:/Osys/QUARTIS_PRO/quartis-pro-web/users/Config\utilisateur.xml'. 

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<tocdata>
+<item name="AttenteSaisie" url="scenario/lpx/fonctions/terminal/HIDD_AttenteSaisie.htm" />
+<item name="AttenteSaisieTempo" url="scenario/lpx/fonctions/terminal/HIDD_AttenteSaisieTempo.htm" />
+<item name="ComposeMessage2x16" url="scenario/lpx/fonctions/terminal/HIDD_ComposeMessage2x16.htm" />
+<item name="ComposeMessage2x40" url="scenario/lpx/fonctions/terminal/HIDD_ComposeMessage2x40.htm" />
+<item name="EcritTerminal" url="scenario/lpx/fonctions/terminal/HIDD_EcritTerminal.htm" />
+<item name="EcritTerminalAvecNumero" url="scenario/lpx/fonctions/terminal/HIDD_EcritTerminalAvecNumero.htm" />
+<item name="LitDateHeureMessage" url="scenario/lpx/fonctions/terminal/HIDD_LitDateHeureMessage.htm" />
+<item name="LitMessage" url="scenario/lpx/fonctions/terminal/HIDD_LitMessage.htm" />
+<item name="LitNumeroTerminal" url="scenario/lpx/fonctions/terminal/HIDD_LitNumeroTerminal.htm" />
+<item name="LitPeriphMessage" url="scenario/lpx/fonctions/terminal/HIDD_LitPeriphMessage.htm" />
+<item name="LitValAttenteSaisieTempo" url="scenario/lpx/fonctions/terminal/HIDD_LitValAttenteSaisieTempo.htm" />
+
+</tocdata>

@@ -1,0 +1,1070 @@
+11:09:44.217 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+11:09:51.248 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+11:09:51.259 WARNING [com.sun.faces.lifecycle.ApplyRequestValuesPhase execute] - /jsf/terminal/initTerminalTabView.xhtml @41,73 actionListener="#{terminalController.initView}": org.springframework.transaction.CannotCreateTransactionException: Could not open Hibernate Session for transaction; nested exception is org.hibernate.exception.GenericJDBCException: Could not open connection 
+javax.el.ELException: /jsf/terminal/initTerminalTabView.xhtml @41,73 actionListener="#{terminalController.initView}": org.springframework.transaction.CannotCreateTransactionException: Could not open Hibernate Session for transaction; nested exception is org.hibernate.exception.GenericJDBCException: Could not open connection
+	at com.sun.faces.facelets.el.TagMethodExpression.invoke(TagMethodExpression.java:111)
+	at javax.faces.event.MethodExpressionActionListener.processAction(MethodExpressionActionListener.java:147)
+	at javax.faces.event.ActionEvent.processListener(ActionEvent.java:88)
+	at javax.faces.component.UIComponentBase.broadcast(UIComponentBase.java:813)
+	at javax.faces.component.UICommand.broadcast(UICommand.java:300)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:790)
+	at javax.faces.component.UIViewRoot.processDecodes(UIViewRoot.java:931)
+	at com.sun.faces.lifecycle.ApplyRequestValuesPhase.execute(ApplyRequestValuesPhase.java:78)
+	at com.sun.faces.lifecycle.Phase.doPhase(Phase.java:101)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:198)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:646)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.springframework.transaction.CannotCreateTransactionException: Could not open Hibernate Session for transaction; nested exception is org.hibernate.exception.GenericJDBCException: Could not open connection
+	at org.springframework.orm.hibernate4.HibernateTransactionManager.doBegin(HibernateTransactionManager.java:440)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:371)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:335)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:105)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:202)
+	at com.sun.proxy.$Proxy89.findAllAtelier(Unknown Source)
+	at fr.osys.optima.tml.web.services.common.impl.CommonWebServicesImpl.listAtelier(CommonWebServicesImpl.java:53)
+	at fr.osys.optima.tml.web.view.terminal.manager.TerminalManager.initComboBoxCriteria(TerminalManager.java:391)
+	at fr.osys.optima.tml.web.view.terminal.manager.TerminalManager.initComboBox(TerminalManager.java:162)
+	at fr.osys.optima.tml.web.view.terminal.TerminalController.initView(TerminalController.java:209)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.el.parser.AstValue.invoke(AstValue.java:191)
+	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:276)
+	at com.sun.faces.facelets.el.TagMethodExpression.invoke(TagMethodExpression.java:105)
+	... 24 more
+Caused by: org.hibernate.exception.GenericJDBCException: Could not open connection
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:54)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:125)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:110)
+	at org.hibernate.engine.jdbc.internal.LogicalConnectionImpl.obtainConnection(LogicalConnectionImpl.java:304)
+	at org.hibernate.engine.jdbc.internal.LogicalConnectionImpl.getConnection(LogicalConnectionImpl.java:169)
+	at org.hibernate.engine.transaction.internal.jdbc.JdbcTransaction.doBegin(JdbcTransaction.java:67)
+	at org.hibernate.engine.transaction.spi.AbstractTransactionImpl.begin(AbstractTransactionImpl.java:160)
+	at org.hibernate.internal.SessionImpl.beginTransaction(SessionImpl.java:1395)
+	at org.springframework.orm.hibernate4.HibernateTransactionManager.doBegin(HibernateTransactionManager.java:399)
+	... 41 more
+Caused by: java.sql.SQLException: Impossible d'ouvrir la base de données "QUARTIS_PRO" demandée par la connexion. La connexion a échoué.
+	at net.sourceforge.jtds.jdbc.SQLDiagnostic.addDiagnostic(SQLDiagnostic.java:368)
+	at net.sourceforge.jtds.jdbc.TdsCore.tdsErrorToken(TdsCore.java:2820)
+	at net.sourceforge.jtds.jdbc.TdsCore.nextToken(TdsCore.java:2258)
+	at net.sourceforge.jtds.jdbc.TdsCore.login(TdsCore.java:603)
+	at net.sourceforge.jtds.jdbc.ConnectionJDBC2.<init>(ConnectionJDBC2.java:345)
+	at net.sourceforge.jtds.jdbc.ConnectionJDBC3.<init>(ConnectionJDBC3.java:50)
+	at net.sourceforge.jtds.jdbc.Driver.connect(Driver.java:184)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:173)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:164)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:149)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:128)
+	at org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:141)
+	at org.hibernate.internal.AbstractSessionImpl$NonContextualJdbcConnectionAccess.obtainConnection(AbstractSessionImpl.java:292)
+	at org.hibernate.engine.jdbc.internal.LogicalConnectionImpl.obtainConnection(LogicalConnectionImpl.java:297)
+	... 46 more
+ 
+11:09:51.387 WARNING [com.sun.faces.lifecycle.ApplyRequestValuesPhase execute] - /jsf/terminal/initTerminalTabView.xhtml @41,73 actionListener="#{terminalController.initView}": org.springframework.transaction.CannotCreateTransactionException: Could not open Hibernate Session for transaction; nested exception is org.hibernate.exception.GenericJDBCException: Could not open connection 
+javax.el.ELException: /jsf/terminal/initTerminalTabView.xhtml @41,73 actionListener="#{terminalController.initView}": org.springframework.transaction.CannotCreateTransactionException: Could not open Hibernate Session for transaction; nested exception is org.hibernate.exception.GenericJDBCException: Could not open connection
+	at com.sun.faces.facelets.el.TagMethodExpression.invoke(TagMethodExpression.java:111)
+	at javax.faces.event.MethodExpressionActionListener.processAction(MethodExpressionActionListener.java:147)
+	at javax.faces.event.ActionEvent.processListener(ActionEvent.java:88)
+	at javax.faces.component.UIComponentBase.broadcast(UIComponentBase.java:813)
+	at javax.faces.component.UICommand.broadcast(UICommand.java:300)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:790)
+	at javax.faces.component.UIViewRoot.processDecodes(UIViewRoot.java:931)
+	at com.sun.faces.lifecycle.ApplyRequestValuesPhase.execute(ApplyRequestValuesPhase.java:78)
+	at com.sun.faces.lifecycle.Phase.doPhase(Phase.java:101)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:198)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:646)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.springframework.transaction.CannotCreateTransactionException: Could not open Hibernate Session for transaction; nested exception is org.hibernate.exception.GenericJDBCException: Could not open connection
+	at org.springframework.orm.hibernate4.HibernateTransactionManager.doBegin(HibernateTransactionManager.java:440)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:371)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:335)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:105)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:202)
+	at com.sun.proxy.$Proxy89.findAllAtelier(Unknown Source)
+	at fr.osys.optima.tml.web.services.common.impl.CommonWebServicesImpl.listAtelier(CommonWebServicesImpl.java:53)
+	at fr.osys.optima.tml.web.view.terminal.manager.TerminalManager.initComboBoxCriteria(TerminalManager.java:391)
+	at fr.osys.optima.tml.web.view.terminal.manager.TerminalManager.initComboBox(TerminalManager.java:162)
+	at fr.osys.optima.tml.web.view.terminal.TerminalController.initView(TerminalController.java:209)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.el.parser.AstValue.invoke(AstValue.java:191)
+	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:276)
+	at com.sun.faces.facelets.el.TagMethodExpression.invoke(TagMethodExpression.java:105)
+	... 24 more
+Caused by: org.hibernate.exception.GenericJDBCException: Could not open connection
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:54)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:125)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:110)
+	at org.hibernate.engine.jdbc.internal.LogicalConnectionImpl.obtainConnection(LogicalConnectionImpl.java:304)
+	at org.hibernate.engine.jdbc.internal.LogicalConnectionImpl.getConnection(LogicalConnectionImpl.java:169)
+	at org.hibernate.engine.transaction.internal.jdbc.JdbcTransaction.doBegin(JdbcTransaction.java:67)
+	at org.hibernate.engine.transaction.spi.AbstractTransactionImpl.begin(AbstractTransactionImpl.java:160)
+	at org.hibernate.internal.SessionImpl.beginTransaction(SessionImpl.java:1395)
+	at org.springframework.orm.hibernate4.HibernateTransactionManager.doBegin(HibernateTransactionManager.java:399)
+	... 41 more
+Caused by: java.sql.SQLException: Impossible d'ouvrir la base de données "QUARTIS_PRO" demandée par la connexion. La connexion a échoué.
+	at net.sourceforge.jtds.jdbc.SQLDiagnostic.addDiagnostic(SQLDiagnostic.java:368)
+	at net.sourceforge.jtds.jdbc.TdsCore.tdsErrorToken(TdsCore.java:2820)
+	at net.sourceforge.jtds.jdbc.TdsCore.nextToken(TdsCore.java:2258)
+	at net.sourceforge.jtds.jdbc.TdsCore.login(TdsCore.java:603)
+	at net.sourceforge.jtds.jdbc.ConnectionJDBC2.<init>(ConnectionJDBC2.java:345)
+	at net.sourceforge.jtds.jdbc.ConnectionJDBC3.<init>(ConnectionJDBC3.java:50)
+	at net.sourceforge.jtds.jdbc.Driver.connect(Driver.java:184)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:173)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:164)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:149)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:128)
+	at org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:141)
+	at org.hibernate.internal.AbstractSessionImpl$NonContextualJdbcConnectionAccess.obtainConnection(AbstractSessionImpl.java:292)
+	at org.hibernate.engine.jdbc.internal.LogicalConnectionImpl.obtainConnection(LogicalConnectionImpl.java:297)
+	... 46 more
+ 
+11:24:57.192 INFO [org.apache.coyote.http11.Http11NioProtocol pause] - Suspension de Coyote HTTP/1.1 sur http-8383  
+11:24:57.192 INFO [org.apache.coyote.ajp.AjpAprProtocol pause] - Pausing Coyote AJP/1.3 on ajp-8309  
+11:24:58.206 INFO [org.apache.catalina.core.StandardService stop] - Arrêt du service Catalina  
+11:24:58.378 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc] - The web application [/Quartis-OptimaTml] registered the JBDC driver [net.sourceforge.jtds.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.  
+11:24:58.378 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-1] but has failed to stop it. This is very likely to create a memory leak.  
+11:24:58.378 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-2] but has failed to stop it. This is very likely to create a memory leak.  
+11:24:58.378 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-3] but has failed to stop it. This is very likely to create a memory leak.  
+11:24:58.378 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-4] but has failed to stop it. This is very likely to create a memory leak.  
+11:24:58.378 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-5] but has failed to stop it. This is very likely to create a memory leak.  
+11:24:58.378 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-6] but has failed to stop it. This is very likely to create a memory leak.  
+11:24:58.378 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-7] but has failed to stop it. This is very likely to create a memory leak.  
+11:24:58.393 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-8] but has failed to stop it. This is very likely to create a memory leak.  
+11:24:58.393 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-9] but has failed to stop it. This is very likely to create a memory leak.  
+11:24:58.393 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-10] but has failed to stop it. This is very likely to create a memory leak.  
+11:24:58.409 SEVERE [org.apache.catalina.loader.WebappClassLoader clearThreadLocalMap] - The web application [/Quartis-OptimaTml] created a ThreadLocal with key of type [net.sourceforge.jtds.jdbc.DateTime$1] (value [net.sourceforge.jtds.jdbc.DateTime$1@6ba1b6b6]) and a value of type [java.util.GregorianCalendar] (value [java.util.GregorianCalendar[time=1553000424000,areFieldsSet=true,areAllFieldsSet=false,lenient=true,zone=sun.util.calendar.ZoneInfo[id="Africa/Luanda",offset=3600000,dstSavings=0,useDaylight=false,transitions=3,lastRule=null],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=2019,MONTH=2,WEEK_OF_YEAR=12,WEEK_OF_MONTH=4,DAY_OF_MONTH=19,DAY_OF_YEAR=78,DAY_OF_WEEK=3,DAY_OF_WEEK_IN_MONTH=3,AM_PM=1,HOUR=2,HOUR_OF_DAY=14,MINUTE=0,SECOND=24,MILLISECOND=0,ZONE_OFFSET=3600000,DST_OFFSET=0]]) but failed to remove it when the web application was stopped. This is very likely to create a memory leak.  
+11:24:59.563 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc] - The web application [/Quartis-Web] registered the JBDC driver [net.sourceforge.jtds.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.  
+11:24:59.563 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-Web] appears to have started a thread named [Timer-0] but has failed to stop it. This is very likely to create a memory leak.  
+11:25:09.316 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc] - The web application [/Quartis-OptimaCjj] registered the JBDC driver [net.sourceforge.jtds.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.  
+11:25:09.316 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-1] but has failed to stop it. This is very likely to create a memory leak.  
+11:25:09.316 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-2] but has failed to stop it. This is very likely to create a memory leak.  
+11:25:09.316 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-3] but has failed to stop it. This is very likely to create a memory leak.  
+11:25:09.316 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-4] but has failed to stop it. This is very likely to create a memory leak.  
+11:25:09.316 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-5] but has failed to stop it. This is very likely to create a memory leak.  
+11:25:09.316 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-6] but has failed to stop it. This is very likely to create a memory leak.  
+11:25:09.316 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-7] but has failed to stop it. This is very likely to create a memory leak.  
+11:25:09.316 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-8] but has failed to stop it. This is very likely to create a memory leak.  
+11:25:09.332 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-9] but has failed to stop it. This is very likely to create a memory leak.  
+11:25:09.332 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-10] but has failed to stop it. This is very likely to create a memory leak.  
+11:25:12.578 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCorrection] appears to have started a thread named [Session Monitor] but has failed to stop it. This is very likely to create a memory leak.  
+11:25:12.578 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCorrection] appears to have started a thread named [Monitor Runner] but has failed to stop it. This is very likely to create a memory leak.  
+11:25:14.288 INFO [org.apache.coyote.http11.Http11NioProtocol destroy] - Arrêt de Coyote HTTP/1.1 sur http-8383  
+11:25:15.411 INFO [org.apache.coyote.ajp.AjpAprProtocol destroy] - Stopping Coyote AJP/1.3 on ajp-8309  
+11:25:23.555 INFOS [org.apache.catalina.core.AprLifecycleListener init] - Loaded APR based Apache Tomcat Native library 1.1.20.  
+11:25:23.571 INFOS [org.apache.catalina.core.AprLifecycleListener init] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].  
+11:25:25.427 INFOS [org.apache.tomcat.util.net.NioSelectorPool getSharedSelector] - Using a shared selector for servlet write/read  
+11:25:25.459 INFOS [org.apache.coyote.http11.Http11NioProtocol init] - Initialisation de Coyote HTTP/1.1 sur http-8383  
+11:25:25.474 INFOS [org.apache.coyote.ajp.AjpAprProtocol init] - Initializing Coyote AJP/1.3 on ajp-8309  
+11:25:25.474 INFOS [org.apache.catalina.startup.Catalina load] - Initialization processed in 3007 ms  
+11:25:25.708 INFOS [org.apache.catalina.core.StandardService start] - Démarrage du service Catalina  
+11:25:25.708 INFOS [org.apache.catalina.core.StandardEngine start] - Starting Servlet Engine: Apache Tomcat/6.0.29  
+11:25:25.724 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration host-manager.xml  
+11:25:26.613 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration manager.xml  
+11:25:26.831 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration Quartis-Dictionary.xml  
+11:25:27.206 INFOS [org.apache.catalina.loader.WebappClassLoader validateJarFile] - validateJarFile(C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Dictionary\WEB-INF\lib\servlet-api.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class  
+11:25:27.331 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration Quartis-LicenceWeb.xml  
+11:25:27.455 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration Quartis-OptimaCorrection.xml  
+11:25:28.922 INFOS [com.sun.faces.config.ConfigureListener contextInitialized] - Initializing Sun's JavaServer Faces implementation (1.2_04-b20-p03) for context '/Quartis-OptimaCorrection'  
+11:25:33.118 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration Quartis-Web.xml  
+11:25:39.341 INFOS [com.sun.faces.config.ConfigureListener contextInitialized] - Initializing Sun's JavaServer Faces implementation (1.2_04-b20-p03) for context '/Quartis-Web'  
+11:25:45.628 INFOS [org.apache.catalina.startup.HostConfig deployWAR] - Déploiement de l'archive Quartis-OptimaCjj.war de l'application web  
+11:25:46.517 INFOS [org.apache.catalina.core.StandardContext addApplicationListener] - The listener "com.sun.faces.config.ConfigureListener" is already configured for this context. The duplicate definition has been ignored.  
+11:25:46.517 INFOS [org.apache.catalina.core.StandardContext addApplicationListener] - The listener "com.sun.faces.config.ConfigureListener" is already configured for this context. The duplicate definition has been ignored.  
+11:25:47.094 INFOS [com.sun.faces.config.ConfigureListener contextInitialized] - Initialisation de Mojarra 2.2.4 ( 20131003-1354 https://svn.java.net/svn/mojarra~svn/tags/2.2.4@12574) pour le contexte «/Quartis-OptimaCjj»  
+11:25:52.523 INFOS [org.primefaces.webapp.PostConstructApplicationEventListener processEvent] - Running on PrimeFaces 5.3  
+11:25:52.523 INFOS [org.primefaces.extensions.application.PostConstructApplicationEventListener processEvent] - Running on PrimeFaces Extensions 4.0.0  
+11:26:03.531 INFOS [org.apache.catalina.startup.HostConfig deployWAR] - Déploiement de l'archive Quartis-OptimaTml.war de l'application web  
+11:26:03.874 INFOS [org.apache.catalina.core.StandardContext addApplicationListener] - The listener "com.sun.faces.config.ConfigureListener" is already configured for this context. The duplicate definition has been ignored.  
+11:26:03.874 INFOS [org.apache.catalina.core.StandardContext addApplicationListener] - The listener "com.sun.faces.config.ConfigureListener" is already configured for this context. The duplicate definition has been ignored.  
+11:26:04.358 GRAVE [org.apache.catalina.session.StandardManager start] - Exception au chargement des sessions depuis le stockage persistant (persistent storage) 
+java.lang.IllegalStateException: Cannot deserialize BeanFactory with id org.springframework.web.context.WebApplicationContext:/Quartis-OptimaTml: no factory registered for this id
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$SerializedBeanFactoryReference.readResolve(DefaultListableBeanFactory.java:981)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at java.io.ObjectStreamClass.invokeReadResolve(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadObject(Unknown Source)
+	at org.springframework.aop.support.AbstractBeanFactoryPointcutAdvisor.readObject(AbstractBeanFactoryPointcutAdvisor.java:103)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at java.io.ObjectStreamClass.invokeReadObject(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.readArray(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadObject(Unknown Source)
+	at org.springframework.aop.framework.AdvisedSupport.readObject(AdvisedSupport.java:550)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at java.io.ObjectStreamClass.invokeReadObject(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.readObject(Unknown Source)
+	at org.apache.catalina.session.StandardSession.readObject(StandardSession.java:1475)
+	at org.apache.catalina.session.StandardSession.readObjectData(StandardSession.java:977)
+	at org.apache.catalina.session.StandardManager.doLoad(StandardManager.java:394)
+	at org.apache.catalina.session.StandardManager.load(StandardManager.java:321)
+	at org.apache.catalina.session.StandardManager.start(StandardManager.java:643)
+	at org.apache.catalina.core.ContainerBase.setManager(ContainerBase.java:438)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4559)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:791)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:771)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:546)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:905)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:740)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:500)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1277)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:321)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1053)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:785)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:445)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:519)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:581)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+ 
+11:26:04.545 INFOS [com.sun.faces.config.ConfigureListener contextInitialized] - Initialisation de Mojarra 2.2.4 ( 20131003-1354 https://svn.java.net/svn/mojarra~svn/tags/2.2.4@12574) pour le contexte «/Quartis-OptimaTml»  
+11:26:07.774 INFOS [org.primefaces.webapp.PostConstructApplicationEventListener processEvent] - Running on PrimeFaces 5.0  
+11:26:07.790 INFOS [org.primefaces.extensions.application.PostConstructApplicationEventListener processEvent] - Running on PrimeFaces Extensions 2.0.0  
+11:26:14.789 INFOS [org.apache.catalina.startup.HostConfig deployDirectory] - Déploiement du répertoire docs de l'application web  
+11:26:15.039 INFOS [org.apache.catalina.startup.HostConfig deployDirectory] - Déploiement du répertoire examples de l'application web  
+11:26:15.523 INFOS [org.apache.catalina.startup.HostConfig deployDirectory] - Déploiement du répertoire ROOT de l'application web  
+11:26:15.741 INFOS [org.apache.coyote.http11.Http11NioProtocol start] - Démarrage de Coyote HTTP/1.1 sur http-8383  
+11:26:15.788 INFOS [org.apache.coyote.ajp.AjpAprProtocol start] - Starting Coyote AJP/1.3 on ajp-8309  
+11:26:15.803 INFOS [org.apache.catalina.startup.Catalina start] - Server startup in 50319 ms  
+11:35:32.295 AVERTISSEMENT [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+11:35:33.451 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+11:40:12.604 INFO [org.apache.coyote.http11.Http11NioProtocol pause] - Suspension de Coyote HTTP/1.1 sur http-8383  
+11:40:12.607 INFO [org.apache.coyote.ajp.AjpAprProtocol pause] - Pausing Coyote AJP/1.3 on ajp-8309  
+11:40:13.608 INFO [org.apache.catalina.core.StandardService stop] - Arrêt du service Catalina  
+11:40:13.717 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc] - The web application [/Quartis-OptimaTml] registered the JBDC driver [net.sourceforge.jtds.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.  
+11:40:13.719 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-1] but has failed to stop it. This is very likely to create a memory leak.  
+11:40:13.721 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-2] but has failed to stop it. This is very likely to create a memory leak.  
+11:40:13.723 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-3] but has failed to stop it. This is very likely to create a memory leak.  
+11:40:13.725 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-4] but has failed to stop it. This is very likely to create a memory leak.  
+11:40:13.726 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-5] but has failed to stop it. This is very likely to create a memory leak.  
+11:40:13.729 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-6] but has failed to stop it. This is very likely to create a memory leak.  
+11:40:13.730 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-7] but has failed to stop it. This is very likely to create a memory leak.  
+11:40:13.732 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-8] but has failed to stop it. This is very likely to create a memory leak.  
+11:40:13.734 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-9] but has failed to stop it. This is very likely to create a memory leak.  
+11:40:13.736 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-10] but has failed to stop it. This is very likely to create a memory leak.  
+11:40:14.757 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc] - The web application [/Quartis-Web] registered the JBDC driver [net.sourceforge.jtds.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.  
+11:40:14.759 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-Web] appears to have started a thread named [Timer-0] but has failed to stop it. This is very likely to create a memory leak.  
+11:40:17.895 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc] - The web application [/Quartis-OptimaCjj] registered the JBDC driver [net.sourceforge.jtds.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.  
+11:40:17.897 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-1] but has failed to stop it. This is very likely to create a memory leak.  
+11:40:17.898 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-2] but has failed to stop it. This is very likely to create a memory leak.  
+11:40:17.900 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-3] but has failed to stop it. This is very likely to create a memory leak.  
+11:40:17.901 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-4] but has failed to stop it. This is very likely to create a memory leak.  
+11:40:17.903 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-5] but has failed to stop it. This is very likely to create a memory leak.  
+11:40:17.905 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-6] but has failed to stop it. This is very likely to create a memory leak.  
+11:40:17.907 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-7] but has failed to stop it. This is very likely to create a memory leak.  
+11:40:17.908 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-8] but has failed to stop it. This is very likely to create a memory leak.  
+11:40:17.910 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-9] but has failed to stop it. This is very likely to create a memory leak.  
+11:40:17.912 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-10] but has failed to stop it. This is very likely to create a memory leak.  
+11:40:18.882 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCorrection] appears to have started a thread named [Session Monitor] but has failed to stop it. This is very likely to create a memory leak.  
+11:40:18.884 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCorrection] appears to have started a thread named [Monitor Runner] but has failed to stop it. This is very likely to create a memory leak.  
+11:40:20.030 INFO [org.apache.coyote.http11.Http11NioProtocol destroy] - Arrêt de Coyote HTTP/1.1 sur http-8383  
+11:40:21.137 INFO [org.apache.coyote.ajp.AjpAprProtocol destroy] - Stopping Coyote AJP/1.3 on ajp-8309  
+11:45:04.176 INFOS [org.apache.catalina.core.AprLifecycleListener init] - Loaded APR based Apache Tomcat Native library 1.1.20.  
+11:45:04.176 INFOS [org.apache.catalina.core.AprLifecycleListener init] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].  
+11:45:05.487 INFOS [org.apache.tomcat.util.net.NioSelectorPool getSharedSelector] - Using a shared selector for servlet write/read  
+11:45:05.502 INFOS [org.apache.coyote.http11.Http11NioProtocol init] - Initialisation de Coyote HTTP/1.1 sur http-8383  
+11:45:05.518 INFOS [org.apache.coyote.ajp.AjpAprProtocol init] - Initializing Coyote AJP/1.3 on ajp-8309  
+11:45:05.518 INFOS [org.apache.catalina.startup.Catalina load] - Initialization processed in 1872 ms  
+11:45:05.580 INFOS [org.apache.catalina.core.StandardService start] - Démarrage du service Catalina  
+11:45:05.596 INFOS [org.apache.catalina.core.StandardEngine start] - Starting Servlet Engine: Apache Tomcat/6.0.29  
+11:45:05.596 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration host-manager.xml  
+11:45:06.048 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration manager.xml  
+11:45:06.189 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration Quartis-Dictionary.xml  
+11:45:06.235 INFOS [org.apache.catalina.loader.WebappClassLoader validateJarFile] - validateJarFile(C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Dictionary\WEB-INF\lib\servlet-api.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class  
+11:45:06.313 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration Quartis-LicenceWeb.xml  
+11:45:06.423 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration Quartis-OptimaCorrection.xml  
+11:45:07.671 INFOS [com.sun.faces.config.ConfigureListener contextInitialized] - Initializing Sun's JavaServer Faces implementation (1.2_04-b20-p03) for context '/Quartis-OptimaCorrection'  
+11:45:10.120 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration Quartis-Web.xml  
+11:45:14.020 INFOS [com.sun.faces.config.ConfigureListener contextInitialized] - Initializing Sun's JavaServer Faces implementation (1.2_04-b20-p03) for context '/Quartis-Web'  
+11:45:18.481 INFOS [org.apache.catalina.startup.HostConfig deployWAR] - Déploiement de l'archive Quartis-OptimaCjj.war de l'application web  
+11:45:18.762 INFOS [org.apache.catalina.core.StandardContext addApplicationListener] - The listener "com.sun.faces.config.ConfigureListener" is already configured for this context. The duplicate definition has been ignored.  
+11:45:18.762 INFOS [org.apache.catalina.core.StandardContext addApplicationListener] - The listener "com.sun.faces.config.ConfigureListener" is already configured for this context. The duplicate definition has been ignored.  
+11:45:18.981 INFOS [com.sun.faces.config.ConfigureListener contextInitialized] - Initialisation de Mojarra 2.2.4 ( 20131003-1354 https://svn.java.net/svn/mojarra~svn/tags/2.2.4@12574) pour le contexte «/Quartis-OptimaCjj»  
+11:45:21.726 INFOS [org.primefaces.webapp.PostConstructApplicationEventListener processEvent] - Running on PrimeFaces 5.3  
+11:45:21.726 INFOS [org.primefaces.extensions.application.PostConstructApplicationEventListener processEvent] - Running on PrimeFaces Extensions 4.0.0  
+11:45:30.777 INFOS [org.apache.catalina.startup.HostConfig deployWAR] - Déploiement de l'archive Quartis-OptimaTml.war de l'application web  
+11:45:35.976 INFOS [org.apache.catalina.core.StandardContext addApplicationListener] - The listener "com.sun.faces.config.ConfigureListener" is already configured for this context. The duplicate definition has been ignored.  
+11:45:35.976 INFOS [org.apache.catalina.core.StandardContext addApplicationListener] - The listener "com.sun.faces.config.ConfigureListener" is already configured for this context. The duplicate definition has been ignored.  
+11:45:36.257 GRAVE [org.apache.catalina.session.StandardManager start] - Exception au chargement des sessions depuis le stockage persistant (persistent storage) 
+java.lang.IllegalStateException: Cannot deserialize BeanFactory with id org.springframework.web.context.WebApplicationContext:/Quartis-OptimaTml: no factory registered for this id
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$SerializedBeanFactoryReference.readResolve(DefaultListableBeanFactory.java:981)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at java.io.ObjectStreamClass.invokeReadResolve(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadObject(Unknown Source)
+	at org.springframework.aop.support.AbstractBeanFactoryPointcutAdvisor.readObject(AbstractBeanFactoryPointcutAdvisor.java:103)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at java.io.ObjectStreamClass.invokeReadObject(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.readArray(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadObject(Unknown Source)
+	at org.springframework.aop.framework.AdvisedSupport.readObject(AdvisedSupport.java:550)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at java.io.ObjectStreamClass.invokeReadObject(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.readObject(Unknown Source)
+	at org.apache.catalina.session.StandardSession.readObject(StandardSession.java:1475)
+	at org.apache.catalina.session.StandardSession.readObjectData(StandardSession.java:977)
+	at org.apache.catalina.session.StandardManager.doLoad(StandardManager.java:394)
+	at org.apache.catalina.session.StandardManager.load(StandardManager.java:321)
+	at org.apache.catalina.session.StandardManager.start(StandardManager.java:643)
+	at org.apache.catalina.core.ContainerBase.setManager(ContainerBase.java:438)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4559)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:791)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:771)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:546)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:905)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:740)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:500)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1277)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:321)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1053)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:785)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:445)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:519)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:581)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+ 
+11:45:36.398 INFOS [com.sun.faces.config.ConfigureListener contextInitialized] - Initialisation de Mojarra 2.2.4 ( 20131003-1354 https://svn.java.net/svn/mojarra~svn/tags/2.2.4@12574) pour le contexte «/Quartis-OptimaTml»  
+11:45:39.050 INFOS [org.primefaces.webapp.PostConstructApplicationEventListener processEvent] - Running on PrimeFaces 5.0  
+11:45:39.050 INFOS [org.primefaces.extensions.application.PostConstructApplicationEventListener processEvent] - Running on PrimeFaces Extensions 2.0.0  
+11:45:45.035 INFOS [org.apache.catalina.startup.HostConfig deployDirectory] - Déploiement du répertoire docs de l'application web  
+11:45:45.112 INFOS [org.apache.catalina.startup.HostConfig deployDirectory] - Déploiement du répertoire examples de l'application web  
+11:45:45.214 INFOS [org.apache.catalina.startup.HostConfig deployDirectory] - Déploiement du répertoire ROOT de l'application web  
+11:45:45.274 INFOS [org.apache.coyote.http11.Http11NioProtocol start] - Démarrage de Coyote HTTP/1.1 sur http-8383  
+11:45:45.337 INFOS [org.apache.coyote.ajp.AjpAprProtocol start] - Starting Coyote AJP/1.3 on ajp-8309  
+11:45:45.365 INFOS [org.apache.catalina.startup.Catalina start] - Server startup in 39834 ms  
+11:46:25.846 AVERTISSEMENT [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+11:48:22.102 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+14:22:06.885 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+14:26:37.781 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+14:27:29.083 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+14:43:27.624 INFO [org.apache.coyote.http11.Http11NioProtocol pause] - Suspension de Coyote HTTP/1.1 sur http-8383  
+14:43:27.624 INFO [org.apache.coyote.ajp.AjpAprProtocol pause] - Pausing Coyote AJP/1.3 on ajp-8309  
+14:43:28.638 INFO [org.apache.catalina.core.StandardService stop] - Arrêt du service Catalina  
+14:43:28.856 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc] - The web application [/Quartis-OptimaTml] registered the JBDC driver [net.sourceforge.jtds.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.  
+14:43:28.856 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-1] but has failed to stop it. This is very likely to create a memory leak.  
+14:43:28.856 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-2] but has failed to stop it. This is very likely to create a memory leak.  
+14:43:30.479 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc] - The web application [/Quartis-Web] registered the JBDC driver [net.sourceforge.jtds.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.  
+14:43:30.479 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-Web] appears to have started a thread named [Timer-0] but has failed to stop it. This is very likely to create a memory leak.  
+14:43:34.269 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc] - The web application [/Quartis-OptimaCjj] registered the JBDC driver [net.sourceforge.jtds.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.  
+14:43:34.269 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-1] but has failed to stop it. This is very likely to create a memory leak.  
+14:43:34.269 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-2] but has failed to stop it. This is very likely to create a memory leak.  
+14:43:34.285 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-3] but has failed to stop it. This is very likely to create a memory leak.  
+14:43:34.285 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-4] but has failed to stop it. This is very likely to create a memory leak.  
+14:43:34.285 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-5] but has failed to stop it. This is very likely to create a memory leak.  
+14:43:34.285 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-6] but has failed to stop it. This is very likely to create a memory leak.  
+14:43:34.285 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-7] but has failed to stop it. This is very likely to create a memory leak.  
+14:43:34.285 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-8] but has failed to stop it. This is very likely to create a memory leak.  
+14:43:34.285 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-9] but has failed to stop it. This is very likely to create a memory leak.  
+14:43:34.285 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-10] but has failed to stop it. This is very likely to create a memory leak.  
+14:43:36.391 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCorrection] appears to have started a thread named [Session Monitor] but has failed to stop it. This is very likely to create a memory leak.  
+14:43:36.391 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCorrection] appears to have started a thread named [Monitor Runner] but has failed to stop it. This is very likely to create a memory leak.  
+14:43:38.013 INFO [org.apache.coyote.http11.Http11NioProtocol destroy] - Arrêt de Coyote HTTP/1.1 sur http-8383  
+14:43:39.121 INFO [org.apache.coyote.ajp.AjpAprProtocol destroy] - Stopping Coyote AJP/1.3 on ajp-8309  
+14:43:43.707 INFOS [org.apache.catalina.core.AprLifecycleListener init] - Loaded APR based Apache Tomcat Native library 1.1.20.  
+14:43:43.707 INFOS [org.apache.catalina.core.AprLifecycleListener init] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].  
+14:43:45.720 INFOS [org.apache.tomcat.util.net.NioSelectorPool getSharedSelector] - Using a shared selector for servlet write/read  
+14:43:45.735 INFOS [org.apache.coyote.http11.Http11NioProtocol init] - Initialisation de Coyote HTTP/1.1 sur http-8383  
+14:43:45.751 INFOS [org.apache.coyote.ajp.AjpAprProtocol init] - Initializing Coyote AJP/1.3 on ajp-8309  
+14:43:45.751 INFOS [org.apache.catalina.startup.Catalina load] - Initialization processed in 3088 ms  
+14:43:45.876 INFOS [org.apache.catalina.core.StandardService start] - Démarrage du service Catalina  
+14:43:45.876 INFOS [org.apache.catalina.core.StandardEngine start] - Starting Servlet Engine: Apache Tomcat/6.0.29  
+14:43:45.891 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration host-manager.xml  
+14:43:46.749 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration manager.xml  
+14:43:46.952 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration Quartis-Dictionary.xml  
+14:43:47.046 INFOS [org.apache.catalina.loader.WebappClassLoader validateJarFile] - validateJarFile(C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Dictionary\WEB-INF\lib\servlet-api.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class  
+14:43:47.171 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration Quartis-LicenceWeb.xml  
+14:43:47.295 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration Quartis-OptimaCorrection.xml  
+14:43:48.668 INFOS [com.sun.faces.config.ConfigureListener contextInitialized] - Initializing Sun's JavaServer Faces implementation (1.2_04-b20-p03) for context '/Quartis-OptimaCorrection'  
+14:43:52.802 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration Quartis-Web.xml  
+14:43:58.730 INFOS [com.sun.faces.config.ConfigureListener contextInitialized] - Initializing Sun's JavaServer Faces implementation (1.2_04-b20-p03) for context '/Quartis-Web'  
+14:44:07.279 INFOS [org.apache.catalina.startup.HostConfig deployWAR] - Déploiement de l'archive Quartis-OptimaCjj.war de l'application web  
+14:44:07.591 INFOS [org.apache.catalina.core.StandardContext addApplicationListener] - The listener "com.sun.faces.config.ConfigureListener" is already configured for this context. The duplicate definition has been ignored.  
+14:44:07.607 INFOS [org.apache.catalina.core.StandardContext addApplicationListener] - The listener "com.sun.faces.config.ConfigureListener" is already configured for this context. The duplicate definition has been ignored.  
+14:44:08.215 INFOS [com.sun.faces.config.ConfigureListener contextInitialized] - Initialisation de Mojarra 2.2.4 ( 20131003-1354 https://svn.java.net/svn/mojarra~svn/tags/2.2.4@12574) pour le contexte «/Quartis-OptimaCjj»  
+14:44:13.691 INFOS [org.primefaces.webapp.PostConstructApplicationEventListener processEvent] - Running on PrimeFaces 5.3  
+14:44:13.691 INFOS [org.primefaces.extensions.application.PostConstructApplicationEventListener processEvent] - Running on PrimeFaces Extensions 4.0.0  
+14:44:26.463 INFOS [org.apache.catalina.startup.HostConfig deployWAR] - Déploiement de l'archive Quartis-OptimaTml.war de l'application web  
+14:44:27.009 INFOS [org.apache.catalina.core.StandardContext addApplicationListener] - The listener "com.sun.faces.config.ConfigureListener" is already configured for this context. The duplicate definition has been ignored.  
+14:44:27.009 INFOS [org.apache.catalina.core.StandardContext addApplicationListener] - The listener "com.sun.faces.config.ConfigureListener" is already configured for this context. The duplicate definition has been ignored.  
+14:44:28.787 GRAVE [org.apache.catalina.session.StandardManager start] - Exception au chargement des sessions depuis le stockage persistant (persistent storage) 
+java.lang.IllegalStateException: Cannot deserialize BeanFactory with id org.springframework.web.context.WebApplicationContext:/Quartis-OptimaTml: no factory registered for this id
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$SerializedBeanFactoryReference.readResolve(DefaultListableBeanFactory.java:981)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at java.io.ObjectStreamClass.invokeReadResolve(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadObject(Unknown Source)
+	at org.springframework.aop.support.AbstractBeanFactoryPointcutAdvisor.readObject(AbstractBeanFactoryPointcutAdvisor.java:103)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at java.io.ObjectStreamClass.invokeReadObject(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.readArray(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadObject(Unknown Source)
+	at org.springframework.aop.framework.AdvisedSupport.readObject(AdvisedSupport.java:550)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at java.io.ObjectStreamClass.invokeReadObject(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.readObject(Unknown Source)
+	at org.apache.catalina.session.StandardSession.readObject(StandardSession.java:1475)
+	at org.apache.catalina.session.StandardSession.readObjectData(StandardSession.java:977)
+	at org.apache.catalina.session.StandardManager.doLoad(StandardManager.java:394)
+	at org.apache.catalina.session.StandardManager.load(StandardManager.java:321)
+	at org.apache.catalina.session.StandardManager.start(StandardManager.java:643)
+	at org.apache.catalina.core.ContainerBase.setManager(ContainerBase.java:438)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4559)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:791)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:771)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:546)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:905)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:740)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:500)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1277)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:321)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1053)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:785)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:445)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:519)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:581)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+ 
+14:44:29.583 INFOS [com.sun.faces.config.ConfigureListener contextInitialized] - Initialisation de Mojarra 2.2.4 ( 20131003-1354 https://svn.java.net/svn/mojarra~svn/tags/2.2.4@12574) pour le contexte «/Quartis-OptimaTml»  
+14:44:38.740 INFOS [org.primefaces.webapp.PostConstructApplicationEventListener processEvent] - Running on PrimeFaces 5.0  
+14:44:38.740 INFOS [org.primefaces.extensions.application.PostConstructApplicationEventListener processEvent] - Running on PrimeFaces Extensions 2.0.0  
+14:44:49.512 INFOS [org.apache.catalina.startup.HostConfig deployDirectory] - Déploiement du répertoire docs de l'application web  
+14:44:49.762 INFOS [org.apache.catalina.startup.HostConfig deployDirectory] - Déploiement du répertoire examples de l'application web  
+14:44:50.190 INFOS [org.apache.catalina.startup.HostConfig deployDirectory] - Déploiement du répertoire ROOT de l'application web  
+14:44:50.267 INFOS [org.apache.coyote.http11.Http11NioProtocol start] - Démarrage de Coyote HTTP/1.1 sur http-8383  
+14:44:50.329 INFOS [org.apache.coyote.ajp.AjpAprProtocol start] - Starting Coyote AJP/1.3 on ajp-8309  
+14:44:50.342 INFOS [org.apache.catalina.startup.Catalina start] - Server startup in 64578 ms  
+14:44:53.561 AVERTISSEMENT [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+14:46:34.591 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+14:47:33.427 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+14:48:14.440 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+14:49:00.098 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+14:49:38.041 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+14:50:39.483 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+14:59:02.095 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+14:59:05.305 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+14:59:06.497 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+14:59:07.274 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+14:59:42.033 INFO [org.apache.coyote.http11.Http11NioProtocol pause] - Suspension de Coyote HTTP/1.1 sur http-8383  
+14:59:42.033 INFO [org.apache.coyote.ajp.AjpAprProtocol pause] - Pausing Coyote AJP/1.3 on ajp-8309  
+14:59:43.048 INFO [org.apache.catalina.core.StandardService stop] - Arrêt du service Catalina  
+14:59:43.141 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc] - The web application [/Quartis-OptimaTml] registered the JBDC driver [net.sourceforge.jtds.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.  
+14:59:43.157 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-1] but has failed to stop it. This is very likely to create a memory leak.  
+14:59:43.157 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-2] but has failed to stop it. This is very likely to create a memory leak.  
+14:59:43.157 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-3] but has failed to stop it. This is very likely to create a memory leak.  
+14:59:43.157 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-4] but has failed to stop it. This is very likely to create a memory leak.  
+14:59:43.157 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-5] but has failed to stop it. This is very likely to create a memory leak.  
+14:59:43.157 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-6] but has failed to stop it. This is very likely to create a memory leak.  
+14:59:43.157 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-7] but has failed to stop it. This is very likely to create a memory leak.  
+14:59:43.157 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-8] but has failed to stop it. This is very likely to create a memory leak.  
+14:59:43.157 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-9] but has failed to stop it. This is very likely to create a memory leak.  
+14:59:43.172 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-10] but has failed to stop it. This is very likely to create a memory leak.  
+14:59:44.108 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc] - The web application [/Quartis-Web] registered the JBDC driver [net.sourceforge.jtds.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.  
+14:59:44.124 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-Web] appears to have started a thread named [Timer-0] but has failed to stop it. This is very likely to create a memory leak.  
+14:59:48.046 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc] - The web application [/Quartis-OptimaCjj] registered the JBDC driver [net.sourceforge.jtds.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.  
+14:59:48.046 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-1] but has failed to stop it. This is very likely to create a memory leak.  
+14:59:48.046 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-2] but has failed to stop it. This is very likely to create a memory leak.  
+14:59:48.046 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-3] but has failed to stop it. This is very likely to create a memory leak.  
+14:59:48.046 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-5] but has failed to stop it. This is very likely to create a memory leak.  
+14:59:48.046 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-6] but has failed to stop it. This is very likely to create a memory leak.  
+14:59:48.046 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-7] but has failed to stop it. This is very likely to create a memory leak.  
+14:59:48.046 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-9] but has failed to stop it. This is very likely to create a memory leak.  
+14:59:48.061 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-10] but has failed to stop it. This is very likely to create a memory leak.  
+14:59:48.966 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCorrection] appears to have started a thread named [Session Monitor] but has failed to stop it. This is very likely to create a memory leak.  
+14:59:48.966 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCorrection] appears to have started a thread named [Monitor Runner] but has failed to stop it. This is very likely to create a memory leak.  
+14:59:50.167 INFO [org.apache.coyote.http11.Http11NioProtocol destroy] - Arrêt de Coyote HTTP/1.1 sur http-8383  
+14:59:51.290 INFO [org.apache.coyote.ajp.AjpAprProtocol destroy] - Stopping Coyote AJP/1.3 on ajp-8309  
+14:59:52.774 INFOS [org.apache.catalina.core.AprLifecycleListener init] - Loaded APR based Apache Tomcat Native library 1.1.20.  
+14:59:52.774 INFOS [org.apache.catalina.core.AprLifecycleListener init] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].  
+14:59:53.876 INFOS [org.apache.tomcat.util.net.NioSelectorPool getSharedSelector] - Using a shared selector for servlet write/read  
+14:59:53.886 INFOS [org.apache.coyote.http11.Http11NioProtocol init] - Initialisation de Coyote HTTP/1.1 sur http-8383  
+14:59:53.891 INFOS [org.apache.coyote.ajp.AjpAprProtocol init] - Initializing Coyote AJP/1.3 on ajp-8309  
+14:59:53.892 INFOS [org.apache.catalina.startup.Catalina load] - Initialization processed in 1516 ms  
+14:59:53.937 INFOS [org.apache.catalina.core.StandardService start] - Démarrage du service Catalina  
+14:59:53.939 INFOS [org.apache.catalina.core.StandardEngine start] - Starting Servlet Engine: Apache Tomcat/6.0.29  
+14:59:53.947 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration host-manager.xml  
+14:59:54.321 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration manager.xml  
+14:59:54.442 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration Quartis-Dictionary.xml  
+14:59:54.506 INFOS [org.apache.catalina.loader.WebappClassLoader validateJarFile] - validateJarFile(C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Dictionary\WEB-INF\lib\servlet-api.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class  
+14:59:54.621 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration Quartis-LicenceWeb.xml  
+14:59:54.700 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration Quartis-OptimaCorrection.xml  
+14:59:55.535 INFOS [com.sun.faces.config.ConfigureListener contextInitialized] - Initializing Sun's JavaServer Faces implementation (1.2_04-b20-p03) for context '/Quartis-OptimaCorrection'  
+14:59:58.122 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration Quartis-Web.xml  
+15:00:01.244 INFOS [com.sun.faces.config.ConfigureListener contextInitialized] - Initializing Sun's JavaServer Faces implementation (1.2_04-b20-p03) for context '/Quartis-Web'  
+15:00:07.067 INFOS [org.apache.catalina.startup.HostConfig deployWAR] - Déploiement de l'archive Quartis-OptimaCjj.war de l'application web  
+15:00:07.510 INFOS [org.apache.catalina.core.StandardContext addApplicationListener] - The listener "com.sun.faces.config.ConfigureListener" is already configured for this context. The duplicate definition has been ignored.  
+15:00:07.511 INFOS [org.apache.catalina.core.StandardContext addApplicationListener] - The listener "com.sun.faces.config.ConfigureListener" is already configured for this context. The duplicate definition has been ignored.  
+15:00:07.712 INFOS [com.sun.faces.config.ConfigureListener contextInitialized] - Initialisation de Mojarra 2.2.4 ( 20131003-1354 https://svn.java.net/svn/mojarra~svn/tags/2.2.4@12574) pour le contexte «/Quartis-OptimaCjj»  
+15:00:11.935 INFOS [org.primefaces.webapp.PostConstructApplicationEventListener processEvent] - Running on PrimeFaces 5.3  
+15:00:11.936 INFOS [org.primefaces.extensions.application.PostConstructApplicationEventListener processEvent] - Running on PrimeFaces Extensions 4.0.0  
+15:00:31.289 INFOS [org.apache.catalina.startup.HostConfig deployWAR] - Déploiement de l'archive Quartis-OptimaTml.war de l'application web  
+15:00:31.927 INFOS [org.apache.catalina.core.StandardContext addApplicationListener] - The listener "com.sun.faces.config.ConfigureListener" is already configured for this context. The duplicate definition has been ignored.  
+15:00:31.929 INFOS [org.apache.catalina.core.StandardContext addApplicationListener] - The listener "com.sun.faces.config.ConfigureListener" is already configured for this context. The duplicate definition has been ignored.  
+15:00:32.343 GRAVE [org.apache.catalina.session.StandardManager start] - Exception au chargement des sessions depuis le stockage persistant (persistent storage) 
+java.lang.IllegalStateException: Cannot deserialize BeanFactory with id org.springframework.web.context.WebApplicationContext:/Quartis-OptimaTml: no factory registered for this id
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$SerializedBeanFactoryReference.readResolve(DefaultListableBeanFactory.java:981)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at java.io.ObjectStreamClass.invokeReadResolve(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadObject(Unknown Source)
+	at org.springframework.aop.support.AbstractBeanFactoryPointcutAdvisor.readObject(AbstractBeanFactoryPointcutAdvisor.java:103)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at java.io.ObjectStreamClass.invokeReadObject(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.readArray(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadObject(Unknown Source)
+	at org.springframework.aop.framework.AdvisedSupport.readObject(AdvisedSupport.java:550)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at java.io.ObjectStreamClass.invokeReadObject(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.readObject(Unknown Source)
+	at org.apache.catalina.session.StandardSession.readObject(StandardSession.java:1475)
+	at org.apache.catalina.session.StandardSession.readObjectData(StandardSession.java:977)
+	at org.apache.catalina.session.StandardManager.doLoad(StandardManager.java:394)
+	at org.apache.catalina.session.StandardManager.load(StandardManager.java:321)
+	at org.apache.catalina.session.StandardManager.start(StandardManager.java:643)
+	at org.apache.catalina.core.ContainerBase.setManager(ContainerBase.java:438)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4559)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:791)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:771)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:546)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:905)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:740)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:500)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1277)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:321)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1053)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:785)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:445)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:519)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:581)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+ 
+15:00:32.597 INFOS [com.sun.faces.config.ConfigureListener contextInitialized] - Initialisation de Mojarra 2.2.4 ( 20131003-1354 https://svn.java.net/svn/mojarra~svn/tags/2.2.4@12574) pour le contexte «/Quartis-OptimaTml»  
+15:00:34.749 INFOS [org.primefaces.webapp.PostConstructApplicationEventListener processEvent] - Running on PrimeFaces 5.0  
+15:00:34.760 INFOS [org.primefaces.extensions.application.PostConstructApplicationEventListener processEvent] - Running on PrimeFaces Extensions 2.0.0  
+15:00:39.162 INFOS [org.apache.catalina.startup.HostConfig deployDirectory] - Déploiement du répertoire docs de l'application web  
+15:00:39.209 INFOS [org.apache.catalina.startup.HostConfig deployDirectory] - Déploiement du répertoire examples de l'application web  
+15:00:39.333 INFOS [org.apache.catalina.startup.HostConfig deployDirectory] - Déploiement du répertoire ROOT de l'application web  
+15:00:39.396 INFOS [org.apache.coyote.http11.Http11NioProtocol start] - Démarrage de Coyote HTTP/1.1 sur http-8383  
+15:00:39.443 INFOS [org.apache.coyote.ajp.AjpAprProtocol start] - Starting Coyote AJP/1.3 on ajp-8309  
+15:00:39.458 INFOS [org.apache.catalina.startup.Catalina start] - Server startup in 45572 ms  
+15:05:03.130 AVERTISSEMENT [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+15:05:40.644 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+15:07:34.908 INFO [org.apache.coyote.http11.Http11NioProtocol pause] - Suspension de Coyote HTTP/1.1 sur http-8383  
+15:07:34.908 INFO [org.apache.coyote.ajp.AjpAprProtocol pause] - Pausing Coyote AJP/1.3 on ajp-8309  
+15:07:35.923 INFO [org.apache.catalina.core.StandardService stop] - Arrêt du service Catalina  
+15:07:36.016 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc] - The web application [/Quartis-OptimaTml] registered the JBDC driver [net.sourceforge.jtds.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.  
+15:07:36.016 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-1] but has failed to stop it. This is very likely to create a memory leak.  
+15:07:36.032 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-2] but has failed to stop it. This is very likely to create a memory leak.  
+15:07:36.032 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-3] but has failed to stop it. This is very likely to create a memory leak.  
+15:07:36.032 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-4] but has failed to stop it. This is very likely to create a memory leak.  
+15:07:36.032 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-5] but has failed to stop it. This is very likely to create a memory leak.  
+15:07:36.032 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-6] but has failed to stop it. This is very likely to create a memory leak.  
+15:07:36.032 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-7] but has failed to stop it. This is very likely to create a memory leak.  
+15:07:36.032 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-8] but has failed to stop it. This is very likely to create a memory leak.  
+15:07:36.032 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-9] but has failed to stop it. This is very likely to create a memory leak.  
+15:07:36.048 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-10] but has failed to stop it. This is very likely to create a memory leak.  
+15:07:36.874 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc] - The web application [/Quartis-Web] registered the JBDC driver [net.sourceforge.jtds.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.  
+15:07:36.874 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-Web] appears to have started a thread named [Timer-0] but has failed to stop it. This is very likely to create a memory leak.  
+15:07:39.124 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc] - The web application [/Quartis-OptimaCjj] registered the JBDC driver [net.sourceforge.jtds.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.  
+15:07:39.124 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-1] but has failed to stop it. This is very likely to create a memory leak.  
+15:07:39.124 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-2] but has failed to stop it. This is very likely to create a memory leak.  
+15:07:39.124 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-3] but has failed to stop it. This is very likely to create a memory leak.  
+15:07:39.124 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-4] but has failed to stop it. This is very likely to create a memory leak.  
+15:07:39.124 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-5] but has failed to stop it. This is very likely to create a memory leak.  
+15:07:39.139 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-6] but has failed to stop it. This is very likely to create a memory leak.  
+15:07:39.139 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-7] but has failed to stop it. This is very likely to create a memory leak.  
+15:07:39.139 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-8] but has failed to stop it. This is very likely to create a memory leak.  
+15:07:39.139 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-9] but has failed to stop it. This is very likely to create a memory leak.  
+15:07:39.139 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-10] but has failed to stop it. This is very likely to create a memory leak.  
+15:07:40.060 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCorrection] appears to have started a thread named [Session Monitor] but has failed to stop it. This is very likely to create a memory leak.  
+15:07:40.060 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCorrection] appears to have started a thread named [Monitor Runner] but has failed to stop it. This is very likely to create a memory leak.  
+15:07:40.996 INFO [org.apache.coyote.http11.Http11NioProtocol destroy] - Arrêt de Coyote HTTP/1.1 sur http-8383  
+15:07:42.119 INFO [org.apache.coyote.ajp.AjpAprProtocol destroy] - Stopping Coyote AJP/1.3 on ajp-8309  
+15:07:43.726 INFOS [org.apache.catalina.core.AprLifecycleListener init] - Loaded APR based Apache Tomcat Native library 1.1.20.  
+15:07:43.726 INFOS [org.apache.catalina.core.AprLifecycleListener init] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].  
+15:07:44.896 INFOS [org.apache.tomcat.util.net.NioSelectorPool getSharedSelector] - Using a shared selector for servlet write/read  
+15:07:44.911 INFOS [org.apache.coyote.http11.Http11NioProtocol init] - Initialisation de Coyote HTTP/1.1 sur http-8383  
+15:07:44.911 INFOS [org.apache.coyote.ajp.AjpAprProtocol init] - Initializing Coyote AJP/1.3 on ajp-8309  
+15:07:44.927 INFOS [org.apache.catalina.startup.Catalina load] - Initialization processed in 1670 ms  
+15:07:44.989 INFOS [org.apache.catalina.core.StandardService start] - Démarrage du service Catalina  
+15:07:45.005 INFOS [org.apache.catalina.core.StandardEngine start] - Starting Servlet Engine: Apache Tomcat/6.0.29  
+15:07:45.005 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration host-manager.xml  
+15:07:45.379 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration manager.xml  
+15:07:45.489 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration Quartis-Dictionary.xml  
+15:07:45.535 INFOS [org.apache.catalina.loader.WebappClassLoader validateJarFile] - validateJarFile(C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Dictionary\WEB-INF\lib\servlet-api.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class  
+15:07:45.598 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration Quartis-LicenceWeb.xml  
+15:07:45.676 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration Quartis-OptimaCorrection.xml  
+15:07:46.378 INFOS [com.sun.faces.config.ConfigureListener contextInitialized] - Initializing Sun's JavaServer Faces implementation (1.2_04-b20-p03) for context '/Quartis-OptimaCorrection'  
+15:07:48.672 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration Quartis-Web.xml  
+15:07:51.960 INFOS [com.sun.faces.config.ConfigureListener contextInitialized] - Initializing Sun's JavaServer Faces implementation (1.2_04-b20-p03) for context '/Quartis-Web'  
+15:07:55.799 INFOS [org.apache.catalina.startup.HostConfig deployWAR] - Déploiement de l'archive Quartis-OptimaCjj.war de l'application web  
+15:07:56.048 INFOS [org.apache.catalina.core.StandardContext addApplicationListener] - The listener "com.sun.faces.config.ConfigureListener" is already configured for this context. The duplicate definition has been ignored.  
+15:07:56.048 INFOS [org.apache.catalina.core.StandardContext addApplicationListener] - The listener "com.sun.faces.config.ConfigureListener" is already configured for this context. The duplicate definition has been ignored.  
+15:07:56.173 INFOS [com.sun.faces.config.ConfigureListener contextInitialized] - Initialisation de Mojarra 2.2.4 ( 20131003-1354 https://svn.java.net/svn/mojarra~svn/tags/2.2.4@12574) pour le contexte «/Quartis-OptimaCjj»  
+15:07:59.278 INFOS [org.primefaces.webapp.PostConstructApplicationEventListener processEvent] - Running on PrimeFaces 5.3  
+15:07:59.278 INFOS [org.primefaces.extensions.application.PostConstructApplicationEventListener processEvent] - Running on PrimeFaces Extensions 4.0.0  
+15:08:06.679 INFOS [org.apache.catalina.startup.HostConfig deployWAR] - Déploiement de l'archive Quartis-OptimaTml.war de l'application web  
+15:08:06.975 INFOS [org.apache.catalina.core.StandardContext addApplicationListener] - The listener "com.sun.faces.config.ConfigureListener" is already configured for this context. The duplicate definition has been ignored.  
+15:08:06.975 INFOS [org.apache.catalina.core.StandardContext addApplicationListener] - The listener "com.sun.faces.config.ConfigureListener" is already configured for this context. The duplicate definition has been ignored.  
+15:08:07.412 GRAVE [org.apache.catalina.session.StandardManager start] - Exception au chargement des sessions depuis le stockage persistant (persistent storage) 
+java.lang.IllegalStateException: Cannot deserialize BeanFactory with id org.springframework.web.context.WebApplicationContext:/Quartis-OptimaTml: no factory registered for this id
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$SerializedBeanFactoryReference.readResolve(DefaultListableBeanFactory.java:981)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at java.io.ObjectStreamClass.invokeReadResolve(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadObject(Unknown Source)
+	at org.springframework.aop.support.AbstractBeanFactoryPointcutAdvisor.readObject(AbstractBeanFactoryPointcutAdvisor.java:103)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at java.io.ObjectStreamClass.invokeReadObject(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.readArray(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadObject(Unknown Source)
+	at org.springframework.aop.framework.AdvisedSupport.readObject(AdvisedSupport.java:550)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at java.io.ObjectStreamClass.invokeReadObject(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.readObject(Unknown Source)
+	at org.apache.catalina.session.StandardSession.readObject(StandardSession.java:1475)
+	at org.apache.catalina.session.StandardSession.readObjectData(StandardSession.java:977)
+	at org.apache.catalina.session.StandardManager.doLoad(StandardManager.java:394)
+	at org.apache.catalina.session.StandardManager.load(StandardManager.java:321)
+	at org.apache.catalina.session.StandardManager.start(StandardManager.java:643)
+	at org.apache.catalina.core.ContainerBase.setManager(ContainerBase.java:438)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4559)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:791)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:771)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:546)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:905)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:740)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:500)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1277)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:321)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1053)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:785)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:445)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:519)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:581)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+ 
+15:08:07.537 INFOS [com.sun.faces.config.ConfigureListener contextInitialized] - Initialisation de Mojarra 2.2.4 ( 20131003-1354 https://svn.java.net/svn/mojarra~svn/tags/2.2.4@12574) pour le contexte «/Quartis-OptimaTml»  
+15:08:09.962 INFOS [org.primefaces.webapp.PostConstructApplicationEventListener processEvent] - Running on PrimeFaces 5.0  
+15:08:09.962 INFOS [org.primefaces.extensions.application.PostConstructApplicationEventListener processEvent] - Running on PrimeFaces Extensions 2.0.0  
+15:08:16.592 INFOS [org.apache.catalina.startup.HostConfig deployDirectory] - Déploiement du répertoire docs de l'application web  
+15:08:17.219 INFOS [org.apache.catalina.startup.HostConfig deployDirectory] - Déploiement du répertoire examples de l'application web  
+15:08:17.469 INFOS [org.apache.catalina.startup.HostConfig deployDirectory] - Déploiement du répertoire ROOT de l'application web  
+15:08:17.609 INFOS [org.apache.coyote.http11.Http11NioProtocol start] - Démarrage de Coyote HTTP/1.1 sur http-8383  
+15:08:17.640 INFOS [org.apache.coyote.ajp.AjpAprProtocol start] - Starting Coyote AJP/1.3 on ajp-8309  
+15:08:17.656 INFOS [org.apache.catalina.startup.Catalina start] - Server startup in 32727 ms  
+15:10:47.744 AVERTISSEMENT [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+15:10:54.461 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+15:13:08.412 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+15:14:48.957 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+15:14:51.813 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+15:15:11.781 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+15:25:01.795 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+15:29:15.399 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+15:29:23.005 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+15:29:42.336 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+15:33:01.235 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+15:43:35.041 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+15:46:09.683 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+15:54:42.674 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+15:58:29.691 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+16:15:26.749 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+16:18:58.024 INFO [org.apache.coyote.http11.Http11NioProtocol pause] - Suspension de Coyote HTTP/1.1 sur http-8383  
+16:18:58.024 INFO [org.apache.coyote.ajp.AjpAprProtocol pause] - Pausing Coyote AJP/1.3 on ajp-8309  
+16:18:59.038 INFO [org.apache.catalina.core.StandardService stop] - Arrêt du service Catalina  
+16:18:59.147 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc] - The web application [/Quartis-OptimaTml] registered the JBDC driver [net.sourceforge.jtds.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.  
+16:18:59.147 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-1] but has failed to stop it. This is very likely to create a memory leak.  
+16:18:59.147 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-2] but has failed to stop it. This is very likely to create a memory leak.  
+16:18:59.147 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-3] but has failed to stop it. This is very likely to create a memory leak.  
+16:18:59.147 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-4] but has failed to stop it. This is very likely to create a memory leak.  
+16:18:59.147 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-5] but has failed to stop it. This is very likely to create a memory leak.  
+16:18:59.163 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-6] but has failed to stop it. This is very likely to create a memory leak.  
+16:18:59.163 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-7] but has failed to stop it. This is very likely to create a memory leak.  
+16:18:59.163 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-8] but has failed to stop it. This is very likely to create a memory leak.  
+16:18:59.163 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-9] but has failed to stop it. This is very likely to create a memory leak.  
+16:18:59.163 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaTml] appears to have started a thread named [schedulerBean_Worker-10] but has failed to stop it. This is very likely to create a memory leak.  
+16:18:59.163 SEVERE [org.apache.catalina.loader.WebappClassLoader clearThreadLocalMap] - The web application [/Quartis-OptimaTml] created a ThreadLocal with key of type [net.sourceforge.jtds.jdbc.DateTime$1] (value [net.sourceforge.jtds.jdbc.DateTime$1@1120c602]) and a value of type [java.util.GregorianCalendar] (value [java.util.GregorianCalendar[time=1553091264000,areFieldsSet=true,areAllFieldsSet=false,lenient=true,zone=sun.util.calendar.ZoneInfo[id="Africa/Luanda",offset=3600000,dstSavings=0,useDaylight=false,transitions=3,lastRule=null],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=2019,MONTH=2,WEEK_OF_YEAR=12,WEEK_OF_MONTH=4,DAY_OF_MONTH=20,DAY_OF_YEAR=79,DAY_OF_WEEK=4,DAY_OF_WEEK_IN_MONTH=3,AM_PM=1,HOUR=3,HOUR_OF_DAY=15,MINUTE=14,SECOND=24,MILLISECOND=0,ZONE_OFFSET=3600000,DST_OFFSET=0]]) but failed to remove it when the web application was stopped. This is very likely to create a memory leak.  
+16:18:59.163 SEVERE [org.apache.catalina.loader.WebappClassLoader clearThreadLocalMap] - The web application [/Quartis-OptimaTml] created a ThreadLocal with key of type [net.sourceforge.jtds.jdbc.DateTime$1] (value [net.sourceforge.jtds.jdbc.DateTime$1@1120c602]) and a value of type [java.util.GregorianCalendar] (value [java.util.GregorianCalendar[time=1553090304000,areFieldsSet=true,areAllFieldsSet=false,lenient=true,zone=sun.util.calendar.ZoneInfo[id="Africa/Luanda",offset=3600000,dstSavings=0,useDaylight=false,transitions=3,lastRule=null],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=2019,MONTH=2,WEEK_OF_YEAR=12,WEEK_OF_MONTH=4,DAY_OF_MONTH=20,DAY_OF_YEAR=79,DAY_OF_WEEK=4,DAY_OF_WEEK_IN_MONTH=3,AM_PM=1,HOUR=2,HOUR_OF_DAY=14,MINUTE=58,SECOND=24,MILLISECOND=0,ZONE_OFFSET=3600000,DST_OFFSET=0]]) but failed to remove it when the web application was stopped. This is very likely to create a memory leak.  
+16:18:59.163 SEVERE [org.apache.catalina.loader.WebappClassLoader clearThreadLocalMap] - The web application [/Quartis-OptimaTml] created a ThreadLocal with key of type [net.sourceforge.jtds.jdbc.DateTime$1] (value [net.sourceforge.jtds.jdbc.DateTime$1@1120c602]) and a value of type [java.util.GregorianCalendar] (value [java.util.GregorianCalendar[time=1553089534000,areFieldsSet=true,areAllFieldsSet=false,lenient=true,zone=sun.util.calendar.ZoneInfo[id="Africa/Luanda",offset=3600000,dstSavings=0,useDaylight=false,transitions=3,lastRule=null],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=2019,MONTH=2,WEEK_OF_YEAR=12,WEEK_OF_MONTH=4,DAY_OF_MONTH=20,DAY_OF_YEAR=79,DAY_OF_WEEK=4,DAY_OF_WEEK_IN_MONTH=3,AM_PM=1,HOUR=2,HOUR_OF_DAY=14,MINUTE=45,SECOND=34,MILLISECOND=0,ZONE_OFFSET=3600000,DST_OFFSET=0]]) but failed to remove it when the web application was stopped. This is very likely to create a memory leak.  
+16:19:00.115 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc] - The web application [/Quartis-Web] registered the JBDC driver [net.sourceforge.jtds.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.  
+16:19:00.115 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-Web] appears to have started a thread named [Timer-0] but has failed to stop it. This is very likely to create a memory leak.  
+16:19:03.033 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc] - The web application [/Quartis-OptimaCjj] registered the JBDC driver [net.sourceforge.jtds.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.  
+16:19:03.033 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-1] but has failed to stop it. This is very likely to create a memory leak.  
+16:19:03.033 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-2] but has failed to stop it. This is very likely to create a memory leak.  
+16:19:03.033 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-3] but has failed to stop it. This is very likely to create a memory leak.  
+16:19:03.033 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-4] but has failed to stop it. This is very likely to create a memory leak.  
+16:19:03.033 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-5] but has failed to stop it. This is very likely to create a memory leak.  
+16:19:03.033 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-6] but has failed to stop it. This is very likely to create a memory leak.  
+16:19:03.048 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-7] but has failed to stop it. This is very likely to create a memory leak.  
+16:19:03.048 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-8] but has failed to stop it. This is very likely to create a memory leak.  
+16:19:03.048 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-9] but has failed to stop it. This is very likely to create a memory leak.  
+16:19:03.048 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCjj] appears to have started a thread named [schedulerBean_Worker-10] but has failed to stop it. This is very likely to create a memory leak.  
+16:19:03.937 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCorrection] appears to have started a thread named [Session Monitor] but has failed to stop it. This is very likely to create a memory leak.  
+16:19:03.937 SEVERE [org.apache.catalina.loader.WebappClassLoader clearReferencesThreads] - The web application [/Quartis-OptimaCorrection] appears to have started a thread named [Monitor Runner] but has failed to stop it. This is very likely to create a memory leak.  
+16:19:05.217 INFO [org.apache.coyote.http11.Http11NioProtocol destroy] - Arrêt de Coyote HTTP/1.1 sur http-8383  
+16:19:06.340 INFO [org.apache.coyote.ajp.AjpAprProtocol destroy] - Stopping Coyote AJP/1.3 on ajp-8309  
+16:19:07.853 INFOS [org.apache.catalina.core.AprLifecycleListener init] - Loaded APR based Apache Tomcat Native library 1.1.20.  
+16:19:07.884 INFOS [org.apache.catalina.core.AprLifecycleListener init] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].  
+16:19:08.774 INFOS [org.apache.tomcat.util.net.NioSelectorPool getSharedSelector] - Using a shared selector for servlet write/read  
+16:19:08.774 INFOS [org.apache.coyote.http11.Http11NioProtocol init] - Initialisation de Coyote HTTP/1.1 sur http-8383  
+16:19:08.790 INFOS [org.apache.coyote.ajp.AjpAprProtocol init] - Initializing Coyote AJP/1.3 on ajp-8309  
+16:19:08.790 INFOS [org.apache.catalina.startup.Catalina load] - Initialization processed in 1300 ms  
+16:19:08.821 INFOS [org.apache.catalina.core.StandardService start] - Démarrage du service Catalina  
+16:19:08.821 INFOS [org.apache.catalina.core.StandardEngine start] - Starting Servlet Engine: Apache Tomcat/6.0.29  
+16:19:08.837 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration host-manager.xml  
+16:19:09.289 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration manager.xml  
+16:19:09.430 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration Quartis-Dictionary.xml  
+16:19:09.492 INFOS [org.apache.catalina.loader.WebappClassLoader validateJarFile] - validateJarFile(C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Dictionary\WEB-INF\lib\servlet-api.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class  
+16:19:09.601 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration Quartis-LicenceWeb.xml  
+16:19:09.679 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration Quartis-OptimaCorrection.xml  
+16:19:10.491 INFOS [com.sun.faces.config.ConfigureListener contextInitialized] - Initializing Sun's JavaServer Faces implementation (1.2_04-b20-p03) for context '/Quartis-OptimaCorrection'  
+16:19:12.877 INFOS [org.apache.catalina.startup.HostConfig deployDescriptor] - Déploiement du descripteur de configuration Quartis-Web.xml  
+16:19:16.017 INFOS [com.sun.faces.config.ConfigureListener contextInitialized] - Initializing Sun's JavaServer Faces implementation (1.2_04-b20-p03) for context '/Quartis-Web'  
+16:19:20.163 INFOS [org.apache.catalina.startup.HostConfig deployWAR] - Déploiement de l'archive Quartis-OptimaCjj.war de l'application web  
+16:19:20.381 INFOS [org.apache.catalina.core.StandardContext addApplicationListener] - The listener "com.sun.faces.config.ConfigureListener" is already configured for this context. The duplicate definition has been ignored.  
+16:19:20.381 INFOS [org.apache.catalina.core.StandardContext addApplicationListener] - The listener "com.sun.faces.config.ConfigureListener" is already configured for this context. The duplicate definition has been ignored.  
+16:19:20.522 INFOS [com.sun.faces.config.ConfigureListener contextInitialized] - Initialisation de Mojarra 2.2.4 ( 20131003-1354 https://svn.java.net/svn/mojarra~svn/tags/2.2.4@12574) pour le contexte «/Quartis-OptimaCjj»  
+16:19:23.439 INFOS [org.primefaces.webapp.PostConstructApplicationEventListener processEvent] - Running on PrimeFaces 5.3  
+16:19:23.439 INFOS [org.primefaces.extensions.application.PostConstructApplicationEventListener processEvent] - Running on PrimeFaces Extensions 4.0.0  
+16:19:29.498 INFOS [org.apache.catalina.startup.HostConfig deployWAR] - Déploiement de l'archive Quartis-OptimaTml.war de l'application web  
+16:19:29.837 INFOS [org.apache.catalina.core.StandardContext addApplicationListener] - The listener "com.sun.faces.config.ConfigureListener" is already configured for this context. The duplicate definition has been ignored.  
+16:19:29.839 INFOS [org.apache.catalina.core.StandardContext addApplicationListener] - The listener "com.sun.faces.config.ConfigureListener" is already configured for this context. The duplicate definition has been ignored.  
+16:19:30.267 GRAVE [org.apache.catalina.session.StandardManager start] - Exception au chargement des sessions depuis le stockage persistant (persistent storage) 
+java.lang.IllegalStateException: Cannot deserialize BeanFactory with id org.springframework.web.context.WebApplicationContext:/Quartis-OptimaTml: no factory registered for this id
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$SerializedBeanFactoryReference.readResolve(DefaultListableBeanFactory.java:981)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at java.io.ObjectStreamClass.invokeReadResolve(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadObject(Unknown Source)
+	at org.springframework.aop.support.AbstractBeanFactoryPointcutAdvisor.readObject(AbstractBeanFactoryPointcutAdvisor.java:103)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at java.io.ObjectStreamClass.invokeReadObject(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.readArray(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadObject(Unknown Source)
+	at org.springframework.aop.framework.AdvisedSupport.readObject(AdvisedSupport.java:550)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at java.io.ObjectStreamClass.invokeReadObject(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source)
+	at java.io.ObjectInputStream.readSerialData(Unknown Source)
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source)
+	at java.io.ObjectInputStream.readObject0(Unknown Source)
+	at java.io.ObjectInputStream.readObject(Unknown Source)
+	at org.apache.catalina.session.StandardSession.readObject(StandardSession.java:1475)
+	at org.apache.catalina.session.StandardSession.readObjectData(StandardSession.java:977)
+	at org.apache.catalina.session.StandardManager.doLoad(StandardManager.java:394)
+	at org.apache.catalina.session.StandardManager.load(StandardManager.java:321)
+	at org.apache.catalina.session.StandardManager.start(StandardManager.java:643)
+	at org.apache.catalina.core.ContainerBase.setManager(ContainerBase.java:438)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4559)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:791)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:771)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:546)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:905)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:740)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:500)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1277)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:321)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1053)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:785)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:445)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:519)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:581)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+ 
+16:19:30.397 INFOS [com.sun.faces.config.ConfigureListener contextInitialized] - Initialisation de Mojarra 2.2.4 ( 20131003-1354 https://svn.java.net/svn/mojarra~svn/tags/2.2.4@12574) pour le contexte «/Quartis-OptimaTml»  
+16:19:32.744 INFOS [org.primefaces.webapp.PostConstructApplicationEventListener processEvent] - Running on PrimeFaces 5.0  
+16:19:32.815 INFOS [org.primefaces.extensions.application.PostConstructApplicationEventListener processEvent] - Running on PrimeFaces Extensions 2.0.0  
+16:19:54.474 INFOS [org.apache.catalina.startup.HostConfig deployDirectory] - Déploiement du répertoire docs de l'application web  
+16:19:54.501 INFOS [org.apache.catalina.startup.HostConfig deployDirectory] - Déploiement du répertoire examples de l'application web  
+16:19:54.656 INFOS [org.apache.catalina.startup.HostConfig deployDirectory] - Déploiement du répertoire ROOT de l'application web  
+16:19:54.726 INFOS [org.apache.coyote.http11.Http11NioProtocol start] - Démarrage de Coyote HTTP/1.1 sur http-8383  
+16:19:54.763 INFOS [org.apache.coyote.ajp.AjpAprProtocol start] - Starting Coyote AJP/1.3 on ajp-8309  
+16:19:54.774 INFOS [org.apache.catalina.startup.Catalina start] - Server startup in 45978 ms  
+16:20:22.131 AVERTISSEMENT [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  
+16:26:26.879 WARNING [org.apache.tomcat.util.http.Parameters processParameters] - Parameters: Invalid chunk '' ignored.  

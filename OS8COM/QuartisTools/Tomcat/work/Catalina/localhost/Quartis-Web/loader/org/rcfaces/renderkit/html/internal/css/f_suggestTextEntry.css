@@ -1,0 +1,36 @@
+/*
+ * $Id: f_suggestTextEntry.css,v 1.5 2006/10/13 18:04:38 oeuillot Exp $
+ */
+
+/**
+ *
+ * @class f_suggestTextEntry
+ *
+ * @author Olivier Oeuillot (latest modification by $Author: oeuillot $)
+ * @version $Revision: 1.5 $ $Date: 2006/10/13 18:04:38 $ 
+ */
+ 
+ 
+.f_suggestTextEntry {
+	margin: 0;
+	border: 1px solid #7F9DB9;
+	text-align: left;
+	vertical-align: baseline;
+}
+
+.f_suggestTextEntry_readonly,
+.f_suggestTextEntry_disabled {
+	border: 1px solid #7F9DB9;
+	margin: 1px;
+}
+
+.f_suggestTextEntry_required {
+	border: 1px solid #7F9DB9;
+	color: red;
+}
+
+.f_suggestTextEntry_waiting {
+	border: 1px solid #7F9DB9;
+	background: url("suggestTextEntry/waiting.gif") no-repeat right center;
+}
+

@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!-- =========== FULL CONFIGURATION FILE ================================== -->
+
+<faces-config version="1.2" 
+    xmlns="http://java.sun.com/xml/ns/javaee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd">
+    
+    <managed-bean>
+        <managed-bean-name>formCorrectionRebut</managed-bean-name>
+        <managed-bean-class>specifiques.correction.corr.rebut.mvc.FormCorrectionRebut_Controller</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope></managed-bean>
+    <managed-bean>
+        <managed-bean-name>formCorrectionTempsMachine</managed-bean-name>
+        <managed-bean-class>specifiques.correction.corr.temps.machine.mvc.FormCorrectionTempsMachine_Controller</managed-bean-class>
+
+        <managed-bean-scope>request</managed-bean-scope></managed-bean>
+    <managed-bean>
+        <managed-bean-name>formCorrectionTempsOperateur</managed-bean-name>
+        <managed-bean-class>specifiques.correction.corr.temps.operateur.mvc.FormCorrectionTempsOperateur_Controller</managed-bean-class>
+
+        <managed-bean-scope>request</managed-bean-scope></managed-bean>
+
+    <validator>
+        <validator-id>integerValidator</validator-id>
+        <validator-class>specifiques.correction.validator.IntegerValidator</validator-class>
+    </validator>
+    <validator>
+    <validator-id>realValidator</validator-id>
+        <validator-class>specifiques.correction.validator.RealValidator</validator-class>
+    </validator>
+
+    <application>
+        <locale-config>
+           <default-locale>en</default-locale>
+        </locale-config>
+        <message-bundle>specifiques.correction.resources.MessageJSF</message-bundle>
+        <resource-bundle>
+            <base-name>specifiques.correction.resources.ModuleLanguage</base-name>
+            <var>moduleLang</var>
+	</resource-bundle>
+        <!--view-handler>com.icesoft.faces.facelets.D2DFaceletViewHandler</view-handler-->
+        <view-handler>commun.view.handler.CommonViewHandler</view-handler>
+    </application>
+
+</faces-config>
+
+
+
+

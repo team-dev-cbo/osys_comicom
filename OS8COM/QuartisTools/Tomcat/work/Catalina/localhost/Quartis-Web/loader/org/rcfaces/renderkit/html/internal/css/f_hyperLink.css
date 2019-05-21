@@ -1,0 +1,22 @@
+/*
+ * $Id: f_hyperLink.css,v 1.4 2007/01/12 15:40:48 oeuillot Exp $
+ */
+
+/**
+ *
+ * @class f_hyperLink
+ *
+ * @author Olivier Oeuillot (latest modification by $Author: oeuillot $)
+ * @version $Revision: 1.4 $ $Date: 2007/01/12 15:40:48 $ 
+ */
+ 
+.f_hyperLink {
+	-moz-user-select: none;
+	user-select: none;
+	cursor: pointer;
+}
+
+.f_hyperLink_disabled {
+	color: #A1A192;
+	cursor: default;
+}

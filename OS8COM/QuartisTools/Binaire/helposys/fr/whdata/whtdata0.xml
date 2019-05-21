@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<tocdata>
+<book name="afxcore" >
+  <item name="Sommaire" url="afxcore/main_index.htm" />
+</book>
+<book name="application" >
+  <book name="configuration" >
+    <item name="Configuration de la base de données" url="application/configuration/HIDD_CONF_BD.htm" />
+    <item name="Configuration de la fenêtre" url="application/configuration/HIDD_CONF_FENETRE.htm" />
+    <item name="Configuration de la sécurité" url="application/configuration/HIDD_CONF_SECURITE.htm" />
+    <item name="Configuration de la trace" url="application/configuration/HIDD_CONF_TRACE.htm" />
+    <item name="Configuration du serveur web" url="application/configuration/HIDD_CONF_HTTP.htm" />
+    <item name="Configuration Général" url="application/configuration/HIDD_CONF_GENERAL.htm" />
+    <item name="Liste des extensions exécutables" url="application/configuration/HIDD_LIST_EXTENSION_EXEC.htm" />
+    <item name="Type Extension-Exécutable" url="application/configuration/HIDD_EXTENSION_EXEC.htm" />
+  </book>
+  <item name="Arrêt de l'application" url="application/HIDD_ARRET_APPLICATION.htm" />
+  <item name="Connexion au serveur" url="application/HIDD_SERVEUR_CONNEXION.htm" />
+  <item name="Généralité sur l'application" url="application/Generalite_application.htm" />
+  <item name="Imprimer une documentation" url="application/HIDD_IMPRIMER.htm" />
+  <item name="Liste des déclenchements" url="application/HIDD_LISTE_DECLENCHEMENT.htm" />
+  <item name="Liste des scénarios en cours" url="application/HIDD_LISTE_SCEN_COURS.htm" />
+  <item name="Liste des utilisateurs connectés" url="application/HIDD_LISTE_USER_CONNECT.htm" />
+  <item name="Sécurité" url="application/HIDD_SECURITE.htm" />
+</book>
+<book name="menu" >
+  <book name="affichage" >
+    <item name="Actualiser" url="menu/affichage/HID_RAFFRAICHIT_WORKSPACE.htm" />
+    <item name="Arrière plan" url="menu/affichage/HID_AFFICHAGE_ORDRE_ARRIERE_PLAN.htm" />
+    <item name="Avancer" url="menu/affichage/HID_AFFICHAGE_ORDRE_AVANCER.htm" />
+    <item name="Barre détat" url="menu/affichage/AFX_HIDW_STATUS_BAR.htm" />
+    <item name="Barre doutils" url="menu/affichage/AFX_HIDW_TOOLBAR.htm" />
+    <item name="Commande Barre état" url="menu/affichage/HID_VIEW_STATUS_BAR.htm" />
+    <item name="Commande Barre outils" url="menu/affichage/HID_VIEW_TOOLBAR.htm" />
+    <item name="menu_view" url="menu/affichage/menu_view.htm" />
+    <item name="Output" url="menu/affichage/HID_OUTPUT_AFFICHE.htm" />
+    <item name="Premier Plan" url="menu/affichage/HID_AFFICHAGE_ORDRE_PREMIER_PLAN.htm" />
+    <item name="Reculer" url="menu/affichage/HID_AFFICHAGE_ORDRE_RECULER.htm" />
+    <item name="Règles" url="menu/affichage/HID_AFFICHAGE_REGLES.htm" />
+    <item name="Workspace" url="menu/affichage/HID_WORKSPACE_AFFICHE.htm" />
+  </book>
+  <book name="aide" >
+    <item name="A propos" url="menu/aide/HID_APP_ABOUT.htm" />
+    <item name="menu_help" url="menu/aide/menu_help.htm" />
+    <item name="Rubriques de l'aide" url="menu/aide/HID_HELP_INDEX.htm" />
+  </book>
+  <book name="application" >
+    <item name="Arrêt" url="menu/application/HID_ARRET_APPLI.htm" />
+    <item name="Commande Enregistrer" url="menu/application/HID_FILE_SAVE.htm" />
+    <item name="Commande Quitter" url="menu/application/HID_APP_EXIT.htm" />
+    <item name="Configuration" url="menu/application/HID_APP_CONFIGURATION.htm" />
+    <item name="Connexion" url="menu/application/HID_Connexion.htm" />
+    <item name="Déconnexion" url="menu/application/HID_FICHIER_DECONNEXION.htm" />
+    <item name="Enregistrer tout" url="menu/application/HID_FILE_SAVE_ALL.htm" />
+    <item name="Impression" url="menu/application/HID_IMPRIMER_DOC_APPLI.htm" />
+    <item name="menu application" url="menu/application/menu_file.htm" />
+    <item name="Sécurité" url="menu/application/HID_SECURITE_APP.htm" />
+  </book>
+  <book name="édition" >
+    <item name="Commande Coller" url="menu/edition/HID_EDIT_PASTE.htm" />
+    <item name="Commande Copier" url="menu/edition/HID_EDIT_COPY.htm" />
+    <item name="Commande Couper" url="menu/edition/HID_EDIT_CUT.htm" />
+    <item name="Commande Rechercher" url="menu/edition/HID_EDIT_FIND.htm" />
+    <item name="Commande Remplacer" url="menu/edition/HID_EDIT_REPLACE.htm" />
+    <item name="Commande Supprimer" url="menu/edition/HIDD_SUPPRIMER.htm" />
+    <item name="menu_edit" url="menu/edition/menu_edit.htm" />
+  </book>
+  <book name="élément" >
+    <item name="Ouvrir un élément" url="menu/element/HID_OUVRIR_ELEMENT.htm" />
+    <item name="Propriétés d'un élément" url="menu/element/HID_PROPRIETES_ELEMENT.htm" />
+    <item name="Renommer un élément" url="menu/element/HID_RENOMMER_ELEMENT.htm" />
+    <item name="Supprimer un élément" url="menu/element/HID_SUPPRIMER_ELEMENT.htm" />
+  </book>
+  <book name="fenêtre" >
+    <item name="Commande 1, 2, 3, 4" url="menu/fenetre/HID_FILE_MRU_FILE1.htm" />
+    <item name="Commande Cascade" url="menu/fenetre/HID_WINDOW_CASCADE.htm" />
+    <item name="Commande Mosaïque" url="menu/fenetre/HID_WINDOW_TILE.htm" />
+    <item name="Fermer" url="menu/fenetre/HID_FENETRE_CLOSE.htm" />
+    <item name="Fermer Tout" url="menu/fenetre/HID_FENETRE_CLOSE_ALL.htm" />
+    <item name="menu_window" url="menu/fenetre/menu_window.htm" />
+    <item name="Réorganiser les icônes" url="menu/fenetre/HID_WINDOW_ARRANGE.htm" />
+  </book>
+  <book name="groupe" >
+    <item name="Nouvel élément" url="menu/groupe/HID_NOUVEAU_ELEMENT.htm" />
+    <item name="Propriétés d'un groupe" url="menu/groupe/HID_PROPRIETES_GROUPE.htm" />
+    <item name="Renommer le nom d'un groupe" url="menu/groupe/HID_RENOMMER_GROUPE.htm" />
+    <item name="Sécurité pour un groupe" url="menu/groupe/HID_SECURITE_GRP.htm" />
+    <item name="Supprimer un groupe" url="menu/groupe/HID_SUPPRIMER_GROUPE.htm" />
+  </book>
+  <book name="module" >
+    <item name="Imprimer" url="menu/module/HID_IMPRESSION.htm" />
+    <item name="Nouveau Groupe" url="menu/module/HID_NOUVEAU_GROUPE.htm" />
+    <item name="Sécurité pour un module" url="menu/module/HIDD_SECURITE_MODULE.htm" />
+  </book>
+  <book name="options" >
+    <item name="Affichage propriétés" url="menu/options/HID_OPTIONS_PROPRIETES.htm" />
+    <item name="Grille" url="menu/options/HID_OPTIONS_GRILLE.htm" />
+    <item name="menu options" url="menu/options/menu_options.htm" />
+    <item name="Millimètre" url="menu/options/HID_OPTIONS_UNITE_MM.htm" />
+    <item name="Pixels" url="menu/options/HID_OPTIONS_UNITE_PIXEL.htm" />
+  </book>
+  <book name="outils" >
+    <item name="Commande Liste des déclenchements" url="menu/outils/HID_DECLENCHEMENT.htm" />
+    <item name="Commande Liste des scénarios en cours" url="menu/outils/HID_LST_SCENARIOS_COURS.htm" />
+    <item name="Commande Liste des utilisateurs connectés" url="menu/outils/HID_LST_USER_CONNECT.htm" />
+    <item name="menu outils" url="menu/outils/menu_outils.htm" />
+  </book>
+  <book name="scénario" >
+    <item name="Compile" url="menu/scenario/HID_COMPILATION_COMPILE.htm" />
+    <item name="Compile Tout" url="menu/scenario/HID_COMPILATION_COMPILETOUT.htm" />
+    <item name="Execute" url="menu/scenario/HID_EXECUTE.htm" />
+    <item name="Menu Lpx" url="menu/scenario/Menu_LPX.htm" />
+    <item name="Recompile Tout" url="menu/scenario/HID_COMPILATION_RECOMPILETOUT.htm" />
+  </book>
+  <book name="zoom" >
+    <item name="Zoom 100" url="menu/zoom/HID_ZOOM_100.htm" />
+    <item name="Zoom 150" url="menu/zoom/HID_ZOOM_150.htm" />
+    <item name="Zoom 200" url="menu/zoom/HID_ZOOM_200.htm" />
+    <item name="Zoom 25" url="menu/zoom/HID_ZOOM_25.htm" />
+    <item name="Zoom 50" url="menu/zoom/HID_ZOOM_50.htm" />
+    <item name="Zoom 500" url="menu/zoom/HID_ZOOM_500.htm" />
+    <item name="Zoom 75" url="menu/zoom/HID_ZOOM_75.htm" />
+  </book>
+</book>
+<chunk name="module" ref="whtdata1.xml" />
+<book name="navigateur" >
+  <item name="Utilisation du navigateur" url="navigateur/Utilisation_du_navigateur.htm" />
+</book>
+
+</tocdata>

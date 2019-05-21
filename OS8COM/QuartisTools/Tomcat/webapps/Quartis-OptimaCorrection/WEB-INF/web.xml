@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="branch 4.0.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <display-name>Quartis-OptimaCorrection 4.0.0</display-name>
+	<description>
+QuartisOptimaWar 3.2.15 2017 07 04 : 
+        CorrectionTempsEquipement : Mantis 3401 - Si on ajoute un nouvel etat equipement en entrant juste le code et en ne le selectionnant
+        pas par la liste, la ligne etait cree dans la table ARCH_TEMP, mais le champ CODE_ETAT etait a vide.    
+Quartis-OptimaCorrection 3.2.16/1.0.1 :
+        CalendrierEtatEquipement - Mantis 3596 : Ajout du code machine en plus de la désignation dans la colonne du tableau.         
+        Changement de la librairie QuartisMultilanguageManager.jar en Quartis-MultilanguageManager.jar
+        Changement du nom du projet en Quartis-OptimaCorrection
+Quartis-OptimaCorrection 4.0.0 (ancienne branche 3.2.17) :
+        Mantis 3200 - On prend désormais en compte le code_equi_oper dans la tableau de temps personnel   
+		Mantis 3401 - Résolution Erreur HTTP 500 lors d'une validation sans choix d'un etat dans la liste
+					  Empêcher la validation d'un temps équipement si aucun état sélectionné
+					  Remettre en place la recherche par désignation d'un état en plus de son code Etat
+    </description>
+    
+    <context-param>
+        <param-name>com.sun.faces.verifyObjects</param-name>
+        <param-value>false</param-value>
+    </context-param>
+    <context-param>
+        <param-name>com.sun.faces.validateXml</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    <context-param>
+        <param-name>javax.faces.STATE_SAVING_METHOD</param-name>
+        <param-value>server</param-value>
+    </context-param>
+    <context-param> 
+        <param-name>javax.faces.CONFIG_FILES</param-name> 
+        <param-value>/WEB-INF/faces-config.xml</param-value> 
+    </context-param><!-- -->
+    <!-- Specifies to the ICEfaces framework that synchronous update mode is to be
+     used.  By default, ICEfaces uses asynchronous update mode to support
+     server-initiated updates (AJAX push).  Setting to true will enable
+     synchronous update mode and disable AJAX push features. -->
+    <context-param>
+        <param-name>com.icesoft.faces.synchronousUpdate</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    <!-- com.icesoft.faces.connectionTimeout permet de définir une durée après laquelle la session sera déconnectée.
+    Cette durée est définie en millisecondes -->
+    <context-param>
+        <param-name>com.icesoft.faces.connectionTimeout</param-name>
+        <param-value>60000</param-value>
+    </context-param>
+    <!-- Specifies to the ICEfaces framework whether to support multiple views of a
+     single application from the same browser.  When running in a Portlet
+     environment, this parameter must be set to true. -->
+    <context-param>
+        <param-name>com.icesoft.faces.concurrentDOMViews</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    <context-param>
+        <param-name>javax.faces.DEFAULT_SUFFIX</param-name>
+        <param-value>.jsf</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <!-- Persistent Faces Servlet -->
+    <servlet>
+        <servlet-name>Persistent Faces Servlet</servlet-name>
+        <servlet-class>com.icesoft.faces.webapp.xmlhttp.PersistentFacesServlet</servlet-class>
+        <load-on-startup> 1 </load-on-startup>
+    </servlet>
+    <!-- Blocking Servlet -->
+    <servlet>
+        <servlet-name>Blocking Servlet</servlet-name>
+        <servlet-class>com.icesoft.faces.webapp.xmlhttp.BlockingServlet</servlet-class>
+        <load-on-startup> 1 </load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/faces/*</url-pattern>
+    </servlet-mapping>
+    <!-- Persistent Faces Servlet Mappings -->
+    <servlet-mapping>
+        <servlet-name>Persistent Faces Servlet</servlet-name>
+        <url-pattern>/xmlhttp/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Persistent Faces Servlet</servlet-name>
+        <url-pattern>*.iface</url-pattern>
+    </servlet-mapping>
+    <!-- Blocking Servlet Mapping -->
+    <servlet-mapping>
+        <servlet-name>Blocking Servlet</servlet-name>
+        <url-pattern>/block/*</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CalendrierEquipementInit</servlet-name>
+        <servlet-class>specifiques.calendrier.calendrierEquipement.servlet.CalendrierEquipementInit</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CalendrierEquipementMainServlet</servlet-name>
+        <servlet-class>specifiques.calendrier.calendrierEquipement.servlet.CalendrierEquipementMainServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListeAtelierServlet</servlet-name>
+        <servlet-class>specifiques.calendrier.calendrierEquipement.servlet.ListeAtelierServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CalendrierEquipementAjoutServlet</servlet-name>
+        <servlet-class>specifiques.calendrier.calendrierEquipement.servlet.CalendrierEquipementAjoutServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CalendrierEquipementCalculServlet</servlet-name>
+        <servlet-class>specifiques.calendrier.calendrierEquipement.servlet.CalendrierEquipementCalculServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CalendrierEquipementSupprimeServlet</servlet-name>
+        <servlet-class>specifiques.calendrier.calendrierEquipement.servlet.CalendrierEquipementSupprimeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CalendrierEquipementServlet</servlet-name>
+        <servlet-class>specifiques.calendrier.calendrierEquipement.servlet.CalendrierEquipementServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CalendrierPersonnelInit</servlet-name>
+        <servlet-class>specifiques.calendrier.calendrierPersonnel.servlet.CalendrierPersonnelInit</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CalendrierPersonnelMainServlet</servlet-name>
+        <servlet-class>specifiques.calendrier.calendrierPersonnel.servlet.CalendrierPersonnelMainServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SelectForm</servlet-name>
+        <servlet-class>commun.servlet.SelectForm</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CalendrierPersonnelAjoutServlet</servlet-name>
+        <servlet-class>specifiques.calendrier.calendrierPersonnel.servlet.CalendrierPersonnelAjoutServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CalendrierPersonnelSupprimeServlet</servlet-name>
+        <servlet-class>specifiques.calendrier.calendrierPersonnel.servlet.CalendrierPersonnelSupprimeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CalendrierPersonnelCalculServlet</servlet-name>
+        <servlet-class>specifiques.calendrier.calendrierPersonnel.servlet.CalendrierPersonnelCalculServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CalendrierEquipementInit</servlet-name>
+        <url-pattern>/CalendrierEquipementInit</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CalendrierEquipementMainServlet</servlet-name>
+        <url-pattern>/CalendrierEquipementMainServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListeAtelierServlet</servlet-name>
+        <url-pattern>/ListeAtelierServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CalendrierEquipementAjoutServlet</servlet-name>
+        <url-pattern>/CalendrierEquipementAjoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CalendrierEquipementCalculServlet</servlet-name>
+        <url-pattern>/CalendrierEquipementCalculServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CalendrierEquipementSupprimeServlet</servlet-name>
+        <url-pattern>/CalendrierEquipementSupprimeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CalendrierEquipementServlet</servlet-name>
+        <url-pattern>/CalendrierEquipementServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CalendrierPersonnelInit</servlet-name>
+        <url-pattern>/CalendrierPersonnelInit</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CalendrierPersonnelMainServlet</servlet-name>
+        <url-pattern>/CalendrierPersonnelMainServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SelectForm</servlet-name>
+        <url-pattern>/SelectForm</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CalendrierPersonnelAjoutServlet</servlet-name>
+        <url-pattern>/CalendrierPersonnelAjoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CalendrierPersonnelSupprimeServlet</servlet-name>
+        <url-pattern>/CalendrierPersonnelSupprimeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CalendrierPersonnelCalculServlet</servlet-name>
+        <url-pattern>/CalendrierPersonnelCalculServlet</url-pattern>
+    </servlet-mapping>
+    
+    <filter>
+        <filter-name>filtreSession</filter-name>
+        <filter-class>commun.filter.FiltreSession</filter-class>
+    </filter>
+    
+    <filter-mapping>
+        <filter-name>filtreSession</filter-name>
+        <url-pattern>*.ajx</url-pattern>
+        <url-pattern>*.jsf</url-pattern>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

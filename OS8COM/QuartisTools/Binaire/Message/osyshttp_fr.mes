@@ -1,0 +1,21 @@
+Version 1
+APP 11
+
+1 Message d'erreur
+2 Le Nom de la machine est inconnu
+3 Aucun message après la fin du scénario
+4 Déconnexion au navigateur (Num socket : %1 - adresse IP : %2)
+5 Connexion au navigateur (Num socket : %1 - adresse IP : %2)
+6 Aucun utilisateur associé à l'adresse IP %1 n'a été trouvé (Num socket : %2)
+7 Message de déclenchement "%1" reçu par le navigateur (Num Socket : %2, Adresse IP : %3)
+8 Création d'une nouvelle connexion impossible - Le nombre maximum de socket a été atteint
+9 Erreur d'ouverture du fichier "%1" (Num Socket:%2 - Adresse IP : %3)
+10 Le fichier "%1", envoyé par le navigateur, est inconnu (Num Socket:%2 - Adresse IP:%3)
+11 Le fichier par défaut "%1" n'existe pas (Num Socket:%2 - Adresse IP:%3)
+12 L'utilisateur "%1" est associé à l'adresse IP "%2" (Num Socket:%3)
+13 Aucun déclenchement trouvé
+14 Le serveur WEB ne gère pas les CGI
+15 Erreur d'initialisation du serveur web - Le port (%1) est déjà utilisé par un autre logiciel
+16 Erreur d'initialisation du serveur web (Numéro d'erreur = %1)
+17 Appel de la page ou du fichier "%1"
+18 Fichier "%1" non envoyé au client car non modifié (Num Socket : %2, Adresse IP : %3)

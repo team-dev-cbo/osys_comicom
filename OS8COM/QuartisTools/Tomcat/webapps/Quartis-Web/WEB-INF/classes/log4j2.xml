@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN"> <!-- Logs for Log4j2 -->
+  <Appenders>
+    <Console name="STDOUT" target="SYSTEM_OUT">
+      <!-- 
+           Doc sur les patterns Log4J2 : https://logging.apache.org/log4j/2.x/manual/layouts.html#PatternLayout
+            %d{HH:mm:ss.SSS}           -> date/heure, au format 18:25:52.999 
+                                          (heures sur 2 chiffres, minutes sur 2 
+                                          chifffres, secondes sur 2 chiffres et 
+                                          millisecondes sur 3 chiffres)
+            %highlight{%5p{length=5}}   -> %highlight pour mettre en couleur
+                                          %5p le niveau (ERROR, WARN, DEBUG...),
+                                          justifié à gauche avec des espaces 
+                                          pour compléter la taille
+                                          length = 5 : 5 caractères max
+            {INFO=blue, DEBUG=magenta} -> remplacements de couleurs pour le 
+                                          highlight
+            %-17t{length=17}           -> le nom du thread, justifié à gauche avec
+                                          des espaces pour avoir une largeur constante
+            %c{1}                      -> la source (classe) cause de l'erreur, 
+                                          limitée au dernier niveau (le nom du 
+                                          package est masqué complètement)
+            %highlight{%m}             -> %highlight pour mettre en couleur
+                                          %m le message
+            {INFO=blue, DEBUG=magenta} -> mêmes remplacement de couleurs pour le 
+                                          highlight
+            %ex                        -> la stackTrace de l'exception (le cas 
+                                          échéant)
+            %n                         -> nouvelle ligne
+        -->
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} %highlight{%5p{length=5}}{WARN=cyan, INFO=blue, DEBUG=magenta} - %-17t{length=17} - %c{1} %highlight{%m}{WARN=cyan, INFO=blue, DEBUG=magenta} %ex%n"/>
+    </Console>
+    <Routing name="Routing">
+        <Routes pattern="$${ctx:contextId}">
+            <Route>
+                <RollingFile 
+                    name="MainQWeb" 
+                    fileName="${sys:catalina.home}/logs/Quartis-Web.log"
+                    filePattern="${sys:catalina.home}/logs/Quartis-Web.%d{yyyy-MM-dd}.log"
+                    immediateFlush="true">
+                    <PatternLayout pattern="%d{HH:mm:ss.SSS} %5p{length=5} - %c{1} %m %ex%n"/>
+                    <Policies>
+                        <TimeBasedTriggeringPolicy/>
+                    </Policies>
+                </RollingFile>
+            </Route>
+            <Route key="Timer">
+                <RollingFile 
+                    name="MinuteurQWeb" 
+                    fileName="${sys:catalina.home}/logs/QWeb-minuteur.log"
+                    filePattern="${sys:catalina.home}/logs/QWeb-minuteur.%d{yyyy-MM-dd}.log"
+                    immediateFlush="true">
+                    <PatternLayout pattern="%d{HH:mm:ss.SSS} - %-17t{length=17} - %m %ex%n"/>
+                    <Policies>
+                        <TimeBasedTriggeringPolicy/>
+                    </Policies>
+                </RollingFile>
+            </Route>
+        </Routes>
+    </Routing>
+  </Appenders>
+  <Loggers>
+    <Root level="DEBUG">
+        <AppenderRef ref="STDOUT" level="DEBUG" />
+        <AppenderRef ref="Routing" level="DEBUG"/>
+    </Root>
+  </Loggers>
+</Configuration>

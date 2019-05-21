@@ -1,0 +1,11 @@
+new f_class("f_dndEvent",{statics:{NONE_DND_EFFECT:0,DEFAULT_DND_EFFECT:1,COPY_DND_EFFECT:2,LINK_DND_EFFECT:4,MOVE_DND_EFFECT:8,DRAG_INIT_STAGE:"dragInit",DRAG_START_STAGE:"dragStart",DRAG_ABORTED_STAGE:"dragAborted",DROP_REQUEST_STAGE:"dropRequest",DRAG_REQUEST_STAGE:"dragRequest",DROP_CANCELED_STAGE:"dropCanceled",DRAG_CANCELED_STAGE:"dragCanceled",DROP_COMPLETE_STAGE:"dropComplete",DRAG_COMPLETE_STAGE:"dragComplete",DRAG_OVER_STAGE:"dragOver",DROP_OVER_STAGE:"dropOver",DRAG_OVER_CANCELED_STAGE:"dragOverCanceled",DROP_OVER_CANCELED_STAGE:"dropOverCanceled",As:function(e){return new f_dndEvent(e)},w:function(o,l,d,t,h,v,a,g,f,c,s,u){var n=null,i,r,e
+if(u)i=f_core.iv({targetItemValue:a,sourceItemValue:t.f_getSourceItemValue(),sourceComponent:t.f_getSourceComponent(),effect:f,types:c})
+r={_2f:v,_i0:a,_e9:g,_r5:f,_a4:c,_gv:t,_ng:h,_cf:s}
+e=new f_event(o,l,d,n,r,n,n,i)
+try{return o.f_fireEvent(e)}finally{f_classLoader.Destroy(e)}}},members:{f_dndEvent:function(n){var t=this,e=n.f_getValue()
+t._2t=e
+t._gv=e._gv
+t._ng=e._ng
+t._cf=e._cf},f_getTargetComponent:function(){return this._2t._e9},f_getTargetItem:function(){return this._2t._2f},f_getTargetItemValue:function(){return this._2t._i0},f_getSourceComponent:function(){return this.f_getDragAndDropEngine().f_getSourceComponent()},f_getSourceItem:function(){return this.f_getDragAndDropEngine().f_getSourceItem()},f_getSourceItemValue:function(){return this.f_getDragAndDropEngine().f_getSourceItemValue()},f_getSourceItems:function(){return this.f_getDragAndDropEngine().f_getSourceItems()},f_getSourceItemsValue:function(){return this.f_getDragAndDropEngine().f_getSourceItemsValue()},f_getStage:function(){return this._ng},f_getDragAndDropEngine:function(){return this._gv},f_getEffect:function(){return this._2t._r5},f_setEffect:function(e){if(!this._cf)throw new Error("Impossible to change effect : "+e)
+this._cf._r5=e},f_getTypes:function(){return this._2t._a4},f_setTypes:function(e){if(!this._cf)throw new Error("Impossible to change types : "+e)
+this._cf._a4=e}}});

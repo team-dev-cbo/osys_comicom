@@ -1,0 +1,9 @@
+Version 1
+APP 7
+
+
+1 Le fichier %1 n'existe pas 
+2 Erreur, le fichier %1 n'a pas été effacé
+3 Le répertoire de base ("%1") de l'application n'existe pas
+4 Erreur de construction du nom fichier ("%1" )
+5 Erreur, le fichier %1 ne s'est pas ouvert

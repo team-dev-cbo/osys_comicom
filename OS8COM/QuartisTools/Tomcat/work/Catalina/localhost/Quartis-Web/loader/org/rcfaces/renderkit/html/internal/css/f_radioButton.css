@@ -1,0 +1,37 @@
+/*
+ * $Id: f_radioButton.css,v 1.8 2007/05/07 08:48:50 oeuillot Exp $
+ */
+
+/**
+ *
+ * @class f_radioButton
+ *
+ * @author Olivier Oeuillot (latest modification by $Author: oeuillot $)
+ * @version $Revision: 1.8 $ $Date: 2007/05/07 08:48:50 $ 
+ */
+
+.f_radioButton {
+ 	-moz-user-select: none;
+	user-select: none;
+	text-align: left;
+	vertical-align: baseline;
+	display: inline;
+}
+
+.f_radioButton_input {
+	vertical-align: middle;
+}
+
+.f_radioButton_text {
+	vertical-align: middle;
+	display: inline;
+	-moz-user-select: none;
+	user-select: none;
+
+	cursor: pointer;
+}
+
+.f_radioButton_disabled .f_radioButton_text {
+	color: #A1A192;
+	cursor: default;
+}

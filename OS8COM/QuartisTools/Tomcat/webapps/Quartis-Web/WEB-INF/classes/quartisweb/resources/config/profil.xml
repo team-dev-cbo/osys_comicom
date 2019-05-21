@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lst_profil>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<profil code="INVITE" designation="Invite">
+<droit moduleID="OPTIMA_Standard">
+<page ajout="false" id="OPTIMA_Constantes" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_ConstantesSite" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Section_Ana" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Section_Geo" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Atelier" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Site" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Unites" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Tache" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Scenario_Controle" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Scenario" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Imprimante_Type" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Imprimante" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Term_Imprimante" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Impr_Etat_Liste" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Impr_Spooler" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Objectifs" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Equipe" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Terminal_Menu" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Terminal_Scenario" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Terminal_Declenchement" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Terminal" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Habilitation" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_InitApplication" modif="false" supp="false"/>
+<page ajout="false" id="System_Event_List_1" modif="false" supp="false"/>
+<page ajout="false" id="Database_Version_List" modif="false" supp="false"/>
+<page ajout="false" id="admin_users" modif="false" supp="false"/>
+<page ajout="false" id="admin_profils" modif="false" supp="false"/>
+<page ajout="false" id="parametres" modif="false" supp="false"/>
+</droit>
+<droit moduleID="OPTIMA_Suivi_Personnel">
+<page ajout="false" id="OPTIMA_Personnel" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Service" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Etat_Personnel" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Famille_Etat_Pers" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Etat_Presence" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Horaire_Pers_Plage" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Horaire_Personnel" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Habilitation_Etat" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Habilitation_Mach" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Habilitation_Scen" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Evt_Pointage" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Evt_Presence_Histo" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Personnel_Badges" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Personnel_CB_Etat" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Personnel_Synthese_Temps" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Personnel_Synthese_Temps_Kelio" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Personnel_Anomalie_Presence" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Personnel_Indicateurs" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Personnel_Presence" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Personnel_historique_etat" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Horaire_Pers_Calendrier" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Horaire_Pers_Calendrier_Kelio" modif="false" supp="false"/>
+<page ajout="false" id="Personnel_Liste_Present_Absent_1" modif="false" supp="false"/>
+<page ajout="false" id="Personnel_Liste_Present_Absent_2" modif="false" supp="false"/>
+<page ajout="false" id="Personnel_Liste_Synthese_Temps_1" modif="false" supp="false"/>
+<page ajout="false" id="Personnel_Activite_EnCours_Liste_1" modif="false" supp="false"/>
+</droit>
+<droit moduleID="OPTIMA_Suivi_Equipement">
+<page ajout="false" id="OPTIMA_Machine" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Machine_Groupe" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Etat_Machine" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Famille_Etat_Mach" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Terminal_Entree" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Terminal_Sortie" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Terminal_Type_Entree" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Terminal_Type_Sortie" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Terminal_Port_Serie" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Habilitation_Machine_Etat" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Habilitation_Machine_Rebut" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Superviseur_Machine" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Superviseur_Liste" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_MACH_Jour_Part" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Horaire_Mach_Plage" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Horaire_Machine" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Evt_Comptage" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Evt_Production_Histo" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Evt_Production_EC" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Etat_Synthese" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Equipement_CB" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Equipement_CB_Etat" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Etat_Historique" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Horaire_Mach_Calendrier" modif="false" supp="false"/>
+<page ajout="false" id="Equipement_Activite_Liste_1" modif="false" supp="false"/>
+<page ajout="false" id="Equipement_Activite_Liste_2" modif="false" supp="false"/>
+<page ajout="false" id="Equipement_Chronogramme" modif="false" supp="false"/>
+<page ajout="false" id="Equipement_Chronogramme_Date" modif="false" supp="false"/>
+<page ajout="false" id="Equipement_Chronogramme_Periode" modif="false" supp="false"/>
+<page ajout="false" id="Equipement_Chronogramme_Production_Operateur" modif="false" supp="false"/>
+<page ajout="false" id="Equipement_Courbe_Cadence_1" modif="false" supp="false"/>
+<page ajout="false" id="Equipement_Courbe_Indicateur_1" modif="false" supp="false"/>
+<page ajout="false" id="Equipement_Etat_Graphique_Cumul_1" modif="false" supp="false"/>
+<page ajout="false" id="Equipement_Etat_Historique_Recherche_1" modif="false" supp="false"/>
+<page ajout="false" id="Equipement_Indicateurs_Mensuel_Lisse_1" modif="false" supp="false"/>
+</droit>
+<droit moduleID="OPTIMA_Suivi_Production">
+<page ajout="false" id="OPTIMA_Gamme_Cadence" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Gestion_Gamme_Cadence" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Gamme_Cadence_Observee" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Gestion_Piece_Cycle" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Gamme_Piece_Cycle" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Rebut" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Famille_Rebut" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Article_Machine" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Famille_Article" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Etat_Avancement" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Article" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_ArticleSite" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_FamilleArticleSite" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Of_Liste" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Of_Operation" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Of_Attente" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Of_Composant" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Of_Article" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Of_Liste" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Article_Gamme" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Declaration_Bonne" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Declaration_Rebut" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Nomenclature" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Caracteristique" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Caracteristique_Valeur" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Caracteristique_Machine" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Matiere_Complementaire" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Alerte_Matiere" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Fiche_Suiveuse" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Production_CB_Rebut" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Production_Indicateurs" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Production_Bilans" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Bilan_OF" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Avancement_Fab" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Composant_Synthese" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Rebuts_Bilans" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Production_Changement_Fab" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Bilan_Charge_Machine" modif="false" supp="false"/>
+<page ajout="false" id="Production_OF_EnCours_1" modif="false" supp="false"/>
+<page ajout="false" id="Production_Indicateurs_Equipement" modif="false" supp="false"/>
+<page ajout="false" id="Production_Bilan_OF_1" modif="false" supp="false"/>
+<page ajout="false" id="Production_Cadence_Synthese_1" modif="false" supp="false"/>
+<page ajout="false" id="Production_Corrections_Temps_Rebuts" modif="false" supp="false"/>
+<page ajout="false" id="Production_Corrections_Temps_Equipement" modif="false" supp="false"/>
+<page ajout="false" id="Production_Corrections_Temps_Personnel" modif="false" supp="false"/>
+</droit>
+<droit moduleID="OPTIMA_Suivi_Outillage">
+<page ajout="false" id="OPTIMA_Outil" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Of_Outil" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Outil_Article" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Outillages_Indicateurs" modif="false" supp="false"/>
+</droit>
+<droit moduleID="OPTIMA_Suivi_Maintenance">
+<page ajout="false" id="OPTIMA_Maint_Panne" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Maint_Type" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Maint_Mach_Prev" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Maint_Outil_Prev" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Famille_Maint_Type" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Maint_Intervention" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Maintenance_CB_Maintenance" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Maintenance_CB_Panne" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Maintenance_Indicateurs" modif="false" supp="false"/>
+<page ajout="false" id="Maintenance_Interventions_EnCours_Liste" modif="false" supp="false"/>
+<page ajout="false" id="Maintenance_Interventions_EnCours_Grille" modif="false" supp="false"/>
+<page ajout="false" id="Maintenance_Preventif_Alertes_Liste" modif="false" supp="false"/>
+<page ajout="false" id="Maintenance_Maintenances_Synthese" modif="false" supp="false"/>
+<page ajout="false" id="Maintenance_Maintenances_Historique" modif="false" supp="false"/>
+<page ajout="false" id="Maintenance_Interventions_Historique" modif="false" supp="false"/>
+</droit>
+<droit moduleID="OPTIMA_Controle_Process">
+<page ajout="false" id="OPTIMA_Controle_Gamme" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Controle_Gamme_Ec" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Controle_Liste" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Controle_Frequentiel" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Controle_Appareil" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Controle_Mesure" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Controle_Mesure_Ec" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Controle_Saisie" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Controle_Ec" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Controle_Histo" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Controle_Type" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Controle_Type_Liste" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Controle_Type_Liste_Valeur" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Personnel_Habilitation" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Controle_Habilitation" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Controle_Process_Historique" modif="false" supp="false"/>
+<page ajout="false" id="Controle_Gammes_EnCours_Liste" modif="false" supp="false"/>
+<page ajout="false" id="Controle_Gammes_Synthese_Equipement" modif="false" supp="false"/>
+<page ajout="false" id="Controle_Gammes_Synthese_OF" modif="false" supp="false"/>
+<page ajout="false" id="Controle_Gammes_Synthese_Mesure" modif="false" supp="false"/>
+<page ajout="false" id="Controle_Gammes_Mesures_Historique" modif="false" supp="false"/>
+</droit>
+<droit moduleID="OPTIMA_Tiers">
+<page ajout="false" id="OPTIMA_StatutCommande" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Client" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Fournisseur" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Transporteur" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_CommandesFournisseur" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_CommandesFournisseurDetail" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_CommandesReceptionFour" modif="false" supp="false"/>
+</droit>
+<droit moduleID="OPTIMA_Tracabilite">
+<page ajout="false" id="OPTIMA_Stock_Statut" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Stock_Liste" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Stock_Empl" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Evt_Lot_EC" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Evt_Lot_Histo" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Evt_Stock_EC" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Evt_Stock_Histo" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Serialisation_EC" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Serialisation_Histo" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Compteur_EC" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Compteur_Liste" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Terminal_Balance" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Balance_Liste" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Evt_Recet_Batch_Comp_Ec" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Evt_Recet_Batch_Comp_Histo" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Evt_Recet_Batch_Ec" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Evt_Recet_Batch_Histo" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_genealogie_amont" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_genealogie_aval" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_genealogie_serie" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_genealogie_client" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_conformite" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_workflow_management" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_workflow_user_management" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_workflow_group_management" modif="false" supp="false"/>
+</droit>
+<droit moduleID="OPTIMA_Gestion_Document">
+<page ajout="false" id="OPTIMA_Document" modif="false" supp="false"/>
+<page ajout="false" id="OPTIMA_Document_Type" modif="false" supp="false"/>
+</droit>
+<droit moduleID="OPTIMA_About">
+<page ajout="false" id="About_Horloge" modif="false" supp="false"/>
+<page ajout="false" id="About_Notice_Technique" modif="false" supp="false"/>
+</droit>
+</profil>
+<profil code="ADMIN" designation="Administrateur">
+<droit moduleID="OPTIMA_Standard">
+<page ajout="true" id="OPTIMA_Constantes" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_ConstantesSite" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Section_Ana" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Section_Geo" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Atelier" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Site" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Unites" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Tache" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Scenario_Controle" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Scenario" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Imprimante_Type" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Imprimante" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Term_Imprimante" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Impr_Etat_Liste" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Impr_Spooler" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Objectifs" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Equipe" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Terminal_Menu" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Terminal_Scenario" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Terminal_Declenchement" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Terminal" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Habilitation" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_InitApplication" modif="true" supp="true"/>
+<page ajout="true" id="System_Event_List_1" modif="true" supp="true"/>
+<page ajout="true" id="Database_Version_List" modif="true" supp="true"/>
+<page ajout="true" id="admin_users" modif="true" supp="true"/>
+<page ajout="true" id="admin_profils" modif="true" supp="true"/>
+<page ajout="true" id="parametres" modif="true" supp="true"/>
+</droit>
+<droit moduleID="OPTIMA_Suivi_Personnel">
+<page ajout="true" id="OPTIMA_Personnel" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Service" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Etat_Personnel" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Famille_Etat_Pers" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Etat_Presence" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Horaire_Pers_Plage" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Horaire_Personnel" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Habilitation_Etat" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Habilitation_Mach" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Habilitation_Scen" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Evt_Pointage" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Evt_Presence_Histo" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Personnel_Badges" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Personnel_CB_Etat" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Personnel_Synthese_Temps" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Personnel_Synthese_Temps_Kelio" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Personnel_Anomalie_Presence" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Personnel_Indicateurs" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Personnel_Presence" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Personnel_historique_etat" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Horaire_Pers_Calendrier" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Horaire_Pers_Calendrier_Kelio" modif="true" supp="true"/>
+<page ajout="true" id="Personnel_Liste_Present_Absent_1" modif="true" supp="true"/>
+<page ajout="true" id="Personnel_Liste_Present_Absent_2" modif="true" supp="true"/>
+<page ajout="true" id="Personnel_Liste_Synthese_Temps_1" modif="true" supp="true"/>
+<page ajout="true" id="Personnel_Activite_EnCours_Liste_1" modif="true" supp="true"/>
+</droit>
+<droit moduleID="OPTIMA_Suivi_Equipement">
+<page ajout="true" id="OPTIMA_Machine" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Machine_Groupe" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Etat_Machine" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Famille_Etat_Mach" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Terminal_Entree" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Terminal_Sortie" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Terminal_Type_Entree" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Terminal_Type_Sortie" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Terminal_Port_Serie" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Habilitation_Machine_Etat" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Habilitation_Machine_Rebut" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Superviseur_Machine" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Superviseur_Liste" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_MACH_Jour_Part" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Horaire_Mach_Plage" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Horaire_Machine" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Evt_Comptage" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Evt_Production_Histo" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Evt_Production_EC" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Etat_Synthese" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Equipement_CB" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Equipement_CB_Etat" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Etat_Historique" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Horaire_Mach_Calendrier" modif="true" supp="true"/>
+<page ajout="true" id="Equipement_Activite_Liste_1" modif="true" supp="true"/>
+<page ajout="true" id="Equipement_Activite_Liste_2" modif="true" supp="true"/>
+<page ajout="true" id="Equipement_Chronogramme" modif="true" supp="true"/>
+<page ajout="true" id="Equipement_Chronogramme_Date" modif="true" supp="true"/>
+<page ajout="true" id="Equipement_Chronogramme_Periode" modif="true" supp="true"/>
+<page ajout="true" id="Equipement_Chronogramme_Production_Operateur" modif="true" supp="true"/>
+<page ajout="true" id="Equipement_Courbe_Cadence_1" modif="true" supp="true"/>
+<page ajout="true" id="Equipement_Courbe_Indicateur_1" modif="true" supp="true"/>
+<page ajout="true" id="Equipement_Etat_Graphique_Cumul_1" modif="true" supp="true"/>
+<page ajout="true" id="Equipement_Etat_Historique_Recherche_1" modif="true" supp="true"/>
+<page ajout="true" id="Equipement_Indicateurs_Mensuel_Lisse_1" modif="true" supp="true"/>
+</droit>
+<droit moduleID="OPTIMA_Suivi_Production">
+<page ajout="true" id="OPTIMA_Gamme_Cadence" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Gestion_Gamme_Cadence" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Gamme_Cadence_Observee" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Gestion_Piece_Cycle" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Gamme_Piece_Cycle" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Rebut" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Famille_Rebut" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Article_Machine" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Famille_Article" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Etat_Avancement" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Article" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_ArticleSite" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_FamilleArticleSite" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Of_Liste" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Of_Operation" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Of_Attente" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Of_Composant" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Of_Article" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Of_Liste" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Article_Gamme" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Declaration_Bonne" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Declaration_Rebut" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Nomenclature" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Caracteristique" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Caracteristique_Valeur" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Caracteristique_Machine" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Matiere_Complementaire" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Alerte_Matiere" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Fiche_Suiveuse" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Production_CB_Rebut" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Production_Indicateurs" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Production_Bilans" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Bilan_OF" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Avancement_Fab" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Composant_Synthese" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Rebuts_Bilans" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Production_Changement_Fab" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Bilan_Charge_Machine" modif="true" supp="true"/>
+<page ajout="true" id="Production_OF_EnCours_1" modif="true" supp="true"/>
+<page ajout="true" id="Production_Indicateurs_Equipement" modif="true" supp="true"/>
+<page ajout="true" id="Production_Bilan_OF_1" modif="true" supp="true"/>
+<page ajout="true" id="Production_Cadence_Synthese_1" modif="true" supp="true"/>
+<page ajout="true" id="Production_Corrections_Temps_Rebuts" modif="true" supp="true"/>
+<page ajout="true" id="Production_Corrections_Temps_Equipement" modif="true" supp="true"/>
+<page ajout="true" id="Production_Corrections_Temps_Personnel" modif="true" supp="true"/>
+</droit>
+<droit moduleID="OPTIMA_Suivi_Outillage">
+<page ajout="true" id="OPTIMA_Outil" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Of_Outil" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Outil_Article" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Outillages_Indicateurs" modif="true" supp="true"/>
+</droit>
+<droit moduleID="OPTIMA_Suivi_Maintenance">
+<page ajout="true" id="OPTIMA_Maint_Panne" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Maint_Type" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Maint_Mach_Prev" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Maint_Outil_Prev" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Famille_Maint_Type" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Maint_Intervention" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Maintenance_CB_Maintenance" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Maintenance_CB_Panne" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Maintenance_Indicateurs" modif="true" supp="true"/>
+<page ajout="true" id="Maintenance_Interventions_EnCours_Liste" modif="true" supp="true"/>
+<page ajout="true" id="Maintenance_Interventions_EnCours_Grille" modif="true" supp="true"/>
+<page ajout="true" id="Maintenance_Preventif_Alertes_Liste" modif="true" supp="true"/>
+<page ajout="true" id="Maintenance_Maintenances_Synthese" modif="true" supp="true"/>
+<page ajout="true" id="Maintenance_Maintenances_Historique" modif="true" supp="true"/>
+<page ajout="true" id="Maintenance_Interventions_Historique" modif="true" supp="true"/>
+</droit>
+<droit moduleID="OPTIMA_Controle_Process">
+<page ajout="true" id="OPTIMA_Controle_Gamme" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Controle_Gamme_Ec" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Controle_Liste" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Controle_Frequentiel" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Controle_Appareil" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Controle_Mesure" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Controle_Mesure_Ec" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Controle_Saisie" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Controle_Ec" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Controle_Histo" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Controle_Type" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Controle_Type_Liste" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Controle_Type_Liste_Valeur" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Personnel_Habilitation" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Controle_Habilitation" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Controle_Process_Historique" modif="true" supp="true"/>
+<page ajout="true" id="Controle_Gammes_EnCours_Liste" modif="true" supp="true"/>
+<page ajout="true" id="Controle_Gammes_Synthese_Equipement" modif="true" supp="true"/>
+<page ajout="true" id="Controle_Gammes_Synthese_OF" modif="true" supp="true"/>
+<page ajout="true" id="Controle_Gammes_Synthese_Mesure" modif="true" supp="true"/>
+<page ajout="true" id="Controle_Gammes_Mesures_Historique" modif="true" supp="true"/>
+</droit>
+<droit moduleID="OPTIMA_Tiers">
+<page ajout="true" id="OPTIMA_StatutCommande" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Client" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Fournisseur" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Transporteur" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_CommandesFournisseur" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_CommandesFournisseurDetail" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_CommandesReceptionFour" modif="true" supp="true"/>
+</droit>
+<droit moduleID="OPTIMA_Tracabilite">
+<page ajout="true" id="OPTIMA_Stock_Statut" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Stock_Liste" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Stock_Empl" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Evt_Lot_EC" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Evt_Lot_Histo" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Evt_Stock_EC" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Evt_Stock_Histo" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Serialisation_EC" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Serialisation_Histo" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Compteur_EC" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Compteur_Liste" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Terminal_Balance" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Balance_Liste" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Evt_Recet_Batch_Comp_Ec" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Evt_Recet_Batch_Comp_Histo" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Evt_Recet_Batch_Ec" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Evt_Recet_Batch_Histo" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_genealogie_amont" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_genealogie_aval" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_genealogie_serie" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_genealogie_client" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_conformite" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_workflow_management" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_workflow_user_management" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_workflow_group_management" modif="true" supp="true"/>
+</droit>
+<droit moduleID="OPTIMA_Gestion_Document">
+<page ajout="true" id="OPTIMA_Document" modif="true" supp="true"/>
+<page ajout="true" id="OPTIMA_Document_Type" modif="true" supp="true"/>
+</droit>
+<droit moduleID="OPTIMA_About">
+<page ajout="true" id="About_Horloge" modif="true" supp="true"/>
+<page ajout="true" id="About_Notice_Technique" modif="true" supp="true"/>
+</droit>
+</profil>
+</lst_profil>

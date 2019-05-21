@@ -1,0 +1,77 @@
+15:57:12.693 WARNING [org.apache.catalina.session.StandardSession writeObject] - Impossible de sérialiser l'attribut de session serviceManager pour la session A2868E96A14BDE0D0B789485CB104469 
+java.io.NotSerializableException: fr.osys.optima.core.tml.services.productionmanagement.impl.MachineServicesImpl
+	at java.io.ObjectOutputStream.writeObject0(Unknown Source)
+	at java.io.ObjectOutputStream.defaultWriteFields(Unknown Source)
+	at java.io.ObjectOutputStream.writeSerialData(Unknown Source)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(Unknown Source)
+	at java.io.ObjectOutputStream.writeObject0(Unknown Source)
+	at java.io.ObjectOutputStream.defaultWriteFields(Unknown Source)
+	at java.io.ObjectOutputStream.writeSerialData(Unknown Source)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(Unknown Source)
+	at java.io.ObjectOutputStream.writeObject0(Unknown Source)
+	at java.io.ObjectOutputStream.defaultWriteFields(Unknown Source)
+	at java.io.ObjectOutputStream.writeSerialData(Unknown Source)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(Unknown Source)
+	at java.io.ObjectOutputStream.writeObject0(Unknown Source)
+	at java.io.ObjectOutputStream.defaultWriteFields(Unknown Source)
+	at java.io.ObjectOutputStream.writeSerialData(Unknown Source)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(Unknown Source)
+	at java.io.ObjectOutputStream.writeObject0(Unknown Source)
+	at java.io.ObjectOutputStream.defaultWriteFields(Unknown Source)
+	at java.io.ObjectOutputStream.writeSerialData(Unknown Source)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(Unknown Source)
+	at java.io.ObjectOutputStream.writeObject0(Unknown Source)
+	at java.io.ObjectOutputStream.defaultWriteFields(Unknown Source)
+	at java.io.ObjectOutputStream.writeSerialData(Unknown Source)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(Unknown Source)
+	at java.io.ObjectOutputStream.writeObject0(Unknown Source)
+	at java.io.ObjectOutputStream.writeObject(Unknown Source)
+	at org.apache.catalina.session.StandardSession.writeObject(StandardSession.java:1551)
+	at org.apache.catalina.session.StandardSession.writeObjectData(StandardSession.java:994)
+	at org.apache.catalina.session.StandardManager.doUnload(StandardManager.java:523)
+	at org.apache.catalina.session.StandardManager.unload(StandardManager.java:469)
+	at org.apache.catalina.session.StandardManager.stop(StandardManager.java:673)
+	at org.apache.catalina.core.StandardContext.stop(StandardContext.java:4774)
+	at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:924)
+	at org.apache.catalina.startup.HostConfig.undeployApps(HostConfig.java:1319)
+	at org.apache.catalina.startup.HostConfig.stop(HostConfig.java:1290)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:323)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.core.ContainerBase.stop(ContainerBase.java:1086)
+	at org.apache.catalina.core.ContainerBase.stop(ContainerBase.java:1098)
+	at org.apache.catalina.core.StandardEngine.stop(StandardEngine.java:450)
+	at org.apache.catalina.core.StandardService.stop(StandardService.java:587)
+	at org.apache.catalina.core.StandardServer.stop(StandardServer.java:744)
+	at org.apache.catalina.startup.Catalina.stop(Catalina.java:648)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:615)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+ 
+15:57:12.724 INFO [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+15:57:25.610 INFO [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextDestroyed()  
+15:57:25.610 INFO [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextDestroyed()  
+15:57:25.766 INFO [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+16:04:39.778 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+16:04:57.843 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+16:05:05.549 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextInitialized()  
+16:05:05.549 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextInitialized()  
+16:07:05.061 INFOS [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+16:07:09.179 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextDestroyed()  
+16:07:09.179 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextDestroyed()  
+16:07:09.226 INFOS [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+16:08:10.760 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+16:08:24.816 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+16:08:29.730 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextInitialized()  
+16:08:29.730 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextInitialized()  
+16:22:01.305 INFOS [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+16:22:04.410 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextDestroyed()  
+16:22:04.410 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextDestroyed()  
+16:22:04.441 INFOS [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+16:22:54.675 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+16:23:10.962 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+16:23:15.876 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextInitialized()  
+16:23:15.876 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextInitialized()  

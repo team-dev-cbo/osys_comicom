@@ -1,0 +1,395 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>QuartisMsgEnvoieMessage</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=915>
+<meta name=layout-width content=697>
+
+
+
+<style type="text/css">
+<!--
+p.whs1 {border-bottom:0.75pt solid #000000; border-width:4px; }
+img_whs2 {width: 6px; height: 6px; border-style: none;}
+table.whs3 {width: 609px; border-spacing: 0px; border-spacing: 0px;}
+tr.whs4 {x-cell-content-align: top;}
+td.whs5 {width: 132px; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;}
+td.whs6 {width: 477px; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;}
+hr.whs7 {float: alignleft; width: 100.409%;}
+table.whs8 {left: 0px; top: 224px; width: 613px; height: 25px; border-spacing: 0px; border-spacing: 0px;}
+td.whs9 {padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; width: 133px;}
+td.whs10 {padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; width: 480px;}
+p.whs11 {margin-left: 40px; font-size: 10pt; font-family: Helv;}
+p.whs12 {font-family: Helv; font-size: 10pt;}
+-->
+</style>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+  div.WebHelpPopupMenu {position:absolute; left:0px; top:0px; z-index:4; visibility:hidden;}
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../../../../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../../whtopic.js"></script>
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("module\nscénario\nlpx\nfonctions\nQuartisMessenger\nQuartisMsgEnvoieMessage");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../../../../Interface.htm");
+addSearchFormHref("javascript:document.ehelpform.submit()");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	document.location.reload();
+//-->
+</script>
+<p class="whs1"><span style="font-size: 14pt; font-weight: bold;"><font size=4 style="font-size:14pt;"><B><font 
+ style="font-family: Helv;">QuartisMsgEnvoieMessage</font></B></font></span><span 
+ style="font-size: 14pt;"><font size=4 style="font-size:14pt;"><font style="font-family: Helv;">, Fonction</font></font></span></p>
+
+<p class=Description
+	style="margin-top: 0;
+			margin-bottom: 0;
+			font-family: Helv;
+			font-size: 10pt;">Envoie d'un message à l'application Quartis 
+ Messenger Serveur.</p>
+
+<h3><img src="../../../../image/bullet.gif" alt="image\bullet.gif" width="6px" height="6px" border="0" class="img_whs2"><span style="font-size: 10pt; font-weight: normal;"><font size=2 style="font-size:10pt;"><font 
+ style="font-family: Helv;"> </font></font></span><span style="font-size: 10pt;"><font size=2 style="font-size:10pt;"><font 
+ style="font-family: Helv;">Syntaxe</font></font></span></h3>
+
+<p class=Description
+	style="font-size: 10pt; font-family: Helv;">QuartisMsgEnvoieMessage( 
+ Liste,Message : <span style="font-weight: bold;"><B>GrandeChaine ;</B></span> 
+ DateExpir :<span style="font-weight: bold;"><B> Integer </B></span>) return <span 
+ style="font-weight: bold;"><B>Boolean</B></span></p>
+
+<p class=Description
+	style="margin-top: 0; margin-bottom: 0;">&nbsp;</p>
+
+<!--(Table)=========================================================-->
+<table x-use-null-cells cellspacing="0" width="609" class="whs3">
+
+<tr valign="top" class="whs4">
+<td width="132px" class="whs5">
+<p class=Description
+	style="font-size: 10pt; font-weight: bold;">Elément</td>
+<td width="477px" class="whs6">
+<p class=Description><span style="font-size: 10pt; font-weight: bold;"><font size=2 style="font-size:10pt;"><B>Description</B></font></span></td></tr>
+</table>
+
+
+<!--(HR)============================================================-->
+<hr align="left" width="100.409%" class="whs7">
+
+
+<!--(Table)=========================================================-->
+<table x-use-null-cells cellspacing="0" height="25" width="613" class="whs8">
+
+<tr valign="top" class="whs4">
+<td colspan="1" rowspan="1" width="133px" class="whs9">
+<p class=Description
+	style="font-size: 10pt; font-style: italic;">Liste</td>
+<td colspan="1" rowspan="1" width="480px" class="whs10">
+<p class=Description
+	style="font-size: 10pt; font-family: Helv;">Liste à laquelle appartient 
+ le message</td></tr>
+
+<tr valign="top" class="whs4">
+<td colspan="1" rowspan="1" width="133px" class="whs9">
+<p class=Description
+	style="font-size: 10pt; font-style: italic;">Message</td>
+<td colspan="1" rowspan="1" width="480px" class="whs10">
+<p class=Description
+	style="font-size: 10pt; font-family: Helv;">Message à envoyer</td></tr>
+
+<tr valign="top" class="whs4">
+<td width="133px" class="whs9">
+<p class=Description
+	style="font-size: 10pt;
+			font-weight: normal;
+			font-style: italic;">DateExpir</td>
+<td width="480px" class="whs10">
+<p class=Description
+	style="font-size: 10pt; font-family: Helv;">Date d'expiration</td></tr>
+</table>
+
+<p class=Description
+	style="margin-top: 0;
+			margin-bottom: 0;
+			font-size: 6pt;">&nbsp;</p>
+
+<p class=Description
+	style="margin-top: 0; margin-bottom: 0;">&nbsp;</p>
+
+<h3 class=Description><img src="../../../../image/bullet.gif" alt="image\bullet.gif" width="6px" height="6px" border="0" class="img_whs2"><span style="font-size: 10pt; font-weight: normal;"><font size=2 style="font-size:10pt;"><font 
+ style="font-family: Helv;"> </font></font></span><span style="font-size: 10pt;"><font size=2 style="font-size:10pt;"><font 
+ style="font-family: Helv;">Remarque</font></font></span></h3>
+
+<p class="whs11">Pour que le message puisse transiter via 
+ un driver scrut, le premier caractère du message doit représenter le périphérique. 
+ ( Exemple &quot;C&quot; pour Clavier ).</p>
+
+<h3><img src="../../../../image/bullet.gif" alt="image\bullet.gif" width="6px" height="6px" border="0" class="img_whs2"><span style="font-size: 10pt; font-weight: normal;"><font size=2 style="font-size:10pt;"><font 
+ style="font-family: Helv;"> </font></font></span><span style="font-size: 10pt;"><font size=2 style="font-size:10pt;"><font 
+ style="font-family: Helv;">Exemple</font></font></span></h3>
+
+<p class=Description
+	style="margin-top: 0;
+			margin-bottom: 0;
+			font-size: 10pt;
+			font-family: Helv;"><span style="font-size: 10pt; font-family: Helv;"><font size=2 style="font-size:10pt;">With 
+ <span style="color: #ff0000;"><font color=red >stdlib</font></span>, stdstring ;</font></span></p>
+
+<p class=Description
+	style="margin-top: 0;
+			margin-bottom: 0;
+			font-size: 10pt;
+			font-family: Helv;">Procedure Quartis ;</p>
+
+<p class=Description
+	style="margin-top: 0;
+			margin-bottom: 0;
+			font-size: 10pt;
+			font-family: Helv;">Var </p>
+
+<p class=Description
+	style="margin-top: 0;
+			margin-bottom: 0;
+			font-size: 10pt;
+			font-family: Helv;">&nbsp;&nbsp;&nbsp;// 
+ variables</p>
+
+<p class=Description
+	style="margin-top: 0;
+			margin-bottom: 0;
+			font-size: 10pt;
+			font-family: Helv;">&nbsp;&nbsp;&nbsp;l_res 
+ : Integer ;</p>
+
+<p class=Description
+	style="margin-top: 0;
+			margin-bottom: 0;
+			font-size: 10pt;
+			font-family: Helv;">&nbsp;&nbsp;&nbsp;i 
+ : Integer ;</p>
+
+<p class=Description
+	style="margin-top: 0;
+			margin-bottom: 0;
+			font-size: 10pt;
+			font-family: Helv;">&nbsp;&nbsp;&nbsp;l_res1 
+ : Boolean ;</p>
+
+<p class=Description
+	style="margin-top: 0;
+			margin-bottom: 0;
+			font-size: 10pt;
+			font-family: Helv;">&nbsp;&nbsp;&nbsp;l_chaine 
+ : GrandeChaine ;</p>
+
+<p class=Description
+	style="margin-top: 0;
+			margin-bottom: 0;
+			font-size: 10pt;
+			font-family: Helv;">&nbsp;</p>
+
+<p class=Description
+	style="margin-top: 0;
+			margin-bottom: 0;
+			font-size: 10pt;
+			font-family: Helv;
+			color: #000000;">Begin</p>
+
+<p class=Description
+	style="margin-top: 0;
+			margin-bottom: 0;
+			font-size: 10pt;
+			font-family: Helv;
+			color: #000000;">&nbsp;</p>
+
+<p class=Description
+	style="margin-top: 0;
+			margin-bottom: 0;
+			font-size: 10pt;
+			font-family: Helv;">&nbsp;&nbsp;&nbsp;// 
+ Initialisation du chemin de Quartis Messenger Client </p>
+
+<p class=Description
+	style="margin-top: 0;
+			margin-bottom: 0;
+			font-size: 10pt;
+			font-family: Helv;">&nbsp;&nbsp;&nbsp;l_chaine 
+ &nbsp;:= LitMemoire( 
+ &quot;Chemin QuartisMsg&quot; ) ;</p>
+
+<p class=Description
+	style="margin-top: 0;
+			margin-bottom: 0;
+			font-size: 10pt;
+			font-family: Helv;">&nbsp;</p>
+
+<p class=Description
+	style="margin-top: 0;
+			margin-bottom: 0;
+			font-size: 10pt;
+			font-family: Helv;">&nbsp;&nbsp;&nbsp;If 
+ &nbsp;l_chaine 
+ &lt;&gt; &quot;D:\QuartisMsg\Binaire&quot; &nbsp;Then</p>
+
+<p class=Description
+	style="margin-top: 0;
+			margin-bottom: 0;
+			font-size: 10pt;
+			font-family: Helv;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;l_res 
+ := QuartisMsgChemin( &quot;D:\QuartisMsg\Binaire&quot; ) ;</p>
+
+<p class=Description
+	style="margin-top: 0;
+			margin-bottom: 0;
+			font-size: 10pt;
+			font-family: Helv;">&nbsp;&nbsp;&nbsp;End 
+ If ;</p>
+
+<p class=Description
+	style="margin-top: 0;
+			margin-bottom: 0;
+			font-size: 10pt;
+			font-family: Helv;">&nbsp;</p>
+
+<p class=Description
+	style="margin-top: 0;
+			margin-bottom: 0;
+			font-size: 10pt;
+			font-family: Helv;">&nbsp;&nbsp;&nbsp;// 
+ Ajout de Messages à envoyer à Quartis Messenger Serveur</p>
+
+<p class=Description
+	style="margin-top: 0;
+			margin-bottom: 0;
+			font-size: 10pt;
+			font-family: Helv;">&nbsp;&nbsp;&nbsp;For 
+ i:=1 To 10 Do</p>
+
+<p class=Description
+	style="margin-top: 0;
+			margin-bottom: 0;
+			font-size: 10pt;
+			font-family: Helv;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 
+ Durée des Messages : 3 minutes ( 180 = 3x60 )</p>
+
+<p class=Description
+	style="margin-top: 0;
+			margin-bottom: 0;
+			font-size: 10pt;
+			font-family: Helv;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;l_res1 
+ &nbsp;:= <span 
+ style="color: #ff0000;"><font color=red >QuartisMsgEnvoieMessage</font></span>( &quot;Liste1&quot; 
+ , &quot;C&quot; + &quot;Message&quot;+ Str( i ) + &quot;_Liste1&quot; 
+ , TempsSysteme + 180 ) ;</p>
+
+<p class=Description
+	style="margin-top: 0;
+			margin-bottom: 0;
+			font-size: 10pt;
+			font-family: Helv;">&nbsp;&nbsp;&nbsp;End 
+ For ;</p>
+
+<p class=Description
+	style="margin-top: 0;
+			margin-bottom: 0;
+			font-size: 10pt;
+			font-family: Helv;">&nbsp;</p>
+
+<p class=Description
+	style="margin-top: 0;
+			margin-bottom: 0;
+			font-size: 10pt;
+			font-family: Helv;">End &nbsp;Quartis 
+ ;</p>
+
+<p class=Description
+	style="margin-top: 0;
+			margin-bottom: 0;
+			font-size: 10pt;
+			font-family: Helv;">&nbsp;</p>
+
+<p class="whs12"><span style="font-weight: bold;"><B>Voir 
+ aussi</B></span> <a href="../../listefonctions/HIDD_LPX_FONCTION_LISTE.htm"><font 
+ style="font-size: 10pt;"
+	size=2>Liste des fonctions LPX</font></a> <a href="../../HIDR_EDIT_LPX.htm"><font 
+ style="font-size: 10pt;"
+	size=2>Editeur LPX</font></a></p>
+
+<p>&nbsp;</p>
+
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+<form method="POST" action="http://www.helpcommunity.com/ehelpapi.asp?cmd=WebSave" name="ehelpform" target="_top" style="display:'none';">
+<input type="hidden" name="data" value="2A0C0217000000517561727469734D7367456E766F69654D6573736167650D0217000000517561727469734D7367456E766F69654D657373616765110210000000517561727469734D657373656E676572120217000000517561727469734D7367456E766F69654D6573736167651302140000004169646520737572206C27696E7465726661636515020D000000496E746572666163652E68746D1703730100003C3F786D6C2076657273696F6E3D22312E30223F3E0D0A3C21444F43545950452053595354454D20226568656C706F70742E647464223E0D0A3C46494C452D4F5054494F4E532046494C452D56455253494F4E3D2232222046494C452D4B45593D2266626166616566345F633536385F343336625F383365315F323439653461613465316332223E0D0A3C2F46494C452D4F5054494F4E533E0D0A3C4548454C502D4F5054494F4E5320464F524D41542D56455253494F4E3D22312E30223E0D0A203C4F5054494F4E5320454E41424C45443D224E4F2220454D4245444445443D2259455322204D41494E2D57494E444F572D4F4E4C593D224E4F2220434F4D4D554E4954592D4E4F544946593D224E4F222046495253542D504147453D224E4F542D534554223E0D0A203C2F4F5054494F4E533E0D0A203C425554544F4E2D4C4142454C3E5765625365617263680D0A203C2F425554544F4E2D4C4142454C3E0D0A3C2F4548454C502D4F5054494F4E533E18010400000002000000702A">
+</form>
+</body>
+
+</html>

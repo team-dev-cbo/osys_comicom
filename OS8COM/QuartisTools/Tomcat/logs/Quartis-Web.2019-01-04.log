@@ -1,0 +1,498 @@
+09:55:49.152 DEBUG - TomcatListener contextInitialized - servletContext.realPath : C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web 
+09:55:49.167  INFO - PropertiesDelegate Ouverture du fichier de configuration à l'emplacement : C:\Osys\QuartisTools\Tomcat/conf/quartis-web.properties 
+09:55:49.198  INFO - TomcatListener -----> Supression des fichier temporaires 
+09:55:49.339  INFO - TomcatListener Ouverture du fichier indiquant la base de données : C:\Osys\QuartisTools\Tomcat/conf/datasources.xml... 
+09:55:49.401  INFO - DataSourceManager Création de la datasource : QuartisWeb-PU 
+09:56:15.282 DEBUG - AuthManagedBean autoconnect - Tentative de connexion SSO... 
+09:56:15.283 DEBUG - ConnexionManagedBean User renseigné par filtre SSO LDAP : null 
+09:56:15.283 DEBUG - ConnexionManagedBean ldapActive = false 
+09:56:15.283 DEBUG - AuthManagedBean autoconnect - Echec de la connexion par SSO. 
+09:56:18.389 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:56:18.400 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+09:56:20.526 DEBUG - TransfertFile copyFile (pls) - Copie de 18 fichiers vers 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\language.properties'... 
+09:56:20.526 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 0/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language.properties'. 
+09:56:20.526 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language.properties'... 
+09:56:20.559 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:20.559 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 1/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language.properties'. 
+09:56:20.559 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language.properties'... 
+09:56:20.570 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:20.570 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 2/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language.properties'. 
+09:56:20.570 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language.properties'... 
+09:56:20.579 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:20.579 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 3/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language.properties'. 
+09:56:20.579 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language.properties'... 
+09:56:20.589 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:20.589 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 4/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language.properties'. 
+09:56:20.589 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language.properties'... 
+09:56:20.604 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:20.605 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 5/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language.properties'. 
+09:56:20.605 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language.properties'... 
+09:56:20.614 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:20.614 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 6/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language.properties'. 
+09:56:20.615 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language.properties'... 
+09:56:20.615 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:20.615 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 7/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language.properties'. 
+09:56:20.615 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language.properties'... 
+09:56:20.627 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:20.627 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 8/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language.properties'. 
+09:56:20.627 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language.properties'... 
+09:56:20.638 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:20.638 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 9/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language.properties'. 
+09:56:20.639 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language.properties'... 
+09:56:20.655 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:20.655 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 10/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language.properties'. 
+09:56:20.655 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language.properties'... 
+09:56:20.674 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:20.675 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 11/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language.properties'. 
+09:56:20.675 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language.properties'... 
+09:56:20.675 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:20.675 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 12/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language.properties'. 
+09:56:20.675 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language.properties'... 
+09:56:20.676 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:20.676 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 13/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language.properties'. 
+09:56:20.676 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language.properties'... 
+09:56:20.676 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:20.676 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 14/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language.properties'. 
+09:56:20.676 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language.properties'... 
+09:56:20.676 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:20.676 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 15/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language.properties'. 
+09:56:20.676 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language.properties'... 
+09:56:20.677 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:20.677 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 16/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language.properties'. 
+09:56:20.677 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language.properties'... 
+09:56:20.677 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:20.677 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 17/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language.properties'. 
+09:56:20.677 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language.properties'... 
+09:56:20.678 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:20.678 DEBUG - TransfertFile copyFile (pls) - Fin de la copie. 
+09:56:21.111 DEBUG - TransfertFile copyFile (pls) - Copie de 18 fichiers vers 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\language_fr.properties'... 
+09:56:21.111 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 0/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language_fr.properties'. 
+09:56:21.111 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language_fr.properties'... 
+09:56:21.119 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:21.120 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 1/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language_fr.properties'. 
+09:56:21.120 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language_fr.properties'... 
+09:56:21.120 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:21.120 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 2/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language_fr.properties'. 
+09:56:21.120 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language_fr.properties'... 
+09:56:21.121 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:21.121 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 3/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language_fr.properties'. 
+09:56:21.121 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language_fr.properties'... 
+09:56:21.134 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:21.134 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 4/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language_fr.properties'. 
+09:56:21.134 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language_fr.properties'... 
+09:56:21.150 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:21.150 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 5/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language_fr.properties'. 
+09:56:21.150 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language_fr.properties'... 
+09:56:21.162 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:21.162 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 6/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language_fr.properties'. 
+09:56:21.162 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language_fr.properties'... 
+09:56:21.163 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:21.163 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 7/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language_fr.properties'. 
+09:56:21.163 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language_fr.properties'... 
+09:56:21.186 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:21.187 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 8/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language_fr.properties'. 
+09:56:21.187 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language_fr.properties'... 
+09:56:21.200 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:21.200 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 9/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language_fr.properties'. 
+09:56:21.200 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language_fr.properties'... 
+09:56:21.213 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:21.213 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 10/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language_fr.properties'. 
+09:56:21.213 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language_fr.properties'... 
+09:56:21.224 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:21.225 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 11/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language_fr.properties'. 
+09:56:21.225 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language_fr.properties'... 
+09:56:21.225 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:21.225 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 12/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language_fr.properties'. 
+09:56:21.225 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language_fr.properties'... 
+09:56:21.226 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:21.226 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 13/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language_fr.properties'. 
+09:56:21.226 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language_fr.properties'... 
+09:56:21.226 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:21.226 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 14/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language_fr.properties'. 
+09:56:21.226 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language_fr.properties'... 
+09:56:21.226 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:21.226 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 15/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language_fr.properties'. 
+09:56:21.226 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language_fr.properties'... 
+09:56:21.227 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:21.227 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 16/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language_fr.properties'. 
+09:56:21.227 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language_fr.properties'... 
+09:56:21.227 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:21.227 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 17/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language_fr.properties'. 
+09:56:21.227 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language_fr.properties'... 
+09:56:21.227 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+09:56:21.227 DEBUG - TransfertFile copyFile (pls) - Fin de la copie. 
+09:56:21.227 DEBUG - LanguageFileManager buildPropertiesGen - Création de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\language_fr.properties'... 
+09:56:21.256 DEBUG - LanguageFileManager buildPropertiesGen - Fin de la création. 
+09:56:32.820 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+09:56:39.237 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+09:56:49.020 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+09:56:59.977 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+09:57:09.959 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+09:57:20.963 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+09:57:30.964 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+09:57:41.942 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+09:57:51.942 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+09:58:01.943 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+09:58:12.933 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+09:58:23.947 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+09:58:34.936 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+09:58:44.929 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+09:58:55.905 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+09:59:05.917 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+09:59:16.915 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+09:59:27.902 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+09:59:37.888 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+09:59:48.889 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+09:59:59.878 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+10:00:09.866 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+10:00:20.859 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+10:00:31.861 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+10:00:41.878 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+10:00:52.882 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+10:01:03.865 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+10:01:14.882 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+10:01:25.879 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+10:01:36.850 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+10:01:46.867 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+10:01:57.852 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+10:02:07.864 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+10:02:18.870 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+10:02:28.887  INFO - PropertiesDelegate Destruction du properties manager ! 
+10:02:42.150 DEBUG - TomcatListener contextInitialized - servletContext.realPath : C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web 
+10:02:42.166  INFO - PropertiesDelegate Ouverture du fichier de configuration à l'emplacement : C:\Osys\QuartisTools\Tomcat/conf/quartis-web.properties 
+10:02:42.197  INFO - TomcatListener -----> Supression des fichier temporaires 
+10:02:42.446  INFO - TomcatListener Ouverture du fichier indiquant la base de données : C:\Osys\QuartisTools\Tomcat/conf/datasources.xml... 
+10:02:42.509  INFO - DataSourceManager Création de la datasource : QuartisWeb-PU 
+10:18:19.700 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+10:18:19.700 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/moduleChange.ajx?moduleID=OPTIMA_Standard&userID=administrateur) mais pas de user en session. 
+10:18:19.707 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+10:18:20.575 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+10:18:20.575 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/xxx.cas?action=deconnexion&userID=administrateur) mais pas de user en session. 
+10:18:20.576 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+10:18:20.595 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+10:18:23.669 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+10:18:23.711 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+10:18:24.822 DEBUG - TransfertFile copyFile (pls) - Copie de 18 fichiers vers 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\language.properties'... 
+10:18:24.822 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 0/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language.properties'. 
+10:18:24.823 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language.properties'... 
+10:18:24.824 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:24.824 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 1/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language.properties'. 
+10:18:24.824 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language.properties'... 
+10:18:24.824 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:24.824 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 2/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language.properties'. 
+10:18:24.824 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language.properties'... 
+10:18:24.825 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:24.825 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 3/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language.properties'. 
+10:18:24.825 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language.properties'... 
+10:18:24.825 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:24.825 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 4/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language.properties'. 
+10:18:24.825 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language.properties'... 
+10:18:24.825 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:24.825 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 5/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language.properties'. 
+10:18:24.825 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language.properties'... 
+10:18:24.826 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:24.826 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 6/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language.properties'. 
+10:18:24.826 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language.properties'... 
+10:18:24.826 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:24.826 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 7/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language.properties'. 
+10:18:24.826 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language.properties'... 
+10:18:24.826 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:24.826 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 8/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language.properties'. 
+10:18:24.826 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language.properties'... 
+10:18:24.827 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:24.827 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 9/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language.properties'. 
+10:18:24.827 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language.properties'... 
+10:18:24.827 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:24.827 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 10/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language.properties'. 
+10:18:24.827 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language.properties'... 
+10:18:24.827 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:24.827 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 11/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language.properties'. 
+10:18:24.827 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language.properties'... 
+10:18:24.828 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:24.828 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 12/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language.properties'. 
+10:18:24.828 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language.properties'... 
+10:18:24.828 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:24.828 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 13/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language.properties'. 
+10:18:24.828 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language.properties'... 
+10:18:24.828 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:24.828 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 14/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language.properties'. 
+10:18:24.828 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language.properties'... 
+10:18:24.828 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:24.829 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 15/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language.properties'. 
+10:18:24.829 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language.properties'... 
+10:18:24.829 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:24.829 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 16/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language.properties'. 
+10:18:24.829 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language.properties'... 
+10:18:24.829 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:24.829 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 17/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language.properties'. 
+10:18:24.830 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language.properties'... 
+10:18:24.830 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:24.830 DEBUG - TransfertFile copyFile (pls) - Fin de la copie. 
+10:18:25.223 DEBUG - TransfertFile copyFile (pls) - Copie de 18 fichiers vers 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\language_fr.properties'... 
+10:18:25.224 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 0/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language_fr.properties'. 
+10:18:25.224 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language_fr.properties'... 
+10:18:25.224 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:25.224 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 1/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language_fr.properties'. 
+10:18:25.224 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language_fr.properties'... 
+10:18:25.225 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:25.225 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 2/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language_fr.properties'. 
+10:18:25.225 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language_fr.properties'... 
+10:18:25.225 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:25.225 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 3/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language_fr.properties'. 
+10:18:25.225 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language_fr.properties'... 
+10:18:25.225 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:25.225 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 4/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language_fr.properties'. 
+10:18:25.225 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language_fr.properties'... 
+10:18:25.226 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:25.226 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 5/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language_fr.properties'. 
+10:18:25.226 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language_fr.properties'... 
+10:18:25.226 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:25.226 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 6/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language_fr.properties'. 
+10:18:25.226 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language_fr.properties'... 
+10:18:25.226 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:25.226 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 7/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language_fr.properties'. 
+10:18:25.226 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language_fr.properties'... 
+10:18:25.226 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:25.227 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 8/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language_fr.properties'. 
+10:18:25.227 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language_fr.properties'... 
+10:18:25.227 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:25.227 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 9/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language_fr.properties'. 
+10:18:25.227 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language_fr.properties'... 
+10:18:25.227 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:25.227 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 10/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language_fr.properties'. 
+10:18:25.227 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language_fr.properties'... 
+10:18:25.227 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:25.228 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 11/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language_fr.properties'. 
+10:18:25.228 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language_fr.properties'... 
+10:18:25.228 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:25.228 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 12/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language_fr.properties'. 
+10:18:25.228 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language_fr.properties'... 
+10:18:25.228 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:25.228 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 13/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language_fr.properties'. 
+10:18:25.228 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language_fr.properties'... 
+10:18:25.228 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:25.228 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 14/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language_fr.properties'. 
+10:18:25.229 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language_fr.properties'... 
+10:18:25.229 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:25.229 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 15/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language_fr.properties'. 
+10:18:25.229 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language_fr.properties'... 
+10:18:25.229 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:25.229 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 16/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language_fr.properties'. 
+10:18:25.229 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language_fr.properties'... 
+10:18:25.229 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:25.229 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 17/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language_fr.properties'. 
+10:18:25.229 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language_fr.properties'... 
+10:18:25.230 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+10:18:25.230 DEBUG - TransfertFile copyFile (pls) - Fin de la copie. 
+10:18:25.230 DEBUG - LanguageFileManager buildPropertiesGen - Création de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\language_fr.properties'... 
+10:18:25.256 DEBUG - LanguageFileManager buildPropertiesGen - Fin de la création. 
+10:18:29.077 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+10:18:29.080 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+10:18:29.080 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+10:18:29.122 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+10:18:29.122 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+10:18:29.122 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+10:18:29.244 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+10:18:29.249 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+10:18:30.075 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+10:18:30.077 ERROR - AjaxAction  quartisspv.action.ActionException: Erreur : transformation XML du superviseur impossible.
+	at quartisspv.action.level1.Level1RefreshAction.processPerformed(Level1RefreshAction.java:74)
+	at quartisspv.action.AjaxAction.actionPerformed(AjaxAction.java:33)
+	at quartisspv.action.AbstractAction.run(AbstractAction.java:94)
+	at quartisspv.servlet.ActionServlet.processRequest(ActionServlet.java:76)
+	at quartisspv.servlet.ActionServlet.doPost(ActionServlet.java:117)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:637)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:151)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: javax.xml.transform.TransformerException: org.xml.sax.SAXException
+ClientAbortException:  java.io.IOException: Une connexion établie a été abandonnée par un logiciel de votre ordinateur hôte
+	at org.apache.xalan.transformer.TransformerIdentityImpl.transform(TransformerIdentityImpl.java:400)
+	at quartisspv.action.level1.Level1RefreshAction.processPerformed(Level1RefreshAction.java:69)
+	... 33 more
+Caused by: org.xml.sax.SAXException
+ClientAbortException:  java.io.IOException: Une connexion établie a été abandonnée par un logiciel de votre ordinateur hôte
+	at org.apache.xml.serializer.ToStream.endElement(ToStream.java:2253)
+	at org.apache.xalan.transformer.TransformerIdentityImpl.endElement(TransformerIdentityImpl.java:1101)
+	at org.apache.xml.serializer.TreeWalker.endNode(TreeWalker.java:460)
+	at org.apache.xml.serializer.TreeWalker.traverse(TreeWalker.java:151)
+	at org.apache.xalan.transformer.TransformerIdentityImpl.transform(TransformerIdentityImpl.java:389)
+	... 34 more
+Caused by: ClientAbortException:  java.io.IOException: Une connexion établie a été abandonnée par un logiciel de votre ordinateur hôte
+	at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:358)
+	at org.apache.tomcat.util.buf.ByteChunk.append(ByteChunk.java:323)
+	at org.apache.catalina.connector.OutputBuffer.writeBytes(OutputBuffer.java:381)
+	at org.apache.catalina.connector.OutputBuffer.write(OutputBuffer.java:370)
+	at org.apache.catalina.connector.CoyoteOutputStream.write(CoyoteOutputStream.java:89)
+	at net.bull.javamelody.FilterServletOutputStream.write(FilterServletOutputStream.java:88)
+	at net.bull.javamelody.CounterResponseStream.write(CounterResponseStream.java:82)
+	at sun.nio.cs.StreamEncoder.writeBytes(Unknown Source)
+	at sun.nio.cs.StreamEncoder.implWrite(Unknown Source)
+	at sun.nio.cs.StreamEncoder.write(Unknown Source)
+	at sun.nio.cs.StreamEncoder.write(Unknown Source)
+	at java.io.OutputStreamWriter.write(Unknown Source)
+	at org.apache.xml.serializer.ToStream.writeAttrString(ToStream.java:2155)
+	at org.apache.xml.serializer.ToStream.processAttributes(ToStream.java:2079)
+	at org.apache.xml.serializer.ToStream.endElement(ToStream.java:2224)
+	... 38 more
+Caused by: java.io.IOException: Une connexion établie a été abandonnée par un logiciel de votre ordinateur hôte
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(Unknown Source)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.write(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.write(Unknown Source)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:116)
+	at org.apache.tomcat.util.net.NioBlockingSelector.write(NioBlockingSelector.java:93)
+	at org.apache.tomcat.util.net.NioSelectorPool.write(NioSelectorPool.java:156)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.writeToSocket(InternalNioOutputBuffer.java:440)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.flushBuffer(InternalNioOutputBuffer.java:784)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.addToBB(InternalNioOutputBuffer.java:624)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.access$000(InternalNioOutputBuffer.java:46)
+	at org.apache.coyote.http11.InternalNioOutputBuffer$SocketOutputBuffer.doWrite(InternalNioOutputBuffer.java:809)
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.doWrite(ChunkedOutputFilter.java:126)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.doWrite(InternalNioOutputBuffer.java:590)
+	at org.apache.coyote.Response.doWrite(Response.java:560)
+	at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:353)
+	... 52 more
+
+10:18:30.081 ERROR - FiltreSession Erreur relevée par le filtre général : null ClientAbortException:  java.io.IOException: Une connexion établie a été abandonnée par un logiciel de votre ordinateur hôte
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:319)
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:288)
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:98)
+	at net.bull.javamelody.FilterServletOutputStream.flush(FilterServletOutputStream.java:69)
+	at sun.nio.cs.StreamEncoder.implFlush(Unknown Source)
+	at sun.nio.cs.StreamEncoder.flush(Unknown Source)
+	at java.io.OutputStreamWriter.flush(Unknown Source)
+	at quartisspv.action.AjaxAction.actionPerformed(AjaxAction.java:41)
+	at quartisspv.action.AbstractAction.run(AbstractAction.java:94)
+	at quartisspv.servlet.ActionServlet.processRequest(ActionServlet.java:76)
+	at quartisspv.servlet.ActionServlet.doPost(ActionServlet.java:117)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:637)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:151)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.io.IOException: Une connexion établie a été abandonnée par un logiciel de votre ordinateur hôte
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(Unknown Source)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.write(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.write(Unknown Source)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:116)
+	at org.apache.tomcat.util.net.NioBlockingSelector.write(NioBlockingSelector.java:93)
+	at org.apache.tomcat.util.net.NioSelectorPool.write(NioSelectorPool.java:156)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.writeToSocket(InternalNioOutputBuffer.java:440)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.flushBuffer(InternalNioOutputBuffer.java:784)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.flush(InternalNioOutputBuffer.java:300)
+	at org.apache.coyote.http11.Http11NioProcessor.action(Http11NioProcessor.java:1063)
+	at org.apache.coyote.Response.action(Response.java:183)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:314)
+	... 39 more
+
+10:18:33.667 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+10:18:33.667 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+10:18:33.667 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+10:18:33.674 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+10:23:45.732 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+10:23:45.732 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+10:23:45.732 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+10:23:45.732 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+10:23:45.732 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+10:23:45.732 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+10:23:45.739 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+10:23:45.739 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+15:22:58.320 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+15:22:58.320 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+15:22:58.320 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/xxx.cas?action=deconnexion&userID=administrateur) mais pas de user en session. 
+15:22:58.320 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+15:23:00.463 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+15:23:00.463 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+15:23:02.136 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+15:23:02.571 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+15:23:02.571 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+15:23:02.571 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+15:23:02.577 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+15:23:02.582 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+15:23:02.582 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+15:23:02.582 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+15:23:02.602 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+15:23:15.140 DEBUG - DataEtatManagedBean showEtat - identifiants de connexion : administrateur, (mdp chiffré encodé : 'P3Hnev74jEHml2jpzMsShL36bnuEgR99HrSve//SaamMWZFzNxmMdfdSnZbx/K4DexQkV+V9A8nJ3HGYUFuHwk1fctAHfqwfFc5A4xEXH/6+j2VXD6yZTMmRdujzlbigkmqx0rLkUOPS4+bXSJe9Fu94lRKBvudJ5J7hiD3i0LCQ6viPElw1b56i2ui5snJ33DHR/HkMvm8FA/DIFDiI60plKskCtNMx13xnyLW7N7vzi1LwYt2FYjKpAaw7Z28q6ljjNmEAhhRRmUOJ7A5qTsxfwfbRc9q3tu6UJ6nY+xvmOO8x5BYl4GAHuK+OesmzrRDibXtXQtLqjYkfLUk5cg=='), mdp déchiffré : '' rechiffré en '[]' 
+15:23:15.195 DEBUG - DataEtatManagedBean showEtat - administrateur connecté a Quartis Tools 
+15:23:18.452 DEBUG - DataEtatManagedBean showEtat - administrateur déconnecté de Quartis Tools 
+15:23:24.970 DEBUG - DataEtatManagedBean showEtat - identifiants de connexion : administrateur, (mdp chiffré encodé : 'P3Hnev74jEHml2jpzMsShL36bnuEgR99HrSve//SaamMWZFzNxmMdfdSnZbx/K4DexQkV+V9A8nJ3HGYUFuHwk1fctAHfqwfFc5A4xEXH/6+j2VXD6yZTMmRdujzlbigkmqx0rLkUOPS4+bXSJe9Fu94lRKBvudJ5J7hiD3i0LCQ6viPElw1b56i2ui5snJ33DHR/HkMvm8FA/DIFDiI60plKskCtNMx13xnyLW7N7vzi1LwYt2FYjKpAaw7Z28q6ljjNmEAhhRRmUOJ7A5qTsxfwfbRc9q3tu6UJ6nY+xvmOO8x5BYl4GAHuK+OesmzrRDibXtXQtLqjYkfLUk5cg=='), mdp déchiffré : '' rechiffré en '[]' 
+15:23:25.008 DEBUG - DataEtatManagedBean showEtat - administrateur connecté a Quartis Tools 
+15:23:28.608 DEBUG - DataEtatManagedBean showEtat - identifiants de connexion : administrateur, (mdp chiffré encodé : 'P3Hnev74jEHml2jpzMsShL36bnuEgR99HrSve//SaamMWZFzNxmMdfdSnZbx/K4DexQkV+V9A8nJ3HGYUFuHwk1fctAHfqwfFc5A4xEXH/6+j2VXD6yZTMmRdujzlbigkmqx0rLkUOPS4+bXSJe9Fu94lRKBvudJ5J7hiD3i0LCQ6viPElw1b56i2ui5snJ33DHR/HkMvm8FA/DIFDiI60plKskCtNMx13xnyLW7N7vzi1LwYt2FYjKpAaw7Z28q6ljjNmEAhhRRmUOJ7A5qTsxfwfbRc9q3tu6UJ6nY+xvmOO8x5BYl4GAHuK+OesmzrRDibXtXQtLqjYkfLUk5cg=='), mdp déchiffré : '' rechiffré en '[]' 
+15:23:28.743 DEBUG - DataEtatManagedBean showEtat - administrateur connecté a Quartis Tools 
+15:23:50.246 DEBUG - DataEtatManagedBean showEtat - administrateur déconnecté de Quartis Tools 
+15:23:56.245 DEBUG - DataEtatManagedBean showEtat - administrateur déconnecté de Quartis Tools 
+15:23:56.245 ERROR - DataEtatManagedBean Erreur lors de la création de l'état : 
+Erreur Délai dépassé... 
+17:14:09.183 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+17:14:09.183 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/moduleChange.ajx?moduleID=OPTIMA_Suivi_Production&userID=administrateur) mais pas de user en session. 
+17:14:09.199 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+17:14:09.224 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+17:14:09.224 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/xxx.cas?action=deconnexion&userID=administrateur) mais pas de user en session. 
+17:14:09.227 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+17:14:09.227 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+17:14:11.181 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+17:14:11.187 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+17:14:12.742 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:14:16.563 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Production_OF_EnCours_1 
+17:14:16.563 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Production_OF_EnCours_1 
+17:14:16.564 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'... 
+17:14:16.564 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'... 
+17:14:16.564 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'... 
+17:14:16.564 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'... 
+17:14:16.593 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+17:14:16.593 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+17:14:32.898 DEBUG - GSqlQueryGeneratorSqlServer --->table =OF_LISTE query =set rowcount 3000  SELECT CODE_OF_SITE  , CODE_OF  , dbo.OPTIMA_TRADUCTION(DESI_OF,'fr') +'@KEYLANG_'+DESI_OF AS DESI_OF  , CODE_CLIE  , NUME_COMM  , CONVERT(NVARCHAR, DATE_LIVR, 103) AS DATE_LIVR  , CONVERT(NVARCHAR, DATE_LANC, 103) AS DATE_LANC  , CHAM_LIBR_1  , CHAM_LIBR_2  , CHAM_LIBR_3  , QUAN_LANC  , QUAN_STOC_AFFE  , NOMB_ARTI  , CODE_ETAT_AVAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 108) AS DATE_DEBU_REEL  , DELT_HEUR_UTC_DEBU_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 108) AS DATE_FIN_REEL  , DELT_HEUR_UTC_FIN_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 108) AS DATE_IMPO  , CODE_OF_SIMP  , CODE_ARTI  , CODE_SITE  , DELT_HEUR_UTC  , FLAG_SUPP FROM OF_LISTE  WHERE ( CODE_SITE = 'MAR')  AND ( CODE_OF_SITE LIKE  '%'  OR CODE_OF_SITE IS NULL  )  ORDER BY CODE_OF_SITE ASC  
+17:34:20.810  INFO - PropertiesDelegate Destruction du properties manager ! 

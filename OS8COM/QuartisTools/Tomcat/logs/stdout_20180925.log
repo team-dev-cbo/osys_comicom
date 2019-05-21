@@ -1,0 +1,43 @@
+15:41:34.583 [35mDEBUG[m - Thread-2          - TomcatListener [35mcontextInitialized - servletContext.realPath : C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web[m 
+15:41:34.614 [34m INFO[m - Thread-2          - PropertiesDelegate [34mOuverture du fichier de configuration à l'emplacement : C:\Osys\QuartisTools\Tomcat/conf/quartis-web.properties[m 
+15:41:36.455 [34m INFO[m - Thread-2          - TomcatListener [34m-----> Supression des fichier temporaires[m 
+15:41:37.235 [34m INFO[m - Thread-2          - TomcatListener [34mOuverture du fichier indiquant la base de données : C:\Osys\QuartisTools\Tomcat/conf/datasources.xml...[m 
+15:41:37.516 [34m INFO[m - Thread-2          - DataSourceManager [34mCréation de la datasource : QuartisWeb-PU[m 
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/C:/Osys/QuartisTools/Tomcat/lib/slf4j-log4j12-1.7.12.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/Osys/QuartisTools/Tomcat/webapps/Quartis-OptimaCjj/WEB-INF/lib/logback-classic-0.9.28.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+2018-09-25 15:41:53.381 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1157]-Using default implementation for ThreadExecutor
+2018-09-25 15:41:53.397 [Thread-2] INFO  org.quartz.core.SchedulerSignalerImpl[61]-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-09-25 15:41:53.397 [Thread-2] INFO  org.quartz.core.QuartzScheduler[243]-Quartz Scheduler v.2.1.6 created.
+2018-09-25 15:41:53.397 [Thread-2] INFO  org.quartz.simpl.RAMJobStore[154]-RAMJobStore initialized.
+2018-09-25 15:41:53.397 [Thread-2] INFO  org.quartz.core.QuartzScheduler[268]-Scheduler meta-data: Quartz Scheduler (v2.1.6) 'schedulerBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-09-25 15:41:53.412 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1306]-Quartz scheduler 'schedulerBean' initialized from an externally provided properties instance.
+2018-09-25 15:41:53.412 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1310]-Quartz scheduler version: 2.1.6
+2018-09-25 15:41:53.412 [Thread-2] INFO  org.quartz.core.QuartzScheduler[2247]-JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@58954138
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/C:/Osys/QuartisTools/Tomcat/lib/slf4j-log4j12-1.7.12.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/Osys/QuartisTools/Tomcat/webapps/Quartis-OptimaTml/WEB-INF/lib/logback-classic-0.9.28.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+2018-09-25 15:41:58.529 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1157]-Using default implementation for ThreadExecutor
+2018-09-25 15:41:58.545 [Thread-2] INFO  org.quartz.core.SchedulerSignalerImpl[61]-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-09-25 15:41:58.545 [Thread-2] INFO  org.quartz.core.QuartzScheduler[243]-Quartz Scheduler v.2.1.6 created.
+2018-09-25 15:41:58.545 [Thread-2] INFO  org.quartz.simpl.RAMJobStore[154]-RAMJobStore initialized.
+2018-09-25 15:41:58.560 [Thread-2] INFO  org.quartz.core.QuartzScheduler[268]-Scheduler meta-data: Quartz Scheduler (v2.1.6) 'schedulerBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-09-25 15:41:58.560 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1306]-Quartz scheduler 'schedulerBean' initialized from an externally provided properties instance.
+2018-09-25 15:41:58.560 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1310]-Quartz scheduler version: 2.1.6
+2018-09-25 15:41:58.560 [Thread-2] INFO  org.quartz.core.QuartzScheduler[2247]-JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@7939558c

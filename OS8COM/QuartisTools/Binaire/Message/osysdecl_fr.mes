@@ -1,0 +1,7 @@
+Version 1
+APP 10
+
+1 Aucun déclenchement trouvé pour le message "%1" (Périph:%2) 
+2 Déclenchement "%1" trouvé pour le message "%2"- Périph:%3 - Scénario:%4
+3 Aucun déclenchement associé au message "%1" (Périph:%2) -> Recherche un déclenchement associé à la chaîne vide
+4 Aucun déclenchement n'est associé à la chaîne vide

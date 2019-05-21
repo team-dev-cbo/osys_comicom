@@ -1,0 +1,38 @@
+[2018-07-17 09:57:51] [info] Commons Daemon procrun (1.0.2.0) started
+[2018-07-17 09:57:51] [info] Service QuartisTomcat name Apache Tomcat QuartisTomcat
+[2018-07-17 09:57:51] [info] Service QuartisTomcat installed
+[2018-07-17 09:57:51] [info] Commons Daemon procrun finished.
+[2018-07-17 09:57:51] [info] Commons Daemon procrun (1.0.2.0) started
+[2018-07-17 09:57:51] [info] Updating service...
+[2018-07-17 09:57:52] [info] Service QuartisTomcat updated
+[2018-07-17 09:57:52] [info] Update service finished.
+[2018-07-17 09:57:52] [info] Commons Daemon procrun finished.
+[2018-07-17 09:57:52] [info] Commons Daemon procrun (1.0.2.0) started
+[2018-07-17 09:57:52] [info] Updating service...
+[2018-07-17 09:57:52] [info] Service QuartisTomcat updated
+[2018-07-17 09:57:52] [info] Update service finished.
+[2018-07-17 09:57:52] [info] Commons Daemon procrun finished.
+[2018-07-17 10:44:36] [info] Commons Daemon procrun (1.0.2.0) started
+[2018-07-17 10:44:36] [info] Running Service...
+[2018-07-17 10:44:36] [info] Starting service...
+[2018-07-17 10:44:38] [info] Service started in 1560 ms.
+[2018-07-17 10:45:05] [info] Stopping service...
+[2018-07-17 10:45:10] [info] Service stopped.
+[2018-07-17 10:45:10] [info] Run service finished.
+[2018-07-17 10:45:10] [info] Commons Daemon procrun finished.
+[2018-07-17 11:46:45] [info] Commons Daemon procrun (1.0.2.0) started
+[2018-07-17 11:46:45] [info] Running Service...
+[2018-07-17 11:46:45] [info] Starting service...
+[2018-07-17 11:46:46] [info] Service started in 1090 ms.
+[2018-07-17 11:49:46] [info] Stopping service...
+[2018-07-17 11:49:49] [info] Service stopped.
+[2018-07-17 11:49:49] [info] Run service finished.
+[2018-07-17 11:49:49] [info] Commons Daemon procrun finished.
+[2018-07-17 11:50:43] [info] Commons Daemon procrun (1.0.2.0) started
+[2018-07-17 11:50:43] [info] Running Service...
+[2018-07-17 11:50:43] [info] Starting service...
+[2018-07-17 11:50:44] [info] Service started in 1072 ms.
+[2018-07-27 10:39:26] [info] Stopping service...
+[2018-07-27 10:39:31] [info] Service stopped.
+[2018-07-27 10:39:31] [info] Run service finished.
+[2018-07-27 10:39:31] [info] Commons Daemon procrun finished.

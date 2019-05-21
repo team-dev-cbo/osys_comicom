@@ -1,0 +1,204 @@
+Version 1
+APP 15
+Offset 1572867
+
+
+1 Configuration
+2 Configuration générale
+3 Nom de l'utilisateur :  %1
+4 Version :  %1
+5 Langue 
+6 Port OSYSSRV :  %1
+7 Port OSYSMEM :  %1
+8 Port OSYSTRACE :  %1
+9 Interdiction de connexions des utilisateurs "anonymes"
+10 Autorisation de connexions des utilisateurs "anonymes"
+11 Durée entre deux enregistrements : %1 minute(s)
+12 Configuration de la base de données
+13 Sommaire
+14 Chaine de connexion : "%1"
+15 Canal lent
+16 Canal rapide
+17 Transaction interdite
+18 Transaction autorisée
+19 Configuration du serveur web
+20 Port OSYSHTTP :  %1
+21 Répertoire de base : "%1"
+22 Durée maximum d'attente en lecture sur une connexion : %1 seconde(s)
+23 Durée de vie maximum d'une connexion :  %1
+24 Temps maximum pour la lecture des informations provenant des navigateurs : %1 seconde(s)
+25 Nom du fichier par défaut :  %1
+26 Envoi de la clé du serveur
+27 Pas d'envoi de la clé du serveur
+28 Taille maximum du fichier temporaire : %1 kilo octets
+29 Nombre maximum de connexions simultanées :  %1
+30 Fenêtre
+31 Nom du répertoire :  %1
+32 Durée de conservation des fichiers log : %1 jour(s)
+33 Configuration de la trace
+34 Sécurité
+35 Fenêtre par défaut : 
+36 Aucune fenêtre par défaut
+37 Masque %1 :  %2
+38 Pas de filtre
+39 Liste des filtres : 
+40 Canal %1
+41 Français
+42 Anglais
+43 Mémoires
+44 Description : 
+45 Simple
+46 Dynamique
+47 Fifo
+48 Formule de calcul :  %1
+49 globale
+50 groupe
+51 utilisateur
+52 Nombre maximum de valeurs : %1
+53 Sauvegarde des contenus de la mémoire
+54 Pas de sauvegarde des valeurs de la mémoire
+55 Valeur par défaut :   
+56 Automatique
+57 Entier
+58 Réel
+59 Chaîne de caractères
+60 Date
+61 Durée
+62 Date heure
+63 Archive
+64 Inconnu
+65 Nombre
+66 Visibilité : 
+67 Type de la donnée : 
+68 Type de mode :   
+69 Pas de valeur par défaut 
+70 Requêtes
+71 Gestion des valeurs dans un fichier
+72 Taille Maximum d'une valeur :    
+73 Droit d'administration
+74 Lect 
+75 Ajout
+76 Modif
+77 Supp
+78 Exec
+79 Admin
+80 Aucun droit
+81 Droits
+82 Modifié le :    
+83 Créé le 
+84 %1 par %2
+85 Libellé :  
+86 Chaîne de déclenchement :   
+87 Code barre
+88 Clavier
+89 Entrée logique
+90 Magnétique
+91 Port auxiliaire
+92 Entrée analogique    
+93 Aucun
+94 Périphérique(s) de déclenchement(s) :   
+95 Scénario :
+96 Nom :   
+97 Liste des paramètres :   
+98 Périphérique(s) utilisé(s) :
+99 Déclenchements
+100 Utilisateurs autorisés :
+101 Etats
+102 Evénements périodiques
+103 Périodicité :
+104 an(s)
+105 mois
+106 jour(s)
+107 heure(s)
+108 minute(s)
+109 seconde(s)
+110 Prochaine exécution :   
+111 Etat :   
+112 Actif
+113 Non actif
+114 Caractéristiques de l'événement périodique :
+115 Scénarios
+116 Fenêtres
+117 Utilisateurs
+118 Faire tant que 
+119 Temporisation de %1 seconde(s)
+120 Tant que 
+121 faire 
+122 Fin de la boucle 
+123 Fin du scénario 
+124 Si 
+125 Sous scénario : 
+126 Terminal courant
+127 Terminal non courant : 
+128 Mémoire source :   
+129 Mémoire destination :    
+130 Extraction :
+131 Gauche
+132 Droite
+133 Premier caractère :  
+134 Longueur :  
+135 Filtre :  
+136 Message : 
+137 Effacement de la zone avant l'affichage  
+138 Zone d'affichage : 
+139 Première ligne :   
+140 Nombre total de lignes :   
+141 Zone de saisie :   
+142 Modification du positionnement de la zone de saisie
+143 Ligne :   
+144 Colonne :   
+145 16 colonnes   
+146 40 colonnes    
+147 Fichier :    
+148 Affichage HTML
+149 Affichage Texte
+150 Prise en compte de tous les enregistrements dans la mémoire
+151 Requête :   
+152 Liste des champs/mémoires : 
+153 Champ
+154 Liste des balises Xml :
+155 Etat :   
+156 Driver :   
+157 Attend la fin de l'impression
+158 N'attend pas la fin de l'impression
+159 Destination :   
+160 Nom de la machine :   
+161 E-Mail : 
+162 Adresse :   
+163 Alias :   
+164 Fenêtre :   
+165 Type du driver :   
+166 Lancement automatique du driver
+167 Le driver n'est pas lancé par le serveur
+168 La fenêtre du driver est visible
+169 La fenêtre du driver n'est pas visible
+170 Gestion des terminaux :  
+171 Terminal numéro %1 à %2
+172 N° --   Langue   --   Host   --   Affichage   --   Description 
+173 Texte
+174 Numérique
+175 Métafile
+176 Texte formaté
+177 Code à Barre 
+178 EAN 8 
+179 EAN 13 
+180 EAN 128 
+181 CODE 128
+182 CODE 39 
+183 INTERLEAVED 2-5 
+184 UPCA 
+185 UPCE 
+186 Liste des variables mémoires : 
+187 Liste des variables requêtes : 
+188 Liste des champs mémoires : 
+189 Liste des champs requêtes : 
+190 N° 
+191 Affichage 
+192 Host 
+193 Description 
+194 Nom de l'application :  %1
+195 Aucune connexion à la base de données
+196 Nom de la base de données : %1
+197 Nombre de connexion(s) : %1
+198 Temps maximum d'exécution d'une requête (seconde(s)) : %1
+199 Base de données par défaut

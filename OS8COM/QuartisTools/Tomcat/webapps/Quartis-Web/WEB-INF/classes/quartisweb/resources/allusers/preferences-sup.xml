@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<preferences>
+    <internals>
+        <toolbar-visible>O</toolbar-visible>
+        <navigation-visible>O</navigation-visible>
+        <navigation-timeout>5</navigation-timeout>
+        <level1-menu-visible>O</level1-menu-visible>
+        <level1-menu-timeout>8</level1-menu-timeout>
+        <level1-refresh-period>10</level1-refresh-period>
+        <level2-refresh-period>10</level2-refresh-period>
+        <level3-refresh-period>-1</level3-refresh-period>
+    </internals>
+    <parameters/>
+    <variables/>
+</preferences>

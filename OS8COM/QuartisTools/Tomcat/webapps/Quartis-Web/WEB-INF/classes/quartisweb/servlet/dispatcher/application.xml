@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<application>
+    <name>standard</name>
+    <path>/standard</path>
+    <label>Quartis Optima Standard</label>
+    <description>Standard de l'application Quartis Optima.</description>
+    <modules>
+        <module-ref>
+            <id>OPTIMA_Standard</id>
+            <name>Standard</name>
+            <path></path>
+            <label>Module Standard</label>
+            <description>Module Standard</description>
+            <containers>
+                <container-ref selectable="true">
+                    <id>GeneralMaintenance</id>
+                    <name>GeneralMaintenance</name>
+                    <path>/standard/Maintenance/GeneralMaintenance/GeneralMaintenance.xml</path>
+                    <delegate-key>Standard/Maintenance/GeneralMaintenance</delegate-key>
+                    <delegate-value>standard.maintenance.generalmaintenance.VNGeneralMaintenance</delegate-value>
+                    <label></label>
+                    <description></description>
+                    <parameters>
+                        <parameter name="CodeMach">%</parameter>
+                        <parameter name="CodeAtel">%</parameter>
+                        <parameter name="CodeSectGeog">%</parameter>
+                        <parameter name="CodeSupe">%</parameter>
+                        <parameter name="CodeTypeInte">%</parameter>
+                        <parameter name="CodeFamiInte">%</parameter>
+                    </parameters>
+                </container-ref>
+            </containers>
+        </module-ref>
+        <module-ref>
+            <id>OPTIMA_Suivi_Personnel</id>
+            <name>Suivi du Personnel</name>
+            <path></path>
+            <label>Suivi du Personnel</label>
+            <description>Suivi du Personnel</description>
+            <containers>
+                <container-ref>
+                    <id>MachineMaintenance</id>
+                    <name>MachineMaintenance</name>
+                    <path>/standard/Maintenance/MachineMaintenance/MachineMaintenance.xml</path>
+                    <delegate-key>Standard/Maintenance/MachineMaintenance</delegate-key>
+                    <delegate-value>standard.maintenance.machinemaintenance.VNMachineMaintenance</delegate-value>
+                    <label></label>
+                    <description></description>
+                </container-ref>
+            </containers>
+        </module-ref>
+        <module-ref>
+            <id>OPTIMA_Suivi_Equipement</id>
+            <name>Suivi des Equipements</name>
+            <path></path>
+            <label>Suivi des Equipements</label>
+            <description>Suivi des Equipements</description>
+            <containers>
+                <container-ref>
+                    <id>TestGraph</id>
+                    <name>TestGraph</name>
+                    <path>/standard/Test/Graph/Graph.xml</path>
+                    <delegate-key>Standard/Test/Graph</delegate-key>
+                    <delegate-value>standard.test.graph.VNGraph</delegate-value>
+                    <label></label>
+                    <description></description>
+                </container-ref>
+            </containers>
+        </module-ref>
+        <module-ref>
+            <id>OPTIMA_Suivi_Production</id>
+            <name>Suivi Production</name>
+            <path></path>
+            <label>Suivi Production</label>
+            <description>Suivi Production</description>
+            <containers>
+                <container-ref>
+                    <id>TestPareto</id>
+                    <name>TestPareto</name>
+                    <path>/standard/Test/Pareto/Pareto.xml</path>
+                    <delegate-key>Standard/Test/Pareto</delegate-key>
+                    <delegate-value>standard.test.pareto.VNPareto</delegate-value>
+                    <label></label>
+                    <description></description>
+                </container-ref>
+            </containers>
+        </module-ref>
+        <module-ref>
+            <id>OPTIMA_Suivi_Outillage</id>
+            <name>Gestion des Outillages</name>
+            <path></path>
+            <label>Gestion des Outillages</label>
+            <description>Gestion des Outillages</description>
+            <containers>
+                <container-ref>
+                    <id>TestPie</id>
+                    <name>TestPie</name>
+                    <path>/standard/Test/Pie/Pie.xml</path>
+                    <delegate-key>Standard/Test/Pie</delegate-key>
+                    <delegate-value>standard.test.pie.VNPie</delegate-value>
+                    <label></label>
+                    <description></description>
+                </container-ref>
+            </containers>
+        </module-ref>
+        <module-ref>
+            <id>OPTIMA_Suivi_Maintenance</id>
+            <name>Maintenance</name>
+            <path></path>
+            <label>Maintenance</label>
+            <description>Maintenance</description>
+            <containers>
+                <container-ref>
+                    <id>TestXY</id>
+                    <name>TestXY</name>
+                    <path>/standard/Test/XY/XY.xml</path>
+                    <delegate-key>Standard/Test/XY</delegate-key>
+                    <delegate-value>standard.test.xy.VNXY</delegate-value>
+                    <label></label>
+                    <description></description>
+                </container-ref>
+            </containers>                
+        </module-ref>
+        <module-ref>
+            <id>OPTIMA_Controle_Process</id>
+            <name>Contreles Process</name>
+            <path></path>
+            <label>Contreles Process</label>
+            <description>Contreles Process</description>
+            <containers>
+                <container-ref>
+                    <id>TestDialExt</id>
+                    <name>TestDialExt</name>
+                    <path>/standard/Test/DialExt/DialExt.xml</path>
+                    <delegate-key>Standard/Test/DialExt</delegate-key>
+                    <delegate-value>standard.test.dialext.VNDialExt</delegate-value>
+                    <label></label>
+                    <description></description>
+                </container-ref>
+            </containers>                
+        </module-ref>
+        <module-ref>
+            <id>OPTIMA_Tracabilite_process</id>
+            <name>Traeabilite Process</name>
+            <path></path>
+            <label>Traeabilite Process</label>
+            <description>Traeabilite Process</description>
+            <containers>
+                <container-ref>
+                    <id>TestGanttExt</id>
+                    <name>TestGanttExt</name>
+                    <path>/standard/Test/GanttExt/GanttExt.xml</path>
+                    <delegate-key>Standard/Test/GanttExt</delegate-key>
+                    <delegate-value>standard.test.ganttext.VNGanttExt</delegate-value>
+                    <label></label>
+                    <description></description>
+                </container-ref>
+            </containers>                
+        </module-ref>
+        <module-ref>
+            <id>OPTIMA_Gestion_Document</id>
+            <name>Documents Techniques</name>
+            <path></path>
+            <label>Documents Techniques</label>
+            <description>Documents Techniques</description>
+        </module-ref>
+    </modules>
+    <welcome-container></welcome-container>
+</application>

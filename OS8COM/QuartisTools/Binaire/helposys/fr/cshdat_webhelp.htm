@@ -1,0 +1,865 @@
+<html>
+<head>
+<title>Aide sur l'interface</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="RoboHelp by eHelp Corporation   www.ehelp.com">
+<meta name "description" content="WebHelp 2002">
+</head>
+<body>
+<script language="JavaScript">
+<!--
+
+var gArrayCsh = new Array();
+
+var gstrWindowOption = "";
+var gstrURL = "";
+var gbWithNavPane = false;
+
+function CshEntityItem(strAliasId, nTopicNum, strUrl) 
+{
+    this.strAliasId = strAliasId;
+    this.nTopicNum = nTopicNum;
+    this.strUrl = strUrl;
+}
+
+
+//Try to get to topic number from hash string
+function GetTopicNumberAuto(strMayBeNumber)
+{
+   var nNum = -1;
+   if (strMayBeNumber.length >= 1)
+   {
+		var strTmp = strMayBeNumber;
+		var iEnd = strTmp.length;
+		for (var i=0; i<iEnd; i++)
+		{
+			  var ch = strTmp.charAt(i);
+			  if (!((ch == "0") || (ch == "1") ||
+			        (ch == "2") || (ch == "3") ||
+			        (ch == "4") || (ch == "5") ||
+			        (ch == "6") || (ch == "7") ||
+			        (ch == "8") || (ch == "9")))
+			      return GetTopicNumberById(strTmp);
+		}
+		nNum = parseInt(strTmp);
+   }
+   return nNum;
+}
+
+function GetTopicNumber(strHashString)
+{
+	var nTopicEndPos = strHashString.indexOf(',')
+	if (nTopicEndPos == -1) { // no window option.
+		return GetTopicNumberOnly(strHashString);
+	}
+	else {
+		var strWindowOption = strHashString.substring(nTopicEndPos + 1, strHashString.length);
+		var strWithNavPane = 'withnavpane=true';
+		if (strWindowOption.toLowerCase().indexOf(strWithNavPane) == 0)
+		{
+			if (strWindowOption.length > strWithNavPane.length)
+				gstrWindowOption = strWindowOption.substring(strWithNavPane.length + 1);
+			else
+				gstrWindowOption = "";
+			gbWithNavPane = true;
+		}
+		else
+			gstrWindowOption = strWindowOption;
+		return GetTopicNumberOnly(strHashString.substring(0, nTopicEndPos));		
+	}
+}
+
+function GetTopicNumberOnly(strTopicString)
+{
+	var nEqualPos = strTopicString.indexOf('=');
+	if (nEqualPos == -1) {
+		return GetTopicNumberAuto(strTopicString);
+	}
+	else {
+		var strValue=strTopicString.substring(nEqualPos + 1, strTopicString.length);
+		if (strTopicString.toLowerCase().indexOf("topicnumber") == 0) {
+			return parseInt(strValue);
+		} else if (strTopicString.toLowerCase().indexOf("topicid") == 0) {
+			return GetTopicNumberById(strValue);
+		} else if (strTopicString.toLowerCase().indexOf("remoteurl") == 0) {
+			gstrURL = strValue;
+			return -1;
+		}
+
+	}
+}
+
+//Find HomePage of the WebHelp system
+// we try to get the topic from remote project if it exists.
+function RedirectToHomePage()
+{
+	if (parent && parent != this && parent.goNext)
+	{
+		var sHome = parent.goNext();
+		if (sHome != "")
+			RedirectTo(sHome);
+	}
+}
+
+function getHomePage()
+{
+	if (parent && parent != this && parent.getRelHomePage)
+	{
+		return parent.getRelHomePage(document.location.href);
+	}
+	return "";
+}
+
+function addRemoteProject(strPath)
+{
+	if (parent && parent != this && parent.addProject)
+	{
+		parent.addProject(strPath);
+	}
+}
+
+//Redirect page to...
+function RedirectTo(strUrl)
+{
+   if (gstrWindowOption.length != 0) {
+		var wnd = window.open(strUrl, "HelpStub", gstrWindowOption);
+		// close current window and rename the stub window to current window.
+		wnd.focus();
+		if (parent)
+			parent.close();
+   }
+   else {
+	parent.document.location.href = strUrl;
+	window.focus();
+  }
+}
+
+//Prompt the user that we can not find...
+function FailToFind(strMsg)
+{
+    RedirectToHomePage();
+}
+
+//Find topic by topic number (defined in h file)
+function FindTopicByTopicNum(nTopicNum)
+{
+	var i = 0;
+	var iEnd = gArrayCsh.length;
+	for (i=0; i<iEnd; i++)
+	{
+		if (gArrayCsh[i].nTopicNum == nTopicNum)
+		{
+			var strURL = gArrayCsh[i].strUrl;
+			if (gbWithNavPane)
+			{
+				var strHomePage = getHomePage();
+				if (strHomePage.length != 0)
+					strURL = strHomePage + strURL;
+			}	
+			RedirectTo(strURL);
+			return true;
+		}
+	}
+	FailToFind("Fail to find topic assocaite with topic number: " + nTopicNum);
+	return false;
+}
+
+//Find topic by topic id (alias id defined in ali file)
+function GetTopicNumberById(strTopicId)
+{
+   var i = 0;
+   var iEnd = gArrayCsh.length;
+   for (i=0; i<iEnd; i++)
+   {
+	if (gArrayCsh[i].strAliasId == strTopicId)
+	{
+	    return gArrayCsh[i].nTopicNum;
+	 }
+   }
+   gstrURL = "";
+   return -1;
+}
+
+//Set Context-sensitive help entity...
+function SetCsh(n, strAliasId, nTopicNum, strUrl)
+{
+   gArrayCsh[n] = new CshEntityItem(strAliasId,nTopicNum,strUrl);
+}
+
+
+function getHash()
+{
+	if (parent && parent != this)
+		return parent.location.hash;
+	else
+		return "";
+}
+//-->
+</script>
+<script language="javascript">
+<!--
+  SetCsh(0,"AFX_HIDW_STATUS_BAR",387073,"menu/affichage/AFX_HIDW_STATUS_BAR.htm");
+  SetCsh(1,"HID_EDIT_PASTE",123173,"menu/edition/HID_EDIT_PASTE.htm");
+  SetCsh(2,"HIDD_WORKSPACE_AFFICHAGE",167840,"module/trace/HIDD_WORKSPACE_AFFICHAGE.htm");
+  SetCsh(3,"HIDD_WORKSPACE_AFFICHAGE",167840,"module/trace/HIDD_WORKSPACE_AFFICHAGE.htm");
+  SetCsh(4,"HIDD_WORKSPACE_AFFICHAGE",167840,"module/trace/HIDD_WORKSPACE_AFFICHAGE.htm");
+  SetCsh(5,"HIDD_WORKSPACE_AFFICHAGE",167840,"module/trace/HIDD_WORKSPACE_AFFICHAGE.htm");
+  SetCsh(6,"HIDD_WORKSPACE_AFFICHAGE",167840,"module/trace/HIDD_WORKSPACE_AFFICHAGE.htm");
+  SetCsh(7,"HIDD_LISTE_DECLENCHEMENT",131357,"application/HIDD_LISTE_DECLENCHEMENT.htm");
+  SetCsh(8,"HIDD_LISTE_DECLENCHEMENT",131357,"application/HIDD_LISTE_DECLENCHEMENT.htm");
+  SetCsh(9,"HIDD_LISTE_DECLENCHEMENT",131357,"application/HIDD_LISTE_DECLENCHEMENT.htm");
+  SetCsh(10,"HIDD_LISTE_DECLENCHEMENT",131357,"application/HIDD_LISTE_DECLENCHEMENT.htm");
+  SetCsh(11,"HIDD_LISTE_DECLENCHEMENT",131357,"application/HIDD_LISTE_DECLENCHEMENT.htm");
+  SetCsh(12,"HIDD_LISTE_SCEN_COURS",131338,"application/HIDD_LISTE_SCEN_COURS.htm");
+  SetCsh(13,"HIDD_LISTE_SCEN_COURS",131338,"application/HIDD_LISTE_SCEN_COURS.htm");
+  SetCsh(14,"HIDD_LISTE_SCEN_COURS",131338,"application/HIDD_LISTE_SCEN_COURS.htm");
+  SetCsh(15,"HIDD_LISTE_SCEN_COURS",131338,"application/HIDD_LISTE_SCEN_COURS.htm");
+  SetCsh(16,"HIDD_LISTE_SCEN_COURS",131338,"application/HIDD_LISTE_SCEN_COURS.htm");
+  SetCsh(17,"HIDD_REQ_AJOUT_SIMPLE",131236,"module/base_de_donnees/HIDD_REQ_AJOUT_SIMPLE.htm");
+  SetCsh(18,"HIDD_REQ_AJOUT_SIMPLE",131236,"module/base_de_donnees/HIDD_REQ_AJOUT_SIMPLE.htm");
+  SetCsh(19,"HIDD_REQ_AJOUT_SIMPLE",131236,"module/base_de_donnees/HIDD_REQ_AJOUT_SIMPLE.htm");
+  SetCsh(20,"HIDD_REQ_AJOUT_SIMPLE",131236,"module/base_de_donnees/HIDD_REQ_AJOUT_SIMPLE.htm");
+  SetCsh(21,"HIDD_REQ_AJOUT_SIMPLE",131236,"module/base_de_donnees/HIDD_REQ_AJOUT_SIMPLE.htm");
+  SetCsh(22,"HIDD_MEMOIRE_CARACTERISTIQUES",131227,"module/trace/HIDD_MEMOIRE_CARACTERISTIQUES.htm");
+  SetCsh(23,"HIDD_MEMOIRE_CARACTERISTIQUES",131227,"module/trace/HIDD_MEMOIRE_CARACTERISTIQUES.htm");
+  SetCsh(24,"HIDD_MEMOIRE_CARACTERISTIQUES",131227,"module/trace/HIDD_MEMOIRE_CARACTERISTIQUES.htm");
+  SetCsh(25,"HIDD_MEMOIRE_CARACTERISTIQUES",131227,"module/trace/HIDD_MEMOIRE_CARACTERISTIQUES.htm");
+  SetCsh(26,"HIDD_MEMOIRE_CARACTERISTIQUES",131227,"module/trace/HIDD_MEMOIRE_CARACTERISTIQUES.htm");
+  SetCsh(27,"HIDR_USER",131266,"module/utilisateur/HIDR_USER.htm");
+  SetCsh(28,"HIDR_USER",131266,"module/utilisateur/HIDR_USER.htm");
+  SetCsh(29,"HIDR_USER",131266,"module/utilisateur/HIDR_USER.htm");
+  SetCsh(30,"HIDR_USER",131266,"module/utilisateur/HIDR_USER.htm");
+  SetCsh(31,"HIDR_USER",131266,"module/utilisateur/HIDR_USER.htm");
+  SetCsh(32,"HID_FENETRE_CLOSE_ALL",102306,"menu/fenetre/HID_FENETRE_CLOSE_ALL.htm");
+  SetCsh(33,"HID_FENETRE_CLOSE_ALL",102306,"menu/fenetre/HID_FENETRE_CLOSE_ALL.htm");
+  SetCsh(34,"HID_FENETRE_CLOSE_ALL",102306,"menu/fenetre/HID_FENETRE_CLOSE_ALL.htm");
+  SetCsh(35,"HID_FENETRE_CLOSE_ALL",102306,"menu/fenetre/HID_FENETRE_CLOSE_ALL.htm");
+  SetCsh(36,"HID_FENETRE_CLOSE_ALL",102306,"menu/fenetre/HID_FENETRE_CLOSE_ALL.htm");
+  SetCsh(37,"HID_ZOOM_25",98366,"menu/zoom/HID_ZOOM_25.htm");
+  SetCsh(38,"HID_ZOOM_25",98366,"menu/zoom/HID_ZOOM_25.htm");
+  SetCsh(39,"HID_ZOOM_25",98366,"menu/zoom/HID_ZOOM_25.htm");
+  SetCsh(40,"HID_ZOOM_25",98366,"menu/zoom/HID_ZOOM_25.htm");
+  SetCsh(41,"HID_ZOOM_25",98366,"menu/zoom/HID_ZOOM_25.htm");
+  SetCsh(42,"HID_SUPPRIMER_ELEMENT",98324,"menu/element/HID_SUPPRIMER_ELEMENT.htm");
+  SetCsh(43,"HID_SUPPRIMER_ELEMENT",98324,"menu/element/HID_SUPPRIMER_ELEMENT.htm");
+  SetCsh(44,"HID_SUPPRIMER_ELEMENT",98324,"menu/element/HID_SUPPRIMER_ELEMENT.htm");
+  SetCsh(45,"HID_SUPPRIMER_ELEMENT",98324,"menu/element/HID_SUPPRIMER_ELEMENT.htm");
+  SetCsh(46,"HID_SUPPRIMER_ELEMENT",98324,"menu/element/HID_SUPPRIMER_ELEMENT.htm");
+  SetCsh(47,"HID_SUPPRIMER",102345,"menu/edition/HIDD_SUPPRIMER.htm");
+  SetCsh(48,"HID_SUPPRIMER",102345,"menu/edition/HIDD_SUPPRIMER.htm");
+  SetCsh(49,"HID_SUPPRIMER",102345,"menu/edition/HIDD_SUPPRIMER.htm");
+  SetCsh(50,"HID_SUPPRIMER",102345,"menu/edition/HIDD_SUPPRIMER.htm");
+  SetCsh(51,"HID_SUPPRIMER",102345,"menu/edition/HIDD_SUPPRIMER.htm");
+  SetCsh(52,"HID_VIEW_STATUS_BAR",124929,"menu/affichage/HID_VIEW_STATUS_BAR.htm");
+  SetCsh(53,"HIDD_PROPRIETES_TERMINAL",132638,"scenario/graphique/propriete/HIDD_PROPRIETES_TERMINAL.htm");
+  SetCsh(54,"HIDD_PROPRIETES_TERMINAL",132638,"scenario/graphique/propriete/HIDD_PROPRIETES_TERMINAL.htm");
+  SetCsh(55,"HIDD_PROPRIETES_TERMINAL",132638,"scenario/graphique/propriete/HIDD_PROPRIETES_TERMINAL.htm");
+  SetCsh(56,"HIDD_PROPRIETES_TERMINAL",132638,"scenario/graphique/propriete/HIDD_PROPRIETES_TERMINAL.htm");
+  SetCsh(57,"HIDD_PROPRIETES_TERMINAL",132638,"scenario/graphique/propriete/HIDD_PROPRIETES_TERMINAL.htm");
+  SetCsh(58,"HIDD_PROPRIETES_FIN_BOUCLE",132636,"scenario/graphique/propriete/HIDD_PROPRIETES_FIN_BOUCLE.htm");
+  SetCsh(59,"HIDD_PROPRIETES_FIN_BOUCLE",132636,"scenario/graphique/propriete/HIDD_PROPRIETES_FIN_BOUCLE.htm");
+  SetCsh(60,"HIDD_PROPRIETES_FIN_BOUCLE",132636,"scenario/graphique/propriete/HIDD_PROPRIETES_FIN_BOUCLE.htm");
+  SetCsh(61,"HIDD_PROPRIETES_FIN_BOUCLE",132636,"scenario/graphique/propriete/HIDD_PROPRIETES_FIN_BOUCLE.htm");
+  SetCsh(62,"HIDD_PROPRIETES_FIN_BOUCLE",132636,"scenario/graphique/propriete/HIDD_PROPRIETES_FIN_BOUCLE.htm");
+  SetCsh(63,"HIDD_CONF_FENETRE",131302,"application/configuration/HIDD_CONF_FENETRE.htm");
+  SetCsh(64,"HIDD_CONF_FENETRE",131302,"application/configuration/HIDD_CONF_FENETRE.htm");
+  SetCsh(65,"HIDD_CONF_FENETRE",131302,"application/configuration/HIDD_CONF_FENETRE.htm");
+  SetCsh(66,"HIDD_CONF_FENETRE",131302,"application/configuration/HIDD_CONF_FENETRE.htm");
+  SetCsh(67,"HIDD_CONF_FENETRE",131302,"application/configuration/HIDD_CONF_FENETRE.htm");
+  SetCsh(68,"HIDR_DRIVERS",131306,"module/utilisateur/HIDR_DRIVERS.htm");
+  SetCsh(69,"HIDR_DRIVERS",131306,"module/utilisateur/HIDR_DRIVERS.htm");
+  SetCsh(70,"HIDR_DRIVERS",131306,"module/utilisateur/HIDR_DRIVERS.htm");
+  SetCsh(71,"HIDR_DRIVERS",131306,"module/utilisateur/HIDR_DRIVERS.htm");
+  SetCsh(72,"HIDR_DRIVERS",131306,"module/utilisateur/HIDR_DRIVERS.htm");
+  SetCsh(73,"HIDR_DECLENCHEMENT",131267,"module/declenchement/HIDR_DECLENCHEMENT.htm");
+  SetCsh(74,"HIDR_DECLENCHEMENT",131267,"module/declenchement/HIDR_DECLENCHEMENT.htm");
+  SetCsh(75,"HIDR_DECLENCHEMENT",131267,"module/declenchement/HIDR_DECLENCHEMENT.htm");
+  SetCsh(76,"HIDR_DECLENCHEMENT",131267,"module/declenchement/HIDR_DECLENCHEMENT.htm");
+  SetCsh(77,"HIDR_DECLENCHEMENT",131267,"module/declenchement/HIDR_DECLENCHEMENT.htm");
+  SetCsh(78,"HID_OUTPUT_AFFICHE",102320,"menu/affichage/HID_OUTPUT_AFFICHE.htm");
+  SetCsh(79,"HID_OUTPUT_AFFICHE",102320,"menu/affichage/HID_OUTPUT_AFFICHE.htm");
+  SetCsh(80,"HID_OUTPUT_AFFICHE",102320,"menu/affichage/HID_OUTPUT_AFFICHE.htm");
+  SetCsh(81,"HID_OUTPUT_AFFICHE",102320,"menu/affichage/HID_OUTPUT_AFFICHE.htm");
+  SetCsh(82,"HID_OUTPUT_AFFICHE",102320,"menu/affichage/HID_OUTPUT_AFFICHE.htm");
+  SetCsh(83,"HID_FILE_SAVE_ALL",98386,"menu/application/HID_FILE_SAVE_ALL.htm");
+  SetCsh(84,"HID_FILE_SAVE_ALL",98386,"menu/application/HID_FILE_SAVE_ALL.htm");
+  SetCsh(85,"HID_FILE_SAVE_ALL",98386,"menu/application/HID_FILE_SAVE_ALL.htm");
+  SetCsh(86,"HID_FILE_SAVE_ALL",98386,"menu/application/HID_FILE_SAVE_ALL.htm");
+  SetCsh(87,"HID_FILE_SAVE_ALL",98386,"menu/application/HID_FILE_SAVE_ALL.htm");
+  SetCsh(88,"HID_OUVRIR_ELEMENT",98322,"menu/element/HID_OUVRIR_ELEMENT.htm");
+  SetCsh(89,"HID_OUVRIR_ELEMENT",98322,"menu/element/HID_OUVRIR_ELEMENT.htm");
+  SetCsh(90,"HID_OUVRIR_ELEMENT",98322,"menu/element/HID_OUVRIR_ELEMENT.htm");
+  SetCsh(91,"HID_OUVRIR_ELEMENT",98322,"menu/element/HID_OUVRIR_ELEMENT.htm");
+  SetCsh(92,"HID_OUVRIR_ELEMENT",98322,"menu/element/HID_OUVRIR_ELEMENT.htm");
+  SetCsh(93,"HIDD_CONF_TRACE",131303,"application/configuration/HIDD_CONF_TRACE.htm");
+  SetCsh(94,"HIDD_CONF_TRACE",131303,"application/configuration/HIDD_CONF_TRACE.htm");
+  SetCsh(95,"HIDD_CONF_TRACE",131303,"application/configuration/HIDD_CONF_TRACE.htm");
+  SetCsh(96,"HIDD_CONF_TRACE",131303,"application/configuration/HIDD_CONF_TRACE.htm");
+  SetCsh(97,"HIDD_CONF_TRACE",131303,"application/configuration/HIDD_CONF_TRACE.htm");
+  SetCsh(98,"HIDD_PROPRIETES_SAISIE",131248,"scenario/graphique/propriete/HIDD_PROPRIETES_SAISIE.htm");
+  SetCsh(99,"HIDD_PROPRIETES_SAISIE",131248,"scenario/graphique/propriete/HIDD_PROPRIETES_SAISIE.htm");
+  SetCsh(100,"HIDD_PROPRIETES_SAISIE",131248,"scenario/graphique/propriete/HIDD_PROPRIETES_SAISIE.htm");
+  SetCsh(101,"HIDD_PROPRIETES_SAISIE",131248,"scenario/graphique/propriete/HIDD_PROPRIETES_SAISIE.htm");
+  SetCsh(102,"HIDD_PROPRIETES_SAISIE",131248,"scenario/graphique/propriete/HIDD_PROPRIETES_SAISIE.htm");
+  SetCsh(103,"HIDD_REQ_TABLE_PROPRIETE",131217,"module/base_de_donnees/HIDD_REQ_TABLE_PROPRIETE.htm");
+  SetCsh(104,"HIDD_REQ_TABLE_PROPRIETE",131217,"module/base_de_donnees/HIDD_REQ_TABLE_PROPRIETE.htm");
+  SetCsh(105,"HIDD_REQ_TABLE_PROPRIETE",131217,"module/base_de_donnees/HIDD_REQ_TABLE_PROPRIETE.htm");
+  SetCsh(106,"HIDD_REQ_TABLE_PROPRIETE",131217,"module/base_de_donnees/HIDD_REQ_TABLE_PROPRIETE.htm");
+  SetCsh(107,"HIDD_REQ_TABLE_PROPRIETE",131217,"module/base_de_donnees/HIDD_REQ_TABLE_PROPRIETE.htm");
+  SetCsh(108,"HID_WORKSPACE_AFFICHE",102319,"menu/affichage/HID_WORKSPACE_AFFICHE.htm");
+  SetCsh(109,"HID_WORKSPACE_AFFICHE",102319,"menu/affichage/HID_WORKSPACE_AFFICHE.htm");
+  SetCsh(110,"HID_WORKSPACE_AFFICHE",102319,"menu/affichage/HID_WORKSPACE_AFFICHE.htm");
+  SetCsh(111,"HID_WORKSPACE_AFFICHE",102319,"menu/affichage/HID_WORKSPACE_AFFICHE.htm");
+  SetCsh(112,"HID_WORKSPACE_AFFICHE",102319,"menu/affichage/HID_WORKSPACE_AFFICHE.htm");
+  SetCsh(113,"HID_OPTIONS_GRILLE",102302,"menu/options/HID_OPTIONS_GRILLE.htm");
+  SetCsh(114,"HID_OPTIONS_GRILLE",102302,"menu/options/HID_OPTIONS_GRILLE.htm");
+  SetCsh(115,"HID_OPTIONS_GRILLE",102302,"menu/options/HID_OPTIONS_GRILLE.htm");
+  SetCsh(116,"HID_OPTIONS_GRILLE",102302,"menu/options/HID_OPTIONS_GRILLE.htm");
+  SetCsh(117,"HID_OPTIONS_GRILLE",102302,"menu/options/HID_OPTIONS_GRILLE.htm");
+  SetCsh(118,"HID_ACTION_FIN_SCEN",98392,"scenario/graphique/action/HID_ACTION_FIN_SCEN.htm");
+  SetCsh(119,"HID_ACTION_FIN_SCEN",98392,"scenario/graphique/action/HID_ACTION_FIN_SCEN.htm");
+  SetCsh(120,"HID_ACTION_FIN_SCEN",98392,"scenario/graphique/action/HID_ACTION_FIN_SCEN.htm");
+  SetCsh(121,"HID_ACTION_FIN_SCEN",98392,"scenario/graphique/action/HID_ACTION_FIN_SCEN.htm");
+  SetCsh(122,"HID_ACTION_FIN_SCEN",98392,"scenario/graphique/action/HID_ACTION_FIN_SCEN.htm");
+  SetCsh(123,"HID_NOUVEAU_ELEMENT",98321,"menu/groupe/HID_NOUVEAU_ELEMENT.htm");
+  SetCsh(124,"HID_NOUVEAU_ELEMENT",98321,"menu/groupe/HID_NOUVEAU_ELEMENT.htm");
+  SetCsh(125,"HID_NOUVEAU_ELEMENT",98321,"menu/groupe/HID_NOUVEAU_ELEMENT.htm");
+  SetCsh(126,"HID_NOUVEAU_ELEMENT",98321,"menu/groupe/HID_NOUVEAU_ELEMENT.htm");
+  SetCsh(127,"HID_NOUVEAU_ELEMENT",98321,"menu/groupe/HID_NOUVEAU_ELEMENT.htm");
+  SetCsh(128,"HID_EDIT_REPLACE",123177,"menu/edition/HID_EDIT_REPLACE.htm");
+  SetCsh(129,"HIDD_IMPRIMER",131342,"application/HIDD_IMPRIMER.htm");
+  SetCsh(130,"HIDD_IMPRIMER",131342,"application/HIDD_IMPRIMER.htm");
+  SetCsh(131,"HIDD_IMPRIMER",131342,"application/HIDD_IMPRIMER.htm");
+  SetCsh(132,"HIDD_IMPRIMER",131342,"application/HIDD_IMPRIMER.htm");
+  SetCsh(133,"HIDD_IMPRIMER",131342,"application/HIDD_IMPRIMER.htm");
+  SetCsh(134,"HIDR_WORKSPACE_TYPE",131233,"module/generalite/HIDR_WORKSPACE_TYPE.htm");
+  SetCsh(135,"HIDR_WORKSPACE_TYPE",131233,"module/generalite/HIDR_WORKSPACE_TYPE.htm");
+  SetCsh(136,"HIDR_WORKSPACE_TYPE",131233,"module/generalite/HIDR_WORKSPACE_TYPE.htm");
+  SetCsh(137,"HIDR_WORKSPACE_TYPE",131233,"module/generalite/HIDR_WORKSPACE_TYPE.htm");
+  SetCsh(138,"HIDR_WORKSPACE_TYPE",131233,"module/generalite/HIDR_WORKSPACE_TYPE.htm");
+  SetCsh(139,"HIDR_EDITEUR_LPX",131221,"scenario/HIDR_EDITEUR_LPX.htm");
+  SetCsh(140,"HIDR_EDITEUR_LPX",131221,"scenario/HIDR_EDITEUR_LPX.htm");
+  SetCsh(141,"HIDR_EDITEUR_LPX",131221,"scenario/HIDR_EDITEUR_LPX.htm");
+  SetCsh(142,"HIDR_EDITEUR_LPX",131221,"scenario/HIDR_EDITEUR_LPX.htm");
+  SetCsh(143,"HIDR_EDITEUR_LPX",131221,"scenario/HIDR_EDITEUR_LPX.htm");
+  SetCsh(144,"HID_OPTIONS_UNITE_MM",98362,"menu/options/HID_OPTIONS_UNITE_MM.htm");
+  SetCsh(145,"HID_OPTIONS_UNITE_MM",98362,"menu/options/HID_OPTIONS_UNITE_MM.htm");
+  SetCsh(146,"HID_OPTIONS_UNITE_MM",98362,"menu/options/HID_OPTIONS_UNITE_MM.htm");
+  SetCsh(147,"HID_OPTIONS_UNITE_MM",98362,"menu/options/HID_OPTIONS_UNITE_MM.htm");
+  SetCsh(148,"HID_OPTIONS_UNITE_MM",98362,"menu/options/HID_OPTIONS_UNITE_MM.htm");
+  SetCsh(149,"HID_NOUVEAU_GROUPE",98326,"menu/module/HID_NOUVEAU_GROUPE.htm");
+  SetCsh(150,"HID_NOUVEAU_GROUPE",98326,"menu/module/HID_NOUVEAU_GROUPE.htm");
+  SetCsh(151,"HID_NOUVEAU_GROUPE",98326,"menu/module/HID_NOUVEAU_GROUPE.htm");
+  SetCsh(152,"HID_NOUVEAU_GROUPE",98326,"menu/module/HID_NOUVEAU_GROUPE.htm");
+  SetCsh(153,"HID_NOUVEAU_GROUPE",98326,"menu/module/HID_NOUVEAU_GROUPE.htm");
+  SetCsh(154,"HID_FICHIER_DECONNEXION",98309,"menu/application/HID_FICHIER_DECONNEXION.htm");
+  SetCsh(155,"HID_FICHIER_DECONNEXION",98309,"menu/application/HID_FICHIER_DECONNEXION.htm");
+  SetCsh(156,"HID_FICHIER_DECONNEXION",98309,"menu/application/HID_FICHIER_DECONNEXION.htm");
+  SetCsh(157,"HID_FICHIER_DECONNEXION",98309,"menu/application/HID_FICHIER_DECONNEXION.htm");
+  SetCsh(158,"HID_FICHIER_DECONNEXION",98309,"menu/application/HID_FICHIER_DECONNEXION.htm");
+  SetCsh(159,"HID_COLLER",102344,"menu/edition/HID_EDIT_PASTE.htm");
+  SetCsh(160,"HID_COLLER",102344,"menu/edition/HID_EDIT_PASTE.htm");
+  SetCsh(161,"HID_COLLER",102344,"menu/edition/HID_EDIT_PASTE.htm");
+  SetCsh(162,"HID_COLLER",102344,"menu/edition/HID_EDIT_PASTE.htm");
+  SetCsh(163,"HID_COLLER",102344,"menu/edition/HID_EDIT_PASTE.htm");
+  SetCsh(164,"HIDD_PROPRIETES_GROUPE",132639,"scenario/graphique/propriete/HIDD_PROPRIETES_GROUPE.htm");
+  SetCsh(165,"HIDD_PROPRIETES_GROUPE",132639,"scenario/graphique/propriete/HIDD_PROPRIETES_GROUPE.htm");
+  SetCsh(166,"HIDD_PROPRIETES_GROUPE",132639,"scenario/graphique/propriete/HIDD_PROPRIETES_GROUPE.htm");
+  SetCsh(167,"HIDD_PROPRIETES_GROUPE",132639,"scenario/graphique/propriete/HIDD_PROPRIETES_GROUPE.htm");
+  SetCsh(168,"HIDD_PROPRIETES_GROUPE",132639,"scenario/graphique/propriete/HIDD_PROPRIETES_GROUPE.htm");
+  SetCsh(169,"HIDD_PROPRIETES_OP_MEM",132632,"scenario/graphique/propriete/HIDD_PROPRIETES_OP_MEM.htm");
+  SetCsh(170,"HIDD_PROPRIETES_OP_MEM",132632,"scenario/graphique/propriete/HIDD_PROPRIETES_OP_MEM.htm");
+  SetCsh(171,"HIDD_PROPRIETES_OP_MEM",132632,"scenario/graphique/propriete/HIDD_PROPRIETES_OP_MEM.htm");
+  SetCsh(172,"HIDD_PROPRIETES_OP_MEM",132632,"scenario/graphique/propriete/HIDD_PROPRIETES_OP_MEM.htm");
+  SetCsh(173,"HIDD_PROPRIETES_OP_MEM",132632,"scenario/graphique/propriete/HIDD_PROPRIETES_OP_MEM.htm");
+  SetCsh(174,"HIDD_NOM",131235,"module/generalite/HIDD_NOM.htm");
+  SetCsh(175,"HIDD_NOM",131235,"module/generalite/HIDD_NOM.htm");
+  SetCsh(176,"HIDD_NOM",131235,"module/generalite/HIDD_NOM.htm");
+  SetCsh(177,"HIDD_NOM",131235,"module/generalite/HIDD_NOM.htm");
+  SetCsh(178,"HIDD_NOM",131235,"module/generalite/HIDD_NOM.htm");
+  SetCsh(179,"HIDR_FENETRE",131242,"module/fenetre/HIDR_FENETRE.htm");
+  SetCsh(180,"HIDR_FENETRE",131242,"module/fenetre/HIDR_FENETRE.htm");
+  SetCsh(181,"HIDR_FENETRE",131242,"module/fenetre/HIDR_FENETRE.htm");
+  SetCsh(182,"HIDR_FENETRE",131242,"module/fenetre/HIDR_FENETRE.htm");
+  SetCsh(183,"HIDR_FENETRE",131242,"module/fenetre/HIDR_FENETRE.htm");
+  SetCsh(184,"HIDR_WORKSPACE_GROUPE",131234,"module/generalite/HIDR_WORKSPACE_GROUPE.htm");
+  SetCsh(185,"HIDR_WORKSPACE_GROUPE",131234,"module/generalite/HIDR_WORKSPACE_GROUPE.htm");
+  SetCsh(186,"HIDR_WORKSPACE_GROUPE",131234,"module/generalite/HIDR_WORKSPACE_GROUPE.htm");
+  SetCsh(187,"HIDR_WORKSPACE_GROUPE",131234,"module/generalite/HIDR_WORKSPACE_GROUPE.htm");
+  SetCsh(188,"HIDR_WORKSPACE_GROUPE",131234,"module/generalite/HIDR_WORKSPACE_GROUPE.htm");
+  SetCsh(189,"HIDR_MEMOIRE",131229,"module/memoire/HIDR_MEMOIRE.htm");
+  SetCsh(190,"HIDR_MEMOIRE",131229,"module/memoire/HIDR_MEMOIRE.htm");
+  SetCsh(191,"HIDR_MEMOIRE",131229,"module/memoire/HIDR_MEMOIRE.htm");
+  SetCsh(192,"HIDR_MEMOIRE",131229,"module/memoire/HIDR_MEMOIRE.htm");
+  SetCsh(193,"HIDR_MEMOIRE",131229,"module/memoire/HIDR_MEMOIRE.htm");
+  SetCsh(194,"HID_RAFFRAICHIT_WORKSPACE",102318,"menu/affichage/HID_RAFFRAICHIT_WORKSPACE.htm");
+  SetCsh(195,"HID_RAFFRAICHIT_WORKSPACE",102318,"menu/affichage/HID_RAFFRAICHIT_WORKSPACE.htm");
+  SetCsh(196,"HID_RAFFRAICHIT_WORKSPACE",102318,"menu/affichage/HID_RAFFRAICHIT_WORKSPACE.htm");
+  SetCsh(197,"HID_RAFFRAICHIT_WORKSPACE",102318,"menu/affichage/HID_RAFFRAICHIT_WORKSPACE.htm");
+  SetCsh(198,"HID_RAFFRAICHIT_WORKSPACE",102318,"menu/affichage/HID_RAFFRAICHIT_WORKSPACE.htm");
+  SetCsh(199,"HID_IMPRIMER_DOC_APPLI",102315,"menu/application/HID_IMPRIMER_DOC_APPLI.htm");
+  SetCsh(200,"HID_IMPRIMER_DOC_APPLI",102315,"menu/application/HID_IMPRIMER_DOC_APPLI.htm");
+  SetCsh(201,"HID_IMPRIMER_DOC_APPLI",102315,"menu/application/HID_IMPRIMER_DOC_APPLI.htm");
+  SetCsh(202,"HID_IMPRIMER_DOC_APPLI",102315,"menu/application/HID_IMPRIMER_DOC_APPLI.htm");
+  SetCsh(203,"HID_IMPRIMER_DOC_APPLI",102315,"menu/application/HID_IMPRIMER_DOC_APPLI.htm");
+  SetCsh(204,"HID_AFFICHAGE_ORDRE_ARRIERE_PLAN",98372,"menu/affichage/HID_AFFICHAGE_ORDRE_ARRIERE_PLAN.htm");
+  SetCsh(205,"HID_AFFICHAGE_ORDRE_ARRIERE_PLAN",98372,"menu/affichage/HID_AFFICHAGE_ORDRE_ARRIERE_PLAN.htm");
+  SetCsh(206,"HID_AFFICHAGE_ORDRE_ARRIERE_PLAN",98372,"menu/affichage/HID_AFFICHAGE_ORDRE_ARRIERE_PLAN.htm");
+  SetCsh(207,"HID_AFFICHAGE_ORDRE_ARRIERE_PLAN",98372,"menu/affichage/HID_AFFICHAGE_ORDRE_ARRIERE_PLAN.htm");
+  SetCsh(208,"HID_AFFICHAGE_ORDRE_ARRIERE_PLAN",98372,"menu/affichage/HID_AFFICHAGE_ORDRE_ARRIERE_PLAN.htm");
+  SetCsh(209,"HID_PROPRIETES_GROUPE",98329,"menu/groupe/HID_PROPRIETES_GROUPE.htm");
+  SetCsh(210,"HID_PROPRIETES_GROUPE",98329,"menu/groupe/HID_PROPRIETES_GROUPE.htm");
+  SetCsh(211,"HID_PROPRIETES_GROUPE",98329,"menu/groupe/HID_PROPRIETES_GROUPE.htm");
+  SetCsh(212,"HID_PROPRIETES_GROUPE",98329,"menu/groupe/HID_PROPRIETES_GROUPE.htm");
+  SetCsh(213,"HID_PROPRIETES_GROUPE",98329,"menu/groupe/HID_PROPRIETES_GROUPE.htm");
+  SetCsh(214,"HID_ACTION_REQUETE",98389,"scenario/graphique/action/HID_ACTION_REQUETE.htm");
+  SetCsh(215,"HID_ACTION_REQUETE",98389,"scenario/graphique/action/HID_ACTION_REQUETE.htm");
+  SetCsh(216,"HID_ACTION_REQUETE",98389,"scenario/graphique/action/HID_ACTION_REQUETE.htm");
+  SetCsh(217,"HID_ACTION_REQUETE",98389,"scenario/graphique/action/HID_ACTION_REQUETE.htm");
+  SetCsh(218,"HID_ACTION_REQUETE",98389,"scenario/graphique/action/HID_ACTION_REQUETE.htm");
+  SetCsh(219,"HIDD_PROPRIETES_FIN_SCEN",132633,"scenario/graphique/propriete/HIDD_PROPRIETES_FIN_SCEN.htm");
+  SetCsh(220,"HIDD_PROPRIETES_FIN_SCEN",132633,"scenario/graphique/propriete/HIDD_PROPRIETES_FIN_SCEN.htm");
+  SetCsh(221,"HIDD_PROPRIETES_FIN_SCEN",132633,"scenario/graphique/propriete/HIDD_PROPRIETES_FIN_SCEN.htm");
+  SetCsh(222,"HIDD_PROPRIETES_FIN_SCEN",132633,"scenario/graphique/propriete/HIDD_PROPRIETES_FIN_SCEN.htm");
+  SetCsh(223,"HIDD_PROPRIETES_FIN_SCEN",132633,"scenario/graphique/propriete/HIDD_PROPRIETES_FIN_SCEN.htm");
+  SetCsh(224,"HIDD_ACTION_SCENARIO",131358,"module/fenetre/Action/HIDD_ACTION_SCENARIO.htm");
+  SetCsh(225,"HIDD_ACTION_SCENARIO",131358,"module/fenetre/Action/HIDD_ACTION_SCENARIO.htm");
+  SetCsh(226,"HIDD_ACTION_SCENARIO",131358,"module/fenetre/Action/HIDD_ACTION_SCENARIO.htm");
+  SetCsh(227,"HIDD_ACTION_SCENARIO",131358,"module/fenetre/Action/HIDD_ACTION_SCENARIO.htm");
+  SetCsh(228,"HIDD_ACTION_SCENARIO",131358,"module/fenetre/Action/HIDD_ACTION_SCENARIO.htm");
+  SetCsh(229,"HID_FENETRE_CLOSE",102307,"menu/fenetre/HID_FENETRE_CLOSE.htm");
+  SetCsh(230,"HID_FENETRE_CLOSE",102307,"menu/fenetre/HID_FENETRE_CLOSE.htm");
+  SetCsh(231,"HID_FENETRE_CLOSE",102307,"menu/fenetre/HID_FENETRE_CLOSE.htm");
+  SetCsh(232,"HID_FENETRE_CLOSE",102307,"menu/fenetre/HID_FENETRE_CLOSE.htm");
+  SetCsh(233,"HID_FENETRE_CLOSE",102307,"menu/fenetre/HID_FENETRE_CLOSE.htm");
+  SetCsh(234,"HID_ACTION_SAISIE",98339,"scenario/graphique/action/HID_ACTION_SAISIE.htm");
+  SetCsh(235,"HID_ACTION_SAISIE",98339,"scenario/graphique/action/HID_ACTION_SAISIE.htm");
+  SetCsh(236,"HID_ACTION_SAISIE",98339,"scenario/graphique/action/HID_ACTION_SAISIE.htm");
+  SetCsh(237,"HID_ACTION_SAISIE",98339,"scenario/graphique/action/HID_ACTION_SAISIE.htm");
+  SetCsh(238,"HID_ACTION_SAISIE",98339,"scenario/graphique/action/HID_ACTION_SAISIE.htm");
+  SetCsh(239,"HID_SECURITE_MODULE",102298,"menu/module/HIDD_SECURITE_MODULE.htm");
+  SetCsh(240,"HID_SECURITE_MODULE",102298,"menu/module/HIDD_SECURITE_MODULE.htm");
+  SetCsh(241,"HID_SECURITE_MODULE",102298,"menu/module/HIDD_SECURITE_MODULE.htm");
+  SetCsh(242,"HID_SECURITE_MODULE",102298,"menu/module/HIDD_SECURITE_MODULE.htm");
+  SetCsh(243,"HID_SECURITE_MODULE",102298,"menu/module/HIDD_SECURITE_MODULE.htm");
+  SetCsh(244,"HID_APP_EXIT",123201,"menu/application/HID_APP_EXIT.htm");
+  SetCsh(245,"HID_EDIT_CUT",123171,"menu/edition/HID_EDIT_CUT.htm");
+  SetCsh(246,"HIDD_PROPRIETES_FAIRE",132634,"scenario/graphique/propriete/HIDD_PROPRIETES_FAIRE.htm");
+  SetCsh(247,"HIDD_PROPRIETES_FAIRE",132634,"scenario/graphique/propriete/HIDD_PROPRIETES_FAIRE.htm");
+  SetCsh(248,"HIDD_PROPRIETES_FAIRE",132634,"scenario/graphique/propriete/HIDD_PROPRIETES_FAIRE.htm");
+  SetCsh(249,"HIDD_PROPRIETES_FAIRE",132634,"scenario/graphique/propriete/HIDD_PROPRIETES_FAIRE.htm");
+  SetCsh(250,"HIDD_PROPRIETES_FAIRE",132634,"scenario/graphique/propriete/HIDD_PROPRIETES_FAIRE.htm");
+  SetCsh(251,"HIDR_TERMINAUX",131339,"module/utilisateur/HIDR_TERMINAUX.htm");
+  SetCsh(252,"HIDR_TERMINAUX",131339,"module/utilisateur/HIDR_TERMINAUX.htm");
+  SetCsh(253,"HIDR_TERMINAUX",131339,"module/utilisateur/HIDR_TERMINAUX.htm");
+  SetCsh(254,"HIDR_TERMINAUX",131339,"module/utilisateur/HIDR_TERMINAUX.htm");
+  SetCsh(255,"HIDR_TERMINAUX",131339,"module/utilisateur/HIDR_TERMINAUX.htm");
+  SetCsh(256,"HIDR_ETAT",131307,"module/etat/HIDR_ETAT.htm");
+  SetCsh(257,"HIDR_ETAT",131307,"module/etat/HIDR_ETAT.htm");
+  SetCsh(258,"HIDR_ETAT",131307,"module/etat/HIDR_ETAT.htm");
+  SetCsh(259,"HIDR_ETAT",131307,"module/etat/HIDR_ETAT.htm");
+  SetCsh(260,"HIDR_ETAT",131307,"module/etat/HIDR_ETAT.htm");
+  SetCsh(261,"HIDR_GRAPHIQUE_LPX",131222,"scenario/HIDR_GRAPHIQUE_LPX.htm");
+  SetCsh(262,"HIDR_GRAPHIQUE_LPX",131222,"scenario/HIDR_GRAPHIQUE_LPX.htm");
+  SetCsh(263,"HIDR_GRAPHIQUE_LPX",131222,"scenario/HIDR_GRAPHIQUE_LPX.htm");
+  SetCsh(264,"HIDR_GRAPHIQUE_LPX",131222,"scenario/HIDR_GRAPHIQUE_LPX.htm");
+  SetCsh(265,"HIDR_GRAPHIQUE_LPX",131222,"scenario/HIDR_GRAPHIQUE_LPX.htm");
+  SetCsh(266,"HID_ACTION_GROUPE",98398,"scenario/graphique/action/HID_ACTION_GROUPE.htm");
+  SetCsh(267,"HID_ACTION_GROUPE",98398,"scenario/graphique/action/HID_ACTION_GROUPE.htm");
+  SetCsh(268,"HID_ACTION_GROUPE",98398,"scenario/graphique/action/HID_ACTION_GROUPE.htm");
+  SetCsh(269,"HID_ACTION_GROUPE",98398,"scenario/graphique/action/HID_ACTION_GROUPE.htm");
+  SetCsh(270,"HID_ACTION_GROUPE",98398,"scenario/graphique/action/HID_ACTION_GROUPE.htm");
+  SetCsh(271,"HID_ACTION_FIN_BOUCLE",98395,"scenario/graphique/action/HID_ACTION_FIN_BOUCLE.htm");
+  SetCsh(272,"HID_ACTION_FIN_BOUCLE",98395,"scenario/graphique/action/HID_ACTION_FIN_BOUCLE.htm");
+  SetCsh(273,"HID_ACTION_FIN_BOUCLE",98395,"scenario/graphique/action/HID_ACTION_FIN_BOUCLE.htm");
+  SetCsh(274,"HID_ACTION_FIN_BOUCLE",98395,"scenario/graphique/action/HID_ACTION_FIN_BOUCLE.htm");
+  SetCsh(275,"HID_ACTION_FIN_BOUCLE",98395,"scenario/graphique/action/HID_ACTION_FIN_BOUCLE.htm");
+  SetCsh(276,"HID_ACTION_OP_MEM",98391,"scenario/graphique/action/HID_ACTION_OP_MEM.htm");
+  SetCsh(277,"HID_ACTION_OP_MEM",98391,"scenario/graphique/action/HID_ACTION_OP_MEM.htm");
+  SetCsh(278,"HID_ACTION_OP_MEM",98391,"scenario/graphique/action/HID_ACTION_OP_MEM.htm");
+  SetCsh(279,"HID_ACTION_OP_MEM",98391,"scenario/graphique/action/HID_ACTION_OP_MEM.htm");
+  SetCsh(280,"HID_ACTION_OP_MEM",98391,"scenario/graphique/action/HID_ACTION_OP_MEM.htm");
+  SetCsh(281,"HID_ZOOM_150",98356,"menu/zoom/HID_ZOOM_150.htm");
+  SetCsh(282,"HID_ZOOM_150",98356,"menu/zoom/HID_ZOOM_150.htm");
+  SetCsh(283,"HID_ZOOM_150",98356,"menu/zoom/HID_ZOOM_150.htm");
+  SetCsh(284,"HID_ZOOM_150",98356,"menu/zoom/HID_ZOOM_150.htm");
+  SetCsh(285,"HID_ZOOM_150",98356,"menu/zoom/HID_ZOOM_150.htm");
+  SetCsh(286,"HID_ACTION_AFFICHAGE",98340,"scenario/graphique/action/HID_ACTION_AFFICHAGE.htm");
+  SetCsh(287,"HID_ACTION_AFFICHAGE",98340,"scenario/graphique/action/HID_ACTION_AFFICHAGE.htm");
+  SetCsh(288,"HID_ACTION_AFFICHAGE",98340,"scenario/graphique/action/HID_ACTION_AFFICHAGE.htm");
+  SetCsh(289,"HID_ACTION_AFFICHAGE",98340,"scenario/graphique/action/HID_ACTION_AFFICHAGE.htm");
+  SetCsh(290,"HID_ACTION_AFFICHAGE",98340,"scenario/graphique/action/HID_ACTION_AFFICHAGE.htm");
+  SetCsh(291,"HIDD_CONF_GENERAL",131277,"application/configuration/HIDD_CONF_GENERAL.htm");
+  SetCsh(292,"HIDD_CONF_GENERAL",131277,"application/configuration/HIDD_CONF_GENERAL.htm");
+  SetCsh(293,"HIDD_CONF_GENERAL",131277,"application/configuration/HIDD_CONF_GENERAL.htm");
+  SetCsh(294,"HIDD_CONF_GENERAL",131277,"application/configuration/HIDD_CONF_GENERAL.htm");
+  SetCsh(295,"HIDD_CONF_GENERAL",131277,"application/configuration/HIDD_CONF_GENERAL.htm");
+  SetCsh(296,"HID_WINDOW_ARRANGE",123185,"menu/fenetre/HID_WINDOW_ARRANGE.htm");
+  SetCsh(297,"HID_EDIT_COPY",123170,"menu/edition/HID_EDIT_COPY.htm");
+  SetCsh(298,"HIDD_CONF_SECURITE",131304,"application/configuration/HIDD_CONF_SECURITE.htm");
+  SetCsh(299,"HIDD_CONF_SECURITE",131304,"application/configuration/HIDD_CONF_SECURITE.htm");
+  SetCsh(300,"HIDD_CONF_SECURITE",131304,"application/configuration/HIDD_CONF_SECURITE.htm");
+  SetCsh(301,"HIDD_CONF_SECURITE",131304,"application/configuration/HIDD_CONF_SECURITE.htm");
+  SetCsh(302,"HIDD_CONF_SECURITE",131304,"application/configuration/HIDD_CONF_SECURITE.htm");
+  SetCsh(303,"HIDD_REQ_AJOUT_TABLE",131213,"module/base_de_donnees/HIDD_REQ_AJOUT_TABLE.htm");
+  SetCsh(304,"HIDD_REQ_AJOUT_TABLE",131213,"module/base_de_donnees/HIDD_REQ_AJOUT_TABLE.htm");
+  SetCsh(305,"HIDD_REQ_AJOUT_TABLE",131213,"module/base_de_donnees/HIDD_REQ_AJOUT_TABLE.htm");
+  SetCsh(306,"HIDD_REQ_AJOUT_TABLE",131213,"module/base_de_donnees/HIDD_REQ_AJOUT_TABLE.htm");
+  SetCsh(307,"HIDD_REQ_AJOUT_TABLE",131213,"module/base_de_donnees/HIDD_REQ_AJOUT_TABLE.htm");
+  SetCsh(308,"HIDD_SERVEUR_CONNEXION",131208,"scenario/lpx/fonctions/bd/HIDD_ExecuteRequeteSQLExLente.htm");
+  SetCsh(309,"HIDD_SERVEUR_CONNEXION",131208,"scenario/lpx/fonctions/bd/HIDD_ExecuteRequeteSQLExLente.htm");
+  SetCsh(310,"HIDD_SERVEUR_CONNEXION",131208,"scenario/lpx/fonctions/bd/HIDD_ExecuteRequeteSQLExLente.htm");
+  SetCsh(311,"HIDD_SERVEUR_CONNEXION",131208,"scenario/lpx/fonctions/bd/HIDD_ExecuteRequeteSQLExLente.htm");
+  SetCsh(312,"HIDD_SERVEUR_CONNEXION",131208,"scenario/lpx/fonctions/bd/HIDD_ExecuteRequeteSQLExLente.htm");
+  SetCsh(313,"HID_SECURITE_APP",102313,"menu/application/HID_SECURITE_APP.htm");
+  SetCsh(314,"HID_SECURITE_APP",102313,"menu/application/HID_SECURITE_APP.htm");
+  SetCsh(315,"HID_SECURITE_APP",102313,"menu/application/HID_SECURITE_APP.htm");
+  SetCsh(316,"HID_SECURITE_APP",102313,"menu/application/HID_SECURITE_APP.htm");
+  SetCsh(317,"HID_SECURITE_APP",102313,"menu/application/HID_SECURITE_APP.htm");
+  SetCsh(318,"HID_ACTION_FAIRE",98393,"scenario/graphique/action/HID_ACTION_FAIRE.htm");
+  SetCsh(319,"HID_ACTION_FAIRE",98393,"scenario/graphique/action/HID_ACTION_FAIRE.htm");
+  SetCsh(320,"HID_ACTION_FAIRE",98393,"scenario/graphique/action/HID_ACTION_FAIRE.htm");
+  SetCsh(321,"HID_ACTION_FAIRE",98393,"scenario/graphique/action/HID_ACTION_FAIRE.htm");
+  SetCsh(322,"HID_ACTION_FAIRE",98393,"scenario/graphique/action/HID_ACTION_FAIRE.htm");
+  SetCsh(323,"HIDD_LIST_EXTENSION_EXEC",131360,"application/configuration/HIDD_LIST_EXTENSION_EXEC.htm");
+  SetCsh(324,"HIDD_LIST_EXTENSION_EXEC",131360,"application/configuration/HIDD_LIST_EXTENSION_EXEC.htm");
+  SetCsh(325,"HIDD_LIST_EXTENSION_EXEC",131360,"application/configuration/HIDD_LIST_EXTENSION_EXEC.htm");
+  SetCsh(326,"HIDD_LIST_EXTENSION_EXEC",131360,"application/configuration/HIDD_LIST_EXTENSION_EXEC.htm");
+  SetCsh(327,"HIDD_LIST_EXTENSION_EXEC",131360,"application/configuration/HIDD_LIST_EXTENSION_EXEC.htm");
+  SetCsh(328,"HID_LST_USER_CONNECT",102317,"menu/outils/HID_LST_USER_CONNECT.htm");
+  SetCsh(329,"HID_LST_USER_CONNECT",102317,"menu/outils/HID_LST_USER_CONNECT.htm");
+  SetCsh(330,"HID_LST_USER_CONNECT",102317,"menu/outils/HID_LST_USER_CONNECT.htm");
+  SetCsh(331,"HID_LST_USER_CONNECT",102317,"menu/outils/HID_LST_USER_CONNECT.htm");
+  SetCsh(332,"HID_LST_USER_CONNECT",102317,"menu/outils/HID_LST_USER_CONNECT.htm");
+  SetCsh(333,"HID_AFFICHAGE_ORDRE_RECULER",98374,"menu/affichage/HID_AFFICHAGE_ORDRE_RECULER.htm");
+  SetCsh(334,"HID_AFFICHAGE_ORDRE_RECULER",98374,"menu/affichage/HID_AFFICHAGE_ORDRE_RECULER.htm");
+  SetCsh(335,"HID_AFFICHAGE_ORDRE_RECULER",98374,"menu/affichage/HID_AFFICHAGE_ORDRE_RECULER.htm");
+  SetCsh(336,"HID_AFFICHAGE_ORDRE_RECULER",98374,"menu/affichage/HID_AFFICHAGE_ORDRE_RECULER.htm");
+  SetCsh(337,"HID_AFFICHAGE_ORDRE_RECULER",98374,"menu/affichage/HID_AFFICHAGE_ORDRE_RECULER.htm");
+  SetCsh(338,"HID_OPTIONS_PROPRIETES",98369,"menu/options/HID_OPTIONS_PROPRIETES.htm");
+  SetCsh(339,"HID_OPTIONS_PROPRIETES",98369,"menu/options/HID_OPTIONS_PROPRIETES.htm");
+  SetCsh(340,"HID_OPTIONS_PROPRIETES",98369,"menu/options/HID_OPTIONS_PROPRIETES.htm");
+  SetCsh(341,"HID_OPTIONS_PROPRIETES",98369,"menu/options/HID_OPTIONS_PROPRIETES.htm");
+  SetCsh(342,"HID_OPTIONS_PROPRIETES",98369,"menu/options/HID_OPTIONS_PROPRIETES.htm");
+  SetCsh(343,"HID_OPTIONS_UNITE_PIXEL",98364,"menu/options/HID_OPTIONS_UNITE_PIXEL.htm");
+  SetCsh(344,"HID_OPTIONS_UNITE_PIXEL",98364,"menu/options/HID_OPTIONS_UNITE_PIXEL.htm");
+  SetCsh(345,"HID_OPTIONS_UNITE_PIXEL",98364,"menu/options/HID_OPTIONS_UNITE_PIXEL.htm");
+  SetCsh(346,"HID_OPTIONS_UNITE_PIXEL",98364,"menu/options/HID_OPTIONS_UNITE_PIXEL.htm");
+  SetCsh(347,"HID_OPTIONS_UNITE_PIXEL",98364,"menu/options/HID_OPTIONS_UNITE_PIXEL.htm");
+  SetCsh(348,"HIDR_REQ_INSERT",131275,"module/base_de_donnees/HIDR_REQ_INSERT.htm");
+  SetCsh(349,"HIDR_REQ_INSERT",131275,"module/base_de_donnees/HIDR_REQ_INSERT.htm");
+  SetCsh(350,"HIDR_REQ_INSERT",131275,"module/base_de_donnees/HIDR_REQ_INSERT.htm");
+  SetCsh(351,"HIDR_REQ_INSERT",131275,"module/base_de_donnees/HIDR_REQ_INSERT.htm");
+  SetCsh(352,"HIDR_REQ_INSERT",131275,"module/base_de_donnees/HIDR_REQ_INSERT.htm");
+  SetCsh(353,"AFX_HIDW_TOOLBAR",387072,"menu/affichage/AFX_HIDW_TOOLBAR.htm");
+  SetCsh(354,"HID_HELP_INDEX",123202,"menu/aide/HID_HELP_INDEX.htm");
+  SetCsh(355,"HIDD_PROPRIETES_AFFICHAGE_HTML",131318,"scenario/graphique/propriete/HIDD_PROPRIETES_AFFICHAGE_HTML.htm");
+  SetCsh(356,"HIDD_PROPRIETES_AFFICHAGE_HTML",131318,"scenario/graphique/propriete/HIDD_PROPRIETES_AFFICHAGE_HTML.htm");
+  SetCsh(357,"HIDD_PROPRIETES_AFFICHAGE_HTML",131318,"scenario/graphique/propriete/HIDD_PROPRIETES_AFFICHAGE_HTML.htm");
+  SetCsh(358,"HIDD_PROPRIETES_AFFICHAGE_HTML",131318,"scenario/graphique/propriete/HIDD_PROPRIETES_AFFICHAGE_HTML.htm");
+  SetCsh(359,"HIDD_PROPRIETES_AFFICHAGE_HTML",131318,"scenario/graphique/propriete/HIDD_PROPRIETES_AFFICHAGE_HTML.htm");
+  SetCsh(360,"HIDD_PROPRIETES_TEST",131250,"scenario/graphique/propriete/HIDD_PROPRIETES_TEST.htm");
+  SetCsh(361,"HIDD_PROPRIETES_TEST",131250,"scenario/graphique/propriete/HIDD_PROPRIETES_TEST.htm");
+  SetCsh(362,"HIDD_PROPRIETES_TEST",131250,"scenario/graphique/propriete/HIDD_PROPRIETES_TEST.htm");
+  SetCsh(363,"HIDD_PROPRIETES_TEST",131250,"scenario/graphique/propriete/HIDD_PROPRIETES_TEST.htm");
+  SetCsh(364,"HIDD_PROPRIETES_TEST",131250,"scenario/graphique/propriete/HIDD_PROPRIETES_TEST.htm");
+  SetCsh(365,"HIDD_ABOUTBOX",131172,"menu/aide/HID_APP_ABOUT.htm");
+  SetCsh(366,"HIDD_ABOUTBOX",131172,"menu/aide/HID_APP_ABOUT.htm");
+  SetCsh(367,"HIDD_ABOUTBOX",131172,"menu/aide/HID_APP_ABOUT.htm");
+  SetCsh(368,"HIDD_ABOUTBOX",131172,"menu/aide/HID_APP_ABOUT.htm");
+  SetCsh(369,"HIDD_ABOUTBOX",131172,"menu/aide/HID_APP_ABOUT.htm");
+  SetCsh(370,"HIDR_EVT",131231,"module/evenement/HIDR_EVT.htm");
+  SetCsh(371,"HIDR_EVT",131231,"module/evenement/HIDR_EVT.htm");
+  SetCsh(372,"HIDR_EVT",131231,"module/evenement/HIDR_EVT.htm");
+  SetCsh(373,"HIDR_EVT",131231,"module/evenement/HIDR_EVT.htm");
+  SetCsh(374,"HIDR_EVT",131231,"module/evenement/HIDR_EVT.htm");
+  SetCsh(375,"HID_ACTION_TANT_QUE",98394,"scenario/graphique/action/HID_ACTION_TANT_QUE.htm");
+  SetCsh(376,"HID_ACTION_TANT_QUE",98394,"scenario/graphique/action/HID_ACTION_TANT_QUE.htm");
+  SetCsh(377,"HID_ACTION_TANT_QUE",98394,"scenario/graphique/action/HID_ACTION_TANT_QUE.htm");
+  SetCsh(378,"HID_ACTION_TANT_QUE",98394,"scenario/graphique/action/HID_ACTION_TANT_QUE.htm");
+  SetCsh(379,"HID_ACTION_TANT_QUE",98394,"scenario/graphique/action/HID_ACTION_TANT_QUE.htm");
+  SetCsh(380,"HID_AFFICHAGE_ORDRE_AVANCER",98373,"menu/affichage/HID_AFFICHAGE_ORDRE_AVANCER.htm");
+  SetCsh(381,"HID_AFFICHAGE_ORDRE_AVANCER",98373,"menu/affichage/HID_AFFICHAGE_ORDRE_AVANCER.htm");
+  SetCsh(382,"HID_AFFICHAGE_ORDRE_AVANCER",98373,"menu/affichage/HID_AFFICHAGE_ORDRE_AVANCER.htm");
+  SetCsh(383,"HID_AFFICHAGE_ORDRE_AVANCER",98373,"menu/affichage/HID_AFFICHAGE_ORDRE_AVANCER.htm");
+  SetCsh(384,"HID_AFFICHAGE_ORDRE_AVANCER",98373,"menu/affichage/HID_AFFICHAGE_ORDRE_AVANCER.htm");
+  SetCsh(385,"HID_ZOOM_50",98360,"menu/zoom/HID_ZOOM_50.htm");
+  SetCsh(386,"HID_ZOOM_50",98360,"menu/zoom/HID_ZOOM_50.htm");
+  SetCsh(387,"HID_ZOOM_50",98360,"menu/zoom/HID_ZOOM_50.htm");
+  SetCsh(388,"HID_ZOOM_50",98360,"menu/zoom/HID_ZOOM_50.htm");
+  SetCsh(389,"HID_ZOOM_50",98360,"menu/zoom/HID_ZOOM_50.htm");
+  SetCsh(390,"HIDD_PROPRIETES_IMPRIME_ETAT",131325,"scenario/graphique/propriete/HIDD_PROPRIETES_IMPRIME_ETAT.htm");
+  SetCsh(391,"HIDD_PROPRIETES_IMPRIME_ETAT",131325,"scenario/graphique/propriete/HIDD_PROPRIETES_IMPRIME_ETAT.htm");
+  SetCsh(392,"HIDD_PROPRIETES_IMPRIME_ETAT",131325,"scenario/graphique/propriete/HIDD_PROPRIETES_IMPRIME_ETAT.htm");
+  SetCsh(393,"HIDD_PROPRIETES_IMPRIME_ETAT",131325,"scenario/graphique/propriete/HIDD_PROPRIETES_IMPRIME_ETAT.htm");
+  SetCsh(394,"HIDD_PROPRIETES_IMPRIME_ETAT",131325,"scenario/graphique/propriete/HIDD_PROPRIETES_IMPRIME_ETAT.htm");
+  SetCsh(395,"HID_FILE_MRU_FILE1",123152,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(396,"HID_FILE_MRU_FILE1",123153,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(397,"HID_FILE_MRU_FILE1",123154,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(398,"HID_FILE_MRU_FILE1",123155,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(399,"HID_FILE_MRU_FILE1",123156,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(400,"HID_FILE_MRU_FILE1",123157,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(401,"HID_FILE_MRU_FILE1",123158,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(402,"HID_FILE_MRU_FILE1",123159,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(403,"HID_FILE_MRU_FILE1",123160,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(404,"HID_FILE_MRU_FILE1",123161,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(405,"HID_FILE_MRU_FILE1",123162,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(406,"HID_FILE_MRU_FILE1",123163,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(407,"HID_FILE_MRU_FILE1",123164,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(408,"HID_FILE_MRU_FILE1",123165,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(409,"HID_FILE_MRU_FILE1",123166,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(410,"HID_FILE_MRU_FILE1",123167,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(411,"HIDD_ARRET_APPLICATION",131337,"application/HIDD_ARRET_APPLICATION.htm");
+  SetCsh(412,"HIDD_ARRET_APPLICATION",131337,"application/HIDD_ARRET_APPLICATION.htm");
+  SetCsh(413,"HIDD_ARRET_APPLICATION",131337,"application/HIDD_ARRET_APPLICATION.htm");
+  SetCsh(414,"HIDD_ARRET_APPLICATION",131337,"application/HIDD_ARRET_APPLICATION.htm");
+  SetCsh(415,"HIDD_ARRET_APPLICATION",131337,"application/HIDD_ARRET_APPLICATION.htm");
+  SetCsh(416,"HIDD_GRAPHIQUE_LPX_CARACTERISTIQUES",131244,"module/trace/HIDD_GRAPHIQUE_LPX_CARACTERISTIQUES.htm");
+  SetCsh(417,"HIDD_GRAPHIQUE_LPX_CARACTERISTIQUES",131244,"module/trace/HIDD_GRAPHIQUE_LPX_CARACTERISTIQUES.htm");
+  SetCsh(418,"HIDD_GRAPHIQUE_LPX_CARACTERISTIQUES",131244,"module/trace/HIDD_GRAPHIQUE_LPX_CARACTERISTIQUES.htm");
+  SetCsh(419,"HIDD_GRAPHIQUE_LPX_CARACTERISTIQUES",131244,"module/trace/HIDD_GRAPHIQUE_LPX_CARACTERISTIQUES.htm");
+  SetCsh(420,"HIDD_GRAPHIQUE_LPX_CARACTERISTIQUES",131244,"module/trace/HIDD_GRAPHIQUE_LPX_CARACTERISTIQUES.htm");
+  SetCsh(421,"HIDR_REQ_UPDATE",131274,"module/base_de_donnees/HIDR_REQ_UPDATE.htm");
+  SetCsh(422,"HIDR_REQ_UPDATE",131274,"module/base_de_donnees/HIDR_REQ_UPDATE.htm");
+  SetCsh(423,"HIDR_REQ_UPDATE",131274,"module/base_de_donnees/HIDR_REQ_UPDATE.htm");
+  SetCsh(424,"HIDR_REQ_UPDATE",131274,"module/base_de_donnees/HIDR_REQ_UPDATE.htm");
+  SetCsh(425,"HIDR_REQ_UPDATE",131274,"module/base_de_donnees/HIDR_REQ_UPDATE.htm");
+  SetCsh(426,"HID_ACTION_TEST",98341,"scenario/graphique/action/HID_ACTION_TEST.htm");
+  SetCsh(427,"HID_ACTION_TEST",98341,"scenario/graphique/action/HID_ACTION_TEST.htm");
+  SetCsh(428,"HID_ACTION_TEST",98341,"scenario/graphique/action/HID_ACTION_TEST.htm");
+  SetCsh(429,"HID_ACTION_TEST",98341,"scenario/graphique/action/HID_ACTION_TEST.htm");
+  SetCsh(430,"HID_ACTION_TEST",98341,"scenario/graphique/action/HID_ACTION_TEST.htm");
+  SetCsh(431,"HID_SUPPRIMER_GROUPE",98328,"menu/groupe/HID_SUPPRIMER_GROUPE.htm");
+  SetCsh(432,"HID_SUPPRIMER_GROUPE",98328,"menu/groupe/HID_SUPPRIMER_GROUPE.htm");
+  SetCsh(433,"HID_SUPPRIMER_GROUPE",98328,"menu/groupe/HID_SUPPRIMER_GROUPE.htm");
+  SetCsh(434,"HID_SUPPRIMER_GROUPE",98328,"menu/groupe/HID_SUPPRIMER_GROUPE.htm");
+  SetCsh(435,"HID_SUPPRIMER_GROUPE",98328,"menu/groupe/HID_SUPPRIMER_GROUPE.htm");
+  SetCsh(436,"HIDD_CONF_HTTP",131278,"application/configuration/HIDD_CONF_HTTP.htm");
+  SetCsh(437,"HIDD_CONF_HTTP",131278,"application/configuration/HIDD_CONF_HTTP.htm");
+  SetCsh(438,"HIDD_CONF_HTTP",131278,"application/configuration/HIDD_CONF_HTTP.htm");
+  SetCsh(439,"HIDD_CONF_HTTP",131278,"application/configuration/HIDD_CONF_HTTP.htm");
+  SetCsh(440,"HIDD_CONF_HTTP",131278,"application/configuration/HIDD_CONF_HTTP.htm");
+  SetCsh(441,"HID_APP_ABOUT",123200,"menu/aide/HID_APP_ABOUT.htm");
+  SetCsh(442,"HID_LST_SCENARIOS_COURS",102311,"menu/outils/HID_LST_SCENARIOS_COURS.htm");
+  SetCsh(443,"HID_LST_SCENARIOS_COURS",102311,"menu/outils/HID_LST_SCENARIOS_COURS.htm");
+  SetCsh(444,"HID_LST_SCENARIOS_COURS",102311,"menu/outils/HID_LST_SCENARIOS_COURS.htm");
+  SetCsh(445,"HID_LST_SCENARIOS_COURS",102311,"menu/outils/HID_LST_SCENARIOS_COURS.htm");
+  SetCsh(446,"HID_LST_SCENARIOS_COURS",102311,"menu/outils/HID_LST_SCENARIOS_COURS.htm");
+  SetCsh(447,"HID_ZOOM_100",98357,"menu/zoom/HID_ZOOM_100.htm");
+  SetCsh(448,"HID_ZOOM_100",98357,"menu/zoom/HID_ZOOM_100.htm");
+  SetCsh(449,"HID_ZOOM_100",98357,"menu/zoom/HID_ZOOM_100.htm");
+  SetCsh(450,"HID_ZOOM_100",98357,"menu/zoom/HID_ZOOM_100.htm");
+  SetCsh(451,"HID_ZOOM_100",98357,"menu/zoom/HID_ZOOM_100.htm");
+  SetCsh(452,"HID_PROPRIETES_ELEMENT",98325,"menu/element/HID_PROPRIETES_ELEMENT.htm");
+  SetCsh(453,"HID_PROPRIETES_ELEMENT",98325,"menu/element/HID_PROPRIETES_ELEMENT.htm");
+  SetCsh(454,"HID_PROPRIETES_ELEMENT",98325,"menu/element/HID_PROPRIETES_ELEMENT.htm");
+  SetCsh(455,"HID_PROPRIETES_ELEMENT",98325,"menu/element/HID_PROPRIETES_ELEMENT.htm");
+  SetCsh(456,"HID_PROPRIETES_ELEMENT",98325,"menu/element/HID_PROPRIETES_ELEMENT.htm");
+  SetCsh(457,"HID_SECURITE_GRP",98330,"menu/groupe/HID_SECURITE_GRP.htm");
+  SetCsh(458,"HID_SECURITE_GRP",98330,"menu/groupe/HID_SECURITE_GRP.htm");
+  SetCsh(459,"HID_SECURITE_GRP",98330,"menu/groupe/HID_SECURITE_GRP.htm");
+  SetCsh(460,"HID_SECURITE_GRP",98330,"menu/groupe/HID_SECURITE_GRP.htm");
+  SetCsh(461,"HID_SECURITE_GRP",98330,"menu/groupe/HID_SECURITE_GRP.htm");
+  SetCsh(462,"HIDD_SUPPRIMER",163906,"menu/edition/HIDD_SUPPRIMER.htm");
+  SetCsh(463,"HIDD_SUPPRIMER",163906,"menu/edition/HIDD_SUPPRIMER.htm");
+  SetCsh(464,"HIDD_SUPPRIMER",163906,"menu/edition/HIDD_SUPPRIMER.htm");
+  SetCsh(465,"HIDD_SUPPRIMER",163906,"menu/edition/HIDD_SUPPRIMER.htm");
+  SetCsh(466,"HIDD_SUPPRIMER",163906,"menu/edition/HIDD_SUPPRIMER.htm");
+  SetCsh(467,"HID_FILE_SAVE",123139,"menu/application/HID_FILE_SAVE.htm");
+  SetCsh(468,"HIDD_SECURITE_TYPE",167834,"menu/module/HIDD_SECURITE_MODULE.htm");
+  SetCsh(469,"HIDD_SECURITE_TYPE",167834,"menu/module/HIDD_SECURITE_MODULE.htm");
+  SetCsh(470,"HIDD_SECURITE_TYPE",167834,"menu/module/HIDD_SECURITE_MODULE.htm");
+  SetCsh(471,"HIDD_SECURITE_TYPE",167834,"menu/module/HIDD_SECURITE_MODULE.htm");
+  SetCsh(472,"HIDD_SECURITE_TYPE",167834,"menu/module/HIDD_SECURITE_MODULE.htm");
+  SetCsh(473,"HIDD_PROPRIETES_TANT_QUE",132635,"scenario/graphique/propriete/HIDD_PROPRIETES_TANT_QUE.htm");
+  SetCsh(474,"HIDD_PROPRIETES_TANT_QUE",132635,"scenario/graphique/propriete/HIDD_PROPRIETES_TANT_QUE.htm");
+  SetCsh(475,"HIDD_PROPRIETES_TANT_QUE",132635,"scenario/graphique/propriete/HIDD_PROPRIETES_TANT_QUE.htm");
+  SetCsh(476,"HIDD_PROPRIETES_TANT_QUE",132635,"scenario/graphique/propriete/HIDD_PROPRIETES_TANT_QUE.htm");
+  SetCsh(477,"HIDD_PROPRIETES_TANT_QUE",132635,"scenario/graphique/propriete/HIDD_PROPRIETES_TANT_QUE.htm");
+  SetCsh(478,"HIDD_FENETRE_CARACTERISTIQUES",131240,"module/trace/HIDD_FENETRE_CARACTERISTIQUES.htm");
+  SetCsh(479,"HIDD_FENETRE_CARACTERISTIQUES",131240,"module/trace/HIDD_FENETRE_CARACTERISTIQUES.htm");
+  SetCsh(480,"HIDD_FENETRE_CARACTERISTIQUES",131240,"module/trace/HIDD_FENETRE_CARACTERISTIQUES.htm");
+  SetCsh(481,"HIDD_FENETRE_CARACTERISTIQUES",131240,"module/trace/HIDD_FENETRE_CARACTERISTIQUES.htm");
+  SetCsh(482,"HIDD_FENETRE_CARACTERISTIQUES",131240,"module/trace/HIDD_FENETRE_CARACTERISTIQUES.htm");
+  SetCsh(483,"HIDR_REQ_SELECT",131276,"module/base_de_donnees/HIDR_REQ_SELECT.htm");
+  SetCsh(484,"HIDR_REQ_SELECT",131276,"module/base_de_donnees/HIDR_REQ_SELECT.htm");
+  SetCsh(485,"HIDR_REQ_SELECT",131276,"module/base_de_donnees/HIDR_REQ_SELECT.htm");
+  SetCsh(486,"HIDR_REQ_SELECT",131276,"module/base_de_donnees/HIDR_REQ_SELECT.htm");
+  SetCsh(487,"HIDR_REQ_SELECT",131276,"module/base_de_donnees/HIDR_REQ_SELECT.htm");
+  SetCsh(488,"HIDR_REQ_DELETE",131180,"module/base_de_donnees/HIDR_REQ_DELETE.htm");
+  SetCsh(489,"HIDR_REQ_DELETE",131180,"module/base_de_donnees/HIDR_REQ_DELETE.htm");
+  SetCsh(490,"HIDR_REQ_DELETE",131180,"module/base_de_donnees/HIDR_REQ_DELETE.htm");
+  SetCsh(491,"HIDR_REQ_DELETE",131180,"module/base_de_donnees/HIDR_REQ_DELETE.htm");
+  SetCsh(492,"HIDR_REQ_DELETE",131180,"module/base_de_donnees/HIDR_REQ_DELETE.htm");
+  SetCsh(493,"HID_ZOOM_75",98358,"menu/zoom/HID_ZOOM_75.htm");
+  SetCsh(494,"HID_ZOOM_75",98358,"menu/zoom/HID_ZOOM_75.htm");
+  SetCsh(495,"HID_ZOOM_75",98358,"menu/zoom/HID_ZOOM_75.htm");
+  SetCsh(496,"HID_ZOOM_75",98358,"menu/zoom/HID_ZOOM_75.htm");
+  SetCsh(497,"HID_ZOOM_75",98358,"menu/zoom/HID_ZOOM_75.htm");
+  SetCsh(498,"HID_ZOOM_200",98355,"menu/zoom/HID_ZOOM_200.htm");
+  SetCsh(499,"HID_ZOOM_200",98355,"menu/zoom/HID_ZOOM_200.htm");
+  SetCsh(500,"HID_ZOOM_200",98355,"menu/zoom/HID_ZOOM_200.htm");
+  SetCsh(501,"HID_ZOOM_200",98355,"menu/zoom/HID_ZOOM_200.htm");
+  SetCsh(502,"HID_ZOOM_200",98355,"menu/zoom/HID_ZOOM_200.htm");
+  SetCsh(503,"HID_AFFICHAGE_REGLES",98353,"menu/affichage/HID_AFFICHAGE_REGLES.htm");
+  SetCsh(504,"HID_AFFICHAGE_REGLES",98353,"menu/affichage/HID_AFFICHAGE_REGLES.htm");
+  SetCsh(505,"HID_AFFICHAGE_REGLES",98353,"menu/affichage/HID_AFFICHAGE_REGLES.htm");
+  SetCsh(506,"HID_AFFICHAGE_REGLES",98353,"menu/affichage/HID_AFFICHAGE_REGLES.htm");
+  SetCsh(507,"HID_AFFICHAGE_REGLES",98353,"menu/affichage/HID_AFFICHAGE_REGLES.htm");
+  SetCsh(508,"HID_ACTION_FILTRAGE",98390,"scenario/graphique/action/HID_ACTION_FILTRAGE.htm");
+  SetCsh(509,"HID_ACTION_FILTRAGE",98390,"scenario/graphique/action/HID_ACTION_FILTRAGE.htm");
+  SetCsh(510,"HID_ACTION_FILTRAGE",98390,"scenario/graphique/action/HID_ACTION_FILTRAGE.htm");
+  SetCsh(511,"HID_ACTION_FILTRAGE",98390,"scenario/graphique/action/HID_ACTION_FILTRAGE.htm");
+  SetCsh(512,"HID_ACTION_FILTRAGE",98390,"scenario/graphique/action/HID_ACTION_FILTRAGE.htm");
+  SetCsh(513,"HID_EDIT_FIND",123172,"menu/edition/HID_EDIT_FIND.htm");
+  SetCsh(514,"HIDD_PROPRIETES_REQUETE",132640,"scenario/graphique/propriete/HIDD_PROPRIETES_REQUETE.htm");
+  SetCsh(515,"HIDD_PROPRIETES_REQUETE",132640,"scenario/graphique/propriete/HIDD_PROPRIETES_REQUETE.htm");
+  SetCsh(516,"HIDD_PROPRIETES_REQUETE",132640,"scenario/graphique/propriete/HIDD_PROPRIETES_REQUETE.htm");
+  SetCsh(517,"HIDD_PROPRIETES_REQUETE",132640,"scenario/graphique/propriete/HIDD_PROPRIETES_REQUETE.htm");
+  SetCsh(518,"HIDD_PROPRIETES_REQUETE",132640,"scenario/graphique/propriete/HIDD_PROPRIETES_REQUETE.htm");
+  SetCsh(519,"HIDD_PROPRIETES_SOUS_SCEN",132637,"scenario/graphique/propriete/HIDD_PROPRIETES_SOUS_SCEN.htm");
+  SetCsh(520,"HIDD_PROPRIETES_SOUS_SCEN",132637,"scenario/graphique/propriete/HIDD_PROPRIETES_SOUS_SCEN.htm");
+  SetCsh(521,"HIDD_PROPRIETES_SOUS_SCEN",132637,"scenario/graphique/propriete/HIDD_PROPRIETES_SOUS_SCEN.htm");
+  SetCsh(522,"HIDD_PROPRIETES_SOUS_SCEN",132637,"scenario/graphique/propriete/HIDD_PROPRIETES_SOUS_SCEN.htm");
+  SetCsh(523,"HIDD_PROPRIETES_SOUS_SCEN",132637,"scenario/graphique/propriete/HIDD_PROPRIETES_SOUS_SCEN.htm");
+  SetCsh(524,"HIDD_EXTENSION_EXEC",131361,"application/configuration/HIDD_EXTENSION_EXEC.htm");
+  SetCsh(525,"HIDD_EXTENSION_EXEC",131361,"application/configuration/HIDD_EXTENSION_EXEC.htm");
+  SetCsh(526,"HIDD_EXTENSION_EXEC",131361,"application/configuration/HIDD_EXTENSION_EXEC.htm");
+  SetCsh(527,"HIDD_EXTENSION_EXEC",131361,"application/configuration/HIDD_EXTENSION_EXEC.htm");
+  SetCsh(528,"HIDD_EXTENSION_EXEC",131361,"application/configuration/HIDD_EXTENSION_EXEC.htm");
+  SetCsh(529,"HIDD_PROPRIETES_AFFICHAGE_TEXT",131317,"scenario/graphique/propriete/HIDD_PROPRIETES_AFFICHAGE_TEXT.htm");
+  SetCsh(530,"HIDD_PROPRIETES_AFFICHAGE_TEXT",131317,"scenario/graphique/propriete/HIDD_PROPRIETES_AFFICHAGE_TEXT.htm");
+  SetCsh(531,"HIDD_PROPRIETES_AFFICHAGE_TEXT",131317,"scenario/graphique/propriete/HIDD_PROPRIETES_AFFICHAGE_TEXT.htm");
+  SetCsh(532,"HIDD_PROPRIETES_AFFICHAGE_TEXT",131317,"scenario/graphique/propriete/HIDD_PROPRIETES_AFFICHAGE_TEXT.htm");
+  SetCsh(533,"HIDD_PROPRIETES_AFFICHAGE_TEXT",131317,"scenario/graphique/propriete/HIDD_PROPRIETES_AFFICHAGE_TEXT.htm");
+  SetCsh(534,"HIDR_WORKSPACE_ELEMENT",131232,"module/generalite/HIDR_WORKSPACE_ELEMENT.htm");
+  SetCsh(535,"HIDR_WORKSPACE_ELEMENT",131232,"module/generalite/HIDR_WORKSPACE_ELEMENT.htm");
+  SetCsh(536,"HIDR_WORKSPACE_ELEMENT",131232,"module/generalite/HIDR_WORKSPACE_ELEMENT.htm");
+  SetCsh(537,"HIDR_WORKSPACE_ELEMENT",131232,"module/generalite/HIDR_WORKSPACE_ELEMENT.htm");
+  SetCsh(538,"HIDR_WORKSPACE_ELEMENT",131232,"module/generalite/HIDR_WORKSPACE_ELEMENT.htm");
+  SetCsh(539,"HID_APP_CONFIGURATION",102312,"menu/application/HID_APP_CONFIGURATION.htm");
+  SetCsh(540,"HID_APP_CONFIGURATION",102312,"menu/application/HID_APP_CONFIGURATION.htm");
+  SetCsh(541,"HID_APP_CONFIGURATION",102312,"menu/application/HID_APP_CONFIGURATION.htm");
+  SetCsh(542,"HID_APP_CONFIGURATION",102312,"menu/application/HID_APP_CONFIGURATION.htm");
+  SetCsh(543,"HID_APP_CONFIGURATION",102312,"menu/application/HID_APP_CONFIGURATION.htm");
+  SetCsh(544,"HID_IMPRESSION",102327,"menu/module/HID_IMPRESSION.htm");
+  SetCsh(545,"HID_IMPRESSION",102327,"menu/module/HID_IMPRESSION.htm");
+  SetCsh(546,"HID_IMPRESSION",102327,"menu/module/HID_IMPRESSION.htm");
+  SetCsh(547,"HID_IMPRESSION",102327,"menu/module/HID_IMPRESSION.htm");
+  SetCsh(548,"HID_IMPRESSION",102327,"menu/module/HID_IMPRESSION.htm");
+  SetCsh(549,"HID_COPIER",102343,"menu/edition/HID_EDIT_COPY.htm");
+  SetCsh(550,"HID_COPIER",102343,"menu/edition/HID_EDIT_COPY.htm");
+  SetCsh(551,"HID_COPIER",102343,"menu/edition/HID_EDIT_COPY.htm");
+  SetCsh(552,"HID_COPIER",102343,"menu/edition/HID_EDIT_COPY.htm");
+  SetCsh(553,"HID_COPIER",102343,"menu/edition/HID_EDIT_COPY.htm");
+  SetCsh(554,"HIDR_MAINFRAME",131200,"afxcore/main_index.htm");
+  SetCsh(555,"HIDR_MAINFRAME",131200,"afxcore/main_index.htm");
+  SetCsh(556,"HIDR_MAINFRAME",131200,"afxcore/main_index.htm");
+  SetCsh(557,"HIDR_MAINFRAME",131200,"afxcore/main_index.htm");
+  SetCsh(558,"HIDR_MAINFRAME",131200,"afxcore/main_index.htm");
+  SetCsh(559,"HID_ARRET_APPLI",102314,"menu/application/HID_ARRET_APPLI.htm");
+  SetCsh(560,"HID_ARRET_APPLI",102314,"menu/application/HID_ARRET_APPLI.htm");
+  SetCsh(561,"HID_ARRET_APPLI",102314,"menu/application/HID_ARRET_APPLI.htm");
+  SetCsh(562,"HID_ARRET_APPLI",102314,"menu/application/HID_ARRET_APPLI.htm");
+  SetCsh(563,"HID_ARRET_APPLI",102314,"menu/application/HID_ARRET_APPLI.htm");
+  SetCsh(564,"HID_ACTION_SOUS_SCEN",98396,"scenario/graphique/action/HID_ACTION_SOUS_SCEN.htm");
+  SetCsh(565,"HID_ACTION_SOUS_SCEN",98396,"scenario/graphique/action/HID_ACTION_SOUS_SCEN.htm");
+  SetCsh(566,"HID_ACTION_SOUS_SCEN",98396,"scenario/graphique/action/HID_ACTION_SOUS_SCEN.htm");
+  SetCsh(567,"HID_ACTION_SOUS_SCEN",98396,"scenario/graphique/action/HID_ACTION_SOUS_SCEN.htm");
+  SetCsh(568,"HID_ACTION_SOUS_SCEN",98396,"scenario/graphique/action/HID_ACTION_SOUS_SCEN.htm");
+  SetCsh(569,"HID_EXECUTE",98367,"menu/scenario/HID_EXECUTE.htm");
+  SetCsh(570,"HID_EXECUTE",98367,"menu/scenario/HID_EXECUTE.htm");
+  SetCsh(571,"HID_EXECUTE",98367,"menu/scenario/HID_EXECUTE.htm");
+  SetCsh(572,"HID_EXECUTE",98367,"menu/scenario/HID_EXECUTE.htm");
+  SetCsh(573,"HID_EXECUTE",98367,"menu/scenario/HID_EXECUTE.htm");
+  SetCsh(574,"HID_COMPILATION_RECOMPILETOUT",98344,"menu/scenario/HID_COMPILATION_RECOMPILETOUT.htm");
+  SetCsh(575,"HID_COMPILATION_RECOMPILETOUT",98344,"menu/scenario/HID_COMPILATION_RECOMPILETOUT.htm");
+  SetCsh(576,"HID_COMPILATION_RECOMPILETOUT",98344,"menu/scenario/HID_COMPILATION_RECOMPILETOUT.htm");
+  SetCsh(577,"HID_COMPILATION_RECOMPILETOUT",98344,"menu/scenario/HID_COMPILATION_RECOMPILETOUT.htm");
+  SetCsh(578,"HID_COMPILATION_RECOMPILETOUT",98344,"menu/scenario/HID_COMPILATION_RECOMPILETOUT.htm");
+  SetCsh(579,"HIDD_PROPRIETES_TEMPO",132631,"scenario/graphique/propriete/HIDD_PROPRIETES_TEMPO.htm");
+  SetCsh(580,"HIDD_PROPRIETES_TEMPO",132631,"scenario/graphique/propriete/HIDD_PROPRIETES_TEMPO.htm");
+  SetCsh(581,"HIDD_PROPRIETES_TEMPO",132631,"scenario/graphique/propriete/HIDD_PROPRIETES_TEMPO.htm");
+  SetCsh(582,"HIDD_PROPRIETES_TEMPO",132631,"scenario/graphique/propriete/HIDD_PROPRIETES_TEMPO.htm");
+  SetCsh(583,"HIDD_PROPRIETES_TEMPO",132631,"scenario/graphique/propriete/HIDD_PROPRIETES_TEMPO.htm");
+  SetCsh(584,"HID_ACTION_TERMINAL",98397,"scenario/graphique/action/HID_ACTION_TERMINAL.htm");
+  SetCsh(585,"HID_ACTION_TERMINAL",98397,"scenario/graphique/action/HID_ACTION_TERMINAL.htm");
+  SetCsh(586,"HID_ACTION_TERMINAL",98397,"scenario/graphique/action/HID_ACTION_TERMINAL.htm");
+  SetCsh(587,"HID_ACTION_TERMINAL",98397,"scenario/graphique/action/HID_ACTION_TERMINAL.htm");
+  SetCsh(588,"HID_ACTION_TERMINAL",98397,"scenario/graphique/action/HID_ACTION_TERMINAL.htm");
+  SetCsh(589,"HID_ZOOM_500",98354,"menu/zoom/HID_ZOOM_500.htm");
+  SetCsh(590,"HID_ZOOM_500",98354,"menu/zoom/HID_ZOOM_500.htm");
+  SetCsh(591,"HID_ZOOM_500",98354,"menu/zoom/HID_ZOOM_500.htm");
+  SetCsh(592,"HID_ZOOM_500",98354,"menu/zoom/HID_ZOOM_500.htm");
+  SetCsh(593,"HID_ZOOM_500",98354,"menu/zoom/HID_ZOOM_500.htm");
+  SetCsh(594,"HID_ACTION_IMPRIME_ETAT",98399,"scenario/graphique/action/HID_ACTION_IMPRIME_ETAT.htm");
+  SetCsh(595,"HID_ACTION_IMPRIME_ETAT",98399,"scenario/graphique/action/HID_ACTION_IMPRIME_ETAT.htm");
+  SetCsh(596,"HID_ACTION_IMPRIME_ETAT",98399,"scenario/graphique/action/HID_ACTION_IMPRIME_ETAT.htm");
+  SetCsh(597,"HID_ACTION_IMPRIME_ETAT",98399,"scenario/graphique/action/HID_ACTION_IMPRIME_ETAT.htm");
+  SetCsh(598,"HID_ACTION_IMPRIME_ETAT",98399,"scenario/graphique/action/HID_ACTION_IMPRIME_ETAT.htm");
+  SetCsh(599,"HIDD_CONF_BD",131280,"application/configuration/HIDD_CONF_BD.htm");
+  SetCsh(600,"HIDD_CONF_BD",131280,"application/configuration/HIDD_CONF_BD.htm");
+  SetCsh(601,"HIDD_CONF_BD",131280,"application/configuration/HIDD_CONF_BD.htm");
+  SetCsh(602,"HIDD_CONF_BD",131280,"application/configuration/HIDD_CONF_BD.htm");
+  SetCsh(603,"HIDD_CONF_BD",131280,"application/configuration/HIDD_CONF_BD.htm");
+  SetCsh(604,"HID_ACTION_TEMPO",98388,"scenario/graphique/action/HID_ACTION_TEMPO.htm");
+  SetCsh(605,"HID_ACTION_TEMPO",98388,"scenario/graphique/action/HID_ACTION_TEMPO.htm");
+  SetCsh(606,"HID_ACTION_TEMPO",98388,"scenario/graphique/action/HID_ACTION_TEMPO.htm");
+  SetCsh(607,"HID_ACTION_TEMPO",98388,"scenario/graphique/action/HID_ACTION_TEMPO.htm");
+  SetCsh(608,"HID_ACTION_TEMPO",98388,"scenario/graphique/action/HID_ACTION_TEMPO.htm");
+  SetCsh(609,"HIDD_PROPRIETES_FILTRAGE",132641,"scenario/graphique/propriete/HIDD_PROPRIETES_FILTRAGE.htm");
+  SetCsh(610,"HIDD_PROPRIETES_FILTRAGE",132641,"scenario/graphique/propriete/HIDD_PROPRIETES_FILTRAGE.htm");
+  SetCsh(611,"HIDD_PROPRIETES_FILTRAGE",132641,"scenario/graphique/propriete/HIDD_PROPRIETES_FILTRAGE.htm");
+  SetCsh(612,"HIDD_PROPRIETES_FILTRAGE",132641,"scenario/graphique/propriete/HIDD_PROPRIETES_FILTRAGE.htm");
+  SetCsh(613,"HIDD_PROPRIETES_FILTRAGE",132641,"scenario/graphique/propriete/HIDD_PROPRIETES_FILTRAGE.htm");
+
+
+//-->
+</script>
+<script language="javascript">
+<!--
+//Find CSH according to hash string after this page
+if (getHash().length > 0)
+{
+   // VH 05/16/00 now support 
+   // TopicID=
+   // TopicNumber=
+   // RemoteURL=   
+   // and WindowsOptions
+   // with the format #a=xxx,b=xxx,c=xxx...
+   var strHashString = getHash().toString();
+   // change ? to : for remote URL. because java applet have some problem to pass a URL with two : inside the URL so we changed it. 
+   // so here need to change it back.
+   strHashString = strHashString.substring(1,strHashString.length);
+   strHashString = strHashString.replace("%072%057%057", "://");
+   var nTopicNum = GetTopicNumber(strHashString);
+
+   if (nTopicNum != -1)
+   {
+      FindTopicByTopicNum(nTopicNum);
+   }
+   else
+   {
+      if (gstrURL.length > 0) 
+	RedirectTo(gstrURL);
+      else
+      	RedirectToHomePage();
+   }
+}
+else
+{
+   RedirectToHomePage();
+}
+//-->
+</script>
+<noscript>
+ <p> Your browser does not support JavaScript. WebHelp Context-Sensitive Help requires JavaScript support to run.</p>
+</noscript>
+</body>
+</html>
+
+
+
+
+
+

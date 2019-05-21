@@ -1,0 +1,114 @@
+WITH TYPES_DEFS;
+
+MODULE HTML; C;
+
+PROCEDURE	HtmlFormDebut( p_action : GrandeChaine ) ; 650; 
+PROCEDURE	HtmlFormFin ; 651;
+
+PROCEDURE 	HtmlZoneSaisie( p_nom , p_valeur: GrandeChaine ; p_taille: Integer ) ; 652 ;
+PROCEDURE 	HtmlZoneMotPasse( p_nom,p_valeur: GrandeChaine ; p_taille: Integer ) ; 653 ;
+PROCEDURE 	HtmlZoneTexte( p_nom,p_valeur : GrandeChaine ; p_ligne,p_colonne: Integer ; p_modif: BOOLEAN ) ; 654 ;
+
+PROCEDURE	HtmlCaseCocher( p_nom : GrandeChaine ; p_valeur: BOOLEAN ) ; 655 ;
+
+PROCEDURE	HtmlRadio( p_nom  , p_valeur : GrandeChaine ; p_valeur: BOOLEAN ) ; 656 ;
+
+PROCEDURE 	HtmlListeDebut( p_nom : GrandeChaine ; p_taille: Integer ; p_multSelect: BOOLEAN ) ; 657 ;
+PROCEDURE 	HtmlListeFin ; 658 ;
+PROCEDURE	HtmlListeAjout( p_element,p_valeur : GrandeChaine ; p_select: BOOLEAN ) ; 659 ;
+
+PROCEDURE	HtmlBoutonValide( p_nom,p_legende : GrandeChaine ) ; 660 ;
+
+FUNCTION	CGILitValeur( p_nom : GrandeChaine ) RETURN GrandeChaine; 661 ;
+PROCEDURE	CGILitValeurEx( p_nom : GrandeChaine ; p_chaine : INFO_VARIABLE ) ; 662 ;
+
+PROCEDURE	HtmlFichier( p_nom , p_filtre : GrandeChaine ; p_taille: Integer ) ; 663 ;
+
+FUNCTION	HtmlLitEnv( p_variable : GrandeChaine ) RETURN GrandeChaine; 664 ; // lecture d'une variable d'environnement du serveur
+
+PROCEDURE	HtmlTitre( p_titre : GrandeChaine ; p_niveau, p_style : Integer ) ; 665 ;
+
+PROCEDURE	HtmlParagDebut ; 666 ;
+PROCEDURE	HtmlParagFin ; 667 ;
+
+PROCEDURE	HtmlComment( p_comment : GrandeChaine ) ; 668 ;
+
+PROCEDURE	HtmlTexteASCII( p_texte : GrandeChaine ; p_style : Integer ) ; 669 ; // pour le format avec des espaces
+
+PROCEDURE	HtmlLigneFin ; 670 ;
+
+PROCEDURE	HtmlTexte( p_texte : GrandeChaine ; p_style : Integer ); 671 ;
+
+PROCEDURE	HtmlTexteLien( p_chaine,p_lien : GrandeChaine ; p_style : Integer ); 672 ;
+
+PROCEDURE	HtmlTexteLienInterne( p_chaine,p_etiquette : GrandeChaine ; p_style : Integer ); 673 ;
+
+PROCEDURE	HtmlEtiquette( p_etiquette : GrandeChaine ) ; 674 ;
+
+PROCEDURE	HtmlImage( p_image : GrandeChaine ; p_style : Integer ) ; 675 ;
+
+PROCEDURE	HtmlImageLien( p_image ,p_lien : GrandeChaine ; p_style : Integer  ) ; 676 ; 
+
+PROCEDURE	HtmlImageLienInterne( p_image ,p_etiquette : GrandeChaine ; p_style : Integer ) ; 677 ;
+
+PROCEDURE	HtmlVideo( p_image ,p_video : GrandeChaine ; p_style : Integer ) ; 678 ;
+
+PROCEDURE	HtmlTableauDebut( p_epaisseurCadre ,p_couleurCadre ,p_couleurFond : Integer ) ; 679 ;
+
+PROCEDURE	HtmlTableauLigneDebut ; 680 ;
+
+PROCEDURE	HtmlTableauLigneFin ; 681 ;
+
+PROCEDURE 	HtmlTableauCellule( p_contenu : GrandeChaine ; p_style,p_couleurFond : Integer ) ; 682 ;
+
+PROCEDURE 	HtmlTableauCelluleLien( p_contenu ,p_lien : GrandeChaine ; p_style,p_couleurFond : Integer ) ; 683 ;
+
+PROCEDURE	HtmlTexteBrut( p_texte : GrandeChaine ); 686 ; // pas d'interprétation des caractères spécifiques
+
+PROCEDURE	HtmlPageDebut( p_titre,p_imageFond : GrandeChaine ; p_couleurFond : Integer ) ; 687 ;
+
+PROCEDURE	HtmlPageFin ; 688 ;
+
+PROCEDURE	HtmlTableauFin ; 689 ;
+
+PROCEDURE	HtmlTableauCelluleDebut ; 690 ;
+
+PROCEDURE	HtmlTableauCelluleFin ; 691 ;
+
+FUNCTION	CGILitFichier( p_nom , p_destination : GrandeChaine ) RETURN Integer ; 692 ;
+
+PROCEDURE	HtmlTexteBrutEx( p_texte : ChaineEx ); 693 ; // pas d'interprétation des caractères spécifiques
+
+FUNCTION 	HtmlFichierBrut( p_fichier : GrandeChaine ) RETURN boolean ;694 ; // pas d'interprétation des caractères spécifiques
+
+PROCEDURE	HtmlZoneCache( p_nom,p_valeur : GrandeChaine ) ; 695 ;
+
+PROCEDURE	HtmlAligneDebut( p_alignement : Integer ) ; 696 ;
+
+PROCEDURE	HtmlAligneFin ; 697 ;
+
+PROCEDURE	HtmlFormDebutNom( p_action ,p_nom : GrandeChaine ) ; 698 ; 
+
+PROCEDURE	HtmlActiveElement( p_nomFormulaire,p_nomElement : GrandeChaine  ) ; 699 ;
+
+PROCEDURE   HtmlTableauCelluleDebutA ( p_tailleCellule : PetiteChaine; p_hauteurCellule : PetiteChaine; p_colSpan : Integer; p_couleurFond : PetiteChaine; p_option : GrandeChaine ) ; 700 ;
+
+PROCEDURE   HtmlCentrerDebut; 701 ;
+
+PROCEDURE   HtmlCentrerFin; 702 ;
+
+PROCEDURE   HtmlTableauDebutA (p_border : Integer; p_marge,p_espace : Integer; p_tailleCellule,p_hauteurCellule : PetiteChaine; p_option : GrandeChaine) ; 703 ;
+
+PROCEDURE   HtmlDebutJavaScript; 704 ;
+
+PROCEDURE   HtmlFinJavaScript; 705 ;
+
+PROCEDURE	HtmlTexteLienA( p_chaine,p_lien : GrandeChaine ; p_style : Integer; p_option : GrandeChaine ); 706 ;
+
+// retour : 0: OK , -1: erreur fichier Html, -2: erreur identifiant structure Xml
+// 		>0 erreur dans structure Xml 
+FUNCTION	HtmlXml( p_ficHtml : GrandeChaine ; p_xml : T_Xml ) RETURN Integer ; 707 ;
+
+
+END HTML;
+

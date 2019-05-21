@@ -1,0 +1,610 @@
+<f:view locale="#{formCorrectionRebut.locale}"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:ice="http://www.icesoft.com/icefaces/component">
+
+    <ice:outputDeclaration doctypeRoot="HTML"
+                           doctypePublic="-//W3C//DTD HTML 4.01 Transitional//EN"
+                           doctypeSystem="http://www.w3.org/TR/html4/loose.dtd" />
+
+    <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+
+            <!--<link type="text/css" rel="stylesheet" href="../css/rime/rime.css" />-->
+            <link type="text/css" rel="stylesheet" href="../css/xp/xp_osys.css" />
+            <link type="text/css" rel="stylesheet" href="../css/style.css" />
+
+
+        <ice:loadBundle basename="#{formCorrectionRebut.lang}" var="moduleLang" />
+
+        <title><h:outputText value="#{moduleLang.OW_CORR_TITLE_1}"/></title>
+
+        </head>
+        <body>
+        <ice:form>
+            <ice:outputConnectionStatus
+                cautionLabel="#{moduleLang.OW_CORR_CONNEXION_STATUT_CAUTION}"
+                activeLabel="#{moduleLang.OW_CORR_CONNEXION_STATUT_ACTIVE}"
+                disconnectedLabel="#{moduleLang.OW_CORR_CONNEXION_STATUT_DISCONNECTED}"
+                inactiveLabel="#{moduleLang.OW_CORR_CONNEXION_STATUT_INACTIVE}"
+                />
+            <!-- Static Tab Set -->
+            <ice:panelGroup id="tabSetTabs" styleClass="icePnlGrpPage">
+                <ice:panelTabSet id="icePnlTbSet" selectedIndex="#{formCorrectionRebut.tabSelect}"
+                                 style="height: 100%">
+                    <!-- Panel Tab 1 -->
+                    <ice:panelTab label="#{moduleLang.OW_CORR_ONGLET_1}"
+                                  icon="../img/search.png">
+                        <table border="0" width="100%">
+                            <tr>
+                                <td>
+                            <ice:outputText styleClass="title2" value="#{moduleLang.OW_CORR_FIELDSET_1}"/>
+                            </td>
+                            </tr>
+                            <tr>
+                                <td>
+                            <ice:panelGroup id="icePnlGrp">
+                                <center>
+                                    <table border="0" width="100%">
+                                        <tr>
+                                            <td style="text-align:right; width:90px; ">
+                                        <ice:outputText value="#{moduleLang.OW_CORR_FIELD_DATE_DEBU}"/>
+                                        </td>
+                                        <td style="width:180px; ">
+                                        <ice:selectInputDate id="popupDateDebut"
+                                                             renderMonthAsDropdown="true"
+                                                             renderYearAsDropdown="true"
+                                                             value="#{formCorrectionRebut.onglet1DateDebut}"
+                                                             renderAsPopup="true">
+                                            <f:convertDateTime pattern="dd/MM/yyyy" 
+                                                               timeZone="#{formCorrectionRebut.selectInputDateBean.timeZone}"/>
+                                        </ice:selectInputDate>
+                                        </td>
+                                        <td style="text-align:right; width:70px; ">
+                                        <ice:outputText value="#{moduleLang.OW_CORR_FIELD_DATE_FIN}"/>
+                                        </td>
+                                        <td style="width:180px; ">
+                                        <ice:selectInputDate id="popupDateFin"
+                                                             renderMonthAsDropdown="true"
+                                                             renderYearAsDropdown="true"
+                                                             value="#{formCorrectionRebut.onglet1DateFin}"
+                                                             renderAsPopup="true">
+                                            <f:convertDateTime pattern="dd/MM/yyyy"
+                                                               timeZone="#{formCorrectionRebut.selectInputDateBean.timeZone}"/>
+                                        </ice:selectInputDate>
+                                        </td>
+                                        <td style="text-align:right;">
+                                        <ice:outputText value="#{moduleLang.OW_CORR_FIELD_FILT_EVEN}"/>
+                                        </td>
+                                        <td style="text-align:left;">
+                                        <h:selectOneRadio id="radioTypeEven" value="#{formCorrectionRebut.onglet1TypeEven}" >
+                                            <f:selectItem itemValue="Y" itemLabel="#{moduleLang.OW_CORR_FIELD_YES}" />
+                                            <f:selectItem itemValue="N" itemLabel="#{moduleLang.OW_CORR_FIELD_NO}"/>
+                                        </h:selectOneRadio>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:right; width:90px; ">
+                                        <ice:outputText value="#{moduleLang.OW_CORR_FIELD_MACH}"/>
+                                        </td>
+                                        <td style="width:180px;">
+                                        <ice:selectInputText id="listMach"
+                                                             width="360"
+                                                             value="#{formCorrectionRebut.onglet1SelMachine.desiMach}"
+                                                             valueChangeListener="#{formCorrectionRebut.selectCritereMachineValueChanged}"
+                                                             partialSubmit="true">
+                                            <f:selectItems   id="critListMachine"
+                                                             value="#{formCorrectionRebut.listMachine}"/>
+                                        </ice:selectInputText>
+                                        </td>
+                                        <td style="text-align:right; width:70px;">
+                                        <ice:outputText value="#{moduleLang.OW_CORR_FIELD_TYPE_REBU}" />
+                                        </td>
+                                        <td style="width:180px;" colspan="3">
+                                            <!-- type liste -->
+                                            <!--<ice:selectOneMenu id="listRebu" value="#{formCorrectionRebut.onglet1SelRebut.codeRebu}" size="1" style="width:180px;">
+                                                <f:selectItems  value="#{formCorrectionRebut.listRebut}"/>
+                                            </ice:selectOneMenu>-->
+                                        <ice:selectInputText id="listRebu"
+                                                             width="360"
+                                                             value="#{formCorrectionRebut.onglet1SelRebut.desiRebu}"
+                                                             valueChangeListener="#{formCorrectionRebut.selectCritereRebutValueChanged}"
+                                                             partialSubmit="true">
+                                            <f:selectItems   id="critListOF"
+                                                             value="#{formCorrectionRebut.listRebut}"/>
+                                        </ice:selectInputText>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:right; width:90px;">
+                                        <ice:outputText value="#{moduleLang.OW_CORR_FIELD_OF}" />
+                                        </td>
+                                        <td style="width:180px;">
+                                        <ice:selectInputText id="listOf"
+                                                             width="360"
+                                                             value="#{formCorrectionRebut.onglet1SelOF.desiOf}"
+                                                             valueChangeListener="#{formCorrectionRebut.selectCritereOfValueChanged}"
+                                                             partialSubmit="true">
+                                            <f:selectItems   id="critListOF"
+                                                             value="#{formCorrectionRebut.listOf}"/>
+                                        </ice:selectInputText>
+                                        </td>
+                                        <td style="width:10px; "></td>
+                                        <td colspan="3" rowspan="1" style="text-align:right;">
+                                        <ice:commandButton value="#{moduleLang.OW_CORR_BTN_1}" action="#{formCorrectionRebut.loadDataGrid}" styleClass="commandButton" style="background-image:url(../img/search.png);width:200px;" />
+                                        </td>
+                                        </tr>
+                                    </table>
+                                </center>
+                            </ice:panelGroup>
+                            </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div id="divDataTable" style="height:480px;">
+                                        <ice:dataTable id="data"
+                                                       var="rebut"
+                                                       sortColumn="#{formCorrectionRebut.model.onglet1ListData.sortColumnName}"
+                                                       sortAscending="#{formCorrectionRebut.model.onglet1ListData.ascending}"
+                                                       value="#{formCorrectionRebut.model.onglet1ListData.listDeclarationRebut}"
+                                                       rows="#{formCorrectionRebut.dataTableRow}"
+                                                       scrollable="false"
+                                                       rowClasses="oddRow, evenRow"
+                                                       styleClass="dataPaginatorDataTable"
+                                                       width ="100%"
+                                                       cellpadding="0">
+                                            <ice:column>
+                                                <ice:rowSelector id="selected"
+                                                                 value="#{rebut.selected}"
+                                                                 multiple="false"
+                                                                 enhancedMultiple="false"
+                                                                 selectionListener="#{formCorrectionRebut.loadSelectDataGrid}"
+                                                                 preStyleOnSelection="true"/>
+
+                                                <f:facet name="header">
+                                                    <ice:commandSortHeader
+                                                        columnName="#{formCorrectionRebut.model.onglet1ListData.machineColumnName}"
+                                                        arrow="true" >
+                                                        <ice:outputText id="header1"
+                                                                        value="#{formCorrectionRebut.model.onglet1ListData.machineColumnName}"/>
+                                                    </ice:commandSortHeader>
+                                                </f:facet>
+                                                <ice:inputText id="column1"
+                                                               value="#{rebut.machine.desiMach}"
+                                                               title="#{rebut.machine.desiMach}"
+                                                               readonly="true"
+                                                               style="width: 100%;"
+                                                               styleClass="inputReadonly"/>
+                                            </ice:column>
+                                            <ice:column>
+                                                <f:facet name="header">
+                                                    <ice:commandSortHeader
+                                                        columnName="#{formCorrectionRebut.model.onglet1ListData.ofColumnName}"
+                                                        arrow="true" >
+                                                        <ice:outputText id="header2"
+                                                                        value="#{formCorrectionRebut.model.onglet1ListData.ofColumnName}"/>
+                                                    </ice:commandSortHeader>
+                                                </f:facet>
+                                                <ice:inputText id="column2"
+                                                               value="#{rebut.of}"
+                                                               title="#{rebut.of.codeOfSite}"
+                                                               readonly="true"
+                                                               style="text-align:center; width: 80px;"
+                                                               styleClass="inputReadonly"/>
+                                            </ice:column>
+                                            <ice:column>
+                                                <f:facet name="header">
+                                                    <ice:commandSortHeader
+                                                        columnName="#{formCorrectionRebut.model.onglet1ListData.operColumnName}"
+                                                        arrow="true" >
+                                                        <ice:outputText id="header3"
+                                                                        value="#{formCorrectionRebut.model.onglet1ListData.operColumnName}"/>
+                                                    </ice:commandSortHeader>
+                                                </f:facet>
+                                                <ice:inputText id="column3"
+                                                               value="#{rebut.operation}"
+                                                               title="#{rebut.operation.codeOper}"
+                                                               readonly="true"
+                                                               style="text-align:center; width: 30px;"
+                                                               styleClass="inputReadonly"/>
+                                            </ice:column>
+                                            <ice:column>
+                                                <f:facet name="header">
+                                                    <ice:commandSortHeader
+                                                        columnName="#{formCorrectionRebut.model.onglet1ListData.articleColumnName}"
+                                                        arrow="true" >
+                                                        <ice:outputText id="header4"
+                                                                        value="#{formCorrectionRebut.model.onglet1ListData.articleColumnName}"/>
+                                                    </ice:commandSortHeader>
+                                                </f:facet>
+                                                <ice:inputText  id="column4"
+                                                                value="#{rebut.article}"
+                                                                title="#{rebut.article.desiArti}"
+                                                                readonly="true"
+                                                                style="width: 180px;"
+                                                                styleClass="inputReadonly"/>
+                                            </ice:column>
+                                            <ice:column>
+                                                <f:facet name="header">
+                                                    <ice:commandSortHeader
+                                                        columnName="#{formCorrectionRebut.model.onglet1ListData.rebutColumnName}"
+                                                        arrow="true" >
+                                                        <ice:outputText id="header5"
+                                                                        value="#{formCorrectionRebut.model.onglet1ListData.rebutColumnName}"/>
+                                                    </ice:commandSortHeader>
+                                                </f:facet>
+                                                <ice:inputText id="column5"
+                                                               value="#{rebut.rebut.desiRebu}"
+                                                               title="#{rebut.rebut.desiRebu}"
+                                                               readonly="true"
+                                                               style="width: 110px;"
+                                                               styleClass="inputReadonly"/>
+                                            </ice:column>
+                                            <ice:column>
+                                                <f:facet name="header">
+                                                    <ice:commandSortHeader
+                                                        columnName="#{formCorrectionRebut.model.onglet1ListData.gdhColumnName}"
+                                                        arrow="true" >
+                                                        <ice:outputText id="header6"
+                                                                        value="#{formCorrectionRebut.model.onglet1ListData.gdhColumnName}"/>
+                                                    </ice:commandSortHeader>
+                                                </f:facet>
+                                                <ice:inputText id="column6"
+                                                               value="#{rebut.dateFormated}"
+                                                               title="#{rebut.dateFormated}"
+                                                               readonly="true"
+                                                               style="width: 80px;"
+                                                               styleClass="inputReadonly"/>
+                                            </ice:column>
+                                            <ice:column>
+                                                <f:facet name="header">
+                                                    <ice:commandSortHeader
+                                                        columnName="#{formCorrectionRebut.model.onglet1ListData.qteColumnName}"
+                                                        arrow="true" >
+                                                        <ice:outputText id="header7"
+                                                                        value="#{formCorrectionRebut.model.onglet1ListData.qteColumnName}"/>
+                                                    </ice:commandSortHeader>
+                                                </f:facet>
+                                                <ice:inputText id="column7"
+                                                               value="#{rebut.quanRebutFormated}"
+                                                               readonly="true"
+                                                               style="text-align:right; width: 40px;"
+                                                               styleClass="inputReadonly"/>
+                                            </ice:column>
+                                            <ice:column>
+                                                <f:facet name="header">
+                                                    <ice:commandSortHeader
+                                                        columnName="#{formCorrectionRebut.model.onglet1ListData.modColumnName}"
+                                                        arrow="true" >
+                                                        <ice:outputText id="header8"
+                                                                        value="#{formCorrectionRebut.model.onglet1ListData.modColumnName}"/>
+                                                    </ice:commandSortHeader>
+                                                </f:facet>
+                                                <ice:inputText id="column8"
+                                                               value="#{rebut.typeEvenFormated}"
+                                                               readonly="true"
+                                                               style="text-align:center; width: 20px;"
+                                                               converter="#{formCorrectionRebut.modificationConverter}"
+                                                               styleClass="inputReadonly"/>
+                                            </ice:column>
+                                        </ice:dataTable>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                            <center>
+                                <ice:panelGroup styleClass="icePnlGrpPaginator">
+                                    <ice:dataPaginator id="datapaginator2"
+                                                       for="data"
+                                                       paginator="true"
+                                                       fastStep="4"
+                                                       paginatorMaxPages="4"
+                                                       rowsCountVar="rowsCount"
+                                                       displayedRowsCountVar="displayedRowsCount"
+                                                       firstRowIndexVar="firstRowIndex"
+                                                       lastRowIndexVar="lastRowIndex"
+                                                       style=" margin: auto;">
+                                        <ice:outputFormat
+                                            styleClass="standard"
+                                            value="#{moduleLang.OW_CORR_PAGINATOR_FIELD_1}">
+                                            <f:param value="#{rowsCount}"/>
+                                            <f:param value="#{firstRowIndex}"/>
+                                            <f:param value="#{lastRowIndex}"/>
+                                        </ice:outputFormat>
+                                        <f:facet name="first">
+                                            <ice:outputText value="[#{moduleLang.OW_CORR_PAGINATOR_BNT_1}/" style="margin: -2px;">
+                                            </ice:outputText>
+                                        </f:facet>
+                                        <f:facet name="last">
+                                            <ice:outputText value="#{moduleLang.OW_CORR_PAGINATOR_BNT_4}]" style="margin: -2px;">
+                                            </ice:outputText>
+                                        </f:facet>
+                                        <f:facet name="previous">
+                                            <ice:outputText value="#{moduleLang.OW_CORR_PAGINATOR_BNT_2}]" style="margin: -2px;">
+                                            </ice:outputText>
+                                        </f:facet>
+                                        <f:facet name="next">
+                                            <ice:outputText value="[#{moduleLang.OW_CORR_PAGINATOR_BNT_3}/" style="margin: -2px;">
+                                            </ice:outputText>
+                                        </f:facet>
+                                    </ice:dataPaginator>
+                                </ice:panelGroup>
+                            </center>
+                            </td>
+                            </tr>
+                        </table>
+                    </ice:panelTab>
+
+                    <!-- Panel Tab 2 -->
+                    <ice:panelTab label="#{moduleLang.OW_CORR_ONGLET_2}"
+                                  icon="../img/update.gif">
+                        <table border="0" width="100%">
+                            <tr>
+                                <td>
+                            <ice:outputText styleClass="title2" value="#{moduleLang.OW_CORR_FIELDSET_2}"/>
+                            </td>
+                            </tr>
+                            <tr>
+                                <td>
+                            <ice:panelGroup id="icePnlGrpForm1">
+                                <table border="0" cellspacing="1" width="100%">
+                                    <tr>
+                                        <td style="text-align:right; width:120px; ">
+                                    <ice:outputText value="#{moduleLang.OW_CORR_FIELD_MACH}"/>
+                                    </td>
+                                    <td >
+                                        <!-- type liste -->
+
+                                    <ice:selectInputText id="formListMach"
+                                                         width="380"
+                                                         value="#{formCorrectionRebut.selectedMachineValue}"
+                                                         valueChangeListener="#{formCorrectionRebut.selectInputMachineValueChanged}">
+                                        <f:selectItems   id="formListPers"
+                                                         value="#{formCorrectionRebut.listMachine}"/>
+                                    </ice:selectInputText>
+                                    </td>
+                                    <td colspan="2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:right; width:120px;">
+                                    <ice:outputText value="#{moduleLang.OW_CORR_FIELD_REBU}" />
+                                    </td>
+
+                                    <td >
+                      
+                                    <ice:selectInputText id="formRebut"
+                                                         width="380"
+                                                         value="#{formCorrectionRebut.selectedRebutValue}"
+                                                         valueChangeListener="#{formCorrectionRebut.selectInputRebutChanged}"
+                                                         partialSubmit="true">
+                                        <f:selectItems   id="formListArti"
+                                                         value="#{formCorrectionRebut.listRebut}"/>
+                                    </ice:selectInputText>
+                                    </td>
+                                    <td colspan="2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:right; width:120px; ">
+                                    <ice:outputText value="#{moduleLang.OW_CORR_FIELD_ARTI}" />
+                                    </td>
+                                    <td >
+                                    <ice:selectInputText id="formArti"
+                                                         width="380"
+                                                         value="#{formCorrectionRebut.selectedArticleValue}"
+                                                         valueChangeListener="#{formCorrectionRebut.selectInputArticleChanged}"
+                                                         partialSubmit="true">
+                                        <f:selectItems   id="formListArti"
+                                                         value="#{formCorrectionRebut.listArticle}"/>
+                                    </ice:selectInputText>
+                                    </td>
+                                    <td colspan="2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:right; width:120px;">
+                                    <ice:outputText value="#{moduleLang.OW_CORR_FIELD_OF}" />
+                                    </td>
+                                    <td >
+                                    <ice:selectInputText id="formOF"
+                                                         width="380"
+                                                         value="#{formCorrectionRebut.selectedOfValue}"
+                                                         valueChangeListener="#{formCorrectionRebut.selectInputOfValueChanged}"
+                                                         partialSubmit="true">
+                                        <f:selectItems   id="formListOF"
+                                                         value="#{formCorrectionRebut.listOf}"/>
+                                    </ice:selectInputText>
+                                    </td>
+                                    <td colspan="2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:right; width:120px;">
+                                    <ice:outputText value="#{moduleLang.OW_CORR_FIELD_OPER}" />
+                                    </td>
+                                    <td style="text-align:left;">
+                                        <!-- type liste -->
+                                    <ice:selectOneMenu id="formListOper"
+                                                       partialSubmit="true"
+                                                       valueChangeListener="#{formCorrectionRebut.selectOneOperationChanged}"
+                                                       value="#{formCorrectionRebut.objectDeclarationRebut.operation.codeOper}"
+                                                       size="1" style="width:380px;">
+                                        <f:selectItems value="#{formCorrectionRebut.listOperation}"/>
+                                    </ice:selectOneMenu>
+                                    </td>
+                                    <td style="text-align:right; width:90px;">
+                                    <ice:outputText value="#{moduleLang.OW_CORR_FIELD_DATE_DECL}" />
+                                    </td>
+                                    <td>
+                                    <ice:selectInputDate id="formDateDecl"
+                                                         renderMonthAsDropdown="true"
+                                                         renderYearAsDropdown="true"
+                                                         value="#{formCorrectionRebut.objectDeclarationRebut.dateDeclRebu}"
+                                                         renderAsPopup="true">
+                                        <f:convertDateTime pattern="dd/MM/yyyy HH:mm:ss"
+                                                           timeZone="#{formCorrectionRebut.selectInputDateBean.timeZone}"/>
+
+                                    </ice:selectInputDate>
+                                    </td> </tr>
+                                </table>
+                            </ice:panelGroup>
+                            </td>
+                            </tr>
+                            <br/>
+                            <tr>
+                                <td>
+                            <ice:panelGroup id="icePnlGrpForm2">
+                                <table border="0" cellspacing="1" width="100%">
+                                    <tr>
+                                        <td style="text-align:right; width:120px; ">
+                                    <ice:outputText value="#{moduleLang.OW_CORR_FIELD_PERS}"/>
+                                    </td>
+                                    <td style="text-align:left;" colspan="3">
+                                    <ice:selectInputText id="formPers"
+                                                         width="380"
+                                                         value="#{formCorrectionRebut.selectedPersValue}"
+                                                         valueChangeListener="#{formCorrectionRebut.selectInputPersChanged}">
+                                        <f:selectItems   id="formListPers"
+                                                         value="#{formCorrectionRebut.listPersonnel}"/>
+                                    </ice:selectInputText>
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:right; width:120px; ">
+                                    <ice:outputText value="#{moduleLang.OW_CORR_FIELD_EQUI}"/>
+                                    </td>
+                                    <td >
+                                        <!-- type liste -->
+                                    <ice:selectOneMenu id="formListEquipe"
+                                                       value="#{formCorrectionRebut.objectDeclarationRebut.equipe.codeEqui}"
+                                                       size="1"
+                                                       style="width:280px;">
+                                        <f:selectItems value="#{formCorrectionRebut.listEquipe}"/>
+                                    </ice:selectOneMenu>
+                                    </td>
+                                    <td style="text-align:right; width:90px; ">
+                                    <ice:outputText value="#{moduleLang.OW_CORR_FIELD_ATEL}"/>
+                                    </td>
+                                    <td>
+                                        <!-- type liste -->
+                                    <ice:selectOneMenu id="formListAtelier"
+                                                       value="#{formCorrectionRebut.objectDeclarationRebut.atelier.codeAtel}"
+                                                       size="1"
+                                                       style="width:280px;">
+                                        <f:selectItems value="#{formCorrectionRebut.listAtelier}"/>
+                                    </ice:selectOneMenu>
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:right; width:120px; ">
+                                    <ice:outputText value="#{moduleLang.OW_CORR_FIELD_GEOG}"/>
+                                    </td>
+                                    <td >
+                                        <!-- type liste -->
+                                    <ice:selectOneMenu id="formListSecteurGeo"
+                                                       value="#{formCorrectionRebut.objectDeclarationRebut.secteurGeo.codeSecteur}"
+                                                       size="1"
+                                                       style="width:280px;">
+                                        <f:selectItems value="#{formCorrectionRebut.listSecteurGeo}"/>
+                                    </ice:selectOneMenu>
+                                    </td>
+                                    <td style="text-align:right; width:90px; ">
+                                    <ice:outputText value="#{moduleLang.OW_CORR_FIELD_ANAL}"/>
+                                    </td>
+                                    <td>
+                                        <!-- type liste -->
+                                    <ice:selectOneMenu id="formListSectionAna"
+                                                       value="#{formCorrectionRebut.objectDeclarationRebut.sectionAna.codeSection}"
+                                                       size="1"
+                                                       style="width:280px;">
+                                        <f:selectItems value="#{formCorrectionRebut.listSectionAna}"/>
+                                    </ice:selectOneMenu>
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:right; width:120px; ">
+                                    <ice:outputText value="#{moduleLang.OW_CORR_FIELD_QUAN}"/>
+                                    </td>
+                                    <td style="text-align:left; ">
+                                        <!-- type liste -->
+                                    <ice:inputText id="formQuantite"
+                                                   value="#{formCorrectionRebut.objectDeclarationRebut.quanRebu}"
+                                                   maxlength="30"
+                                                   size="30"
+                                                   style="width:180px;"
+                                                   partialSubmit="true">
+                                        <f:validator validatorId="realValidator" />
+                                    </ice:inputText>
+                                    </td >
+                                    <td style="text-align:right; width:90px; ">
+                                    <ice:outputText value="#{moduleLang.OW_CORR_FIELD_OUTI}"/>
+                                    </td>
+                                    <td>
+                                        <!-- type liste -->
+                                    <ice:selectOneMenu id="formListOutil"
+                                                       value="#{formCorrectionRebut.objectDeclarationRebut.outil.codeOuti}"
+                                                       size="1"
+                                                       style="width:280px;">
+                                        <f:selectItems value="#{formCorrectionRebut.listOutil}"/>
+                                    </ice:selectOneMenu>
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:right; width:120px; ">
+                                    <ice:outputText value="#{moduleLang.OW_CORR_FIELD_DATE_CALE}"/>
+                                    </td>
+                                    <td>
+                                    <ice:selectInputDate id="formDateCale"
+                                                         renderMonthAsDropdown="true"
+                                                         renderYearAsDropdown="true"
+                                                         value="#{formCorrectionRebut.objectDeclarationRebut.dateCale}"
+                                                         renderAsPopup="true" >
+                                        <f:convertDateTime pattern="dd/MM/yyyy" timeZone="#{formCorrectionRebut.selectInputDateBean.timeZone}"/>
+                                    </ice:selectInputDate>
+                                    </td>
+                                    <td style="text-align:right; width:90px; ">
+                                    <ice:outputText value="#{moduleLang.OW_CORR_FIELD_DATE_EXPO}"/>
+                                    </td>
+                                    <td>
+                                    <ice:selectInputDate id="formDateExport"
+                                                         renderMonthAsDropdown="true"
+                                                         renderYearAsDropdown="true"
+                                                         value="#{formCorrectionRebut.objectDeclarationRebut.dateExpo}"
+                                                         renderAsPopup="true" >
+                                        <f:convertDateTime pattern="dd/MM/yyyy HH:mm"
+                                                           timeZone="#{formCorrectionRebut.selectInputDateBean.timeZone}"/>
+                                    </ice:selectInputDate>
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:right" colspan="4">
+                                    <ice:commandButton value="#{moduleLang.OW_CORR_BTN_7}"
+                                                       action="#{formCorrectionRebut.restoreDeclarationRebut}"
+                                                       styleClass="commandButton"
+                                                       panelConfirmation="restoreConfirmPanel"
+                                                       style="background-image:url(../img/restore.png);width:200px;" />
+                                    <ice:panelConfirmation id="restoreConfirmPanel"
+                                                           title="#{moduleLang.MSG_CONFIRMATION_RESTORE_TITLE}"
+                                                           message="#{moduleLang.MSG_CONFIRMATION_RESTORE_MESSAGE}"
+                                                           acceptLabel="#{moduleLang.MSG_CONFIRMATION_ACCEPTLABEL}"
+                                                           cancelLabel="#{moduleLang.MSG_CONFIRMATION_CANCELLABEL}"/>
+                                    </td>
+                                    </tr>
+                                </table>
+                            </ice:panelGroup>
+                            </td>
+                            </tr>
+                            <tr>
+                                <td>
+                            <ice:commandButton value="#{moduleLang.OW_CORR_BTN_4}" action="#{formCorrectionRebut.cancelDeclarationRebut}" styleClass="commandButton" style="background-image:url(../img/undo.png);width:200px; float: left;" />
+                            <ice:commandButton value="#{moduleLang.OW_CORR_BTN_3}" action="#{formCorrectionRebut.saveDeclarationRebut}" styleClass="commandButton" style="background-image:url(../img/valid.png);width:200px; float: right;" />
+                            </td>
+                            </tr>
+                        </table>
+                    </ice:panelTab>
+                </ice:panelTabSet>
+                <center><ice:messages style="color: red;" layout="table" showDetail="true" showSummary="false" /></center>
+            </ice:panelGroup>
+        </ice:form>
+        </body>
+    </html>
+</f:view>

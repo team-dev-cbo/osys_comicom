@@ -1,0 +1,784 @@
+<html>
+<head>
+<title>Aide sur l'interface</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="RoboHelp by eHelp Corporation   www.ehelp.com">
+<meta name "description" content="WebHelp 2002">
+</head>
+<body>
+<script language="JavaScript">
+<!--
+
+var gArrayCsh = new Array();
+
+var gstrWindowOption = "";
+var gstrURL = "";
+var gbWithNavPane = false;
+
+function CshEntityItem(strAliasId, nTopicNum, strUrl) 
+{
+    this.strAliasId = strAliasId;
+    this.nTopicNum = nTopicNum;
+    this.strUrl = strUrl;
+}
+
+
+//Try to get to topic number from hash string
+function GetTopicNumberAuto(strMayBeNumber)
+{
+   var nNum = -1;
+   if (strMayBeNumber.length >= 1)
+   {
+		var strTmp = strMayBeNumber;
+		var iEnd = strTmp.length;
+		for (var i=0; i<iEnd; i++)
+		{
+			  var ch = strTmp.charAt(i);
+			  if (!((ch == "0") || (ch == "1") ||
+			        (ch == "2") || (ch == "3") ||
+			        (ch == "4") || (ch == "5") ||
+			        (ch == "6") || (ch == "7") ||
+			        (ch == "8") || (ch == "9")))
+			      return GetTopicNumberById(strTmp);
+		}
+		nNum = parseInt(strTmp);
+   }
+   return nNum;
+}
+
+function GetTopicNumber(strHashString)
+{
+	var nTopicEndPos = strHashString.indexOf(',')
+	if (nTopicEndPos == -1) { // no window option.
+		return GetTopicNumberOnly(strHashString);
+	}
+	else {
+		var strWindowOption = strHashString.substring(nTopicEndPos + 1, strHashString.length);
+		var strWithNavPane = 'withnavpane=true';
+		if (strWindowOption.toLowerCase().indexOf(strWithNavPane) == 0)
+		{
+			if (strWindowOption.length > strWithNavPane.length)
+				gstrWindowOption = strWindowOption.substring(strWithNavPane.length + 1);
+			else
+				gstrWindowOption = "";
+			gbWithNavPane = true;
+		}
+		else
+			gstrWindowOption = strWindowOption;
+		return GetTopicNumberOnly(strHashString.substring(0, nTopicEndPos));		
+	}
+}
+
+function GetTopicNumberOnly(strTopicString)
+{
+	var nEqualPos = strTopicString.indexOf('=');
+	if (nEqualPos == -1) {
+		return GetTopicNumberAuto(strTopicString);
+	}
+	else {
+		var strValue=strTopicString.substring(nEqualPos + 1, strTopicString.length);
+		if (strTopicString.toLowerCase().indexOf("topicnumber") == 0) {
+			return parseInt(strValue);
+		} else if (strTopicString.toLowerCase().indexOf("context") == 0) {
+			return GetTopicNumberById(strValue);
+		} else if (strTopicString.toLowerCase().indexOf("remoteurl") == 0) {
+			gstrURL = strValue;
+			return -1;
+		}
+
+	}
+}
+
+//Find HomePage of the WebHelp system
+// we try to get the topic from remote project if it exists.
+function RedirectToHomePage()
+{
+	if (parent && parent != this && parent.goNext)
+	{
+		var sHome = parent.goNext();
+		if (sHome != "")
+			RedirectTo(sHome);
+	}
+}
+
+function getHomePage()
+{
+	if (parent && parent != this && parent.getRelHomePage)
+	{
+		return parent.getRelHomePage(document.location.href);
+	}
+	return "";
+}
+
+function addRemoteProject(strPath)
+{
+	if (parent && parent != this && parent.addProject)
+	{
+		parent.addProject(strPath);
+	}
+}
+
+//Redirect page to...
+function RedirectTo(strUrl)
+{
+   if (gstrWindowOption.length != 0) {
+		var wnd = window.open(strUrl, "HelpStub", gstrWindowOption);
+		// close current window and rename the stub window to current window.
+		if (wnd)
+			wnd.focus();
+		if (parent)
+			parent.close();
+   }
+   else {
+	parent.document.location.href = strUrl;
+	window.focus();
+  }
+}
+
+//Prompt the user that we can not find...
+function FailToFind(strMsg)
+{
+    RedirectToHomePage();
+}
+
+//Find topic by topic number (defined in h file)
+function FindTopicByTopicNum(nTopicNum)
+{
+	var i = 0;
+	var iEnd = gArrayCsh.length;
+	for (i=0; i<iEnd; i++)
+	{
+		if (gArrayCsh[i].nTopicNum == nTopicNum)
+		{
+			var strURL = gArrayCsh[i].strUrl;
+			if (gbWithNavPane)
+			{
+				var strHomePage = getHomePage();
+				if (strHomePage.length != 0)
+					strURL = strHomePage + strURL;
+			}	
+			RedirectTo(strURL);
+			return true;
+		}
+	}
+	FailToFind("Fail to find topic assocaite with topic number: " + nTopicNum);
+	return false;
+}
+
+//Find topic by topic id (alias id defined in ali file)
+function GetTopicNumberById(strTopicId)
+{
+   var i = 0;
+   var iEnd = gArrayCsh.length;
+   for (i=0; i<iEnd; i++)
+   {
+	if (gArrayCsh[i].strAliasId.toLowerCase() == strTopicId.toLowerCase())
+	{
+	    return gArrayCsh[i].nTopicNum;
+	 }
+   }
+   gstrURL = "";
+   return -1;
+}
+
+//Set Context-sensitive help entity...
+function SetCsh(n, strAliasId, nTopicNum, strUrl)
+{
+   gArrayCsh[n] = new CshEntityItem(strAliasId,nTopicNum,strUrl);
+}
+
+
+function getHash()
+{
+	if (parent && parent != this)
+		return parent.location.hash;
+	else
+		return "";
+}
+//-->
+</script>
+<script language="javascript">
+<!--
+  SetCsh(0,"EstMinuscule",0,"scenario/lpx/fonctions/booleennes/HIDD_EstMinuscule.htm");
+  SetCsh(1,"GrandeChaineEnReel",1,"scenario/lpx/fonctions/conversion/HIDD_GrandeChaineEnReel.htm");
+  SetCsh(2,"HtmlActiveElement",2,"scenario/lpx/fonctions/html/HIDD_HtmlActiveElement.htm");
+  SetCsh(3,"InserePosSousChaine",3,"scenario/lpx/fonctions/chaines/HIDD_InserePosSousChaine.htm");
+  SetCsh(4,"OuvreFichier",4,"scenario/lpx/fonctions/fichiers/HIDD_OuvreFichier.htm");
+  SetCsh(5,"T_DefBoite",5,"scenario/lpx/type/HIDD_T_DEFBOITE.htm");
+  SetCsh(6,"BEGIN",6,"scenario/lpx/mots/HIDD_BEGIN.htm");
+  SetCsh(7,"CGILitFichier",7,"scenario/lpx/fonctions/html/HIDD_CGILitFichier.htm");
+  SetCsh(8,"CGILitValeur",8,"scenario/lpx/fonctions/html/HIDD_CGILitValeur.htm");
+  SetCsh(9,"CGILitValeurEx",9,"scenario/lpx/fonctions/html/HIDD_CGILitValeurEx.htm");
+  SetCsh(10,"Chaine10000",10,"scenario/lpx/type/HIDD_CHAINE10000.htm");
+  SetCsh(11,"ChaineEnMajuscule",11,"scenario/lpx/fonctions/conversion/HIDD_ChaineEnMajuscule.htm");
+  SetCsh(12,"ChaineEnMinuscule",12,"scenario/lpx/fonctions/conversion/HIDD_ChaineEnMinuscule.htm");
+  SetCsh(13,"ChaineEnReel",13,"scenario/lpx/fonctions/conversion/HIDD_ChaineEnReel.htm");
+  SetCsh(14,"ChaineEx",14,"scenario/lpx/type/HIDD_ChaineEx.htm");
+  SetCsh(15,"ChaineExVersFichier",15,"scenario/lpx/fonctions/chaines/HIDD_ChaineExVersFichier.htm");
+  SetCsh(16,"CommandeShell",16,"scenario/lpx/fonctions/systeme/HIDD_CommandeShell.htm");
+  SetCsh(17,"ComposeMessage2x16",17,"scenario/lpx/fonctions/terminal/HIDD_ComposeMessage2x16.htm");
+  SetCsh(18,"ComposeMessage2x40",18,"scenario/lpx/fonctions/terminal/HIDD_ComposeMessage2x40.htm");
+  SetCsh(19,"CONSCAR",19,"scenario/lpx/type/HIDD_CONSCAR.htm");
+  SetCsh(20,"CONST",20,"scenario/lpx/mots/HIDD_CONST.htm");
+  SetCsh(21,"CreeFichier",21,"scenario/lpx/fonctions/fichiers/HIDD_CreeFichier.htm");
+  SetCsh(22,"CreeVerrou",22,"scenario/lpx/fonctions/environnement/HIDD_CreeVerrou.htm");
+  SetCsh(23,"DeFormaterTemps",23,"scenario/lpx/fonctions/date/HIDD_DeFormaterTemps.htm");
+  SetCsh(24,"DescriptionErreurSQL",24,"scenario/lpx/fonctions/bd/HIDD_DescriptionErreurSQL.htm");
+  SetCsh(25,"DIV",25,"scenario/lpx/mots/HIDD_DIV.htm");
+  SetCsh(26,"EcritMemoire",26,"scenario/lpx/fonctions/environnement/HIDD_EcritMemoire.htm");
+  SetCsh(27,"EcritMemoireTerminal",27,"scenario/lpx/fonctions/environnement/HIDD_EcritMemoireTerminal.htm");
+  SetCsh(28,"EcritMessageErreur",28,"scenario/lpx/fonctions/environnement/HIDD_EcritMessageErreur.htm");
+  SetCsh(29,"EcritTerminal",29,"scenario/lpx/fonctions/terminal/HIDD_EcritTerminal.htm");
+  SetCsh(30,"EcritTerminalAvecNumero",30,"scenario/lpx/fonctions/terminal/HIDD_EcritTerminalAvecNumero.htm");
+  SetCsh(31,"EcritureFichier",31,"scenario/lpx/fonctions/fichiers/HIDD_EcritureFichier.htm");
+  SetCsh(32,"EmailEnvoi",32,"scenario/lpx/fonctions/email/HIDD_EmailEnvoi.htm");
+  SetCsh(33,"EmailEnvoiEx",33,"scenario/lpx/fonctions/email/HIDD_EmailEnvoiEx.htm");
+  SetCsh(34,"END",34,"scenario/lpx/mots/HIDD_END.htm");
+  SetCsh(35,"EnleveBlancs",35,"scenario/lpx/fonctions/chaines/HIDD_EnleveBlancs.htm");
+  SetCsh(36,"EOF",36,"scenario/lpx/type/HIDD_EOF.htm");
+  SetCsh(37,"ERREUR_CHAINE",37,"scenario/lpx/type/HIDD_ERREUR_CHAINE.htm");
+  SetCsh(38,"EstAlphaNumérique",38,"scenario/lpx/fonctions/booleennes/HIDD_EstAlphaNumerique.htm");
+  SetCsh(39,"EstBlanc",39,"scenario/lpx/fonctions/booleennes/HIDD_EstBlanc.htm");
+  SetCsh(40,"EstChiffreDecimal",40,"scenario/lpx/fonctions/booleennes/HIDD_EstChiffreDecimal.htm");
+  SetCsh(41,"EstChiffreHexadecimal",41,"scenario/lpx/fonctions/booleennes/HIDD_EstChiffreHexadecimal.htm");
+  SetCsh(42,"EstControle",42,"scenario/lpx/fonctions/booleennes/HIDD_EstControle.htm");
+  SetCsh(43,"EstEntier",43,"scenario/lpx/fonctions/booleennes/HIDD_EstEntier.htm");
+  SetCsh(44,"EstEntierPositif",44,"scenario/lpx/fonctions/booleennes/HIDD_EstEntierPositif.htm");
+  SetCsh(45,"EstGraphique",45,"scenario/lpx/fonctions/booleennes/HIDD_EstGraphique.htm");
+  SetCsh(46,"EstImprimable",46,"scenario/lpx/fonctions/booleennes/HIDD_EstImprimable.htm");
+  SetCsh(47,"EstMajuscule",47,"scenario/lpx/fonctions/booleennes/HIDD_EstMajuscule.htm");
+  SetCsh(48,"EstNumérique",48,"scenario/lpx/fonctions/booleennes/HIDD_EstNumerique.htm");
+  SetCsh(49,"EstPonctuation",49,"scenario/lpx/fonctions/booleennes/HIDD_EstPonctuation.htm");
+  SetCsh(50,"ExecuteOK",50,"scenario/lpx/fonctions/bd/HIDD_ExecuteOK.htm");
+  SetCsh(51,"ExecuteRequeteSQL",51,"scenario/lpx/fonctions/bd/HIDD_ExecuteRequeteSQL.htm");
+  SetCsh(52,"ExecuteRequeteSQLEx",52,"scenario/lpx/fonctions/bd/HIDD_ExecuteRequeteSQLEx.htm");
+  SetCsh(53,"EXIT",53,"scenario/lpx/mots/HIDD_EXIT.htm");
+  SetCsh(54,"ExtraitChaineNumDel",54,"scenario/lpx/fonctions/chaines/HIDD_ExtraitChaineNumDel.htm");
+  SetCsh(55,"ExtraitChainePosLong",55,"scenario/lpx/fonctions/chaines/HIDD_ExtraitChainePosLong.htm");
+  SetCsh(56,"ExtraitChainePosLongEx",56,"scenario/lpx/fonctions/chaines/HIDD_ExtraitChainePosLongEx.htm");
+  SetCsh(57,"ExtraitChaines",57,"scenario/lpx/fonctions/chaines/HIDD_ExtraitChaines.htm");
+  SetCsh(58,"FermeFichier",58,"scenario/lpx/fonctions/fichiers/HIDD_FermeFichier.htm");
+  SetCsh(59,"FermeReponseSQL",59,"scenario/lpx/fonctions/bd/HIDD_FermeReponseSQL.htm");
+  SetCsh(60,"FermeVerrou",60,"scenario/lpx/fonctions/environnement/HIDD_FermeVerrou.htm");
+  SetCsh(61,"FichierVersChaineEx",61,"scenario/lpx/fonctions/chaines/HIDD_FichierVersChaineEx.htm");
+  SetCsh(62,"FormaterTemps",62,"scenario/lpx/fonctions/date/HIDD_FormaterTemps.htm");
+  SetCsh(63,"FormaterTempsSysteme",63,"scenario/lpx/fonctions/date/HIDD_FormaterTempsSysteme.htm");
+  SetCsh(64,"FUNCTION",64,"scenario/lpx/mots/HIDD_FUNCTION.htm");
+  SetCsh(65,"GetEnv",65,"scenario/lpx/fonctions/systeme/HIDD_GetEnv.htm");
+  SetCsh(66,"GrandeChaine",66,"scenario/lpx/type/HIDD_GRANDECHAINE.htm");
+  SetCsh(67,"HtmlAligneDebut",67,"scenario/lpx/fonctions/html/HIDD_HtmlAligneDebut.htm");
+  SetCsh(68,"HtmlAligneFin",68,"scenario/lpx/fonctions/html/HIDD_HtmlAligneFin.htm");
+  SetCsh(69,"HtmlBoutonValide",69,"scenario/lpx/fonctions/html/HIDD_HtmlBoutonValide.htm");
+  SetCsh(70,"HtmlCaseCocher",70,"scenario/lpx/fonctions/html/HIDD_HtmlCaseCocher.htm");
+  SetCsh(71,"HtmlCentrerDebut",71,"scenario/lpx/fonctions/html/HIDD_HtmlCentrerDebut.htm");
+  SetCsh(72,"HtmlCentrerFin",72,"scenario/lpx/fonctions/html/HIDD_HtmlCentrerFin.htm");
+  SetCsh(73,"HtmlComment",73,"scenario/lpx/fonctions/html/HIDD_HtmlComment.htm");
+  SetCsh(74,"HtmlDebutJavaScript",74,"scenario/lpx/fonctions/html/HIDD_HtmlDebutJavaScript.htm");
+  SetCsh(75,"HtmlEtiquette",75,"scenario/lpx/fonctions/html/HIDD_HtmlEtiquette.htm");
+  SetCsh(76,"HtmlFichier",76,"scenario/lpx/fonctions/html/HIDD_HtmlFichier.htm");
+  SetCsh(77,"HtmlFichierBrut",77,"scenario/lpx/fonctions/html/HIDD_HtmlFichierBrut.htm");
+  SetCsh(78,"HtmlFinJavaScript",78,"scenario/lpx/fonctions/html/HIDD_HtmlFinJavaScript.htm");
+  SetCsh(79,"HtmlFormDebut",79,"scenario/lpx/fonctions/html/HIDD_HtmlFormDebut.htm");
+  SetCsh(80,"HtmlFormDebutNom",80,"scenario/lpx/fonctions/html/HIDD_HtmlFormDebutNom.htm");
+  SetCsh(81,"HtmlFormFin",81,"scenario/lpx/fonctions/html/HIDD_HtmlFormFin.htm");
+  SetCsh(82,"HtmlImage",82,"scenario/lpx/fonctions/html/HIDD_HtmlImage.htm");
+  SetCsh(83,"HtmlImageLien",83,"scenario/lpx/fonctions/html/HIDD_HtmlImageLien.htm");
+  SetCsh(84,"HtmlImageLienInterne",84,"scenario/lpx/fonctions/html/HIDD_HtmlImageLienInterne.htm");
+  SetCsh(85,"HtmlLigneFin",85,"scenario/lpx/fonctions/html/HIDD_HtmlLigneFin.htm");
+  SetCsh(86,"HtmlListeAjout",86,"scenario/lpx/fonctions/html/HIDD_HtmlListeAjout.htm");
+  SetCsh(87,"HtmlListeDebut",87,"scenario/lpx/fonctions/html/HIDD_HtmlListeDebut.htm");
+  SetCsh(88,"HtmlListeFin",88,"scenario/lpx/fonctions/html/HIDD_HtmlListeFin.htm");
+  SetCsh(89,"HtmlLitEnv",89,"scenario/lpx/fonctions/html/HIDD_HtmlLitEnv.htm");
+  SetCsh(90,"HtmlPageDebut",90,"scenario/lpx/fonctions/html/HIDD_HtmlPageDebut.htm");
+  SetCsh(91,"HtmlPageFin",91,"scenario/lpx/fonctions/html/HIDD_HtmlPageFin.htm");
+  SetCsh(92,"HtmlParagDebut",92,"scenario/lpx/fonctions/html/HIDD_HtmlParagDebut.htm");
+  SetCsh(93,"HtmlParagFin",93,"scenario/lpx/fonctions/html/HIDD_HtmlParagFin.htm");
+  SetCsh(94,"HtmlRadio",94,"scenario/lpx/fonctions/html/HIDD_HtmlRadio.htm");
+  SetCsh(95,"HtmlTableauCellule",95,"scenario/lpx/fonctions/html/HIDD_HtmlTableauCellule.htm");
+  SetCsh(96,"HtmlTableauCelluleDebut",96,"scenario/lpx/fonctions/html/HIDD_HtmlTableauCelluleDebut.htm");
+  SetCsh(97,"HtmlTableauCelluleDebutA",97,"scenario/lpx/fonctions/html/HIDD_HtmlTableauCelluleDebutA.htm");
+  SetCsh(98,"HtmlTableauCelluleFin",98,"scenario/lpx/fonctions/html/HIDD_HtmlTableauCelluleFin.htm");
+  SetCsh(99,"HtmlTableauCelluleLien",99,"scenario/lpx/fonctions/html/HIDD_HtmlTableauCelluleLien.htm");
+  SetCsh(100,"HtmlTableauDebut",100,"scenario/lpx/fonctions/html/HIDD_HtmlTableauDebut.htm");
+  SetCsh(101,"HtmlTableauDebutA",101,"scenario/lpx/fonctions/html/HIDD_HtmlTableauDebutA.htm");
+  SetCsh(102,"HtmlTableauFin",102,"scenario/lpx/fonctions/html/HIDD_HtmlTableauFin.htm");
+  SetCsh(103,"HtmlTableauLigneDebut",103,"scenario/lpx/fonctions/html/HIDD_HtmlTableauLigneDebut.htm");
+  SetCsh(104,"HtmlTableauLigneFin",104,"scenario/lpx/fonctions/html/HIDD_HtmlTableauLigneFin.htm");
+  SetCsh(105,"HtmlTexte",105,"scenario/lpx/fonctions/html/HIDD_HtmlTexte.htm");
+  SetCsh(106,"HtmlTexteASCII",106,"scenario/lpx/fonctions/html/HIDD_HtmlTexteASCII.htm");
+  SetCsh(107,"HtmlTexteBrut",107,"scenario/lpx/fonctions/html/HIDD_HtmlTexteBrut.htm");
+  SetCsh(108,"HtmlTexteBrutEx",108,"scenario/lpx/fonctions/html/HIDD_HtmlTexteBrutEx.htm");
+  SetCsh(109,"HtmlTexteLien",109,"scenario/lpx/fonctions/html/HIDD_HtmlTexteLien.htm");
+  SetCsh(110,"HtmlTexteLienA",110,"scenario/lpx/fonctions/html/HIDD_HtmlTexteLienA.htm");
+  SetCsh(111,"HtmlTexteLienInterne",111,"scenario/lpx/fonctions/html/HIDD_HtmlTexteLienInterne.htm");
+  SetCsh(112,"HtmlTitre",112,"scenario/lpx/fonctions/html/HIDD_HtmlTitre.htm");
+  SetCsh(113,"HtmlVideo",113,"scenario/lpx/fonctions/html/HIDD_HtmlVideo.htm");
+  SetCsh(114,"HtmlXml",114,"scenario/lpx/fonctions/html/HIDD_HtmlXml.htm");
+  SetCsh(115,"HtmlXmlLangue",115,"scenario/lpx/fonctions/html/HIDD_HtmlXmlLangue.htm");
+  SetCsh(116,"HtmlZoneCache",116,"scenario/lpx/fonctions/html/HIDD_HtmlZoneCache.htm");
+  SetCsh(117,"HtmlZoneMotPasse",117,"scenario/lpx/fonctions/html/HIDD_HtmlZoneMotPasse.htm");
+  SetCsh(118,"HtmlZoneSaisie",118,"scenario/lpx/fonctions/html/HIDD_HtmlZoneSaisie.htm");
+  SetCsh(119,"HtmlZoneTexte",119,"scenario/lpx/fonctions/html/HIDD_HtmlZoneTexte.htm");
+  SetCsh(120,"InserePosSousChaineEx",120,"scenario/lpx/fonctions/chaines/HIDD_InserePosSousChaineEx.htm");
+  SetCsh(121,"JourSemaineAnneeIso",121,"scenario/lpx/fonctions/date/HIDD_JourSemaineAnneeIso.htm");
+  SetCsh(122,"Langue",122,"scenario/lpx/fonctions/message/HIDD_Langue.htm");
+  SetCsh(123,"LectureFichier",123,"scenario/lpx/fonctions/fichiers/HIDD_LectureFichier.htm");
+  SetCsh(124,"LF",124,"scenario/lpx/type/HIDD_LF.htm");
+  SetCsh(125,"LibereVerrou",125,"scenario/lpx/fonctions/environnement/HIDD_LibereVerrou.htm");
+  SetCsh(126,"LitDateHeureMessage",126,"scenario/lpx/fonctions/terminal/HIDD_LitDateHeureMessage.htm");
+  SetCsh(127,"LitMemoire",127,"scenario/lpx/fonctions/environnement/HIDD_LitMemoire.htm");
+  SetCsh(128,"LitMemoireTerminal",128,"scenario/lpx/fonctions/environnement/HIDD_LitMemoireTerminal.htm");
+  SetCsh(129,"LitMessage",129,"scenario/lpx/fonctions/terminal/HIDD_LitMessage.htm");
+  SetCsh(130,"LitNiveauDebug",130,"scenario/lpx/fonctions/environnement/HIDD_LitNiveauDebug.htm");
+  SetCsh(131,"LitNomOrdinateur",131,"scenario/lpx/fonctions/systeme/HIDD_LitNomOrdinateur.htm");
+  SetCsh(132,"LitNomTraitementLPX",132,"scenario/lpx/fonctions/environnement/HIDD_LitNomTraitementLPX.htm");
+  SetCsh(133,"LitNumeroTerminal",133,"scenario/lpx/fonctions/terminal/HIDD_LitNumeroTerminal.htm");
+  SetCsh(134,"LitPeriphMessage",134,"scenario/lpx/fonctions/terminal/HIDD_LitPeriphMessage.htm");
+  SetCsh(135,"Majuscule",135,"scenario/lpx/fonctions/conversion/HIDD_Majuscule.htm");
+  SetCsh(136,"Longueur",136,"scenario/lpx/fonctions/chaines/HIDD_Longueur.htm");
+  SetCsh(137,"LongueurEx",137,"scenario/lpx/fonctions/chaines/HIDD_LongueurEx.htm");
+  SetCsh(138,"LOOP",138,"scenario/lpx/mots/HIDD_LOOP.htm");
+  SetCsh(139,"MAUVAIS_FICHIER",139,"scenario/lpx/type/HIDD_MAUVAIS_FICHIER.htm");
+  SetCsh(140,"Message",140,"scenario/lpx/fonctions/message/HIDD_Message.htm");
+  SetCsh(141,"MessageAjoute",141,"scenario/lpx/fonctions/message/HIDD_MessageAjoute.htm");
+  SetCsh(142,"MessageFormat1",142,"scenario/lpx/fonctions/message/HIDD_MessageFormat1.htm");
+  SetCsh(143,"MessageFormat2",143,"scenario/lpx/fonctions/message/HIDD_MessageFormat2.htm");
+  SetCsh(144,"MessageFormat3",144,"scenario/lpx/fonctions/message/HIDD_MessageFormat3.htm");
+  SetCsh(145,"MessageFormat4",145,"scenario/lpx/fonctions/message/HIDD_MessageFormat4.htm");
+  SetCsh(146,"MessageFormat5",146,"scenario/lpx/fonctions/message/HIDD_MessageFormat5.htm");
+  SetCsh(147,"MessageFormat6",147,"scenario/lpx/fonctions/message/HIDD_MessageFormat6.htm");
+  SetCsh(148,"MessageFormat7",148,"scenario/lpx/fonctions/message/HIDD_MessageFormat7.htm");
+  SetCsh(149,"MessageFormat8",149,"scenario/lpx/fonctions/message/HIDD_MessageFormat8.htm");
+  SetCsh(150,"MessageFormat9",150,"scenario/lpx/fonctions/message/HIDD_MessageFormat9.htm");
+  SetCsh(151,"MessageFormatN",151,"scenario/lpx/fonctions/message/HIDD_MessageFormatN.htm");
+  SetCsh(152,"MessageLangue",152,"scenario/lpx/fonctions/message/HIDD_MessageLangue.htm");
+  SetCsh(153,"MessageModifie",153,"scenario/lpx/fonctions/message/HIDD_MessageModifie.htm");
+  SetCsh(154,"MessageRazListe",154,"scenario/lpx/fonctions/message/HIDD_MessageRazListe.htm");
+  SetCsh(155,"MessageSupprime",155,"scenario/lpx/fonctions/message/HIDD_MessageSupprime.htm");
+  SetCsh(156,"Minuscule",156,"scenario/lpx/fonctions/conversion/HIDD_Minuscule.htm");
+  SetCsh(157,"MOD",157,"scenario/lpx/mots/HIDD_MOD.htm");
+  SetCsh(158,"NombreChampSQL",158,"scenario/lpx/fonctions/bd/HIDD_NombreChampSQL.htm");
+  SetCsh(159,"NombreReponseSQL",159,"scenario/lpx/fonctions/bd/HIDD_NombreReponseSQL.htm");
+  SetCsh(160,"NombreTexte",160,"scenario/lpx/type/HIDD_NOMBRETEXTE.htm");
+  SetCsh(161,"NOT",161,"scenario/lpx/mots/HIDD_NOT.htm");
+  SetCsh(162,"OR",162,"scenario/lpx/mots/HIDD_OR.htm");
+  SetCsh(163,"OuvreFichierEcriture",163,"scenario/lpx/fonctions/fichiers/HIDD_OuvreFichierEcriture.htm");
+  SetCsh(164,"OuvreFichierLecture",164,"scenario/lpx/fonctions/fichiers/HIDD_OuvreFichierLecture.htm");
+  SetCsh(165,"PetiteChaine",165,"scenario/lpx/type/HIDD_PETITECHAINE.htm");
+  SetCsh(166,"PositionFichier",166,"scenario/lpx/fonctions/fichiers/HIDD_PositionFichier.htm");
+  SetCsh(167,"PositionneVerrou",167,"scenario/lpx/fonctions/environnement/HIDD_PositionneVerrou.htm");
+  SetCsh(168,"PosSousChaine",168,"scenario/lpx/fonctions/chaines/HIDD_PosSousChaine.htm");
+  SetCsh(169,"PosSousChaineEx",169,"scenario/lpx/fonctions/chaines/HIDD_PosSousChaineEx.htm");
+  SetCsh(170,"PROCEDURE",170,"scenario/lpx/mots/HIDD_PROCEDURE.htm");
+  SetCsh(171,"Racine",171,"scenario/lpx/fonctions/numeriques/HIDD_Racine.htm");
+  SetCsh(172,"Random",172,"scenario/lpx/fonctions/numeriques/HIDD_Random.htm");
+  SetCsh(173,"Randomize",173,"scenario/lpx/fonctions/numeriques/HIDD_Randomize.htm");
+  SetCsh(174,"RC",174,"scenario/lpx/type/HIDD_RC.htm");
+  SetCsh(175,"RECORD",175,"scenario/lpx/mots/HIDD_RECORD.htm");
+  SetCsh(176,"ReelEnChaine",176,"scenario/lpx/fonctions/conversion/HIDD_ReelEnChaine.htm");
+  SetCsh(177,"ReelEnGrandeChaine",177,"scenario/lpx/fonctions/conversion/HIDD_ReelEnGrandeChaine.htm");
+  SetCsh(178,"RemplaceSousChaine",178,"scenario/lpx/fonctions/chaines/HIDD_RemplaceSousChaine.htm");
+  SetCsh(179,"RemplaceSousChaineEx",179,"scenario/lpx/fonctions/chaines/HIDD_RemplaceSousChaineEx.htm");
+  SetCsh(180,"Sleep",180,"scenario/lpx/fonctions/systeme/HIDD_Sleep.htm");
+  SetCsh(181,"SourceErreurSQL",181,"scenario/lpx/fonctions/bd/HIDD_SourceErreurSQL.htm");
+  SetCsh(182,"STOP",182,"scenario/lpx/mots/HIDD_STOP.htm");
+  SetCsh(183,"Str",183,"scenario/lpx/fonctions/conversion/HIDD_Str.htm");
+  SetCsh(184,"Strq",184,"scenario/lpx/fonctions/chaines/HIDD_Strq.htm");
+  SetCsh(185,"SupprimePosSousChaine",185,"scenario/lpx/fonctions/chaines/HIDD_SupprimePosSousChaine.htm");
+  SetCsh(186,"SupprimePosSousChaineEx",186,"scenario/lpx/fonctions/chaines/HIDD_SupprimePosSousChaineEx.htm");
+  SetCsh(187,"T_Fichier",187,"scenario/lpx/type/HIDD_T_FICHIER.htm");
+  SetCsh(188,"T_ParametresExtraction",188,"scenario/lpx/type/HIDD_T_PARAMETRES_EXTRACTION.htm");
+  SetCsh(189,"T_ParamLien",189,"scenario/lpx/type/HIDD_T_PARAMLIEN.htm");
+  SetCsh(190,"T_PropFichier",190,"scenario/lpx/type/HIDD_T_PROPFICHIER.htm");
+  SetCsh(191,"T_ReponseSQL",191,"scenario/lpx/type/HIDD_T_REPONSESQL.htm");
+  SetCsh(192,"T_ResultatExtraction",192,"scenario/lpx/type/HIDD_T_RESULTAT_EXTRACTION.htm");
+  SetCsh(193,"TempsSysteme",193,"scenario/lpx/fonctions/date/HIDD_TempsSysteme.htm");
+  SetCsh(194,"TresGrandeChaine",194,"scenario/lpx/type/HIDD_TRESGRANDECHAINE.htm");
+  SetCsh(195,"Val",195,"scenario/lpx/fonctions/conversion/HIDD_Val.htm");
+  SetCsh(196,"ValeurChamp",196,"scenario/lpx/fonctions/bd/HIDD_ValeurChamp.htm");
+  SetCsh(197,"VAR",197,"scenario/lpx/mots/HIDD_VAR.htm");
+  SetCsh(198,"WITH",198,"scenario/lpx/mots/HIDD_WITH.htm");
+  SetCsh(199,"XmlAttributEcrit",199,"scenario/lpx/fonctions/xml/HIDD_XmlAttributEcrit.htm");
+  SetCsh(200,"XmlAttributLit",200,"scenario/lpx/fonctions/xml/HIDD_XmlAttributLit.htm");
+  SetCsh(201,"XmlCree",201,"scenario/lpx/fonctions/xml/HIDD_XmlCree.htm");
+  SetCsh(202,"XmlEcrit",202,"scenario/lpx/fonctions/xml/HIDD_XmlEcrit.htm");
+  SetCsh(203,"XmlEfface",203,"scenario/lpx/fonctions/xml/HIDD_XmlEfface.htm");
+  SetCsh(204,"XmlElementAjoute",204,"scenario/lpx/fonctions/xml/HIDD_XmlElementAjoute.htm");
+  SetCsh(205,"XmlElementFils",205,"scenario/lpx/fonctions/xml/HIDD_XmlElementFils.htm");
+  SetCsh(206,"XmlElementFilsSuivant",206,"scenario/lpx/fonctions/xml/HIDD_XmlElementSuivant.htm");
+  SetCsh(207,"XmlElementPere",207,"scenario/lpx/fonctions/xml/HIDD_XmlElementPere.htm");
+  SetCsh(208,"XmlElementPositionne",208,"scenario/lpx/fonctions/xml/HIDD_XmlElementPositionne.htm");
+  SetCsh(209,"XmlElementPremier",209,"scenario/lpx/fonctions/xml/HIDD_XmlElementPremier.htm");
+  SetCsh(210,"XmlElementSupprime",210,"scenario/lpx/fonctions/xml/HIDD_XmlElementSupprime.htm");
+  SetCsh(211,"XmlLit",211,"scenario/lpx/fonctions/xml/HIDD_XmlLit.htm");
+  SetCsh(212,"XmlFerme",212,"scenario/lpx/fonctions/xml/HIDD_XmlFerme.htm");
+  SetCsh(213,"XmlFichierEcrit",213,"scenario/lpx/fonctions/xml/HIDD_XmlFichierEcrit.htm");
+  SetCsh(214,"XmlFichierLit",214,"scenario/lpx/fonctions/xml/HIDD_XmlFichierLit.htm");
+  SetCsh(215,"XmlFilsAjoute",215,"scenario/lpx/fonctions/xml/HIDD_XmlFilsAjoute.htm");
+  SetCsh(216,"XmlFilsPositionne",216,"scenario/lpx/fonctions/xml/HIDD_XmlFilsPositionne.htm");
+  SetCsh(217,"XmlFilsSupprime",217,"scenario/lpx/fonctions/xml/HIDD_XmlFilsSupprime.htm");
+  SetCsh(218,"XmlPositionInit",218,"scenario/lpx/fonctions/xml/HIDD_XmlPositionInit.htm");
+  SetCsh(219,"XmlReponseSQL",219,"scenario/lpx/fonctions/xml/HIDD_XmlReponseSQL.htm");
+  SetCsh(220,"XmlValeurLit",220,"scenario/lpx/fonctions/xml/HIDD_XmlValeurLit.htm");
+  SetCsh(221,"ExecuteRequeteLente",221,"scenario/lpx/fonctions/bd/HIDD_ExecuteRequeteLente.htm");
+  SetCsh(222,"ARRAY",222,"scenario/lpx/mots/HIDD_ARRAY.htm");
+  SetCsh(223,"ExecuteRequeteSQLExTC",223,"scenario/lpx/fonctions/bd/HIDD_ExecuteRequeteSQLExTC.htm");
+  SetCsh(224,"ASCIIEnCaractere",224,"scenario/lpx/fonctions/chaines/HIDD_ASCIIEnCaractere.htm");
+  SetCsh(225,"AttenteSaisie",225,"scenario/lpx/fonctions/terminal/HIDD_AttenteSaisie.htm");
+  SetCsh(226,"LitPortHttp",226,"scenario/lpx/fonctions/systeme/HIDD_LitPortHttp.htm");
+  SetCsh(227,"ProprieteFichier",227,"scenario/lpx/fonctions/fichiers/HIDD_ProprieteFichier.htm");
+  SetCsh(228,"EstAlphabetique",228,"scenario/lpx/fonctions/booleennes/HIDD_EstAlphabetique.htm");
+  SetCsh(229,"ReserveCanal",229,"scenario/lpx/fonctions/bd/HIDD_ReserveAccesBD.htm");
+  SetCsh(230,"ReserveCanalLent",230,"scenario/lpx/fonctions/bd/HIDD_ReserveCanalLent.htm");
+  SetCsh(231,"LibereCanal",231,"scenario/lpx/fonctions/bd/HIDD_LibereAccesBD.htm");
+  SetCsh(232,"ExecuteRequete",232,"scenario/lpx/fonctions/bd/HIDD_ExecuteRequeteSFAO.htm");
+  SetCsh(233,"ExecuteRequeteSQLTC",233,"scenario/lpx/fonctions/bd/HIDD_ExecuteRequeteSQLTC.htm");
+  SetCsh(234,"ExecuteRequeteTC",234,"scenario/lpx/fonctions/bd/HIDD_ExecuteRequeteTC.htm");
+  SetCsh(235,"ExecuteRequeteC",235,"scenario/lpx/fonctions/bd/HIDD_ExecuteRequeteC.htm");
+  SetCsh(236,"ExecuteRequeteSQLC",236,"scenario/lpx/fonctions/bd/HIDD_ExecuteRequeteSQLC.htm");
+  SetCsh(237,"ExecuteRequeteSQLExC",237,"scenario/lpx/fonctions/bd/HIDD_ExecuteRequeteSQLExC.htm");
+  SetCsh(238,"ExecuteRequeteSQLLente",238,"scenario/lpx/fonctions/bd/HIDD_ExecuteRequeteSQLLente.htm");
+  SetCsh(239,"ExecuteRequeteSQLExLente",239,"scenario/lpx/fonctions/bd/HIDD_ExecuteRequeteSQLExLente.htm");
+  SetCsh(240,"FormaterDateHeure",240,"scenario/lpx/fonctions/date/HIDD_FormaterDateHeure.htm");
+  SetCsh(241,"FormaterDuree",241,"scenario/lpx/fonctions/date/HIDD_FormaterDuree.htm");
+  SetCsh(242,"FormaterDate",242,"scenario/lpx/fonctions/date/HIDD_FormaterDate.htm");
+  SetCsh(243,"DeformaterDateHeure",243,"scenario/lpx/fonctions/date/HIDD_DeformaterDateHeure.htm");
+  SetCsh(244,"EcritMemoireUtilisateur",244,"scenario/lpx/fonctions/environnement/HIDD_EcritMemoireUtilisateur.htm");
+  SetCsh(245,"LitMemoireUtilisateur",245,"scenario/lpx/fonctions/environnement/HIDD_LitMemoireUtilisateur.htm");
+  SetCsh(246,"OuvreFenetre",246,"scenario/lpx/fonctions/fenetre/HIDD_OuvreFenetre.htm");
+  SetCsh(247,"FermeFenetre",247,"scenario/lpx/fonctions/fenetre/HIDD_FermeFenetre.htm");
+  SetCsh(248,"ImprimeEtat",248,"scenario/lpx/fonctions/impression/HIDD_ImprimeEtat.htm");
+  SetCsh(249,"ImprimeEtatEtAttend",249,"scenario/lpx/fonctions/impression/HIDD_ImprimeEtatEtAttend.htm");
+  SetCsh(250,"T_CanalBD",250,"scenario/lpx/type/HIDD_T_CanalBD.htm");
+  SetCsh(251,"T_Date",251,"scenario/lpx/type/HIDD_T_Date.htm");
+  SetCsh(252,"T_ScenarioExec",252,"scenario/lpx/type/HIDD_T_ScenarioExec.htm");
+  SetCsh(253,"DateTexte",253,"scenario/lpx/type/HIDD_DateTexte.htm");
+  SetCsh(254,"Test",254,"scenario/lpx/type/HIDD_Test.htm");
+  SetCsh(255,"Chaine4",255,"scenario/lpx/type/HIDD_Chaine4.htm");
+  SetCsh(256,"T_ErreurChaine",256,"scenario/lpx/type/HIDD_T_ErreurChaine.htm");
+  SetCsh(257,"T_RetourRenseigneSemaine",257,"scenario/lpx/type/HIDD_T_RetourRenseigneSemaine.htm");
+  SetCsh(258,"T_RetourAssocieSemaine",258,"scenario/lpx/type/HIDD_T_RetourAssocieSemaine.htm");
+  SetCsh(259,"T_Verrou",259,"scenario/lpx/type/HIDD_T_Verrou.htm");
+  SetCsh(260,"LENT",260,"scenario/lpx/type/HIDD_LENT.htm");
+  SetCsh(261,"RAPIDE",261,"scenario/lpx/type/HIDD_RAPIDE.htm");
+  SetCsh(262,"T_JourSemaine",262,"scenario/lpx/type/HIDD_T_JourSemaine.htm");
+  SetCsh(263,"T_Mois",263,"scenario/lpx/type/HIDD_T_Mois.htm");
+  SetCsh(264,"T_Xml",264,"scenario/lpx/type/HIDD_T_Xml.htm");
+  SetCsh(265,"GU",265,"scenario/lpx/type/HIDD_GU.htm");
+  SetCsh(266,"ESC",266,"scenario/lpx/type/HIDD_ESC.htm");
+  SetCsh(267,"CRLF",267,"scenario/lpx/type/HIDD_CRLF.htm");
+  SetCsh(268,"MODULE",268,"scenario/lpx/mots/HIDD_MODULE_LPX.htm");
+  SetCsh(269,"IF",269,"scenario/lpx/mots/HIDD_IF.htm");
+  SetCsh(270,"THEN",270,"module/scenario/lpx/mots/HIDD_IF.htm");
+  SetCsh(271,"ELSIF",271,"module/scenario/lpx/mots/HIDD_IF.htm");
+  SetCsh(272,"FOR",272,"scenario/lpx/mots/HIDD_FOR.htm");
+  SetCsh(273,"STEP",273,"module/scenario/lpx/mots/HIDD_FOR.htm");
+  SetCsh(274,"REPEAT",274,"scenario/lpx/mots/HIDD_REPEAT.htm");
+  SetCsh(275,"UNTIL",275,"module/scenario/lpx/mots/HIDD_REPEAT.htm");
+  SetCsh(276,"TYPE",276,"scenario/lpx/mots/HIDD_TYPE.htm");
+  SetCsh(277,"WHILE",277,"scenario/lpx/mots/HIDD_WHILE.htm");
+  SetCsh(278,"LstFctLpxGraph",278,"scenario/graphique/Liste_des_fonctions_LPX_Graphiques.htm");
+  SetCsh(279,"LINE",279,"module/fenetre/bouton/Trait.htm");
+  SetCsh(280,"RECT",280,"module/fenetre/bouton/Rectangle.htm");
+  SetCsh(281,"RECT_P",281,"module/fenetre/bouton/Rectangle_plein.htm");
+  SetCsh(282,"STR_S",282,"module/fenetre/bouton/Chaine_simple.htm");
+  SetCsh(283,"STR_M",283,"module/fenetre/bouton/Chaine_multilignes.htm");
+  SetCsh(284,"BOUT",284,"module/fenetre/bouton/Bouton.htm");
+  SetCsh(285,"EDIT",285,"module/fenetre/bouton/Edit.htm");
+  SetCsh(286,"EDIT_M",286,"module/fenetre/bouton/Edit_multi.htm");
+  SetCsh(287,"CHECK_B",287,"module/fenetre/bouton/Check_box.htm");
+  SetCsh(288,"RADIO_G",288,"module/fenetre/bouton/Radio_groupe.htm");
+  SetCsh(289,"TABL",289,"module/fenetre/bouton/Tableau.htm");
+  SetCsh(290,"HTML",290,"module/fenetre/bouton/Webbrowser.htm");
+  SetCsh(291,"LIST",291,"module/fenetre/bouton/Liste.htm");
+  SetCsh(292,"COMBO",292,"module/fenetre/bouton/Liste_tombante.htm");
+  SetCsh(293,"ZDRAW",293,"module/fenetre/bouton/Zone_de_dessin.htm");
+  SetCsh(294,"CR",294,"scenario/lpx/type/CR.htm");
+  SetCsh(295,"EcritMemoireIndex",295,"scenario/lpx/fonctions/environnement/HIDD_EcritMemoireIndex.htm");
+  SetCsh(296,"EcritIndexUtilisateur",296,"scenario/lpx/fonctions/environnement/HIDD_EcritMemoireIndexUtilisateurt.htm");
+  SetCsh(297,"LitMemoireIndex",297,"scenario/lpx/fonctions/environnement/LitMemoireIndex.htm");
+  SetCsh(298,"LitMemoireIndexUtilisateur",298,"scenario/lpx/fonctions/environnement/HIDD_LitMemoireIndexUtilisateur.htm");
+  SetCsh(299,"EcritMemoireIndexUtilisateur",299,"module/scenario/lpx/fonctions/environnement/HIDD_EcritMemoireIndexUtilisateurt.htm");
+  SetCsh(300,"AjouteScenarioTemp",300,"scenario/lpx/fonctions/scenario/HIDD_AjouteScenarioTemp.htm");
+  SetCsh(301,"EcritValRetour",301,"scenario/lpx/fonctions/scenario/HIDD_EcritValRetour.htm");
+  SetCsh(302,"ExecScenario",302,"scenario/lpx/fonctions/scenario/HIDD_ExecScenario.htm");
+  SetCsh(303,"LitParam",303,"scenario/lpx/fonctions/scenario/HIDD_LitParam.htm");
+  SetCsh(304,"LitValRetour",304,"scenario/lpx/fonctions/scenario/HIDD_LitValRetour.htm");
+  SetCsh(305,"SupprimeScenarioTemp",305,"scenario/lpx/fonctions/scenario/HIDD_SupprimeScenarioTemp.htm");
+  SetCsh(306,"AntiSlash",306,"scenario/lpx/type/AntiSlash.htm");
+  SetCsh(307,"Slash",307,"scenario/lpx/type/Slash.htm");
+  SetCsh(308,"TAB",308,"scenario/lpx/type/TAB.htm");
+  SetCsh(309,"CIRC",309,"module/fenetre/bouton/Ellipse.htm");
+  SetCsh(310,"CIRC_P",310,"module/fenetre/bouton/Ellipse_pleine.htm");
+  SetCsh(311,"NbMaxValeurMemoire",311,"scenario/lpx/fonctions/environnement/HIDD_NbMaxValeurMemoire.htm");
+  SetCsh(312,"IndexMaxMemoire",312,"scenario/lpx/fonctions/environnement/HIDD_IndexMaxMemoire.htm");
+  SetCsh(313,"EffaceMemoire",313,"scenario/lpx/fonctions/environnement/HIDD_EffaceMemoire.htm");
+  SetCsh(314,"EffaceMemoireIndex",314,"scenario/lpx/fonctions/environnement/HIDD_EffaceMemoireIndex.htm");
+  SetCsh(315,"MemoireExiste",315,"scenario/lpx/fonctions/environnement/HIDD_MemoireExiste.htm");
+  SetCsh(316,"MemoireReponseSQL",316,"scenario/lpx/fonctions/environnement/HIDD_MemoireReponseSQL.htm");
+  SetCsh(317,"ExecuteRequeteSQLBD",317,"scenario/lpx/fonctions/bd/HIDD_ExecuteRequeteSQLBD.htm");
+  SetCsh(318,"ExecuteRequeteSQLExBD",318,"scenario/lpx/fonctions/bd/HIDD_ExecuteRequeteSQLExBD.htm");
+  SetCsh(319,"QuartisMsgChemin",319,"scenario/lpx/fonctions/QuartisMessenger/HIDD_QuartisMsgChemin.htm");
+  SetCsh(320,"QuartisMsgEnvoieMessage",320,"scenario/lpx/fonctions/QuartisMessenger/HIDD_QuartisMsgEnvoieMessage.htm");
+  SetCsh(321,"QuartisMsgFermeReponse",321,"scenario/lpx/fonctions/QuartisMessenger/HIDD_QuartisMsgFermeReponse.htm");
+  SetCsh(322,"QuartisMsgligne",322,"scenario/lpx/fonctions/QuartisMessenger/HIDD_QuartisMsgLigne.htm");
+  SetCsh(323,"QuartisMsgLitMessage",323,"scenario/lpx/fonctions/QuartisMessenger/HIDD_QuartisMsgLitMessage.htm");
+  SetCsh(324,"QuartisMsgNombreReponse",324,"scenario/lpx/fonctions/QuartisMessenger/HIDD_QuartisMsgNombreReponse.htm");
+  SetCsh(325,"AttenteSaisieTempo",325,"scenario/lpx/fonctions/terminal/HIDD_AttenteSaisieTempo.htm");
+  SetCsh(326,"LitValAttenteSaisieTempo",326,"scenario/lpx/fonctions/terminal/HIDD_LitValAttenteSaisieTempo.htm");
+  SetCsh(327,"T_AttenteTempo",327,"scenario/lpx/type/HIDD_T_AttenteTempo.htm");
+  SetCsh(328,"T_ReponseQuartisMsg",328,"scenario/lpx/type/HIDD_T_ReponseQuartisMsg.htm");
+  SetCsh(329,"T_LigneQuartisMsg",329,"scenario/lpx/type/HIDD_T_LigneQuartisMsg.htm");
+  SetCsh(330,"EtatConnexion",330,"scenario/lpx/fonctions/bd/EtatConnexion.htm");
+  SetCsh(331,"SoumissionOk",331,"scenario/lpx/fonctions/bd/SoumissionOk.htm");
+  SetCsh(332,"OuvreURL",332,"scenario/lpx/fonctions/fenetre/HIDD_OuvreURL.htm");
+  SetCsh(333,"AjouterTemps",333,"scenario/lpx/fonctions/date/AjouterTemps.htm");
+  SetCsh(334,"OuvreFenetreUtilisateur",334,"scenario/lpx/fonctions/fenetre/OuvreFenetreUtilisateur.htm");
+  SetCsh(335,"FermeFenetreUtilisateur",335,"scenario/lpx/fonctions/fenetre/FermeFenetreUtilisateur.htm");
+  SetCsh(336,"ArretImprimeEtat",336,"scenario/lpx/fonctions/impression/HIDD_ArretImprimeEtat.htm");
+  SetCsh(337,"LitMemoireGroupe",337,"scenario/lpx/fonctions/environnement/HIDD_LitMemoireGroupe.htm");
+  SetCsh(338,"EcritMemoireGroupe",338,"scenario/lpx/fonctions/environnement/HIDD_EcritMemoireGroupe.htm");
+  SetCsh(339,"LitMemoireGroupeIndex",339,"scenario/lpx/fonctions/environnement/HIDD_LitMemoireGroupeIndex.htm");
+  SetCsh(340,"LitMemoireGroupeIndexUtilisateur",340,"scenario/lpx/fonctions/environnement/HIDD_LitMemoireGroupeIndexUtilisateur.htm");
+  SetCsh(341,"LitMemoireGroupeTerminal",341,"scenario/lpx/fonctions/environnement/HIDD_LitMemoireGroupeTerminal.htm");
+  SetCsh(342,"LitMemoireGroupeUtilisateur",342,"scenario/lpx/fonctions/environnement/HIDD_LitMemoireGroupeUtilisateur.htm");
+  SetCsh(343,"LitMemoireSystem",343,"scenario/lpx/fonctions/environnement/HIDD_LitMemoireSystem.htm");
+  SetCsh(344,"EcritMemoireGroupeIndex",344,"scenario/lpx/fonctions/environnement/HIDD_EcritMemoireGroupeIndex.htm");
+  SetCsh(345,"EcritMemoireGroupeIndexUtilisateur",345,"scenario/lpx/fonctions/environnement/HIDD_EcritMemoireGroupeIndexUtilisateur.htm");
+  SetCsh(346,"EcritMemoireGroupeTerminal",346,"scenario/lpx/fonctions/environnement/HIDD_EcritMemoireGroupeTerminal.htm");
+  SetCsh(347,"EcritMemoireGroupeUtilisateur",347,"scenario/lpx/fonctions/environnement/HIDD_EcritMemoireGroupeUtilisateur.htm");
+  SetCsh(348,"EcritMemoireSystem",348,"scenario/lpx/fonctions/environnement/HIDD_EcritMemoireSystem.htm");
+  SetCsh(349,"OuvreConsoleWeb",349,"scenario/lpx/fonctions/fenetre/HIDD_OuvreConsoleWeb.htm");
+  SetCsh(350,"FermeConsoleWeb",350,"scenario/lpx/fonctions/fenetre/HIDD_FermeConsoleWeb.htm");
+  SetCsh(351,"MemoireGroupeReponseSQL",351,"scenario/lpx/fonctions/environnement/HIDD_MemoireGroupeReponseSQL.htm");
+  SetCsh(352,"EffaceMemoireGroupe",352,"scenario/lpx/fonctions/environnement/HIDD_EffaceMemoireGroupe.htm");
+  SetCsh(353,"MemoireGroupeExiste",353,"scenario/lpx/fonctions/environnement/HIDD_MemoireGroupeExiste.htm");
+  SetCsh(354,"IndexMaxMemoireGroupe",354,"scenario/lpx/fonctions/environnement/HIDD_IndexMaxMemoireGroupe.htm");
+  SetCsh(355,"NbMaxValeurMemoireGroupe",355,"scenario/lpx/fonctions/environnement/HIDD_NbMaxValeurMemoireGroupe.htm");
+  SetCsh(356,"ExecuteSPC",356,"scenario/lpx/fonctions/spc/HIDD_ExecuteSPC.htm");
+  SetCsh(357,"OuvreSPC",357,"scenario/lpx/fonctions/spc/HIDD_OuvvreSPC.htm");
+  SetCsh(358,"FermeSPC",358,"scenario/lpx/fonctions/spc/HIDD_FermeSPC.htm");
+  SetCsh(359,"T_ParamSPC",359,"scenario/lpx/type/HIDD_T_ParamSPC.htm");
+  SetCsh(360,"EffaceMemoireUtilisateur",360,"scenario/lpx/fonctions/environnement/HIDD_EffaceMemoireUtilisateur.htm");
+  SetCsh(361,"MemoireReponseSQLUtilisateur",361,"scenario/lpx/fonctions/environnement/HIDD_MemoireReponseSQLUtilisateur.htm");
+  SetCsh(362,"IndexMaxMemoireUtilisateur",362,"scenario/lpx/fonctions/environnement/HIDD_IndexMaxMemoireUtilisateur.htm");
+  SetCsh(363,"ValeurChampEx",363,"scenario/lpx/fonctions/bd/HIDD_ValeurChampEx.htm");
+  SetCsh(364,"ReinitialiseConnexionBD",364,"scenario/lpx/fonctions/bd/HIDD_ReInitialiseConnexionBD.htm");
+  SetCsh(365,"FormaterTempsUTC",365,"scenario/lpx/fonctions/date/HIDD_FormaterTempsUTC.htm");
+  SetCsh(366,"FormaterTempsSystemeUTC",366,"scenario/lpx/fonctions/date/HIDD_FormaterTempsSystemeUTC.htm");
+  SetCsh(367,"TempsUTC",367,"scenario/lpx/fonctions/date/HIDD_TempsUTC.htm");
+  SetCsh(368,"DecalageUTC",368,"scenario/lpx/fonctions/date/HDD_DecalageUTC.htm");
+  SetCsh(369,"CommandeShellTempo",369,"scenario/lpx/fonctions/systeme/HIDD_CommandeShellTempo.htm");
+  SetCsh(370,"LitValAttenteTempo",370,"scenario/lpx/fonctions/systeme/HIDD_LitValAttenteTempo.htm");
+  SetCsh(371,"CopierFichier",371,"scenario/lpx/fonctions/fichiers/HIDD_CopierFichier.htm");
+  SetCsh(372,"SupprimerFichier",372,"scenario/lpx/fonctions/fichiers/HIDD_SupprimerFichier.htm");
+  SetCsh(373,"DeplacerFichier",373,"scenario/lpx/fonctions/fichiers/HIDD_DeplacerFichier.htm");
+  SetCsh(374,"ListeFichier",374,"scenario/lpx/fonctions/fichiers/HIDD_ListeFichier.htm");
+  SetCsh(375,"ReponseFichier",375,"scenario/lpx/fonctions/fichiers/HIDD_ReponseFichier.htm");
+  SetCsh(376,"ReponseListeFichier",376,"scenario/lpx/fonctions/fichiers/HIDD_ReponseListeFichier.htm");
+  SetCsh(377,"FermeReponseFichier",377,"scenario/lpx/fonctions/fichiers/HIDD_FermeReponseFichier.htm");
+  SetCsh(378,"LectureGrandFichier",378,"scenario/lpx/fonctions/fichiers/HIDD_LectureGrandFichier.htm");
+  SetCsh(379,"Chaine2048",379,"scenario/lpx/type/HIDD_Chaine2048.htm");
+  SetCsh(380,"FormaterDateTZEnUTC",380,"scenario/lpx/fonctions/date/HIDD_FormaterDateTZEnUTC.htm");
+  SetCsh(381,"DeformaterDateTZEnUTC",381,"scenario/lpx/fonctions/date/HIDD_DeformaterDateTZEnUTC.htm");
+  SetCsh(382,"DeformaterDateUTCEnTZ",382,"scenario/lpx/fonctions/date/HIDD_DeformaterDateUTCEnTZ.htm");
+  SetCsh(383,"DeformaterTempsUTC",383,"scenario/lpx/fonctions/date/HIDD_DeformaterTempsUTC.htm");
+  SetCsh(384,"DeltaDateTZUTC",384,"scenario/lpx/fonctions/date/HIDD_DeltaDateTZUTC.htm");
+  SetCsh(385,"FormaterDateUTCEnTZ",385,"scenario/lpx/fonctions/date/HIDD_FormaterDateUTCEnTZ.htm");
+  SetCsh(386,"HelpIdFromHTMLHelp_387073",386,"menu/affichage/AFX_HIDW_STATUS_BAR.htm");
+  SetCsh(387,"HelpIdFromHTMLHelp_123173",387,"menu/edition/HID_EDIT_PASTE.htm");
+  SetCsh(388,"HelpIdFromHTMLHelp_167840",388,"module/trace/HIDD_WORKSPACE_AFFICHAGE.htm");
+  SetCsh(389,"HelpIdFromHTMLHelp_131357",389,"application/HIDD_LISTE_DECLENCHEMENT.htm");
+  SetCsh(390,"HelpIdFromHTMLHelp_131338",390,"application/HIDD_LISTE_SCEN_COURS.htm");
+  SetCsh(391,"HelpIdFromHTMLHelp_131236",391,"module/base_de_donnees/HIDD_REQ_AJOUT_SIMPLE.htm");
+  SetCsh(392,"HelpIdFromHTMLHelp_131227",392,"module/trace/HIDD_MEMOIRE_CARACTERISTIQUES.htm");
+  SetCsh(393,"HelpIdFromHTMLHelp_131266",393,"module/utilisateur/HIDR_USER.htm");
+  SetCsh(394,"HelpIdFromHTMLHelp_102306",394,"menu/fenetre/HID_FENETRE_CLOSE_ALL.htm");
+  SetCsh(395,"HelpIdFromHTMLHelp_98366",395,"menu/zoom/HID_ZOOM_25.htm");
+  SetCsh(396,"HelpIdFromHTMLHelp_98324",396,"menu/element/HID_SUPPRIMER_ELEMENT.htm");
+  SetCsh(397,"HelpIdFromHTMLHelp_102345",397,"menu/edition/HIDD_SUPPRIMER.htm");
+  SetCsh(398,"HelpIdFromHTMLHelp_124929",398,"menu/affichage/HID_VIEW_STATUS_BAR.htm");
+  SetCsh(399,"HelpIdFromHTMLHelp_132638",399,"scenario/graphique/propriete/HIDD_PROPRIETES_TERMINAL.htm");
+  SetCsh(400,"HelpIdFromHTMLHelp_132636",400,"scenario/graphique/propriete/HIDD_PROPRIETES_FIN_BOUCLE.htm");
+  SetCsh(401,"HelpIdFromHTMLHelp_131302",401,"application/configuration/HIDD_CONF_FENETRE.htm");
+  SetCsh(402,"HelpIdFromHTMLHelp_131306",402,"module/utilisateur/HIDR_DRIVERS.htm");
+  SetCsh(403,"HelpIdFromHTMLHelp_131267",403,"module/declenchement/HIDR_DECLENCHEMENT.htm");
+  SetCsh(404,"HelpIdFromHTMLHelp_102320",404,"menu/affichage/HID_OUTPUT_AFFICHE.htm");
+  SetCsh(405,"HelpIdFromHTMLHelp_98386",405,"menu/application/HID_FILE_SAVE_ALL.htm");
+  SetCsh(406,"HelpIdFromHTMLHelp_98322",406,"menu/element/HID_OUVRIR_ELEMENT.htm");
+  SetCsh(407,"HelpIdFromHTMLHelp_131303",407,"application/configuration/HIDD_CONF_TRACE.htm");
+  SetCsh(408,"HelpIdFromHTMLHelp_131248",408,"scenario/graphique/propriete/HIDD_PROPRIETES_SAISIE.htm");
+  SetCsh(409,"HelpIdFromHTMLHelp_131217",409,"module/base_de_donnees/HIDD_REQ_TABLE_PROPRIETE.htm");
+  SetCsh(410,"HelpIdFromHTMLHelp_102319",410,"menu/affichage/HID_WORKSPACE_AFFICHE.htm");
+  SetCsh(411,"HelpIdFromHTMLHelp_102302",411,"menu/options/HID_OPTIONS_GRILLE.htm");
+  SetCsh(412,"HelpIdFromHTMLHelp_98392",412,"scenario/graphique/action/HID_ACTION_FIN_SCEN.htm");
+  SetCsh(413,"HelpIdFromHTMLHelp_98321",413,"menu/groupe/HID_NOUVEAU_ELEMENT.htm");
+  SetCsh(414,"HelpIdFromHTMLHelp_123177",414,"menu/edition/HID_EDIT_REPLACE.htm");
+  SetCsh(415,"HelpIdFromHTMLHelp_131342",415,"application/HIDD_IMPRIMER.htm");
+  SetCsh(416,"HelpIdFromHTMLHelp_131233",416,"module/generalite/HIDR_WORKSPACE_TYPE.htm");
+  SetCsh(417,"HelpIdFromHTMLHelp_131221",417,"scenario/HIDR_EDITEUR_LPX.htm");
+  SetCsh(418,"HelpIdFromHTMLHelp_98362",418,"menu/options/HID_OPTIONS_UNITE_MM.htm");
+  SetCsh(419,"HelpIdFromHTMLHelp_98326",419,"menu/module/HID_NOUVEAU_GROUPE.htm");
+  SetCsh(420,"HelpIdFromHTMLHelp_98309",420,"menu/application/HID_FICHIER_DECONNEXION.htm");
+  SetCsh(421,"HelpIdFromHTMLHelp_102344",421,"menu/edition/HID_EDIT_PASTE.htm");
+  SetCsh(422,"HelpIdFromHTMLHelp_132639",422,"scenario/graphique/propriete/HIDD_PROPRIETES_GROUPE.htm");
+  SetCsh(423,"HelpIdFromHTMLHelp_132632",423,"scenario/graphique/propriete/HIDD_PROPRIETES_OP_MEM.htm");
+  SetCsh(424,"HelpIdFromHTMLHelp_131235",424,"module/generalite/HIDD_NOM.htm");
+  SetCsh(425,"HelpIdFromHTMLHelp_131242",425,"module/fenetre/HIDR_FENETRE.htm");
+  SetCsh(426,"HelpIdFromHTMLHelp_131234",426,"module/generalite/HIDR_WORKSPACE_GROUPE.htm");
+  SetCsh(427,"HelpIdFromHTMLHelp_131229",427,"module/memoire/HIDR_MEMOIRE.htm");
+  SetCsh(428,"HelpIdFromHTMLHelp_102318",428,"menu/affichage/HID_RAFFRAICHIT_WORKSPACE.htm");
+  SetCsh(429,"HelpIdFromHTMLHelp_102315",429,"menu/application/HID_IMPRIMER_DOC_APPLI.htm");
+  SetCsh(430,"HelpIdFromHTMLHelp_98372",430,"menu/affichage/HID_AFFICHAGE_ORDRE_ARRIERE_PLAN.htm");
+  SetCsh(431,"HelpIdFromHTMLHelp_98329",431,"menu/groupe/HID_PROPRIETES_GROUPE.htm");
+  SetCsh(432,"HelpIdFromHTMLHelp_98389",432,"scenario/graphique/action/HID_ACTION_REQUETE.htm");
+  SetCsh(433,"HelpIdFromHTMLHelp_132633",433,"scenario/graphique/propriete/HIDD_PROPRIETES_FIN_SCEN.htm");
+  SetCsh(434,"HelpIdFromHTMLHelp_131358",434,"module/fenetre/Action/HIDD_ACTION_SCENARIO.htm");
+  SetCsh(435,"HelpIdFromHTMLHelp_102307",435,"menu/fenetre/HID_FENETRE_CLOSE.htm");
+  SetCsh(436,"HelpIdFromHTMLHelp_98339",436,"scenario/graphique/action/HID_ACTION_SAISIE.htm");
+  SetCsh(437,"HelpIdFromHTMLHelp_102298",437,"menu/module/HIDD_SECURITE_MODULE.htm");
+  SetCsh(438,"HelpIdFromHTMLHelp_123201",438,"menu/application/HID_APP_EXIT.htm");
+  SetCsh(439,"HelpIdFromHTMLHelp_123171",439,"menu/edition/HID_EDIT_CUT.htm");
+  SetCsh(440,"HelpIdFromHTMLHelp_132634",440,"scenario/graphique/propriete/HIDD_PROPRIETES_FAIRE.htm");
+  SetCsh(441,"HelpIdFromHTMLHelp_131339",441,"module/utilisateur/HIDR_TERMINAUX.htm");
+  SetCsh(442,"HelpIdFromHTMLHelp_131307",442,"module/etat/HIDR_ETAT.htm");
+  SetCsh(443,"HelpIdFromHTMLHelp_131222",443,"scenario/HIDR_GRAPHIQUE_LPX.htm");
+  SetCsh(444,"HelpIdFromHTMLHelp_98398",444,"scenario/graphique/action/HID_ACTION_GROUPE.htm");
+  SetCsh(445,"HelpIdFromHTMLHelp_98395",445,"scenario/graphique/action/HID_ACTION_FIN_BOUCLE.htm");
+  SetCsh(446,"HelpIdFromHTMLHelp_98391",446,"scenario/graphique/action/HID_ACTION_OP_MEM.htm");
+  SetCsh(447,"HelpIdFromHTMLHelp_98356",447,"menu/zoom/HID_ZOOM_150.htm");
+  SetCsh(448,"HelpIdFromHTMLHelp_98340",448,"scenario/graphique/action/HID_ACTION_AFFICHAGE.htm");
+  SetCsh(449,"HelpIdFromHTMLHelp_131277",449,"application/configuration/HIDD_CONF_GENERAL.htm");
+  SetCsh(450,"HelpIdFromHTMLHelp_123185",450,"menu/fenetre/HID_WINDOW_ARRANGE.htm");
+  SetCsh(451,"HelpIdFromHTMLHelp_123170",451,"menu/edition/HID_EDIT_COPY.htm");
+  SetCsh(452,"HelpIdFromHTMLHelp_131304",452,"application/configuration/HIDD_CONF_SECURITE.htm");
+  SetCsh(453,"HelpIdFromHTMLHelp_131213",453,"module/base_de_donnees/HIDD_REQ_AJOUT_TABLE.htm");
+  SetCsh(454,"HelpIdFromHTMLHelp_131208",454,"scenario/lpx/fonctions/bd/HIDD_ExecuteRequeteSQLExLente.htm");
+  SetCsh(455,"HelpIdFromHTMLHelp_102313",455,"menu/application/HID_SECURITE_APP.htm");
+  SetCsh(456,"HelpIdFromHTMLHelp_98393",456,"scenario/graphique/action/HID_ACTION_FAIRE.htm");
+  SetCsh(457,"HelpIdFromHTMLHelp_131360",457,"application/configuration/HIDD_LIST_EXTENSION_EXEC.htm");
+  SetCsh(458,"HelpIdFromHTMLHelp_102317",458,"menu/outils/HID_LST_USER_CONNECT.htm");
+  SetCsh(459,"HelpIdFromHTMLHelp_98374",459,"menu/affichage/HID_AFFICHAGE_ORDRE_RECULER.htm");
+  SetCsh(460,"HelpIdFromHTMLHelp_98369",460,"menu/options/HID_OPTIONS_PROPRIETES.htm");
+  SetCsh(461,"HelpIdFromHTMLHelp_98364",461,"menu/options/HID_OPTIONS_UNITE_PIXEL.htm");
+  SetCsh(462,"HelpIdFromHTMLHelp_131275",462,"module/base_de_donnees/HIDR_REQ_INSERT.htm");
+  SetCsh(463,"HelpIdFromHTMLHelp_387072",463,"menu/affichage/AFX_HIDW_TOOLBAR.htm");
+  SetCsh(464,"HelpIdFromHTMLHelp_123202",464,"menu/aide/HID_HELP_INDEX.htm");
+  SetCsh(465,"HelpIdFromHTMLHelp_131318",465,"scenario/graphique/propriete/HIDD_PROPRIETES_AFFICHAGE_HTML.htm");
+  SetCsh(466,"HelpIdFromHTMLHelp_131250",466,"scenario/graphique/propriete/HIDD_PROPRIETES_TEST.htm");
+  SetCsh(467,"HelpIdFromHTMLHelp_131172",467,"menu/aide/HID_APP_ABOUT.htm");
+  SetCsh(468,"HelpIdFromHTMLHelp_131231",468,"module/evenement/HIDR_EVT.htm");
+  SetCsh(469,"HelpIdFromHTMLHelp_98394",469,"scenario/graphique/action/HID_ACTION_TANT_QUE.htm");
+  SetCsh(470,"HelpIdFromHTMLHelp_98373",470,"menu/affichage/HID_AFFICHAGE_ORDRE_AVANCER.htm");
+  SetCsh(471,"HelpIdFromHTMLHelp_98360",471,"menu/zoom/HID_ZOOM_50.htm");
+  SetCsh(472,"HelpIdFromHTMLHelp_131325",472,"scenario/graphique/propriete/HIDD_PROPRIETES_IMPRIME_ETAT.htm");
+  SetCsh(473,"HelpIdFromHTMLHelp_123152",473,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(474,"HelpIdFromHTMLHelp_123153",474,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(475,"HelpIdFromHTMLHelp_123154",475,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(476,"HelpIdFromHTMLHelp_123155",476,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(477,"HelpIdFromHTMLHelp_123156",477,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(478,"HelpIdFromHTMLHelp_123157",478,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(479,"HelpIdFromHTMLHelp_123158",479,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(480,"HelpIdFromHTMLHelp_123159",480,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(481,"HelpIdFromHTMLHelp_123160",481,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(482,"HelpIdFromHTMLHelp_123161",482,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(483,"HelpIdFromHTMLHelp_123162",483,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(484,"HelpIdFromHTMLHelp_123163",484,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(485,"HelpIdFromHTMLHelp_123164",485,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(486,"HelpIdFromHTMLHelp_123165",486,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(487,"HelpIdFromHTMLHelp_123166",487,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(488,"HelpIdFromHTMLHelp_123167",488,"menu/fenetre/HID_FILE_MRU_FILE1.htm");
+  SetCsh(489,"HelpIdFromHTMLHelp_131337",489,"application/HIDD_ARRET_APPLICATION.htm");
+  SetCsh(490,"HelpIdFromHTMLHelp_131244",490,"module/trace/HIDD_GRAPHIQUE_LPX_CARACTERISTIQUES.htm");
+  SetCsh(491,"HelpIdFromHTMLHelp_131274",491,"module/base_de_donnees/HIDR_REQ_UPDATE.htm");
+  SetCsh(492,"HelpIdFromHTMLHelp_98341",492,"scenario/graphique/action/HID_ACTION_TEST.htm");
+  SetCsh(493,"HelpIdFromHTMLHelp_98328",493,"menu/groupe/HID_SUPPRIMER_GROUPE.htm");
+  SetCsh(494,"HelpIdFromHTMLHelp_131278",494,"application/configuration/HIDD_CONF_HTTP.htm");
+  SetCsh(495,"HelpIdFromHTMLHelp_123200",495,"menu/aide/HID_APP_ABOUT.htm");
+  SetCsh(496,"HelpIdFromHTMLHelp_102311",496,"menu/outils/HID_LST_SCENARIOS_COURS.htm");
+  SetCsh(497,"HelpIdFromHTMLHelp_98357",497,"menu/zoom/HID_ZOOM_100.htm");
+  SetCsh(498,"HelpIdFromHTMLHelp_98325",498,"menu/element/HID_PROPRIETES_ELEMENT.htm");
+  SetCsh(499,"HelpIdFromHTMLHelp_98330",499,"menu/groupe/HID_SECURITE_GRP.htm");
+  SetCsh(500,"HelpIdFromHTMLHelp_163906",500,"menu/edition/HIDD_SUPPRIMER.htm");
+  SetCsh(501,"HelpIdFromHTMLHelp_123139",501,"menu/application/HID_FILE_SAVE.htm");
+  SetCsh(502,"HelpIdFromHTMLHelp_167834",502,"menu/module/HIDD_SECURITE_MODULE.htm");
+  SetCsh(503,"HelpIdFromHTMLHelp_132635",503,"scenario/graphique/propriete/HIDD_PROPRIETES_TANT_QUE.htm");
+  SetCsh(504,"HelpIdFromHTMLHelp_131240",504,"module/trace/HIDD_FENETRE_CARACTERISTIQUES.htm");
+  SetCsh(505,"HelpIdFromHTMLHelp_131276",505,"module/base_de_donnees/HIDR_REQ_SELECT.htm");
+  SetCsh(506,"HelpIdFromHTMLHelp_131180",506,"module/base_de_donnees/HIDR_REQ_DELETE.htm");
+  SetCsh(507,"HelpIdFromHTMLHelp_98358",507,"menu/zoom/HID_ZOOM_75.htm");
+  SetCsh(508,"HelpIdFromHTMLHelp_98355",508,"menu/zoom/HID_ZOOM_200.htm");
+  SetCsh(509,"HelpIdFromHTMLHelp_98353",509,"menu/affichage/HID_AFFICHAGE_REGLES.htm");
+  SetCsh(510,"HelpIdFromHTMLHelp_98390",510,"scenario/graphique/action/HID_ACTION_FILTRAGE.htm");
+  SetCsh(511,"HelpIdFromHTMLHelp_123172",511,"menu/edition/HID_EDIT_FIND.htm");
+  SetCsh(512,"HelpIdFromHTMLHelp_132640",512,"scenario/graphique/propriete/HIDD_PROPRIETES_REQUETE.htm");
+  SetCsh(513,"HelpIdFromHTMLHelp_132637",513,"scenario/graphique/propriete/HIDD_PROPRIETES_SOUS_SCEN.htm");
+  SetCsh(514,"HelpIdFromHTMLHelp_131361",514,"application/configuration/HIDD_EXTENSION_EXEC.htm");
+  SetCsh(515,"HelpIdFromHTMLHelp_131317",515,"scenario/graphique/propriete/HIDD_PROPRIETES_AFFICHAGE_TEXT.htm");
+  SetCsh(516,"HelpIdFromHTMLHelp_131232",516,"module/generalite/HIDR_WORKSPACE_ELEMENT.htm");
+  SetCsh(517,"HelpIdFromHTMLHelp_102312",517,"menu/application/HID_APP_CONFIGURATION.htm");
+  SetCsh(518,"HelpIdFromHTMLHelp_102327",518,"menu/module/HID_IMPRESSION.htm");
+  SetCsh(519,"HelpIdFromHTMLHelp_102343",519,"menu/edition/HID_EDIT_COPY.htm");
+  SetCsh(520,"HelpIdFromHTMLHelp_131200",520,"afxcore/main_index.htm");
+  SetCsh(521,"HelpIdFromHTMLHelp_102314",521,"menu/application/HID_ARRET_APPLI.htm");
+  SetCsh(522,"HelpIdFromHTMLHelp_98396",522,"scenario/graphique/action/HID_ACTION_SOUS_SCEN.htm");
+  SetCsh(523,"HelpIdFromHTMLHelp_98367",523,"menu/scenario/HID_EXECUTE.htm");
+  SetCsh(524,"HelpIdFromHTMLHelp_98344",524,"menu/scenario/HID_COMPILATION_RECOMPILETOUT.htm");
+  SetCsh(525,"HelpIdFromHTMLHelp_132631",525,"scenario/graphique/propriete/HIDD_PROPRIETES_TEMPO.htm");
+  SetCsh(526,"HelpIdFromHTMLHelp_98397",526,"scenario/graphique/action/HID_ACTION_TERMINAL.htm");
+  SetCsh(527,"HelpIdFromHTMLHelp_98354",527,"menu/zoom/HID_ZOOM_500.htm");
+  SetCsh(528,"HelpIdFromHTMLHelp_98399",528,"scenario/graphique/action/HID_ACTION_IMPRIME_ETAT.htm");
+  SetCsh(529,"HelpIdFromHTMLHelp_131280",529,"application/configuration/HIDD_CONF_BD.htm");
+  SetCsh(530,"HelpIdFromHTMLHelp_98388",530,"scenario/graphique/action/HID_ACTION_TEMPO.htm");
+  SetCsh(531,"HelpIdFromHTMLHelp_132641",531,"scenario/graphique/propriete/HIDD_PROPRIETES_FILTRAGE.htm");
+
+
+//-->
+</script>
+<script language="javascript">
+<!--
+//Find CSH according to hash string after this page
+if (getHash().length > 0)
+{
+   // VH 05/16/00 now support 
+   // TopicID=
+   // TopicNumber=
+   // RemoteURL=   
+   // and WindowsOptions
+   // with the format #a=xxx,b=xxx,c=xxx...
+   var strHashString = getHash().toString();
+   // change ? to : for remote URL. because java applet have some problem to pass a URL with two : inside the URL so we changed it. 
+   // so here need to change it back.
+   strHashString = strHashString.substring(1,strHashString.length);
+   strHashString = strHashString.replace("%072%057%057", "://");
+   var nTopicNum = GetTopicNumber(strHashString);
+
+   if (nTopicNum != -1)
+   {
+      FindTopicByTopicNum(nTopicNum);
+   }
+   else
+   {
+      if (gstrURL.length > 0) 
+	RedirectTo(gstrURL);
+      else
+      	RedirectToHomePage();
+   }
+}
+else
+{
+   RedirectToHomePage();
+}
+//-->
+</script>
+<noscript>
+ <p> Your browser does not support JavaScript. WebHelp Context-Sensitive Help requires JavaScript support to run.</p>
+</noscript>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <display-name>Quartis-Pro-web 1.0.4</display-name>
+    <description></description>
+    <!--
+    <env-entry>
+        <env-entry-name>Quartis-Pro-auth-url</env-entry-name>
+        <env-entry-value>http://192.168.200.118:8084/quartispro-auth</env-entry-value>
+        <env-entry-type>java.lang.String</env-entry-type>
+    </env-entry>
+
+    <env-entry>
+        <env-entry-name>Quartis-Pro-console-url</env-entry-name>
+        <env-entry-value>http://192.168.200.118:8084/quartispro-console</env-entry-value>
+        <env-entry-type>java.lang.String</env-entry-type>
+    </env-entry>
+
+    <env-entry>
+        <env-entry-name>Quartis-Pro-groovy-url</env-entry-name>
+        <env-entry-value>http://192.168.200.118:8084/quartispro-groovy</env-entry-value>
+        <env-entry-type>java.lang.String</env-entry-type>
+    </env-entry>
+
+    <env-entry>
+        <env-entry-name>Quartis-Pro-tools-url</env-entry-name>
+        <env-entry-value>http://192.168.200.118:8084/quartispro-tools</env-entry-value>
+        <env-entry-type>java.lang.String</env-entry-type>
+    </env-entry>
+    -->
+    <filter>
+        <filter-name>CorsFilter</filter-name>
+        <filter-class>com.osys.quartistools.CORSFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CorsFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+     </filter-mapping>
+
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+</web-app>

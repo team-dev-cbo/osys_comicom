@@ -1,0 +1,14 @@
+WITH TYPES_DEFS;
+// reserve aux scenarios graphiques
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!! NE PAS UTILISER !!!!!!!
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+MODULE SG; C;
+
+FUNCTION	SgTestAction( p_idScen : Integer ; p_numAction : Integer ) RETURN BOOLEAN; 197 ;
+PROCEDURE	SgExecuteAction( p_idScen : Integer ; p_numAction : Integer ) ; 198 ;
+PROCEDURE	SgExecuteActionFin( p_idScen : Integer ; p_numAction : Integer ) ; 199 ;
+
+
+END SG;
+

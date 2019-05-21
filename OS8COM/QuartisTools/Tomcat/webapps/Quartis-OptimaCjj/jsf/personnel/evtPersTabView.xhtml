@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+    xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:osys="http://www.bodet-osys.com/facescomponents">
+<f:view locale="#{paramUrl.locale}">
+	<h:head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="EmulateIE8" />
+		<title>evtProduction</title>
+		
+		<!--  Developement mode : No concat and minify -->
+		
+	    <script type="text/javascript"
+			src="../../resources/js/primefaces-i18n.js"></script>
+		<script type="text/javascript"
+			src="../../resources/js/primeui-1.1-min.js"></script>
+	
+		<link rel="stylesheet" href="../../resources/css/primeui-1.1-min.css" />		
+
+        <link rel="stylesheet" href="../../resources/css/theme-cjj.css" />
+        <link rel="stylesheet" media="screen" href="../../resources/css/style.css" />
+        
+		<script type="text/javascript"
+			src="../../resources/js/primeui/button/button.js"></script>
+		<script type="text/javascript"
+			src="../../resources/js/primeui/dialog/dialog.js"></script>
+		<script type="text/javascript" 
+			src="../../resources/js/multitimeline.js"></script>
+		
+		<!-- Production Mode : Run Ant task ConcatAndMinify CSS and Javascript-->
+		 
+	    <!-- <link rel="stylesheet" href="../../resources/css/style.min.css" />
+		<script type="text/javascript" src="../../resources/js/scripts.min.js"></script> -->
+		
+	</h:head>
+	<h:body>
+		<!-- <h1>Hello World PrimeFaces </h1> -->
+		<!-- <h1>#{bundle['common.title']}</h1> -->
+
+		<p:tabView id="tabView" cache="false" dynamic="false" widgetVar="tabViewWdgt">
+		<p:ajax event="tabChange" listener="#{evtPersCorrController.onRefreshBackGroundGantt}" />
+			<!--  Onglet Recherche -->
+			<p:tab id="tabSearch" title="#{bundle['common.title.tab.search']}">
+				
+<!--  			<ui:include src="/jsf/production/evtProdSearchTab.xhtml" />  -->
+
+<!-- 			<p:ajaxStatus onstart="PF('statusDialogWdgtt').show();"
+					          onsuccess="PF('statusDialogWdgtt').hide();" />  -->
+					          			
+				<p:dialog id="idStatisDialogg" modal="true" widgetVar="statusDialogWdgtt"
+					header="#{bundle['common.information']}" draggable="false"
+					closable="false" resizable="false">
+					<h:form id="formDialogg">
+					  <h:panelGrid id="displayy" columns="2" cellpadding="4">
+						<h:graphicImage value="../../resources/img/design/ajaxloading.gif" />
+						<h:outputText value="#{bundle['common.process_running']}"
+							style="font-size:24px; color:blue;" />
+					  </h:panelGrid>
+					</h:form>
+				</p:dialog>
+					  
+  				<h:form id="formTabSearch" prependId="false">   
+
+					<!-- Si erreur a l'initialisation, affichage d'un message 
+					     parce que la popup s'affiche avant la fenetre -->
+ 					<h:outputText id="messErrorInit" style="color:red;" 
+ 								  value="#{evtPersCorrController.messInitManager.messErrorInit}" />
+ 					    
+<!--       			<p:messages id="messages" showDetail="true" autoUpdate="true" closable="true" />  -->   
+					<p:growl id="growlTabSearch" showSummary="false" showDetail="true" autoUpdate="true" sticky="false" 
+							 for="formTabSearch:tabSearch" life="2000" />
+
+					<!-- Panel des criteres de recherche -->
+					<p:panel id="pnlTabSearch" header="#{bundle['common.title.criteria']}" toggleable="false">
+<!--   		   	        <h:panelGrid columns="2" cellpadding="5"  style="margin-left: 200px;padding-left: 200px !important; border: 1px dashed blue;" > -->
+						<div id="criteriapart1">
+							<div class="listCriteria">
+								<h:outputLabel id="labelDateDebut" 
+								    value="#{bundle['common.criterion.date.begin']}:" />
+								<div class="calendarDiv">
+									<p:calendar id="criterionDateDebut" showOn="button"
+										pattern="#{bundle['common.format.date']}"
+										locale="#{evtPersCorrController.paramUrl.paramLocale}"
+										value="#{evtPersCorrController.evtPersViewModel.evtPersCorrCriteria.dateStart}" />
+								</div>
+							</div>
+									
+							<div class="listCriteria">
+								<h:outputLabel id="labelDateFin" 
+								    value="#{bundle['common.criterion.date.end']}:" />
+								<div class="calendarDiv">
+									<p:calendar id="criterionDateFin" showOn="button"
+										pattern="#{bundle['common.format.date']}"
+										locale="#{evtPersCorrController.paramUrl.paramLocale}"
+										value="#{evtPersCorrController.evtPersViewModel.evtPersCorrCriteria.dateEnd}" />
+								</div>
+							</div>
+									
+							<div class="listCriteria">
+								<h:outputLabel id="labelAtelier" 							
+								    value="#{bundle['common.criterion.equipe']}:" />
+								<p:selectOneMenu id="criterionAtelier"
+									value="#{evtPersCorrController.evtPersViewModel.evtPersCorrCriteria.equipe}"
+									converter="#{evtPersCorrController.equipeConverter}"
+									style="width: 150px">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtPersCorrController.evtPersViewModel.lstEquipe}"
+										var="equi" itemLabel="#{equi.desiEqui}"
+										itemValue="#{equi.codeEqui}" />
+								</p:selectOneMenu>
+							</div>
+									
+							<div class="listCriteria">
+								<h:outputLabel id="labelSectGeo"
+									value="#{bundle['common.criterion.secteur_geo']}:" />
+								<p:selectOneMenu id="criterionSectGeo"
+									value="#{evtPersCorrController.evtPersViewModel.evtPersCorrCriteria.sectionGeo}"
+									converter="#{evtPersCorrController.sectionGeoConverter}"
+									style="width: 150px">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtPersCorrController.evtPersViewModel.lstSecteurGeo}"
+										var="sectGeo" itemLabel="#{sectGeo.desiSectGeog}"
+										itemValue="#{sectGeo.codeSectGeog}" />
+								</p:selectOneMenu>
+							</div>
+						</div>	
+								
+						<div id="criteriaPart2">
+							<div class="listCriteria">
+								<h:outputLabel id="labelEtatPers" 							
+								    value="#{bundle['common.criterion.etat_pers']}:" />
+								<p:selectOneMenu id="criterionEtatPers"
+									value="#{evtPersCorrController.evtPersViewModel.evtPersCorrCriteria.etatPers}"
+									converter="#{evtPersCorrController.etatPersConverter}"
+									style="width: 150px">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtPersCorrController.evtPersViewModel.lstEtatPers}"
+										var="etatPers" itemLabel="#{etatPers.desiEtatPers}"
+										itemValue="#{equi.codeEtatPers}" />
+								</p:selectOneMenu>
+							</div>
+							<div class="listCriteria">
+								<h:outputLabel id="labelOf" 							
+									value="#{bundle['common.criterion.of']}:" />
+								<h:panelGroup id="groupAutoCompletedOf">
+									<p:autoComplete id="criterionOf"
+										value="#{evtPersCorrController.evtPersViewModel.evtPersCorrCriteria.ofListe}"
+										completeMethod="#{evtPersCorrController.completeOfListe}"
+										var="ofListe" itemLabel="#{ofListe.codeOfSite}"
+										itemValue="#{ofListe}"
+										converter="#{evtPersCorrController.ofListeConverter}"
+										forceSelection="false" maxResults="10" minQueryLength="1"
+										scrollHeight="250"> 
+										<p:ajax event="itemSelect" update="criterionOfOut" />
+										<p:ajax event="change" process="criterionOf"
+												update="criterionOfOut" />												
+										<p:column>
+											<h:outputText value="#{ofListe.codeOfSite}" />
+										</p:column>
+										<p:column>
+											<h:outputText value="#{ofListe.desiOf}" />
+										</p:column>
+									</p:autoComplete>
+									<h:outputText id="criterionOfOut"
+										value="#{evtPersCorrController.evtPersViewModel.evtPersCorrCriteria.ofListe.desiOf}" />
+								</h:panelGroup>
+							</div>
+							<div class="listCriteria">
+								<h:outputLabel id="labelCritMatr" for="critMatr"							
+											value="#{bundle['common.criterion.matricule']}:" />
+								<h:panelGroup id="criterionMatr">
+									<p:autoComplete id="critMatr"
+										value="#{evtPersCorrController.evtPersViewModel.evtPersCorrCriteria.pers}"
+										completeMethod="#{evtPersCorrController.completeMatricule}"
+										var="pers" itemLabel="#{pers.matrSite}"
+										itemValue="#{pers}"
+										converter="#{evtPersCorrController.personnelConverter}"
+										forceSelection="false" maxResults="10" minQueryLength="1"
+										scrollHeight="250">
+										
+										<p:ajax event="itemSelect" update="criterionMatrOut" />
+										<p:ajax event="change" process="critMatr" update="criterionMatrOut" />		
+												
+										<p:column>
+											<h:outputText value="#{pers.matrSite}" />
+										</p:column>
+										<p:column>
+											<h:outputText value="#{pers.pren} #{pers.nom}"  />
+										</p:column>
+									</p:autoComplete>
+									 <h:outputText id="criterionMatrOut"
+										value="#{evtPersCorrController.evtPersViewModel.evtPersCorrCriteria.pers.pren} #{evtPersCorrController.evtPersViewModel.evtPersCorrCriteria.pers.nom}" />	
+								</h:panelGroup>
+					
+							</div>
+							<div class="listCriteria">								
+								<p:commandButton id="bSearchEvtProd" 
+									value="#{bundle['common.button.refresh']}"
+									action="#{evtPersCorrController.onRefresh}"
+									update="formTabSearch:tableEvtPers"
+									class="commandButton btnOther" />
+							</div>
+						</div>																																				
+					</p:panel>
+
+					<!-- Liste des evenements pers -->
+					<div id="divTblEvtPers">
+						<p:dataTable id="tableEvtPers" var="evtPers"
+							widgetVar="evtPersDataTableWdgt"
+							value="#{evtPersCorrController.evtPersViewModel.lstEvtPers}"
+							selection="#{evtPersCorrController.evtPersViewModel.selectedEvtPers}"
+							selectionMode="single" rowKey="#{evtPers.id}"
+							emptyMessage="#{bundle['common.no_rows']}" paginator="true"
+						    rowsPerPageTemplate="5,10,15,20,25" rows="15" height="150" >
+
+							<f:facet name="header">#{bundle['pers.search.liste.title']}</f:facet>
+ 							
+<!-- 
+							<p:ajax event="rowSelect" listener="#{evtPersCorrController.onRowSelect}"/>
+							<p:ajax event="rowSelect" oncomplete="removeHighlight();" />							
+-->																																
+ 							<p:ajax event="rowDblselect" update=":tabView:pnlMultiTimeline,:tabView:pnlSearchGantt"  															
+ 								listener="#{evtPersCorrController.onRowDblClckSelect}" 		
+ 								oncomplete="initShowDialog();onInitRangeGanttPers()"
+ 								onstart="PF('statusDialogWdgtt').show();"	 									
+ 								onsuccess="PF('statusDialogWdgtt').hide();PF('tabViewWdgt').select(1)" />
+											
+<!--						
+		<p:ajax event="rowUnselect" listener="#{evtPersCorrController.onRowUnselect}"/>   
+		<p:ajax event="rowUnselect" listener="#{evtPersCorrController.onRowUnselect}" process="@this" update="@this"/>        				          				
+-->
+							<p:column id="columnDate">
+								<f:facet name="header">
+									<h:outputText value="#{bundle['pers.search.liste.date']}" />
+								</f:facet>
+								<h:outputText id="eltDate" value="#{evtPers.dateCale}">
+ 									<f:convertDateTime type="date" pattern="#{bundle['common.format.date']}" /> 															
+								</h:outputText>
+							</p:column>
+
+							<p:column id="columnEqui">
+								<f:facet name="header">
+									<h:outputText value="#{bundle['pers.search.liste.equipe']}" />
+								</f:facet>
+								<h:outputText id="eltEqui" value="#{evtPers.equi.desiEqui}" />
+							</p:column>
+							<p:column id="columnNom">
+								<f:facet name="header">
+									<h:outputText value="#{bundle['pers.search.liste.personnel']}" />
+								</f:facet>
+								<h:outputText id="eltNom" value="#{evtPers.pers.pren} #{evtPers.pers.nom}" />
+							</p:column>
+							<p:column id="columnEtatPers">
+								<f:facet name="header">
+									<h:outputText value="#{bundle['pers.search.liste.etatPers']}" />
+								</f:facet>
+								<h:outputText id="eltEtatPers" value="#{evtPers.etatPers.desiEtatPers}" />
+							</p:column>
+							<p:column id="columnOf">
+								<f:facet name="header">
+									<h:outputText value="#{bundle['pers.search.liste.of']}" />
+								</f:facet>
+<!-- 							<h:outputText id="elt6" value="#{evtPers.ofOper.pk.codeOf}" /> -->
+								<h:outputText id="eltOf" value="#{evtPers.ofOper.ofListe.codeOfSite}" />
+							</p:column>
+							<p:column id="columnOp">
+								<f:facet name="header">
+									<h:outputText value="#{bundle['pers.search.liste.op']}" />
+								</f:facet>
+								<h:outputText id="eltOp" value="#{evtPers.ofOper.pk.codeOper}" />
+							</p:column>
+							<p:column id="columnTpsPers">
+								<f:facet name="header">
+									<h:outputText value="#{bundle['pers.search.liste.dureeHch']}" />
+								</f:facet>
+								<h:outputText id="eltTpsPers" value="#{evtPers.tempsPers}" converter="#{evtPersCorrController.timeHchConverter}"/>								
+							</p:column>
+							<p:column id="columnQuanBonn">
+								<f:facet name="header">
+									<h:outputText value="#{bundle['pers.search.liste.quanBonne']}" />
+								</f:facet>
+								<h:outputText id="eltQuanBonn" value="#{evtPers.sumQuanBonn}" />
+							</p:column>
+							<p:column id="columnQuanRebu">
+								<f:facet name="header">
+									<h:outputText value="#{bundle['pers.search.liste.quanRebut']}" />
+								</f:facet>
+								<h:outputText id="eltQuanRebu" value="#{evtPers.sumQuanRebu}" />
+							</p:column>
+							<p:column id="columnCorr">
+								<f:facet name="header">
+									<h:outputText value="#{bundle['pers.search.liste.corr']}" />
+								</f:facet>
+								<div class="prodViewTableHeigth">
+<!-- 								<c:if test="#{evtPers.flagCorr.value} = 'true'"><h:outputText value="#{bundle['common.FlagValEnum.O']}" /></c:if>
+									<c:otherwise> <h:outputText value="#{bundle['common.FlagValEnum.N']}" /> </c:otherwise> -->
+									<h:outputText value="#{bundle['common.FlagValEnum.O']}" rendered="#{evtPers.flagCorr.value}" />
+ 									<h:outputText value="#{bundle['common.FlagValEnum.N']}" rendered="#{!evtPers.flagCorr.value}" />
+								</div>
+							</p:column>
+						</p:dataTable>
+					</div>										
+  				</h:form>    				  			
+			</p:tab>
+			
+			<!--  Onglet Gantt -->
+			<p:tab id="tabGantt" title="#{bundle['common.title.tab.gantt']}"
+				disabled="#{evtPersCorrController.multitimeline.disabled}">
+				<p:panel id="pnlSearchGantt" header="#{bundle['common.title.criteria']}" toggleable="true">	
+					<h:form id="formGantt">									
+						<h:panelGrid id="searchGantt" columns="8" cellpadding="10" >					
+							<h:outputLabel value="#{bundle['common.criterion.date.begin']}:"/>
+							<p:calendar id="ganttDateBegin" showOn="button"
+								pattern="#{bundle['common.format.date']}"
+								locale="#{evtPersCorrController.paramUrl.paramLocale}"
+								value="#{evtPersCorrController.evtPersViewModel.ganttPersCriteria.dateDebut}" />
+											
+							<h:outputLabel value="#{bundle['common.criterion.date.end']}:" />
+							<p:calendar id="ganttDateEnd" showOn="button"								
+								pattern="#{bundle['common.format.date']}"
+								locale="#{evtPersCorrController.paramUrl.paramLocale}"
+								value="#{evtPersCorrController.evtPersViewModel.ganttPersCriteria.dateFin}" />
+								
+      		       		   <h:outputLabel id="labelCritMatr" for="critMatr"							
+								value="#{bundle['common.criterion.matricule']}:" />
+							<h:panelGroup id="criterionMatr">
+								<p:autoComplete id="critMatr"
+									value="#{evtPersCorrController.evtPersViewModel.ganttPersCriteria.pers}"
+									completeMethod="#{evtPersCorrController.completeMatricule}"
+									var="pers" itemLabel="#{pers.matrSite}"
+									itemValue="#{pers}"
+									converter="#{evtPersCorrController.personnelConverter}"
+									forceSelection="false" maxResults="10" minQueryLength="1"
+									scrollHeight="250">
+										
+									<p:ajax event="itemSelect" update="criterionMatrOut" />
+									<p:ajax event="change" process="critMatr" update="criterionMatrOut" />		
+												
+									<p:column>
+										<h:outputText value="#{pers.matrSite}" />
+									</p:column>
+									<p:column>
+										<h:outputText value="#{pers.pren} #{pers.nom}"  />
+									</p:column>
+								</p:autoComplete>
+								<h:outputText id="criterionMatrOut"
+									value="#{evtPersCorrController.evtPersViewModel.ganttPersCriteria.pers.pren} #{evtPersCorrController.evtPersViewModel.ganttPersCriteria.pers.nom}" />	
+							</h:panelGroup> <br/>
+									
+							<p:commandButton id="btnSearchGantt" 
+								value="#{bundle['common.button.refresh']}"
+								actionListener="#{evtPersCorrController.onRefreshGantt}"
+								update=":tabView:pnlMultiTimeline"
+								oncomplete="initShowDialog();onInitRangeGanttPers()"
+								onstart="PF('statusDialogWdgt').show();"
+								onsuccess="PF('statusDialogWdgt').hide();PF('tabViewWdgt').select(1);"
+								class="commandButton btnOther" />													
+						</h:panelGrid>		
+					</h:form>							
+   				</p:panel>
+  				<p:panel id="pnlMultiTimeline" header="Selection"> 
+					<osys:multiTimelinePers id="osysMultitimeline" List_P="#{evtPersCorrController.multitimeline.modelP}"
+						List_POP="#{evtPersCorrController.multitimeline.modelPOP}"							
+						start="#{evtPersCorrController.multitimeline.start}" 
+						end="#{evtPersCorrController.multitimeline.end}"
+						groupsWidth="175px" showNavigation="true" editable="true" showButtonNew="true"
+						locale="fr" zoomable="true" axisOnTop="true" stackEvents="false"
+						themable="false" />
+ 				</p:panel>   
+			</p:tab>
+		</p:tabView>
+	</h:body>
+</f:view>
+</html>
+

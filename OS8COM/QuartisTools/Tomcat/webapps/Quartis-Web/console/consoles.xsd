@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="consoles" type="XmlConsoles" />
+    <xsd:complexType name="XmlConsoles">
+        <xsd:sequence>
+            <xsd:element name="title" type="xsd:string" />
+            <xsd:element name="description" type="xsd:string" />
+            <xsd:element name="console" type="XmlConsole" minOccurs="1" maxOccurs="unbounded" />
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="XmlConsole">
+        <xsd:sequence>
+            <xsd:element name="title" type="xsd:string" />
+            <xsd:element name="description" type="xsd:string" />
+            <xsd:element name="url">
+                <xsd:complexType>
+                    <xsd:simpleContent>
+                        <xsd:extension base="xsd:string">
+                            <xsd:attribute name="locale-param" type="xsd:string" use="optional"/>
+                        </xsd:extension>
+                    </xsd:simpleContent>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:string" use="required" />
+        <xsd:attribute name="x" type="xsd:int" use="required" />
+        <xsd:attribute name="y" type="xsd:int" use="required" />
+        <xsd:attribute name="width" type="xsd:int" use="required" />
+        <xsd:attribute name="height" type="xsd:int" use="required" />
+        <xsd:attribute name="resizable" type="xsd:boolean" default="false" />
+        <xsd:attribute name="open-mode" type="xsd:string" default="normal" />
+        <xsd:attribute name="title-bar" type="xsd:boolean" default="true" />
+        <xsd:attribute name="modal" type="xsd:boolean" default="false" />
+        <xsd:attribute name="always-on-top" type="xsd:boolean" default="false" />
+    </xsd:complexType>
+</xsd:schema>

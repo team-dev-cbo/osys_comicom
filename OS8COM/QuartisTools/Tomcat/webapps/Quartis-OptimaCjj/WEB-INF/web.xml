@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <description> 
+QuartisAppsCJJ 1.0.0.B 2014 28 11 : Creation du projet ....  		
+QuartisAppsCJJ 1.0.0   2015 02 09 : Formulaire de correction pour les machines et les utilisateurs  	
+QuartisAppsCJJ 1.0.1   2015 05 20 : HoraireMachOuverture un Matr a ete ajoute au lieu d'un lien sur CODE_MACH
+		Modif Table : Change taille champ Flag de 255 a 1
+		Erreur Hibernate : Erreur modification dans le gantt non pris en compte 
+QuartisAppsCJJ 1.0.2   2015 10 12 :		
+		JRE8 : Impossible d'afficher le gantt 	
+        Lors de la modification et de la sauvegarde d'un événement de type &quot;Prod OF&quot; on renseignait pas les données modifiés pour tout les OF/OP comprenant cet événement, on ne pouvait modifier finalement que la date.
+        Si le delta en base était différent de celui renseigné dans l'application, les modification d'une données entraînait une duplication (la date de début étant une clé primaire, elle était différente vu que le delta l'était), on récupère désormais le delta de l’événement modifié. (Fait pour tout les formulaires)
+        Suppression de secteur analytique obligatoire pour les formulaires de type personnel.	
+        Correction sur l'alimentation des champs a types auto-complétion pour les matricules, on prend désormais bien en compte les lettre que peut taper l'utilisateur (avant on prenait en permanence les 10 premières personnes sans ce soucier du reste)
+        Ajout d'une nouveau filtre sur le les événements personnel afin de pouvoir filtrer par le matricule, (L'ancien filtre qui est présent une fois qu'on a choisi un événement sur la page des Gantt n'a pas été enlevé et fonctionne aussi)
+        Correction sur les événements personnel : Le delta n'était pas pris en compte pour récupérer le dernier événement et bloquer la modification sur celui-ci, on récupère désormais le bon événement et sa ne bloquera plus sur des événements antérieurs
+        Même correction que ci-dessus sur les événement de type &quot;Prod&quot;, correction d'un autre bug qui permettaient dans certains cas de modifier le dernier événement sur les 3 types de Gantt.
+        Pour le Gantt &quot;Prod OF/OP&quot;, on obligeait que le champ du secteur soit renseigné alors qu'en base le client n'en avait pas forcément, ce blocage a donc été enlevé pour ne pas bloquer l'utilisateur.		 
+QuartisAppsCJJ 1.0.3   2015 11 02 :
+		Personnel :
+			Bouton « Ajouter » dans le module Personnel : Affiche le matricule de l'utilisateur
+			Algo : Lorsqu'on ajoute un evenement personnel X a l'interieur d'un evenement Y, la fin de l'evenement Y est supprime alors qu'il devrait s'afficher
+			Gantt : Lorsqu'on ajoutait un nouvel OF, il ne s'affichait pas dans le gantt
+			        Lorsqu'on modifie l'etat personnel d'un OF, l'OF gardait son ancien etat.
+			        Lorsqu'on a 2 etats personnels (avec Evt1.dateFin = Evt2.DateDebut) ayant des machines differentes et le meme OF (codeOF, codeOper et codeArti identiques)). 
+			        	Dans la liste des OFs, il n'y avait qu'un OF d'afficher alors qu'il devrait y en avoir deux (puisque les machines sont differentes)
+QuartisAppsCJJ 1.0.4   2015 11 12 :
+		Formulaire Evenement Prod : 
+			Si on avance la date de debut du dernier evenement, impossible de le modifier.(Message d'erreur = &quot;La date de fin est non modifiable sur le dernier evenemet&quot;)
+			OF/Oper : Affichage de la designation de l'OF, l'Operation et l'article
+			          Dans la combobox, si on change le code de l'of, on affiche le code de la premiere operation et le code de l'article
+			Operateur : Lors de la creation d'un OF, les donnees sur l'atelier ou le secteur geographique ou analytique n'etaient pas pris en compte            
+			          
+		Formulaire Evenement Pers :
+			Si l'equipement est vide, on met le code a &quot;-&quot; au lieu de vide.
+			OF/Oper : Affichage de la designation de l'OF, l'Operation et l'article
+			          Dans la combobox, si on change le code de l'of, on affiche le code de la premiere operation et le code de l'article
+			          
+QuartisAppsCJJ 1.0.5   2015 11 27 : 
+		Enleve le site a l'affichage du code (Affichage 'codeOfSite' au lieu 'codeOF' et 'codeMatrSite' au lieu 'codeMatr')
+		EvtOFOper : Si un evenement machine (ou personnel) possede plusieurs ofs, si on valide sans changer l'etat, les etats de la liste des ofs prennent la valeur de l'etat affiche dans la fenetre
+		Restauration des donnees : Lorsque des evenements sont rajoutes dans la journee apres une modification, si on annule les modifications de la journee, les evenements ajoutes sont supprimes puisqu'ils ne sont pas dans la table de sauvegarde.
+		EvtOFOperPers et EvtOFOPerProdPers : Affichage de l'equipe dans la liste des Ofs et impossible de selectionner certaines listes
+
+		Formulaire Evenement Pers :
+			Restauration des donnees : Enleve le critere sur la machine sinon les evenements personnels qui sont dans la plage d'horaire de sauvegarde
+			    mais qui n'ont pas le meme codeMach ne sont pas sauvegardes dans la base. Lors de la restauration, ils ne sont pas remis.
+			Impossible d'avancer la date de debut du dernier evenement etat personnel.
+			Impossible de reculer la date de fin de l'avant dernier evenement entre le dernier evenement etat personnel.
+			Affiche un autre message d'erreur lorsque la date de fin de l'evenement selectionne depasse la date de fin du dernier evenement.
+			Ajout EtatPers: Le delta n'etait pas renseigne (=0) au lieu de mettre le delta du parametre passe dans l'url
+			EvtEtatPers : Il manquait la gestion du changement de machine lorsqu'on ajoute ou modifie un evenement etat personnel (Algo)
+			EvtOfPers : Si on changeait plusieurs fois la machine et si on annule les modifications, on ne retrouvait pas l'état initiale.
+			
+QuartisAppsCJJ 1.0.6   2015 12 15 :
+			Superposition des lignes personnels lors d'un zoom. L'affichage devient alors illisible (mantis 3216) (Change version primefaces (5.0 a 5.3) et extensions (2.0.0 a 4.0.0))
+			Formulaire Evt Machine :
+			    EvtOfOper : Pour rechercher la liste des evts qui chevauche le nouvel evtOF, on ajoute en plus du critere codeOF/Oper/Arti le critere '-' pour pouvoir eviter un chevauchement entre l'evtEtat avec un of et un evtEtat sans of  
+				Algo : Dans la liste des evts qui chevauche EvtOfOper, si pkEvtOfOper est different pkEvtOri, l'evtOri n'etait pas supprime
+				Lorsqu'on ajoute un nouvel evtOfOper, de temps en temps deltHeurUtc = 0 ce qui pose des problemes si on modifie les dates. Le deltaheurUtcDebutProd ou deltHeurUtcFinProd = 0 au lieu 3600 ou 7200 ce qui provoque un mauvais calcul des dates et un trou dans l'affichage du gantt.
+			Formulaire Evt personnel :
+				Ajout : Le deltheurUtc = 0 ce qui peut peut-etre poser des problemes
+				Restauration : Si augmente la date de fin du dernier evtPersOf de la journee. Si on annule les corrections, l'evt reste dans la base de donnees parce que sa dateFin > dateFin du dernier evt sauvegarde. 
+				               Si la date de debut de l'evt n'a pas ete modifie, impossible de remettre l'evt de la sauvegarde parce ce qu'il y a erreur de cle primaire.
+				               Sinon, l'evt corrige reste affiche dans le gantt 				    
+							   
+QuartisAppsCJJ 1.0.7   2016 02 11 :
+		
+		General : Pour toutes les listes autocompleted (OF/Oper/Article/Matricule), on limite a afficher au maximum les 15 premier elements trouves
+
+		Gantt : Lors d'un ajout, la date qui s'affiche est celle d'aujourd'hui et non pas celle présente dans les filtres
+		        Afficher les durees en H.ch au lieu de seconde
+		        Restauration : Annulation des modifications par equipe
+		        Liste des evenements OfOper : Ajoute la colonne Correction (Affichage d'un crayon s'il y a eu une correction)
+		        
+		Formulaire Prod : 
+			Suppression de l'evenement OfOper et Operateur lie a une machine
+			Libelle du gantt Operateur : On n'affiche pas le code du site avec le code de l'of (on affiche codeOfSite au lieu du codeOf)
+			Evenement personnel qui disparait lors de la modification de l'evenement machine correspondant
+			Si le dernier evenement du gantt est un evenement OfOper, on ne pouvait pas modifier ses quantites. (mantis 3273 et 3248)
+			Lorsqu’on ajoute un operateur, si on modifie les dates, la duree restait a zero au lieu d'etre automatiquement recalculee
+			EtatMachine - Ajout - Lorsqu'on clic sur le bouton 'Réinitialiser', certaines donnees ne sont pas remis a vide
+			On selectionne un evtOfOper et on change l'OF. Si on ne gere pas le changement d'equipe (codeEqui='-'), un nouvel evenement ofOper etait cree alors que les codes equipes du nouvel evt et du precedent sont identiques (=&quot;-&quot;). Le flag de correction du nouvel evt n'etait pas mis a oui. 			
+			
+		Formulaire Pers : Suppression de l'evenement OF
+			Algo : Si on cree un nouvel evtPers sur une plage horaire vide, lorsqu'on annulait la modification, l'evtPers n'etait pas supprime
+			       Si on ajoute un nouvel evtPers, comme il existe des trous dans la table horairePersOuverture, l'evt n'etait pas coupe en plusieurs evt   
+
+
+QuartisAppsCJJ 1.0.8   2016 05 09 :
+		Formulaire Prod : 
+			Dans la fenetre &quot;Ajouter un OfOper ou un OfOperPers&quot;, on affiche en automatique l'equipement (identique a celui du critere de recherche), son atelier, son secteur geog et anal
+			mantis 3302 : Manque Date Calendrier lors d'une modification d'evenement
+		Formulaire Pers:
+			mantis 3297 : Erreur lors de la modification d'un evenement personnel. Si un evtOfOper est a cote d'un evt sans of. Si on augmente la date de fin l'evenement ofoper, le deuxieme evt reste et il y a chevauchement.
+			Gestion Date Calendrier lors d'une modification d'evenement
+			   
+QuartisAppsCJJ 1.0.9 2016 09 15 :
+	Debug conflit de librairie (log4j-over-slf4j) :
+		Enlever la librairie log4j-over-slf4j-1.6.4.jar dans les librairies embarquées (pour éviter conflit de lib)
+		
+QuartisAppsCJJ 1.0.10 2017 03 10 :
+	Création de la branche 1.0.10
+	Formulaire Pers:	
+		Mantis 3727 : GanttPers - Si on augmente un evt OF et que l'evt a cote n'a pas d'equipement, le secteur analytique, geographique et code atelier de l'evt OF etait modifie. Si NumeLot est null, on ne met plus le '-' a la place. 
+		Gantt Pers - Si on augmente un evt etat (qui a un equipement) et que l'evt a cote n'a pas d'equipement, les donnees de la quantite bonne, cadence theo de l'evt corrige etaient erronees
+		Gantt Pers et Prod : Initialisation du gantt a la date du jour
+	Formulaire Prod:	
+		Mantis 3411 - Correction JourJ Prod - Pas possible d'ajouter une personne s'il n'existe pas d'evt dans la table evtPersHisto ou que le nouvel evt depasse le dernier evtPers (pour un matricule donne)
+		Mantis 3718 - Probleme d'affichage du gantt si dans le libellé à gauche il y avait un caractère spécifique par exemple le double cote (&quot;)
+	Formulaire Prod et Pers:	
+		Base de donnees Parker2, lorsqu'on modifiait le code de l'of dans la liste autocompleted des ofs, la liste mettait du temps a s'afficher. La requete mettait du temps parce qu'on chargeait pour chaque of la liste des operations. Maintenant, on ne charge plus les operations.       
+  
+Quartis-OptimaCjj 1.0.11/1.0.1 2017 09 18 :
+	Création de la branche 1.0.11
+	Formulaire Prod :
+		Mantis 3788 : Les champs de type autocomplétion ne fonctionnait pas correctement et ne remplissait pas en fonction de la donnée entrée par l'utilisateur
+	Formulaire Perds :
+		Mantis 3788 : Les champs de type autocomplétion ne fonctionnait pas correctement et ne remplissait pas en fonction de la donnée entrée par l'utilisateur
+		Mantis 3727 : Perte du code atelier, secteur analytique et secteur géographique a l'enregistrement
+	Changement du nom du projet en Quartis-OptimaCjj
+	Renommage de QuartisDictionnary en Quartis-Dictionnary
+	
+Quartis-OptimaCjj 2.0.0 :
+	Formulaire Prod et Pers :
+		Mantis 3807 : Mise a jour de la quantité en fonction de la qte bonne et rebutée
+		Mantis 3867 : Correction problème de traduction des libellés date de début / date de fin
+		
+	Formulaire pers : Correction perte de données atelier, secteur géographique, secteur analytique
+  </description>
+  <display-name>Quartis-OptimaCjj 2.0.0</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  <context-param>
+    <param-name>javax.faces.FACELETS_LIBRARIES</param-name>
+    <param-value>/WEB-INF/osys.taglib.xml</param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>Faces Servlet</servlet-name>
+    <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Faces Servlet</servlet-name>
+    <url-pattern>/faces/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Faces Servlet</servlet-name>
+    <url-pattern>*.xhtml</url-pattern>
+  </servlet-mapping>
+  <session-config>
+    <session-timeout>45</session-timeout>
+  </session-config>
+  <context-param>
+    <description>State saving method: 'client' or 'server' (=default). See JSF Specification 2.5.2</description>
+    <param-name>javax.faces.STATE_SAVING_METHOD</param-name>
+    <param-value>client</param-value>
+  </context-param>
+  <context-param>
+    <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+    <param-value>resources.application</param-value>
+  </context-param>
+  <context-param>
+    <param-name>primefaces.THEME</param-name>
+    <param-value>osys</param-value>
+  </context-param>
+  <context-param>
+    <param-name>com.sun.faces.enableRestoreView11Compatibility</param-name>
+    <param-value>true</param-value>
+  </context-param>
+  <listener>
+    <listener-class>com.sun.faces.config.ConfigureListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+  </listener>
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>/WEB-INF/optimaCjjWebContext.xml</param-value>
+  </context-param>
+  <context-param>
+    <param-name>javax.faces.DATETIMECONVERTER_DEFAULT_TIMEZONE_IS_SYSTEM_TIMEZONE</param-name>
+    <param-value>true</param-value>
+  </context-param>
+</web-app>

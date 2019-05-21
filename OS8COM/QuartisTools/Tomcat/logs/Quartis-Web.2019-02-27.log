@@ -1,0 +1,568 @@
+09:15:24.549 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:15:39.896 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:15:39.902 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+09:15:53.490 DEBUG - DisconnectDispatcher Déconnexion demandée pour : administrateur, session ID : #B219F8A9D702C1B1A0EC43FE86340F43 
+09:16:02.781 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:16:02.781 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:16:02.783 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:16:13.781 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:16:13.781 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:16:13.783 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:16:23.784 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:16:23.784 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:16:23.786 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:16:34.782 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:16:34.782 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:16:34.785 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:16:44.784 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:16:44.784 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:16:44.786 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:16:55.364 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:16:55.364 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:16:55.366 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:17:05.366 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:17:05.366 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:17:05.368 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:17:15.368 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:17:15.368 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:17:15.370 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:17:25.369 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:17:25.369 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:17:25.371 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:17:35.370 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:17:35.371 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:17:35.373 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:17:45.372 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:17:45.372 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:17:45.374 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:17:55.374 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:17:55.374 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:17:55.376 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:18:05.374 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:18:05.374 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:18:05.376 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:18:15.377 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:18:15.377 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:18:15.379 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:18:25.378 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:18:25.379 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:18:25.381 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:18:35.379 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:18:35.380 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:18:35.381 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:18:45.382 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:18:45.382 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:18:45.384 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:18:55.382 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:18:55.382 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:18:55.384 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:19:05.384 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:19:05.384 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:19:05.386 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:19:15.385 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:19:15.385 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:19:15.387 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:19:25.388 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:19:25.388 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:19:25.390 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:19:35.389 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:19:35.390 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:19:35.391 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:19:45.390 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:19:45.390 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:19:45.392 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:19:55.392 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:19:55.393 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:19:55.395 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:20:05.393 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:20:05.394 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:20:05.395 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:20:15.395 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:20:15.396 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:20:15.398 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:20:25.397 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:20:25.397 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:20:25.399 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:20:35.398 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:20:35.398 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:20:35.400 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:20:45.400 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:20:45.400 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:20:45.402 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:20:55.424 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:20:55.424 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:20:55.426 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:21:05.403 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:21:05.403 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:21:05.405 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:21:15.404 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:21:15.404 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:21:15.406 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:21:25.407 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:21:25.407 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:21:25.409 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:21:35.407 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:21:35.407 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:21:35.409 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:21:45.409 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:21:45.410 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:21:45.412 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:21:55.411 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:21:55.412 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:21:55.413 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:22:05.412 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:22:05.412 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:22:05.414 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:22:15.414 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:22:15.415 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:22:15.416 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:22:25.415 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:22:25.416 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:22:25.418 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:22:35.417 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:22:35.417 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:22:35.419 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:22:45.418 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:22:45.418 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:22:45.420 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:22:55.421 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:22:55.421 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:22:55.423 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:23:05.422 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:23:05.422 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:23:05.424 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:23:15.423 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:23:15.423 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:23:15.425 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:23:25.426 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:23:25.426 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:23:25.428 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:23:35.426 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:23:35.426 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:23:35.428 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:23:45.428 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:23:45.429 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:23:45.430 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:23:55.430 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:23:55.430 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:23:55.432 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:24:05.431 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:24:05.432 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:24:05.434 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:24:15.433 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:24:15.434 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:24:15.435 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:24:25.435 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:24:25.435 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:24:25.437 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:24:35.437 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:24:35.437 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:24:35.439 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:24:45.437 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:24:45.437 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:24:45.439 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:24:55.440 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:24:55.440 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:24:55.442 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:25:05.440 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:25:05.440 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:25:05.442 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:25:15.443 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:25:15.443 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:25:15.445 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:25:25.444 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:25:25.444 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:25:25.446 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:25:35.445 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:25:35.446 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:25:35.448 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:25:45.447 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:25:45.448 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:25:45.449 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:25:55.449 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:25:55.449 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:25:55.451 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:26:05.451 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:26:05.451 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:26:05.453 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:26:15.452 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:26:15.452 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:26:15.454 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:26:25.454 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:26:25.454 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:26:25.456 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:26:35.455 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:26:35.456 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:26:35.457 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:26:45.456 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:26:45.456 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:26:45.458 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:26:55.459 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:26:55.459 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:26:55.460 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:27:05.459 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:27:05.460 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:27:05.461 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:27:15.462 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:27:15.462 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:27:15.464 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:27:25.464 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:27:25.464 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:27:25.466 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:27:35.464 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:27:35.464 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:27:35.466 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:27:45.467 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:27:45.467 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:27:45.469 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:27:55.468 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:27:55.468 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:27:55.470 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:28:05.469 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:28:05.469 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:28:05.471 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:28:15.470 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:28:15.470 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:28:15.472 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:28:25.473 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:28:25.473 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:28:25.475 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:28:35.475 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:28:35.475 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:28:35.477 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:28:45.475 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:28:45.475 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:28:45.477 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:28:55.477 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:28:55.478 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:28:55.479 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:29:05.478 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:29:05.478 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:29:05.480 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:29:15.480 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:29:15.481 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:29:15.482 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:29:25.482 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:29:25.482 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:29:25.484 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:29:35.483 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:29:35.483 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:29:35.485 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:29:45.485 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:29:45.486 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:29:45.488 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:29:55.486 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:29:55.487 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:29:55.488 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:30:05.489 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:30:05.489 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:30:05.491 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:30:15.489 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:30:15.489 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:30:15.491 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:30:25.491 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:30:25.492 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:30:25.493 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:30:35.492 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:30:35.492 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:30:35.494 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:30:45.494 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:30:45.495 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:30:45.497 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:30:55.497 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:30:55.497 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:30:55.499 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:31:05.497 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:31:05.497 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:31:05.499 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:31:15.499 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:31:15.500 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:31:15.501 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:31:25.501 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:31:25.501 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:31:25.503 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:31:35.503 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:31:35.503 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:31:35.505 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:31:45.503 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:31:45.503 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:31:45.505 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:31:55.505 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:31:55.506 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:31:55.507 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:32:05.507 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:32:05.507 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:32:05.509 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:32:15.508 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:32:15.508 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:32:15.510 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:32:25.511 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:32:25.511 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:32:25.513 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:32:35.512 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:32:35.512 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:32:35.514 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:32:45.513 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:32:45.514 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:32:45.515 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:32:55.515 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:32:55.515 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:32:55.517 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:33:05.516 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:33:05.516 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:33:05.519 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:33:15.518 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:33:15.518 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:33:15.520 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:33:25.520 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:33:25.520 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:33:25.521 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:33:35.521 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:33:35.521 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:33:35.523 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:33:45.522 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:33:45.522 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:33:45.524 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:33:55.524 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:33:55.524 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:33:55.526 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:34:05.525 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:34:05.525 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:34:05.527 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:34:15.527 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:34:15.528 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:34:15.530 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:34:25.531 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:34:25.531 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:34:25.533 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:34:35.530 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:34:35.530 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:34:35.532 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:34:45.533 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:34:45.534 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:34:45.536 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:34:55.534 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:34:55.534 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:34:55.535 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:35:05.535 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:35:05.535 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:35:05.537 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:35:15.536 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:35:15.536 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:35:15.538 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:35:25.539 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:35:25.539 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:35:25.541 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:35:35.540 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:35:35.540 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:35:35.542 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:35:45.542 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:35:45.542 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:35:45.544 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:35:55.544 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:35:55.544 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:35:55.546 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:36:05.544 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:36:05.544 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:36:05.546 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:36:15.546 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:36:15.547 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:36:15.548 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:36:25.547 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:36:25.548 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:36:25.549 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:36:35.549 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:36:35.550 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:36:35.551 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:36:45.551 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:36:45.552 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:36:45.554 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:36:55.553 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:36:55.553 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:36:55.555 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:37:05.554 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:37:05.554 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:37:05.556 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:37:15.555 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:37:15.556 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:37:15.557 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:37:25.558 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:37:25.558 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:37:25.559 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:37:35.558 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:37:35.558 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:37:35.560 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:37:45.560 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:37:45.561 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:37:45.562 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:37:55.563 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:37:55.563 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:37:55.565 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:38:05.563 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:38:05.563 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:38:05.565 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:38:15.565 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:38:15.565 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:38:15.567 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:38:25.567 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:38:25.567 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:38:25.569 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:38:35.568 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:38:35.568 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:38:35.570 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:38:45.569 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:38:45.569 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:38:45.571 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:38:55.571 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:38:55.572 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:38:55.573 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:39:05.573 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:39:05.573 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:39:05.575 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:39:15.575 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:39:15.575 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:39:15.577 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:39:25.577 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:39:25.577 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:39:25.579 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:39:35.577 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:39:35.577 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:39:35.579 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:39:45.579 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:39:45.580 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:39:45.581 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:39:55.581 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:39:55.581 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:39:55.583 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:40:05.582 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:40:05.583 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:40:05.584 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:40:15.584 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:40:15.584 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:40:15.586 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:40:25.585 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:40:25.586 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:40:25.587 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:40:35.587 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:40:35.587 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:40:35.589 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:40:45.588 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:40:45.588 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:40:45.590 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:40:55.590 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:40:55.590 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:40:55.592 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:41:05.591 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:41:05.591 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:41:05.593 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:41:15.593 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:41:15.593 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:41:15.595 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:41:25.596 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:41:25.596 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:41:25.598 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:41:35.596 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:41:35.596 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:41:35.598 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:41:45.598 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:41:45.598 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:41:45.600 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:41:55.599 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:41:55.600 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:41:55.601 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:42:05.601 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:42:05.601 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:42:05.603 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:42:15.602 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:42:15.603 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:42:15.604 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:42:25.605 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:42:25.605 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:42:25.607 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:42:35.607 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:42:35.607 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:42:35.609 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:42:45.607 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:42:45.607 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:42:45.609 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:42:55.609 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:42:55.610 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:42:55.611 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:43:05.610 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:43:05.610 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:43:05.612 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:43:15.613 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:43:15.614 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:43:15.615 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:43:25.613 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:43:25.614 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:43:25.616 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:43:35.615 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:43:35.616 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:43:35.618 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:43:45.617 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:43:45.618 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:43:45.619 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:43:55.618 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:43:55.618 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:43:55.620 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:44:05.620 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:44:05.621 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:44:05.622 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:44:15.622 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:44:15.622 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:44:15.624 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:44:25.624 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:44:25.624 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:44:25.626 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:44:35.624 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:44:35.624 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:44:35.626 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:44:45.627 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:44:45.627 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:44:45.629 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:44:55.629 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:44:55.629 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:44:55.630 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:45:05.629 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:45:05.629 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:45:05.631 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:45:15.631 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:45:15.632 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:45:15.633 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:45:25.632 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:45:25.632 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+09:45:25.634 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:45:27.544 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:45:27.544 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/moduleChange.ajx?moduleID=OPTIMA_Standard&userID=administrateur) mais pas de user en session. 
+09:45:27.547 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:45:27.557 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:45:27.557 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/xxx.cas?action=deconnexion&userID=administrateur) mais pas de user en session. 
+09:45:27.561 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:45:27.562 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:45:27.562 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/moduleChange.ajx?moduleID=OPTIMA_Standard&userID=administrateur) mais pas de user en session. 
+09:45:27.566 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:45:27.567 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:45:29.635 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:45:29.639 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+15:15:16.403 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE query =set rowcount 3000  SELECT CODE_MACH_SITE  , CODE_MACH  , TYPE_MACH  , dbo.OPTIMA_TRADUCTION(DESI_MACH,'fr') +'@KEYLANG_'+DESI_MACH AS DESI_MACH  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_HORA  , CODE_TERM  , CODE_FAMI_MACH  , FLAG_HABI  , FLAG_MAIN_PREV  , FLAG_ABSE_COMP  , DURE_ABSE_COMP  , NOMB_OPER_MAXI  , DURE_MAJO_CYCL  , FLAG_MACH_ACTI  , TAUX_REBU_THEO  , MODE_CALC_QUAN  , TYPE_GEST_GAMM  , TYPE_GEST_CYCL  , NOMB_PIEC_CYCL  , DURE_DETE_FIN_FABR  , NOMB_CYCL_MAXI  , DURE_MAXI_MICR_ARRE  , DURE_TEMP_PASS_ARRE  , DURE_ARRE_INDE_MAXI  , FLAG_CHAN_FABR_AUTO  , TECH_AVAN_CYCL_THEO  , NUME_BOIT_SUPE  , SUPE_NUME_ORDR  , LIEN_IMAG  , TAUX_HORA_PREP_MACH  , TAUX_HORA_PROD_MACH  , TAUX_HORA_PREP_MO  , TAUX_HORA_PROD_MO  , NUME_SERI  , dbo.OPTIMA_TRADUCTION(DESI_MARQ,'fr') +'@KEYLANG_'+DESI_MARQ AS DESI_MARQ  , CONVERT(NVARCHAR, DATE_MISE_SERV, 103) AS DATE_MISE_SERV  , FLAG_GEST_PLAN  , FLAG_OBLI_PERS  , CODE_ETAT_DEBU_OF  , CODE_ETAT_FIN_OF  , CAPA_CONT_MAXI  , CODE_UNIT  , CODE_SITE  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_EXPO_DIMO  , FLAG_SUPP FROM MACHINE  WHERE ( CODE_SITE = 'SIT')  ORDER BY CODE_MACH_SITE ASC  
+15:15:21.581 ERROR - FormulairesManagedBean null 
+15:15:21.581 ERROR - FormulairesManagedBean null 
+15:15:21.581 ERROR - FormulairesManagedBean null 
+15:15:21.581 ERROR - FormulairesManagedBean null 
+15:15:21.581 ERROR - FormulairesManagedBean null 
+15:15:21.581 ERROR - FormulairesManagedBean null 
+15:15:21.581 ERROR - FormulairesManagedBean null 
+15:15:21.581 ERROR - FormulairesManagedBean null 
+17:11:15.266 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+17:11:15.266 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/xxx.cas?moduleID=OPTIMA_Suivi_Equipement&menu=true&locale=fr_FR&type=formulaire&userID=administrateur&_i18n=fr&_deltaUTC=0&_codeSite=SIT&pageID=OPTIMA_Machine_Groupe&action=url&_matr=administrateur&CodeSite=SIT&i18n=fr&_login=administrateur&webContainerWidth=1378&webContainerHeight=663) mais pas de user en session. 
+17:11:15.348 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+17:11:17.274 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+17:11:17.274 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+17:11:17.275 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+17:11:17.275 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/xxx.cas?action=deconnexion&userID=administrateur) mais pas de user en session. 
+17:11:17.310 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+17:11:17.327 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+17:11:17.364 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+17:11:20.826 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+17:11:20.873 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 

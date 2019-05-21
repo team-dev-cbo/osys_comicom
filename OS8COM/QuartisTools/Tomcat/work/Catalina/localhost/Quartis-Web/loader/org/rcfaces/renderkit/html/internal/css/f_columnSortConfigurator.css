@@ -1,0 +1,16 @@
+/*
+ * $Id: f_columnSortConfigurator.css,v 1.1 2010/02/26 09:43:08 oeuillot Exp $
+ */
+
+/**
+ *
+ * @class f_columnSortConfigurator
+ *
+ * @author Olivier Oeuillot (latest modification by $Author: oeuillot $)
+ * @version $Revision: 1.1 $ $Date: 2010/02/26 09:43:08 $ 
+ */
+
+.f_columnSortConfigurator_no_column {
+	font-style: italic;
+}
+ 

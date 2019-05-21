@@ -1,0 +1,9 @@
+[2019-04-01 07:59:04] [info] Commons Daemon procrun (1.0.2.0) started
+[2019-04-01 07:59:05] [info] Running Service...
+[2019-04-01 07:59:05] [info] Starting service...
+[2019-04-01 07:59:17] [info] Service started in 11965 ms.
+[2019-04-06 12:00:46] [info] Console SHUTDOWN event signaled
+[2019-04-06 12:00:47] [info] Stopping service...
+[2019-04-06 12:01:25] [info] Service stopped.
+[2019-04-06 12:01:25] [info] Run service finished.
+[2019-04-06 12:01:25] [info] Commons Daemon procrun finished.

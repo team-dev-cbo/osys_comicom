@@ -1,0 +1,1 @@
+start bin\win64\jre\bin\javaw.exe -jar jars\Quartis-Pro-config.jar

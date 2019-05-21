@@ -1,0 +1,41 @@
+/*********************************************************************************************************************************/
+/*********************************************** MENU CONTEXTUEL **************************************************************/
+/*********************************************************************************************************************************/
+.menuclickdroit {
+	/* obligatoire */
+	z-index:100;
+	position:absolute;
+	visibility:hidden;
+	/* A changer suivant l'affichage voulu */
+	width:150px;
+	padding:5px 0;
+	font-family:Tahoma, Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:11px;
+	line-height:16px;
+	background-color:#EFF4FA;
+	border:1px solid #333333;
+	/* Un filtre d'affichage spécial non obligatoire*/
+	/*FILTER: progid:DXImageTransform.Microsoft.Shadow(direction=135,color=#303030,strength=3);*/
+	/*FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=1,startColorStr=#CECECE,endColorStr=#C0C0C0);*/
+	/*FILTER: progid:DXImageTransform.Microsoft.Alpha( style=0,opacity=85);*/
+}
+.MenuBis {
+	background-image:url(puce.gif);
+	background-position:135px 3px;
+	background-repeat:no-repeat;
+	padding:0 10px;
+	cursor:pointer;
+}
+.menuitems {
+	padding:0 10px;
+	cursor:pointer;
+	background : transparent;
+}
+
+#title_simu {
+    font-weight: bold;
+    color:red;
+    font-size : 15px;
+}
+

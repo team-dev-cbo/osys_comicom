@@ -1,0 +1,16 @@
+Version 1
+APP 13
+
+1 Erreur de lecture dans l'archive
+2 La propriété "%1" est inconnu
+3 L'utilisateur "%1" du groupe "%2" n'a pas le droit de lire un fichier
+4 L'utilisateur "%1" du groupe "%2" n'a pas le droit d'écrire dans un fichier
+5 L'utilisateur "%1" du groupe "%2" n'a pas le droit d'ajouter un nouveau répertoire
+6 L'utilisateur "%1" du groupe "%2" n'a pas le droit de supprimer un fichier
+7 L'utilisateur "%1" du groupe "%2" n'a pas le droit de supprimer un répertoire
+8 L'utilisateur "%1" du groupe "%2" n'a pas le droit de renommer un fichier
+9 L'utilisateur "%1" du groupe "%2" n'a pas le droit de renommer un répertoire
+10 Le fichier "%1" n'existe pas 
+11 Le contenu du fichier envoyé n'a pas été copié dans le fichier %1
+12 Le nom du répertoire "%1" n'existe pas
+13 Le nom du répertoire "%1" existe déjà

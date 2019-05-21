@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/Quartis-Web">
+  <ResourceLink global="bean/QuartisWebUserManager" name="bean/QuartisWebUserManager" type="quartis.tomcat.quartisweb.QuartisUserManager"/>
+  <!--   <ResourceLink global="bean/QuartisDatasourceManager" name="bean/QuartisDatasourceManager" type="quartis.tomcat.quartisweb.datasource.QuartisDatasourceManager"/>
+   <ResourceLink global="QuartisDatasource" name="QuartisDatasource" type="javax.sql.DataSource"/>
+    <Valve className="waffle.apache.NegotiateAuthenticator" principalFormat="sid" roleFormat="both" protocol="NTLM" allowGuestLogin="true" />
+    <Realm className="waffle.apache.WindowsRealm" /> -->
+</Context>

@@ -1,0 +1,9 @@
+WITH TYPES_DEFS;
+
+MODULE EMAIL; C;
+
+PROCEDURE	EmailEnvoi( p_serveur,p_destinataire,p_emetteur,p_sujet : GrandeChaine ; p_texte : TresGrandeChaine ) ; 684 ;
+
+PROCEDURE	EmailEnvoiEx( p_serveur,p_destinataire,p_emetteur,p_sujet,p_fichier : GrandeChaine ; p_texte : TresGrandeChaine ) ; 685 ;
+
+END EMAIL ;

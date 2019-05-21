@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<tocdata>
+<item name="AND" url="scenario/lpx/mots/HIDD_AND.htm" />
+<item name="ARRAY" url="scenario/lpx/mots/HIDD_ARRAY.htm" />
+<item name="BEGIN" url="scenario/lpx/mots/HIDD_BEGIN.htm" />
+<item name="CONST" url="scenario/lpx/mots/HIDD_CONST.htm" />
+<item name="DIV" url="scenario/lpx/mots/HIDD_DIV.htm" />
+<item name="END" url="scenario/lpx/mots/HIDD_END.htm" />
+<item name="EXIT" url="scenario/lpx/mots/HIDD_EXIT.htm" />
+<item name="EXPORT FICHIER ASCII" url="scenario/lpx/mots/HIDD_ExportFichierASCII.htm" />
+<item name="FOR TO STEP" url="scenario/lpx/mots/HIDD_FOR.htm" />
+<item name="FUNCTION" url="scenario/lpx/mots/HIDD_FUNCTION.htm" />
+<item name="IF THEN ELSIF END IF" url="scenario/lpx/mots/HIDD_IF.htm" />
+<item name="IMPORT FICHIER ASCII" url="scenario/lpx/mots/HIDD_ImportFichierASCII.htm" />
+<item name="LOOP" url="scenario/lpx/mots/HIDD_LOOP.htm" />
+<item name="MOD" url="scenario/lpx/mots/HIDD_MOD.htm" />
+<item name="MODULE LPX" url="scenario/lpx/mots/HIDD_MODULE_LPX.htm" />
+<item name="NOT" url="scenario/lpx/mots/HIDD_NOT.htm" />
+<item name="OR" url="scenario/lpx/mots/HIDD_OR.htm" />
+<item name="PROCEDURE" url="scenario/lpx/mots/HIDD_PROCEDURE.htm" />
+<item name="PROGRAMME LPX" url="scenario/lpx/mots/HIDD_PROGRAMME_LPX.htm" />
+<item name="RECORD" url="scenario/lpx/mots/HIDD_RECORD.htm" />
+<item name="REPEAT UNTIL" url="scenario/lpx/mots/HIDD_REPEAT.htm" />
+<item name="STOP" url="scenario/lpx/mots/HIDD_STOP.htm" />
+<item name="TYPE OF" url="scenario/lpx/mots/HIDD_TYPE.htm" />
+<item name="VAR" url="scenario/lpx/mots/HIDD_VAR.htm" />
+<item name="WHILE DO END WHILE" url="scenario/lpx/mots/HIDD_WHILE.htm" />
+<item name="WITH" url="scenario/lpx/mots/HIDD_WITH.htm" />
+
+</tocdata>

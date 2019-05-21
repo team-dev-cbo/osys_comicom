@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<fts>
+<chunkinfo url="whfwdata0.xml" first="_liste1" last="5020"/>
+<chunkinfo url="whfwdata1.xml" first="5030" last="attention"/>
+<chunkinfo url="whfwdata2.xml" first="attribu" last="cgilitvaleurex"/>
+<chunkinfo url="whfwdata3.xml" first="chacun" last="couleurfond"/>
+<chunkinfo url="whfwdata4.xml" first="couleurtext" last="dépos"/>
+<chunkinfo url="whfwdata5.xml" first="depui" last="ecritvalretour"/>
+<chunkinfo url="whfwdata6.xml" first="ecrou" last="estponctuation"/>
+<chunkinfo url="whfwdata7.xml" first="et" last="fichi"/>
+<chunkinfo url="whfwdata8.xml" first="fichier" last="htmlformdebutnom"/>
+<chunkinfo url="whfwdata9.xml" first="htmlformfin" last="jaug"/>
+<chunkinfo url="whfwdata10.xml" first="jaun" last="ligne2"/>
+<chunkinfo url="whfwdata11.xml" first="ligne3" last="messageformat3"/>
+<chunkinfo url="whfwdata12.xml" first="messageformat4" last="optionnel"/>
+<chunkinfo url="whfwdata13.xml" first="orang" last="petersbourg"/>
+<chunkinfo url="whfwdata14.xml" first="petit" last="recréé"/>
+<chunkinfo url="whfwdata15.xml" first="rectangl" last="se"/>
+<chunkinfo url="whfwdata16.xml" first="second" last="t_attentetempo"/>
+<chunkinfo url="whfwdata17.xml" first="t_canalbd" last="ultérieurement"/>
+<chunkinfo url="whfwdata18.xml" first="un" last="your"/>
+<chunkinfo url="whfwdata19.xml" first="yourapp" last="zoom"/>
+
+<tchunkinfo first="0" last="122" url="whftdata0.xml" />
+<tchunkinfo first="123" last="239" url="whftdata1.xml" />
+<tchunkinfo first="240" last="349" url="whftdata2.xml" />
+<tchunkinfo first="350" last="444" url="whftdata3.xml" />
+<tchunkinfo first="445" last="547" url="whftdata4.xml" />
+<tchunkinfo first="548" last="667" url="whftdata5.xml" />
+<tchunkinfo first="668" last="669" url="whftdata6.xml" />
+
+</fts>

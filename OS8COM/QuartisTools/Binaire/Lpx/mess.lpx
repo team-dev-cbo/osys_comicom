@@ -1,0 +1,69 @@
+WITH TYPES_DEFS;
+
+MODULE MESS ; C;
+
+
+// lecture de la langue courante
+FUNCTION  Langue RETURN GrandeChaine ; 850 ;
+
+// lecture d'un message en fonction de la langue courante
+// retour : 0->OK , -1 ->clé inconnue , -2 ->non défini pour la langue
+FUNCTION Message( p_cle : GrandeChaine ; p_message : INFO_VARIABLE ) RETURN Integer ; 851 ;
+
+// lecture d'un message en fonction d'une langue donnée
+// retour : 0 ->OK , -1 ->clé inconnue , -2 ->non défini pour la langue
+FUNCTION MessageLangue( p_cle,p_langue : GrandeChaine ; p_message : INFO_VARIABLE ) RETURN Integer ; 852 ;
+
+// formatage d'un message , fonction de la langue courante , avec 1 paramètre 
+// retour : 0 ->OK , -1 ->clé inconnue , -2 ->non défini pour la langue
+FUNCTION MessageFormat1( p_cle , p_param : GrandeChaine ; p_message : INFO_VARIABLE ) RETURN Integer ; 853 ;
+
+// formatage d'un message , fonction de la langue courante , avec 2 paramètres 
+// retour : 0 ->OK , -1 ->clé inconnue , -2 ->non défini pour la langue
+FUNCTION MessageFormat2( p_cle , p_param1,p_param2 : GrandeChaine ; p_message : INFO_VARIABLE ) RETURN Integer ; 854 ;
+
+// formatage d'un message , fonction de la langue courante , avec 3 paramètres 
+// retour : 0 ->OK , -1 ->clé inconnue , -2 ->non défini pour la langue
+FUNCTION MessageFormat3( p_cle , p_param1,p_param2,p_param3 : GrandeChaine ; p_message : INFO_VARIABLE ) RETURN Integer ; 855 ;
+
+// formatage d'un message , fonction de la langue courante , avec 4 paramètres 
+// retour : 0 ->OK , -1 ->clé inconnue , -2 ->non défini pour la langue
+FUNCTION MessageFormat4( p_cle , p_param1,p_param2,p_param3,p_param4 : GrandeChaine ; p_message : INFO_VARIABLE ) RETURN Integer ; 856 ;
+
+// formatage d'un message , fonction de la langue courante , avec 5 paramètres 
+// retour : 0 ->OK , -1 ->clé inconnue , -2 ->non défini pour la langue
+FUNCTION MessageFormat5( p_cle , p_param1,p_param2,p_param3,p_param4,p_param5 : GrandeChaine ; p_message : INFO_VARIABLE ) RETURN Integer ; 857 ;
+
+// formatage d'un message , fonction de la langue courante , avec 6 paramètres 
+// retour : 0 ->OK , -1 ->clé inconnue , -2 ->non défini pour la langue
+FUNCTION MessageFormat6( p_cle , p_param1,p_param2,p_param3,p_param4,p_param5,p_param6 : GrandeChaine ; p_message : INFO_VARIABLE ) RETURN Integer ; 858 ;
+
+// formatage d'un message , fonction de la langue courante , avec 7 paramètres 
+// retour : 0 ->OK , -1 ->clé inconnue , -2 ->non défini pour la langue
+FUNCTION MessageFormat7( p_cle , p_param1,p_param2,p_param3,p_param4,p_param5,p_param6,p_param7 : GrandeChaine ; p_message : INFO_VARIABLE ) RETURN Integer ; 859 ;
+
+// formatage d'un message , fonction de la langue courante , avec 8 paramètres 
+// retour : 0 ->OK , -1 ->clé inconnue , -2 ->non défini pour la langue
+FUNCTION MessageFormat8( p_cle , p_param1,p_param2,p_param3,p_param4,p_param5,p_param6,p_param7,p_param8 : GrandeChaine ; p_message : INFO_VARIABLE ) RETURN Integer ; 860 ;
+
+// formatage d'un message , fonction de la langue courante , avec 9 paramètres 
+// retour : 0 ->OK , -1 ->clé inconnue , -2 ->non défini pour la langue
+FUNCTION MessageFormat9( p_cle , p_param1,p_param2,p_param3,p_param4,p_param5,p_param6,p_param7,p_param8,p_param9 : GrandeChaine ; p_message : INFO_VARIABLE ) RETURN Integer ; 861 ;
+
+// Ajout d'un message dans la liste, fonction de la langue courante  
+// retour : 0 ->OK , -1 ->déjà existant
+FUNCTION MessageAjoute( p_cle , p_message : GrandeChaine ) RETURN Integer ; 862 ;
+
+// Modification d'un message de la liste, fonction de la langue courante  
+// retour : 0 ->OK , -1 ->inexistant
+FUNCTION MessageModifie( p_cle , p_message : GrandeChaine ) RETURN Integer ; 863 ;
+
+// Suppression d'un message de la liste, fonction de la langue courante  
+// retour : 0 ->OK , -1 ->inexistant
+FUNCTION MessageSupprime( p_cle : GrandeChaine ) RETURN Integer ; 864 ;
+
+// Mise à vide de la liste
+PROCEDURE MessageRazListe ; 865 ;
+
+
+END MESS ;

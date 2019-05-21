@@ -1,0 +1,5 @@
+15:41:34.583 DEBUG - TomcatListener contextInitialized - servletContext.realPath : C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web 
+15:41:34.614  INFO - PropertiesDelegate Ouverture du fichier de configuration à l'emplacement : C:\Osys\QuartisTools\Tomcat/conf/quartis-web.properties 
+15:41:36.455  INFO - TomcatListener -----> Supression des fichier temporaires 
+15:41:37.235  INFO - TomcatListener Ouverture du fichier indiquant la base de données : C:\Osys\QuartisTools\Tomcat/conf/datasources.xml... 
+15:41:37.516  INFO - DataSourceManager Création de la datasource : QuartisWeb-PU 

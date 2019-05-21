@@ -1,0 +1,467 @@
+07:59:56.075 [35mDEBUG[m - Thread-2          - TomcatListener [35mcontextInitialized - servletContext.realPath : C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web[m 
+07:59:56.169 [34m INFO[m - Thread-2          - PropertiesDelegate [34mOuverture du fichier de configuration à l'emplacement : C:\Osys\QuartisTools\Tomcat/conf/quartis-web.properties[m 
+07:59:56.574 [34m INFO[m - Thread-2          - TomcatListener [34m-----> Supression des fichier temporaires[m 
+07:59:59.632 [34m INFO[m - Thread-2          - TomcatListener [34mOuverture du fichier indiquant la base de données : C:\Osys\QuartisTools\Tomcat/conf/datasources.xml...[m 
+08:00:00.693 [34m INFO[m - Thread-2          - DataSourceManager [34mCréation de la datasource : QuartisWeb-PU[m 
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/C:/Osys/QuartisTools/Tomcat/lib/slf4j-log4j12-1.7.12.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/Osys/QuartisTools/Tomcat/webapps/Quartis-OptimaCjj/WEB-INF/lib/logback-classic-0.9.28.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+2019-04-01 08:01:06.942 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1157]-Using default implementation for ThreadExecutor
+2019-04-01 08:01:06.989 [Thread-2] INFO  org.quartz.core.SchedulerSignalerImpl[61]-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-04-01 08:01:06.989 [Thread-2] INFO  org.quartz.core.QuartzScheduler[243]-Quartz Scheduler v.2.1.6 created.
+2019-04-01 08:01:07.004 [Thread-2] INFO  org.quartz.simpl.RAMJobStore[154]-RAMJobStore initialized.
+2019-04-01 08:01:07.004 [Thread-2] INFO  org.quartz.core.QuartzScheduler[268]-Scheduler meta-data: Quartz Scheduler (v2.1.6) 'schedulerBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-01 08:01:07.004 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1306]-Quartz scheduler 'schedulerBean' initialized from an externally provided properties instance.
+2019-04-01 08:01:07.004 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1310]-Quartz scheduler version: 2.1.6
+2019-04-01 08:01:07.004 [Thread-2] INFO  org.quartz.core.QuartzScheduler[2247]-JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@710c2d93
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/C:/Osys/QuartisTools/Tomcat/lib/slf4j-log4j12-1.7.12.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/Osys/QuartisTools/Tomcat/webapps/Quartis-OptimaTml/WEB-INF/lib/logback-classic-0.9.28.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+2019-04-01 08:01:20.530 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1157]-Using default implementation for ThreadExecutor
+2019-04-01 08:01:20.576 [Thread-2] INFO  org.quartz.core.SchedulerSignalerImpl[61]-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-04-01 08:01:20.576 [Thread-2] INFO  org.quartz.core.QuartzScheduler[243]-Quartz Scheduler v.2.1.6 created.
+2019-04-01 08:01:20.576 [Thread-2] INFO  org.quartz.simpl.RAMJobStore[154]-RAMJobStore initialized.
+2019-04-01 08:01:20.576 [Thread-2] INFO  org.quartz.core.QuartzScheduler[268]-Scheduler meta-data: Quartz Scheduler (v2.1.6) 'schedulerBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-01 08:01:20.576 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1306]-Quartz scheduler 'schedulerBean' initialized from an externally provided properties instance.
+2019-04-01 08:01:20.576 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1310]-Quartz scheduler version: 2.1.6
+2019-04-01 08:01:20.576 [Thread-2] INFO  org.quartz.core.QuartzScheduler[2247]-JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@40240c31
+ERROR StatusLogger Unrecognized format specifier [d]
+ERROR StatusLogger Unrecognized conversion specifier [d] starting at position 16 in conversion pattern.
+ERROR StatusLogger Unrecognized format specifier [thread]
+ERROR StatusLogger Unrecognized conversion specifier [thread] starting at position 25 in conversion pattern.
+ERROR StatusLogger Unrecognized format specifier [level]
+ERROR StatusLogger Unrecognized conversion specifier [level] starting at position 35 in conversion pattern.
+ERROR StatusLogger Unrecognized format specifier [logger]
+ERROR StatusLogger Unrecognized conversion specifier [logger] starting at position 47 in conversion pattern.
+ERROR StatusLogger Unrecognized format specifier [msg]
+ERROR StatusLogger Unrecognized conversion specifier [msg] starting at position 54 in conversion pattern.
+ERROR StatusLogger Unrecognized format specifier [n]
+ERROR StatusLogger Unrecognized conversion specifier [n] starting at position 56 in conversion pattern.
+ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
+ERROR StatusLogger Unrecognized format specifier [d]
+ERROR StatusLogger Unrecognized conversion specifier [d] starting at position 16 in conversion pattern.
+ERROR StatusLogger Unrecognized format specifier [thread]
+ERROR StatusLogger Unrecognized conversion specifier [thread] starting at position 25 in conversion pattern.
+ERROR StatusLogger Unrecognized format specifier [level]
+ERROR StatusLogger Unrecognized conversion specifier [level] starting at position 35 in conversion pattern.
+ERROR StatusLogger Unrecognized format specifier [logger]
+ERROR StatusLogger Unrecognized conversion specifier [logger] starting at position 47 in conversion pattern.
+ERROR StatusLogger Unrecognized format specifier [msg]
+ERROR StatusLogger Unrecognized conversion specifier [msg] starting at position 54 in conversion pattern.
+ERROR StatusLogger Unrecognized format specifier [n]
+ERROR StatusLogger Unrecognized conversion specifier [n] starting at position 56 in conversion pattern.
+08:41:18.525 [35mDEBUG[m - http-8383-exec-3  - AuthManagedBean [35mautoconnect - Tentative de connexion SSO...[m 
+08:41:18.525 [35mDEBUG[m - http-8383-exec-3  - ConnexionManagedBean [35mUser renseigné par filtre SSO LDAP : null[m 
+08:41:18.525 [35mDEBUG[m - http-8383-exec-3  - ConnexionManagedBean [35mldapActive = false[m 
+08:41:18.525 [35mDEBUG[m - http-8383-exec-3  - AuthManagedBean [35mautoconnect - Echec de la connexion par SSO.[m 
+08:41:26.274 [35mDEBUG[m - http-8383-exec-3  - LoginManagedBean [35muser.id = administrateur, connecté par login/mdp Osys[m 
+08:41:26.477 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mconnect - Connecting...[m 
+08:41:26.477 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mconnect - Connected.[m 
+08:41:26.477 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mexecuteQuery - Sending 'USER @ID0 [] serveur_web SERVEUR-WEB'...[m 
+08:41:26.477 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mexecuteQuery - Sent.[m 
+08:41:26.477 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mexecuteQuery - Reading response...[m 
+08:41:26.477 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mreadResponse - starting to listen...[m 
+08:41:26.477 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mreadResponse - read trame : ACK 263172[m 
+08:41:26.508 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mexecuteQuery - Read: 'ACK 263172'.[m 
+08:41:26.508 [35mDEBUG[m - http-8383-exec-3  - QTInternalCommunicator [35msend_IdentifyOsysConsoleWeb - QTools returned : 263172[m 
+08:41:26.508 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mexecuteQuery - Sending 'LST_USER_CONNECT'...[m 
+08:41:26.508 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mexecuteQuery - Sent.[m 
+08:41:26.508 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mexecuteQuery - Reading response...[m 
+08:41:26.508 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mreadResponse - starting to listen...[m 
+08:41:26.508 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mreadResponse - read trame : <lstuserconnect max="3" connect="1" />\x0a[m 
+08:41:26.508 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mexecuteQuery - Read: '<lstuserconnect max="3" connect="1" />\x0a'.[m 
+08:41:26.508 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mdisconnect - Déconnexion...[m 
+08:41:26.508 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mdisconnect - Déconnecté.[m 
+08:41:26.680 [35mDEBUG[m - http-8383-exec-3  - QuartisToolsServiceImpl [35mcreateOrUpdateUser - username : 'administrateur', groupName : 'Administrateurs'...[m 
+08:41:26.680 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mconnect - Connecting...[m 
+08:41:26.680 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mconnect - Connected.[m 
+08:41:26.680 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mexecuteQuery - Sending 'USER @ID0 [] serveur_web SERVEUR-WEB'...[m 
+08:41:26.680 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mexecuteQuery - Sent.[m 
+08:41:26.680 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mexecuteQuery - Reading response...[m 
+08:41:26.680 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mreadResponse - starting to listen...[m 
+08:41:26.696 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mreadResponse - read trame : ACK 263172[m 
+08:41:26.696 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mexecuteQuery - Read: 'ACK 263172'.[m 
+08:41:26.696 [35mDEBUG[m - http-8383-exec-3  - QTSrvCommunicator [35msend_IdentifyOsysConsoleWeb - QTools returned : 263172[m 
+08:41:26.696 [35mDEBUG[m - http-8383-exec-3  - QTSrvCommunicator [35msend_CreateUserQuartisTools - message =  USR USER OBJ ADD [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+[m 
+08:41:26.696 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mexecuteQuery - Sending ' USR USER OBJ ADD [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+'...[m 
+08:41:26.696 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mexecuteQuery - Sent.[m 
+08:41:26.696 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mexecuteQuery - Reading response...[m 
+08:41:26.696 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mreadResponse - starting to listen...[m 
+08:41:26.696 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mreadResponse - read trame : ACK -10[m 
+08:41:26.696 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mexecuteQuery - Read: 'ACK -10'.[m 
+08:41:26.696 [35mDEBUG[m - http-8383-exec-3  - QTSrvCommunicator [35msend_CreateUserQuartisTools - QTools returned : -10[m 
+08:41:26.696 [35mDEBUG[m - http-8383-exec-3  - QTSrvCommunicator [35msend_UpdateUserQuartisTools - message :  USR USER OBJ SET [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+[m 
+08:41:26.696 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mexecuteQuery - Sending ' USR USER OBJ SET [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+'...[m 
+08:41:26.696 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mexecuteQuery - Sent.[m 
+08:41:26.696 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mexecuteQuery - Reading response...[m 
+08:41:26.696 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mreadResponse - starting to listen...[m 
+08:41:26.696 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mreadResponse - read trame : ACK 0[m 
+08:41:26.696 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mexecuteQuery - Read: 'ACK 0'.[m 
+08:41:26.696 [35mDEBUG[m - http-8383-exec-3  - QTSrvCommunicator [35msend_UpdateUserQuartisTools - QTools returned : 0[m 
+08:41:26.696 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mdisconnect - Déconnexion...[m 
+08:41:26.696 [35mDEBUG[m - http-8383-exec-3  - QTConnector [35mdisconnect - Déconnecté.[m 
+08:41:26.696 [34m INFO[m - http-8383-exec-3  - QuartisToolsServiceImpl [34mMise à jour du user QuartisTools 'administrateur' dans le groupe 'Administrateurs' réussie.[m 
+08:41:34.808 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie de 18 fichiers vers 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\language.properties'...[m 
+08:41:34.808 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 0/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language.properties'.[m 
+08:41:34.808 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language.properties'...[m 
+08:41:34.839 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:34.839 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 1/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language.properties'.[m 
+08:41:34.839 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language.properties'...[m 
+08:41:34.854 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:34.854 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 2/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language.properties'.[m 
+08:41:34.854 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language.properties'...[m 
+08:41:34.870 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:34.870 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 3/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language.properties'.[m 
+08:41:34.870 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language.properties'...[m 
+08:41:34.870 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:34.870 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 4/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language.properties'.[m 
+08:41:34.870 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language.properties'...[m 
+08:41:34.886 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:34.886 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 5/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language.properties'.[m 
+08:41:34.886 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language.properties'...[m 
+08:41:34.886 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:34.886 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 6/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language.properties'.[m 
+08:41:34.886 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language.properties'...[m 
+08:41:34.901 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:34.901 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 7/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language.properties'.[m 
+08:41:34.901 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language.properties'...[m 
+08:41:34.901 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:34.901 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 8/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language.properties'.[m 
+08:41:34.901 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language.properties'...[m 
+08:41:34.901 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:34.901 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 9/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language.properties'.[m 
+08:41:34.901 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language.properties'...[m 
+08:41:34.917 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:34.917 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 10/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language.properties'.[m 
+08:41:34.917 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language.properties'...[m 
+08:41:34.917 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:34.917 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 11/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language.properties'.[m 
+08:41:34.917 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language.properties'...[m 
+08:41:34.932 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:34.932 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 12/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language.properties'.[m 
+08:41:34.932 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language.properties'...[m 
+08:41:34.932 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:34.932 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 13/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language.properties'.[m 
+08:41:34.932 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language.properties'...[m 
+08:41:34.932 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:34.932 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 14/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language.properties'.[m 
+08:41:34.932 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language.properties'...[m 
+08:41:34.932 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:34.932 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 15/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language.properties'.[m 
+08:41:34.932 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language.properties'...[m 
+08:41:34.948 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:34.948 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 16/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language.properties'.[m 
+08:41:34.948 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language.properties'...[m 
+08:41:34.948 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:34.948 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 17/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language.properties'.[m 
+08:41:34.948 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language.properties'...[m 
+08:41:34.948 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:34.948 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Fin de la copie.[m 
+08:41:35.650 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie de 18 fichiers vers 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\language_fr.properties'...[m 
+08:41:35.650 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 0/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language_fr.properties'.[m 
+08:41:35.650 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language_fr.properties'...[m 
+08:41:35.650 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:35.650 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 1/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language_fr.properties'.[m 
+08:41:35.650 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language_fr.properties'...[m 
+08:41:35.666 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:35.666 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 2/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language_fr.properties'.[m 
+08:41:35.666 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language_fr.properties'...[m 
+08:41:35.666 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:35.666 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 3/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language_fr.properties'.[m 
+08:41:35.666 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language_fr.properties'...[m 
+08:41:35.681 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:35.681 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 4/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language_fr.properties'.[m 
+08:41:35.681 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language_fr.properties'...[m 
+08:41:35.681 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:35.681 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 5/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language_fr.properties'.[m 
+08:41:35.681 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language_fr.properties'...[m 
+08:41:35.697 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:35.697 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 6/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language_fr.properties'.[m 
+08:41:35.697 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language_fr.properties'...[m 
+08:41:35.697 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:35.697 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 7/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language_fr.properties'.[m 
+08:41:35.697 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language_fr.properties'...[m 
+08:41:35.712 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:35.712 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 8/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language_fr.properties'.[m 
+08:41:35.712 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language_fr.properties'...[m 
+08:41:35.712 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:35.712 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 9/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language_fr.properties'.[m 
+08:41:35.712 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language_fr.properties'...[m 
+08:41:35.728 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:35.728 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 10/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language_fr.properties'.[m 
+08:41:35.728 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language_fr.properties'...[m 
+08:41:35.728 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:35.728 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 11/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language_fr.properties'.[m 
+08:41:35.728 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language_fr.properties'...[m 
+08:41:35.744 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:35.744 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 12/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language_fr.properties'.[m 
+08:41:35.744 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language_fr.properties'...[m 
+08:41:35.744 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:35.744 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 13/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language_fr.properties'.[m 
+08:41:35.744 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language_fr.properties'...[m 
+08:41:35.744 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:35.744 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 14/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language_fr.properties'.[m 
+08:41:35.744 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language_fr.properties'...[m 
+08:41:35.744 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:35.744 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 15/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language_fr.properties'.[m 
+08:41:35.744 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language_fr.properties'...[m 
+08:41:35.759 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:35.759 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 16/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language_fr.properties'.[m 
+08:41:35.759 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language_fr.properties'...[m 
+08:41:35.759 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:35.759 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Copie du fichier 17/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language_fr.properties'.[m 
+08:41:35.759 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language_fr.properties'...[m 
+08:41:35.759 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+08:41:35.759 [35mDEBUG[m - http-8383-exec-3  - TransfertFile [35mcopyFile (pls) - Fin de la copie.[m 
+08:41:35.759 [35mDEBUG[m - http-8383-exec-3  - LanguageFileManager [35mbuildPropertiesGen - Création de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\language_fr.properties'...[m 
+08:41:35.822 [35mDEBUG[m - http-8383-exec-3  - LanguageFileManager [35mbuildPropertiesGen - Fin de la création.[m 
+08:41:46.960 [35mDEBUG[m - http-8383-exec-6  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Personnel_Activite_EnCours_Liste_1[m 
+08:41:46.960 [35mDEBUG[m - http-8383-exec-3  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Personnel_Activite_EnCours_Liste_1[m 
+08:41:46.991 [35mDEBUG[m - http-8383-exec-6  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'...[m 
+08:41:46.991 [35mDEBUG[m - http-8383-exec-6  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'...[m 
+08:41:46.991 [35mDEBUG[m - http-8383-exec-3  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'...[m 
+08:41:46.991 [35mDEBUG[m - http-8383-exec-3  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'...[m 
+08:41:48.333 [35mDEBUG[m - http-8383-exec-3  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+08:41:48.333 [35mDEBUG[m - http-8383-exec-6  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+08:41:51.188 [35mDEBUG[m - http-8383-exec-2  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Personnel_Activite_EnCours_Liste_1[m 
+08:41:51.188 [35mDEBUG[m - http-8383-exec-2  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'...[m 
+08:41:51.188 [35mDEBUG[m - http-8383-exec-2  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'...[m 
+08:41:51.219 [35mDEBUG[m - http-8383-exec-2  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+08:41:55.277 [35mDEBUG[m - http-8383-exec-6  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Personnel_Activite_EnCours_Liste_1[m 
+08:41:55.277 [35mDEBUG[m - http-8383-exec-6  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'...[m 
+08:41:55.277 [35mDEBUG[m - http-8383-exec-6  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'...[m 
+08:41:55.308 [35mDEBUG[m - http-8383-exec-6  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+08:41:59.099 [35mDEBUG[m - http-8383-exec-1  - GSqlQueryGeneratorSqlServer [35m--->table =PERSONNEL query =set rowcount 3000  SELECT MATR_SITE  , MATR  , CODE_BADG  , FLAG_INTE  , NOM  , PREN  , ADRE_TELE  , ADRE_MAIL  , FLAG_BADG_BLOQ  , NOMB_ACTI_MAXI  , FLAG_SUIV_POIN  , KELI_KEY  , FLAG_GEST_PLAN  , FLAG_KELI_IMPO  , LIEN_IMAG  , CODE_HORA_1  , CODE_SERV  , CODE_EQUI_DEFA  , CODE_ATEL  , CODE_ATEL_DEFA  , CODE_SECT_GEOG  , CODE_SECT_GEOG_DEFA  , CODE_ETAT_PERS_DEFA  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DERN_POIN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DERN_POIN), 108) AS DATE_DERN_POIN  , CODE_SITE  , DELT_HEUR_UTC  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_HABI_MACH  , FLAG_SUPP FROM PERSONNEL  WHERE ( CODE_SITE = 'FAB')  ORDER BY MATR_SITE ASC [m 
+08:42:30.197 [1;31mERROR[m - http-8383-exec-5  - FormulairesManagedBean [1;31mnull[m 
+08:42:30.197 [1;31mERROR[m - http-8383-exec-5  - FormulairesManagedBean [1;31mnull[m 
+08:42:30.197 [1;31mERROR[m - http-8383-exec-5  - FormulairesManagedBean [1;31mnull[m 
+08:42:30.197 [1;31mERROR[m - http-8383-exec-5  - FormulairesManagedBean [1;31mnull[m 
+08:42:30.197 [1;31mERROR[m - http-8383-exec-5  - FormulairesManagedBean [1;31mnull[m 
+08:42:30.197 [1;31mERROR[m - http-8383-exec-5  - FormulairesManagedBean [1;31mnull[m 
+08:42:30.197 [1;31mERROR[m - http-8383-exec-5  - FormulairesManagedBean [1;31mnull[m 
+08:42:30.197 [1;31mERROR[m - http-8383-exec-5  - FormulairesManagedBean [1;31mnull[m 
+08:42:30.197 [1;31mERROR[m - http-8383-exec-5  - FormulairesManagedBean [1;31mnull[m 
+08:42:30.197 [1;31mERROR[m - http-8383-exec-5  - FormulairesManagedBean [1;31mnull[m 
+08:42:30.197 [1;31mERROR[m - http-8383-exec-5  - FormulairesManagedBean [1;31mnull[m 
+java.text.ParseException: Unparseable date: "27/03/2019 16:45"
+	at java.text.DateFormat.parse(Unknown Source)
+	at quartisweb.utils.date.DateManager.getDate(DateManager.java:49)
+	at quartisweb.jsf.managedBean.FormulairesManagedBean.doImport(FormulairesManagedBean.java:1852)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.el.parser.AstValue.invoke(AstValue.java:191)
+	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:276)
+	at org.apache.jasper.el.JspMethodExpression.invoke(JspMethodExpression.java:68)
+	at javax.faces.event.MethodExpressionActionListener.processAction(MethodExpressionActionListener.java:88)
+	at javax.faces.event.ActionEvent.processListener(ActionEvent.java:77)
+	at javax.faces.component.UIComponentBase.broadcast(UIComponentBase.java:746)
+	at javax.faces.component.UICommand.broadcast(UICommand.java:368)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:447)
+	at javax.faces.component.UIViewRoot.processApplication(UIViewRoot.java:752)
+	at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:97)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:117)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:244)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.RepeteurFilter.doFilter(RepeteurFilter.java:104)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:233)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+08:52:46.983 [35mDEBUG[m - http-8383-exec-5  - GSqlQueryGeneratorSqlServer [35m--->table =PERSONNEL query =set rowcount 3000  SELECT MATR_SITE  , MATR  , CODE_BADG  , FLAG_INTE  , NOM  , PREN  , ADRE_TELE  , ADRE_MAIL  , FLAG_BADG_BLOQ  , NOMB_ACTI_MAXI  , FLAG_SUIV_POIN  , KELI_KEY  , FLAG_GEST_PLAN  , FLAG_KELI_IMPO  , LIEN_IMAG  , CODE_HORA_1  , CODE_SERV  , CODE_EQUI_DEFA  , CODE_ATEL  , CODE_ATEL_DEFA  , CODE_SECT_GEOG  , CODE_SECT_GEOG_DEFA  , CODE_ETAT_PERS_DEFA  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DERN_POIN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DERN_POIN), 108) AS DATE_DERN_POIN  , CODE_SITE  , DELT_HEUR_UTC  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_HABI_MACH  , FLAG_SUPP FROM PERSONNEL  WHERE ( CODE_SITE = 'FAB')  AND ( FLAG_BADG_BLOQ LIKE  '%'  OR FLAG_BADG_BLOQ IS NULL  )  ORDER BY MATR_SITE ASC [m 
+08:52:56.566 [35mDEBUG[m - http-8383-exec-1  - GSqlQueryGeneratorSqlServer [35m--->table =FAMILLE_ETAT_PERS query =set rowcount 3000  SELECT CODE_FAMI_ETAT_SITE  , CODE_FAMI_ETAT  , dbo.OPTIMA_TRADUCTION(DESI_FAMI_ETAT,'fr') +'@KEYLANG_'+DESI_FAMI_ETAT AS DESI_FAMI_ETAT  , NUME_COLO  , CODE_SITE  FROM FAMILLE_ETAT_PERS  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_FAMI_ETAT_SITE ASC [m 
+08:52:58.342 [35mDEBUG[m - http-8383-exec-2  - GSqlQueryGeneratorSqlServer [35m--->table =PERSONNEL query =set rowcount 3000  SELECT MATR_SITE  , MATR  , CODE_BADG  , FLAG_INTE  , NOM  , PREN  , ADRE_TELE  , ADRE_MAIL  , FLAG_BADG_BLOQ  , NOMB_ACTI_MAXI  , FLAG_SUIV_POIN  , KELI_KEY  , FLAG_GEST_PLAN  , FLAG_KELI_IMPO  , LIEN_IMAG  , CODE_HORA_1  , CODE_SERV  , CODE_EQUI_DEFA  , CODE_ATEL  , CODE_ATEL_DEFA  , CODE_SECT_GEOG  , CODE_SECT_GEOG_DEFA  , CODE_ETAT_PERS_DEFA  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DERN_POIN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DERN_POIN), 108) AS DATE_DERN_POIN  , CODE_SITE  , DELT_HEUR_UTC  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_HABI_MACH  , FLAG_SUPP FROM PERSONNEL  WHERE ( CODE_SITE = 'FAB')  ORDER BY MATR_SITE ASC [m 
+08:53:07.949 [35mDEBUG[m - http-8383-exec-3  - GSqlQueryGeneratorSqlServer [35m--->table =PERSONNEL query =set rowcount 3000  SELECT MATR_SITE  , MATR  , CODE_BADG  , FLAG_INTE  , NOM  , PREN  , ADRE_TELE  , ADRE_MAIL  , FLAG_BADG_BLOQ  , NOMB_ACTI_MAXI  , FLAG_SUIV_POIN  , KELI_KEY  , FLAG_GEST_PLAN  , FLAG_KELI_IMPO  , LIEN_IMAG  , CODE_HORA_1  , CODE_SERV  , CODE_EQUI_DEFA  , CODE_ATEL  , CODE_ATEL_DEFA  , CODE_SECT_GEOG  , CODE_SECT_GEOG_DEFA  , CODE_ETAT_PERS_DEFA  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DERN_POIN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DERN_POIN), 108) AS DATE_DERN_POIN  , CODE_SITE  , DELT_HEUR_UTC  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_HABI_MACH  , FLAG_SUPP FROM PERSONNEL  WHERE ( CODE_SITE = 'FAB')  AND ( MATR_SITE LIKE  '1003'  )  AND ( FLAG_BADG_BLOQ LIKE  '%'  OR FLAG_BADG_BLOQ IS NULL  )  ORDER BY MATR_SITE ASC [m 
+08:53:18.783 [35mDEBUG[m - http-8383-exec-4  - GSqlQueryGeneratorSqlServer [35m--->table =PERSONNEL query =set rowcount 3000  SELECT MATR_SITE  , MATR  , CODE_BADG  , FLAG_INTE  , NOM  , PREN  , ADRE_TELE  , ADRE_MAIL  , FLAG_BADG_BLOQ  , NOMB_ACTI_MAXI  , FLAG_SUIV_POIN  , KELI_KEY  , FLAG_GEST_PLAN  , FLAG_KELI_IMPO  , LIEN_IMAG  , CODE_HORA_1  , CODE_SERV  , CODE_EQUI_DEFA  , CODE_ATEL  , CODE_ATEL_DEFA  , CODE_SECT_GEOG  , CODE_SECT_GEOG_DEFA  , CODE_ETAT_PERS_DEFA  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DERN_POIN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DERN_POIN), 108) AS DATE_DERN_POIN  , CODE_SITE  , DELT_HEUR_UTC  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_HABI_MACH  , FLAG_SUPP FROM PERSONNEL  WHERE ( CODE_SITE = 'FAB')  AND ( MATR_SITE LIKE  '1003'  )  AND ( FLAG_BADG_BLOQ LIKE  '%'  OR FLAG_BADG_BLOQ IS NULL  )  ORDER BY MATR_SITE ASC [m 
+08:53:23.433 [35mDEBUG[m - http-8383-exec-5  - GSqlQueryGeneratorSqlServer [35m--->table =PERSONNEL query =set rowcount 3000  SELECT MATR_SITE  , MATR  , CODE_BADG  , FLAG_INTE  , NOM  , PREN  , ADRE_TELE  , ADRE_MAIL  , FLAG_BADG_BLOQ  , NOMB_ACTI_MAXI  , FLAG_SUIV_POIN  , KELI_KEY  , FLAG_GEST_PLAN  , FLAG_KELI_IMPO  , LIEN_IMAG  , CODE_HORA_1  , CODE_SERV  , CODE_EQUI_DEFA  , CODE_ATEL  , CODE_ATEL_DEFA  , CODE_SECT_GEOG  , CODE_SECT_GEOG_DEFA  , CODE_ETAT_PERS_DEFA  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DERN_POIN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DERN_POIN), 108) AS DATE_DERN_POIN  , CODE_SITE  , DELT_HEUR_UTC  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_HABI_MACH  , FLAG_SUPP FROM PERSONNEL  WHERE ( CODE_SITE = 'FAB')  ORDER BY MATR_SITE ASC [m 
+java.text.ParseException: Unparseable date: "27/03/2019 16:45"
+	at java.text.DateFormat.parse(Unknown Source)
+	at quartisweb.utils.date.DateManager.getDate(DateManager.java:49)
+	at quartisweb.jsf.managedBean.FormulairesManagedBean.doImport(FormulairesManagedBean.java:1852)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.el.parser.AstValue.invoke(AstValue.java:191)
+	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:276)
+	at org.apache.jasper.el.JspMethodExpression.invoke(JspMethodExpression.java:68)
+	at javax.faces.event.MethodExpressionActionListener.processAction(MethodExpressionActionListener.java:88)
+	at javax.faces.event.ActionEvent.processListener(ActionEvent.java:77)
+	at javax.faces.component.UIComponentBase.broadcast(UIComponentBase.java:746)
+	at javax.faces.component.UICommand.broadcast(UICommand.java:368)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:447)
+	at javax.faces.component.UIViewRoot.processApplication(UIViewRoot.java:752)
+	at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:97)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:117)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:244)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.RepeteurFilter.doFilter(RepeteurFilter.java:104)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:233)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+08:55:51.111 [35mDEBUG[m - http-8383-exec-2  - GSqlQueryGeneratorSqlServer [35m--->table =PERSONNEL query =set rowcount 3000  SELECT MATR_SITE  , MATR  , CODE_BADG  , FLAG_INTE  , NOM  , PREN  , ADRE_TELE  , ADRE_MAIL  , FLAG_BADG_BLOQ  , NOMB_ACTI_MAXI  , FLAG_SUIV_POIN  , KELI_KEY  , FLAG_GEST_PLAN  , FLAG_KELI_IMPO  , LIEN_IMAG  , CODE_HORA_1  , CODE_SERV  , CODE_EQUI_DEFA  , CODE_ATEL  , CODE_ATEL_DEFA  , CODE_SECT_GEOG  , CODE_SECT_GEOG_DEFA  , CODE_ETAT_PERS_DEFA  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DERN_POIN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DERN_POIN), 108) AS DATE_DERN_POIN  , CODE_SITE  , DELT_HEUR_UTC  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_HABI_MACH  , FLAG_SUPP FROM PERSONNEL  WHERE ( CODE_SITE = 'FAB')  AND ( FLAG_BADG_BLOQ LIKE  '%'  OR FLAG_BADG_BLOQ IS NULL  )  ORDER BY MATR_SITE ASC [m 
+08:56:07.096 [35mDEBUG[m - http-8383-exec-2  - ConnexionManagedBean [35mDéconnexion de : administrateur (ADMINISTRATEUR ADMINISTRATEUR)[m 
+08:56:12.034 [35mDEBUG[m - http-8383-exec-5  - LoginManagedBean [35muser.id = administrateur, connecté par login/mdp Osys[m 
+08:56:12.143 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mconnect - Connecting...[m 
+08:56:12.159 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mconnect - Connected.[m 
+08:56:12.159 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mexecuteQuery - Sending 'USER @ID0 [] serveur_web SERVEUR-WEB'...[m 
+08:56:12.159 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mexecuteQuery - Sent.[m 
+08:56:12.159 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mexecuteQuery - Reading response...[m 
+08:56:12.159 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mreadResponse - starting to listen...[m 
+08:56:12.159 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mreadResponse - read trame : ACK 263172[m 
+08:56:12.159 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mexecuteQuery - Read: 'ACK 263172'.[m 
+08:56:12.159 [35mDEBUG[m - http-8383-exec-5  - QTInternalCommunicator [35msend_IdentifyOsysConsoleWeb - QTools returned : 263172[m 
+08:56:12.159 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mexecuteQuery - Sending 'LST_USER_CONNECT'...[m 
+08:56:12.159 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mexecuteQuery - Sent.[m 
+08:56:12.159 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mexecuteQuery - Reading response...[m 
+08:56:12.159 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mreadResponse - starting to listen...[m 
+08:56:12.159 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mreadResponse - read trame : <lstuserconnect max="3" connect="1" />\x0a[m 
+08:56:12.159 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mexecuteQuery - Read: '<lstuserconnect max="3" connect="1" />\x0a'.[m 
+08:56:12.159 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mdisconnect - Déconnexion...[m 
+08:56:12.159 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mdisconnect - Déconnecté.[m 
+08:56:12.190 [35mDEBUG[m - http-8383-exec-5  - QuartisToolsServiceImpl [35mcreateOrUpdateUser - username : 'administrateur', groupName : 'Administrateurs'...[m 
+08:56:12.190 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mconnect - Connecting...[m 
+08:56:12.190 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mconnect - Connected.[m 
+08:56:12.190 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mexecuteQuery - Sending 'USER @ID0 [] serveur_web SERVEUR-WEB'...[m 
+08:56:12.190 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mexecuteQuery - Sent.[m 
+08:56:12.190 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mexecuteQuery - Reading response...[m 
+08:56:12.190 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mreadResponse - starting to listen...[m 
+08:56:12.190 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mreadResponse - read trame : ACK 263172[m 
+08:56:12.190 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mexecuteQuery - Read: 'ACK 263172'.[m 
+08:56:12.190 [35mDEBUG[m - http-8383-exec-5  - QTSrvCommunicator [35msend_IdentifyOsysConsoleWeb - QTools returned : 263172[m 
+08:56:12.190 [35mDEBUG[m - http-8383-exec-5  - QTSrvCommunicator [35msend_CreateUserQuartisTools - message =  USR USER OBJ ADD [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+[m 
+08:56:12.190 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mexecuteQuery - Sending ' USR USER OBJ ADD [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+'...[m 
+08:56:12.190 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mexecuteQuery - Sent.[m 
+08:56:12.190 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mexecuteQuery - Reading response...[m 
+08:56:12.190 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mreadResponse - starting to listen...[m 
+08:56:12.190 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mreadResponse - read trame : ACK -10[m 
+08:56:12.190 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mexecuteQuery - Read: 'ACK -10'.[m 
+08:56:12.190 [35mDEBUG[m - http-8383-exec-5  - QTSrvCommunicator [35msend_CreateUserQuartisTools - QTools returned : -10[m 
+08:56:12.190 [35mDEBUG[m - http-8383-exec-5  - QTSrvCommunicator [35msend_UpdateUserQuartisTools - message :  USR USER OBJ SET [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+[m 
+08:56:12.190 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mexecuteQuery - Sending ' USR USER OBJ SET [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+'...[m 
+08:56:12.190 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mexecuteQuery - Sent.[m 
+08:56:12.190 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mexecuteQuery - Reading response...[m 
+08:56:12.190 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mreadResponse - starting to listen...[m 
+08:56:12.190 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mreadResponse - read trame : ACK 0[m 
+08:56:12.190 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mexecuteQuery - Read: 'ACK 0'.[m 
+08:56:12.190 [35mDEBUG[m - http-8383-exec-5  - QTSrvCommunicator [35msend_UpdateUserQuartisTools - QTools returned : 0[m 
+08:56:12.190 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mdisconnect - Déconnexion...[m 
+08:56:12.190 [35mDEBUG[m - http-8383-exec-5  - QTConnector [35mdisconnect - Déconnecté.[m 
+08:56:12.190 [34m INFO[m - http-8383-exec-5  - QuartisToolsServiceImpl [34mMise à jour du user QuartisTools 'administrateur' dans le groupe 'Administrateurs' réussie.[m 
+08:56:23.640 [35mDEBUG[m - http-8383-exec-5  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Personnel_Activite_EnCours_Liste_1[m 
+08:56:23.640 [35mDEBUG[m - http-8383-exec-5  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'...[m 
+08:56:23.640 [35mDEBUG[m - http-8383-exec-5  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'...[m 
+08:56:23.671 [35mDEBUG[m - http-8383-exec-5  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+08:56:23.686 [35mDEBUG[m - http-8383-exec-1  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Personnel_Activite_EnCours_Liste_1[m 
+08:56:23.686 [35mDEBUG[m - http-8383-exec-1  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'...[m 
+08:56:23.686 [35mDEBUG[m - http-8383-exec-1  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'...[m 
+08:56:23.702 [35mDEBUG[m - http-8383-exec-1  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+08:56:29.450 [35mDEBUG[m - http-8383-exec-2  - GSqlQueryGeneratorSqlServer [35m--->table =PERSONNEL query =set rowcount 3000  SELECT MATR_SITE  , MATR  , CODE_BADG  , FLAG_INTE  , NOM  , PREN  , ADRE_TELE  , ADRE_MAIL  , FLAG_BADG_BLOQ  , NOMB_ACTI_MAXI  , FLAG_SUIV_POIN  , KELI_KEY  , FLAG_GEST_PLAN  , FLAG_KELI_IMPO  , LIEN_IMAG  , CODE_HORA_1  , CODE_SERV  , CODE_EQUI_DEFA  , CODE_ATEL  , CODE_ATEL_DEFA  , CODE_SECT_GEOG  , CODE_SECT_GEOG_DEFA  , CODE_ETAT_PERS_DEFA  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DERN_POIN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DERN_POIN), 108) AS DATE_DERN_POIN  , CODE_SITE  , DELT_HEUR_UTC  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_HABI_MACH  , FLAG_SUPP FROM PERSONNEL  WHERE ( CODE_SITE = 'FAB')  ORDER BY MATR_SITE ASC [m 
+08:58:05.140 [35mDEBUG[m - http-8383-exec-4  - GSqlQueryGeneratorSqlServer [35m--->table =PERSONNEL query =set rowcount 3000  SELECT MATR_SITE  , MATR  , CODE_BADG  , FLAG_INTE  , NOM  , PREN  , ADRE_TELE  , ADRE_MAIL  , FLAG_BADG_BLOQ  , NOMB_ACTI_MAXI  , FLAG_SUIV_POIN  , KELI_KEY  , FLAG_GEST_PLAN  , FLAG_KELI_IMPO  , LIEN_IMAG  , CODE_HORA_1  , CODE_SERV  , CODE_EQUI_DEFA  , CODE_ATEL  , CODE_ATEL_DEFA  , CODE_SECT_GEOG  , CODE_SECT_GEOG_DEFA  , CODE_ETAT_PERS_DEFA  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DERN_POIN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DERN_POIN), 108) AS DATE_DERN_POIN  , CODE_SITE  , DELT_HEUR_UTC  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_HABI_MACH  , FLAG_SUPP FROM PERSONNEL  WHERE ( CODE_SITE = 'FAB')  AND ( MATR_SITE LIKE  '%'  OR MATR_SITE IS NULL  )  AND ( FLAG_BADG_BLOQ LIKE  '%'  OR FLAG_BADG_BLOQ IS NULL  )  ORDER BY MATR_SITE ASC [m 
+2019-04-06 12:00:57.327 [Thread-2] INFO  org.quartz.core.QuartzScheduler[653]-Scheduler schedulerBean_$_NON_CLUSTERED shutting down.
+2019-04-06 12:00:57.452 [Thread-2] INFO  org.quartz.core.QuartzScheduler[572]-Scheduler schedulerBean_$_NON_CLUSTERED paused.
+2019-04-06 12:00:57.452 [Thread-2] INFO  org.quartz.core.QuartzScheduler[725]-Scheduler schedulerBean_$_NON_CLUSTERED shutdown complete.
+12:01:04.472 [34m INFO[m - Thread-2          - PropertiesDelegate [34mDestruction du properties manager ![m 
+2019-04-06 12:01:16.749 [Thread-2] INFO  org.quartz.core.QuartzScheduler[653]-Scheduler schedulerBean_$_NON_CLUSTERED shutting down.
+2019-04-06 12:01:16.749 [Thread-2] INFO  org.quartz.core.QuartzScheduler[572]-Scheduler schedulerBean_$_NON_CLUSTERED paused.
+2019-04-06 12:01:16.749 [Thread-2] INFO  org.quartz.core.QuartzScheduler[725]-Scheduler schedulerBean_$_NON_CLUSTERED shutdown complete.

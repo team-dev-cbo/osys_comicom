@@ -1,0 +1,97 @@
+Version 1
+APP 1
+
+1 OsysSrv
+2 Utilisateurs
+3 Trace
+5 Mémoires
+6 Requêtes
+7 Fenêtres
+8 Evénements
+9 Scénarios
+10 Déclenchements
+11 Serveur Web
+12 Driver Osys
+13 Fichiers
+14 états
+
+128 Erreur de syntaxe dans la déclaration de l'utilisateur
+129 Déclaration de l'utilisateur "%1" à l'adresse IP %2
+130 Ouverture de la socket cliente %1
+131 L'utilisateur n'est pas déclaré 
+132 Propriété inconnue %1
+133 Fermeture de la socket cliente %1
+134 Lecture de la configuration du serveur
+135 Ecriture de la configuration du serveur
+
+136 L'utilisateur n'a pas les droits de lecture
+137 L'utilisateur n'a pas les droits d'écriture
+
+138 Module %1 : L'utilisateur "%2" du groupe "%3" n'a pas le droit de lire
+139 Module %1 : L'utilisateur "%2" du groupe "%3" n'a pas le droit d'ajouter
+140 Module %1 : L'utilisateur "%2" du groupe "%3" n'a pas le droit de modifier
+141 Module %1 : L'utilisateur "%2" du groupe "%3" n'a pas le droit de supprimer
+142 Module %1 : le groupe (ID="%2") n'existe pas 
+143 Module %1 : La propriété lue dans l'archive n'existe pas
+144 Module %1 : %2 inconnu. Le nom de la propriété doit être %3
+145 Module %1 : Le numéro de l'application doit être différent de zéro
+146 Module %1 : Le numéro du groupe ne doit pas être égale à zéro
+147 Module %1 : Le numéro de l'élément doit être égale à zéro
+148 Module %1 : Ajouter un groupe 
+149 Module %1 : Supprimer le groupe "%2"
+150 Module %1 : Lecture de la liste de groupe
+151 Module %1 : Consultation des modifications du groupe
+152 Module %1 : La liste de groupe est pleine
+153 Le nom du groupe "%1" existe déjà dans le Module %3
+154 Module %1 : Suppression impossible du groupe "%2" non vide
+155 Le nom de l'élément "%1" existe déjà dans le groupe "%2" du Module %3
+156 Module %1 : Le répertoire de base de l'application ("%2") n'existe pas
+157 Module %1 : Le sous répertoire %2 n'a pas été créé
+158 Module %1 : Le fichier %2 ne s'est pas ouvert 
+159 Module %1 : La propriété %2 n'a pas été écrite dans l'archive
+160 Module %1 : La valeur %2 correspondant à la propriété %3 n'a pas été écrite dans l'archive 
+161 Module %1 : La propriété %2 a été mal lue dans l'archive
+162 Module %1 : La version du fichier %2 est supérieur à la version du fichier de base qui vaut %3
+163 Module %1 : L'élément (ID=%2) n'existe pas
+164 Module %1 : La liste d'élément est pleine
+165 Module %1 : Le changement de l'extension du fichier %2 en .BAK ne s'est pas réalisé
+166 Module %1 : Suppression d'un élément 
+167 Module %1 : Ajout d'un élément
+168 Module %1 : Modifier un élément
+169 Module %1 : Lecture de la liste des éléments présents dans le groupe "%2"
+170 Module %1 : Lecture de la liste des droits
+171 Module %1 : Modification de la liste des droits
+172 Module %1 : Lecture d'un élément
+173 Module %1 : Lecture des dernières modifications de l'élément
+174 Module %1 : Modifier le nom d'un groupe
+175 Impossible de supprimer l'élément "%1", il est déjà utilisé par l'élément "%2" (module "%3", groupe "%4") 
+176 Echec de l'exécution de la commande %1
+177 L'utilisateur n'a pas le droit d'arrêter le serveur
+178 Version de démonstration 
+179 Erreur d'envoi du message "INITSRV"
+180 Impossible de supprimer la connexion de l'utilisateur "%1" (à la date "%2") car elle n'existe pas
+181 Déconnexion de l'utilisateur "%1" (connecté depuis le "%2") par l'utilisateur "%3"
+182 Module %1 : %2 (du groupe %3) n'a pas le droit d'exécuter l'élément "%4" du groupe "%5"
+183 Impossible de supprimer l'élément "%1", il est déjà utilisé par le fichier LPX local "%2" 
+184 Echéance de la licence QuartisTools dans %1 jour(s)
+185 Démarrage de QuartisTools (v%1) en cours ...
+186 Impossible d'ajouter la nouvelle langue '%1'. Format incorrect.
+187 Erreur de création du process
+188 Echec de la fonction GetExitCodeProcess
+189 Erreur de création du pipe
+190 Erreur d'exécution de la commande : Délai dépassé
+191 Echec de l'attente du résultat de l'exécution de la commande
+192 Erreur d'exécution de la commande
+193 Arrêt de l'exécution de la commande shell - Scénario supprimé
+194 Arrêt de QuartisTools (v%1) en cours ... 
+195 Arrêt de QuartisTools (v%1) terminé
+196 QuartisTools démarré (version:%1 - appli : "%2")
+197 QuartisToolsTomcat demande l'arrêt de QuartisTools (v%1)
+198 Demande l'arrêt de QuartisTools (info:"%1" - v%2)
+199 Impossible de connecter la console '%1' : Le nombre maximum de connexion (=%2) est dépassé 
+200 Impossible de connecter le terminal '%1' : Le nombre maximum de connexion (=%2) est dépassé 
+201 Impossible de connecter l'utilisateur '%1' : Nombre de licence Atelier = %2
+202 Problème de connexion à l'url '%1' : %2
+203 Impossible de connecter le terminal '%1' : Le même numéro de terminal existe déjà dans la liste des terminaux du driverScrut '%2'
+204 La date d'échéance de la licence QuartisTools est dépassée (date d'échéance:%1)
+205 Reconnexion du terminal '%1' (driverScrut:'%2')

@@ -1,0 +1,31 @@
+
+.logs {
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    background-color: white; 
+    opacity: 0.8;
+    z-index: 99999;
+}
+
+.center-div {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; 
+}
+
+.page {
+    position: relative;
+    height: 100%; 
+}
+
+.grid {
+    background-image: url('../images/grid.png');
+}
+
+.no-margin {
+    margin: 0 !important;
+}

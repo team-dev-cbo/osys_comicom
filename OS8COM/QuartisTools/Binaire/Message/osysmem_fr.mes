@@ -1,0 +1,58 @@
+Version 1
+APP 5
+
+1 Système
+2 L utilisateur %1 n'est pas connu
+3 Ouverture de la socket %1
+4 L utilisateur n'est pas déclaré
+5 La propriété de dialogue n'est pas reconnue %1
+6 Il est impossible de supprimer le groupe "%1"
+7 Il est impossible de supprimer la mémoire système "%1"
+8 Demande information automatique sur la mémoire "%1"
+9 Suppression information automatique sur la mémoire "%1"  
+10 Erreur de lecture sur la mémoire "%1" 
+11 Lecture du contenu de la mémoire "%1" 
+12 Fermeture de la socket %1
+13 Erreur d'écriture sur la mémoire "%1" 
+14 Ecriture sur la mémoire "%1"
+15 Resultat du calcul pour l'utilisateur %1
+16 Erreur résultat du calcul pour l'utilisateur %1
+17 Résultat du test pour l'utilisateur %1
+18 Erreur résultat du test pour l'utilisateur %1
+19 Enregistrement pour l'utilisateur %1
+20 Erreur d'enregistrement pour l'utilisateur %1
+21 Code scénario
+22 Date action
+23 Date début
+24 Date/Heure action
+25 Date/Heure début
+26 Heure action
+27 Heure début
+28 Message déclenchement
+29 Périphérique déclenchement
+30 Répertoire application
+31 Répertoire web
+32 Terminal
+33 ID Utilisateur
+34 Message action
+35 Périphérique action
+36 Impossible de modifier le nom "%1" du groupe des mémoires systèmes
+37 Impossible d'ajouter une nouvelle mémoire système 
+38 Impossible de modifier le contenu de la mémoire système "%1"
+39 Nom du serveur
+40 Paramètre du scénario
+41 Nom Utilisateur
+42 Ecriture dans la mémoire "%1" (index=%2 - valeur="%3")
+43 Lecture de la mémoire "%1" (index=%2 - valeur="%3")
+44 Chemin QuartisMsg
+45 Nom Scénario
+46 Profiling
+47 Socket Mémoire - Erreur de connexion au serveur (nom:%1 - port:%2)
+48 Mémoire "%1" - Erreur Demande information automatique - Aucun droit d'exécution
+49 Mémoire "%1" - Erreur Demande information automatique - Sa valeur n'existe pas
+50 Mémoire "%1" - Erreur Demande information automatique - Impossible d'ajouter la mémoire dans la liste
+51 Demande la valeur automatique de toutes les mémoires
+52 Type Utilisateur
+53 Répertoire Tomcat
+54 Port Tomcat
+55 Erreur demande information automatique sur la mémoire "%1" (res=%2)

@@ -1,0 +1,1 @@
+new f_class("f_additionalInformation",{extend:f_component});

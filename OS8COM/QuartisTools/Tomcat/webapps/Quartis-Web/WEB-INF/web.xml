@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app 
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+    id="quartis-web"
+    version="2.5">
+    <display-name>Quartis-Web 5.0.0</display-name>
+    
+    <!-- *******                *********-->
+    <!-- ******* CONTEXT-PARAM  *********-->
+    <!-- *******                *********-->
+    <context-param>
+        <param-name>javax.faces.CONFIG_FILES</param-name>
+        <param-value>/WEB-INF/faces-config.xml</param-value>
+    </context-param>
+    <context-param>
+        <param-name>javax.faces.STATE_SAVING_METHOD</param-name>
+        <param-value>client</param-value>
+    </context-param>
+    <context-param>
+        <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+        <param-value>resources.application</param-value>
+    </context-param>
+    <context-param>
+        <param-name>javamelody.datasources</param-name>
+        <param-value>QuartisWeb-PU</param-value>
+    </context-param>
+    <!-- Ajout P.MAHE - 15/04/2015  :
+        Ajout de Log4J 2 -->
+    <!--    <context-param>
+        <param-name>log4jConfiguration</param-name>
+        <param-value>file:/log4j.properties</param-value>
+    </context-param> -->
+    <!-- *******            *********-->
+    <!-- ******* LISTENER   *********-->
+    <!-- *******            *********-->
+    <listener>
+        <listener-class>quartisweb.tomcat.TomcatListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>net.bull.javamelody.SessionListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>quartisweb.session.SessionListener</listener-class>
+    </listener>
+    <!-- Ajout P.MAHE - 15/04/2015  :
+        Ajout de Log4J 2 -->
+    <!--    <listener>
+        <listener-class>org.apache.logging.log4j.web.Log4jServletContextListener</listener-class>
+    </listener>-->
+    <!-- *******                *********-->
+    <!-- ******* SESSION-CONFIG *********-->
+    <!-- *******                *********-->
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+    <!-- *******            *********-->
+    <!-- ******* SERVLET    *********-->
+    <!-- *******            *********-->
+    <servlet>
+        <servlet-name>FacesServlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>Rcfaces Resources Servlet</servlet-name>
+        <servlet-class>org.rcfaces.renderkit.html.internal.resource.ResourcesServlet</servlet-class>
+        <!--init-param>
+            <param-name>org.rcfaces.renderkit.html.javascript.modules.GROUP_ALL_FILES</param-name>
+            <param-value>true</param-value>
+        </init-param-->
+        <init-param>
+            <param-name>org.rcfaces.renderkit.html.javascript.sets.CORE</param-name>
+            <param-value>basicComponent, tree, toolbar, dialog, image, extraComponent, expandBar, itemsList, gridHelp</param-value>
+        </init-param>
+        <!--init-param>
+            <param-name>org.rcfaces.renderkit.html.javascript.sets.EXTRAS</param-name>
+            <param-value>validator, messageComponents, popupComponent, tabbedPane, calendar, asyncRender, suggest, pager, dataGrid, items</param-value>
+        </init-param-->
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <!--servlet>
+        <servlet-name>Rcfaces Framework Contents</servlet-name>
+        <servlet-class>org.rcfaces.renderkit.html.internal.resource.ResourcesServlet</servlet-class>
+        <init-param>
+            <param-name>org.rcfaces.renderkit.html.javascript.sets.CORE</param-name>
+            <param-value>basicComponent,message,extraComponent,ajax,service,extraButton, consoleLog</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet-->
+    <servlet>
+        <servlet-name>Rcfaces Application Contents</servlet-name>
+        <servlet-class>org.rcfaces.core.internal.contentStorage.ContentStorageServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>Rcfaces Client Bundle</servlet-name>
+        <servlet-class>org.rcfaces.renderkit.html.internal.clientBundle.ClientResourceBundleServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>Client Access Servlet</servlet-name>
+        <servlet-class>quartisweb.servlet.ClientAccessServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BrowseServlet</servlet-name>
+        <servlet-class>quartisweb.filechooser.servlet.BrowseServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TestConnexionServlet</servlet-name>
+        <servlet-class>quartisweb.bd.servlet.TestConnexionServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SuggestServlet</servlet-name>
+        <servlet-class>quartisweb.jsf.component.suggestText.SuggestServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>ActionServlet</servlet-name>
+        <servlet-class>quartisspv.servlet.ActionServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProjectImageServlet</servlet-name>
+        <servlet-class>quartisspv.servlet.ProjectImageServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProjectURLServlet</servlet-name>
+        <servlet-class>quartisspv.servlet.ProjectURLServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AuthentificationServlet</servlet-name>
+        <servlet-class>quartisspv.servlet.AuthentificationServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>URLDispatcherServlet</servlet-name>
+        <servlet-class>quartisspv.servlet.URLDispatcherServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SVGDispatcherServlet</servlet-name>
+        <servlet-class>quartisspv.servlet.SVGDispatcherServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>IDE-ApplicationLoaderServlet</servlet-name>
+        <servlet-class>quartisspv.ide.ApplicationLoaderServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>IDE-DataSetTestServlet</servlet-name>
+        <servlet-class>quartisspv.ide.DataSetTestServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>IDE-SupervisorTestServlet</servlet-name>
+        <servlet-class>quartisspv.ide.SupervisorTestServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>IDE-SupervisorClearServlet</servlet-name>
+        <servlet-class>quartisspv.ide.SupervisorClearServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>IDE-ApplicationSaverServlet</servlet-name>
+        <servlet-class>quartisspv.ide.ApplicationSaverServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>IDE-ApplicationDeleteServlet</servlet-name>
+        <servlet-class>quartisspv.ide.ApplicationDeleteServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PDF-CometServlet</servlet-name>
+        <servlet-class>quartisspv.servlet.PdfActionServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DTS-CometServlet</servlet-name>
+        <servlet-class>quartisspv.servlet.DtsActionServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AjaxUiServlet</servlet-name>
+        <servlet-class>quartisweb.servlet.AjaxUiServlet</servlet-class>
+    </servlet>
+    <!-- ******* MAPPING *********-->
+    <servlet-mapping>
+        <servlet-name>AjaxUiServlet</servlet-name>
+        <url-pattern>*.ajx</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FacesServlet</servlet-name>
+        <url-pattern>*.sso</url-pattern>
+        <url-pattern>*.jsf</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Rcfaces Resources Servlet</servlet-name>
+        <!--url-pattern>/rc-fwk/*</url-pattern-->
+        <url-pattern>/rcfaces/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Rcfaces Application Contents</servlet-name>
+        <url-pattern>/rc-content/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Rcfaces Client Bundle</servlet-name>
+        <url-pattern>/rc-cb/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Client Access Servlet</servlet-name>
+        <url-pattern>*.cas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BrowseServlet</servlet-name>
+        <url-pattern>*.brw</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TestConnexionServlet</servlet-name>
+        <url-pattern>*.tcs</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SuggestServlet</servlet-name>
+        <url-pattern>*.mss</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ActionServlet</servlet-name>
+        <url-pattern>/sup-run</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProjectImageServlet</servlet-name>
+        <url-pattern>/project-image</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProjectURLServlet</servlet-name>
+        <url-pattern>/project-url</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AuthentificationServlet</servlet-name>
+        <url-pattern>/sup-auth</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>URLDispatcherServlet</servlet-name>
+        <url-pattern>/url-dispatch</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SVGDispatcherServlet</servlet-name>
+        <url-pattern>/svg-dispatch</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>IDE-ApplicationLoaderServlet</servlet-name>
+        <url-pattern>/ide/Load-Application</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>IDE-DataSetTestServlet</servlet-name>
+        <url-pattern>/ide/Test-DataSet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>IDE-SupervisorTestServlet</servlet-name>
+        <url-pattern>/ide/Test-Supervisor</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>IDE-SupervisorClearServlet</servlet-name>
+        <url-pattern>/ide/Clear-Supervisor</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>IDE-ApplicationSaverServlet</servlet-name>
+        <url-pattern>/ide/Save-Application</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>IDE-ApplicationDeleteServlet</servlet-name>
+        <url-pattern>/ide/Delete-Application</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PDF-CometServlet</servlet-name>
+        <url-pattern>/PDF-Comet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DTS-CometServlet</servlet-name>
+        <url-pattern>/DTS-Comet</url-pattern>
+    </servlet-mapping>
+    <!-- *******         *********-->
+    <!-- ******* FILTRES *********-->
+    <!-- *******         *********-->
+    <filter>
+        <filter-name>Encoding Filter</filter-name>
+        <filter-class>quartisweb.servlet.EncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+    <filter>
+        <filter-name>ImageImporterFilter</filter-name>
+        <filter-class>quartisweb.filter.ImageImporterFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>filtreSession</filter-name>
+        <filter-class>quartisweb.filter.FiltreSession</filter-class>
+    </filter>
+    <filter>
+        <filter-name>filtreRepeteur</filter-name>
+        <filter-class>quartisweb.filter.RepeteurFilter</filter-class>
+    </filter>
+    <!-- Ajout P.MAHE - 15/04/2015  :
+        Ajout de Log4J 2 -->
+    <filter>
+        <filter-name>log4jServletFilter</filter-name>
+        <filter-class>org.apache.logging.log4j.web.Log4jServletFilter</filter-class>
+    </filter>
+    <!-- SSO 
+    <filter>
+        <filter-name>SecurityFilter</filter-name>
+        <filter-class>waffle.servlet.NegotiateSecurityFilter</filter-class>
+        <init-param>
+            <param-name>principalFormat</param-name>
+            <param-value>SID</param-value>
+        </init-param>
+        <init-param>
+            <param-name>waffle.servlet.spi.NegotiateSecurityFilterProvider/protocols</param-name>
+            <param-value>NTLM</param-value>
+        </init-param>
+        <init-param>
+            <param-name>securityFilterProviders</param-name>
+            <param-value>waffle.servlet.spi.NegotiateSecurityFilterProvider</param-value>
+        </init-param>
+    </filter>
+    -->
+    <filter>
+        <filter-name>javamelody</filter-name>
+        <filter-class>net.bull.javamelody.MonitoringFilter</filter-class>
+        <async-supported>true</async-supported>
+    </filter>
+    <!-- ******* MAPPING *********-->
+    <filter-mapping>
+        <filter-name>ImageImporterFilter</filter-name>
+        <url-pattern>/images/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>filtreSession</filter-name>
+        <url-pattern>*.ajx</url-pattern>
+        <url-pattern>*.jsf</url-pattern>
+        <url-pattern>*.sso</url-pattern>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>Encoding Filter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>filtreRepeteur</filter-name>
+        <url-pattern>/admin_favoris.jsf</url-pattern>
+        <url-pattern>/admin_profils.jsf</url-pattern>
+        <url-pattern>/admin_users.jsf</url-pattern>
+        <url-pattern>/change_pwd.jsf</url-pattern>
+        <url-pattern>/etat.jsf</url-pattern>
+        <url-pattern>/formulaire.jsf</url-pattern>
+        <url-pattern>/param.jsf</url-pattern>
+    </filter-mapping>
+    <!-- Ajout P.MAHE - 15/04/2015  :
+        Ajout de Log4J 2
+    -->
+    <filter-mapping>
+        <filter-name>log4jServletFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+        <dispatcher>INCLUDE</dispatcher>
+        <dispatcher>ERROR</dispatcher>
+        <dispatcher>ASYNC</dispatcher>
+        <!-- Servlet 3.0 w/ disabled auto-initialization only; not supported in 2.5 -->
+    </filter-mapping>
+    <!--     SSO 
+    <filter-mapping>
+        <filter-name>SecurityFilter</filter-name>
+        <url-pattern>*.sso</url-pattern>
+    </filter-mapping>
+	-->
+    
+    <filter-mapping>
+        <filter-name>javamelody</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>ASYNC</dispatcher>
+    </filter-mapping>
+    <!-- *******         *********-->
+    <!-- ******* WELCOME *********-->
+    <!-- *******         *********-->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

@@ -1,0 +1,182 @@
+NAME ScrutOsys
+EXEC scrut.exe
+DESC 
+{
+   FR [driver scrut]
+}
+PROP
+{
+	CARAC
+	{
+		NAME PORT
+		TYPE CHAINE_LST
+		DESC 
+		{
+		     FR [Port Communication]
+		}
+		LST
+		{
+			VAL COM1
+				{
+				FR [port COM1]
+			}
+			VAL COM2
+				{
+				FR [port COM2]
+			}
+			VAL 0
+				{
+				FR [Aucun]
+			}
+		}
+		DEFAULT [COM1]
+	}
+	CARAC
+	{
+		NAME SPEED
+		TYPE NUMBER_LST
+		DESC 
+		{
+		     FR [Vitesse de Communication]
+		}
+		LST
+		{
+			VAL 4800
+	                {  
+				FR [ 4800 Bauds]
+			}
+			VAL 9600
+	                {  
+				FR [ 9600 Bauds]
+			}
+			VAL 19200
+	                {  
+				FR [ 19200 Bauds]
+			}
+			VAL 38400
+	                {  
+				FR [ 38400 Bauds]
+			}
+		}
+		DEFAULT 9600
+	}
+	CARAC
+	{
+		NAME FORMAT
+		TYPE CHAINE_LST
+		DESC 
+		{
+		     FR [Format de Communication]
+		}
+		LST
+		{
+			VAL [8N1]
+                        {  
+				FR [ 8 Bits de données, pas de parité, 1 bit de stop]
+			}
+			VAL [7E1]
+                        {  
+				FR [ 7 Bits de données, parité paire, 1 bit de stop]
+			}
+			VAL [7O1]
+                        {  
+				FR [7 Bits de données, parité impaire, 1 bit de stop]
+			}
+		}
+		DEFAULT [7E1]
+	}
+	CARAC
+	{
+		NAME MODE
+		TYPE CHAINE_LST
+		DESC 
+		{
+		     FR [Mode de communication]
+		}
+		LST
+		{
+			VAL [ENQ/ACK]
+                        {  
+				FR [ ENQ/ACK]
+			}
+			VAL [XON/XOFF]
+                        {  
+				FR [ Xon / Xoff]
+			}
+		}
+		DEFAULT	[XON/XOFF]
+	}
+	CARAC
+	{
+		NAME START_TIMEOUT
+		TYPE NUMBER
+		DESC 
+		{
+		     FR [Durée avant activation initiale]
+		}
+		VAL_MIN	0
+		VAL_MAX 9999
+		DEFAULT 3		
+	}
+	CARAC
+	{
+		NAME TERM_SERVER
+		TYPE NUMBER
+		DESC 
+		{
+		     FR [Numéro du premier terminal éthernet à gérer]
+		}
+		VAL_MIN	0
+		VAL_MAX 9999
+		DEFAULT 0		
+	}
+	CARAC
+	{
+		NAME OSYSTERMSER
+		TYPE NUMBER
+		DESC 
+		{
+		     FR [Numéro du port pour l'émission vers les terminaux éthernet]
+		}
+		VAL_MIN	0
+		VAL_MAX 9999
+		DEFAULT 5020		
+	}
+	CARAC
+	{
+		NAME OSYSTERMBRO
+		TYPE NUMBER
+		DESC 
+		{
+		     FR [Numéro du port pour la connexion vers les terminaux éthernet]
+		}
+		VAL_MIN	0
+		VAL_MAX 9999
+		DEFAULT 5030
+	}
+	CARAC
+	{
+		NAME TESTSCRUTPORT
+		TYPE NUMBER
+		DESC 
+		{
+		     FR [Numéro du port pour la connexion du logiciel TestScrut]
+		}
+		VAL_MIN	0
+		VAL_MAX 9999
+		DEFAULT 5090
+	}
+	CARAC
+	{
+		NAME OFFSET
+		TYPE NUMBER
+		DESC 
+		{
+		     FR [Numéro offset]
+		}
+		VAL_MIN	0
+		VAL_MAX 9999
+		DEFAULT 0
+	}
+
+}

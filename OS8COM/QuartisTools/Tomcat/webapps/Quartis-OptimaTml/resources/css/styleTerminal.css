@@ -1,0 +1,303 @@
+.lineFormInput table {
+	display: inline;
+	vertical-align: top;
+}
+
+.lineFormInput {
+	margin-bottom: 8px;
+}
+
+.lineFormInput label {
+	width: 24%;
+	text-align: right;
+	margin-left: 15px;
+	display: inline-block;
+}
+
+.ui-state-disabled {
+	opacity: 0.35 !important;
+}
+
+.lineFormInputModal label {
+	width: 33%;
+	text-align: right;
+	margin-left: 15px;
+	display: inline-block;
+}
+
+.lineFormInputModal {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.lineFormInput input, .lineFormInput .ui-autocomplete {
+	width: 60%;
+	margin-left: 8px;
+}
+
+.lineFormInput .ui-autocomplete {
+	width: 60%;
+	margin-left: 7px;
+}
+
+.lineFormInput .ui-autocomplete input{
+	width: 100%;
+	margin-left: 0px;
+}
+
+.lineFormInputModal input {
+	width: 50%;
+	margin-left: 8px;
+}
+
+.lineFormInput img {
+	margin-left: 10px;
+}
+
+.alignCenter {
+	text-align: center;
+}
+
+.alignRight {
+	text-align: right;
+}
+
+.alignLeft {
+	text-align: left;
+}
+
+.btnBottom button {
+	width: 190px;
+}
+
+.contentRight table {
+	margin-bottom: 20px;
+	overflow-y: auto;
+}
+
+.ui-selectonemenu-label {
+	margin-left: 0px !important;
+}
+
+.lineFormInput .ui-selectonemenu-trigger {
+	width: auto !important;
+}
+
+.lineFormInput .inputOneLetter {
+	width: 30px;
+}
+
+.lineFormInput .bigInput {
+	width: 50%
+}
+
+.lineFormInput .littleInput {
+	width: 20%;
+}
+
+.lineFormInput .inputWithImg {
+	width: 60%;
+}
+
+.lineFormInput .labelMarginRight {
+	margin-right: 15px;
+	vertical-align: bottom;
+}
+
+.lineFormInput .labelLittleMarginRight {
+	margin-right: 7px;
+}
+
+.lineFormInput table label {
+	font-size: 11px;
+	margin-left: 5px;
+	vertical-align: top;
+}
+
+.lineFormInput table input {
+	width: auto;
+}
+
+.overflowHidden .ui-dialog-content {
+	overflow: hidden;
+}
+
+.lineFormInput .buttonImgMessDefa {
+    background: url(../../resources/img/tab.png) no-repeat !important;
+    background-position: center;
+    background-color: white;
+    vertical-align: bottom;
+    height: 20px;
+    width: 22px;
+    margin-left: 8px;
+}
+
+.lineFormInput .buttonImgDesiLang {
+    background: url(../../resources/img/globe2.png) no-repeat !important;
+    background-position: center;
+    background-color: white;
+    vertical-align: bottom;
+    height: 22px;
+    width: 22px;
+    margin-left: 8px;
+}
+
+.btnAnnulerMessDefa {
+	margin-top: 10px;
+}
+
+.error {
+	color: red;
+	text-align: center;
+	margin-top: 25px;
+}
+
+.listBoxMargin {
+	vertical-align: bottom;
+	margin-left: 7px;
+}
+
+#tabledeclTcl tr {
+	height: 27px;
+}
+
+.ui-datatable-scrollable-body {
+	margin-bottom: 20px;
+}
+
+.ui-datatable-scrollable-footer {
+	display:none;
+	margin-bottom: 20px;
+}
+
+.marginBottom {
+	margin-bottom: 20px;
+}
+
+.tabRight .ui-datatable-scrollable-header-box {
+	height: 26px;
+}
+
+.tabRight .ui-datatable-scrollable-header-box table{
+	height: 26px;
+}
+
+.tabInvisible {
+	background: none;
+
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active .tabInvisible {
+	/*background: none !important;*/
+}
+
+.panelForm {
+	min-height: 75%;
+}
+
+.ui-datatable-scrollable-body tr, .ui-datatable-scrollable-body tr td{
+	height: 20px;
+}
+
+table tr td {
+	font-size: 11px;
+}
+
+.labelAtel {
+	display: inline-block;
+	width: auto;
+}
+
+.lineFormInput .labelAtel label {
+	display: inline;
+}
+
+.inputAtel, .btnAtel {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.btnAtel {
+	margin-left: 20px;
+}
+
+.tabViewTabDark .ui-tabs-nav {
+	/*background: #93b6d7 !important;*/
+	background: #e7e7e7 !important;
+}
+
+.tabViewTabDark .ui-tabs-nav .ui-corner-top {
+	/*background: #80a9d0;*/
+	background: #ddf3f3;
+}
+
+.tabViewTabDark .ui-tabs-nav .ui-state-active {
+	/*background: #a7c3de !important;*/
+	background: #DEDEDE !important;
+}
+
+.tabViewTabDark .tabInvisible {
+	/*background: #93b6d7 !important;*/
+	background: #e7e7e7 !important;
+}
+
+.modalDuplication .ui-dialog-content {
+	overflow: hidden;
+}
+
+.ui-state-disabled a{
+	/*color: #E3E3E3 !important;*/
+	color: #bee2e4 !important;
+}
+
+.ui-selectonemenu, .ui-selectonemenu-label{
+	width: 300px !important;
+}
+
+.twoSelectmenu {
+	display: inline-block;
+	width: 50%;
+}
+
+.littleSelectMenu .ui-selectonemenu,.littleSelectMenu .ui-selectonemenu-label {
+	width: 120px !important;
+	vertical-align: top;
+}
+
+.tableMessageDefaut .ui-state-default {
+	display: none;
+}
+
+.messageAlert {
+	height: 63px;
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 50px) and (max-width: 1150px) {
+  
+  .lineFormInput label {
+  	width: 30%;
+  }
+  
+  .lineFormInput input, .lineFormInput .ui-inputfield{
+ 	 width: 200px;
+  }
+  
+  .lineFormInput .ui-autocomplete, .lineFormInput .ui-autocomplete input {
+	width: 200px;  
+  }
+  
+}
+
+@media screen and (min-width: 50px) and (max-width: 1550px) {
+  
+  .twoSelectmenu {
+ 	 display: block;
+ 	 width: 100%;
+ 	 margin-top: 10px;
+  }
+}
+

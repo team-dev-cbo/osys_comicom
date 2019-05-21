@@ -1,0 +1,1264 @@
+10:41:15.991 DEBUG - AuthManagedBean autoconnect - Tentative de connexion SSO... 
+10:41:16.020 DEBUG - ConnexionManagedBean User renseigné par filtre SSO LDAP : null 
+10:41:16.021 DEBUG - ConnexionManagedBean ldapActive = false 
+10:41:16.021 DEBUG - AuthManagedBean autoconnect - Echec de la connexion par SSO. 
+10:41:19.865 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+10:41:20.141 DEBUG - QTConnector connect - Connecting... 
+10:41:20.144 DEBUG - QTConnector connect - Connected. 
+10:41:20.144 DEBUG - QTConnector executeQuery - Sending 'USER @ID0 [] serveur_web SERVEUR-WEB'... 
+10:41:20.145 DEBUG - QTConnector executeQuery - Sent. 
+10:41:20.145 DEBUG - QTConnector executeQuery - Reading response... 
+10:41:20.145 DEBUG - QTConnector readResponse - starting to listen... 
+10:41:20.145 DEBUG - QTConnector readResponse - read trame : ACK 263172 
+10:41:20.146 DEBUG - QTConnector executeQuery - Read: 'ACK 263172'. 
+10:41:20.146 DEBUG - QTInternalCommunicator send_IdentifyOsysConsoleWeb - QTools returned : 263172 
+10:41:20.146 DEBUG - QTConnector executeQuery - Sending 'LST_USER_CONNECT'... 
+10:41:20.147 DEBUG - QTConnector executeQuery - Sent. 
+10:41:20.147 DEBUG - QTConnector executeQuery - Reading response... 
+10:41:20.147 DEBUG - QTConnector readResponse - starting to listen... 
+10:41:20.148 DEBUG - QTConnector readResponse - read trame : <lstuserconnect max="3" connect="0" />\x0a 
+10:41:20.148 DEBUG - QTConnector executeQuery - Read: '<lstuserconnect max="3" connect="0" />\x0a'. 
+10:41:20.149 DEBUG - QTConnector disconnect - Déconnexion... 
+10:41:20.149 DEBUG - QTConnector disconnect - Déconnecté. 
+10:41:20.173 DEBUG - QuartisToolsServiceImpl createOrUpdateUser - username : 'administrateur', groupName : 'Administrateurs'... 
+10:41:20.174 DEBUG - QTConnector connect - Connecting... 
+10:41:20.176 DEBUG - QTConnector connect - Connected. 
+10:41:20.176 DEBUG - QTConnector executeQuery - Sending 'USER @ID0 [] serveur_web SERVEUR-WEB'... 
+10:41:20.176 DEBUG - QTConnector executeQuery - Sent. 
+10:41:20.177 DEBUG - QTConnector executeQuery - Reading response... 
+10:41:20.177 DEBUG - QTConnector readResponse - starting to listen... 
+10:41:20.213 DEBUG - QTConnector readResponse - read trame : ACK 263172 
+10:41:20.214 DEBUG - QTConnector executeQuery - Read: 'ACK 263172'. 
+10:41:20.214 DEBUG - QTSrvCommunicator send_IdentifyOsysConsoleWeb - QTools returned : 263172 
+10:41:20.214 DEBUG - QTSrvCommunicator send_CreateUserQuartisTools - message =  USR USER OBJ ADD [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+ 
+10:41:20.214 DEBUG - QTConnector executeQuery - Sending ' USR USER OBJ ADD [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+'... 
+10:41:20.215 DEBUG - QTConnector executeQuery - Sent. 
+10:41:20.215 DEBUG - QTConnector executeQuery - Reading response... 
+10:41:20.215 DEBUG - QTConnector readResponse - starting to listen... 
+10:41:20.216 DEBUG - QTConnector readResponse - read trame : ACK -10 
+10:41:20.216 DEBUG - QTConnector executeQuery - Read: 'ACK -10'. 
+10:41:20.216 DEBUG - QTSrvCommunicator send_CreateUserQuartisTools - QTools returned : -10 
+10:41:20.216 DEBUG - QTSrvCommunicator send_UpdateUserQuartisTools - message :  USR USER OBJ SET [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+ 
+10:41:20.216 DEBUG - QTConnector executeQuery - Sending ' USR USER OBJ SET [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+'... 
+10:41:20.217 DEBUG - QTConnector executeQuery - Sent. 
+10:41:20.217 DEBUG - QTConnector executeQuery - Reading response... 
+10:41:20.217 DEBUG - QTConnector readResponse - starting to listen... 
+10:41:20.219 DEBUG - QTConnector readResponse - read trame : ACK 0 
+10:41:20.219 DEBUG - QTConnector executeQuery - Read: 'ACK 0'. 
+10:41:20.220 DEBUG - QTSrvCommunicator send_UpdateUserQuartisTools - QTools returned : 0 
+10:41:20.220 DEBUG - QTConnector disconnect - Déconnexion... 
+10:41:20.220 DEBUG - QTConnector disconnect - Déconnecté. 
+10:41:20.221  INFO - QuartisToolsServiceImpl Mise à jour du user QuartisTools 'administrateur' dans le groupe 'Administrateurs' réussie. 
+10:41:27.440 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+10:41:27.440 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+10:41:27.441 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+10:41:27.441 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+10:41:27.442 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+10:41:27.442 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+10:41:27.577 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+10:41:27.577 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+10:41:32.409 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+10:41:32.410 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+10:41:32.410 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+10:41:32.447 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+10:41:37.441 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+10:41:37.441 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+10:41:37.441 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+10:41:37.478 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+10:41:57.139 DEBUG - GSqlQueryGeneratorSqlServer --->table =SITE query =set rowcount 3000  SELECT CODE_SITE  , dbo.OPTIMA_TRADUCTION(DESI_SITE,'fr') +'@KEYLANG_'+DESI_SITE AS DESI_SITE  , ZONE_UTC  , FLAG_HEUR_ETE  , LANG_IMPO_DEFA  , CODE_GROU  , FLAG_SUPP FROM SITE  ORDER BY CODE_SITE ASC  
+10:42:14.879 ERROR - GSql  java.sql.SQLException: Violation de la contrainte PRIMARY KEY 'PK__TRADUCTI__E697FC3B210CC53E'. Impossible d'insérer une clé en double dans l'objet 'dbo.TRADUCTION'.
+	at net.sourceforge.jtds.jdbc.SQLDiagnostic.addDiagnostic(SQLDiagnostic.java:368)
+	at net.sourceforge.jtds.jdbc.TdsCore.tdsErrorToken(TdsCore.java:2816)
+	at net.sourceforge.jtds.jdbc.TdsCore.nextToken(TdsCore.java:2254)
+	at net.sourceforge.jtds.jdbc.TdsCore.getMoreResults(TdsCore.java:636)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.processResults(JtdsStatement.java:584)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeSQL(JtdsStatement.java:546)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeImpl(JtdsStatement.java:723)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeUpdate(JtdsStatement.java:1163)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeUpdate(JtdsStatement.java:1116)
+	at org.apache.commons.dbcp.DelegatingStatement.executeUpdate(DelegatingStatement.java:228)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.bull.javamelody.JdbcWrapper.doExecute(JdbcWrapper.java:404)
+	at net.bull.javamelody.JdbcWrapper$StatementInvocationHandler.invoke(JdbcWrapper.java:129)
+	at net.bull.javamelody.JdbcWrapper$DelegatingInvocationHandler.invoke(JdbcWrapper.java:286)
+	at com.sun.proxy.$Proxy131.executeUpdate(Unknown Source)
+	at quartisweb.generic.sql.GSql.insertGeneric(GSql.java:276)
+	at quartisweb.generic.GenericProfilManager.insertGeneric(GenericProfilManager.java:56)
+	at quartisweb.jsf.managedBean.FormulairesManagedBean.updateData(FormulairesManagedBean.java:1082)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.el.parser.AstValue.invoke(AstValue.java:191)
+	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:276)
+	at org.apache.jasper.el.JspMethodExpression.invoke(JspMethodExpression.java:68)
+	at javax.faces.event.MethodExpressionActionListener.processAction(MethodExpressionActionListener.java:88)
+	at javax.faces.event.ActionEvent.processListener(ActionEvent.java:77)
+	at javax.faces.component.UIComponentBase.broadcast(UIComponentBase.java:746)
+	at javax.faces.component.UICommand.broadcast(UICommand.java:368)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:447)
+	at javax.faces.component.UIViewRoot.processApplication(UIViewRoot.java:752)
+	at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:97)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:117)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:244)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.RepeteurFilter.doFilter(RepeteurFilter.java:104)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:233)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+10:44:49.778 DEBUG - ConnexionManagedBean Déconnexion de : administrateur (ADMINISTRATEUR ADMINISTRATEUR) 
+10:44:49.792 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/base.sso) mais pas de user en session. 
+10:44:52.252 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+10:44:52.380 DEBUG - QTConnector connect - Connecting... 
+10:44:52.383 DEBUG - QTConnector connect - Connected. 
+10:44:52.383 DEBUG - QTConnector executeQuery - Sending 'USER @ID0 [] serveur_web SERVEUR-WEB'... 
+10:44:52.383 DEBUG - QTConnector executeQuery - Sent. 
+10:44:52.384 DEBUG - QTConnector executeQuery - Reading response... 
+10:44:52.384 DEBUG - QTConnector readResponse - starting to listen... 
+10:44:52.384 DEBUG - QTConnector readResponse - read trame : ACK 263172 
+10:44:52.384 DEBUG - QTConnector executeQuery - Read: 'ACK 263172'. 
+10:44:52.385 DEBUG - QTInternalCommunicator send_IdentifyOsysConsoleWeb - QTools returned : 263172 
+10:44:52.385 DEBUG - QTConnector executeQuery - Sending 'LST_USER_CONNECT'... 
+10:44:52.385 DEBUG - QTConnector executeQuery - Sent. 
+10:44:52.385 DEBUG - QTConnector executeQuery - Reading response... 
+10:44:52.386 DEBUG - QTConnector readResponse - starting to listen... 
+10:44:52.387 DEBUG - QTConnector readResponse - read trame : <lstuserconnect max="3" connect="0" />\x0a 
+10:44:52.387 DEBUG - QTConnector executeQuery - Read: '<lstuserconnect max="3" connect="0" />\x0a'. 
+10:44:52.387 DEBUG - QTConnector disconnect - Déconnexion... 
+10:44:52.388 DEBUG - QTConnector disconnect - Déconnecté. 
+10:44:52.412 DEBUG - QuartisToolsServiceImpl createOrUpdateUser - username : 'administrateur', groupName : 'Administrateurs'... 
+10:44:52.412 DEBUG - QTConnector connect - Connecting... 
+10:44:52.414 DEBUG - QTConnector connect - Connected. 
+10:44:52.415 DEBUG - QTConnector executeQuery - Sending 'USER @ID0 [] serveur_web SERVEUR-WEB'... 
+10:44:52.415 DEBUG - QTConnector executeQuery - Sent. 
+10:44:52.415 DEBUG - QTConnector executeQuery - Reading response... 
+10:44:52.415 DEBUG - QTConnector readResponse - starting to listen... 
+10:44:52.416 DEBUG - QTConnector readResponse - read trame : ACK 263172 
+10:44:52.416 DEBUG - QTConnector executeQuery - Read: 'ACK 263172'. 
+10:44:52.416 DEBUG - QTSrvCommunicator send_IdentifyOsysConsoleWeb - QTools returned : 263172 
+10:44:52.416 DEBUG - QTSrvCommunicator send_CreateUserQuartisTools - message =  USR USER OBJ ADD [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+ 
+10:44:52.417 DEBUG - QTConnector executeQuery - Sending ' USR USER OBJ ADD [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+'... 
+10:44:52.417 DEBUG - QTConnector executeQuery - Sent. 
+10:44:52.417 DEBUG - QTConnector executeQuery - Reading response... 
+10:44:52.417 DEBUG - QTConnector readResponse - starting to listen... 
+10:44:52.418 DEBUG - QTConnector readResponse - read trame : ACK -10 
+10:44:52.418 DEBUG - QTConnector executeQuery - Read: 'ACK -10'. 
+10:44:52.418 DEBUG - QTSrvCommunicator send_CreateUserQuartisTools - QTools returned : -10 
+10:44:52.418 DEBUG - QTSrvCommunicator send_UpdateUserQuartisTools - message :  USR USER OBJ SET [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+ 
+10:44:52.419 DEBUG - QTConnector executeQuery - Sending ' USR USER OBJ SET [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+'... 
+10:44:52.419 DEBUG - QTConnector executeQuery - Sent. 
+10:44:52.419 DEBUG - QTConnector executeQuery - Reading response... 
+10:44:52.419 DEBUG - QTConnector readResponse - starting to listen... 
+10:44:52.421 DEBUG - QTConnector readResponse - read trame : ACK 0 
+10:44:52.422 DEBUG - QTConnector executeQuery - Read: 'ACK 0'. 
+10:44:52.422 DEBUG - QTSrvCommunicator send_UpdateUserQuartisTools - QTools returned : 0 
+10:44:52.422 DEBUG - QTConnector disconnect - Déconnexion... 
+10:44:52.423 DEBUG - QTConnector disconnect - Déconnecté. 
+10:44:52.423  INFO - QuartisToolsServiceImpl Mise à jour du user QuartisTools 'administrateur' dans le groupe 'Administrateurs' réussie. 
+10:44:52.754 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+10:44:52.901 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+10:44:52.911 ERROR - FiltreSession Erreur relevée par le filtre général : #{loginManagedBean.authenticate}: com.bodetosys.quartis.tomcat.exception.UserAlreadyConnectedException javax.servlet.ServletException: #{loginManagedBean.authenticate}: com.bodetosys.quartis.tomcat.exception.UserAlreadyConnectedException
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:256)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: javax.faces.FacesException: #{loginManagedBean.authenticate}: com.bodetosys.quartis.tomcat.exception.UserAlreadyConnectedException
+	at com.sun.faces.application.ActionListenerImpl.processAction(ActionListenerImpl.java:107)
+	at javax.faces.component.UICommand.broadcast(UICommand.java:383)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:447)
+	at javax.faces.component.UIViewRoot.processApplication(UIViewRoot.java:752)
+	at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:97)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:117)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:244)
+	... 27 more
+Caused by: javax.faces.el.EvaluationException: com.bodetosys.quartis.tomcat.exception.UserAlreadyConnectedException
+	at javax.faces.component.MethodBindingMethodExpressionAdapter.invoke(MethodBindingMethodExpressionAdapter.java:91)
+	at com.sun.faces.application.ActionListenerImpl.processAction(ActionListenerImpl.java:91)
+	... 34 more
+Caused by: com.bodetosys.quartis.tomcat.exception.UserAlreadyConnectedException
+	at com.bodetosys.quartis.tomcat.quartisweb.UserConnectSingleton.connect(UserConnectSingleton.java:249)
+	at quartisweb.jsf.managedBean.ConnexionManagedBean.connexion(ConnexionManagedBean.java:332)
+	at quartisweb.jsf.managedBean.LoginManagedBean.authenticate(LoginManagedBean.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.el.parser.AstValue.invoke(AstValue.java:191)
+	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:276)
+	at org.apache.jasper.el.JspMethodExpression.invoke(JspMethodExpression.java:68)
+	at javax.faces.component.MethodBindingMethodExpressionAdapter.invoke(MethodBindingMethodExpressionAdapter.java:77)
+	... 35 more
+
+10:44:53.045 ERROR - FiltreSession Erreur relevée par le filtre général : #{loginManagedBean.authenticate}: com.bodetosys.quartis.tomcat.exception.UserAlreadyConnectedException javax.servlet.ServletException: #{loginManagedBean.authenticate}: com.bodetosys.quartis.tomcat.exception.UserAlreadyConnectedException
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:256)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: javax.faces.FacesException: #{loginManagedBean.authenticate}: com.bodetosys.quartis.tomcat.exception.UserAlreadyConnectedException
+	at com.sun.faces.application.ActionListenerImpl.processAction(ActionListenerImpl.java:107)
+	at javax.faces.component.UICommand.broadcast(UICommand.java:383)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:447)
+	at javax.faces.component.UIViewRoot.processApplication(UIViewRoot.java:752)
+	at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:97)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:117)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:244)
+	... 27 more
+Caused by: javax.faces.el.EvaluationException: com.bodetosys.quartis.tomcat.exception.UserAlreadyConnectedException
+	at javax.faces.component.MethodBindingMethodExpressionAdapter.invoke(MethodBindingMethodExpressionAdapter.java:91)
+	at com.sun.faces.application.ActionListenerImpl.processAction(ActionListenerImpl.java:91)
+	... 34 more
+Caused by: com.bodetosys.quartis.tomcat.exception.UserAlreadyConnectedException
+	at com.bodetosys.quartis.tomcat.quartisweb.UserConnectSingleton.connect(UserConnectSingleton.java:249)
+	at quartisweb.jsf.managedBean.ConnexionManagedBean.connexion(ConnexionManagedBean.java:332)
+	at quartisweb.jsf.managedBean.LoginManagedBean.authenticate(LoginManagedBean.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.el.parser.AstValue.invoke(AstValue.java:191)
+	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:276)
+	at org.apache.jasper.el.JspMethodExpression.invoke(JspMethodExpression.java:68)
+	at javax.faces.component.MethodBindingMethodExpressionAdapter.invoke(MethodBindingMethodExpressionAdapter.java:77)
+	... 35 more
+
+10:45:03.725 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+10:45:03.726 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+10:45:03.726 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+10:45:03.733 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+10:45:03.733 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+10:45:03.733 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+10:45:03.758 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+10:45:03.764 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+10:45:08.156 DEBUG - GSqlQueryGeneratorSqlServer --->table =SITE query =set rowcount 3000  SELECT CODE_SITE  , dbo.OPTIMA_TRADUCTION(DESI_SITE,'fr') +'@KEYLANG_'+DESI_SITE AS DESI_SITE  , ZONE_UTC  , FLAG_HEUR_ETE  , LANG_IMPO_DEFA  , CODE_GROU  , FLAG_SUPP FROM SITE  ORDER BY CODE_SITE ASC  
+10:45:48.389 DEBUG - GSqlQueryGeneratorSqlServer --->table =SITE query =set rowcount 3000  SELECT CODE_SITE  , dbo.OPTIMA_TRADUCTION(DESI_SITE,'fr') +'@KEYLANG_'+DESI_SITE AS DESI_SITE  , ZONE_UTC  , FLAG_HEUR_ETE  , LANG_IMPO_DEFA  , CODE_GROU  , FLAG_SUPP FROM SITE  ORDER BY CODE_SITE ASC  
+10:45:48.577 DEBUG - SiteManager saveUserCodeSites - Ecriture dans le fichier : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\admin\preferences.xml'... 
+10:45:48.603 DEBUG - SiteManager saveUserCodeSites - Fin de l'écriture dans le fichier. 
+10:48:02.823 DEBUG - DisconnectDispatcher Déconnexion demandée pour : administrateur, session ID : #8325CFA26504435F8A04F81A7FD7CA88 
+10:53:29.135 DEBUG - AuthManagedBean autoconnect - Tentative de connexion SSO... 
+10:53:29.135 DEBUG - ConnexionManagedBean User renseigné par filtre SSO LDAP : null 
+10:53:29.136 DEBUG - ConnexionManagedBean ldapActive = false 
+10:53:29.136 DEBUG - AuthManagedBean autoconnect - Echec de la connexion par SSO. 
+10:53:31.959 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+10:53:32.084 DEBUG - QTConnector connect - Connecting... 
+10:53:32.087 DEBUG - QTConnector connect - Connected. 
+10:53:32.087 DEBUG - QTConnector executeQuery - Sending 'USER @ID0 [] serveur_web SERVEUR-WEB'... 
+10:53:32.088 DEBUG - QTConnector executeQuery - Sent. 
+10:53:32.088 DEBUG - QTConnector executeQuery - Reading response... 
+10:53:32.088 DEBUG - QTConnector readResponse - starting to listen... 
+10:53:32.088 DEBUG - QTConnector readResponse - read trame : ACK 263172 
+10:53:32.089 DEBUG - QTConnector executeQuery - Read: 'ACK 263172'. 
+10:53:32.089 DEBUG - QTInternalCommunicator send_IdentifyOsysConsoleWeb - QTools returned : 263172 
+10:53:32.089 DEBUG - QTConnector executeQuery - Sending 'LST_USER_CONNECT'... 
+10:53:32.089 DEBUG - QTConnector executeQuery - Sent. 
+10:53:32.090 DEBUG - QTConnector executeQuery - Reading response... 
+10:53:32.090 DEBUG - QTConnector readResponse - starting to listen... 
+10:53:32.091 DEBUG - QTConnector readResponse - read trame : <lstuserconnect max="3" connect="0" />\x0a 
+10:53:32.091 DEBUG - QTConnector executeQuery - Read: '<lstuserconnect max="3" connect="0" />\x0a'. 
+10:53:32.091 DEBUG - QTConnector disconnect - Déconnexion... 
+10:53:32.092 DEBUG - QTConnector disconnect - Déconnecté. 
+10:53:32.116 DEBUG - QuartisToolsServiceImpl createOrUpdateUser - username : 'administrateur', groupName : 'Administrateurs'... 
+10:53:32.116 DEBUG - QTConnector connect - Connecting... 
+10:53:32.118 DEBUG - QTConnector connect - Connected. 
+10:53:32.118 DEBUG - QTConnector executeQuery - Sending 'USER @ID0 [] serveur_web SERVEUR-WEB'... 
+10:53:32.119 DEBUG - QTConnector executeQuery - Sent. 
+10:53:32.119 DEBUG - QTConnector executeQuery - Reading response... 
+10:53:32.119 DEBUG - QTConnector readResponse - starting to listen... 
+10:53:32.119 DEBUG - QTConnector readResponse - read trame : ACK 263172 
+10:53:32.120 DEBUG - QTConnector executeQuery - Read: 'ACK 263172'. 
+10:53:32.120 DEBUG - QTSrvCommunicator send_IdentifyOsysConsoleWeb - QTools returned : 263172 
+10:53:32.120 DEBUG - QTSrvCommunicator send_CreateUserQuartisTools - message =  USR USER OBJ ADD [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+ 
+10:53:32.120 DEBUG - QTConnector executeQuery - Sending ' USR USER OBJ ADD [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+'... 
+10:53:32.120 DEBUG - QTConnector executeQuery - Sent. 
+10:53:32.121 DEBUG - QTConnector executeQuery - Reading response... 
+10:53:32.121 DEBUG - QTConnector readResponse - starting to listen... 
+10:53:32.121 DEBUG - QTConnector readResponse - read trame : ACK -10 
+10:53:32.121 DEBUG - QTConnector executeQuery - Read: 'ACK -10'. 
+10:53:32.122 DEBUG - QTSrvCommunicator send_CreateUserQuartisTools - QTools returned : -10 
+10:53:32.122 DEBUG - QTSrvCommunicator send_UpdateUserQuartisTools - message :  USR USER OBJ SET [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+ 
+10:53:32.122 DEBUG - QTConnector executeQuery - Sending ' USR USER OBJ SET [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+'... 
+10:53:32.122 DEBUG - QTConnector executeQuery - Sent. 
+10:53:32.123 DEBUG - QTConnector executeQuery - Reading response... 
+10:53:32.123 DEBUG - QTConnector readResponse - starting to listen... 
+10:53:32.125 DEBUG - QTConnector readResponse - read trame : ACK 0 
+10:53:32.125 DEBUG - QTConnector executeQuery - Read: 'ACK 0'. 
+10:53:32.125 DEBUG - QTSrvCommunicator send_UpdateUserQuartisTools - QTools returned : 0 
+10:53:32.125 DEBUG - QTConnector disconnect - Déconnexion... 
+10:53:32.126 DEBUG - QTConnector disconnect - Déconnecté. 
+10:53:32.126  INFO - QuartisToolsServiceImpl Mise à jour du user QuartisTools 'administrateur' dans le groupe 'Administrateurs' réussie. 
+10:53:35.587 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+10:53:35.587 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+10:53:35.588 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+10:53:35.616 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+10:53:35.627 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+10:53:35.627 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+10:53:35.627 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+10:53:35.663 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+10:53:41.319 DEBUG - GSqlQueryGeneratorSqlServer --->table =SITE query =set rowcount 3000  SELECT CODE_SITE  , dbo.OPTIMA_TRADUCTION(DESI_SITE,'fr') +'@KEYLANG_'+DESI_SITE AS DESI_SITE  , ZONE_UTC  , FLAG_HEUR_ETE  , LANG_IMPO_DEFA  , CODE_GROU  , FLAG_SUPP FROM SITE  ORDER BY CODE_SITE ASC  
+10:53:59.893 DEBUG - GSqlQueryGeneratorSqlServer --->table =SITE query =set rowcount 3000  SELECT CODE_SITE  , dbo.OPTIMA_TRADUCTION(DESI_SITE,'fr') +'@KEYLANG_'+DESI_SITE AS DESI_SITE  , ZONE_UTC  , FLAG_HEUR_ETE  , LANG_IMPO_DEFA  , CODE_GROU  , FLAG_SUPP FROM SITE  ORDER BY CODE_SITE ASC  
+10:53:59.934 DEBUG - SiteManager saveUserCodeSites - Ecriture dans le fichier : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\admin\preferences.xml'... 
+10:53:59.935 DEBUG - SiteManager saveUserCodeSites - Fin de l'écriture dans le fichier. 
+10:54:11.122 DEBUG - GSqlQueryGeneratorSqlServer --->table =SITE query =set rowcount 3000  SELECT CODE_SITE  , dbo.OPTIMA_TRADUCTION(DESI_SITE,'fr') +'@KEYLANG_'+DESI_SITE AS DESI_SITE  , ZONE_UTC  , FLAG_HEUR_ETE  , LANG_IMPO_DEFA  , CODE_GROU  , FLAG_SUPP FROM SITE  ORDER BY CODE_SITE ASC  
+10:54:18.265 DEBUG - GSqlQueryGeneratorSqlServer --->table =SITE query =set rowcount 3000  SELECT CODE_SITE  , dbo.OPTIMA_TRADUCTION(DESI_SITE,'fr') +'@KEYLANG_'+DESI_SITE AS DESI_SITE  , ZONE_UTC  , FLAG_HEUR_ETE  , LANG_IMPO_DEFA  , CODE_GROU  , FLAG_SUPP FROM SITE  ORDER BY CODE_SITE ASC  
+10:54:23.027 DEBUG - GSqlQueryGeneratorSqlServer --->table =SITE query =set rowcount 3000  SELECT CODE_SITE  , dbo.OPTIMA_TRADUCTION(DESI_SITE,'fr') +'@KEYLANG_'+DESI_SITE AS DESI_SITE  , ZONE_UTC  , FLAG_HEUR_ETE  , LANG_IMPO_DEFA  , CODE_GROU  , FLAG_SUPP FROM SITE  ORDER BY CODE_SITE ASC  
+10:55:08.634 DEBUG - GSqlQueryGeneratorSqlServer --->table =SITE query =set rowcount 3000  SELECT CODE_SITE  , dbo.OPTIMA_TRADUCTION(DESI_SITE,'fr') +'@KEYLANG_'+DESI_SITE AS DESI_SITE  , ZONE_UTC  , FLAG_HEUR_ETE  , LANG_IMPO_DEFA  , CODE_GROU  , FLAG_SUPP FROM SITE  ORDER BY CODE_SITE ASC  
+10:55:08.681 DEBUG - SiteManager saveUserCodeSites - Ecriture dans le fichier : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\admin\preferences.xml'... 
+10:55:08.682 DEBUG - SiteManager saveUserCodeSites - Fin de l'écriture dans le fichier. 
+10:57:47.612 DEBUG - GSqlQueryGeneratorSqlServer --->table =SITE query =set rowcount 3000  SELECT CODE_SITE  , dbo.OPTIMA_TRADUCTION(DESI_SITE,'fr') +'@KEYLANG_'+DESI_SITE AS DESI_SITE  , ZONE_UTC  , FLAG_HEUR_ETE  , LANG_IMPO_DEFA  , CODE_GROU  , FLAG_SUPP FROM SITE  ORDER BY CODE_SITE ASC  
+10:58:46.101 DEBUG - DataEtatManagedBean showEtat - identifiants de connexion : administrateur, (mdp chiffré encodé : 'Zu7JgTBLfV3uSXIBSAkwGBfKF6IGeNfdjtArcWQ841Wl9/MEIXFFDOcYMODMQRH9HToWMK+fklfjnp7Okatz0StxWvdn+xHd5486Fc23bKNSy3FNoZaxFdaIqIuSxpDXcVMlAfEy/Q9CHkWGx3kJMiw/Td7rGSchWRhTfNsIJU73K/EVjbJ9Oh6FsYXm2Fcah2v9jFzQv/N6V9k0MHpNdKb1BJWzSG0aoh0PVQhOxgOCaZFVDRjimKMLjlhu0po63BgSmNmVYMcCNlI753m/Mu1Eiq3K9ijXANAFrS6Plsl8PdejQCnCiKBKV0bOflIkqVI6ay9HaL9oObZ7lCwiXw=='), mdp déchiffré : '' rechiffré en '[]' 
+10:58:46.240 DEBUG - DataEtatManagedBean showEtat - administrateur connecté a Quartis Tools 
+10:58:52.244 DEBUG - DataEtatManagedBean showEtat - administrateur déconnecté de Quartis Tools 
+11:01:27.361 ERROR - UserRestrictionManager  java.io.FileNotFoundException: C:\Osys\QUARTIS_PRO\quartis-pro-web\users\null\preferences.xml (Le chemin d’accès spécifié est introuvable)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at sun.net.www.protocol.file.FileURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.file.FileURLConnection.getInputStream(Unknown Source)
+	at org.apache.xerces.impl.XMLEntityManager.setupCurrentEntity(Unknown Source)
+	at org.apache.xerces.impl.XMLVersionDetector.determineDocVersion(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at javax.xml.parsers.DocumentBuilder.parse(Unknown Source)
+	at quartisspv.xml.util.XmlUtil.readXmlFromFile(XmlUtil.java:115)
+	at quartisweb.resources.user.UserRestrictionManager.loadUserRestrictionParameters(UserRestrictionManager.java:114)
+	at quartisweb.jsf.managedBean.UserManagedBean.getRestrictionParameters(UserManagedBean.java:636)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at javax.el.BeanELResolver.getValue(BeanELResolver.java:62)
+	at javax.el.CompositeELResolver.getValue(CompositeELResolver.java:54)
+	at com.sun.faces.el.FacesCompositeELResolver.getValue(FacesCompositeELResolver.java:64)
+	at org.apache.el.parser.AstValue.getValue(AstValue.java:123)
+	at org.apache.el.ValueExpressionImpl.getValue(ValueExpressionImpl.java:186)
+	at org.apache.jasper.el.JspValueExpression.getValue(JspValueExpression.java:101)
+	at javax.faces.component.UIData.getValue(UIData.java:582)
+	at javax.faces.component.UIData.getDataModel(UIData.java:1063)
+	at javax.faces.component.UIData.setRowIndex(UIData.java:417)
+	at javax.faces.component.UIData.iterate(UIData.java:1131)
+	at javax.faces.component.UIData.processDecodes(UIData.java:936)
+	at javax.faces.component.UIComponentBase.processDecodes(UIComponentBase.java:1001)
+	at javax.faces.component.UIComponentBase.processDecodes(UIComponentBase.java:1001)
+	at javax.faces.component.UIComponentBase.processDecodes(UIComponentBase.java:1001)
+	at org.rcfaces.core.internal.component.CameliaOutputComponent.processDecodes(CameliaOutputComponent.java:308)
+	at javax.faces.component.UIComponentBase.processDecodes(UIComponentBase.java:1001)
+	at javax.faces.component.UIInput.processDecodes(UIInput.java:633)
+	at org.rcfaces.core.internal.component.CameliaInputComponent.processDecodes(CameliaInputComponent.java:314)
+	at javax.faces.component.UIComponentBase.processDecodes(UIComponentBase.java:1001)
+	at javax.faces.component.UIComponentBase.processDecodes(UIComponentBase.java:1001)
+	at javax.faces.component.UIForm.processDecodes(UIForm.java:203)
+	at quartisweb.jsf.component.uploadForm.UploadUIForm.processDecodes(UploadUIForm.java:87)
+	at javax.faces.component.UIComponentBase.processDecodes(UIComponentBase.java:1001)
+	at javax.faces.component.UIViewRoot.processDecodes(UIViewRoot.java:493)
+	at com.sun.faces.lifecycle.ApplyRequestValuesPhase.execute(ApplyRequestValuesPhase.java:101)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:117)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:244)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.RepeteurFilter.doFilter(RepeteurFilter.java:104)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:233)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+11:01:27.370 DEBUG - QuartisToolsServiceImpl createOrUpdateUser - username : 'administrateur', groupName : 'Administrateurs'... 
+11:01:27.371 DEBUG - QTConnector connect - Connecting... 
+11:01:27.373 DEBUG - QTConnector connect - Connected. 
+11:01:27.373 DEBUG - QTConnector executeQuery - Sending 'USER @ID0 [] serveur_web SERVEUR-WEB'... 
+11:01:27.373 DEBUG - QTConnector executeQuery - Sent. 
+11:01:27.374 DEBUG - QTConnector executeQuery - Reading response... 
+11:01:27.374 DEBUG - QTConnector readResponse - starting to listen... 
+11:01:27.374 DEBUG - QTConnector readResponse - read trame : ACK 263172 
+11:01:27.374 DEBUG - QTConnector executeQuery - Read: 'ACK 263172'. 
+11:01:27.374 DEBUG - QTSrvCommunicator send_IdentifyOsysConsoleWeb - QTools returned : 263172 
+11:01:27.375 DEBUG - QTSrvCommunicator send_CreateUserQuartisTools - message =  USR USER OBJ ADD [administrateur] [Administrateurs]
+ {
+ }
+ 
+11:01:27.375 DEBUG - QTConnector executeQuery - Sending ' USR USER OBJ ADD [administrateur] [Administrateurs]
+ {
+ }
+'... 
+11:01:27.375 DEBUG - QTConnector executeQuery - Sent. 
+11:01:27.375 DEBUG - QTConnector executeQuery - Reading response... 
+11:01:27.375 DEBUG - QTConnector readResponse - starting to listen... 
+11:01:27.375 DEBUG - QTConnector readResponse - read trame : ACK -10 
+11:01:27.376 DEBUG - QTConnector executeQuery - Read: 'ACK -10'. 
+11:01:27.376 DEBUG - QTSrvCommunicator send_CreateUserQuartisTools - QTools returned : -10 
+11:01:27.376 DEBUG - QTSrvCommunicator send_UpdateUserQuartisTools - message :  USR USER OBJ SET [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+ 
+11:01:27.376 DEBUG - QTConnector executeQuery - Sending ' USR USER OBJ SET [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+'... 
+11:01:27.376 DEBUG - QTConnector executeQuery - Sent. 
+11:01:27.377 DEBUG - QTConnector executeQuery - Reading response... 
+11:01:27.377 DEBUG - QTConnector readResponse - starting to listen... 
+11:01:27.379 DEBUG - QTConnector readResponse - read trame : ACK 0 
+11:01:27.379 DEBUG - QTConnector executeQuery - Read: 'ACK 0'. 
+11:01:27.379 DEBUG - QTSrvCommunicator send_UpdateUserQuartisTools - QTools returned : 0 
+11:01:27.380 DEBUG - QTConnector disconnect - Déconnexion... 
+11:01:27.380 DEBUG - QTConnector disconnect - Déconnecté. 
+11:01:27.380  INFO - QuartisToolsServiceImpl Mise à jour du user QuartisTools 'administrateur' dans le groupe 'Administrateurs' réussie. 
+11:01:27.381 DEBUG - QuartisToolsServiceImpl createOrUpdateUser - username : 'administrateur', groupName : ''... 
+11:01:27.381 DEBUG - QTConnector connect - Connecting... 
+11:01:27.382 DEBUG - QTConnector connect - Connected. 
+11:01:27.383 DEBUG - QTConnector executeQuery - Sending 'USER @ID0 [] serveur_web SERVEUR-WEB'... 
+11:01:27.383 DEBUG - QTConnector executeQuery - Sent. 
+11:01:27.383 DEBUG - QTConnector executeQuery - Reading response... 
+11:01:27.384 DEBUG - QTConnector readResponse - starting to listen... 
+11:01:27.384 DEBUG - QTConnector readResponse - read trame : ACK 263172 
+11:01:27.384 DEBUG - QTConnector executeQuery - Read: 'ACK 263172'. 
+11:01:27.384 DEBUG - QTSrvCommunicator send_IdentifyOsysConsoleWeb - QTools returned : 263172 
+11:01:27.384 DEBUG - QTSrvCommunicator send_DeleteUser - message :  USR USER OBJ DEL [administrateur] [] 
+ 
+11:01:27.384 DEBUG - QTConnector executeQuery - Sending ' USR USER OBJ DEL [administrateur] [] 
+'... 
+11:01:27.385 DEBUG - QTConnector executeQuery - Sent. 
+11:01:27.385 DEBUG - QTConnector executeQuery - Reading response... 
+11:01:27.385 DEBUG - QTConnector readResponse - starting to listen... 
+11:01:27.385 DEBUG - QTConnector readResponse - read trame : ACK -13 
+11:01:27.385 DEBUG - QTConnector executeQuery - Read: 'ACK -13'. 
+11:01:27.386 DEBUG - QTSrvCommunicator send_DeleteUser - QTools returned : -13 
+11:01:27.386 DEBUG - QTConnector disconnect - Déconnexion... 
+11:01:27.386 DEBUG - QTConnector disconnect - Déconnecté. 
+11:01:27.386  INFO - QuartisToolsServiceImpl Echec de la suppression du user QuartisTools 'administrateur' du groupe ''. 
+11:01:27.387 DEBUG - QuartisToolsServiceImpl createOrUpdateUser - username : 'administrateur', groupName : 'Administrateurs'... 
+11:01:27.387 DEBUG - QTConnector connect - Connecting... 
+11:01:27.388 DEBUG - QTConnector connect - Connected. 
+11:01:27.389 DEBUG - QTConnector executeQuery - Sending 'USER @ID0 [] serveur_web SERVEUR-WEB'... 
+11:01:27.389 DEBUG - QTConnector executeQuery - Sent. 
+11:01:27.389 DEBUG - QTConnector executeQuery - Reading response... 
+11:01:27.389 DEBUG - QTConnector readResponse - starting to listen... 
+11:01:27.389 DEBUG - QTConnector readResponse - read trame : ACK 263172 
+11:01:27.390 DEBUG - QTConnector executeQuery - Read: 'ACK 263172'. 
+11:01:27.390 DEBUG - QTSrvCommunicator send_IdentifyOsysConsoleWeb - QTools returned : 263172 
+11:01:27.390 DEBUG - QTSrvCommunicator send_CreateUserQuartisTools - message =  USR USER OBJ ADD [administrateur] [Administrateurs]
+ {
+ }
+ 
+11:01:27.390 DEBUG - QTConnector executeQuery - Sending ' USR USER OBJ ADD [administrateur] [Administrateurs]
+ {
+ }
+'... 
+11:01:27.390 DEBUG - QTConnector executeQuery - Sent. 
+11:01:27.391 DEBUG - QTConnector executeQuery - Reading response... 
+11:01:27.391 DEBUG - QTConnector readResponse - starting to listen... 
+11:01:27.391 DEBUG - QTConnector readResponse - read trame : ACK -10 
+11:01:27.391 DEBUG - QTConnector executeQuery - Read: 'ACK -10'. 
+11:01:27.391 DEBUG - QTSrvCommunicator send_CreateUserQuartisTools - QTools returned : -10 
+11:01:27.391 DEBUG - QTSrvCommunicator send_UpdateUserQuartisTools - message :  USR USER OBJ SET [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+ 
+11:01:27.392 DEBUG - QTConnector executeQuery - Sending ' USR USER OBJ SET [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+'... 
+11:01:27.392 DEBUG - QTConnector executeQuery - Sent. 
+11:01:27.392 DEBUG - QTConnector executeQuery - Reading response... 
+11:01:27.392 DEBUG - QTConnector readResponse - starting to listen... 
+11:01:27.394 DEBUG - QTConnector readResponse - read trame : ACK 0 
+11:01:27.394 DEBUG - QTConnector executeQuery - Read: 'ACK 0'. 
+11:01:27.394 DEBUG - QTSrvCommunicator send_UpdateUserQuartisTools - QTools returned : 0 
+11:01:27.395 DEBUG - QTConnector disconnect - Déconnexion... 
+11:01:27.395 DEBUG - QTConnector disconnect - Déconnecté. 
+11:01:27.395  INFO - QuartisToolsServiceImpl Mise à jour du user QuartisTools 'administrateur' dans le groupe 'Administrateurs' réussie. 
+11:01:27.396 DEBUG - XmlFile saveXmlFile - needsLock : true, pathFicXml : C:/Osys/QUARTIS_PRO/quartis-pro-web/users/Config\utilisateur.xml 
+11:01:27.396 DEBUG - XmlFile saveXmlFile - Verrouillage du fichier 'C:/Osys/QUARTIS_PRO/quartis-pro-web/users/Config\utilisateur.xml'. 
+11:01:27.399  INFO - XmlFile Création d'un sauvegarde pour le fichier utilisateur.xml... 
+11:01:27.402  INFO - XmlFile Sauvegarde créée. 
+11:01:27.402 DEBUG - XmlFile saveXmlFile - Déverrouillage du fichier 'C:/Osys/QUARTIS_PRO/quartis-pro-web/users/Config\utilisateur.xml'. 
+11:01:27.447 DEBUG - SiteManager saveUserCodeSites - Ecriture dans le fichier : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\preferences.xml'... 
+11:01:27.448 DEBUG - SiteManager saveUserCodeSites - Fin de l'écriture dans le fichier. 
+11:01:27.450 DEBUG - XmlFile saveXmlFile - needsLock : true, pathFicXml : C:/Osys/QUARTIS_PRO/quartis-pro-web/users/Config\utilisateur.xml 
+11:01:27.450 DEBUG - XmlFile saveXmlFile - Verrouillage du fichier 'C:/Osys/QUARTIS_PRO/quartis-pro-web/users/Config\utilisateur.xml'. 
+11:01:27.454 DEBUG - XmlFile saveXmlFile - Déverrouillage du fichier 'C:/Osys/QUARTIS_PRO/quartis-pro-web/users/Config\utilisateur.xml'. 
+11:01:27.530 DEBUG - SiteManager saveUserDefaultSite - Ecriture dans le fichier : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\preferences.xml'... 
+11:01:27.531 DEBUG - SiteManager saveUserDefaultSite - Fin de l'écriture dans le fichier. 
+11:01:27.567 DEBUG - UserRestrictionManager saveUserRestrictionParameters - Ecriture dans le fichier : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\preferences.xml'... 
+11:01:27.569 DEBUG - UserRestrictionManager saveUserRestrictionParameters - Fin de l'écriture dans le fichier. 
+11:01:36.369 ERROR - UserRestrictionManager  java.io.FileNotFoundException: C:\Osys\QUARTIS_PRO\quartis-pro-web\users\null\preferences.xml (Le chemin d’accès spécifié est introuvable)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at sun.net.www.protocol.file.FileURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.file.FileURLConnection.getInputStream(Unknown Source)
+	at org.apache.xerces.impl.XMLEntityManager.setupCurrentEntity(Unknown Source)
+	at org.apache.xerces.impl.XMLVersionDetector.determineDocVersion(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at javax.xml.parsers.DocumentBuilder.parse(Unknown Source)
+	at quartisspv.xml.util.XmlUtil.readXmlFromFile(XmlUtil.java:115)
+	at quartisweb.resources.user.UserRestrictionManager.loadUserRestrictionParameters(UserRestrictionManager.java:114)
+	at quartisweb.jsf.managedBean.UserManagedBean.getRestrictionParameters(UserManagedBean.java:636)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at javax.el.BeanELResolver.getValue(BeanELResolver.java:62)
+	at javax.el.CompositeELResolver.getValue(CompositeELResolver.java:54)
+	at com.sun.faces.el.FacesCompositeELResolver.getValue(FacesCompositeELResolver.java:64)
+	at org.apache.el.parser.AstValue.getValue(AstValue.java:123)
+	at org.apache.el.ValueExpressionImpl.getValue(ValueExpressionImpl.java:186)
+	at org.apache.jasper.el.JspValueExpression.getValue(JspValueExpression.java:101)
+	at javax.faces.component.UIData.getValue(UIData.java:582)
+	at javax.faces.component.UIData.getDataModel(UIData.java:1063)
+	at javax.faces.component.UIData.setRowIndex(UIData.java:417)
+	at javax.faces.component.UIData.iterate(UIData.java:1131)
+	at javax.faces.component.UIData.processDecodes(UIData.java:936)
+	at javax.faces.component.UIComponentBase.processDecodes(UIComponentBase.java:1001)
+	at javax.faces.component.UIComponentBase.processDecodes(UIComponentBase.java:1001)
+	at javax.faces.component.UIComponentBase.processDecodes(UIComponentBase.java:1001)
+	at org.rcfaces.core.internal.component.CameliaOutputComponent.processDecodes(CameliaOutputComponent.java:308)
+	at javax.faces.component.UIComponentBase.processDecodes(UIComponentBase.java:1001)
+	at javax.faces.component.UIInput.processDecodes(UIInput.java:633)
+	at org.rcfaces.core.internal.component.CameliaInputComponent.processDecodes(CameliaInputComponent.java:314)
+	at javax.faces.component.UIComponentBase.processDecodes(UIComponentBase.java:1001)
+	at javax.faces.component.UIComponentBase.processDecodes(UIComponentBase.java:1001)
+	at javax.faces.component.UIForm.processDecodes(UIForm.java:203)
+	at quartisweb.jsf.component.uploadForm.UploadUIForm.processDecodes(UploadUIForm.java:87)
+	at javax.faces.component.UIComponentBase.processDecodes(UIComponentBase.java:1001)
+	at javax.faces.component.UIViewRoot.processDecodes(UIViewRoot.java:493)
+	at com.sun.faces.lifecycle.ApplyRequestValuesPhase.execute(ApplyRequestValuesPhase.java:101)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:117)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:244)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.RepeteurFilter.doFilter(RepeteurFilter.java:104)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:233)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+11:01:36.377 DEBUG - QuartisToolsServiceImpl createOrUpdateUser - username : 'administrateur', groupName : 'Administrateurs'... 
+11:01:36.378 DEBUG - QTConnector connect - Connecting... 
+11:01:36.380 DEBUG - QTConnector connect - Connected. 
+11:01:36.380 DEBUG - QTConnector executeQuery - Sending 'USER @ID0 [] serveur_web SERVEUR-WEB'... 
+11:01:36.380 DEBUG - QTConnector executeQuery - Sent. 
+11:01:36.380 DEBUG - QTConnector executeQuery - Reading response... 
+11:01:36.381 DEBUG - QTConnector readResponse - starting to listen... 
+11:01:36.381 DEBUG - QTConnector readResponse - read trame : ACK 263172 
+11:01:36.381 DEBUG - QTConnector executeQuery - Read: 'ACK 263172'. 
+11:01:36.381 DEBUG - QTSrvCommunicator send_IdentifyOsysConsoleWeb - QTools returned : 263172 
+11:01:36.381 DEBUG - QTSrvCommunicator send_CreateUserQuartisTools - message =  USR USER OBJ ADD [administrateur] [Administrateurs]
+ {
+ }
+ 
+11:01:36.381 DEBUG - QTConnector executeQuery - Sending ' USR USER OBJ ADD [administrateur] [Administrateurs]
+ {
+ }
+'... 
+11:01:36.382 DEBUG - QTConnector executeQuery - Sent. 
+11:01:36.382 DEBUG - QTConnector executeQuery - Reading response... 
+11:01:36.382 DEBUG - QTConnector readResponse - starting to listen... 
+11:01:36.382 DEBUG - QTConnector readResponse - read trame : ACK -10 
+11:01:36.382 DEBUG - QTConnector executeQuery - Read: 'ACK -10'. 
+11:01:36.383 DEBUG - QTSrvCommunicator send_CreateUserQuartisTools - QTools returned : -10 
+11:01:36.383 DEBUG - QTSrvCommunicator send_UpdateUserQuartisTools - message :  USR USER OBJ SET [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+ 
+11:01:36.383 DEBUG - QTConnector executeQuery - Sending ' USR USER OBJ SET [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+'... 
+11:01:36.383 DEBUG - QTConnector executeQuery - Sent. 
+11:01:36.383 DEBUG - QTConnector executeQuery - Reading response... 
+11:01:36.383 DEBUG - QTConnector readResponse - starting to listen... 
+11:01:36.385 DEBUG - QTConnector readResponse - read trame : ACK 0 
+11:01:36.385 DEBUG - QTConnector executeQuery - Read: 'ACK 0'. 
+11:01:36.385 DEBUG - QTSrvCommunicator send_UpdateUserQuartisTools - QTools returned : 0 
+11:01:36.386 DEBUG - QTConnector disconnect - Déconnexion... 
+11:01:36.386 DEBUG - QTConnector disconnect - Déconnecté. 
+11:01:36.386  INFO - QuartisToolsServiceImpl Mise à jour du user QuartisTools 'administrateur' dans le groupe 'Administrateurs' réussie. 
+11:01:36.386 DEBUG - QuartisToolsServiceImpl createOrUpdateUser - username : 'administrateur', groupName : ''... 
+11:01:36.387 DEBUG - QTConnector connect - Connecting... 
+11:01:36.388 DEBUG - QTConnector connect - Connected. 
+11:01:36.388 DEBUG - QTConnector executeQuery - Sending 'USER @ID0 [] serveur_web SERVEUR-WEB'... 
+11:01:36.388 DEBUG - QTConnector executeQuery - Sent. 
+11:01:36.388 DEBUG - QTConnector executeQuery - Reading response... 
+11:01:36.389 DEBUG - QTConnector readResponse - starting to listen... 
+11:01:36.389 DEBUG - QTConnector readResponse - read trame : ACK 263172 
+11:01:36.389 DEBUG - QTConnector executeQuery - Read: 'ACK 263172'. 
+11:01:36.389 DEBUG - QTSrvCommunicator send_IdentifyOsysConsoleWeb - QTools returned : 263172 
+11:01:36.389 DEBUG - QTSrvCommunicator send_DeleteUser - message :  USR USER OBJ DEL [administrateur] [] 
+ 
+11:01:36.389 DEBUG - QTConnector executeQuery - Sending ' USR USER OBJ DEL [administrateur] [] 
+'... 
+11:01:36.390 DEBUG - QTConnector executeQuery - Sent. 
+11:01:36.390 DEBUG - QTConnector executeQuery - Reading response... 
+11:01:36.390 DEBUG - QTConnector readResponse - starting to listen... 
+11:01:36.390 DEBUG - QTConnector readResponse - read trame : ACK -13 
+11:01:36.390 DEBUG - QTConnector executeQuery - Read: 'ACK -13'. 
+11:01:36.391 DEBUG - QTSrvCommunicator send_DeleteUser - QTools returned : -13 
+11:01:36.391 DEBUG - QTConnector disconnect - Déconnexion... 
+11:01:36.391 DEBUG - QTConnector disconnect - Déconnecté. 
+11:01:36.391  INFO - QuartisToolsServiceImpl Echec de la suppression du user QuartisTools 'administrateur' du groupe ''. 
+11:01:36.392 DEBUG - QuartisToolsServiceImpl createOrUpdateUser - username : 'administrateur', groupName : 'Administrateurs'... 
+11:01:36.392 DEBUG - QTConnector connect - Connecting... 
+11:01:36.393 DEBUG - QTConnector connect - Connected. 
+11:01:36.393 DEBUG - QTConnector executeQuery - Sending 'USER @ID0 [] serveur_web SERVEUR-WEB'... 
+11:01:36.393 DEBUG - QTConnector executeQuery - Sent. 
+11:01:36.393 DEBUG - QTConnector executeQuery - Reading response... 
+11:01:36.393 DEBUG - QTConnector readResponse - starting to listen... 
+11:01:36.394 DEBUG - QTConnector readResponse - read trame : ACK 263172 
+11:01:36.394 DEBUG - QTConnector executeQuery - Read: 'ACK 263172'. 
+11:01:36.394 DEBUG - QTSrvCommunicator send_IdentifyOsysConsoleWeb - QTools returned : 263172 
+11:01:36.394 DEBUG - QTSrvCommunicator send_CreateUserQuartisTools - message =  USR USER OBJ ADD [administrateur] [Administrateurs]
+ {
+ }
+ 
+11:01:36.394 DEBUG - QTConnector executeQuery - Sending ' USR USER OBJ ADD [administrateur] [Administrateurs]
+ {
+ }
+'... 
+11:01:36.394 DEBUG - QTConnector executeQuery - Sent. 
+11:01:36.395 DEBUG - QTConnector executeQuery - Reading response... 
+11:01:36.395 DEBUG - QTConnector readResponse - starting to listen... 
+11:01:36.395 DEBUG - QTConnector readResponse - read trame : ACK -10 
+11:01:36.395 DEBUG - QTConnector executeQuery - Read: 'ACK -10'. 
+11:01:36.395 DEBUG - QTSrvCommunicator send_CreateUserQuartisTools - QTools returned : -10 
+11:01:36.395 DEBUG - QTSrvCommunicator send_UpdateUserQuartisTools - message :  USR USER OBJ SET [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+ 
+11:01:36.395 DEBUG - QTConnector executeQuery - Sending ' USR USER OBJ SET [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+'... 
+11:01:36.396 DEBUG - QTConnector executeQuery - Sent. 
+11:01:36.396 DEBUG - QTConnector executeQuery - Reading response... 
+11:01:36.396 DEBUG - QTConnector readResponse - starting to listen... 
+11:01:36.398 DEBUG - QTConnector readResponse - read trame : ACK 0 
+11:01:36.398 DEBUG - QTConnector executeQuery - Read: 'ACK 0'. 
+11:01:36.398 DEBUG - QTSrvCommunicator send_UpdateUserQuartisTools - QTools returned : 0 
+11:01:36.398 DEBUG - QTConnector disconnect - Déconnexion... 
+11:01:36.398 DEBUG - QTConnector disconnect - Déconnecté. 
+11:01:36.399  INFO - QuartisToolsServiceImpl Mise à jour du user QuartisTools 'administrateur' dans le groupe 'Administrateurs' réussie. 
+11:01:36.399 DEBUG - XmlFile saveXmlFile - needsLock : true, pathFicXml : C:/Osys/QUARTIS_PRO/quartis-pro-web/users/Config\utilisateur.xml 
+11:01:36.399 DEBUG - XmlFile saveXmlFile - Verrouillage du fichier 'C:/Osys/QUARTIS_PRO/quartis-pro-web/users/Config\utilisateur.xml'. 
+11:01:36.402 DEBUG - XmlFile saveXmlFile - Déverrouillage du fichier 'C:/Osys/QUARTIS_PRO/quartis-pro-web/users/Config\utilisateur.xml'. 
+11:01:36.441 DEBUG - SiteManager saveUserCodeSites - Ecriture dans le fichier : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\preferences.xml'... 
+11:01:36.442 DEBUG - SiteManager saveUserCodeSites - Fin de l'écriture dans le fichier. 
+11:01:36.444 DEBUG - XmlFile saveXmlFile - needsLock : true, pathFicXml : C:/Osys/QUARTIS_PRO/quartis-pro-web/users/Config\utilisateur.xml 
+11:01:36.444 DEBUG - XmlFile saveXmlFile - Verrouillage du fichier 'C:/Osys/QUARTIS_PRO/quartis-pro-web/users/Config\utilisateur.xml'. 
+11:01:36.447 DEBUG - XmlFile saveXmlFile - Déverrouillage du fichier 'C:/Osys/QUARTIS_PRO/quartis-pro-web/users/Config\utilisateur.xml'. 
+11:01:36.484 DEBUG - SiteManager saveUserDefaultSite - Ecriture dans le fichier : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\preferences.xml'... 
+11:01:36.485 DEBUG - SiteManager saveUserDefaultSite - Fin de l'écriture dans le fichier. 
+11:01:36.519 DEBUG - UserRestrictionManager saveUserRestrictionParameters - Ecriture dans le fichier : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\preferences.xml'... 
+11:01:36.520 DEBUG - UserRestrictionManager saveUserRestrictionParameters - Fin de l'écriture dans le fichier. 
+11:02:13.803 DEBUG - GSqlQueryGeneratorSqlServer --->table =SITE query =set rowcount 3000  SELECT CODE_SITE  , dbo.OPTIMA_TRADUCTION(DESI_SITE,'fr') +'@KEYLANG_'+DESI_SITE AS DESI_SITE  , ZONE_UTC  , FLAG_HEUR_ETE  , LANG_IMPO_DEFA  , CODE_GROU  , FLAG_SUPP FROM SITE  ORDER BY CODE_SITE ASC  
+11:05:41.204 DEBUG - DisconnectDispatcher Déconnexion demandée pour : administrateur, session ID : #9B00F3F8155C0BBB12DAC3248A8F6015 
+11:11:20.934 DEBUG - AuthManagedBean autoconnect - Tentative de connexion SSO... 
+11:11:20.934 DEBUG - ConnexionManagedBean User renseigné par filtre SSO LDAP : null 
+11:11:20.934 DEBUG - ConnexionManagedBean ldapActive = false 
+11:11:20.934 DEBUG - AuthManagedBean autoconnect - Echec de la connexion par SSO. 
+11:11:23.280 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+11:11:23.570 DEBUG - QTConnector connect - Connecting... 
+11:11:23.573 DEBUG - QTConnector connect - Connected. 
+11:11:23.573 DEBUG - QTConnector executeQuery - Sending 'USER @ID0 [] serveur_web SERVEUR-WEB'... 
+11:11:23.574 DEBUG - QTConnector executeQuery - Sent. 
+11:11:23.574 DEBUG - QTConnector executeQuery - Reading response... 
+11:11:23.574 DEBUG - QTConnector readResponse - starting to listen... 
+11:11:23.574 DEBUG - QTConnector readResponse - read trame : ACK 263172 
+11:11:23.574 DEBUG - QTConnector executeQuery - Read: 'ACK 263172'. 
+11:11:23.575 DEBUG - QTInternalCommunicator send_IdentifyOsysConsoleWeb - QTools returned : 263172 
+11:11:23.575 DEBUG - QTConnector executeQuery - Sending 'LST_USER_CONNECT'... 
+11:11:23.575 DEBUG - QTConnector executeQuery - Sent. 
+11:11:23.575 DEBUG - QTConnector executeQuery - Reading response... 
+11:11:23.575 DEBUG - QTConnector readResponse - starting to listen... 
+11:11:23.577 DEBUG - QTConnector readResponse - read trame : <lstuserconnect max="3" connect="0" />\x0a 
+11:11:23.577 DEBUG - QTConnector executeQuery - Read: '<lstuserconnect max="3" connect="0" />\x0a'. 
+11:11:23.577 DEBUG - QTConnector disconnect - Déconnexion... 
+11:11:23.577 DEBUG - QTConnector disconnect - Déconnecté. 
+11:11:23.601 DEBUG - QuartisToolsServiceImpl createOrUpdateUser - username : 'administrateur', groupName : 'Administrateurs'... 
+11:11:23.601 DEBUG - QTConnector connect - Connecting... 
+11:11:23.603 DEBUG - QTConnector connect - Connected. 
+11:11:23.604 DEBUG - QTConnector executeQuery - Sending 'USER @ID0 [] serveur_web SERVEUR-WEB'... 
+11:11:23.604 DEBUG - QTConnector executeQuery - Sent. 
+11:11:23.604 DEBUG - QTConnector executeQuery - Reading response... 
+11:11:23.604 DEBUG - QTConnector readResponse - starting to listen... 
+11:11:23.604 DEBUG - QTConnector readResponse - read trame : ACK 263172 
+11:11:23.605 DEBUG - QTConnector executeQuery - Read: 'ACK 263172'. 
+11:11:23.605 DEBUG - QTSrvCommunicator send_IdentifyOsysConsoleWeb - QTools returned : 263172 
+11:11:23.605 DEBUG - QTSrvCommunicator send_CreateUserQuartisTools - message =  USR USER OBJ ADD [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+ 
+11:11:23.605 DEBUG - QTConnector executeQuery - Sending ' USR USER OBJ ADD [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+'... 
+11:11:23.605 DEBUG - QTConnector executeQuery - Sent. 
+11:11:23.605 DEBUG - QTConnector executeQuery - Reading response... 
+11:11:23.606 DEBUG - QTConnector readResponse - starting to listen... 
+11:11:23.606 DEBUG - QTConnector readResponse - read trame : ACK -10 
+11:11:23.606 DEBUG - QTConnector executeQuery - Read: 'ACK -10'. 
+11:11:23.606 DEBUG - QTSrvCommunicator send_CreateUserQuartisTools - QTools returned : -10 
+11:11:23.606 DEBUG - QTSrvCommunicator send_UpdateUserQuartisTools - message :  USR USER OBJ SET [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+ 
+11:11:23.606 DEBUG - QTConnector executeQuery - Sending ' USR USER OBJ SET [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+'... 
+11:11:23.607 DEBUG - QTConnector executeQuery - Sent. 
+11:11:23.607 DEBUG - QTConnector executeQuery - Reading response... 
+11:11:23.607 DEBUG - QTConnector readResponse - starting to listen... 
+11:11:23.609 DEBUG - QTConnector readResponse - read trame : ACK 0 
+11:11:23.609 DEBUG - QTConnector executeQuery - Read: 'ACK 0'. 
+11:11:23.609 DEBUG - QTSrvCommunicator send_UpdateUserQuartisTools - QTools returned : 0 
+11:11:23.609 DEBUG - QTConnector disconnect - Déconnexion... 
+11:11:23.610 DEBUG - QTConnector disconnect - Déconnecté. 
+11:11:23.610  INFO - QuartisToolsServiceImpl Mise à jour du user QuartisTools 'administrateur' dans le groupe 'Administrateurs' réussie. 
+11:11:27.926 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:11:27.927 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:11:27.927 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:11:27.927 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:11:27.928 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:11:27.928 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:11:27.964 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:11:27.974 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:28:54.340 DEBUG - AuthManagedBean autoconnect - Tentative de connexion SSO... 
+11:28:54.340 DEBUG - ConnexionManagedBean User renseigné par filtre SSO LDAP : null 
+11:28:54.340 DEBUG - ConnexionManagedBean ldapActive = false 
+11:28:54.341 DEBUG - AuthManagedBean autoconnect - Echec de la connexion par SSO. 
+11:30:41.025 DEBUG - GSqlQueryGeneratorSqlServer --->table =TACHE query =set rowcount 3000  SELECT CODE_TACH  , dbo.OPTIMA_TRADUCTION(DESI_TACH,'fr') +'@KEYLANG_'+DESI_TACH AS DESI_TACH  FROM TACHE  ORDER BY CODE_TACH ASC  
+11:30:46.752 DEBUG - DataEtatManagedBean showEtat - identifiants de connexion : administrateur, (mdp chiffré encodé : 'g034G4tEKXF4eaZZ50Q+t96QiJChUZ8+oc8o+N7h6OsFyBzAol0GweGHQmEa6sw4PDze/diYhR3ytO7q7UPiUS7Nn/O+HGB06fjzJXvy645Opkg0zVfNTRKK/If/2gcqvT3TDeoX2VIfBZKFf/DaFvstTPE1ZjwTSwTsgWGRBWZnreQK7HadSx9jGDs0yH3j56WCA4+1gzOV/v+MlcK57TFhN/U6uKHFdcebqhhrK31qCWd0zZYk+kpTNSl6Pxy27mxZni3crhX1NqRcHl4ebOoLnZRkubZBPANNzKukc7GqSdvsFeytk3zLFppklWHiVH0T7fSkC9TrELg3NgfZ4g=='), mdp déchiffré : '' rechiffré en '[]' 
+11:30:46.869 DEBUG - DataEtatManagedBean showEtat - administrateur connecté a Quartis Tools 
+11:31:00.072 DEBUG - DataEtatManagedBean showEtat - administrateur déconnecté de Quartis Tools 
+14:59:52.805 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+14:59:52.820 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+14:59:52.885 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+14:59:56.260 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+14:59:56.260 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+14:59:56.297 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+15:17:06.893 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+15:17:06.894 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/moduleChange.ajx?moduleID=OPTIMA_Suivi_Personnel&userID=administrateur) mais pas de user en session. 
+15:17:06.909 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+15:17:06.980 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+15:17:06.980 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/xxx.cas?action=deconnexion&userID=administrateur) mais pas de user en session. 
+15:17:06.991 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+15:17:07.049 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+15:17:10.465 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+15:17:10.487 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+15:17:10.738 DEBUG - QTConnector connect - Connecting... 
+15:17:10.741 DEBUG - QTConnector connect - Connected. 
+15:17:10.741 DEBUG - QTConnector executeQuery - Sending 'USER @ID0 [] serveur_web SERVEUR-WEB'... 
+15:17:10.742 DEBUG - QTConnector executeQuery - Sent. 
+15:17:10.742 DEBUG - QTConnector executeQuery - Reading response... 
+15:17:10.742 DEBUG - QTConnector readResponse - starting to listen... 
+15:17:10.742 DEBUG - QTConnector readResponse - read trame : ACK 263172 
+15:17:10.742 DEBUG - QTConnector executeQuery - Read: 'ACK 263172'. 
+15:17:10.743 DEBUG - QTInternalCommunicator send_IdentifyOsysConsoleWeb - QTools returned : 263172 
+15:17:10.743 DEBUG - QTConnector executeQuery - Sending 'LST_USER_CONNECT'... 
+15:17:10.743 DEBUG - QTConnector executeQuery - Sent. 
+15:17:10.743 DEBUG - QTConnector executeQuery - Reading response... 
+15:17:10.743 DEBUG - QTConnector readResponse - starting to listen... 
+15:17:10.745 DEBUG - QTConnector readResponse - read trame : <lstuserconnect max="3" connect="1" />\x0a 
+15:17:10.745 DEBUG - QTConnector executeQuery - Read: '<lstuserconnect max="3" connect="1" />\x0a'. 
+15:17:10.745 DEBUG - QTConnector disconnect - Déconnexion... 
+15:17:10.745 DEBUG - QTConnector disconnect - Déconnecté. 
+15:17:10.769 DEBUG - QuartisToolsServiceImpl createOrUpdateUser - username : 'administrateur', groupName : 'Administrateurs'... 
+15:17:10.769 DEBUG - QTConnector connect - Connecting... 
+15:17:10.771 DEBUG - QTConnector connect - Connected. 
+15:17:10.771 DEBUG - QTConnector executeQuery - Sending 'USER @ID0 [] serveur_web SERVEUR-WEB'... 
+15:17:10.771 DEBUG - QTConnector executeQuery - Sent. 
+15:17:10.772 DEBUG - QTConnector executeQuery - Reading response... 
+15:17:10.772 DEBUG - QTConnector readResponse - starting to listen... 
+15:17:10.772 DEBUG - QTConnector readResponse - read trame : ACK 263172 
+15:17:10.772 DEBUG - QTConnector executeQuery - Read: 'ACK 263172'. 
+15:17:10.772 DEBUG - QTSrvCommunicator send_IdentifyOsysConsoleWeb - QTools returned : 263172 
+15:17:10.773 DEBUG - QTSrvCommunicator send_CreateUserQuartisTools - message =  USR USER OBJ ADD [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+ 
+15:17:10.773 DEBUG - QTConnector executeQuery - Sending ' USR USER OBJ ADD [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+'... 
+15:17:10.773 DEBUG - QTConnector executeQuery - Sent. 
+15:17:10.773 DEBUG - QTConnector executeQuery - Reading response... 
+15:17:10.773 DEBUG - QTConnector readResponse - starting to listen... 
+15:17:10.774 DEBUG - QTConnector readResponse - read trame : ACK -10 
+15:17:10.774 DEBUG - QTConnector executeQuery - Read: 'ACK -10'. 
+15:17:10.774 DEBUG - QTSrvCommunicator send_CreateUserQuartisTools - QTools returned : -10 
+15:17:10.774 DEBUG - QTSrvCommunicator send_UpdateUserQuartisTools - message :  USR USER OBJ SET [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+ 
+15:17:10.774 DEBUG - QTConnector executeQuery - Sending ' USR USER OBJ SET [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+'... 
+15:17:10.774 DEBUG - QTConnector executeQuery - Sent. 
+15:17:10.775 DEBUG - QTConnector executeQuery - Reading response... 
+15:17:10.775 DEBUG - QTConnector readResponse - starting to listen... 
+15:17:10.777 DEBUG - QTConnector readResponse - read trame : ACK 0 
+15:17:10.777 DEBUG - QTConnector executeQuery - Read: 'ACK 0'. 
+15:17:10.778 DEBUG - QTSrvCommunicator send_UpdateUserQuartisTools - QTools returned : 0 
+15:17:10.779 DEBUG - QTConnector disconnect - Déconnexion... 
+15:17:10.779 DEBUG - QTConnector disconnect - Déconnecté. 
+15:17:10.779  INFO - QuartisToolsServiceImpl Mise à jour du user QuartisTools 'administrateur' dans le groupe 'Administrateurs' réussie. 
+15:17:19.031 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+15:17:19.032 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+15:17:19.032 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+15:17:19.043 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+15:17:19.043 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+15:17:19.043 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+15:17:19.064 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+15:17:19.077 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+15:17:23.950 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+15:17:23.950 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+15:17:23.950 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+15:17:23.985 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+15:17:55.163 DEBUG - GSqlQueryGeneratorSqlServer --->table =GROUPE query =set rowcount 3000  SELECT CODE_GROU  , dbo.OPTIMA_TRADUCTION(DESI_GROU,'fr') +'@KEYLANG_'+DESI_GROU AS DESI_GROU  FROM GROUPE  ORDER BY CODE_GROU ASC  
+15:17:55.164 DEBUG - GSqlQueryGeneratorSqlServer --->table =GROUPE query =set rowcount 3000  SELECT CODE_GROU  , dbo.OPTIMA_TRADUCTION(DESI_GROU,'fr') +'@KEYLANG_'+DESI_GROU AS DESI_GROU  FROM GROUPE  ORDER BY CODE_GROU ASC  
+15:19:00.443 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Personnel_Activite_EnCours_Liste_1 
+15:19:00.443 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Personnel_Activite_EnCours_Liste_1 
+15:19:00.444 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'... 
+15:19:00.444 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'... 
+15:19:00.445 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'... 
+15:19:00.445 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'... 
+15:19:00.475 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+15:19:00.475 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+15:19:05.058 DEBUG - GSqlQueryGeneratorSqlServer --->table =PERSONNEL query =set rowcount 3000  SELECT MATR_SITE  , MATR  , CODE_BADG  , FLAG_INTE  , NOM  , PREN  , ADRE_TELE  , ADRE_MAIL  , FLAG_BADG_BLOQ  , NOMB_ACTI_MAXI  , FLAG_SUIV_POIN  , KELI_KEY  , FLAG_GEST_PLAN  , FLAG_KELI_IMPO  , LIEN_IMAG  , CODE_HORA_1  , CODE_SERV  , CODE_EQUI_DEFA  , CODE_ATEL  , CODE_ATEL_DEFA  , CODE_SECT_GEOG  , CODE_SECT_GEOG_DEFA  , CODE_ETAT_PERS_DEFA  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DERN_POIN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DERN_POIN), 108) AS DATE_DERN_POIN  , CODE_SITE  , DELT_HEUR_UTC  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_HABI_MACH  , FLAG_SUPP FROM PERSONNEL  WHERE ( CODE_SITE = 'FAB')  ORDER BY MATR_SITE ASC  
+15:31:55.936 DEBUG - GSqlQueryGeneratorSqlServer --->table =PERSONNEL query =set rowcount 3000  SELECT MATR_SITE  , MATR  , CODE_BADG  , FLAG_INTE  , NOM  , PREN  , ADRE_TELE  , ADRE_MAIL  , FLAG_BADG_BLOQ  , NOMB_ACTI_MAXI  , FLAG_SUIV_POIN  , KELI_KEY  , FLAG_GEST_PLAN  , FLAG_KELI_IMPO  , LIEN_IMAG  , CODE_HORA_1  , CODE_SERV  , CODE_EQUI_DEFA  , CODE_ATEL  , CODE_ATEL_DEFA  , CODE_SECT_GEOG  , CODE_SECT_GEOG_DEFA  , CODE_ETAT_PERS_DEFA  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DERN_POIN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DERN_POIN), 108) AS DATE_DERN_POIN  , CODE_SITE  , DELT_HEUR_UTC  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_HABI_MACH  , FLAG_SUPP FROM PERSONNEL  WHERE ( CODE_SITE = 'FAB')  AND ( FLAG_BADG_BLOQ LIKE  '%'  OR FLAG_BADG_BLOQ IS NULL  )  ORDER BY MATR_SITE ASC  
+15:32:54.426 DEBUG - GSqlQueryGeneratorSqlServer --->table =PERSONNEL query =set rowcount 3000  SELECT MATR_SITE  , MATR  , CODE_BADG  , FLAG_INTE  , NOM  , PREN  , ADRE_TELE  , ADRE_MAIL  , FLAG_BADG_BLOQ  , NOMB_ACTI_MAXI  , FLAG_SUIV_POIN  , KELI_KEY  , FLAG_GEST_PLAN  , FLAG_KELI_IMPO  , LIEN_IMAG  , CODE_HORA_1  , CODE_SERV  , CODE_EQUI_DEFA  , CODE_ATEL  , CODE_ATEL_DEFA  , CODE_SECT_GEOG  , CODE_SECT_GEOG_DEFA  , CODE_ETAT_PERS_DEFA  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DERN_POIN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DERN_POIN), 108) AS DATE_DERN_POIN  , CODE_SITE  , DELT_HEUR_UTC  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_HABI_MACH  , FLAG_SUPP FROM PERSONNEL  WHERE ( CODE_SITE = 'FAB')  AND ( FLAG_BADG_BLOQ LIKE  '%'  OR FLAG_BADG_BLOQ IS NULL  )  ORDER BY MATR_SITE ASC  
+15:33:20.802 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Production_OF_EnCours_2 
+15:33:20.803 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+15:33:20.803 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+15:33:20.821 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+15:33:20.844 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Production_OF_EnCours_2 
+15:33:20.844 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+15:33:20.844 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+15:33:20.864 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+15:34:52.878 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Personnel_Activite_EnCours_Liste_1 
+15:34:52.879 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'... 
+15:34:52.879 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'... 
+15:34:53.026 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Personnel_Activite_EnCours_Liste_1 
+15:34:53.027 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'... 
+15:34:53.027 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'... 
+15:34:53.048 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+15:34:53.094 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+15:34:53.163 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Personnel_Activite_EnCours_Liste_1 
+15:34:53.164 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'... 
+15:34:53.164 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'... 
+15:34:53.186 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+15:34:53.390 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Personnel_Activite_EnCours_Liste_1 
+15:34:53.390 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'... 
+15:34:53.390 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'... 
+15:34:53.412 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+15:34:58.643 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Production_OF_EnCours_2 
+15:34:58.643 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+15:34:58.643 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+15:34:58.663 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+15:34:58.669 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Production_OF_EnCours_2 
+15:34:58.669 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+15:34:58.669 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+15:34:58.687 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+15:35:04.043 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE query =set rowcount 3000  SELECT CODE_MACH_SITE  , CODE_MACH  , TYPE_MACH  , dbo.OPTIMA_TRADUCTION(DESI_MACH,'fr') +'@KEYLANG_'+DESI_MACH AS DESI_MACH  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_HORA  , CODE_TERM  , CODE_FAMI_MACH  , FLAG_HABI  , FLAG_MAIN_PREV  , FLAG_ABSE_COMP  , DURE_ABSE_COMP  , NOMB_OPER_MAXI  , DURE_MAJO_CYCL  , FLAG_MACH_ACTI  , TAUX_REBU_THEO  , MODE_CALC_QUAN  , TYPE_GEST_GAMM  , TYPE_GEST_CYCL  , NOMB_PIEC_CYCL  , DURE_DETE_FIN_FABR  , NOMB_CYCL_MAXI  , DURE_MAXI_MICR_ARRE  , DURE_TEMP_PASS_ARRE  , DURE_ARRE_INDE_MAXI  , FLAG_CHAN_FABR_AUTO  , TECH_AVAN_CYCL_THEO  , NUME_BOIT_SUPE  , SUPE_NUME_ORDR  , LIEN_IMAG  , TAUX_HORA_PREP_MACH  , TAUX_HORA_PROD_MACH  , TAUX_HORA_PREP_MO  , TAUX_HORA_PROD_MO  , NUME_SERI  , dbo.OPTIMA_TRADUCTION(DESI_MARQ,'fr') +'@KEYLANG_'+DESI_MARQ AS DESI_MARQ  , CONVERT(NVARCHAR, DATE_MISE_SERV, 103) AS DATE_MISE_SERV  , FLAG_GEST_PLAN  , FLAG_OBLI_PERS  , CODE_ETAT_DEBU_OF  , CODE_ETAT_FIN_OF  , CAPA_CONT_MAXI  , CODE_UNIT  , CODE_SITE  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_EXPO_DIMO  , FLAG_SUPP FROM MACHINE  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_MACH_SITE ASC  
+15:35:42.733 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE query =set rowcount 3000  SELECT CODE_MACH_SITE  , CODE_MACH  , TYPE_MACH  , dbo.OPTIMA_TRADUCTION(DESI_MACH,'fr') +'@KEYLANG_'+DESI_MACH AS DESI_MACH  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_HORA  , CODE_TERM  , CODE_FAMI_MACH  , FLAG_HABI  , FLAG_MAIN_PREV  , FLAG_ABSE_COMP  , DURE_ABSE_COMP  , NOMB_OPER_MAXI  , DURE_MAJO_CYCL  , FLAG_MACH_ACTI  , TAUX_REBU_THEO  , MODE_CALC_QUAN  , TYPE_GEST_GAMM  , TYPE_GEST_CYCL  , NOMB_PIEC_CYCL  , DURE_DETE_FIN_FABR  , NOMB_CYCL_MAXI  , DURE_MAXI_MICR_ARRE  , DURE_TEMP_PASS_ARRE  , DURE_ARRE_INDE_MAXI  , FLAG_CHAN_FABR_AUTO  , TECH_AVAN_CYCL_THEO  , NUME_BOIT_SUPE  , SUPE_NUME_ORDR  , LIEN_IMAG  , TAUX_HORA_PREP_MACH  , TAUX_HORA_PROD_MACH  , TAUX_HORA_PREP_MO  , TAUX_HORA_PROD_MO  , NUME_SERI  , dbo.OPTIMA_TRADUCTION(DESI_MARQ,'fr') +'@KEYLANG_'+DESI_MARQ AS DESI_MARQ  , CONVERT(NVARCHAR, DATE_MISE_SERV, 103) AS DATE_MISE_SERV  , FLAG_GEST_PLAN  , FLAG_OBLI_PERS  , CODE_ETAT_DEBU_OF  , CODE_ETAT_FIN_OF  , CAPA_CONT_MAXI  , CODE_UNIT  , CODE_SITE  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_EXPO_DIMO  , FLAG_SUPP FROM MACHINE  WHERE ( CODE_SITE = 'FAB')  AND ( TYPE_MACH LIKE  '%'  OR TYPE_MACH IS NULL  )  AND ( FLAG_EXPO_DIMO LIKE  '%'  OR FLAG_EXPO_DIMO IS NULL  )  ORDER BY CODE_MACH_SITE ASC  
+15:35:55.253 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Production_OF_EnCours_2 
+15:35:55.253 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+15:35:55.254 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+15:35:55.260 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Production_OF_EnCours_2 
+15:35:55.260 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+15:35:55.260 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+15:35:55.272 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+15:35:55.278 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+15:36:03.381 DEBUG - GSqlQueryGeneratorSqlServer --->table =ARTICLE_GAMME query =set rowcount 3000  SELECT CODE_ARTI  , CODE_OPER  , dbo.OPTIMA_TRADUCTION(DESI_OPER,'fr') +'@KEYLANG_'+DESI_OPER AS DESI_OPER  , CADE_THEO  , NOMB_OPER_THEO  , TEMP_PREP  , TEMP_FABR  , QUAN_PREV  , UNIT_OPER  , COUT_UNIT  , NOMB_ARTI  , CODE_MACH  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , dbo.OPTIMA_TRADUCTION(COMM_OPER,'fr') +'@KEYLANG_'+COMM_OPER AS COMM_OPER  , CHAM_LIBR_1  , CHAM_LIBR_2  , CHAM_LIBR_3  , NOMB_PIEC_CYCL  , FLAG_DERN_OPER  , CODE_SITE  FROM ARTICLE_GAMME  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_ARTI ASC  
+15:36:24.012 DEBUG - GSqlQueryGeneratorSqlServer --->table =ARTICLE_GAMME query =set rowcount 3000  SELECT CODE_ARTI  , CODE_OPER  , dbo.OPTIMA_TRADUCTION(DESI_OPER,'fr') +'@KEYLANG_'+DESI_OPER AS DESI_OPER  , CADE_THEO  , NOMB_OPER_THEO  , TEMP_PREP  , TEMP_FABR  , QUAN_PREV  , UNIT_OPER  , COUT_UNIT  , NOMB_ARTI  , CODE_MACH  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , dbo.OPTIMA_TRADUCTION(COMM_OPER,'fr') +'@KEYLANG_'+COMM_OPER AS COMM_OPER  , CHAM_LIBR_1  , CHAM_LIBR_2  , CHAM_LIBR_3  , NOMB_PIEC_CYCL  , FLAG_DERN_OPER  , CODE_SITE  FROM ARTICLE_GAMME  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_ARTI ASC  
+15:36:27.113 DEBUG - GSqlQueryGeneratorSqlServer --->table =ARTICLE query =set rowcount 3000  SELECT CODE_ARTI  , dbo.OPTIMA_TRADUCTION(DESI_ARTI,'fr') +'@KEYLANG_'+DESI_ARTI AS DESI_ARTI  , REFE_ARTI  , INDI_ARTI  , FLAG_INDI_ACTI  , UNIT_ARTI  , COUT_UNIT  , CODE_FAMI_ARTI  , FLAG_ARTI_SPEC  , QUAN_STOC  , COUL_PLAN  , PRIX_REVI  , POID_BRUT  , POID_NET  , TYPE_PALE  , TYPE_COND  , QUAN_COND  , QUAN_PALE  , CODE_CLIE  , CODE_FOUR  , COEF_QUAN_UNIT  , CODE_TYPE_ARTI  , FLAG_SUPP FROM ARTICLE  ORDER BY CODE_ARTI ASC  
+15:36:48.323 ERROR - MultiLanguageManager  org.xml.sax.SAXParseException; Premature end of file.
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at javax.xml.parsers.DocumentBuilder.parse(Unknown Source)
+	at quartisweb.i18n.MultiLanguageManager.insertDataLanguage(MultiLanguageManager.java:236)
+	at quartisweb.i18n.MultiLanguageManager.setValueLanguage(MultiLanguageManager.java:90)
+	at quartisweb.jsf.managedBean.FormulairesManagedBean.updateData(FormulairesManagedBean.java:998)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.el.parser.AstValue.invoke(AstValue.java:191)
+	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:276)
+	at org.apache.jasper.el.JspMethodExpression.invoke(JspMethodExpression.java:68)
+	at javax.faces.event.MethodExpressionActionListener.processAction(MethodExpressionActionListener.java:88)
+	at javax.faces.event.ActionEvent.processListener(ActionEvent.java:77)
+	at javax.faces.component.UIComponentBase.broadcast(UIComponentBase.java:746)
+	at javax.faces.component.UICommand.broadcast(UICommand.java:368)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:447)
+	at javax.faces.component.UIViewRoot.processApplication(UIViewRoot.java:752)
+	at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:97)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:117)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:244)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.RepeteurFilter.doFilter(RepeteurFilter.java:104)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:233)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+15:36:48.323 ERROR - MultiLanguageManager  org.xml.sax.SAXParseException; lineNumber: 20; columnNumber: 6; The processing instruction target matching "[xX][mM][lL]" is not allowed.
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at javax.xml.parsers.DocumentBuilder.parse(Unknown Source)
+	at quartisweb.i18n.MultiLanguageManager.insertDataLanguage(MultiLanguageManager.java:236)
+	at quartisweb.i18n.MultiLanguageManager.setValueLanguage(MultiLanguageManager.java:90)
+	at quartisweb.jsf.managedBean.FormulairesManagedBean.updateData(FormulairesManagedBean.java:998)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.el.parser.AstValue.invoke(AstValue.java:191)
+	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:276)
+	at org.apache.jasper.el.JspMethodExpression.invoke(JspMethodExpression.java:68)
+	at javax.faces.event.MethodExpressionActionListener.processAction(MethodExpressionActionListener.java:88)
+	at javax.faces.event.ActionEvent.processListener(ActionEvent.java:77)
+	at javax.faces.component.UIComponentBase.broadcast(UIComponentBase.java:746)
+	at javax.faces.component.UICommand.broadcast(UICommand.java:368)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:447)
+	at javax.faces.component.UIViewRoot.processApplication(UIViewRoot.java:752)
+	at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:97)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:117)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:244)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.RepeteurFilter.doFilter(RepeteurFilter.java:104)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:233)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+15:36:48.356 DEBUG - GSqlQueryGeneratorSqlServer --->table =ARTICLE query =set rowcount 3000  SELECT CODE_ARTI  , dbo.OPTIMA_TRADUCTION(DESI_ARTI,'fr') +'@KEYLANG_'+DESI_ARTI AS DESI_ARTI  , REFE_ARTI  , INDI_ARTI  , FLAG_INDI_ACTI  , UNIT_ARTI  , COUT_UNIT  , CODE_FAMI_ARTI  , FLAG_ARTI_SPEC  , QUAN_STOC  , COUL_PLAN  , PRIX_REVI  , POID_BRUT  , POID_NET  , TYPE_PALE  , TYPE_COND  , QUAN_COND  , QUAN_PALE  , CODE_CLIE  , CODE_FOUR  , COEF_QUAN_UNIT  , CODE_TYPE_ARTI  , FLAG_SUPP FROM ARTICLE  ORDER BY CODE_ARTI ASC  
+15:36:48.379 ERROR - GSql  java.sql.SQLException: Violation de la contrainte PRIMARY KEY 'IND_ARTICLE'. Impossible d'insérer une clé en double dans l'objet 'dbo.ARTICLE'.
+	at net.sourceforge.jtds.jdbc.SQLDiagnostic.addDiagnostic(SQLDiagnostic.java:368)
+	at net.sourceforge.jtds.jdbc.TdsCore.tdsErrorToken(TdsCore.java:2816)
+	at net.sourceforge.jtds.jdbc.TdsCore.nextToken(TdsCore.java:2254)
+	at net.sourceforge.jtds.jdbc.TdsCore.getMoreResults(TdsCore.java:631)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.processResults(JtdsStatement.java:584)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeSQL(JtdsStatement.java:546)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeImpl(JtdsStatement.java:723)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeUpdate(JtdsStatement.java:1163)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeUpdate(JtdsStatement.java:1116)
+	at org.apache.commons.dbcp.DelegatingStatement.executeUpdate(DelegatingStatement.java:228)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.bull.javamelody.JdbcWrapper.doExecute(JdbcWrapper.java:404)
+	at net.bull.javamelody.JdbcWrapper$StatementInvocationHandler.invoke(JdbcWrapper.java:129)
+	at net.bull.javamelody.JdbcWrapper$DelegatingInvocationHandler.invoke(JdbcWrapper.java:286)
+	at com.sun.proxy.$Proxy131.executeUpdate(Unknown Source)
+	at quartisweb.generic.sql.GSql.insertGeneric(GSql.java:276)
+	at quartisweb.generic.GenericProfilManager.insertGeneric(GenericProfilManager.java:56)
+	at quartisweb.jsf.managedBean.FormulairesManagedBean.updateData(FormulairesManagedBean.java:1082)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.el.parser.AstValue.invoke(AstValue.java:191)
+	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:276)
+	at org.apache.jasper.el.JspMethodExpression.invoke(JspMethodExpression.java:68)
+	at javax.faces.event.MethodExpressionActionListener.processAction(MethodExpressionActionListener.java:88)
+	at javax.faces.event.ActionEvent.processListener(ActionEvent.java:77)
+	at javax.faces.component.UIComponentBase.broadcast(UIComponentBase.java:746)
+	at javax.faces.component.UICommand.broadcast(UICommand.java:368)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:447)
+	at javax.faces.component.UIViewRoot.processApplication(UIViewRoot.java:752)
+	at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:97)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:117)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:244)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.RepeteurFilter.doFilter(RepeteurFilter.java:104)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:233)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+15:37:53.559 DEBUG - GSqlQueryGeneratorSqlServer --->table =ARTICLE query =set rowcount 3000  SELECT CODE_ARTI  , dbo.OPTIMA_TRADUCTION(DESI_ARTI,'fr') +'@KEYLANG_'+DESI_ARTI AS DESI_ARTI  , REFE_ARTI  , INDI_ARTI  , FLAG_INDI_ACTI  , UNIT_ARTI  , COUT_UNIT  , CODE_FAMI_ARTI  , FLAG_ARTI_SPEC  , QUAN_STOC  , COUL_PLAN  , PRIX_REVI  , POID_BRUT  , POID_NET  , TYPE_PALE  , TYPE_COND  , QUAN_COND  , QUAN_PALE  , CODE_CLIE  , CODE_FOUR  , COEF_QUAN_UNIT  , CODE_TYPE_ARTI  , FLAG_SUPP FROM ARTICLE  ORDER BY CODE_ARTI ASC  
+15:39:12.605 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+15:39:12.606 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+15:39:12.606 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+15:39:12.630 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+15:39:12.631 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+15:39:12.631 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+15:39:12.654 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+15:39:12.677 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+16:05:58.054 DEBUG - DisconnectDispatcher Déconnexion demandée pour : administrateur, session ID : #C6E6FD4DCC695843542E1D559CE977C7 

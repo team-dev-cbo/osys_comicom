@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<tocdata>
+<book name="graphique" >
+  <book name="action" >
+    <item name="Action Affichage" url="scenario/graphique/action/HID_ACTION_AFFICHAGE.htm" />
+    <item name="Action Faire ... Tant Que" url="scenario/graphique/action/HID_ACTION_FAIRE.htm" />
+    <item name="Action Filtrage" url="scenario/graphique/action/HID_ACTION_FILTRAGE.htm" />
+    <item name="Action Fin Boucle" url="scenario/graphique/action/HID_ACTION_FIN_BOUCLE.htm" />
+    <item name="Action Fin Scénario" url="scenario/graphique/action/HID_ACTION_FIN_SCEN.htm" />
+    <item name="Action Groupe" url="scenario/graphique/action/HID_ACTION_GROUPE.htm" />
+    <item name="Action Impression d'un état" url="scenario/graphique/action/HID_ACTION_IMPRIME_ETAT.htm" />
+    <item name="Action Opération sur les mémoires" url="scenario/graphique/action/HID_ACTION_OP_MEM.htm" />
+    <item name="Action Ordre" url="scenario/graphique/action/HID_ACTION_TERMINAL.htm" />
+    <item name="Action Requête" url="scenario/graphique/action/HID_ACTION_REQUETE.htm" />
+    <item name="Action Saisie" url="scenario/graphique/action/HID_ACTION_SAISIE.htm" />
+    <item name="Action Sous Scénario" url="scenario/graphique/action/HID_ACTION_SOUS_SCEN.htm" />
+    <item name="Action Tant Que ... Faire" url="scenario/graphique/action/HID_ACTION_TANT_QUE.htm" />
+    <item name="Action Tempo" url="scenario/graphique/action/HID_ACTION_TEMPO.htm" />
+    <item name="Action Test" url="scenario/graphique/action/HID_ACTION_TEST.htm" />
+  </book>
+  <book name="propriété" >
+    <item name="Propriétés Affichage HTML" url="scenario/graphique/propriete/HIDD_PROPRIETES_AFFICHAGE_HTML.htm" />
+    <item name="Propriétés Affichage Text" url="scenario/graphique/propriete/HIDD_PROPRIETES_AFFICHAGE_TEXT.htm" />
+    <item name="Propriétés Faire ... Tant Que" url="scenario/graphique/propriete/HIDD_PROPRIETES_FAIRE.htm" />
+    <item name="Propriétés Filtrage" url="scenario/graphique/propriete/HIDD_PROPRIETES_FILTRAGE.htm" />
+    <item name="Propriétés Fin Boucle" url="scenario/graphique/propriete/HIDD_PROPRIETES_FIN_BOUCLE.htm" />
+    <item name="Propriétés Fin Scénario" url="scenario/graphique/propriete/HIDD_PROPRIETES_FIN_SCEN.htm" />
+    <item name="Propriétés Groupe" url="scenario/graphique/propriete/HIDD_PROPRIETES_GROUPE.htm" />
+    <item name="Propriétés Imprime Etat" url="scenario/graphique/propriete/HIDD_PROPRIETES_IMPRIME_ETAT.htm" />
+    <item name="Propriétés Opération Mémoire" url="scenario/graphique/propriete/HIDD_PROPRIETES_OP_MEM.htm" />
+    <item name="Propriétés Requête" url="scenario/graphique/propriete/HIDD_PROPRIETES_REQUETE.htm" />
+    <item name="Propriétés Saisie" url="scenario/graphique/propriete/HIDD_PROPRIETES_SAISIE.htm" />
+    <item name="Propriétés Sous Scénario" url="scenario/graphique/propriete/HIDD_PROPRIETES_SOUS_SCEN.htm" />
+    <item name="Propriétés Tant Que ... Faire" url="scenario/graphique/propriete/HIDD_PROPRIETES_TANT_QUE.htm" />
+    <item name="Propriétés Tempo" url="scenario/graphique/propriete/HIDD_PROPRIETES_TEMPO.htm" />
+    <item name="Propriétés Terminal" url="scenario/graphique/propriete/HIDD_PROPRIETES_TERMINAL.htm" />
+    <item name="Propriétés Test" url="scenario/graphique/propriete/HIDD_PROPRIETES_TEST.htm" />
+  </book>
+  <item name="Liste des fonctions LPX Graphiques" url="scenario/graphique/Liste_des_fonctions_LPX_Graphiques.htm" />
+</book>
+<chunk name="lpx" ref="whtdata3.xml" />
+<item name="Création d'un scénario graphique" url="scenario/HIDR_GRAPHIQUE_LPX.htm" />
+<item name="Création d'un scénario LPX" url="scenario/HIDR_EDITEUR_LPX.htm" />
+
+</tocdata>

@@ -1,0 +1,15 @@
+Version 1
+APP 14
+
+1 L'utilisateur "%1" du groupe "%2" n'a pas le droit de lire dans la liste de groupes d'états
+2 Groupe état "%1" est inconnu
+3 L'utilisateur "%1" du groupe "%2" n'a pas le droit de lire 
+4 L'élément état (ID=%1) est inconnu dans le groupe des états %2
+5 Erreur envoi de la commande (cmd=%1)
+6 Erreur timeOut (cmd="%1")
+7 Erreur driver inconnu (id=0x%1 - cmd="%2")
+8 Erreur de connexion (cmd="%1")
+9 Erreur mot passe (cmd="%1")
+10 Lancement du driver état
+11 Envoi la commande "%1"
+12 Fin du traitement de la commande "%1"

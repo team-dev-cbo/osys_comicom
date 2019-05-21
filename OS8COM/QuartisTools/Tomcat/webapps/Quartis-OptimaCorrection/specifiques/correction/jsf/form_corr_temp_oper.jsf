@@ -1,0 +1,1277 @@
+<f:view locale="#{formCorrectionTempsOperateur.locale}"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:ice="http://www.icesoft.com/icefaces/component">
+
+    <ice:outputDeclaration doctypeRoot="HTML"
+                           doctypePublic="-//W3C//DTD HTML 4.01 Transitional//EN"
+                           doctypeSystem="http://www.w3.org/TR/html4/loose.dtd" />
+
+    <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>          
+            <meta http-equiv="PRAGMA" content="NO-CACHE"/>
+            <!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> --> <!-- Permet de definir quel moteur de naviguateur IE utiliser. Cette fonction est utilisee pour l'affichage des en tete de colonnes des tableau triables. -->
+
+            <!--<link type="text/css" rel="stylesheet" href="../css/rime/rime.css" />-->
+            <link type="text/css" rel="stylesheet" href="../css/xp/xp_osys.css" />
+            <link type="text/css" rel="stylesheet" href="../css/style.css" />
+
+
+
+
+        <ice:loadBundle basename="#{formCorrectionTempsOperateur.lang}" var="moduleLang" />
+
+        <title><h:outputText value="#{moduleLang.OW_CORR_TITLE_3}"/></title>
+
+        </head>
+        <body>
+           <!--h:outputText value="#{formCorrectionTempsOperateur.locale}"/-->
+        <ice:form>
+            <ice:outputConnectionStatus
+                cautionLabel="#{moduleLang.OW_CORR_CONNEXION_STATUT_CAUTION}"
+                activeLabel="#{moduleLang.OW_CORR_CONNEXION_STATUT_ACTIVE}"
+                disconnectedLabel="#{moduleLang.OW_CORR_CONNEXION_STATUT_DISCONNECTED}"
+                inactiveLabel="#{moduleLang.OW_CORR_CONNEXION_STATUT_INACTIVE}"
+                showPopupOnDisconnect="true"
+                />
+            <!-- Static Tab Set -->
+            <ice:panelGroup id="tabSetTabs" styleClass="icePnlGrpPage">
+                <!--
+===========================================================================================================================================
+==================================================================ONGLET 1=================================================================
+===========================================================================================================================================
+                -->
+                <ice:panelTabSet id="icePnlTbSet" selectedIndex="#{formCorrectionTempsOperateur.tabSelect}"
+                                 style="height: 100%">
+                    <!-- Panel Tab 1 -->
+                    <ice:panelTab label="#{moduleLang.OW_CORR_ONGLET_1}" icon="../img/search.png">
+                        <table border="0" width="100%">
+                            <tr>
+                                <td>
+                            <ice:outputText styleClass="title2" value="#{moduleLang.OW_CORR_FIELDSET_1}"/>
+                            </td>
+                            </tr>
+                            <tr>
+                                <td>
+                            <ice:panelGroup id="icePnlGrp">
+                                <center>
+                                    <table border="0" width="100%">
+                                        <tr>
+                                            <td style="text-align:right; width:70px; ">
+                                        <ice:outputText value="#{moduleLang.OW_CORR_FIELD_DATE_DEBU}"/>
+                                        </td>
+                                        <td style="width:180px; ">
+                                        <ice:selectInputDate id="popupDateDebut"
+                                                             renderMonthAsDropdown="true"
+                                                             renderYearAsDropdown="true"
+                                                             value="#{formCorrectionTempsOperateur.onglet1DateDebut}"
+                                                             renderAsPopup="true">
+                                            <f:convertDateTime pattern="dd/MM/yyyy"
+                                                               timeZone="#{formCorrectionTempsOperateur.selectInputDateBean.timeZone}"/>
+                                        </ice:selectInputDate>
+                                        </td>
+
+                                        <td style="text-align:right; width:70px; ">
+                                        <ice:outputText value="#{moduleLang.OW_CORR_FIELD_DATE_FIN}"/>
+                                        </td>
+                                        <td style="width:180px; ">
+                                        <ice:selectInputDate id="popupDateFin"
+                                                             renderMonthAsDropdown="true"
+                                                             renderYearAsDropdown="true"
+                                                             value="#{formCorrectionTempsOperateur.onglet1DateFin}"
+                                                             renderAsPopup="true">
+                                            <f:convertDateTime pattern="dd/MM/yyyy"
+                                                               timeZone="#{formCorrectionTempsOperateur.selectInputDateBean.timeZone}"/>
+                                        </ice:selectInputDate>
+                                        </td>
+
+                                        <td style="text-align:right; width:120px; ">
+                                        <ice:outputText value="#{moduleLang.OW_CORR_FIELD_FILT_EVEN}"/>
+                                        </td>
+                                        <td style="width:120px;">
+                                        <h:selectOneRadio id="radioTypeEven" value="#{formCorrectionTempsOperateur.onglet1TypeEven}" >
+                                            <f:selectItem itemValue="Y" itemLabel="#{moduleLang.OW_CORR_FIELD_YES}" />
+                                            <f:selectItem itemValue="N" itemLabel="#{moduleLang.OW_CORR_FIELD_NO}"/>
+                                        </h:selectOneRadio>
+                                        </td>
+                                        <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:right; width:70px; ">
+                                        <ice:outputText value="#{moduleLang.OW_CORR_FIELD_PERS}"/>
+                                        </td>
+                                        <td style="width:180px;">
+                                        <ice:selectInputText id="Operateur"
+                                                             rows="5"
+                                                             width="340"
+                                                             valueChangeListener="#{formCorrectionTempsOperateur.selectInputPersChanged}">
+                                            <f:selectItems   id="listOperateur"
+                                                             value="#{formCorrectionTempsOperateur.listPersonnel}"/>
+                                        </ice:selectInputText>
+                                        </td>
+
+                                        <td style="text-align:right; width:70px;">
+                                        <ice:outputText value="#{moduleLang.OW_CORR_FIELD_EQUI}" />
+                                        </td>
+                                        <td style="width:180px;">
+                                            <!-- type liste -->
+                                        <ice:selectOneMenu id="listEquipe" value="#{formCorrectionTempsOperateur.onglet1SelEquipe.codeEqui}" size="1" style="width:180px;">
+                                            <f:selectItems  value="#{formCorrectionTempsOperateur.listEquipe}"/>
+                                        </ice:selectOneMenu>
+                                        </td>
+
+                                        <td style="text-align:right; width:70px;">
+                                        <ice:outputText value="#{moduleLang.OW_CORR_FIELD_CODE_TACHE}" />
+                                        </td>
+                                        <td style="width:180px;">
+                                            <!-- type liste -->
+                                        <ice:selectOneMenu id="listTache" value="#{formCorrectionTempsOperateur.onglet1SelTache.codeTach}" size="1" style="width:180px;">
+                                            <f:selectItems  value="#{formCorrectionTempsOperateur.listTache}"/>
+                                        </ice:selectOneMenu>
+                                        </td>
+                                        <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:right; width:70px; ">
+                                        <ice:outputText value="#{moduleLang.OW_CORR_FIELD_MACH}"/>
+                                        </td>
+                                        <td style="width:180px;">
+                                            <!-- type liste -->
+
+                                        <ice:selectInputText id="listMach"
+                                                             width="340"
+                                                             value="#{formCorrectionTempsOperateur.onglet1SelMachine.desiMach}"
+                                                             valueChangeListener="#{formCorrectionTempsOperateur.selectCritereMachineValueChanged}"
+                                                             partialSubmit="true">
+                                            <f:selectItems   id="critListMachine"
+                                                             value="#{formCorrectionTempsOperateur.listMachine}"/>
+                                        </ice:selectInputText>
+
+                                        </td>
+                                        <td style="text-align:right; width:70px;">
+                                        <ice:outputText value="#{moduleLang.OW_CORR_FIELD_GEOG}" />
+                                        </td>
+                                        <td style="width:180px;">
+                                            <!-- type liste -->
+                                        <ice:selectOneMenu id="listSecteur" value="#{formCorrectionTempsOperateur.onglet1SelSecteurGeo.codeSecteur}" size="1" style="width:180px;">
+                                            <f:selectItems  value="#{formCorrectionTempsOperateur.listSecteurGeo}"/>
+                                        </ice:selectOneMenu>
+                                        </td>
+                                        <td style="text-align:right; width:70px;">
+                                        <ice:outputText value="#{moduleLang.OW_CORR_FIELD_CODE_ACTIVITE}" />
+                                        </td>
+                                        <td style="width:180px;">
+                                            <!-- type liste -->
+                                        <ice:selectOneMenu id="listOperation" value="#{formCorrectionTempsOperateur.onglet1SelEtatPersonnel.codeEtatPersonnel}" size="1" style="width:180px;">
+                                            <f:selectItems  value="#{formCorrectionTempsOperateur.listEtatPersonnel}"/>
+                                        </ice:selectOneMenu>
+                                        </td>
+                                        <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:right; width:70px;">
+                                        <ice:outputText value="#{moduleLang.OW_CORR_FIELD_OF}" />
+                                        </td>
+                                        <td style="width:180px;">
+                                        <ice:selectInputText id="listOf"
+                                                             rows="8"
+                                                             width="340"
+                                                             value="#{formCorrectionTempsOperateur.onglet1SelOf.desiOf}"
+                                                             valueChangeListener="#{formCorrectionTempsOperateur.selectCritereOfValueChanged}"
+                                                             partialSubmit="true">
+                                            <f:selectItems   id="critListOF"
+                                                             value="#{formCorrectionTempsOperateur.listOf}"/>
+                                        </ice:selectInputText>
+                                        </td>
+                                        <td style="text-align:right; width:70px;">
+                                        <ice:outputText value="#{moduleLang.OW_CORR_FIELD_ATEL}" />
+                                        </td>
+                                        <td style="width:180px;">
+                                            <!-- type liste -->
+                                        <ice:selectOneMenu id="listAtelier" value="#{formCorrectionTempsOperateur.onglet1SelAtelier.codeAtel}" size="1" style="width:180px;">
+                                            <f:selectItems  value="#{formCorrectionTempsOperateur.listAtelier}"/>
+                                        </ice:selectOneMenu>
+                                        </td>
+                                        <td colspan="3" rowspan="1" style="text-align:right;">
+                                        <ice:commandButton value="#{moduleLang.OW_CORR_BTN_1}" action="#{formCorrectionTempsOperateur.loadDataGrid}" styleClass="commandButton" style="background-image:url(../img/search.png);width:200px;" />
+                                        </td>
+                                        </tr>
+                                    </table>
+                                </center>
+                            </ice:panelGroup>
+                            </td>
+                            </tr>
+                            <tr>
+                                <td>
+                            <ice:outputText styleClass="title2" value="#{moduleLang.OW_CORR_FIELDSET_9}"/>
+                            </td>
+                            </tr>
+                            <tr>
+                                <td>
+                            <ice:panelGroup id="icePnlGrp2">
+                                <center>
+                                    <table border="0" width="100%">
+                                        <tr>
+                                            <td style="text-align:right; width:70px; ">
+                                        <ice:outputText value="#{moduleLang.OW_CORR_FIELD_TOTA}"/>
+                                        </td>
+                                        <td style="text-align:left; width:90px; ">
+                                        <ice:inputText id="tc_1"
+                                                       value="#{formCorrectionTempsOperateur.cumulTempsTotalFormated}"
+                                                       readonly="true"
+                                                       style="text-align:right; width:60px;">
+                                        </ice:inputText>
+                                        </td>
+                                        <td style="text-align:right; width:30px; ">
+                                        <ice:outputText value="#{moduleLang.OW_CORR_FIELD_PRODUCTIF}"/>
+                                        </td>
+                                        <td style="text-align:left; width:90px; ">
+                                        <ice:inputText id="tc_2"
+                                                       value="#{formCorrectionTempsOperateur.cumulTempsProductifFormated}"
+                                                       readonly="true"
+                                                       style="text-align:right; width:60px;">
+                                        </ice:inputText>
+                                        </td>
+                                        <td style="text-align:right; width:50px; ">
+                                        <ice:outputText value="#{moduleLang.OW_CORR_COL_HEADER_36}"/>
+                                        </td>
+                                        <td style="text-align:left; width:90px; ">
+                                        <ice:inputText id="tc_4"
+                                                       value="#{formCorrectionTempsOperateur.cumulTempsIndirectFormated}"
+                                                       readonly="true"
+                                                       style="text-align:right; width:60px;">
+                                        </ice:inputText>
+
+                                        </td>
+                                        <td style="text-align:right; width:30px; ">
+                                        <ice:outputText value="#{moduleLang.OW_CORR_FIELD_IMPRODUCTIF}"/>
+                                        </td>
+                                        <td style="text-align:left; width:90px; ">
+                                        <ice:inputText id="tc_5"
+                                                       value="#{formCorrectionTempsOperateur.cumulTempsImproductifFormated}"
+                                                       readonly="true"
+                                                       style="text-align:right; width:60px;">
+                                        </ice:inputText>
+
+                                        </td>
+                                        <td style="text-align:right; width:50px; ">
+                                        <ice:outputText value="#{moduleLang.OW_CORR_FIELD_NB_OPER}"/>
+                                        </td>
+                                        <td style="text-align:left; width:90px; ">
+                                        <ice:inputText id="tc_6"
+                                                       value="#{formCorrectionTempsOperateur.cumulNbreOperFormated}"
+                                                       readonly="true"
+                                                       style="text-align:right; width:60px;">
+                                        </ice:inputText>
+
+                                        </td>
+                                        <td style="text-align:right; width:60px; ">
+                                        <ice:outputText value="#{moduleLang.OW_CORR_FIELD_NBRE_LIGN}"/>
+                                        </td>
+                                        <td style="text-align:left; width:90px; ">
+                                        <ice:inputText id="tc_7"
+                                                       value="#{formCorrectionTempsOperateur.cumulNbreLignesFormated}"
+                                                       readonly="true"
+                                                       style="text-align:right; width:60px;">
+                                        </ice:inputText>
+
+                                        </td>
+                                        <td></td>
+                                        </tr>
+                                    </table>
+                                </center>
+                            </ice:panelGroup>
+                            </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div id="divDataTable" style="height:340px;">
+                                        <ice:dataTable id="data"
+                                                       var="tempsOper"
+                                                       sortColumn="#{formCorrectionTempsOperateur.model.onglet1ListData.sortColumnName}"
+                                                       sortAscending="#{formCorrectionTempsOperateur.model.onglet1ListData.ascending}"
+                                                       value="#{formCorrectionTempsOperateur.model.onglet1ListData.listDeclarationTempsOperateur}"
+                                                       rows="16"
+                                                       scrollable="false"
+                                                       rowClasses="oddRow, evenRow"
+                                                       styleClass="dataPaginatorDataTable"
+                                                       columnWidths="60px, 40px, 200px, 60px, 60px, 60px, 60px, 60px, 60px, 60px, 60px, 60px"
+                                                       width ="100%"
+                                                       cellpadding="0">
+                                            <ice:column>
+                                                <ice:rowSelector id="selected"
+                                                                 value="#{tempsOper.selected}"
+                                                                 multiple="false"
+                                                                 enhancedMultiple="false"
+                                                                 selectionListener="#{formCorrectionTempsOperateur.loadSelectDataGrid}"
+                                                                 preStyleOnSelection="true"/>
+                                                <f:facet name="header">
+                                                    <ice:commandSortHeader
+                                                        columnName="#{formCorrectionTempsOperateur.model.onglet1ListData.dateCaleColumnName}"
+                                                        arrow="true" >
+                                                        <ice:outputText id="header1"
+                                                                        value="#{formCorrectionTempsOperateur.model.onglet1ListData.dateCaleColumnName}"/>
+                                                    </ice:commandSortHeader>
+                                                </f:facet>
+                                                <ice:outputText id="column1"
+                                                                value="#{tempsOper.dateCaleFormated}"
+                                                                title="#{tempsOper.dateCaleFormated}"
+                                                                style="width: 60px;"/>
+                                            </ice:column>
+                                            <ice:column>
+                                                <f:facet name="header">
+                                                    <ice:commandSortHeader
+                                                        columnName="#{formCorrectionTempsOperateur.model.onglet1ListData.equipeColumnName}"
+                                                        arrow="true" >
+                                                        <ice:outputText id="header2"
+                                                                        value="#{formCorrectionTempsOperateur.model.onglet1ListData.equipeColumnName}"/>
+                                                    </ice:commandSortHeader>
+                                                </f:facet>
+                                                <ice:outputText id="column2"
+                                                                value="#{tempsOper.equipe.codeEquiSite}"
+                                                                title="#{tempsOper.equipe.desiEqui}"
+                                                                style="width: 40px;"/>
+                                            </ice:column>
+                                            <ice:column>
+                                                <f:facet name="header">
+                                                    <ice:commandSortHeader
+                                                        columnName="#{formCorrectionTempsOperateur.model.onglet1ListData.personnelColumnName}"
+                                                        arrow="true" >
+                                                        <ice:outputText id="header3"
+                                                                        value="#{formCorrectionTempsOperateur.model.onglet1ListData.personnelColumnName}"/>
+                                                    </ice:commandSortHeader>
+                                                </f:facet>
+                                                <ice:outputText id="column3"
+                                                                value="#{tempsOper.personnel.nomPrenom}"
+                                                                title="#{tempsOper.personnel.nomPrenom}"
+                                                                style="width: 200px;"/>
+                                            </ice:column>
+                                            <ice:column>
+                                                <f:facet name="header">
+                                                    <ice:commandSortHeader
+                                                        columnName="#{formCorrectionTempsOperateur.model.onglet1ListData.tempsProductifColumnName}"
+                                                        arrow="true" >
+                                                        <ice:outputText id="header4"
+                                                                        value="#{formCorrectionTempsOperateur.model.onglet1ListData.tempsProductifColumnName}"/>
+                                                    </ice:commandSortHeader>
+                                                </f:facet>
+                                                <ice:outputText id="column4"
+                                                                value="#{tempsOper.tempsProductifFormated}"
+                                                                title="#{tempsOper.tempsProductifFormated}"
+                                                                style="width: 60px; text-align: right; float: right; float: right;"/>
+                                            </ice:column>
+                                            <ice:column>
+                                                <f:facet name="header">
+                                                    <ice:commandSortHeader
+                                                        columnName="#{formCorrectionTempsOperateur.model.onglet1ListData.tempsManuelColumnName}"
+                                                        arrow="true" >
+                                                        <ice:outputText id="header5"
+                                                                        value="#{formCorrectionTempsOperateur.model.onglet1ListData.tempsManuelColumnName}"/>
+                                                    </ice:commandSortHeader>
+                                                </f:facet>
+                                                <ice:outputText id="column5"
+                                                                value="#{tempsOper.tempsManuelFormated}"
+                                                                title="#{tempsOper.tempsManuelFormated}"
+                                                                style="width: 60px; text-align: right; float: right; float: right;"/>
+                                            </ice:column>
+                                            <ice:column>
+                                                <f:facet name="header">
+                                                    <ice:commandSortHeader
+                                                        columnName="#{formCorrectionTempsOperateur.model.onglet1ListData.tempsImproductifColumnName}"
+                                                        arrow="true" >
+                                                        <ice:outputText id="header6"
+                                                                        value="#{formCorrectionTempsOperateur.model.onglet1ListData.tempsImproductifColumnName}"/>
+                                                    </ice:commandSortHeader>
+                                                </f:facet>
+                                                <ice:outputText id="column6"
+                                                                value="#{tempsOper.tempsImproductifFormated}"
+                                                                title="#{tempsOper.tempsImproductifFormated}"
+                                                                style="width: 60px; text-align: right; float: right; float: right;"/>
+                                            </ice:column>
+                                            <ice:column>
+                                                <f:facet name="header">
+                                                    <ice:commandSortHeader
+                                                        columnName="#{formCorrectionTempsOperateur.model.onglet1ListData.tempsTotalColumnName}"
+                                                        arrow="true" >
+                                                        <ice:outputText id="header6bis"
+                                                                        value="#{formCorrectionTempsOperateur.model.onglet1ListData.tempsTotalColumnName}"/>
+                                                    </ice:commandSortHeader>
+                                                </f:facet>
+                                                <ice:outputText id="column6bis"
+                                                                value="#{tempsOper.tempsTotalFormated}"
+                                                                title="#{tempsOper.tempsTotalFormated}"
+                                                                style="width: 60px; text-align: right; float: right; float: right;"/>
+                                            </ice:column>
+                                            <ice:column>
+                                                <f:facet name="header">
+                                                    <ice:commandSortHeader
+                                                        columnName="#{formCorrectionTempsOperateur.model.onglet1ListData.bonneColumnName}"
+                                                        arrow="true" >
+                                                        <ice:outputText id="header7"
+                                                                        value="#{formCorrectionTempsOperateur.model.onglet1ListData.bonneColumnName}"/>
+                                                    </ice:commandSortHeader>
+                                                </f:facet>
+                                                <ice:outputText id="column7"
+                                                                value="#{tempsOper.quanBonnFormated}"
+                                                                title="#{tempsOper.quanBonnFormated}"
+                                                                style="width: 60px; text-align: right; float: right; float: right;"/>
+                                            </ice:column>
+                                            <ice:column>
+                                                <f:facet name="header">
+                                                    <ice:commandSortHeader
+                                                        columnName="#{formCorrectionTempsOperateur.model.onglet1ListData.rebutColumnName}"
+                                                        arrow="true" >
+                                                        <ice:outputText id="header8"
+                                                                        value="#{formCorrectionTempsOperateur.model.onglet1ListData.rebutColumnName}"/>
+                                                    </ice:commandSortHeader>
+                                                </f:facet>
+                                                <ice:outputText id="column8"
+                                                                value="#{tempsOper.quanRebuFormated}"
+                                                                style="width: 60px; text-align: right; float: right; float: right;"/>
+                                            </ice:column>
+                                            <ice:column>
+                                                <f:facet name="header">
+                                                    <ice:commandSortHeader
+                                                        columnName="#{formCorrectionTempsOperateur.model.onglet1ListData.efficienceColumnName}"
+                                                        arrow="true" >
+                                                        <ice:outputText id="header9"
+                                                                        value="#{formCorrectionTempsOperateur.model.onglet1ListData.efficienceColumnName}"/>
+                                                    </ice:commandSortHeader>
+                                                </f:facet>
+                                                <ice:outputText id="column9"
+                                                                value="#{tempsOper.efficience}"
+                                                                style="width: 60px; text-align: right; float: right; float: right;"/>
+                                            </ice:column>
+                                            <ice:column>
+                                                <f:facet name="header">
+                                                    <ice:commandSortHeader
+                                                        columnName="#{formCorrectionTempsOperateur.model.onglet1ListData.rendementColumnName}"
+                                                        arrow="true" >
+                                                        <ice:outputText id="header10"
+                                                                        value="#{formCorrectionTempsOperateur.model.onglet1ListData.rendementColumnName}"/>
+                                                    </ice:commandSortHeader>
+                                                </f:facet>
+                                                <ice:outputText id="column10"
+                                                                value="#{tempsOper.rendement}"
+                                                                style="width: 60px; text-align: right; float: right; float: right;"/>
+                                            </ice:column>
+                                            <ice:column>
+                                                <f:facet name="header">
+                                                    <ice:commandSortHeader
+                                                        columnName="#{formCorrectionTempsOperateur.model.onglet1ListData.cadManuColumnName}"
+                                                        arrow="true" >
+                                                        <ice:outputText id="header11"
+                                                                        value="#{formCorrectionTempsOperateur.model.onglet1ListData.cadManuColumnName}"/>
+                                                    </ice:commandSortHeader>
+                                                </f:facet>
+                                                <ice:outputText id="column11"
+                                                                value="#{tempsOper.cadenceManuelle}"
+                                                                style="width: 60px; text-align: right; float: right; float: right;"/>
+                                            </ice:column>
+                                            <ice:column>
+                                                <f:facet name="header">
+                                                    <ice:commandSortHeader
+                                                        columnName="#{formCorrectionTempsOperateur.model.onglet1ListData.modColumnName}"
+                                                        arrow="true" >
+                                                        <ice:outputText id="header12"
+                                                                        value="#{formCorrectionTempsOperateur.model.onglet1ListData.modColumnName}"/>
+                                                    </ice:commandSortHeader>
+                                                </f:facet>
+                                                <ice:outputText id="column12"
+                                                                value="#{tempsOper.typeEvenFormated}"
+                                                                converter="#{formCorrectionTempsOperateur.modificationConverter}"
+                                                                style="width: 60px; text-align: center;"/>
+                                            </ice:column>
+                                        </ice:dataTable>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                            <center>
+                                <ice:panelGroup styleClass="icePnlGrpPaginator">
+                                    <ice:dataPaginator id="datapaginator2"
+                                                       for="data"
+                                                       paginator="true"
+                                                       fastStep="4"
+                                                       paginatorMaxPages="4"
+                                                       rowsCountVar="rowsCount"
+                                                       displayedRowsCountVar="displayedRowsCount"
+                                                       firstRowIndexVar="firstRowIndex"
+                                                       lastRowIndexVar="lastRowIndex"
+                                                       style=" margin: auto;">
+                                        <ice:outputFormat
+                                            styleClass="standard"
+                                            value="#{moduleLang.OW_CORR_PAGINATOR_FIELD_1}">
+                                            <f:param value="#{rowsCount}"/>
+                                            <f:param value="#{firstRowIndex}"/>
+                                            <f:param value="#{lastRowIndex}"/>
+                                        </ice:outputFormat>
+                                        <f:facet name="first">
+                                            <ice:outputText value="[#{moduleLang.OW_CORR_PAGINATOR_BNT_1}/" style="margin: -2px;">
+                                            </ice:outputText>
+                                        </f:facet>
+                                        <f:facet name="last">
+                                            <ice:outputText value="#{moduleLang.OW_CORR_PAGINATOR_BNT_4}]" style="margin: -2px;">
+                                            </ice:outputText>
+                                        </f:facet>
+                                        <f:facet name="previous">
+                                            <ice:outputText value="#{moduleLang.OW_CORR_PAGINATOR_BNT_2}]" style="margin: -2px;">
+                                            </ice:outputText>
+                                        </f:facet>
+                                        <f:facet name="next">
+                                            <ice:outputText value="[#{moduleLang.OW_CORR_PAGINATOR_BNT_3}/" style="margin: -2px;">
+                                            </ice:outputText>
+                                        </f:facet>
+                                    </ice:dataPaginator>
+                                </ice:panelGroup>
+                            </center>
+                            </td>
+                            </tr>
+                        </table>
+                    </ice:panelTab>
+                    <!--
+===========================================================================================================================================
+==================================================================ONGLET 2=================================================================
+===========================================================================================================================================
+                    -->
+                    <ice:panelTab label="#{moduleLang.OW_CORR_ONGLET_2}"
+                                  icon="../img/update.gif">
+                        <ice:panelGroup>
+                            <table>
+                                <tr>
+                                    <td style="text-align:right; width:120px; ">
+                                <ice:outputText id="onglet2DateCale" value="#{moduleLang.OW_CORR_FIELD_DATECALE}"/>
+                                </td>
+                                <td>
+                                <ice:selectInputDate id="popupDateCreaOnglet2"
+                                                     renderMonthAsDropdown="true"
+                                                     renderYearAsDropdown="true"
+                                                     style="display: inline;"
+                                                     value="#{formCorrectionTempsOperateur.objectDeclarationTemps.dateCale}"
+                                                     valueChangeListener="#{formCorrectionTempsOperateur.onglet2DateCaleChangeListener}"
+                                                     renderAsPopup="true">
+                                    <f:convertDateTime pattern="dd/MM/yyyy"
+                                                       timeZone="#{formCorrectionTempsOperateur.selectInputDateBean.timeZone}"/>
+                                </ice:selectInputDate>
+                                </td>
+                                <td style="text-align:right; width:120px; ">
+                                <ice:outputText id="onglet2Matricule" value="#{moduleLang.OW_CORR_FIELD_PERS}"/>
+                                </td>
+                                <td>
+                                <ice:selectInputText id="formListPersOnglet2"
+                                                     rows="5"
+                                                     width="180"
+                                                     value="#{formCorrectionTempsOperateur.onglet2PersSelected}"
+                                                     valueChangeListener="#{formCorrectionTempsOperateur.onglet2PersChangeListener}">
+                                    <f:selectItems   id="listOperateur"
+                                                     value="#{formCorrectionTempsOperateur.listPersonnelOnglet2}"/>
+                                </ice:selectInputText>
+                                </td>
+                                <td style="text-align:right; width:120px; ">
+                                <ice:outputText id="onglet2Equipe" value="#{moduleLang.OW_CORR_FIELD_EQUI}"/>
+                                </td>
+                                <td>
+                                <ice:selectOneMenu id="formListEquipeOnglet2"
+                                                   value="#{formCorrectionTempsOperateur.objectDeclarationTemps.equipe.codeEqui}"
+                                                   valueChangeListener="#{formCorrectionTempsOperateur.onglet2EquipeChangeListener}"
+                                                   partialSubmit="true"
+                                                   size="1"
+                                                   style="width:180px;">
+                                    <f:selectItems value="#{formCorrectionTempsOperateur.listEquipe}"/>
+                                </ice:selectOneMenu>
+                                </td>
+                                </tr>
+                            </table>
+                        </ice:panelGroup>
+                        <br />
+                        <ice:panelTabSet id="icePnlTbSet21" selectedIndex="#{formCorrectionTempsOperateur.tabSelect2}"
+                                         style="height: 100%">
+                            <!-- Panel Tab 1 -->
+                            <ice:panelTab label="#{moduleLang.OW_CORR_ONGLET_3}">
+                                <ice:dataTable id="dataTempsSousOnglet1"
+                                               var="listOF"
+                                               value="#{formCorrectionTempsOperateur.model.onglet2ListData1.listDeclarationTempsOperateur}"
+                                               rows="10"
+                                               scrollable="true"
+                                               scrollHeight="160px"
+                                               columnWidths="60px,50px,60px,60px,60px,60px,70px,50px,50px,70px,40px,60px,60px,60px,47px"
+                                               rowClasses="oddRow, evenRow"
+                                               width="100%"
+                                               cellpadding="0">
+                                    <ice:column>
+                                        <ice:rowSelector id="selectedOFSousOnglet1"
+                                                         value="#{listOF.selected}"
+                                                         multiple="false"
+                                                         enhancedMultiple="false"
+                                                         selectionListener="#{formCorrectionTempsOperateur.loadSelectDataGridOFSousOnglet1}"
+                                                         preStyleOnSelection="true"
+                                                         immediate="false"/>
+                                        <f:facet name="header">
+                                            <ice:outputText id="header1SousOnglet1" value="#{moduleLang.OW_CORR_COL_HEADER_33}"/>
+                                        </f:facet>
+                                        <ice:outputText id="column1SousOnglet1"
+                                                        value="#{listOF.tache.codeTach}"
+                                                        title="#{listOF.tache.desiTach}"
+                                                        style="width: 60px;"/>
+                                    </ice:column>
+                                    <ice:column>
+                                        <f:facet name="header">
+                                            <ice:outputText id="header2SousOnglet1"
+                                                            value="#{moduleLang.OW_CORR_COL_HEADER_31}"/>
+                                        </f:facet>
+                                        <ice:outputText id="column2SousOnglet1"
+                                                        value="#{listOF.etat.codeEtatSite}"
+                                                        title="#{listOF.etat.desiEtat}"
+                                                        style="width: 50px;"/>
+                                    </ice:column>
+                                    <ice:column>
+                                        <f:facet name="header">
+                                            <ice:outputText id="header3SousOnglet1"
+                                                            value="#{moduleLang.OW_CORR_COL_HEADER_1}"/>
+                                        </f:facet>
+                                        <ice:outputText id="column3SousOnglet1"
+                                                        value="#{listOF.machine.codeMachSite}"
+                                                        title="#{listOF.machine.desiMach}"
+                                                        style="width: 60px;"/>
+                                    </ice:column>
+                                    <ice:column>
+                                        <f:facet name="header">
+                                            <ice:outputText id="header4SousOnglet1"
+                                                            value="#{moduleLang.OW_CORR_COL_HEADER_9}"/>
+                                        </f:facet>
+                                        <ice:outputText id="column4SousOnglet1"
+                                                        value="#{listOF.atelier.codeAtelSite}"
+                                                        title="#{listOF.atelier.desiAtel}"
+                                                        style="width: 60px;"/>
+                                    </ice:column>
+                                    <ice:column>
+                                        <f:facet name="header">
+                                            <ice:outputText id="header5SousOnglet1"
+                                                            value="#{moduleLang.OW_CORR_COL_HEADER_10}"/>
+                                        </f:facet>
+                                        <ice:outputText id="column5SousOnglet1"
+                                                        value="#{listOF.secteurGeo.codeSecteurSite}"
+                                                        title="#{listOF.secteurGeo.desiSecteur}"
+                                                        style="width: 60px;"/>
+                                    </ice:column>
+                                    <ice:column>
+                                        <f:facet name="header">
+                                            <ice:outputText id="header6SousOnglet1"
+                                                            value="#{moduleLang.OW_CORR_COL_HEADER_32}"/>
+                                        </f:facet>
+                                        <ice:outputText id="column6SousOnglet1"
+                                                        value="#{listOF.sectionAna.codeSectionSite}"
+                                                        title="#{listOF.sectionAna.desiSection}"
+                                                        style="width: 60px;"/>
+                                    </ice:column>
+                                    <ice:column>
+                                        <f:facet name="header">
+                                            <ice:outputText id="header7SousOnglet1"
+                                                            value="#{moduleLang.OW_CORR_COL_HEADER_2}"/>
+                                        </f:facet>
+                                        <ice:outputText id="column7SousOnglet1"
+                                                        value="#{listOF.of.codeOfSite}"
+                                                        title="#{listOF.of.desiOf}"
+                                                        style="text-align:center;width: 70px;"/>
+                                    </ice:column>
+                                    <ice:column>
+                                        <f:facet name="header">
+                                            <ice:outputText id="header8SousOnglet1"
+                                                            value="#{moduleLang.OW_CORR_COL_HEADER_3}"/>
+                                        </f:facet>
+                                        <ice:outputText id="column8SousOnglet1"
+                                                        value="#{listOF.operation.codeOper}"
+                                                        title="#{listOF.operation.desiOper}"
+                                                        style="text-align:center; width: 50px;"/>
+                                    </ice:column>
+                                    <ice:column>
+                                        <f:facet name="header">
+                                            <ice:outputText id="header9SousOnglet1"
+                                                            value="#{moduleLang.OW_CORR_COL_HEADER_29}"/>
+                                        </f:facet>
+                                        <ice:outputText id="column9SousOnglet1"
+                                                        value="#{listOF.outil.codeOutiSite}"
+                                                        title="#{listOF.outil.codeOuti}"
+                                                        style="text-align:center; width: 50px;"/>
+                                    </ice:column>
+                                    <ice:column>
+                                        <f:facet name="header">
+                                            <ice:outputText id="header10SousOnglet1"
+                                                            value="#{moduleLang.OW_CORR_COL_HEADER_27}"/>
+                                        </f:facet>
+                                        <ice:outputText id="column10SousOnglet1"
+                                                        value="#{listOF.article.codeArti}"
+                                                        title="#{listOF.article.desiArti}"
+                                                        style="text-align:center; width: 70px;"/>
+                                    </ice:column>
+                                    <ice:column>
+                                        <f:facet name="header">
+                                            <ice:outputText id="header11SousOnglet1"
+                                                            value="#{moduleLang.OW_CORR_COL_HEADER_20}"/>
+                                        </f:facet>
+                                        <ice:outputText id="column11SousOnglet1"
+                                                        value="#{listOF.dureeMOFormated}"
+                                                        style="text-align:right; width: 40px;"/>
+                                    </ice:column>
+                                    <ice:column>
+                                        <f:facet name="header">
+                                            <ice:outputText id="header12SousOnglet1"
+                                                            value="#{moduleLang.OW_CORR_COL_HEADER_28}"/>
+                                        </f:facet>
+                                        <ice:outputText id="column12SousOnglet1"
+                                                        value="#{listOF.quanBonnFormated}"
+                                                        style="text-align:right; width: 60px;"/>
+                                    </ice:column>
+                                    <ice:column>
+                                        <f:facet name="header">
+                                            <ice:outputText id="header13SousOnglet1"
+                                                            value="#{moduleLang.OW_CORR_COL_HEADER_5}"/>
+                                        </f:facet>
+                                        <ice:outputText id="column13SousOnglet1"
+                                                        value="#{listOF.quanRebuFormated}"
+                                                        style="text-align:right; width: 60px;"/>
+                                    </ice:column>
+                                    <ice:column>
+                                        <f:facet name="header">
+                                            <ice:outputText id="header14SousOnglet1"
+                                                            value="#{moduleLang.OW_CORR_COL_HEADER_30}"/>
+                                        </f:facet>
+                                        <ice:outputText id="column14SousOnglet1"
+                                                        value="#{listOF.cadeTheoFormated}"
+                                                        style="text-align:right; width: 60px;"/>
+                                    </ice:column>
+                                    <ice:column>
+                                        <f:facet name="header">
+                                            <ice:outputText id="header15SousOnglet1"
+                                                            value="#{moduleLang.OW_CORR_COL_HEADER_17}"/>
+                                        </f:facet>
+                                        <ice:outputText id="column15SousOnglet1"
+                                                        value="#{listOF.typeEvenFormated}"
+                                                        converter="#{formCorrectionTempsOperateur.modificationConverter}"
+                                                        style="text-align:center;width: 47px;"/>
+                                    </ice:column>
+                                </ice:dataTable>
+                                <center>
+                                    <ice:panelGroup styleClass="icePnlGrpPaginator">
+                                        <ice:dataPaginator id="datapaginator3"
+                                                           for="dataTempsSousOnglet1"
+                                                           paginator="true"
+                                                           fastStep="4"
+                                                           paginatorMaxPages="4"
+                                                           rowsCountVar="rowsCount"
+                                                           displayedRowsCountVar="displayedRowsCount"
+                                                           firstRowIndexVar="firstRowIndex"
+                                                           lastRowIndexVar="lastRowIndex"
+                                                           style=" margin: auto;">
+                                            <ice:outputFormat
+                                                styleClass="standard"
+                                                value="#{moduleLang.OW_CORR_PAGINATOR_FIELD_1}">
+                                                <f:param value="#{rowsCount}"/>
+                                                <f:param value="#{firstRowIndex}"/>
+                                                <f:param value="#{lastRowIndex}"/>
+                                            </ice:outputFormat>
+                                            <f:facet name="first">
+                                                <ice:outputText value="[#{moduleLang.OW_CORR_PAGINATOR_BNT_1}/" style="margin: -2px;">
+                                                </ice:outputText>
+                                            </f:facet>
+                                            <f:facet name="last">
+                                                <ice:outputText value="#{moduleLang.OW_CORR_PAGINATOR_BNT_4}]" style="margin: -2px;">
+                                                </ice:outputText>
+                                            </f:facet>
+                                            <f:facet name="previous">
+                                                <ice:outputText value="#{moduleLang.OW_CORR_PAGINATOR_BNT_2}]" style="margin: -2px;">
+                                                </ice:outputText>
+                                            </f:facet>
+                                            <f:facet name="next">
+                                                <ice:outputText value="[#{moduleLang.OW_CORR_PAGINATOR_BNT_3}/" style="margin: -2px;">
+                                                </ice:outputText>
+                                            </f:facet>
+                                        </ice:dataPaginator>
+                                    </ice:panelGroup>
+                                </center>
+                                <ice:commandButton value="#{moduleLang.OW_CORR_BTN_9}"
+                                                   action="#{formCorrectionTempsOperateur.addDeclarationTempsSousOnglet1}"
+                                                   styleClass="commandButton"
+                                                   style="background-image:url(../img/add.png);width:200px; float: left;" />
+                                <ice:commandButton value="#{moduleLang.OW_CORR_BTN_7}"
+                                                   action="#{formCorrectionTempsOperateur.restoreDeclarationTempsSousOnglet1}"
+                                                   styleClass="commandButton"
+                                                   panelConfirmation="restoreConfirmPanelSousOnglet1"
+                                                   style="background-image:url(../img/restore.png);width:200px; float: right;" />
+                                <ice:panelConfirmation id="restoreConfirmPanelSousOnglet1"
+                                                       title="#{moduleLang.MSG_CONFIRMATION_RESTORE_TITLE}"
+                                                       message="#{moduleLang.MSG_CONFIRMATION_RESTORE_MESSAGE}"
+                                                       acceptLabel="#{moduleLang.MSG_CONFIRMATION_ACCEPTLABEL}"
+                                                       cancelLabel="#{moduleLang.MSG_CONFIRMATION_CANCELLABEL}"/>
+                                <br /><br />
+                                <ice:panelGroup partialSubmit="true" effect="#{formCorrectionTempsOperateur.effectSelectTableOnglet2}">
+                                    <ice:panelGroup style="border:none;">
+                                        <table border="0" style="width:100%;">
+                                            <tr>
+                                                <td style="text-align:right; width:90px;">
+                                            <ice:outputText value="#{moduleLang.OW_CORR_FIELD_TYPETACHE}"/>
+                                            </td>
+                                            <td>
+                                            <ice:selectOneMenu id="formListTacheSousOnglet1"
+                                                               value="#{formCorrectionTempsOperateur.onglet1NewDeclarationTemps.tache.codeTach}"
+                                                               size="1"
+                                                               style="width:240px;">
+                                                <f:selectItems value="#{formCorrectionTempsOperateur.listTacheProductif}"/>
+                                            </ice:selectOneMenu>
+                                            </td>
+                                            <td style="text-align:right; width:70px;">
+                                            <ice:outputText value="#{moduleLang.OW_CORR_FIELD_TYPEACTIVITE}"/>
+                                            </td>
+                                            <td colspan="2">
+                                            <ice:selectOneMenu id="formListEtatSousOnglet1"
+                                                               value="#{formCorrectionTempsOperateur.onglet1NewDeclarationTemps.etat.codeEtat}"
+                                                               size="1"
+                                                               style="width:240px;">
+                                                <f:selectItems value="#{formCorrectionTempsOperateur.listEtatPersonnel}"/>
+                                            </ice:selectOneMenu>
+                                            </td>
+                                            <td colspan="3"></td>
+
+                                            </tr>
+                                            <!--tr style="display: none;"-->
+                                            <tr>
+                                                <td  style="text-align:right; width:90px;">
+                                            <ice:outputText value="#{moduleLang.OW_CORR_FIELD_MACH}"/>
+                                            </td>
+                                            <td>
+                                            <ice:selectInputText id="formListMachSousOnglet1"
+                                                                 width="280"
+                                                                 value="#{formCorrectionTempsOperateur.onglet2MachSelected}"
+                                                                 valueChangeListener="#{formCorrectionTempsOperateur.selectOnglet2MachineValueChangedProd}"
+                                                                 update="dataTempsSousOnglet1, formListSecteurGeoSousOnglet1, formListSectionAnaSousOnglet1"
+                                                                 partialSubmit="true">
+                                                <f:selectItems   id="formListMach"
+                                                                 value="#{formCorrectionTempsOperateur.listMachine}"/>
+                                            </ice:selectInputText>       
+
+                                            </td>
+
+                                            <td style="text-align:right; width:70px;">
+                                            <ice:outputText value="#{moduleLang.OW_CORR_FIELD_GEOG}"/>
+                                            </td>
+                                            <td>
+                                            <ice:inputText id="formListSecteurGeoSousOnglet1"
+                                                           value="#{formCorrectionTempsOperateur.onglet1NewDeclarationTemps.secteurGeo.desiSecteur}"
+                                                           maxlength="30"
+                                                           size="30"
+                                                           readonly="true"
+                                                           disabled="true"
+                                                           style="width:180px;">
+                                            </ice:inputText> 
+
+                                            </td>
+                                            <td style="text-align:right; width:70px;">
+                                            <ice:outputText value="#{moduleLang.OW_CORR_FIELD_ANAL}"/>
+                                            </td>
+                                            <td>
+                                            <ice:selectOneMenu id="formListSectionAnaSousOnglet1"
+                                                           value="#{formCorrectionTempsOperateur.onglet1NewDeclarationTemps.sectionAna.codeSection}"
+                                                           size="1"
+                                                           style="width:180px;"
+                                                           disabled="#{formCorrectionTempsOperateur.renderedListSectionOnglet1}">
+                                                <f:selectItems  value="#{formCorrectionTempsOperateur.listSectionAna}"/>
+                                            </ice:selectOneMenu> 
+
+                                            </td>
+                                            <td style="text-align:right; width:70px;">
+                                            <ice:outputText value="#{moduleLang.OW_CORR_FIELD_ATEL}"/>
+                                            </td>
+                                            <td>
+                                            <ice:selectOneMenu id="formListAtelSousOnglet1"
+                                                               value="#{formCorrectionTempsOperateur.onglet1NewDeclarationTemps.atelier.codeAtel}"
+                                                               size="1" style="width:180px;"
+                                                               disabled="#{formCorrectionTempsOperateur.renderedListAtelierOnglet1}">
+                                                <f:selectItems  value="#{formCorrectionTempsOperateur.listAtelier}"/>
+                                            </ice:selectOneMenu>
+                                            </td>
+                                            </tr>
+                                            <tr>
+
+                                                <td style="text-align:right; width:90px;">
+                                            <ice:outputText value="#{moduleLang.OW_CORR_FIELD_OF}"/>
+                                            </td>
+                                            <td colspan="3">
+                                            <ice:selectInputText id="listOfSousOnglet1"
+                                                                 rows="8"
+                                                                 width="480"
+                                                                 value="#{formCorrectionTempsOperateur.onglet2OfSelected}"
+                                                                 valueChangeListener="#{formCorrectionTempsOperateur.selectNewOfValueChanged}"
+                                                                 partialSubmit="true">
+                                                <f:selectItems   id="newListOfSousOnglet1"
+                                                                 value="#{formCorrectionTempsOperateur.listCodeOf}"/>
+                                            </ice:selectInputText>
+                                            </td>
+                                            <td style="text-align:right; width:70px;">
+                                            <ice:outputText value="#{moduleLang.OW_CORR_FIELD_OPER}"/>
+                                            </td>
+                                            <td>
+                                            <ice:selectOneMenu id="listOperSousOnglet1"
+                                                               value="#{formCorrectionTempsOperateur.onglet1NewDeclarationTemps.operation.codeOper}"
+                                                               valueChangeListener="#{formCorrectionTempsOperateur.operChangeListener}"
+                                                               partialSubmit="true"
+                                                               size="1" style="width:180px;">
+                                                <f:selectItems value="#{formCorrectionTempsOperateur.listOperationByOf}"/>
+                                            </ice:selectOneMenu>
+                                            </td>
+                                            <td style="text-align:right; width:70px;">
+                                            <ice:outputText value="#{moduleLang.OW_CORR_FIELD_OUTI}"/>
+                                            </td>
+                                            <td>
+                                            <ice:selectOneMenu id="listOutilSousOnglet1"
+                                                               value="#{formCorrectionTempsOperateur.onglet1NewDeclarationTemps.outil.codeOuti}"
+                                                               size="1" style="width:180px;">
+                                                <f:selectItems  value="#{formCorrectionTempsOperateur.listOutil}"/>
+                                            </ice:selectOneMenu>
+                                            </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:right; width:90px;">
+                                            <ice:outputText value="#{moduleLang.OW_CORR_FIELD_REF}"/>
+                                            </td>
+                                            <td colspan="3">
+                                            <ice:selectInputText id="listRefSousOnglet1"
+                                                                 rows="8"
+                                                                 width="480"
+                                                                 value="#{formCorrectionTempsOperateur.onglet2ArticleSelected}"
+                                                                 valueChangeListener="#{formCorrectionTempsOperateur.selectNewArticleValueChanged}"
+                                                                 partialSubmit="true">
+                                                <f:selectItems   id="newListRefSousOnglet1"
+                                                                 value="#{formCorrectionTempsOperateur.listArticle}"/>
+                                            </ice:selectInputText>
+                                            </td>
+                                            <td colspan="4"></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:right; width:90px;">
+                                            <ice:outputText value="#{moduleLang.OW_CORR_FIELD_CADTHEO}"/>
+                                            </td>
+                                            <td>
+                                            <ice:inputText id="formCadeTheoSousOnglet1"
+                                                           value="#{formCorrectionTempsOperateur.onglet1NewDeclarationTemps.cadeTheo}"
+                                                           maxlength="30"
+                                                           size="30"
+                                                           style="width:70px;"
+                                                           partialSubmit="true">
+                                                <f:validator validatorId="realValidator" />
+                                            </ice:inputText>
+                                            </td>
+                                            <td style="text-align:right; width:70px;">
+                                            <ice:outputText value="#{moduleLang.OW_CORR_FIELD_QUAN_BONN}"/>
+                                            </td>
+                                            <td>
+                                            <ice:inputText id="formQteBonneSousOnglet1"
+                                                           value="#{formCorrectionTempsOperateur.onglet1NewDeclarationTemps.quanBonn}"
+                                                           maxlength="30"
+                                                           size="30"
+                                                           style="width:70px;"
+                                                           partialSubmit="true">
+                                                <f:validator validatorId="realValidator" />
+                                            </ice:inputText>
+                                            </td>
+                                            <td style="text-align:right; width:70px;">
+                                            <ice:outputText value="#{moduleLang.OW_CORR_FIELD_REBU}"/>
+                                            </td>
+                                            <td>
+                                            <ice:inputText id="formQteRebutSousOnglet1"
+                                                           value="#{formCorrectionTempsOperateur.onglet1NewDeclarationTemps.quanRebu}"
+                                                           maxlength="30"
+                                                           size="30"
+                                                           style="width:70px;"
+                                                           partialSubmit="true">
+                                                <f:validator validatorId="realValidator" />
+                                            </ice:inputText>
+                                            </td>
+                                            <td style="text-align:right; width:70px;">
+                                            <ice:outputText value="#{moduleLang.OW_CORR_FIELD_DURE_ACTIVITE}" />
+                                            </td>
+                                            <td>
+                                            <ice:inputText id="formDureeActiviteSousOnglet1"
+                                                           value="#{formCorrectionTempsOperateur.onglet1NewDeclarationTemps.dureeMOFormated}"
+                                                           maxlength="30"
+                                                           size="30"
+                                                           style="width:70px;"
+                                                           partialSubmit="true">
+                                                <f:validator validatorId="realValidator" />
+                                            </ice:inputText>
+                                            </td>
+                                            </tr>
+                                        </table>
+                                    </ice:panelGroup>
+                                </ice:panelGroup>
+                            </ice:panelTab>
+                            <!-- Panel Tab 2 -->
+                            <ice:panelTab label="#{moduleLang.OW_CORR_ONGLET_4}">
+                                <ice:dataTable id="dataTempsSousOnglet2"
+                                               var="listOF"
+                                               value="#{formCorrectionTempsOperateur.model.onglet2ListData2.listDeclarationTempsOperateur}"
+                                               rows="10"
+                                               scrollable="true"
+                                               scrollHeight="160px"
+                                               columnWidths="60px,120px,120px,120px,120px,120px,55px,40px"
+                                               rowClasses="oddRow, evenRow"
+                                               width="100%"
+                                               cellpadding="0">
+                                    <ice:column>
+                                        <ice:rowSelector id="selectedOFSousOnglet2"
+                                                         value="#{listOF.selected}"
+                                                         multiple="false"
+                                                         enhancedMultiple="false"
+                                                         selectionListener="#{formCorrectionTempsOperateur.loadSelectDataGridOFSousOnglet2}"
+                                                         preStyleOnSelection="true"
+                                                         immediate="false"/>
+                                        <f:facet name="header">
+                                            <ice:outputText id="header1SousOnglet2" value="#{moduleLang.OW_CORR_COL_HEADER_33}"/>
+                                        </f:facet>
+                                        <ice:outputText id="column1SousOnglet2"
+                                                        value="#{listOF.tache.codeTach}"
+                                                        title="#{listOF.tache.desiTach}"
+                                                        style="width: 60px;"/>
+                                    </ice:column>
+                                    <ice:column>
+                                        <f:facet name="header">
+                                            <ice:outputText id="header2SousOnglet2"
+                                                            value="#{moduleLang.OW_CORR_COL_HEADER_31}"/>
+                                        </f:facet>
+                                        <ice:outputText id="column2SousOnglet2"
+                                                        value="#{listOF.etat.codeEtatSite}"
+                                                        title="#{listOF.etat.desiEtat}"
+                                                        style="width: 100px;"/>
+                                    </ice:column>
+                                    <ice:column>
+                                        <f:facet name="header">
+                                            <ice:outputText id="header3SousOnglet2"
+                                                            value="#{moduleLang.OW_CORR_COL_HEADER_1}"/>
+                                        </f:facet>
+                                        <ice:outputText id="column3SousOnglet2"
+                                                        value="#{listOF.machine.codeMachSite}"
+                                                        title="#{listOF.machine.desiMach}"
+                                                        style="width: 100px;"/>
+                                    </ice:column>
+                                    <ice:column>
+                                        <f:facet name="header">
+                                            <ice:outputText id="header4SousOnglet2"
+                                                            value="#{moduleLang.OW_CORR_COL_HEADER_9}"/>
+                                        </f:facet>
+                                        <ice:outputText id="column4SousOnglet2"
+                                                        value="#{listOF.atelier.codeAtelSite}"
+                                                        title="#{listOF.atelier.desiAtel}"
+                                                        style="width: 100px;"/>
+                                    </ice:column>
+                                    <ice:column>
+                                        <f:facet name="header">
+                                            <ice:outputText id="header5SousOnglet2"
+                                                            value="#{moduleLang.OW_CORR_COL_HEADER_10}"/>
+                                        </f:facet>
+                                        <ice:outputText id="column5SousOnglet2"
+                                                        value="#{listOF.secteurGeo.codeSecteurSite}"
+                                                        title="#{listOF.secteurGeo.desiSecteur}"
+                                                        style="width: 100px;"/>
+                                    </ice:column>
+                                    <ice:column>
+                                        <f:facet name="header">
+                                            <ice:outputText id="header6SousOnglet2"
+                                                            value="#{moduleLang.OW_CORR_COL_HEADER_32}"/>
+                                        </f:facet>
+                                        <ice:outputText id="column6SousOnglet2"
+                                                        value="#{listOF.sectionAna.codeSectionSite}"
+                                                        title="#{listOF.sectionAna.desiSection}"
+                                                        style="width: 100px;"/>
+                                    </ice:column>
+                                    <ice:column>
+                                        <f:facet name="header">
+                                            <ice:outputText id="header11SousOnglet2"
+                                                            value="#{moduleLang.OW_CORR_COL_HEADER_20}"/>
+                                        </f:facet>
+                                        <ice:outputText id="column11SousOnglet2"
+                                                        value="#{listOF.dureeMOFormated}"
+                                                        style="width: 55px; text-align:right;"/>
+                                    </ice:column>
+                                    <ice:column>
+                                        <f:facet name="header">
+                                            <ice:outputText id="header15SousOnglet2"
+                                                            value="#{moduleLang.OW_CORR_COL_HEADER_17}"/>
+                                        </f:facet>
+                                        <ice:outputText id="column15SousOnglet2"
+                                                        value="#{listOF.typeEvenFormated}"
+                                                        style="width: 40px; text-align:center;"
+                                                        converter="#{formCorrectionTempsOperateur.modificationConverter}"/>
+                                    </ice:column>
+                                </ice:dataTable>
+                                <center>
+                                    <ice:panelGroup styleClass="icePnlGrpPaginator">
+                                        <ice:dataPaginator id="datapaginator4"
+                                                           for="dataTempsSousOnglet2"
+                                                           paginator="true"
+                                                           fastStep="4"
+                                                           paginatorMaxPages="4"
+                                                           rowsCountVar="rowsCount"
+                                                           displayedRowsCountVar="displayedRowsCount"
+                                                           firstRowIndexVar="firstRowIndex"
+                                                           lastRowIndexVar="lastRowIndex"
+                                                           style=" margin: auto;">
+                                            <ice:outputFormat
+                                                styleClass="standard"
+                                                value="#{moduleLang.OW_CORR_PAGINATOR_FIELD_1}">
+                                                <f:param value="#{rowsCount}"/>
+                                                <f:param value="#{firstRowIndex}"/>
+                                                <f:param value="#{lastRowIndex}"/>
+                                            </ice:outputFormat>
+                                            <f:facet name="first">
+                                                <ice:outputText value="[#{moduleLang.OW_CORR_PAGINATOR_BNT_1}/" style="margin: -2px;">
+                                                </ice:outputText>
+                                            </f:facet>
+                                            <f:facet name="last">
+                                                <ice:outputText value="#{moduleLang.OW_CORR_PAGINATOR_BNT_4}]" style="margin: -2px;">
+                                                </ice:outputText>
+                                            </f:facet>
+                                            <f:facet name="previous">
+                                                <ice:outputText value="#{moduleLang.OW_CORR_PAGINATOR_BNT_2}]" style="margin: -2px;">
+                                                </ice:outputText>
+                                            </f:facet>
+                                            <f:facet name="next">
+                                                <ice:outputText value="[#{moduleLang.OW_CORR_PAGINATOR_BNT_3}/" style="margin: -2px;">
+                                                </ice:outputText>
+                                            </f:facet>
+                                        </ice:dataPaginator>
+                                    </ice:panelGroup>
+                                </center>
+                                <ice:commandButton value="#{moduleLang.OW_CORR_BTN_9}"
+                                                   action="#{formCorrectionTempsOperateur.addDeclarationTempsSousOnglet2}"
+                                                   styleClass="commandButton"
+                                                   style="background-image:url(../img/add.png);width:200px; float: left;" />
+                                <ice:commandButton value="#{moduleLang.OW_CORR_BTN_7}"
+                                                   action="#{formCorrectionTempsOperateur.restoreDeclarationTempsSousOnglet2}"
+                                                   styleClass="commandButton"
+                                                   panelConfirmation="restoreConfirmPanelSousOnglet2"
+                                                   style="background-image:url(../img/restore.png);width:200px; float: right;" />
+                                <ice:panelConfirmation id="restoreConfirmPanelSousOnglet2"
+                                                       title="#{moduleLang.MSG_CONFIRMATION_RESTORE_TITLE}"
+                                                       message="#{moduleLang.MSG_CONFIRMATION_RESTORE_MESSAGE}"
+                                                       acceptLabel="#{moduleLang.MSG_CONFIRMATION_ACCEPTLABEL}"
+                                                       cancelLabel="#{moduleLang.MSG_CONFIRMATION_CANCELLABEL}"/>
+                                <br /><br />
+                                <ice:panelGroup partialSubmit="true" effect="#{formCorrectionTempsOperateur.effectSelectTableOnglet2}">
+                                    <ice:panelGroup style="border:none;">
+                                        <table border="0" >
+                                            <tr>
+                                                <td style="text-align:right; width:90px;">
+                                            <ice:outputText value="#{moduleLang.OW_CORR_FIELD_TYPETACHE}"/>
+                                            </td>
+                                            <td>
+                                            <ice:selectOneMenu id="formListTacheSousOnglet2"
+                                                               value="#{formCorrectionTempsOperateur.onglet2NewDeclarationTemps.tache.codeTach}"
+                                                               size="1"
+                                                               style="width:240px;">
+                                                <f:selectItems value="#{formCorrectionTempsOperateur.listTacheImproductif}"/>
+                                            </ice:selectOneMenu>
+                                            </td>
+                                            <td style="text-align:right; width:70px;">
+                                            <ice:outputText value="#{moduleLang.OW_CORR_FIELD_TYPEACTIVITE}"/>
+                                            </td>
+                                            <td colspan="2">
+                                            <ice:selectOneMenu id="formListEtatSousOnglet2"
+                                                               value="#{formCorrectionTempsOperateur.onglet2NewDeclarationTemps.etat.codeEtat}"
+                                                               size="1"
+                                                               style="width:240px;">
+                                                <f:selectItems value="#{formCorrectionTempsOperateur.listEtatPersonnel}"/>
+                                            </ice:selectOneMenu>
+                                            </td>
+                                            <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:right; width:90px;">
+                                            <ice:outputText value="#{moduleLang.OW_CORR_FIELD_MACH}"/>
+                                            </td>
+                                            <td>
+                                            <ice:selectInputText id="formListMachSousOnglet2"
+                                                                 width="280"
+                                                                 value="#{formCorrectionTempsOperateur.onglet2MachSelectedImprod}"
+                                                                 valueChangeListener="#{formCorrectionTempsOperateur.selectOnglet2MachineValueChangedImProd}"
+                                                                 update="dataTempsSousOnglet2, formListAtelSousOnglet2, formListSecteurGeoSousOnglet2, formListSectionAnaSousOnglet2"
+                                                                 partialSubmit="true">
+                                                <f:selectItems   id="formListMach"
+                                                                 value="#{formCorrectionTempsOperateur.listMachine}"/>
+                                            </ice:selectInputText>       
+
+                                            </td>
+
+                                            <td style="text-align:right; width:70px;">
+                                            <ice:outputText value="#{moduleLang.OW_CORR_FIELD_GEOG}"/>
+                                            </td>
+                                            <td>
+                                            <ice:inputText id="formListSecteurGeoSousOnglet2"
+                                                           value="#{formCorrectionTempsOperateur.onglet2NewDeclarationTemps.secteurGeo.desiSecteur}"
+                                                           maxlength="30"
+                                                           size="30"
+                                                           readonly="true"
+                                                           disabled="true"
+                                                           style="width:180px;">
+                                            </ice:inputText>  
+                                            </td>
+
+                                            <td style="text-align:right; width:70px;">
+                                            <ice:outputText value="#{moduleLang.OW_CORR_FIELD_ANAL}"/>
+                                            </td>
+                                            <td><ice:selectOneMenu id="formListSectionAnaSousOnglet2"
+                                                               value="#{formCorrectionTempsOperateur.onglet2NewDeclarationTemps.sectionAna.codeSection}"
+                                                               size="1"
+                                                               style="width:180px;"
+                                                               disabled="#{formCorrectionTempsOperateur.renderedListAtelierOnglet2}">
+                                                 <f:selectItems  value="#{formCorrectionTempsOperateur.listSectionAna}"/>
+                                            </ice:selectOneMenu>  
+                                            </td>
+                                            <td style="text-align:right; width:70px;">
+                                            <ice:outputText value="#{moduleLang.OW_CORR_FIELD_ATEL}"/>
+                                            </td>
+                                            <td>
+                                            <ice:selectOneMenu id="formListAtelSousOnglet2"
+                                                               value="#{formCorrectionTempsOperateur.onglet2NewDeclarationTemps.atelier.codeAtel}"
+                                                               size="1" style="width:180px;"
+                                                               disabled="#{formCorrectionTempsOperateur.renderedListAtelierOnglet2}">
+                                                <f:selectItems  value="#{formCorrectionTempsOperateur.listAtelier}"/>
+                                            </ice:selectOneMenu>
+                                            </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:right; width:90px;">
+                                            <ice:outputText value="#{moduleLang.OW_CORR_FIELD_DURE_ACTIVITE}" />
+                                            </td>
+                                            <td>
+                                            <ice:inputText id="formDureeActiviteSousOnglet2"
+                                                           value="#{formCorrectionTempsOperateur.onglet2NewDeclarationTemps.dureeMOFormated}"
+                                                           maxlength="30"
+                                                           size="30"
+                                                           style="width:70px;"
+                                                           partialSubmit="true">
+                                                <f:validator validatorId="realValidator" />
+                                            </ice:inputText>
+                                            </td>
+                                            <td colspan="6"></td>
+                                            </tr>
+                                        </table>
+                                    </ice:panelGroup>
+                                </ice:panelGroup>
+                            </ice:panelTab>
+                        </ice:panelTabSet>
+                        <br />
+                        <ice:commandButton value="#{moduleLang.OW_CORR_BTN_4}" action="#{formCorrectionTempsOperateur.cancelDeclarationTempsOper}" styleClass="commandButton" style="background-image:url(../img/undo.png);width:200px; float: left;" />
+                        <ice:commandButton value="#{moduleLang.OW_CORR_BTN_3}" action="#{formCorrectionTempsOperateur.saveDeclarationTempsOper}" styleClass="commandButton" style="background-image:url(../img/valid.png);width:200px; float: right;" />
+                    </ice:panelTab>
+                </ice:panelTabSet>
+                <center>
+                    <ice:messages style="color: red; font-weight: bold; font-size: 12px;" layout="table" showDetail="true"/>
+                </center>
+            </ice:panelGroup>
+        </ice:form>
+
+        </body>
+    </html>
+</f:view>

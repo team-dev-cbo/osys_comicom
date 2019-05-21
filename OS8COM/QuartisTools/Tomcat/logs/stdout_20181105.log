@@ -1,0 +1,225 @@
+12:19:39.428 [35mDEBUG[m - Thread-2          - TomcatListener [35mcontextInitialized - servletContext.realPath : C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web[m 
+12:19:39.506 [34m INFO[m - Thread-2          - PropertiesDelegate [34mOuverture du fichier de configuration à l'emplacement : C:\Osys\QuartisTools\Tomcat/conf/quartis-web.properties[m 
+12:19:39.662 [34m INFO[m - Thread-2          - TomcatListener [34m-----> Supression des fichier temporaires[m 
+12:19:40.676 [34m INFO[m - Thread-2          - TomcatListener [34mOuverture du fichier indiquant la base de données : C:\Osys\QuartisTools\Tomcat/conf/datasources.xml...[m 
+12:19:40.864 [34m INFO[m - Thread-2          - DataSourceManager [34mCréation de la datasource : QuartisWeb-PU[m 
+12:19:42.158 [1;31mERROR[m - Thread-2          - GSql  org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Network error IOException: Connection refused: connect)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1225)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:880)
+	at quartisweb.bd.AccesBD.getConnection(AccesBD.java:140)
+	at quartisweb.generic.sql.GSql.getListCodeSites(GSql.java:923)
+	at quartisweb.id.global.UserGlobalManager.verifySiteTiret(UserGlobalManager.java:124)
+	at quartisweb.id.global.UserGlobalManager.creerListUser(UserGlobalManager.java:85)
+	at quartisweb.id.global.UserGlobalManager.init(UserGlobalManager.java:35)
+	at quartisweb.tomcat.TomcatListener.contextInitialized(TomcatListener.java:109)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4135)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4630)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:791)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:771)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:546)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:637)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:563)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:498)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1277)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:321)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1053)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:785)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:445)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:519)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:581)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+Caused by: java.sql.SQLException: Network error IOException: Connection refused: connect
+	at net.sourceforge.jtds.jdbc.ConnectionJDBC2.<init>(ConnectionJDBC2.java:385)
+	at net.sourceforge.jtds.jdbc.ConnectionJDBC3.<init>(ConnectionJDBC3.java:50)
+	at net.sourceforge.jtds.jdbc.Driver.connect(Driver.java:182)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:294)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1247)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1221)
+	... 31 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.sourceforge.jtds.jdbc.SharedSocket.createSocketForJDBC3(SharedSocket.java:304)
+	at net.sourceforge.jtds.jdbc.SharedSocket.<init>(SharedSocket.java:255)
+	at net.sourceforge.jtds.jdbc.ConnectionJDBC2.<init>(ConnectionJDBC2.java:310)
+	... 37 more
+
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/C:/Osys/QuartisTools/Tomcat/lib/slf4j-log4j12-1.7.12.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/Osys/QuartisTools/Tomcat/webapps/Quartis-OptimaCjj/WEB-INF/lib/logback-classic-0.9.28.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+2018-11-05 12:20:17.043 [Thread-2] ERROR org.springframework.web.context.ContextLoader[308]-Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'evtGanttServices' defined in URL [jar:file:/C:/Osys/QuartisTools/Tomcat/webapps/Quartis-OptimaCjj/WEB-INF/lib/Quartis-OptimaCjj-core.jar!/spring/optimaCjjCoreContext.xml]: Invocation of init method failed; nested exception is org.springframework.transaction.CannotCreateTransactionException: Could not open Hibernate Session for transaction; nested exception is org.hibernate.exception.GenericJDBCException: Could not open connection
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1455) ~[org.springframework.beans-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519) ~[org.springframework.beans-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) ~[org.springframework.beans-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294) ~[org.springframework.beans-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225) ~[org.springframework.beans-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291) ~[org.springframework.beans-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193) ~[org.springframework.beans-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585) ~[org.springframework.beans-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913) ~[org.springframework.context-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464) ~[org.springframework.context-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:385) ~[org.springframework.web-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:284) ~[org.springframework.web-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111) [org.springframework.web-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4135) [catalina.jar:6.0.29]
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4630) [catalina.jar:6.0.29]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:791) [catalina.jar:6.0.29]
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:771) [catalina.jar:6.0.29]
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:546) [catalina.jar:6.0.29]
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:905) [catalina.jar:6.0.29]
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:740) [catalina.jar:6.0.29]
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:500) [catalina.jar:6.0.29]
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1277) [catalina.jar:6.0.29]
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:321) [catalina.jar:6.0.29]
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119) [catalina.jar:6.0.29]
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1053) [catalina.jar:6.0.29]
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:785) [catalina.jar:6.0.29]
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045) [catalina.jar:6.0.29]
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:445) [catalina.jar:6.0.29]
+	at org.apache.catalina.core.StandardService.start(StandardService.java:519) [catalina.jar:6.0.29]
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710) [catalina.jar:6.0.29]
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:581) [catalina.jar:6.0.29]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_79]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.7.0_79]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.7.0_79]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.7.0_79]
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289) [bootstrap.jar:6.0.29]
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414) [bootstrap.jar:6.0.29]
+Caused by: org.springframework.transaction.CannotCreateTransactionException: Could not open Hibernate Session for transaction; nested exception is org.hibernate.exception.GenericJDBCException: Could not open connection
+	at org.springframework.orm.hibernate4.HibernateTransactionManager.doBegin(HibernateTransactionManager.java:440) ~[org.springframework.orm-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:371) ~[org.springframework.transaction-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:335) ~[org.springframework.transaction-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:105) ~[org.springframework.transaction-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172) ~[org.springframework.aop-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:202) ~[org.springframework.aop-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at com.sun.proxy.$Proxy70.findBySiteConstHeureChangementDate(Unknown Source) ~[na:na]
+	at fr.osys.optima.core.cjj.manager.eventgantt.services.impl.EventGanttPersServicesImpl.findBySiteConstHeureChangementDate(EventGanttPersServicesImpl.java:216) ~[Quartis-OptimaCjj-core.jar:jarTarget-v1.0-r20180220170946]
+	at fr.osys.optima.core.cjj.manager.eventgantt.GestionEventGanttPers.findMapConstHeureChangeDate(GestionEventGanttPers.java:1699) ~[Quartis-OptimaCjj-core.jar:jarTarget-v1.0-r20180220170946]
+	at fr.osys.optima.core.cjj.services.correctionmanagement.impl.EvtGanttServicesImpl.init(EvtGanttServicesImpl.java:106) ~[Quartis-OptimaCjj-core.jar:jarTarget-v1.0-r20180220170946]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_79]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.7.0_79]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.7.0_79]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.7.0_79]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1581) ~[org.springframework.beans-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1522) ~[org.springframework.beans-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1452) ~[org.springframework.beans-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	... 36 common frames omitted
+Caused by: org.hibernate.exception.GenericJDBCException: Could not open connection
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:54) ~[hibernate-core-4.1.9.Final.jar:4.1.9.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:125) ~[hibernate-core-4.1.9.Final.jar:4.1.9.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:110) ~[hibernate-core-4.1.9.Final.jar:4.1.9.Final]
+	at org.hibernate.engine.jdbc.internal.LogicalConnectionImpl.obtainConnection(LogicalConnectionImpl.java:304) ~[hibernate-core-4.1.9.Final.jar:4.1.9.Final]
+	at org.hibernate.engine.jdbc.internal.LogicalConnectionImpl.getConnection(LogicalConnectionImpl.java:169) ~[hibernate-core-4.1.9.Final.jar:4.1.9.Final]
+	at org.hibernate.engine.transaction.internal.jdbc.JdbcTransaction.doBegin(JdbcTransaction.java:67) ~[hibernate-core-4.1.9.Final.jar:4.1.9.Final]
+	at org.hibernate.engine.transaction.spi.AbstractTransactionImpl.begin(AbstractTransactionImpl.java:160) ~[hibernate-core-4.1.9.Final.jar:4.1.9.Final]
+	at org.hibernate.internal.SessionImpl.beginTransaction(SessionImpl.java:1395) ~[hibernate-core-4.1.9.Final.jar:4.1.9.Final]
+	at org.springframework.orm.hibernate4.HibernateTransactionManager.doBegin(HibernateTransactionManager.java:399) ~[org.springframework.orm-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	... 52 common frames omitted
+Caused by: java.sql.SQLException: Impossible d'ouvrir la base de données "QUARTIS_PRO" demandée par la connexion. La connexion a échoué.
+	at net.sourceforge.jtds.jdbc.SQLDiagnostic.addDiagnostic(SQLDiagnostic.java:368) ~[jtds-1.2.5.jar:1.2.5]
+	at net.sourceforge.jtds.jdbc.TdsCore.tdsErrorToken(TdsCore.java:2820) ~[jtds-1.2.5.jar:1.2.5]
+	at net.sourceforge.jtds.jdbc.TdsCore.nextToken(TdsCore.java:2258) ~[jtds-1.2.5.jar:1.2.5]
+	at net.sourceforge.jtds.jdbc.TdsCore.login(TdsCore.java:603) ~[jtds-1.2.5.jar:1.2.5]
+	at net.sourceforge.jtds.jdbc.ConnectionJDBC2.<init>(ConnectionJDBC2.java:345) ~[jtds-1.2.5.jar:1.2.5]
+	at net.sourceforge.jtds.jdbc.ConnectionJDBC3.<init>(ConnectionJDBC3.java:50) ~[jtds-1.2.5.jar:1.2.5]
+	at net.sourceforge.jtds.jdbc.Driver.connect(Driver.java:184) ~[jtds-1.2.5.jar:1.2.5]
+	at java.sql.DriverManager.getConnection(Unknown Source) ~[na:1.7.0_79]
+	at java.sql.DriverManager.getConnection(Unknown Source) ~[na:1.7.0_79]
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:173) ~[org.springframework.jdbc-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:164) ~[org.springframework.jdbc-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:149) ~[org.springframework.jdbc-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:128) ~[org.springframework.jdbc-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:141) ~[hibernate-core-4.1.9.Final.jar:4.1.9.Final]
+	at org.hibernate.internal.AbstractSessionImpl$NonContextualJdbcConnectionAccess.obtainConnection(AbstractSessionImpl.java:292) ~[hibernate-core-4.1.9.Final.jar:4.1.9.Final]
+	at org.hibernate.engine.jdbc.internal.LogicalConnectionImpl.obtainConnection(LogicalConnectionImpl.java:297) ~[hibernate-core-4.1.9.Final.jar:4.1.9.Final]
+	... 57 common frames omitted
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/C:/Osys/QuartisTools/Tomcat/lib/slf4j-log4j12-1.7.12.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/Osys/QuartisTools/Tomcat/webapps/Quartis-OptimaTml/WEB-INF/lib/logback-classic-0.9.28.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+2018-11-05 12:20:23.938 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1157]-Using default implementation for ThreadExecutor
+2018-11-05 12:20:23.969 [Thread-2] INFO  org.quartz.core.SchedulerSignalerImpl[61]-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-11-05 12:20:23.969 [Thread-2] INFO  org.quartz.core.QuartzScheduler[243]-Quartz Scheduler v.2.1.6 created.
+2018-11-05 12:20:23.969 [Thread-2] INFO  org.quartz.simpl.RAMJobStore[154]-RAMJobStore initialized.
+2018-11-05 12:20:23.969 [Thread-2] INFO  org.quartz.core.QuartzScheduler[268]-Scheduler meta-data: Quartz Scheduler (v2.1.6) 'schedulerBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-11-05 12:20:23.969 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1306]-Quartz scheduler 'schedulerBean' initialized from an externally provided properties instance.
+2018-11-05 12:20:23.969 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1310]-Quartz scheduler version: 2.1.6
+2018-11-05 12:20:23.969 [Thread-2] INFO  org.quartz.core.QuartzScheduler[2247]-JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@67c69074
+17:43:20.095 [35mDEBUG[m - Thread-2          - TomcatListener [35mcontextInitialized - servletContext.realPath : C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web[m 
+17:43:20.173 [34m INFO[m - Thread-2          - PropertiesDelegate [34mOuverture du fichier de configuration à l'emplacement : C:\Osys\QuartisTools\Tomcat/conf/quartis-web.properties[m 
+17:43:20.501 [34m INFO[m - Thread-2          - TomcatListener [34m-----> Supression des fichier temporaires[m 
+17:43:38.004 [34m INFO[m - Thread-2          - TomcatListener [34mOuverture du fichier indiquant la base de données : C:\Osys\QuartisTools\Tomcat/conf/datasources.xml...[m 
+17:43:38.269 [34m INFO[m - Thread-2          - DataSourceManager [34mCréation de la datasource : QuartisWeb-PU[m 
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/C:/Osys/QuartisTools/Tomcat/lib/slf4j-log4j12-1.7.12.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/Osys/QuartisTools/Tomcat/webapps/Quartis-OptimaCjj/WEB-INF/lib/logback-classic-0.9.28.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+2018-11-05 17:44:14.376 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1157]-Using default implementation for ThreadExecutor
+2018-11-05 17:44:14.579 [Thread-2] INFO  org.quartz.core.SchedulerSignalerImpl[61]-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-11-05 17:44:14.579 [Thread-2] INFO  org.quartz.core.QuartzScheduler[243]-Quartz Scheduler v.2.1.6 created.
+2018-11-05 17:44:14.579 [Thread-2] INFO  org.quartz.simpl.RAMJobStore[154]-RAMJobStore initialized.
+2018-11-05 17:44:14.579 [Thread-2] INFO  org.quartz.core.QuartzScheduler[268]-Scheduler meta-data: Quartz Scheduler (v2.1.6) 'schedulerBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-11-05 17:44:14.579 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1306]-Quartz scheduler 'schedulerBean' initialized from an externally provided properties instance.
+2018-11-05 17:44:14.579 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1310]-Quartz scheduler version: 2.1.6
+2018-11-05 17:44:14.579 [Thread-2] INFO  org.quartz.core.QuartzScheduler[2247]-JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@7ee2df1c
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/C:/Osys/QuartisTools/Tomcat/lib/slf4j-log4j12-1.7.12.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/Osys/QuartisTools/Tomcat/webapps/Quartis-OptimaTml/WEB-INF/lib/logback-classic-0.9.28.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+2018-11-05 17:44:30.613 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1157]-Using default implementation for ThreadExecutor
+2018-11-05 17:44:30.660 [Thread-2] INFO  org.quartz.core.SchedulerSignalerImpl[61]-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-11-05 17:44:30.660 [Thread-2] INFO  org.quartz.core.QuartzScheduler[243]-Quartz Scheduler v.2.1.6 created.
+2018-11-05 17:44:30.660 [Thread-2] INFO  org.quartz.simpl.RAMJobStore[154]-RAMJobStore initialized.
+2018-11-05 17:44:30.660 [Thread-2] INFO  org.quartz.core.QuartzScheduler[268]-Scheduler meta-data: Quartz Scheduler (v2.1.6) 'schedulerBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-11-05 17:44:30.660 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1306]-Quartz scheduler 'schedulerBean' initialized from an externally provided properties instance.
+2018-11-05 17:44:30.660 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1310]-Quartz scheduler version: 2.1.6
+2018-11-05 17:44:30.660 [Thread-2] INFO  org.quartz.core.QuartzScheduler[2247]-JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@797117fa
+2018-11-05 17:47:05.071 [Thread-2] INFO  org.quartz.core.QuartzScheduler[653]-Scheduler schedulerBean_$_NON_CLUSTERED shutting down.
+2018-11-05 17:47:05.072 [Thread-2] INFO  org.quartz.core.QuartzScheduler[572]-Scheduler schedulerBean_$_NON_CLUSTERED paused.
+2018-11-05 17:47:05.072 [Thread-2] INFO  org.quartz.core.QuartzScheduler[725]-Scheduler schedulerBean_$_NON_CLUSTERED shutdown complete.
+17:47:05.950 [34m INFO[m - Thread-2          - PropertiesDelegate [34mDestruction du properties manager ![m 
+2018-11-05 17:47:07.910 [Thread-2] INFO  org.quartz.core.QuartzScheduler[653]-Scheduler schedulerBean_$_NON_CLUSTERED shutting down.
+2018-11-05 17:47:07.911 [Thread-2] INFO  org.quartz.core.QuartzScheduler[572]-Scheduler schedulerBean_$_NON_CLUSTERED paused.
+2018-11-05 17:47:07.911 [Thread-2] INFO  org.quartz.core.QuartzScheduler[725]-Scheduler schedulerBean_$_NON_CLUSTERED shutdown complete.

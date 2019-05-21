@@ -1,0 +1,12 @@
+09:50:43.804 DEBUG - TomcatListener contextInitialized - servletContext.realPath : C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web 
+09:50:44.662  INFO - PropertiesDelegate Ouverture du fichier de configuration à l'emplacement : C:\Osys\QuartisTools\Tomcat/conf/quartis-web.properties 
+09:50:45.286  INFO - TomcatListener -----> Supression des fichier temporaires 
+09:50:57.564  INFO - TomcatListener Ouverture du fichier indiquant la base de données : C:\Osys\QuartisTools\Tomcat/conf/datasources.xml... 
+09:50:58.843  INFO - DataSourceManager Création de la datasource : QuartisWeb-PU 
+09:52:44.987 DEBUG - AuthManagedBean autoconnect - Tentative de connexion SSO... 
+09:52:44.987 DEBUG - ConnexionManagedBean User renseigné par filtre SSO LDAP : null 
+09:52:44.987 DEBUG - ConnexionManagedBean ldapActive = false 
+09:52:44.987 DEBUG - AuthManagedBean autoconnect - Echec de la connexion par SSO. 
+09:52:50.539 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+09:52:50.569 ERROR - ConnexionManagedBean Identifiant de la licence invalide. 
+09:53:43.114  INFO - PropertiesDelegate Destruction du properties manager ! 

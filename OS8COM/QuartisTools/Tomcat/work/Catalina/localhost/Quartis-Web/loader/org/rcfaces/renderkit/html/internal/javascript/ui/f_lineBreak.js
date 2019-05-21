@@ -1,0 +1,1 @@
+new f_class("f_lineBreak",{extend:f_component});

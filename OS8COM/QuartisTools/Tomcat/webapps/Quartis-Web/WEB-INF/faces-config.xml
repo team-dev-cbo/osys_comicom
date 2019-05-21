@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE faces-config PUBLIC "-//Sun Microsystems, Inc.//DTD JavaServer Faces Config 1.1//EN" "http://java.sun.com/dtd/web-facesconfig_1_1.dtd">
+<!-- =========== FULL CONFIGURATION FILE ================================== -->
+<faces-config xmlns="http://java.sun.com/JSF/Configuration">
+    <application>
+        <locale-config>
+            <default-locale>en</default-locale>
+            <supported-locale>fr</supported-locale>
+            <supported-locale>de</supported-locale>
+        </locale-config>
+    </application>
+
+  <!-- ********** Renderer *********** -->
+    <render-kit>
+        <renderer>
+            <component-family>myFamily</component-family>
+            <renderer-type>myFamily.renderer.shadowPanelRenderer</renderer-type>
+            <renderer-class>quartisweb.jsf.component.shadowPanel.ShadowPanelRenderer</renderer-class>
+        </renderer>
+        <renderer>
+            <component-family>myFamily</component-family>
+            <renderer-type>myFamily.renderer.taskPanelRenderer</renderer-type>
+            <renderer-class>quartisweb.jsf.component.taskPanel.TaskPanelRenderer</renderer-class>
+        </renderer>
+        <renderer>
+            <component-family>myFamily</component-family>
+            <renderer-type>myFamily.renderer.initRenderer</renderer-type>
+            <renderer-class>quartisweb.jsf.component.init.InitRenderer</renderer-class>
+        </renderer>
+        <renderer>
+            <component-family>myFamily</component-family>
+            <renderer-type>myFamily.renderer.suggestTextRenderer</renderer-type>
+            <renderer-class>quartisweb.jsf.component.suggestText.SuggestTextRenderer</renderer-class>
+        </renderer>
+    </render-kit>
+  
+  <!-- ********** Component *********** -->
+    <component>
+        <description>Formulaire permettant de gérer l'upload de fichiers</description>
+        <component-type>javax.faces.HtmlForm</component-type>
+        <component-class>quartisweb.jsf.component.uploadForm.UploadUIForm</component-class>
+    </component>
+    <component>
+        <description>Permet d'afficher un panel ombré</description>
+        <component-type>myComponent.component.ShadowPanel</component-type>
+        <component-class>quartisweb.jsf.component.shadowPanel.UIShadowPanel</component-class>
+    </component>
+    <component>
+        <description>Permet d'afficher un panel intitulé</description>
+        <component-type>myComponent.component.TitledPanel</component-type>
+        <component-class>quartisweb.jsf.component.titledPanel.UITitledPanel</component-class>
+    </component>
+    <component>
+        <description>Permet d'afficher un panel d'entête</description>
+        <component-type>myComponent.component.HeadPanel</component-type>
+        <component-class>quartisweb.jsf.component.headPanel.UIHeadPanel</component-class>
+    </component>
+    <component>
+        <description>Permet d'afficher un panel d'entête</description>
+        <component-type>myComponent.component.ToolBar</component-type>
+        <component-class>quartisweb.jsf.component.toolBar.UIToolBar</component-class>
+    </component>
+    <component>
+        <description>Permet d'afficher un panel de sous-entête</description>
+        <component-type>myComponent.component.SubHeadPanel</component-type>
+        <component-class>quartisweb.jsf.component.subHeadPanel.UISubHeadPanel</component-class>
+    </component>
+    <component>
+        <description>Permet d'afficher un panel que l'on peut étendre ou reduire verticalement</description>
+        <component-type>myComponent.component.TaskPanel</component-type>
+        <component-class>quartisweb.jsf.component.taskPanel.UITaskPanel</component-class>
+    </component>
+    <component>
+        <description>Tag permettant d'initialiser certains composants</description>
+        <component-type>myComponent.component.Init</component-type>
+        <component-class>quartisweb.jsf.component.init.UIInit</component-class>
+    </component>
+    <component>
+        <description>Tag permettant d'afficher un assistant de saisie</description>
+        <component-type>myComponent.component.SuggestText</component-type>
+        <component-class>quartisweb.jsf.component.suggestText.UISuggestText</component-class>
+    </component>
+  
+  <!-- ********** Managed Bean *********** -->
+    <managed-bean>
+        <managed-bean-name>formulairesManagedBean</managed-bean-name>
+        <managed-bean-class>quartisweb.jsf.managedBean.FormulairesManagedBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+        <managed-property>
+            <property-name>ref_dataGridManagedBean</property-name>
+            <value>#{dataGridManagedBean}</value>
+        </managed-property>
+    </managed-bean>
+    
+    <managed-bean>
+        <managed-bean-name>dataGridManagedBean</managed-bean-name>
+        <managed-bean-class>quartisweb.jsf.managedBean.DataGridManagedBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    
+    <!--managed-bean>
+        <managed-bean-name>dataGridManagedBeanTest</managed-bean-name>
+        <managed-bean-class>quartisweb.jsf.managedBean.DataGridManagedBeanTest</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    
+    <managed-bean>
+        <managed-bean-name>dataGridPrefManagedBean</managed-bean-name>
+        <managed-bean-class>quartisweb.jsf.managedBean.DataGridPrefManagedBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean-->
+    
+    <!--managed-bean>
+        <managed-bean-name>actions</managed-bean-name>
+        <managed-bean-class>quartisweb.jsf.managedBean.ActionsManagedBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean-->
+    
+    <managed-bean>
+        <managed-bean-name>loginManagedBean</managed-bean-name>
+        <managed-bean-class>quartisweb.jsf.managedBean.LoginManagedBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+  <!-- ManagedBean pour l'authentification LDAP -->  
+    <managed-bean>
+        <managed-bean-name>authManagedBean</managed-bean-name>
+        <managed-bean-class>quartisweb.jsf.managedBean.AuthManagedBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    
+  <!-- ManagedBean genere l'affichage d'un etat -->
+    <managed-bean>
+        <managed-bean-name>dataEtatManagedBean</managed-bean-name>
+        <managed-bean-class>quartisweb.jsf.managedBean.DataEtatManagedBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+   <!-- ManagedBean genere le changement du mot de passe -->
+    <managed-bean>
+        <managed-bean-name>pwdManagedBean</managed-bean-name>
+        <managed-bean-class>quartisweb.jsf.managedBean.PwdManagedBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+  <!-- ManagedBean genere l'administration des favoris -->
+    <managed-bean>
+        <managed-bean-name>favoriteManagedBean</managed-bean-name>
+        <managed-bean-class>quartisweb.jsf.managedBean.FavoriteManagedBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+  <!-- ManagedBean genere l'administration des utilisateurs -->
+    <managed-bean>
+        <managed-bean-name>userManagedBean</managed-bean-name>
+        <managed-bean-class>quartisweb.jsf.managedBean.UserManagedBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+  <!-- ManagedBean genere l'administration des uprofils -->
+    <managed-bean>
+        <managed-bean-name>profilManagedBean</managed-bean-name>
+        <managed-bean-class>quartisweb.jsf.managedBean.ProfilManagedBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+  <!-- ManagedBean qui gère le tri d'un datagRId RCFaces -->
+    <managed-bean>
+        <managed-bean-name>sortManagedBean</managed-bean-name>
+        <managed-bean-class>quartisweb.jsf.managedBean.SortManagedBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+  <!-- ManagedBean qui gère le paramétrage de QuartisTools -->
+    <managed-bean>
+        <managed-bean-name>paramManagedBean</managed-bean-name>
+        <managed-bean-class>quartisweb.jsf.managedBean.ParamManagedBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- ManagedBean qui gère la page A Propos -->
+    <managed-bean>
+        <managed-bean-name>aProposManagedBean</managed-bean-name>
+        <managed-bean-class>quartisweb.jsf.managedBean.AProposManagedBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <!-- ManagedBean qui gère la page du plan de l'application -->
+    <managed-bean>
+        <managed-bean-name>siteMapManagedBean</managed-bean-name>
+        <managed-bean-class>quartisweb.jsf.managedBean.SiteMapManagedBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    
+    <managed-bean>
+        <managed-bean-name>connectedUsersManagedBean</managed-bean-name>
+        <managed-bean-class>quartisweb.jsf.managedBean.ConnectedUsersManagedBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    
+    <converter>
+        <converter-id>LocaleConverter</converter-id>
+        <converter-class>quartisweb.jsf.converter.LocaleConverter</converter-class>
+    </converter>
+
+  <!-- ********** Navigation Rules *********** -->
+  <!--
+  <navigation-rule>
+    <from-view-id>/tableau.jsp</from-view-id>
+    <navigation-case>
+      <from-outcome>reload</from-outcome>
+      <to-view-id>/tableau.jsf</to-view-id>
+    </navigation-case>
+  </navigation-rule>
+  -->
+    <navigation-rule>
+        <from-view-id>/formulaire.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>reload</from-outcome>
+            <to-view-id>/formulaire.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/etat.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>reload</from-outcome>
+            <to-view-id>/etat.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/login.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>succes</from-outcome>
+                <to-view-id>/base.jsf</to-view-id>
+<!--            <to-view-id>/example.jsf</to-view-id> -->
+<!--            <to-view-id>/valide.jsf</to-view-id> -->
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>echec</from-outcome>
+            <to-view-id>/login.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/auth.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>succes</from-outcome>
+                <to-view-id>/base.jsf</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>echec</from-outcome>
+            <to-view-id>/login.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/change_pwd.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/validepwd.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/validepwd.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>reload</from-outcome>
+            <to-view-id>/change_pwd.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/admin_favoris.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>suppr</from-outcome>
+            <to-view-id>/favorite_redirect.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>ajoutOK</from-outcome>
+            <to-view-id>/favorite_redirect.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>ajoutKO</from-outcome>
+            <to-view-id>/admin_favoris.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/admin_users.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>reload</from-outcome>
+            <to-view-id>/admin_users.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/base.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/login.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <validator>
+        <validator-id>notEmpty</validator-id>
+        <validator-class>quartisweb.jsf.validator.NotEmptyValidator</validator-class>
+    </validator>
+</faces-config>

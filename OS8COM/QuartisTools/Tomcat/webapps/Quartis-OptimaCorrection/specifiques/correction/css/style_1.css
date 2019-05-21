@@ -1,0 +1,39 @@
+.titre{
+font-family: tahoma;
+font-weight: bold;
+font-size : 16px;
+color: rgb(51,51,51);
+}
+
+.tpannel{
+font-family: tahoma;
+font-weight: bold;
+font-size : 12px;
+}
+
+.texte{
+font-size : 12px;
+}
+
+.commandButton {
+ border: 1px solid #3877AA;
+ background-color: #FFFFFF;
+ width: 120px;
+ height: 25px;
+ font-weight: bold;
+ background-repeat: no-repeat;
+ background-position: 5px center;
+}
+
+.commandButtonFavoris {
+ border: 1px solid #3877AA;
+ background-color: #FFFFFF;
+ width: 120px;
+ height: 25px;
+ font-weight: bold;
+ background-image: url(../images/button_ok.png);
+ background-repeat: no-repeat;
+ background-position: 5px center;
+}
+
+

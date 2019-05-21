@@ -1,0 +1,1 @@
+new f_aspect("fa_itemsManager",{extend:[fa_cardinality]});

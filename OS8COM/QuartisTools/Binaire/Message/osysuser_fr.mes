@@ -1,0 +1,58 @@
+Version 1
+APP 2
+
+1 Administrateurs
+2 Administrateur
+3 Terminaux
+4 Anonymes
+5 Anonyme
+6 L'utilisateur "%1" est inconnu
+7 Mot de passe incorrect 
+8 Gestion des utilisateurs : L'adresse IP %1 n'existe pas dans la liste IP
+9 Le mot de passe ne peut pas correspondre a un nom d'utilisateur vide et à un numéro d'ID égale a zéro
+10 Le groupe d'utilisateurs (ID=%1) n'existe pas dans la liste des groupes d'utilisateurs
+11 L'utilisateur "%1" du groupe "%2" n'a pas le droit de lire
+12 L'utilisateur "%1" du groupe "%2" n'a pas le droit de modifier
+13 L'utilisateur "%1" du groupe "%2" n'a pas le droit d'ajouter
+14 La propriété %1 n'a pas été écrite dans le fichier USER.CFG
+15 La valeur %2 correspondant à la propriété %1 n'a pas été écrite dans le fichier USER.CFG
+16 La propriete %1 a été mal lu dans le fichier USER.CFG
+17 Ajout d'une adresse IP dans la liste des adresses IP 
+18 Suppression d'une adresse IP dans la liste des adresses IP 
+19 Lecture de la liste des masques IP
+20 Le numéro ID doit être celui de l'application utilisateur 
+21 Impossible de supprimer le groupe %1
+22 Impossible de supprimer l'utilisateur %1 
+23 L'utilisateur (ID=%1) n'existe pas 
+24 Le groupe des anonymes n'est pas géré
+25 Lecture de la liste des droits de l'administration du moteur
+26 Modifier les droits de l'administration du moteur
+27 Applications
+28 La configuration d'un driver ne peut être lu que par un utilisateur du groupe des applications 
+29 Le driver (ID %1) n'existe pas - Erreur de réception du message "%2"
+30 Impossible d'ajouter le message "%1" dans la liste des messages en attente pour un utilisateur inconnu (ID:%2)
+31 Impossible de modifier le groupe d'utilisateurs "%1"
+32 Impossible d'exécuter le driver "%1" - Le type du driver est vide 
+33 Liste des messages en attente : Ajout du message "%1" (périph:%2) 
+34 Liste des messages en attente : Ajout du message "%1" (périph:%2 navigateur(NumSocket:%3 adresseIP:%4))
+35 Plus de messages en attente
+36 Aucun déclenchement de trouvé (Message:"%1" - Périph:%2 - Utilisateur:%3)
+37 Liste des messages en attente : Ajout d'un nouveau message "%1" (Périph:%2 - Date/Heure:%3)
+38 Liste des messages en attente : Ajout d'un nouveau message "%1" (Périph:%2 - Date/Heure:%3 - Navigateur(Num Socket %4 - AdresseIp %5))
+39 Le message de déclenchement "%1" (Périph:%2) est pour un scénario en cours 
+40 Aucun scénario en cours n'attend de message provenant du périphérique %1 (pour l'utilisateur "%2")  
+41 L'utilisateur "%1" utilise déjà la machine %2
+42 Impossible de modifier le nom du terminal "%1"
+43 Impossible de modifier le nom de l'utilisateur "%1"
+44 Lecture de la configuration du driver
+45 Ajout un nouveau scénario en cours (Num exec=%1)
+46 Suppression du scénario en cours (Num exec=%1)
+47 Pas de scénario en cours (Num exec =%1) pour user id=%2
+48 Nombre de licences utilisateurs insuffisantes ( Nombre de licences totales : %1 - Nombre de licences utilisées : %2 - Nombre de licences supplémentaires demandées : %3 - Nombre de licences supplémentaires manquantes : %4)
+49 Login OK
+50 Boucle Utilisateur - ERREUR - Pas d'utilisateur trouvé (IdUser=0x%1)
+52 serveur_web
+53 Demande la liste des terminaux connectés pour le driver Scrut "%1"
+54 Demande la liste des terminaux connectés pour le driver Scrut "%1" - Erreur : Le driver est arrêté
+55 Réponse de la demande de la liste des terminaux connectés - driver Scrut:"%1" - Liste:"%2"
+56 Réponse de la demande de la liste des terminaux connectés : Timeout dépassé

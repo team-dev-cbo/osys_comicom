@@ -1,0 +1,493 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 7 avr. 2014, 16:18:39
+    Author     : turmeau
+*/ 
+
+.dlg_center {
+	text-align: center !important;
+}
+
+.dlg_right {
+	text-align: right !important;
+}
+
+.dlg_left {
+	text-align: left !important;
+}
+
+.unavailable {  
+    background: #F03030 none !important;  /* red */  
+    border-color: #bd2828 !important;     /* red */  
+}  
+  
+.prod {  
+    background: #1AA11A none !important;  /* green */  
+    border-color: #136e13 !important;     /* green */  
+}  
+  
+.reglage {  
+    background: #FFA500 none !important;  /* orange */  
+    border-color: #cc8100 !important;     /* orange */  
+}  
+  
+.timeline-event-selected {  
+    background: #BECEFE none !important;  
+    border-color: #97B0F8 !important;  
+}
+
+#formTabSearch .hasDatepicker {
+	width: auto !important;
+}
+
+.timeline-groups-axis {  
+    color: #808080 !important;  
+    background-color:#DDDDDD !important;
+} 
+.timeline-frame {  
+    border-color: #5D99C3 !important;
+}  
+.timeline-event.prod {
+	background: #1AA11A none !important;
+	border-color: #136e13 !important;
+}  
+.timeline-event.reglage{
+	background: #FFA500 none !important;
+	border-color: #cc8100 !important;
+}
+
+/* on override le style de primefaces */
+.ui-widget-header {
+	background: #B8CFE5 !important;
+}
+
+   .ui-inputfield{
+	background: white !important;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default {
+	/*border: none !important;*/
+	background: #B8CFE5;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+	background: #dde8f3 !important;
+	border: #cbdcec !important;
+}
+
+.ui-state-hover {
+	background: #f0f5f3 !important;
+	border: 1px solid #f0f5f3 !important;
+}
+
+.ui-state-disabled, .readonly {
+	opacity: .78 !important;
+}  
+
+.prodViewTableHeigth {
+	height: 28px;
+}
+
+#criteriapart1 {
+	margin-bottom: 16px;
+	margin-top: 5px;
+}
+
+#criteriapart2 {
+	margin-bottom: 5px;
+}
+
+.listCriteria {
+	display: inline-block;
+	width: 24%;
+	vertical-align: top;
+}
+
+.listCriteriaBeforeButton {
+	width: 34% !important;
+}
+
+.listCriteriaPers {
+	display: inline-block;
+	width: 33%;
+	vertical-align: top;
+}
+
+.listCriteriaBig {
+	width: 24%;
+}
+
+.listCriteria29 {
+	width: 29%;
+}
+
+.bigcriteriaLabel {
+	display: inline-block;
+	width: 13%;
+	text-align: right;
+}
+
+.bigcriteriaLabel label {
+	display: inline-block;
+	text-align: right;
+}
+
+
+.listCriteria label, .listCriteriaPers label {
+	text-align: right;
+	/*width: 30%;*/
+	display: inline-block;
+}
+
+#divTableOfEvt {
+	width:100%; 
+	margin-left:auto; 
+	margin-right:auto;
+	max-height: 170px; 
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.listCriteria .ui-selectonemenu, .listCriteria .ui-autocomplete, .listCriteria .calendarDiv, .listCriteriaPers .ui-selectonemenu, .listCriteriaPers .ui-autocomplete, .listCriteriaPers .calendarDiv {
+	text-align: left;
+	width: 40%;
+	display:inline-block;
+	margin-left: 5%;
+	vertical-align: middle;
+}
+
+.bigCriteriarest {
+	width: 85%;
+	display: inline-block;
+}
+
+.bigCriteriarest .ui-autocomplete {
+	width: auto !important;
+}
+
+.listCriteria .calendarDiv, .listCriteriaPers .calendarDiv {
+	width: auto !important;
+}
+
+.listCriteriaBtn {
+	text-align:center;
+	width: 14%;
+}
+
+	  
+.timeline-axis {  
+    border-color: #5D99C3;  
+    background-color: #3872AB; 
+} 
+.timeline-axis-text{
+    Color : #B8CFE5;
+    font-weight:bold;
+}
+.ui-state-default {
+	background-color: #B8CFE5; 
+}
+
+.ui-confirmdialog-no, .ui-confirmdialog-yes {
+	width: 40%;
+	margin-left: 5% !important;
+	margin-right: 5% !important;
+}
+	
+/*
+.timeline-event, .timeline-event-range {  
+    background-color: #000000 !important; 
+} */
+	
+.prod, .reglage {
+	background-color: #B8CFE5 !important;  
+}
+
+.evtEtatMach , .evtOfOper{
+	background: none;
+}
+
+.ui-dialog-content {
+	height: auto;
+}
+
+.ui-selectonemenu-items-wrapper {
+	min-width: 135px;
+}
+
+
+.ui-cell-editor-output {
+	text-align: center;
+}
+
+#dlg_OF, #dlg_OFA, #dlg_MA, #dlg_OP, #dlg_EP, #dlg_EPOP, #dlg_AEPOP{
+	width: 1000px !important;
+	left: 5% !important;
+}
+
+.dateSearch {
+	width: 70px !important;
+}
+
+#dlg_OF {
+	top: 6% !important;
+}
+
+#dlg_OF table {
+	margin: 0 auto;margin-bottom: 10px;
+}
+
+#dlg_OF table tr td {
+	text-align: center;
+}
+
+#dlg_MA label, #dlg_OP label, #dlg_OF label, #dlg_MA2 label, #dlg_OFA label, #dlg_EP label, #dlg_EPOP label, #dlg_AEPOP label{
+	display: block;
+	width: 250px;
+	display: inline-block;
+	text-align: right;
+}
+
+.detailsTimeline label {
+	display: block;
+	width: 250px;
+	display: inline-block;
+	text-align: right;
+}
+
+.detailsTimeline .calendar input {
+	width: 120px;
+}
+
+#dlg_OFA label {
+	width: 140px !important;
+}
+
+.quit button, .validate button {
+	width: 85px;
+}
+
+.reset button, .rollback button {
+	width: 150px;
+}
+
+.btnDialogEdit {
+	width: 49%;
+	text-align : rigth;
+	display: inline-block;
+}
+
+.btnDialogQuit {
+	width: 49%;
+	text-align: left;
+	display: inline-block;
+}
+
+.btnDialogEdit button {
+	margin-right: 10%;
+}
+
+.btnDialogQuit button {
+	margin-left: 10%;
+}
+
+.listBox {
+	margin-left: 12px;
+}
+
+.etatDetails1 {
+	float: right;
+}
+
+.ofDetails1 {
+	float: right;
+}
+
+.labelDate {
+	width: 100px !important;
+}
+
+.duree {
+	width: 45px ! important;
+}
+
+.dateForm {
+	width: auto;
+	display: inline-block;
+	height: 35px;
+	margin-bottom: 10px;
+}
+
+.dureForm {
+	width: auto;
+	display: inline-block;
+	height: 25px;
+	vertical-align: text-bottom;
+}
+
+.dureForm label {
+	width: 90px !important;
+}
+
+
+#iconCorrFlag {
+margin-right: 3px;}
+
+.quit{
+	width: 15%;
+	text-align: center;
+}
+
+.validate {
+	width: 15%;
+	text-align: center;
+}
+
+.rollback {
+	text-align: right !important;
+}
+
+.reset {
+	text-align: left !important;
+}
+
+.rollback button {
+	margin-right: 3%;
+}
+
+.detailsTimeline {
+	min-width: 400px;
+}
+
+.reset button {
+	margin-left: 3%;
+}
+
+.reset, .rollback {
+	width: 34%;
+}
+
+.inputQte {
+	width: 60px !important;
+}
+
+#dlg_MA .hasDatepicker, #dlg_OF .hasDatepicker, #dlg_OFA .hasDatepicker, #dlg_OP .hasDatepicker, #dlg_EP .hasDatepicker, #dlg_EPOP .hasDatepicker, #dlg_AEPOP .hasDatepicker{
+	width: 130px !important;
+}
+
+.listBox label{
+	width: 300px !important;
+	text-align: left !important;
+}
+
+#dlg_MA input, #dlg_OP input, #dlg_OF input, #dlg_MA2 input, #dlg_OFA input, #dlg_EP input, #dlg_EPOP input, #dlg_AEPOP input {
+	width: 300px;
+	margin-left: 12px;
+}
+
+.detailsTimeline input {
+	width: 300px;
+	margin-left: 12px;
+}
+
+#epop_qteA label {
+	width: 150px !important;
+}
+
+.tabInputQte label {
+	width: 150px !important;
+}
+
+.right {
+	float:right;
+      }
+      
+      /* test de css */
+
+.commandButton {
+    background: none;
+    background-color: #4285f4; /*#6aa6d7*/
+    border: none !important;
+    color: white !important;
+    font-weight: normal;
+    width: 120px;
+    height: 25px;
+    font-family: "Arial";
+    background-image: none !important;
+}
+
+.btnImport, .btnExport, .btnOther{ 
+    background-color: #4285f4 !important;
+    background: none;
+    font-weight: normal !important;
+    background-image: none !important;
+    border: none;
+    border: 1px solid #6aa6d7 !important;
+    color: white;
+}
+
+.btnOk {
+    background-color: #0f9d58 !important; 
+    color: white;
+}
+
+.btnCancel, .restSearchButton {
+    background-color: #f44336 !important;
+}
+
+.tableOfPers {
+	max-height: 200px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.tablePers {
+	max-height: 145px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.tablePers td, .tableOfPers td{
+	height: 26px;
+}
+
+.detailsTimeline .ui-state-default, .detailsTimeline .ui-widget-content .ui-state-default {
+	margin-left: 0px;
+}
+
+.growl {
+	z-index: 100001;
+}
+
+.label250 {
+	width: 250px !important;
+}
+
+
+.ui-state-disabled .ui-selectonemenu-label {
+	background-color: #f0f0f5 !important;
+	color: #7575a3;
+}
+
+.ui-state-disabled .ui-corner-right {
+	background: #e0e0eb;
+}
+
+@media screen and (min-height: 780px) and (max-height: 2000px) {
+
+  .tableOfPers {
+	max-height: 240px;
+  }
+  
+  .tablePers {
+  	max-height: 185px;
+  }
+  
+  #divTableOfEvt {
+  	max-height: 210px;
+  }
+}
+

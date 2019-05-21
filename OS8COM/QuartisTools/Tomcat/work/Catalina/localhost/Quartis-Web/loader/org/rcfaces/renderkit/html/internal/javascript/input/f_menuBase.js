@@ -1,0 +1,1 @@
+new f_class("f_menuBase",{extend:f_eventTarget,aspects:[fa_menuCore]});

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- *******     jdbc:jtds:sqlserver://BESRV:1433/BE_QUARTIS_PRO_110           *********-->
+<datasources>
+    
+   <dataSource jndi-name="QuartisWeb-PU">
+        <description>Base de donnees de Quartis Optima</description>
+        <driver>net.sourceforge.jtds.jdbc.Driver</driver>
+        <url>jdbc:jtds:sqlserver://BESRV:1433/BE_QUARTIS_PRO_110</url>
+        <username>sa</username>
+        <password>manager</password>
+        <maxActive>8</maxActive>
+        <maxIdle>4</maxIdle>
+        <maxWait>1000</maxWait>
+    </dataSource>
+</datasources>
+
+        
+

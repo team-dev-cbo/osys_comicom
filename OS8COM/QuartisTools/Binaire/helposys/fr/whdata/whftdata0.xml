@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<ftstdata>
+<topic name="Sommaire" url="afxcore/main_index.htm" />
+<topic name="Configuration de la base de données" url="application/configuration/HIDD_CONF_BD.htm" />
+<topic name="Configuration de la fenêtre" url="application/configuration/HIDD_CONF_FENETRE.htm" />
+<topic name="Configuration Général" url="application/configuration/HIDD_CONF_GENERAL.htm" />
+<topic name="Configuration du serveur web" url="application/configuration/HIDD_CONF_HTTP.htm" />
+<topic name="Configuration de la sécurité" url="application/configuration/HIDD_CONF_SECURITE.htm" />
+<topic name="Configuration de la trace" url="application/configuration/HIDD_CONF_TRACE.htm" />
+<topic name="Type Extension-Exécutable" url="application/configuration/HIDD_EXTENSION_EXEC.htm" />
+<topic name="Liste des extensions exécutables" url="application/configuration/HIDD_LIST_EXTENSION_EXEC.htm" />
+<topic name="Généralité sur l'application" url="application/Generalite_application.htm" />
+<topic name="Arrêt de l'application" url="application/HIDD_ARRET_APPLICATION.htm" />
+<topic name="Imprimer une documentation" url="application/HIDD_IMPRIMER.htm" />
+<topic name="Liste des déclenchements" url="application/HIDD_LISTE_DECLENCHEMENT.htm" />
+<topic name="Liste des scénarios en cours" url="application/HIDD_LISTE_SCEN_COURS.htm" />
+<topic name="Liste des utilisateurs connectés" url="application/HIDD_LISTE_USER_CONNECT.htm" />
+<topic name="Sécurité" url="application/HIDD_SECURITE.htm" />
+<topic name="Connexion au serveur" url="application/HIDD_SERVEUR_CONNEXION.htm" />
+<topic name="Canal Lent" url="definition/Canal_Lent.htm" />
+<topic name="Canal rapide" url="definition/Canal_rapide.htm" />
+<topic name="Requete Lente" url="definition/Requete_Lente.htm" />
+<topic name="Requete Rapide" url="definition/Requete_Rapide.htm" />
+<topic name="Barre détat" url="menu/affichage/AFX_HIDW_STATUS_BAR.htm" />
+<topic name="Barre doutils" url="menu/affichage/AFX_HIDW_TOOLBAR.htm" />
+<topic name="Arrière plan" url="menu/affichage/HID_AFFICHAGE_ORDRE_ARRIERE_PLAN.htm" />
+<topic name="Avancer" url="menu/affichage/HID_AFFICHAGE_ORDRE_AVANCER.htm" />
+<topic name="Premier Plan" url="menu/affichage/HID_AFFICHAGE_ORDRE_PREMIER_PLAN.htm" />
+<topic name="Reculer" url="menu/affichage/HID_AFFICHAGE_ORDRE_RECULER.htm" />
+<topic name="Règles" url="menu/affichage/HID_AFFICHAGE_REGLES.htm" />
+<topic name="Output" url="menu/affichage/HID_OUTPUT_AFFICHE.htm" />
+<topic name="Actualiser" url="menu/affichage/HID_RAFFRAICHIT_WORKSPACE.htm" />
+<topic name="Commande Barre état" url="menu/affichage/HID_VIEW_STATUS_BAR.htm" />
+<topic name="Commande Barre outils" url="menu/affichage/HID_VIEW_TOOLBAR.htm" />
+<topic name="Workspace" url="menu/affichage/HID_WORKSPACE_AFFICHE.htm" />
+<topic name="menu_view" url="menu/affichage/menu_view.htm" />
+<topic name="A propos" url="menu/aide/HID_APP_ABOUT.htm" />
+<topic name="Rubriques de l'aide" url="menu/aide/HID_HELP_INDEX.htm" />
+<topic name="menu_help" url="menu/aide/menu_help.htm" />
+<topic name="Configuration" url="menu/application/HID_APP_CONFIGURATION.htm" />
+<topic name="Commande Quitter" url="menu/application/HID_APP_EXIT.htm" />
+<topic name="Arrêt" url="menu/application/HID_ARRET_APPLI.htm" />
+<topic name="Connexion" url="menu/application/HID_Connexion.htm" />
+<topic name="Déconnexion" url="menu/application/HID_FICHIER_DECONNEXION.htm" />
+<topic name="Commande Enregistrer" url="menu/application/HID_FILE_SAVE.htm" />
+<topic name="Enregistrer tout" url="menu/application/HID_FILE_SAVE_ALL.htm" />
+<topic name="Impression" url="menu/application/HID_IMPRIMER_DOC_APPLI.htm" />
+<topic name="Sécurité" url="menu/application/HID_SECURITE_APP.htm" />
+<topic name="menu application" url="menu/application/menu_file.htm" />
+<topic name="Commande Copier" url="menu/edition/HID_EDIT_COPY.htm" />
+<topic name="Commande Couper" url="menu/edition/HID_EDIT_CUT.htm" />
+<topic name="Commande Rechercher" url="menu/edition/HID_EDIT_FIND.htm" />
+<topic name="Commande Coller" url="menu/edition/HID_EDIT_PASTE.htm" />
+<topic name="Commande Remplacer" url="menu/edition/HID_EDIT_REPLACE.htm" />
+<topic name="Commande Supprimer" url="menu/edition/HIDD_SUPPRIMER.htm" />
+<topic name="menu_edit" url="menu/edition/menu_edit.htm" />
+<topic name="Ouvrir un élément" url="menu/element/HID_OUVRIR_ELEMENT.htm" />
+<topic name="Propriétés d'un élément" url="menu/element/HID_PROPRIETES_ELEMENT.htm" />
+<topic name="Renommer un élément" url="menu/element/HID_RENOMMER_ELEMENT.htm" />
+<topic name="Supprimer un élément" url="menu/element/HID_SUPPRIMER_ELEMENT.htm" />
+<topic name="Fermer" url="menu/fenetre/HID_FENETRE_CLOSE.htm" />
+<topic name="Fermer Tout" url="menu/fenetre/HID_FENETRE_CLOSE_ALL.htm" />
+<topic name="Commande 1, 2, 3, 4" url="menu/fenetre/HID_FILE_MRU_FILE1.htm" />
+<topic name="Réorganiser les icônes" url="menu/fenetre/HID_WINDOW_ARRANGE.htm" />
+<topic name="Commande Cascade" url="menu/fenetre/HID_WINDOW_CASCADE.htm" />
+<topic name="Commande Mosaïque" url="menu/fenetre/HID_WINDOW_TILE.htm" />
+<topic name="menu_window" url="menu/fenetre/menu_window.htm" />
+<topic name="Nouvel élément" url="menu/groupe/HID_NOUVEAU_ELEMENT.htm" />
+<topic name="Propriétés d'un groupe" url="menu/groupe/HID_PROPRIETES_GROUPE.htm" />
+<topic name="Renommer le nom d'un groupe" url="menu/groupe/HID_RENOMMER_GROUPE.htm" />
+<topic name="Sécurité pour un groupe" url="menu/groupe/HID_SECURITE_GRP.htm" />
+<topic name="Supprimer un groupe" url="menu/groupe/HID_SUPPRIMER_GROUPE.htm" />
+<topic name="Imprimer" url="menu/module/HID_IMPRESSION.htm" />
+<topic name="Nouveau Groupe" url="menu/module/HID_NOUVEAU_GROUPE.htm" />
+<topic name="Sécurité pour un module" url="menu/module/HIDD_SECURITE_MODULE.htm" />
+<topic name="Grille" url="menu/options/HID_OPTIONS_GRILLE.htm" />
+<topic name="Affichage propriétés" url="menu/options/HID_OPTIONS_PROPRIETES.htm" />
+<topic name="Millimètre" url="menu/options/HID_OPTIONS_UNITE_MM.htm" />
+<topic name="Pixels" url="menu/options/HID_OPTIONS_UNITE_PIXEL.htm" />
+<topic name="menu options" url="menu/options/menu_options.htm" />
+<topic name="Commande Liste des déclenchements" url="menu/outils/HID_DECLENCHEMENT.htm" />
+<topic name="Commande Liste des scénarios en cours" url="menu/outils/HID_LST_SCENARIOS_COURS.htm" />
+<topic name="Commande Liste des utilisateurs connectés" url="menu/outils/HID_LST_USER_CONNECT.htm" />
+<topic name="menu outils" url="menu/outils/menu_outils.htm" />
+<topic name="Compile" url="menu/scenario/HID_COMPILATION_COMPILE.htm" />
+<topic name="Compile Tout" url="menu/scenario/HID_COMPILATION_COMPILETOUT.htm" />
+<topic name="Recompile Tout" url="menu/scenario/HID_COMPILATION_RECOMPILETOUT.htm" />
+<topic name="Execute" url="menu/scenario/HID_EXECUTE.htm" />
+<topic name="Menu Lpx" url="menu/scenario/Menu_LPX.htm" />
+<topic name="Zoom 100" url="menu/zoom/HID_ZOOM_100.htm" />
+<topic name="Zoom 150" url="menu/zoom/HID_ZOOM_150.htm" />
+<topic name="Zoom 200" url="menu/zoom/HID_ZOOM_200.htm" />
+<topic name="Zoom 25" url="menu/zoom/HID_ZOOM_25.htm" />
+<topic name="Zoom 50" url="menu/zoom/HID_ZOOM_50.htm" />
+<topic name="Zoom 500" url="menu/zoom/HID_ZOOM_500.htm" />
+<topic name="Zoom 75" url="menu/zoom/HID_ZOOM_75.htm" />
+<topic name="Choix de la table de référence" url="module/base_de_donnees/HIDD_REQ_AJOUT_SIMPLE.htm" />
+<topic name="Ajout d'une table" url="module/base_de_donnees/HIDD_REQ_AJOUT_TABLE.htm" />
+<topic name="Descriptif de la table" url="module/base_de_donnees/HIDD_REQ_TABLE_PROPRIETE.htm" />
+<topic name="Delete" url="module/base_de_donnees/HIDR_REQ_DELETE.htm" />
+<topic name="Insert" url="module/base_de_donnees/HIDR_REQ_INSERT.htm" />
+<topic name="Select" url="module/base_de_donnees/HIDR_REQ_SELECT.htm" />
+<topic name="Update" url="module/base_de_donnees/HIDR_REQ_UPDATE.htm" />
+<topic name="Déclenchement" url="module/declenchement/HIDR_DECLENCHEMENT.htm" />
+<topic name="Etat" url="module/etat/HIDR_ETAT.htm" />
+<topic name="Evénement périodique" url="module/evenement/HIDR_EVT.htm" />
+<topic name="Définition du scénario associé" url="module/fenetre/Action/HIDD_ACTION_SCENARIO.htm" />
+<topic name="Propriétés action bouton" url="module/fenetre/Action/Proprietes_action_bouton.htm" />
+<topic name="3DMeter" url="module/fenetre/bouton/3DMeter.htm" />
+<topic name="Bouton" url="module/fenetre/bouton/Bouton.htm" />
+<topic name="Chaîne multi-lignes" url="module/fenetre/bouton/Chaine_multilignes.htm" />
+<topic name="Chaîne simple" url="module/fenetre/bouton/Chaine_simple.htm" />
+<topic name="Check box" url="module/fenetre/bouton/Check_box.htm" />
+<topic name="Edit" url="module/fenetre/bouton/Edit.htm" />
+<topic name="Edit multi" url="module/fenetre/bouton/Edit_multi.htm" />
+<topic name="Ellipse" url="module/fenetre/bouton/Ellipse.htm" />
+<topic name="Ellipse pleine" url="module/fenetre/bouton/Ellipse_pleine.htm" />
+<topic name="Liste" url="module/fenetre/bouton/Liste.htm" />
+<topic name="Liste tombante" url="module/fenetre/bouton/Liste_tombante.htm" />
+<topic name="Radio groupe" url="module/fenetre/bouton/Radio_groupe.htm" />
+<topic name="Rectangle" url="module/fenetre/bouton/Rectangle.htm" />
+<topic name="Rectangle plein" url="module/fenetre/bouton/Rectangle_plein.htm" />
+<topic name="Tableau" url="module/fenetre/bouton/Tableau.htm" />
+<topic name="Trait" url="module/fenetre/bouton/Trait.htm" />
+<topic name="Webbrowser" url="module/fenetre/bouton/Webbrowser.htm" />
+
+</ftstdata>  

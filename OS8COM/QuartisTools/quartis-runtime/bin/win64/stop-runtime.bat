@@ -1,0 +1,2 @@
+nssm stop "QuartisRuntime" 
+

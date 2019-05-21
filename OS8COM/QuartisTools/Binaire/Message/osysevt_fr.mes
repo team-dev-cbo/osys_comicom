@@ -1,0 +1,11 @@
+Version 1
+APP 8
+
+
+1 Ajout Impossible dans la liste des événements exécutables : l'événement périodique (ID=%1) n'existe pas
+2 Suppression Impossible dans la liste des événements exécutables : l'événement périodique (ID=%1) n'existe pas
+3 Erreur de création du thread qui gère la liste des événements exécutables 
+4 Périodique "%1" - Prochaine exécution:"%2" - Priorité:%3
+5 Exécution de l'événement périodique "%1" 
+6 L'événement périodique (ID=%1) n'existe pas
+

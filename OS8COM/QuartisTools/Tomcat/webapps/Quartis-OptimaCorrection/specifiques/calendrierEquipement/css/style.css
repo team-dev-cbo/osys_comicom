@@ -1,0 +1,141 @@
+/*
+   Feuille de style pour les formulaires
+*/
+
+DIV.cachForm {
+        border: 0px solid;
+        background-color:#CCCCCC;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        visibility : hidden;
+        -moz-opacity: 0.5;
+        position: fixed;
+        z-index: 1;
+    }
+
+DIV.inputForm {
+        border: 2px solid #878282;
+        background-color:#FFFFFF;
+        top: 0;
+        bottom: 0;
+        height : 200px;
+        width: 450px;
+        font-family: tahoma;
+        font-weight: normal;
+        font-size : 12px;
+        color: #000000;
+        overflow:hidden;
+        white-space:nowrap;
+        visibility : hidden;
+        position: fixed;
+        z-index: 2;
+    }
+
+TD.inputFormTitle {
+        font-family: tahoma;
+        font-weight: bold;
+        font-size : 22px;
+        color: rgb(56,114,168);
+        text-align: left;
+        height: 40px;
+    }
+
+TD.inputText {
+        text-align: right;
+        font-family: tahoma;
+        font-weight: bold;
+        font-size : 12px;
+        color: rgb(51,51,51);
+    }
+
+TD.commentText {
+        text-align: left;
+        font-family: tahoma;
+        font-weight: bold;
+        font-size : 12px;
+        color: rgb(51,51,51);
+    }
+
+DIV.popUp {
+        border: 1px solid #878282;
+        background-color:#E8EFF6;
+        margin: 0 auto;
+        height : 60px;
+        width: 350px;
+        visibility : hidden;
+        font-family: tahoma;
+        font-weight: bold;
+        font-size : 16px;
+        color: rgb(51,51,51);
+        position: fixed;
+        z-index: 50;
+        text-align: center;
+        overflow:hidden;
+        white-space:nowrap;
+}
+
+TABLE.tableCell {
+        font-family: tahoma;
+        font-size : 11px;
+    }
+
+TD.tableCellEmpty {
+        text-align: left;
+        background-color:#FFFFFF;
+        border-style: none;
+    }
+
+TD.tableCellHeader {
+        height: 18px;
+        text-align: center;
+        color: #000000;
+        background-color: #EFEBDE;
+        border-style: none solid solid none;
+        border-width: 0px 1px 1px 0px;
+        border-color: #EFEBDE #CEC7BD #CEC7BD #EFEBDE;
+    }
+
+TD.tableCellHeaderToday {
+        height: 18px;
+        text-align: center;
+        color: #FFFFFF;
+        background-color: #303030;
+        border-style: none solid solid none;
+        border-width: 0px 1px 1px 0px;
+        border-color: #EFEBDE #CEC7BD #CEC7BD #EFEBDE;
+    }
+
+TD.tableCellHeaderWE {
+        height: 18px;
+        text-align: center;
+        background-color: #ff9999;
+        border-style: none solid solid none;
+        border-width: 0px 1px 1px 0px;
+        border-color: #EFEBDE #CEC7BD #CEC7BD #EFEBDE;
+    }
+
+DIV.tableCellHeader {
+        width:100%;
+        font-weight: bold;
+        overflow:hidden;
+        white-space:nowrap;
+    }
+
+TD.tableCell {
+        height: 18px;
+        text-align: center;
+        background-color: #EFEBDE;
+        border-style: none solid solid none;
+        border-width: 0px 1px 1px 0px;
+        border-color: #EFEBDE #CEC7BD #CEC7BD #EFEBDE;
+        cursor : pointer;
+    }
+
+DIV.tableCell {
+        width:100%;
+        font-weight: normal;
+        overflow:hidden;
+        white-space:nowrap;
+    }

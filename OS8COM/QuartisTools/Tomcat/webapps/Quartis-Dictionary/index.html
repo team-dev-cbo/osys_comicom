@@ -1,0 +1,110 @@
+<!--
+  Copyright 2004 The Apache Software Foundation
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<SCRIPT LANGUAGE="JavaScript">
+
+   function replaceMalformedCharacters(value) {
+	value = value.replace("Ã‰","É");
+	value = value.replace("Ãˆ","È");
+	value = value.replace("Ã€","À");
+	value = value.replace("Ã,","Â");
+	value = value.replace("Ã©","é");
+	value = value.replace("Ã¨","è");
+	value = value.replace("Ã¢","â");
+	value = value.replace("Ã ","à");
+	value = value.replace("Ã","É");
+
+	return value;
+}
+</SCRIPT>
+<!-- FIN DU SCRIPT-->
+<html>
+
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="GENERATOR" content="Mozilla/4.61 [en] (WinNT; I) [Netscape]">
+      <meta name="Author" content="J.Besnard">
+      <title>Quartis Dictionary</title>
+   </head>
+
+   <body bgcolor="#FFFFFF">
+      <b><font face="Arial, Helvetica, sans-serif"><font size=+2>Quartis Dictionary</font></font></b>
+
+      <!--table BORDER=0 CELLSPACING=5 WIDTH="85%" >
+         <tr VALIGN=TOP>
+            <td>Translations</td>
+            <td VALIGN=TOP WIDTH="30%"><a href="RequestTranslation">Execute</a></td>
+         </tr>
+      </table-->
+
+      <!--
+      writer.println(this.PARAM_ACTION);
+      writer.println(" = " + (HTMLFilter.filter(paramAction)) + "<br>");
+      writer.println(this.PARAM_ALL);
+      writer.println(" = " + (HTMLFilter.filter(paramAll)) + "<br>");
+      writer.println(this.PARAM_KEY);
+      writer.println(" = " + (HTMLFilter.filter(paramKey)) + "<br>");
+      writer.println(this.PARAM_LANGUAGE);
+      writer.println(" = " + (HTMLFilter.filter(paramLanguage)) + "<br>");
+      writer.println(this.PARAM_VALUE);
+      writer.println(" = " + (HTMLFilter.filter(paramValue)) + "<br>");
+      writer.println(this.PARAM_CONTEXT);
+      writer.println(" = " + (HTMLFilter.filter(paramContext)));
+      -->
+         <form action="RequestTranslation" accept-charset="UTF-8" method=POST>
+            <!--action <input type=text size=20 name=action value="">-->
+            action
+            <select name=action>
+               <option value="select">select</option>
+               <option value="create">create</option>
+               <option value="update">update</option>
+               <option value="delete">delete</option>
+            </select>
+            <br>
+            <!--allTranslations <input type=text size=20 name=allTranslations value="">-->
+            allTranslations
+            <select name=allTranslations>
+               <option value="false">false</option>
+               <option value="true">true</option>
+            </select>
+            <br>
+            key <input type=text size=20 name=key value="">
+            <br>
+            language <input type=text size=20 name=language value="">
+            <br>
+            value <input type=text size=20 name=value value="">
+            <br>
+            context <input type=text size=20 name=context value="">
+            <br>
+            <!--trace <input type=text size=20 name=trace value="false">-->
+            trace
+            <select name=trace>
+               <option value="false">false</option>
+               <option value="true">true</option>
+            </select>
+            <br>
+            sendDefaultLanguage
+            <select name=sendDefaultLanguage>
+               <option value="true">true</option>
+               <option value="false">false</option>
+            </select>
+            <br>
+            <input type=submit>
+         </form>
+      
+    </body>
+
+</html>

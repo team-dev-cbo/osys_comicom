@@ -1,0 +1,1 @@
+new f_class("f_ruler",{extend:f_component});

@@ -1,0 +1,691 @@
+13:21:21.975 [35mDEBUG[m - Thread-2          - TomcatListener [35mcontextInitialized - servletContext.realPath : C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web[m 
+13:21:22.006 [34m INFO[m - Thread-2          - PropertiesDelegate [34mOuverture du fichier de configuration à l'emplacement : C:\Osys\QuartisTools\Tomcat/conf/quartis-web.properties[m 
+13:21:22.318 [34m INFO[m - Thread-2          - TomcatListener [34m-----> Supression des fichier temporaires[m 
+13:21:23.784 [34m INFO[m - Thread-2          - TomcatListener [34mOuverture du fichier indiquant la base de données : C:\Osys\QuartisTools\Tomcat/conf/datasources.xml...[m 
+13:21:25.297 [34m INFO[m - Thread-2          - DataSourceManager [34mCréation de la datasource : QuartisWeb-PU[m 
+13:21:28.090 [1;31mERROR[m - Thread-2          - GSql  org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Impossible d'ouvrir la base de données "QUARTIS_PRO" demandée par la connexion. La connexion a échoué.)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1225)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:880)
+	at quartisweb.bd.AccesBD.getConnection(AccesBD.java:140)
+	at quartisweb.generic.sql.GSql.getListCodeSites(GSql.java:923)
+	at quartisweb.id.global.UserGlobalManager.verifySiteTiret(UserGlobalManager.java:124)
+	at quartisweb.id.global.UserGlobalManager.creerListUser(UserGlobalManager.java:85)
+	at quartisweb.id.global.UserGlobalManager.init(UserGlobalManager.java:35)
+	at quartisweb.tomcat.TomcatListener.contextInitialized(TomcatListener.java:109)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4135)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4630)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:791)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:771)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:546)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:637)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:563)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:498)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1277)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:321)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1053)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:785)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:445)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:519)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:581)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+Caused by: java.sql.SQLException: Impossible d'ouvrir la base de données "QUARTIS_PRO" demandée par la connexion. La connexion a échoué.
+	at net.sourceforge.jtds.jdbc.SQLDiagnostic.addDiagnostic(SQLDiagnostic.java:368)
+	at net.sourceforge.jtds.jdbc.TdsCore.tdsErrorToken(TdsCore.java:2816)
+	at net.sourceforge.jtds.jdbc.TdsCore.nextToken(TdsCore.java:2254)
+	at net.sourceforge.jtds.jdbc.TdsCore.login(TdsCore.java:602)
+	at net.sourceforge.jtds.jdbc.ConnectionJDBC2.<init>(ConnectionJDBC2.java:344)
+	at net.sourceforge.jtds.jdbc.ConnectionJDBC3.<init>(ConnectionJDBC3.java:50)
+	at net.sourceforge.jtds.jdbc.Driver.connect(Driver.java:182)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:294)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1247)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1221)
+	... 31 more
+
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/C:/Osys/QuartisTools/Tomcat/lib/slf4j-log4j12-1.7.12.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/Osys/QuartisTools/Tomcat/webapps/Quartis-OptimaCjj/WEB-INF/lib/logback-classic-0.9.28.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+2018-09-27 13:21:48.838 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1157]-Using default implementation for ThreadExecutor
+2018-09-27 13:21:48.853 [Thread-2] INFO  org.quartz.core.SchedulerSignalerImpl[61]-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-09-27 13:21:48.853 [Thread-2] INFO  org.quartz.core.QuartzScheduler[243]-Quartz Scheduler v.2.1.6 created.
+2018-09-27 13:21:48.853 [Thread-2] INFO  org.quartz.simpl.RAMJobStore[154]-RAMJobStore initialized.
+2018-09-27 13:21:48.853 [Thread-2] INFO  org.quartz.core.QuartzScheduler[268]-Scheduler meta-data: Quartz Scheduler (v2.1.6) 'schedulerBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-09-27 13:21:48.853 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1306]-Quartz scheduler 'schedulerBean' initialized from an externally provided properties instance.
+2018-09-27 13:21:48.853 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1310]-Quartz scheduler version: 2.1.6
+2018-09-27 13:21:48.853 [Thread-2] INFO  org.quartz.core.QuartzScheduler[2247]-JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@6c0ef9ec
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/C:/Osys/QuartisTools/Tomcat/lib/slf4j-log4j12-1.7.12.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/Osys/QuartisTools/Tomcat/webapps/Quartis-OptimaTml/WEB-INF/lib/logback-classic-0.9.28.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+2018-09-27 13:21:52.020 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1157]-Using default implementation for ThreadExecutor
+2018-09-27 13:21:52.036 [Thread-2] INFO  org.quartz.core.SchedulerSignalerImpl[61]-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-09-27 13:21:52.036 [Thread-2] INFO  org.quartz.core.QuartzScheduler[243]-Quartz Scheduler v.2.1.6 created.
+2018-09-27 13:21:52.036 [Thread-2] INFO  org.quartz.simpl.RAMJobStore[154]-RAMJobStore initialized.
+2018-09-27 13:21:52.036 [Thread-2] INFO  org.quartz.core.QuartzScheduler[268]-Scheduler meta-data: Quartz Scheduler (v2.1.6) 'schedulerBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-09-27 13:21:52.036 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1306]-Quartz scheduler 'schedulerBean' initialized from an externally provided properties instance.
+2018-09-27 13:21:52.036 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1310]-Quartz scheduler version: 2.1.6
+2018-09-27 13:21:52.036 [Thread-2] INFO  org.quartz.core.QuartzScheduler[2247]-JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@42d3086a
+ERROR StatusLogger Unrecognized format specifier [d]
+ERROR StatusLogger Unrecognized conversion specifier [d] starting at position 16 in conversion pattern.
+ERROR StatusLogger Unrecognized format specifier [thread]
+ERROR StatusLogger Unrecognized conversion specifier [thread] starting at position 25 in conversion pattern.
+ERROR StatusLogger Unrecognized format specifier [level]
+ERROR StatusLogger Unrecognized conversion specifier [level] starting at position 35 in conversion pattern.
+ERROR StatusLogger Unrecognized format specifier [logger]
+ERROR StatusLogger Unrecognized conversion specifier [logger] starting at position 47 in conversion pattern.
+ERROR StatusLogger Unrecognized format specifier [msg]
+ERROR StatusLogger Unrecognized conversion specifier [msg] starting at position 54 in conversion pattern.
+ERROR StatusLogger Unrecognized format specifier [n]
+ERROR StatusLogger Unrecognized conversion specifier [n] starting at position 56 in conversion pattern.
+ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
+ERROR StatusLogger Unrecognized format specifier [d]
+ERROR StatusLogger Unrecognized conversion specifier [d] starting at position 16 in conversion pattern.
+ERROR StatusLogger Unrecognized format specifier [thread]
+ERROR StatusLogger Unrecognized conversion specifier [thread] starting at position 25 in conversion pattern.
+ERROR StatusLogger Unrecognized format specifier [level]
+ERROR StatusLogger Unrecognized conversion specifier [level] starting at position 35 in conversion pattern.
+ERROR StatusLogger Unrecognized format specifier [logger]
+ERROR StatusLogger Unrecognized conversion specifier [logger] starting at position 47 in conversion pattern.
+ERROR StatusLogger Unrecognized format specifier [msg]
+ERROR StatusLogger Unrecognized conversion specifier [msg] starting at position 54 in conversion pattern.
+ERROR StatusLogger Unrecognized format specifier [n]
+ERROR StatusLogger Unrecognized conversion specifier [n] starting at position 56 in conversion pattern.
+15:32:41.019 [35mDEBUG[m - http-8383-exec-5  - LoginManagedBean [35muser.id = administrateur, connecté par login/mdp Osys[m 
+15:32:42.435 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie de 18 fichiers vers 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\language.properties'...[m 
+15:32:42.435 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 0/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language.properties'.[m 
+15:32:42.435 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language.properties'...[m 
+15:32:42.444 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:42.444 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 1/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language.properties'.[m 
+15:32:42.444 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language.properties'...[m 
+15:32:42.444 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:42.444 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 2/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language.properties'.[m 
+15:32:42.444 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language.properties'...[m 
+15:32:42.455 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:42.455 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 3/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language.properties'.[m 
+15:32:42.455 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language.properties'...[m 
+15:32:42.464 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:42.464 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 4/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language.properties'.[m 
+15:32:42.465 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language.properties'...[m 
+15:32:42.465 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:42.465 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 5/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language.properties'.[m 
+15:32:42.465 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language.properties'...[m 
+15:32:42.473 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:42.473 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 6/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language.properties'.[m 
+15:32:42.473 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language.properties'...[m 
+15:32:42.476 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:42.476 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 7/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language.properties'.[m 
+15:32:42.476 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language.properties'...[m 
+15:32:42.491 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:42.491 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 8/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language.properties'.[m 
+15:32:42.491 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language.properties'...[m 
+15:32:42.501 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:42.501 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 9/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language.properties'.[m 
+15:32:42.501 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language.properties'...[m 
+15:32:42.505 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:42.505 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 10/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language.properties'.[m 
+15:32:42.505 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language.properties'...[m 
+15:32:42.508 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:42.509 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 11/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language.properties'.[m 
+15:32:42.509 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language.properties'...[m 
+15:32:42.509 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:42.509 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 12/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language.properties'.[m 
+15:32:42.509 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language.properties'...[m 
+15:32:42.509 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:42.509 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 13/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language.properties'.[m 
+15:32:42.509 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language.properties'...[m 
+15:32:42.510 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:42.510 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 14/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language.properties'.[m 
+15:32:42.510 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language.properties'...[m 
+15:32:42.510 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:42.510 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 15/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language.properties'.[m 
+15:32:42.510 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language.properties'...[m 
+15:32:42.511 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:42.511 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 16/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language.properties'.[m 
+15:32:42.511 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language.properties'...[m 
+15:32:42.511 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:42.511 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 17/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language.properties'.[m 
+15:32:42.511 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language.properties'...[m 
+15:32:42.511 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:42.511 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Fin de la copie.[m 
+15:32:42.743 [35mDEBUG[m - http-8383-exec-6  - LoginManagedBean [35muser.id = administrateur, connecté par login/mdp Osys[m 
+15:32:42.785 [36m WARN[m - http-8383-exec-6  - ConnexionManagedBean [36mL'utilisateur administrateur a tente de se connecter depuis l'IP 0:0:0:0:0:0:0:1 alors qu'il(elle) est deja connecte(e) : null.[m 
+15:32:42.937 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie de 18 fichiers vers 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\language_fr.properties'...[m 
+15:32:42.937 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 0/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language_fr.properties'.[m 
+15:32:42.937 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language_fr.properties'...[m 
+15:32:42.937 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:42.937 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 1/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language_fr.properties'.[m 
+15:32:42.937 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language_fr.properties'...[m 
+15:32:42.951 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:42.951 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 2/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language_fr.properties'.[m 
+15:32:42.951 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language_fr.properties'...[m 
+15:32:43.023 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:43.024 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 3/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language_fr.properties'.[m 
+15:32:43.024 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language_fr.properties'...[m 
+15:32:43.062 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:43.062 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 4/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language_fr.properties'.[m 
+15:32:43.063 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language_fr.properties'...[m 
+15:32:43.075 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:43.075 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 5/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language_fr.properties'.[m 
+15:32:43.076 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language_fr.properties'...[m 
+15:32:43.087 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:43.087 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 6/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language_fr.properties'.[m 
+15:32:43.087 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language_fr.properties'...[m 
+15:32:43.097 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:43.097 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 7/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language_fr.properties'.[m 
+15:32:43.097 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language_fr.properties'...[m 
+15:32:43.097 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:43.098 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 8/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language_fr.properties'.[m 
+15:32:43.098 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language_fr.properties'...[m 
+15:32:43.108 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:43.109 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 9/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language_fr.properties'.[m 
+15:32:43.109 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language_fr.properties'...[m 
+15:32:43.109 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:43.109 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 10/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language_fr.properties'.[m 
+15:32:43.109 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language_fr.properties'...[m 
+15:32:43.110 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:43.110 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 11/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language_fr.properties'.[m 
+15:32:43.110 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language_fr.properties'...[m 
+15:32:43.110 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:43.110 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 12/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language_fr.properties'.[m 
+15:32:43.110 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language_fr.properties'...[m 
+15:32:43.111 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:43.111 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 13/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language_fr.properties'.[m 
+15:32:43.111 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language_fr.properties'...[m 
+15:32:43.111 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:43.111 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 14/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language_fr.properties'.[m 
+15:32:43.111 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language_fr.properties'...[m 
+15:32:43.111 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:43.111 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 15/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language_fr.properties'.[m 
+15:32:43.111 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language_fr.properties'...[m 
+15:32:43.111 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:43.112 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 16/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language_fr.properties'.[m 
+15:32:43.112 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language_fr.properties'...[m 
+15:32:43.112 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:43.112 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Copie du fichier 17/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language_fr.properties'.[m 
+15:32:43.112 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language_fr.properties'...[m 
+15:32:43.112 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+15:32:43.112 [35mDEBUG[m - http-8383-exec-5  - TransfertFile [35mcopyFile (pls) - Fin de la copie.[m 
+15:32:43.112 [35mDEBUG[m - http-8383-exec-5  - LanguageFileManager [35mbuildPropertiesGen - Création de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\language_fr.properties'...[m 
+15:32:43.141 [35mDEBUG[m - http-8383-exec-5  - LanguageFileManager [35mbuildPropertiesGen - Fin de la création.[m 
+15:43:38.055 [35mDEBUG[m - http-8383-exec-1  - FiltreSession [35mRequête pour page non login (http://192.168.1.43:8383/Quartis-Web/base.jsf) mais pas de user en session.[m 
+15:43:38.088 [35mDEBUG[m - http-8383-exec-3  - DisconnectDispatcher [35mDéconnexion demandée pour : administrateur, session ID : #152E582AE362CAB95CA0B0D17160E7C7[m 
+16:08:06.715 [35mDEBUG[m - Thread-2          - TomcatListener [35mcontextInitialized - servletContext.realPath : C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web[m 
+16:08:06.808 [34m INFO[m - Thread-2          - PropertiesDelegate [34mOuverture du fichier de configuration à l'emplacement : C:\Osys\QuartisTools\Tomcat/conf/quartis-web.properties[m 
+16:08:06.855 [34m INFO[m - Thread-2          - TomcatListener [34m-----> Supression des fichier temporaires[m 
+16:08:07.120 [34m INFO[m - Thread-2          - TomcatListener [34mOuverture du fichier indiquant la base de données : C:\Osys\QuartisTools\Tomcat/conf/datasources.xml...[m 
+16:08:07.198 [34m INFO[m - Thread-2          - DataSourceManager [34mCréation de la datasource : QuartisWeb-PU[m 
+16:08:07.276 [1;31mERROR[m - Thread-2          - GSql  org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Impossible d'ouvrir la base de données "QUARTIS_PRO" demandée par la connexion. La connexion a échoué.)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1225)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:880)
+	at quartisweb.bd.AccesBD.getConnection(AccesBD.java:140)
+	at quartisweb.generic.sql.GSql.getListCodeSites(GSql.java:923)
+	at quartisweb.id.global.UserGlobalManager.verifySiteTiret(UserGlobalManager.java:124)
+	at quartisweb.id.global.UserGlobalManager.creerListUser(UserGlobalManager.java:85)
+	at quartisweb.id.global.UserGlobalManager.init(UserGlobalManager.java:35)
+	at quartisweb.tomcat.TomcatListener.contextInitialized(TomcatListener.java:109)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4135)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4630)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:791)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:771)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:546)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:637)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:563)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:498)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1277)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:321)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1053)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:785)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:445)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:519)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:581)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+Caused by: java.sql.SQLException: Impossible d'ouvrir la base de données "QUARTIS_PRO" demandée par la connexion. La connexion a échoué.
+	at net.sourceforge.jtds.jdbc.SQLDiagnostic.addDiagnostic(SQLDiagnostic.java:368)
+	at net.sourceforge.jtds.jdbc.TdsCore.tdsErrorToken(TdsCore.java:2816)
+	at net.sourceforge.jtds.jdbc.TdsCore.nextToken(TdsCore.java:2254)
+	at net.sourceforge.jtds.jdbc.TdsCore.login(TdsCore.java:602)
+	at net.sourceforge.jtds.jdbc.ConnectionJDBC2.<init>(ConnectionJDBC2.java:344)
+	at net.sourceforge.jtds.jdbc.ConnectionJDBC3.<init>(ConnectionJDBC3.java:50)
+	at net.sourceforge.jtds.jdbc.Driver.connect(Driver.java:182)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:294)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1247)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1221)
+	... 31 more
+
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/C:/Osys/QuartisTools/Tomcat/lib/slf4j-log4j12-1.7.12.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/Osys/QuartisTools/Tomcat/webapps/Quartis-OptimaCjj/WEB-INF/lib/logback-classic-0.9.28.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+2018-09-27 16:08:18.898 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1157]-Using default implementation for ThreadExecutor
+2018-09-27 16:08:18.914 [Thread-2] INFO  org.quartz.core.SchedulerSignalerImpl[61]-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-09-27 16:08:18.914 [Thread-2] INFO  org.quartz.core.QuartzScheduler[243]-Quartz Scheduler v.2.1.6 created.
+2018-09-27 16:08:18.914 [Thread-2] INFO  org.quartz.simpl.RAMJobStore[154]-RAMJobStore initialized.
+2018-09-27 16:08:19.210 [Thread-2] INFO  org.quartz.core.QuartzScheduler[268]-Scheduler meta-data: Quartz Scheduler (v2.1.6) 'schedulerBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-09-27 16:08:19.226 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1306]-Quartz scheduler 'schedulerBean' initialized from an externally provided properties instance.
+2018-09-27 16:08:19.226 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1310]-Quartz scheduler version: 2.1.6
+2018-09-27 16:08:19.226 [Thread-2] INFO  org.quartz.core.QuartzScheduler[2247]-JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@28a7d92e
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/C:/Osys/QuartisTools/Tomcat/lib/slf4j-log4j12-1.7.12.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/Osys/QuartisTools/Tomcat/webapps/Quartis-OptimaTml/WEB-INF/lib/logback-classic-0.9.28.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+2018-09-27 16:08:22.330 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1157]-Using default implementation for ThreadExecutor
+2018-09-27 16:08:22.346 [Thread-2] INFO  org.quartz.core.SchedulerSignalerImpl[61]-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-09-27 16:08:22.346 [Thread-2] INFO  org.quartz.core.QuartzScheduler[243]-Quartz Scheduler v.2.1.6 created.
+2018-09-27 16:08:22.346 [Thread-2] INFO  org.quartz.simpl.RAMJobStore[154]-RAMJobStore initialized.
+2018-09-27 16:08:22.346 [Thread-2] INFO  org.quartz.core.QuartzScheduler[268]-Scheduler meta-data: Quartz Scheduler (v2.1.6) 'schedulerBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-09-27 16:08:22.346 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1306]-Quartz scheduler 'schedulerBean' initialized from an externally provided properties instance.
+2018-09-27 16:08:22.346 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1310]-Quartz scheduler version: 2.1.6
+2018-09-27 16:08:22.346 [Thread-2] INFO  org.quartz.core.QuartzScheduler[2247]-JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@13ea4fd4
+2018-09-27 16:16:22.296 [Thread-2] INFO  org.quartz.core.QuartzScheduler[653]-Scheduler schedulerBean_$_NON_CLUSTERED shutting down.
+2018-09-27 16:16:22.296 [Thread-2] INFO  org.quartz.core.QuartzScheduler[572]-Scheduler schedulerBean_$_NON_CLUSTERED paused.
+2018-09-27 16:16:22.296 [Thread-2] INFO  org.quartz.core.QuartzScheduler[725]-Scheduler schedulerBean_$_NON_CLUSTERED shutdown complete.
+16:16:22.811 [34m INFO[m - Thread-2          - PropertiesDelegate [34mDestruction du properties manager ![m 
+2018-09-27 16:16:23.778 [Thread-2] INFO  org.quartz.core.QuartzScheduler[653]-Scheduler schedulerBean_$_NON_CLUSTERED shutting down.
+2018-09-27 16:16:23.778 [Thread-2] INFO  org.quartz.core.QuartzScheduler[572]-Scheduler schedulerBean_$_NON_CLUSTERED paused.
+2018-09-27 16:16:23.778 [Thread-2] INFO  org.quartz.core.QuartzScheduler[725]-Scheduler schedulerBean_$_NON_CLUSTERED shutdown complete.
+16:16:54.803 [35mDEBUG[m - Thread-2          - TomcatListener [35mcontextInitialized - servletContext.realPath : C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web[m 
+16:16:54.818 [34m INFO[m - Thread-2          - PropertiesDelegate [34mOuverture du fichier de configuration à l'emplacement : C:\Osys\QuartisTools\Tomcat/conf/quartis-web.properties[m 
+16:16:54.849 [34m INFO[m - Thread-2          - TomcatListener [34m-----> Supression des fichier temporaires[m 
+16:16:54.974 [34m INFO[m - Thread-2          - TomcatListener [34mOuverture du fichier indiquant la base de données : C:\Osys\QuartisTools\Tomcat/conf/datasources.xml...[m 
+16:16:55.037 [34m INFO[m - Thread-2          - DataSourceManager [34mCréation de la datasource : QuartisWeb-PU[m 
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/C:/Osys/QuartisTools/Tomcat/lib/slf4j-log4j12-1.7.12.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/Osys/QuartisTools/Tomcat/webapps/Quartis-OptimaCjj/WEB-INF/lib/logback-classic-0.9.28.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+2018-09-27 16:17:03.771 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1157]-Using default implementation for ThreadExecutor
+2018-09-27 16:17:03.787 [Thread-2] INFO  org.quartz.core.SchedulerSignalerImpl[61]-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-09-27 16:17:03.787 [Thread-2] INFO  org.quartz.core.QuartzScheduler[243]-Quartz Scheduler v.2.1.6 created.
+2018-09-27 16:17:03.787 [Thread-2] INFO  org.quartz.simpl.RAMJobStore[154]-RAMJobStore initialized.
+2018-09-27 16:17:03.787 [Thread-2] INFO  org.quartz.core.QuartzScheduler[268]-Scheduler meta-data: Quartz Scheduler (v2.1.6) 'schedulerBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-09-27 16:17:03.787 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1306]-Quartz scheduler 'schedulerBean' initialized from an externally provided properties instance.
+2018-09-27 16:17:03.787 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1310]-Quartz scheduler version: 2.1.6
+2018-09-27 16:17:03.787 [Thread-2] INFO  org.quartz.core.QuartzScheduler[2247]-JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@1227d47d
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/C:/Osys/QuartisTools/Tomcat/lib/slf4j-log4j12-1.7.12.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/Osys/QuartisTools/Tomcat/webapps/Quartis-OptimaTml/WEB-INF/lib/logback-classic-0.9.28.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+2018-09-27 16:17:06.719 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1157]-Using default implementation for ThreadExecutor
+2018-09-27 16:17:06.735 [Thread-2] INFO  org.quartz.core.SchedulerSignalerImpl[61]-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-09-27 16:17:06.735 [Thread-2] INFO  org.quartz.core.QuartzScheduler[243]-Quartz Scheduler v.2.1.6 created.
+2018-09-27 16:17:06.735 [Thread-2] INFO  org.quartz.simpl.RAMJobStore[154]-RAMJobStore initialized.
+2018-09-27 16:17:06.735 [Thread-2] INFO  org.quartz.core.QuartzScheduler[268]-Scheduler meta-data: Quartz Scheduler (v2.1.6) 'schedulerBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-09-27 16:17:06.735 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1306]-Quartz scheduler 'schedulerBean' initialized from an externally provided properties instance.
+2018-09-27 16:17:06.735 [Thread-2] INFO  org.quartz.impl.StdSchedulerFactory[1310]-Quartz scheduler version: 2.1.6
+2018-09-27 16:17:06.735 [Thread-2] INFO  org.quartz.core.QuartzScheduler[2247]-JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@22c58693
+ERROR StatusLogger Unrecognized format specifier [d]
+ERROR StatusLogger Unrecognized conversion specifier [d] starting at position 16 in conversion pattern.
+ERROR StatusLogger Unrecognized format specifier [thread]
+ERROR StatusLogger Unrecognized conversion specifier [thread] starting at position 25 in conversion pattern.
+ERROR StatusLogger Unrecognized format specifier [level]
+ERROR StatusLogger Unrecognized conversion specifier [level] starting at position 35 in conversion pattern.
+ERROR StatusLogger Unrecognized format specifier [logger]
+ERROR StatusLogger Unrecognized conversion specifier [logger] starting at position 47 in conversion pattern.
+ERROR StatusLogger Unrecognized format specifier [msg]
+ERROR StatusLogger Unrecognized conversion specifier [msg] starting at position 54 in conversion pattern.
+ERROR StatusLogger Unrecognized format specifier [n]
+ERROR StatusLogger Unrecognized conversion specifier [n] starting at position 56 in conversion pattern.
+ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
+ERROR StatusLogger Unrecognized format specifier [d]
+ERROR StatusLogger Unrecognized conversion specifier [d] starting at position 16 in conversion pattern.
+ERROR StatusLogger Unrecognized format specifier [thread]
+ERROR StatusLogger Unrecognized conversion specifier [thread] starting at position 25 in conversion pattern.
+ERROR StatusLogger Unrecognized format specifier [level]
+ERROR StatusLogger Unrecognized conversion specifier [level] starting at position 35 in conversion pattern.
+ERROR StatusLogger Unrecognized format specifier [logger]
+ERROR StatusLogger Unrecognized conversion specifier [logger] starting at position 47 in conversion pattern.
+ERROR StatusLogger Unrecognized format specifier [msg]
+ERROR StatusLogger Unrecognized conversion specifier [msg] starting at position 54 in conversion pattern.
+ERROR StatusLogger Unrecognized format specifier [n]
+ERROR StatusLogger Unrecognized conversion specifier [n] starting at position 56 in conversion pattern.
+16:20:32.440 [35mDEBUG[m - http-8383-exec-1  - LoginManagedBean [35muser.id = administrateur, connecté par login/mdp Osys[m 
+16:20:33.772 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie de 18 fichiers vers 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\language.properties'...[m 
+16:20:33.773 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 0/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language.properties'.[m 
+16:20:33.773 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language.properties'...[m 
+16:20:33.781 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:33.781 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 1/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language.properties'.[m 
+16:20:33.781 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language.properties'...[m 
+16:20:33.781 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:33.781 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 2/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language.properties'.[m 
+16:20:33.781 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language.properties'...[m 
+16:20:33.792 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:33.792 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 3/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language.properties'.[m 
+16:20:33.792 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language.properties'...[m 
+16:20:33.802 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:33.802 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 4/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language.properties'.[m 
+16:20:33.802 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language.properties'...[m 
+16:20:33.802 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:33.802 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 5/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language.properties'.[m 
+16:20:33.802 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language.properties'...[m 
+16:20:33.810 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:33.811 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 6/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language.properties'.[m 
+16:20:33.811 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language.properties'...[m 
+16:20:33.814 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:33.814 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 7/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language.properties'.[m 
+16:20:33.814 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language.properties'...[m 
+16:20:33.828 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:33.829 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 8/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language.properties'.[m 
+16:20:33.829 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language.properties'...[m 
+16:20:33.838 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:33.838 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 9/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language.properties'.[m 
+16:20:33.838 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language.properties'...[m 
+16:20:33.842 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:33.843 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 10/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language.properties'.[m 
+16:20:33.843 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language.properties'...[m 
+16:20:33.846 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:33.846 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 11/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language.properties'.[m 
+16:20:33.846 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language.properties'...[m 
+16:20:33.846 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:33.846 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 12/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language.properties'.[m 
+16:20:33.846 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language.properties'...[m 
+16:20:33.847 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:33.847 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 13/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language.properties'.[m 
+16:20:33.847 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language.properties'...[m 
+16:20:33.847 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:33.847 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 14/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language.properties'.[m 
+16:20:33.847 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language.properties'...[m 
+16:20:33.847 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:33.847 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 15/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language.properties'.[m 
+16:20:33.847 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language.properties'...[m 
+16:20:33.848 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:33.848 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 16/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language.properties'.[m 
+16:20:33.848 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language.properties'...[m 
+16:20:33.848 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:33.848 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 17/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language.properties'.[m 
+16:20:33.848 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language.properties'...[m 
+16:20:33.849 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:33.849 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Fin de la copie.[m 
+16:20:34.106 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie de 18 fichiers vers 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\language_fr.properties'...[m 
+16:20:34.106 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 0/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language_fr.properties'.[m 
+16:20:34.106 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language_fr.properties'...[m 
+16:20:34.106 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:34.106 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 1/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language_fr.properties'.[m 
+16:20:34.106 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language_fr.properties'...[m 
+16:20:34.117 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:34.117 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 2/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language_fr.properties'.[m 
+16:20:34.117 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language_fr.properties'...[m 
+16:20:34.125 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:34.125 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 3/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language_fr.properties'.[m 
+16:20:34.126 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language_fr.properties'...[m 
+16:20:34.133 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:34.133 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 4/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language_fr.properties'.[m 
+16:20:34.133 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language_fr.properties'...[m 
+16:20:34.146 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:34.146 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 5/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language_fr.properties'.[m 
+16:20:34.146 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language_fr.properties'...[m 
+16:20:34.158 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:34.158 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 6/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language_fr.properties'.[m 
+16:20:34.158 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language_fr.properties'...[m 
+16:20:34.167 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:34.168 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 7/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language_fr.properties'.[m 
+16:20:34.168 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language_fr.properties'...[m 
+16:20:34.168 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:34.168 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 8/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language_fr.properties'.[m 
+16:20:34.168 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language_fr.properties'...[m 
+16:20:34.179 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:34.179 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 9/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language_fr.properties'.[m 
+16:20:34.179 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language_fr.properties'...[m 
+16:20:34.179 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:34.180 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 10/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language_fr.properties'.[m 
+16:20:34.180 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language_fr.properties'...[m 
+16:20:34.180 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:34.180 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 11/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language_fr.properties'.[m 
+16:20:34.180 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language_fr.properties'...[m 
+16:20:34.180 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:34.181 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 12/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language_fr.properties'.[m 
+16:20:34.181 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language_fr.properties'...[m 
+16:20:34.181 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:34.181 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 13/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language_fr.properties'.[m 
+16:20:34.181 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language_fr.properties'...[m 
+16:20:34.181 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:34.181 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 14/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language_fr.properties'.[m 
+16:20:34.181 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language_fr.properties'...[m 
+16:20:34.182 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:34.182 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 15/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language_fr.properties'.[m 
+16:20:34.182 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language_fr.properties'...[m 
+16:20:34.182 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:34.182 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 16/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language_fr.properties'.[m 
+16:20:34.182 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language_fr.properties'...[m 
+16:20:34.182 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:34.182 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Copie du fichier 17/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language_fr.properties'.[m 
+16:20:34.182 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language_fr.properties'...[m 
+16:20:34.183 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (fileChannel) - Fin de la copie.[m 
+16:20:34.183 [35mDEBUG[m - http-8383-exec-1  - TransfertFile [35mcopyFile (pls) - Fin de la copie.[m 
+16:20:34.183 [35mDEBUG[m - http-8383-exec-1  - LanguageFileManager [35mbuildPropertiesGen - Création de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\language_fr.properties'...[m 
+16:20:34.211 [35mDEBUG[m - http-8383-exec-1  - LanguageFileManager [35mbuildPropertiesGen - Fin de la création.[m 
+16:29:10.020 [35mDEBUG[m - http-8383-exec-3  - GSqlQueryGeneratorSqlServer [35m--->table =MACHINE query =set rowcount 3000  SELECT CODE_MACH_SITE  , CODE_MACH  , TYPE_MACH  , dbo.OPTIMA_TRADUCTION(DESI_MACH,'fr') +'@KEYLANG_'+DESI_MACH AS DESI_MACH  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_HORA  , CODE_TERM  , CODE_FAMI_MACH  , FLAG_HABI  , FLAG_MAIN_PREV  , FLAG_ABSE_COMP  , DURE_ABSE_COMP  , NOMB_OPER_MAXI  , DURE_MAJO_CYCL  , FLAG_MACH_ACTI  , TAUX_REBU_THEO  , MODE_CALC_QUAN  , TYPE_GEST_GAMM  , TYPE_GEST_CYCL  , NOMB_PIEC_CYCL  , DURE_DETE_FIN_FABR  , NOMB_CYCL_MAXI  , DURE_MAXI_MICR_ARRE  , DURE_TEMP_PASS_ARRE  , DURE_ARRE_INDE_MAXI  , FLAG_CHAN_FABR_AUTO  , TECH_AVAN_CYCL_THEO  , NUME_BOIT_SUPE  , SUPE_NUME_ORDR  , LIEN_IMAG  , TAUX_HORA_PREP_MACH  , TAUX_HORA_PROD_MACH  , TAUX_HORA_PREP_MO  , TAUX_HORA_PROD_MO  , NUME_SERI  , dbo.OPTIMA_TRADUCTION(DESI_MARQ,'fr') +'@KEYLANG_'+DESI_MARQ AS DESI_MARQ  , CONVERT(NVARCHAR, DATE_MISE_SERV, 103) AS DATE_MISE_SERV  , FLAG_GEST_PLAN  , FLAG_OBLI_PERS  , CODE_ETAT_DEBU_OF  , CODE_ETAT_FIN_OF  , CAPA_CONT_MAXI  , CODE_UNIT  , CODE_SITE  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_EXPO_DIMO  , FLAG_SUPP FROM MACHINE  WHERE ( CODE_SITE = 'MAR')  ORDER BY CODE_MACH_SITE ASC [m 
+16:29:11.994 [35mDEBUG[m - http-8383-exec-4  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Standard_System_Event_List[m 
+16:29:11.995 [35mDEBUG[m - http-8383-exec-2  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Standard_System_Event_List[m 
+16:29:11.998 [35mDEBUG[m - http-8383-exec-4  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+16:29:11.998 [35mDEBUG[m - http-8383-exec-2  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+16:29:11.999 [35mDEBUG[m - http-8383-exec-4  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+16:29:11.999 [35mDEBUG[m - http-8383-exec-2  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+16:29:12.169 [35mDEBUG[m - http-8383-exec-4  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+16:29:12.169 [35mDEBUG[m - http-8383-exec-2  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+Unable to load config file.
+16:31:52.530 [35mDEBUG[m - http-8383-exec-5  - GSqlQueryGeneratorSqlServer [35m--->table =MACHINE query =set rowcount 3000  SELECT CODE_MACH_SITE  , CODE_MACH  , TYPE_MACH  , dbo.OPTIMA_TRADUCTION(DESI_MACH,'fr') +'@KEYLANG_'+DESI_MACH AS DESI_MACH  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_HORA  , CODE_TERM  , CODE_FAMI_MACH  , FLAG_HABI  , FLAG_MAIN_PREV  , FLAG_ABSE_COMP  , DURE_ABSE_COMP  , NOMB_OPER_MAXI  , DURE_MAJO_CYCL  , FLAG_MACH_ACTI  , TAUX_REBU_THEO  , MODE_CALC_QUAN  , TYPE_GEST_GAMM  , TYPE_GEST_CYCL  , NOMB_PIEC_CYCL  , DURE_DETE_FIN_FABR  , NOMB_CYCL_MAXI  , DURE_MAXI_MICR_ARRE  , DURE_TEMP_PASS_ARRE  , DURE_ARRE_INDE_MAXI  , FLAG_CHAN_FABR_AUTO  , TECH_AVAN_CYCL_THEO  , NUME_BOIT_SUPE  , SUPE_NUME_ORDR  , LIEN_IMAG  , TAUX_HORA_PREP_MACH  , TAUX_HORA_PROD_MACH  , TAUX_HORA_PREP_MO  , TAUX_HORA_PROD_MO  , NUME_SERI  , dbo.OPTIMA_TRADUCTION(DESI_MARQ,'fr') +'@KEYLANG_'+DESI_MARQ AS DESI_MARQ  , CONVERT(NVARCHAR, DATE_MISE_SERV, 103) AS DATE_MISE_SERV  , FLAG_GEST_PLAN  , FLAG_OBLI_PERS  , CODE_ETAT_DEBU_OF  , CODE_ETAT_FIN_OF  , CAPA_CONT_MAXI  , CODE_UNIT  , CODE_SITE  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_EXPO_DIMO  , FLAG_SUPP FROM MACHINE  WHERE ( CODE_SITE = 'MAR')  ORDER BY CODE_MACH_SITE ASC [m 
+16:32:01.352 [35mDEBUG[m - http-8383-exec-2  - GSqlQueryGeneratorSqlServer [35m--->table =TERMINAL_ENTREE query =set rowcount 3000  SELECT CODE_TERM  , NUME_ENTR  , TYPE_ENTR  , CODE_MACH  , DIVI_ENTR  , ETAT_ENTR  , CODE_ETAT  , NUME_PRIO  , DIVI_HARD  , COEF_MULT  FROM TERMINAL_ENTREE  WHERE CODE_MACH = 'MARL2' ORDER BY CODE_TERM ASC [m 
+16:36:13.297 [35mDEBUG[m - http-8383-exec-6  - GSqlQueryGeneratorSqlServer [35m--->table =MACHINE query =set rowcount 3000  SELECT CODE_MACH_SITE  , CODE_MACH  , TYPE_MACH  , dbo.OPTIMA_TRADUCTION(DESI_MACH,'fr') +'@KEYLANG_'+DESI_MACH AS DESI_MACH  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_HORA  , CODE_TERM  , CODE_FAMI_MACH  , FLAG_HABI  , FLAG_MAIN_PREV  , FLAG_ABSE_COMP  , DURE_ABSE_COMP  , NOMB_OPER_MAXI  , DURE_MAJO_CYCL  , FLAG_MACH_ACTI  , TAUX_REBU_THEO  , MODE_CALC_QUAN  , TYPE_GEST_GAMM  , TYPE_GEST_CYCL  , NOMB_PIEC_CYCL  , DURE_DETE_FIN_FABR  , NOMB_CYCL_MAXI  , DURE_MAXI_MICR_ARRE  , DURE_TEMP_PASS_ARRE  , DURE_ARRE_INDE_MAXI  , FLAG_CHAN_FABR_AUTO  , TECH_AVAN_CYCL_THEO  , NUME_BOIT_SUPE  , SUPE_NUME_ORDR  , LIEN_IMAG  , TAUX_HORA_PREP_MACH  , TAUX_HORA_PROD_MACH  , TAUX_HORA_PREP_MO  , TAUX_HORA_PROD_MO  , NUME_SERI  , dbo.OPTIMA_TRADUCTION(DESI_MARQ,'fr') +'@KEYLANG_'+DESI_MARQ AS DESI_MARQ  , CONVERT(NVARCHAR, DATE_MISE_SERV, 103) AS DATE_MISE_SERV  , FLAG_GEST_PLAN  , FLAG_OBLI_PERS  , CODE_ETAT_DEBU_OF  , CODE_ETAT_FIN_OF  , CAPA_CONT_MAXI  , CODE_UNIT  , CODE_SITE  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_EXPO_DIMO  , FLAG_SUPP FROM MACHINE  WHERE ( CODE_SITE = 'MAR')  ORDER BY CODE_MACH_SITE ASC [m 
+1
+
+
+16:36:42.373 [35mDEBUG[m - http-8383-exec-6  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Production_OF_EnCours_1[m 
+16:36:42.373 [35mDEBUG[m - http-8383-exec-3  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Production_OF_EnCours_1[m 
+16:36:42.373 [35mDEBUG[m - http-8383-exec-3  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'...[m 
+16:36:42.373 [35mDEBUG[m - http-8383-exec-6  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'...[m 
+16:36:42.373 [35mDEBUG[m - http-8383-exec-3  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'...[m 
+16:36:42.374 [35mDEBUG[m - http-8383-exec-6  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'...[m 
+16:36:42.400 [35mDEBUG[m - http-8383-exec-3  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+16:36:42.400 [35mDEBUG[m - http-8383-exec-6  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+16:36:52.016 [35mDEBUG[m - http-8383-exec-1  - GSqlQueryGeneratorSqlServer [35m--->table =OF_LISTE query =set rowcount 3000  SELECT CODE_OF_SITE  , CODE_OF  , dbo.OPTIMA_TRADUCTION(DESI_OF,'fr') +'@KEYLANG_'+DESI_OF AS DESI_OF  , CODE_CLIE  , NUME_COMM  , CONVERT(NVARCHAR, DATE_LIVR, 103) AS DATE_LIVR  , CONVERT(NVARCHAR, DATE_LANC, 103) AS DATE_LANC  , CHAM_LIBR_1  , CHAM_LIBR_2  , CHAM_LIBR_3  , QUAN_LANC  , QUAN_STOC_AFFE  , NOMB_ARTI  , CODE_ETAT_AVAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 108) AS DATE_DEBU_REEL  , DELT_HEUR_UTC_DEBU_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 108) AS DATE_FIN_REEL  , DELT_HEUR_UTC_FIN_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 108) AS DATE_IMPO  , CODE_OF_SIMP  , CODE_ARTI  , CODE_SITE  , DELT_HEUR_UTC  , FLAG_SUPP FROM OF_LISTE  WHERE ( CODE_SITE = 'MAR')  AND ( CODE_OF_SITE LIKE  '%'  OR CODE_OF_SITE IS NULL  )  ORDER BY CODE_OF_SITE ASC [m 
+18:54:22.967 [35mDEBUG[m - http-8383-exec-6  - FiltreSession [35mdoFilter - UCS indique que l'utilisateur n'est pas connecté[m 
+18:54:22.967 [35mDEBUG[m - http-8383-exec-6  - FiltreSession [35mRequête pour page non login (http://192.168.1.43:8383/Quartis-Web/moduleChange.ajx?moduleID=OPTIMA_Suivi_Equipement&userID=administrateur) mais pas de user en session.[m 
+18:54:22.967 [35mDEBUG[m - http-8383-exec-1  - FiltreSession [35mdoFilter - UCS indique que l'utilisateur n'est pas connecté[m 
+18:54:23.004 [35mDEBUG[m - http-8383-exec-2  - FiltreSession [35mdoFilter - UCS indique que l'utilisateur n'est pas connecté[m 
+18:54:23.004 [35mDEBUG[m - http-8383-exec-2  - FiltreSession [35mRequête pour page non login (http://192.168.1.43:8383/Quartis-Web/xxx.cas?action=deconnexion&userID=administrateur) mais pas de user en session.[m 
+18:54:23.006 [35mDEBUG[m - http-8383-exec-3  - FiltreSession [35mdoFilter - UCS indique que l'utilisateur n'est pas connecté[m 
+18:54:23.015 [35mDEBUG[m - http-8383-exec-5  - FiltreSession [35mdoFilter - UCS indique que l'utilisateur n'est pas connecté[m 
+18:54:25.550 [35mDEBUG[m - http-8383-exec-6  - FiltreSession [35mdoFilter - UCS indique que l'utilisateur n'est pas connecté[m 
+18:54:25.568 [35mDEBUG[m - http-8383-exec-6  - LoginManagedBean [35muser.id = administrateur, connecté par login/mdp Osys[m 
+18:55:34.855 [35mDEBUG[m - http-8383-exec-5  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Standard_System_Event_List[m 
+18:55:34.855 [35mDEBUG[m - http-8383-exec-5  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+18:55:34.855 [35mDEBUG[m - http-8383-exec-5  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+18:55:34.871 [35mDEBUG[m - http-8383-exec-2  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Standard_System_Event_List[m 
+18:55:34.871 [35mDEBUG[m - http-8383-exec-2  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+18:55:34.871 [35mDEBUG[m - http-8383-exec-2  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+18:55:34.875 [35mDEBUG[m - http-8383-exec-5  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+18:55:34.890 [35mDEBUG[m - http-8383-exec-2  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+Unable to load config file.
+18:55:53.095 [35mDEBUG[m - http-8383-exec-6  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Production_OF_EnCours_1[m 
+18:55:53.095 [35mDEBUG[m - http-8383-exec-6  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'...[m 
+18:55:53.096 [35mDEBUG[m - http-8383-exec-6  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'...[m 
+18:55:53.099 [35mDEBUG[m - http-8383-exec-2  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Production_OF_EnCours_1[m 
+18:55:53.099 [35mDEBUG[m - http-8383-exec-2  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'...[m 
+18:55:53.099 [35mDEBUG[m - http-8383-exec-2  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'...[m 
+18:55:53.116 [35mDEBUG[m - http-8383-exec-6  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+18:55:53.120 [35mDEBUG[m - http-8383-exec-2  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+18:55:58.858 [35mDEBUG[m - http-8383-exec-1  - GSqlQueryGeneratorSqlServer [35m--->table =MACHINE query =set rowcount 3000  SELECT CODE_MACH_SITE  , CODE_MACH  , TYPE_MACH  , dbo.OPTIMA_TRADUCTION(DESI_MACH,'fr') +'@KEYLANG_'+DESI_MACH AS DESI_MACH  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_HORA  , CODE_TERM  , CODE_FAMI_MACH  , FLAG_HABI  , FLAG_MAIN_PREV  , FLAG_ABSE_COMP  , DURE_ABSE_COMP  , NOMB_OPER_MAXI  , DURE_MAJO_CYCL  , FLAG_MACH_ACTI  , TAUX_REBU_THEO  , MODE_CALC_QUAN  , TYPE_GEST_GAMM  , TYPE_GEST_CYCL  , NOMB_PIEC_CYCL  , DURE_DETE_FIN_FABR  , NOMB_CYCL_MAXI  , DURE_MAXI_MICR_ARRE  , DURE_TEMP_PASS_ARRE  , DURE_ARRE_INDE_MAXI  , FLAG_CHAN_FABR_AUTO  , TECH_AVAN_CYCL_THEO  , NUME_BOIT_SUPE  , SUPE_NUME_ORDR  , LIEN_IMAG  , TAUX_HORA_PREP_MACH  , TAUX_HORA_PROD_MACH  , TAUX_HORA_PREP_MO  , TAUX_HORA_PROD_MO  , NUME_SERI  , dbo.OPTIMA_TRADUCTION(DESI_MARQ,'fr') +'@KEYLANG_'+DESI_MARQ AS DESI_MARQ  , CONVERT(NVARCHAR, DATE_MISE_SERV, 103) AS DATE_MISE_SERV  , FLAG_GEST_PLAN  , FLAG_OBLI_PERS  , CODE_ETAT_DEBU_OF  , CODE_ETAT_FIN_OF  , CAPA_CONT_MAXI  , CODE_UNIT  , CODE_SITE  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_EXPO_DIMO  , FLAG_SUPP FROM MACHINE  WHERE ( CODE_SITE = 'MAR')  ORDER BY CODE_MACH_SITE ASC [m 
+1
+
+
+1
+
+
+1
+
+
+1
+
+
+1
+
+
+51
+
+
+18:56:38.862 [35mDEBUG[m - http-8383-exec-1  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Standard_System_Event_List[m 
+18:56:38.862 [35mDEBUG[m - http-8383-exec-1  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+18:56:38.862 [35mDEBUG[m - http-8383-exec-1  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+18:56:38.870 [35mDEBUG[m - http-8383-exec-6  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Standard_System_Event_List[m 
+18:56:38.870 [35mDEBUG[m - http-8383-exec-6  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+18:56:38.870 [35mDEBUG[m - http-8383-exec-6  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+18:56:38.881 [35mDEBUG[m - http-8383-exec-1  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+18:56:38.888 [35mDEBUG[m - http-8383-exec-6  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+18:56:43.058 [35mDEBUG[m - http-8383-exec-5  - GSqlQueryGeneratorSqlServer [35m--->table =SCENARIO query =set rowcount 3000  SELECT CODE_SCEN  , dbo.OPTIMA_TRADUCTION(DESI_SCEN,'fr') +'@KEYLANG_'+DESI_SCEN AS DESI_SCEN  , dbo.OPTIMA_TRADUCTION(DESC_SCEN,'fr') +'@KEYLANG_'+DESC_SCEN AS DESC_SCEN  , NOM_SCEN  , FLAG_HABI_ACTI  , CODE_DECL  , dbo.OPTIMA_TRADUCTION(DESI_SCEN_COUR,'fr') +'@KEYLANG_'+DESI_SCEN_COUR AS DESI_SCEN_COUR  , COUL_SCEN  , LOGO_SCEN  , FLAG_SUPP FROM SCENARIO  ORDER BY CODE_SCEN ASC [m 
+Unable to load config file.
+18:57:15.310 [35mDEBUG[m - http-8383-exec-3  - GSqlQueryGeneratorSqlServer [35m--->table =TERMINAL_ENTREE query =set rowcount 3000  SELECT CODE_TERM  , NUME_ENTR  , TYPE_ENTR  , CODE_MACH  , DIVI_ENTR  , ETAT_ENTR  , CODE_ETAT  , NUME_PRIO  , DIVI_HARD  , COEF_MULT  FROM TERMINAL_ENTREE  ORDER BY CODE_TERM ASC [m 
+101
+L3 - Ligne 3
+101
+L1 - Ligne 1
+19:04:46.717 [35mDEBUG[m - http-8383-exec-2  - GSqlQueryGeneratorSqlServer [35m--->table =MACHINE query =set rowcount 3000  SELECT CODE_MACH_SITE  , CODE_MACH  , TYPE_MACH  , dbo.OPTIMA_TRADUCTION(DESI_MACH,'fr') +'@KEYLANG_'+DESI_MACH AS DESI_MACH  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_HORA  , CODE_TERM  , CODE_FAMI_MACH  , FLAG_HABI  , FLAG_MAIN_PREV  , FLAG_ABSE_COMP  , DURE_ABSE_COMP  , NOMB_OPER_MAXI  , DURE_MAJO_CYCL  , FLAG_MACH_ACTI  , TAUX_REBU_THEO  , MODE_CALC_QUAN  , TYPE_GEST_GAMM  , TYPE_GEST_CYCL  , NOMB_PIEC_CYCL  , DURE_DETE_FIN_FABR  , NOMB_CYCL_MAXI  , DURE_MAXI_MICR_ARRE  , DURE_TEMP_PASS_ARRE  , DURE_ARRE_INDE_MAXI  , FLAG_CHAN_FABR_AUTO  , TECH_AVAN_CYCL_THEO  , NUME_BOIT_SUPE  , SUPE_NUME_ORDR  , LIEN_IMAG  , TAUX_HORA_PREP_MACH  , TAUX_HORA_PROD_MACH  , TAUX_HORA_PREP_MO  , TAUX_HORA_PROD_MO  , NUME_SERI  , dbo.OPTIMA_TRADUCTION(DESI_MARQ,'fr') +'@KEYLANG_'+DESI_MARQ AS DESI_MARQ  , CONVERT(NVARCHAR, DATE_MISE_SERV, 103) AS DATE_MISE_SERV  , FLAG_GEST_PLAN  , FLAG_OBLI_PERS  , CODE_ETAT_DEBU_OF  , CODE_ETAT_FIN_OF  , CAPA_CONT_MAXI  , CODE_UNIT  , CODE_SITE  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_EXPO_DIMO  , FLAG_SUPP FROM MACHINE  WHERE ( CODE_SITE = 'MAR')  ORDER BY CODE_MACH_SITE ASC [m 
+19:04:55.752 [35mDEBUG[m - http-8383-exec-2  - GSqlQueryGeneratorSqlServer [35m--->table =TERMINAL_ENTREE query =set rowcount 3000  SELECT CODE_TERM  , NUME_ENTR  , TYPE_ENTR  , CODE_MACH  , DIVI_ENTR  , ETAT_ENTR  , CODE_ETAT  , NUME_PRIO  , DIVI_HARD  , COEF_MULT  FROM TERMINAL_ENTREE  WHERE CODE_MACH = 'MARL2' ORDER BY CODE_TERM ASC [m 
+19:05:39.697 [35mDEBUG[m - http-8383-exec-1  - GSqlQueryGeneratorSqlServer [35m--->table =MACHINE query =set rowcount 3000  SELECT CODE_MACH_SITE  , CODE_MACH  , TYPE_MACH  , dbo.OPTIMA_TRADUCTION(DESI_MACH,'fr') +'@KEYLANG_'+DESI_MACH AS DESI_MACH  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_HORA  , CODE_TERM  , CODE_FAMI_MACH  , FLAG_HABI  , FLAG_MAIN_PREV  , FLAG_ABSE_COMP  , DURE_ABSE_COMP  , NOMB_OPER_MAXI  , DURE_MAJO_CYCL  , FLAG_MACH_ACTI  , TAUX_REBU_THEO  , MODE_CALC_QUAN  , TYPE_GEST_GAMM  , TYPE_GEST_CYCL  , NOMB_PIEC_CYCL  , DURE_DETE_FIN_FABR  , NOMB_CYCL_MAXI  , DURE_MAXI_MICR_ARRE  , DURE_TEMP_PASS_ARRE  , DURE_ARRE_INDE_MAXI  , FLAG_CHAN_FABR_AUTO  , TECH_AVAN_CYCL_THEO  , NUME_BOIT_SUPE  , SUPE_NUME_ORDR  , LIEN_IMAG  , TAUX_HORA_PREP_MACH  , TAUX_HORA_PROD_MACH  , TAUX_HORA_PREP_MO  , TAUX_HORA_PROD_MO  , NUME_SERI  , dbo.OPTIMA_TRADUCTION(DESI_MARQ,'fr') +'@KEYLANG_'+DESI_MARQ AS DESI_MARQ  , CONVERT(NVARCHAR, DATE_MISE_SERV, 103) AS DATE_MISE_SERV  , FLAG_GEST_PLAN  , FLAG_OBLI_PERS  , CODE_ETAT_DEBU_OF  , CODE_ETAT_FIN_OF  , CAPA_CONT_MAXI  , CODE_UNIT  , CODE_SITE  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_EXPO_DIMO  , FLAG_SUPP FROM MACHINE  WHERE ( CODE_SITE = 'MAR')  ORDER BY CODE_MACH_SITE ASC [m 
+19:05:44.487 [35mDEBUG[m - http-8383-exec-6  - GSqlQueryGeneratorSqlServer [35m--->table =TERMINAL_ENTREE query =set rowcount 3000  SELECT CODE_TERM  , NUME_ENTR  , TYPE_ENTR  , CODE_MACH  , DIVI_ENTR  , ETAT_ENTR  , CODE_ETAT  , NUME_PRIO  , DIVI_HARD  , COEF_MULT  FROM TERMINAL_ENTREE  ORDER BY CODE_TERM ASC [m 
+101
+L3 - Ligne 3
+101
+L1 - Ligne 1
+101
+L2 - Ligne 2
+101
+L1 - Ligne 1
+19:20:44.263 [35mDEBUG[m - http-8383-exec-3  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Production_OF_EnCours_1[m 
+19:20:44.263 [35mDEBUG[m - http-8383-exec-3  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'...[m 
+19:20:44.263 [35mDEBUG[m - http-8383-exec-3  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'...[m 
+19:20:44.268 [35mDEBUG[m - http-8383-exec-6  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Production_OF_EnCours_1[m 
+19:20:44.269 [35mDEBUG[m - http-8383-exec-6  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'...[m 
+19:20:44.269 [35mDEBUG[m - http-8383-exec-6  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'...[m 
+19:20:44.282 [35mDEBUG[m - http-8383-exec-3  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+19:20:44.287 [35mDEBUG[m - http-8383-exec-6  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+19:20:54.246 [35mDEBUG[m - http-8383-exec-3  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Production_OF_EnCours_1[m 
+19:20:54.246 [35mDEBUG[m - http-8383-exec-3  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'...[m 
+19:20:54.246 [35mDEBUG[m - http-8383-exec-3  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'...[m 
+19:20:54.261 [35mDEBUG[m - http-8383-exec-3  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+19:21:04.252 [35mDEBUG[m - http-8383-exec-1  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Production_OF_EnCours_1[m 
+19:21:04.252 [35mDEBUG[m - http-8383-exec-1  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'...[m 
+19:21:04.252 [35mDEBUG[m - http-8383-exec-1  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'...[m 
+19:21:04.268 [35mDEBUG[m - http-8383-exec-1  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+19:21:14.250 [35mDEBUG[m - http-8383-exec-5  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Production_OF_EnCours_1[m 
+19:21:14.250 [35mDEBUG[m - http-8383-exec-5  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'...[m 
+19:21:14.250 [35mDEBUG[m - http-8383-exec-5  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'...[m 
+19:21:14.265 [35mDEBUG[m - http-8383-exec-5  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+19:21:24.259 [35mDEBUG[m - http-8383-exec-6  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Production_OF_EnCours_1[m 
+19:21:24.259 [35mDEBUG[m - http-8383-exec-6  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'...[m 
+19:21:24.259 [35mDEBUG[m - http-8383-exec-6  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'...[m 
+19:21:24.274 [35mDEBUG[m - http-8383-exec-6  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+19:21:31.954 [35mDEBUG[m - http-8383-exec-3  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Production_OF_EnCours_1[m 
+19:21:31.954 [35mDEBUG[m - http-8383-exec-3  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'...[m 
+19:21:31.954 [35mDEBUG[m - http-8383-exec-3  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'...[m 
+19:21:31.955 [35mDEBUG[m - http-8383-exec-2  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Production_OF_EnCours_1[m 
+19:21:31.955 [35mDEBUG[m - http-8383-exec-2  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'...[m 
+19:21:31.955 [35mDEBUG[m - http-8383-exec-2  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'...[m 
+19:21:31.967 [35mDEBUG[m - http-8383-exec-3  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+19:21:31.968 [35mDEBUG[m - http-8383-exec-2  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+19:21:41.762 [35mDEBUG[m - http-8383-exec-5  - GSqlQueryGeneratorSqlServer [35m--->table =OF_LISTE query =set rowcount 3000  SELECT CODE_OF_SITE  , CODE_OF  , dbo.OPTIMA_TRADUCTION(DESI_OF,'fr') +'@KEYLANG_'+DESI_OF AS DESI_OF  , CODE_CLIE  , NUME_COMM  , CONVERT(NVARCHAR, DATE_LIVR, 103) AS DATE_LIVR  , CONVERT(NVARCHAR, DATE_LANC, 103) AS DATE_LANC  , CHAM_LIBR_1  , CHAM_LIBR_2  , CHAM_LIBR_3  , QUAN_LANC  , QUAN_STOC_AFFE  , NOMB_ARTI  , CODE_ETAT_AVAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 108) AS DATE_DEBU_REEL  , DELT_HEUR_UTC_DEBU_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 108) AS DATE_FIN_REEL  , DELT_HEUR_UTC_FIN_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 108) AS DATE_IMPO  , CODE_OF_SIMP  , CODE_ARTI  , CODE_SITE  , DELT_HEUR_UTC  , FLAG_SUPP FROM OF_LISTE  WHERE ( CODE_SITE = 'MAR')  AND ( CODE_OF_SITE LIKE  '%'  OR CODE_OF_SITE IS NULL  )  ORDER BY CODE_OF_SITE ASC [m 
+PSF001106-ARTICLE BASE SARDINE
+PSF001105-THO SJ HS ETC/FL R1700 NOS
+19:28:35.428 [35mDEBUG[m - http-8383-exec-3  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Standard_System_Event_List[m 
+19:28:35.428 [35mDEBUG[m - http-8383-exec-3  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+19:28:35.428 [35mDEBUG[m - http-8383-exec-3  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+19:28:35.443 [35mDEBUG[m - http-8383-exec-3  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+19:28:35.755 [35mDEBUG[m - http-8383-exec-6  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Standard_System_Event_List[m 
+19:28:35.755 [35mDEBUG[m - http-8383-exec-6  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+19:28:35.755 [35mDEBUG[m - http-8383-exec-6  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+19:28:35.771 [35mDEBUG[m - http-8383-exec-6  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+19:28:42.551 [35mDEBUG[m - http-8383-exec-3  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Standard_System_Event_List[m 
+19:28:42.551 [35mDEBUG[m - http-8383-exec-3  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+19:28:42.551 [35mDEBUG[m - http-8383-exec-3  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+19:28:42.564 [35mDEBUG[m - http-8383-exec-3  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+19:28:42.698 [35mDEBUG[m - http-8383-exec-5  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Standard_System_Event_List[m 
+19:28:42.698 [35mDEBUG[m - http-8383-exec-5  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+19:28:42.698 [35mDEBUG[m - http-8383-exec-5  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+19:28:42.709 [35mDEBUG[m - http-8383-exec-5  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+19:28:43.869 [35mDEBUG[m - http-8383-exec-2  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Standard_System_Event_List[m 
+19:28:43.869 [35mDEBUG[m - http-8383-exec-2  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+19:28:43.869 [35mDEBUG[m - http-8383-exec-2  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+19:28:43.881 [35mDEBUG[m - http-8383-exec-2  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+19:28:44.001 [35mDEBUG[m - http-8383-exec-1  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Standard_System_Event_List[m 
+19:28:44.001 [35mDEBUG[m - http-8383-exec-1  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+19:28:44.001 [35mDEBUG[m - http-8383-exec-1  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+19:28:44.013 [35mDEBUG[m - http-8383-exec-1  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+19:28:44.119 [35mDEBUG[m - http-8383-exec-6  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Standard_System_Event_List[m 
+19:28:44.119 [35mDEBUG[m - http-8383-exec-6  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+19:28:44.119 [35mDEBUG[m - http-8383-exec-6  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+19:28:44.131 [35mDEBUG[m - http-8383-exec-6  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+19:28:45.051 [35mDEBUG[m - http-8383-exec-1  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Standard_System_Event_List[m 
+19:28:45.051 [35mDEBUG[m - http-8383-exec-1  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+19:28:45.051 [35mDEBUG[m - http-8383-exec-1  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+19:28:45.062 [35mDEBUG[m - http-8383-exec-1  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+19:28:45.246 [35mDEBUG[m - http-8383-exec-6  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Standard_System_Event_List[m 
+19:28:45.246 [35mDEBUG[m - http-8383-exec-6  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+19:28:45.246 [35mDEBUG[m - http-8383-exec-6  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+19:28:45.261 [35mDEBUG[m - http-8383-exec-6  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+19:28:48.342 [35mDEBUG[m - http-8383-exec-3  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Standard_System_Event_List[m 
+19:28:48.342 [35mDEBUG[m - http-8383-exec-3  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+19:28:48.342 [35mDEBUG[m - http-8383-exec-3  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+19:28:48.353 [35mDEBUG[m - http-8383-exec-3  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+19:28:48.450 [35mDEBUG[m - http-8383-exec-5  - TableDivTransformer [35mcreateFileName ()--> Nom du fichier export = _Standard_System_Event_List[m 
+19:28:48.450 [35mDEBUG[m - http-8383-exec-5  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+19:28:48.450 [35mDEBUG[m - http-8383-exec-5  - TableExcelTransformer [35mactionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.43-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'...[m 
+19:28:48.462 [35mDEBUG[m - http-8383-exec-5  - TableExcelTransformer [35mactionPerformed - Fin de l'écriture dans le fichier.[m 
+19:28:51.637 [35mDEBUG[m - http-8383-exec-2  - GSqlQueryGeneratorSqlServer [35m--->table =SITE query =set rowcount 3000  SELECT CODE_SITE  , dbo.OPTIMA_TRADUCTION(DESI_SITE,'fr') +'@KEYLANG_'+DESI_SITE AS DESI_SITE  , ZONE_UTC  , FLAG_HEUR_ETE  , LANG_IMPO_DEFA  , CODE_GROU  , FLAG_SUPP FROM SITE  ORDER BY CODE_SITE ASC [m 

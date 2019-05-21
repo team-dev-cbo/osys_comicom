@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<server ram-monitoring="600">
+    <web-instances>
+        <instance-ref name="Quartis-Pro-web" port="8384" config-path="conf/Quartis-Pro-web.xml" active="true" main-jar="jars/Quartis-Pro-runtime.jar"/>
+        <instance-ref name="Quartis-Pro-auth" port="8385" config-path="conf/Quartis-Pro-auth.xml" active="true" main-jar="jars/Quartis-Pro-runtime.jar"/>
+        <instance-ref name="Quartis-Pro-console" port="8386" config-path="conf/Quartis-Pro-console.xml" active="true" main-jar="jars/Quartis-Pro-runtime.jar"/>
+        <instance-ref name="Quartis-Pro-groovy" port="8387" config-path="conf/Quartis-Pro-groovy.xml" active="true" main-jar="jars/Quartis-Pro-runtime.jar"/>
+        <instance-ref name="Quartis-Pro-tools" port="8388" config-path="conf/Quartis-Pro-tools.xml" active="true" main-jar="jars/Quartis-Pro-runtime.jar"/>
+    </web-instances>
+</server>

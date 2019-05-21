@@ -1,0 +1,23 @@
+/*
+ * $Id: f_helpMessageZone.css,v 1.2 2006/09/20 17:55:24 oeuillot Exp $
+ */
+
+/**
+ *
+ * @class f_helpMessageZone
+ *
+ * @author Olivier Oeuillot (latest modification by $Author: oeuillot $)
+ * @version $Revision: 1.2 $ $Date: 2006/09/20 17:55:24 $ 
+ */
+ 
+.f_helpMessageZone {
+	font: 8pt Verdana, Arial, Helvetica, sans-serif;
+	vertical-align: top;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	background-color: #FFFFCC;
+}
+
+.f_helpMessageZoneTitle {
+	font: bold 8pt Verdana, Arial, Helvetica, sans-serif;
+}

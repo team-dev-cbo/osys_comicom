@@ -1,0 +1,108 @@
+WITH TYPES_DEFS;
+
+MODULE STDSTRING; C;
+
+
+// formattage
+
+
+FUNCTION EstMajuscule(C : CHAR) RETURN BOOLEAN; 101;
+
+FUNCTION EstMinuscule(C : CHAR) RETURN BOOLEAN; 102;
+
+FUNCTION EstAlphabetique(C : CHAR) RETURN BOOLEAN; 103;
+
+FUNCTION EstChiffreDecimal(C : CHAR) RETURN BOOLEAN; 104;
+
+FUNCTION EstAlphaNumerique(C : CHAR) RETURN BOOLEAN; 105;
+
+FUNCTION EstChiffreHexadecimal(C : CHAR) RETURN BOOLEAN; 106;
+
+FUNCTION EstBlanc(C : CHAR) RETURN BOOLEAN; 107;
+
+FUNCTION EstControle(C : CHAR) RETURN BOOLEAN; 108;
+
+FUNCTION EstPonctuation(C : CHAR) RETURN BOOLEAN; 109;
+
+FUNCTION EstGraphique(C : CHAR) RETURN BOOLEAN; 110;
+
+FUNCTION EstImprimable(C : CHAR) RETURN BOOLEAN; 111;
+
+FUNCTION Majuscule(C : CHAR) RETURN CHAR; 112;
+
+FUNCTION Minuscule(C : CHAR) RETURN CHAR; 113;
+
+FUNCTION  Str(I : INTEGER) RETURN NombreTexte; 114;
+
+FUNCTION Val(S : NombreTexte) RETURN INTEGER; 115;
+
+FUNCTION Longueur(S : TresGrandeChaine) RETURN INTEGER; 116;
+
+FUNCTION EnleveBlancs(Chaine : GrandeChaine) RETURN GrandeChaine; 117;
+
+FUNCTION ExtraitChaines(Parametres : T_ParametresExtraction; Source : TresGrandeChaine)
+        RETURN  T_ResultatExtraction; 118;
+
+FUNCTION EstEntierPositif(S : NombreTexte) RETURN BOOLEAN; 121;
+
+FUNCTION EstEntier(S : NombreTexte) RETURN BOOLEAN; 122;
+
+
+FUNCTION ExtraitChaineNumDelEx (Chaine : TresGrandeChaine; NumeroChamp : INTEGER;
+                                 Delimiteur : CHAR)
+        RETURN TresGrandeChaine; 124;
+                                                 
+FUNCTION Strq(ChaineEntree : GrandeChaine) RETURN GrandeChaine; 125;
+
+FUNCTION ExtraitChainePosLong (Chaine : GrandeChaine; Position,Longueur : INTEGER)
+        RETURN GrandeChaine;  126;
+
+FUNCTION ExtraitChaineNumDel (Chaine : GrandeChaine; NumeroChamp : INTEGER;
+                                 Delimiteur : CHAR)
+        RETURN GrandeChaine; 127;
+
+FUNCTION AjouteNFoisCaractere(Chaine : GrandeChaine;Nombre : INTEGER; Caractere: CHAR)
+        RETURN GrandeChaine; 128;
+
+FUNCTION ComposeMessage2x40(Ligne1,Ligne2 : GrandeChaine)
+        RETURN GrandeChaine; 129;
+
+
+FUNCTION ChaineEnReel(Valeur : NombreTexte) RETURN REAL; 130;
+
+FUNCTION ReelEnChaine(Valeur : REAL; NombreDecimales : INTEGER) RETURN NombreTexte; 131;
+
+// Mise en majuscules de tous les caracteres d'une chaine
+FUNCTION ChaineEnMajuscule(Chaine : GrandeChaine) RETURN GrandeChaine; 132;
+
+FUNCTION        ASCIIEnCaractere(CodeASCII: INTEGER) RETURN CHAR;   133;
+
+FUNCTION ChaineEnMinuscule (Chaine : GrandeChaine) RETURN   GrandeChaine; 134;
+
+FUNCTION ComposeMessage2x16(Ligne1,Ligne2 : GrandeChaine) RETURN GrandeChaine; 135;
+FUNCTION EstNumerique(S : NombreTexte) RETURN BOOLEAN; 136;
+
+FUNCTION PosSousChaine( p_chaine : TresGrandeChaine ; p_sousChaine : GrandeChaine ; p_debut : INTEGER ) RETURN INTEGER ; 137;
+
+FUNCTION GrandeChaineEnReel(Valeur : GrandeChaine) RETURN REAL; 138;
+
+FUNCTION ReelEnGrandeChaine(Valeur : REAL; NombreDecimales : INTEGER) RETURN GrandeChaine ; 139;
+
+
+
+// traitement des chaines de type ChaineEx
+
+FUNCTION FichierVersChaineEx( p_fichier : GrandeChaine ; p_destination : INFO_VARIABLE ) RETURN Integer ; 350 ;
+FUNCTION LongueurEx( p_chaine : ChaineEx ) RETURN Integer ; 351 ;
+FUNCTION ExtraitChainePosLongEx( p_chaine : ChaineEx ; p_position, p_longueur : Integer ) RETURN chaineEx ; 352 ;
+FUNCTION PosSousChaineEx( p_chaine : ChaineEx ; p_sousChaine : TresGrandeChaine ; p_debut : Integer ) RETURN Integer ; 353 ;
+FUNCTION InserePosSousChaine( p_chaine : INFO_VARIABLE ; p_sousChaine : TresGrandeChaine ; p_debut : Integer ) RETURN boolean ; 354 ;
+FUNCTION InserePosSousChaineEx( p_chaine : INFO_VARIABLE ; p_sousChaine : ChaineEx ; p_debut : Integer ) RETURN boolean ; 355 ;
+FUNCTION SupprimePosSousChaine( p_chaine : INFO_VARIABLE ; p_debut,p_longueur : Integer ) RETURN boolean ; 356 ;
+FUNCTION SupprimePosSousChaineEx( p_chaine : INFO_VARIABLE ; p_debut,p_longueur : Integer ) RETURN boolean ; 357 ;
+FUNCTION RemplaceSousChaine( p_chaine : INFO_VARIABLE ; p_sousChaine,p_chaineRemplace : GrandeChaine ; p_position : Integer ) RETURN boolean ; 358 ;
+FUNCTION RemplaceSousChaineEx( p_chaine : INFO_VARIABLE ; p_sousChaine,p_chaineRemplace : TresGrandeChaine ; p_position : Integer ) RETURN boolean ; 359 ;
+FUNCTION ChaineExVersFichier( p_chaine : ChaineEx ; p_fichier : GrandeChaine ) RETURN Integer ; 360 ;
+
+
+END STDSTRING;

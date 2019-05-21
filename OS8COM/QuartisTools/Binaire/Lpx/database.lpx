@@ -1,0 +1,43 @@
+WITH TYPES_DEFS;
+
+MODULE DATABASE; C;
+
+
+FUNCTION ExecuteRequeteSQLTC(p_chaineSQL : TresGrandeChaine; p_typeCanal : INTEGER ) return T_ReponseSQL; 400 ;
+FUNCTION ExecuteRequeteTC(p_nomRequete : GrandeChaine ; p_typeCanal : INTEGER ) return T_ReponseSQL; 401 ;
+FUNCTION ExecuteRequeteIdTC(p_idRequete : INTEGER; p_typeCanal : INTEGER ) return T_ReponseSQL; 402 ;
+FUNCTION ExecuteRequeteId(p_idRequete : INTEGER ) return T_ReponseSQL; 403 ;
+FUNCTION ExecuteRequete(p_nomRequete : GrandeChaine ) return T_ReponseSQL; 404 ;
+FUNCTION ExecuteRequeteSQL(p_chaineSQL : TresGrandeChaine) return T_ReponseSQL; 405 ;
+FUNCTION ValeurChamp(p_reponseSQL : T_ReponseSQL;ligne,colonne:INTEGER) return GrandeChaine; 406 ;
+FUNCTION FermeReponseSQL(p_reponseSQL : T_ReponseSQL) return BOOLEAN; 407 ;
+FUNCTION ExecuteOk(p_reponseSQL : T_ReponseSQL) return BOOLEAN; 408 ;
+FUNCTION SourceErreurSQL(p_reponseSQL : T_ReponseSQL) return GrandeChaine ; 409 ;
+FUNCTION DescriptionErreurSQL(p_reponseSQL : T_ReponseSQL) return GrandeChaine; 410 ;
+FUNCTION NombreReponseSQL(p_reponseSQL : T_ReponseSQL) return INTEGER; 411 ;
+FUNCTION NombreChampSQL(p_reponseSQL : T_ReponseSQL) return INTEGER; 412 ;
+FUNCTION ExecuteRequeteSQLEx(p_chaineSQL : ChaineEx ) return T_ReponseSQL; 413 ;
+FUNCTION ReserveCanal return T_CanalBD; 414; 
+PROCEDURE LibereCanal(p_canal : T_CanalBD); 415;
+FUNCTION ExecuteRequeteC(p_nomRequete : GrandeChaine ; p_canal : T_CanalBD) return T_ReponseSQL; 416 ;
+FUNCTION ExecuteRequeteIdC(p_idRequete : INTEGER ; p_canal : T_CanalBD) return T_ReponseSQL; 417 ;
+FUNCTION ExecuteRequeteSQLC(p_chaineSQL : TresGrandeChaine ; p_canal : T_CanalBD) return T_ReponseSQL; 418 ;
+FUNCTION ExecuteRequeteSQLExC(p_chaineSQL : ChaineEx ; p_canal : T_CanalBD) return T_ReponseSQL; 419 ;
+FUNCTION ExecuteRequeteLente(p_nomRequete : GrandeChaine ) return T_ReponseSQL; 420 ;
+FUNCTION ExecuteRequeteSQLLente(p_chaineSQL : TresGrandeChaine) return T_ReponseSQL; 421 ;
+FUNCTION ExecuteRequeteSQLExLente(p_chaineSQL : ChaineEx ) return T_ReponseSQL; 422 ;
+FUNCTION ExecuteRequeteIdLente(p_idRequete : INTEGER ) return T_ReponseSQL; 423 ;
+FUNCTION ExecuteRequeteSQLExTC(p_chaineSQL : ChaineEx ; p_typeCanal : INTEGER ) return T_ReponseSQL; 424 ;
+FUNCTION ReserveCanalLent return T_CanalBD; 425; 
+FUNCTION RequeteVersMemoire(ReponseSQL : T_ReponseSQL ; NomMemoire : GrandeChaine ) return BOOLEAN; 426;
+FUNCTION ExecuteRequeteSQLBD(p_chaineSQL : TresGrandeChaine; p_nomBD : GrandeChaine) return T_ReponseSQL; 427 ;
+FUNCTION ExecuteRequeteSQLExBD(p_chaineSQL : ChaineEx; p_nomBD : GrandeChaine) return T_ReponseSQL; 428 ;
+FUNCTION EtatConnexion(p_nomBD : GrandeChaine) return integer; 429 ;
+FUNCTION SoumissionOk(p_reponseSQL : T_ReponseSQL) return BOOLEAN; 430 ;
+FUNCTION ValeurChampEx(p_reponseSQL : T_ReponseSQL;ligne,colonne:INTEGER) return TresGrandeChaine; 431 ;
+PROCEDURE ReinitialiseConnexionBD(p_nomBD : GrandeChaine) ; 432;
+
+
+END DATABASE;
+
+

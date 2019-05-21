@@ -1,0 +1,89 @@
+
+/* -- Afficher un div au centre de la fenetre */
+div.centre {
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    width: 200px;
+    height: 200px;
+    margin-left: -100px; /* Cette valeur doit être la moitié négative de la valeur du width */
+    margin-top: -100px; /* Cette valeur doit être la moitié négative de la valeur du height */
+}
+
+
+/* -- growl : css popup */
+.ui-growl-item {	
+	background-color: white; 	
+}
+
+.ui-growl-item-container {	
+	border-color: blue;  	
+}
+
+
+/* -- selectonemenu : css pour la liste des donnees */
+.ui-selectonemenu-list {
+	font-size: 12px; 	
+}
+
+.ui-selectonemenu-panel { 
+    max-height: 300px !important;
+    overflow: auto;
+}
+
+
+
+/* -- autocomplete : css pour la liste des donnees dans le tableau */
+.ui-autocomplete-panel {
+   width: 280px !important; 
+   max-height: 300px !important;       
+   overflow: auto;   
+}
+
+.ui-autocomplete-table {
+	font-size: 12px; 
+}
+
+.ui-autocomplete-panel .ui-autocomplete-table td {  
+    border: none;   
+}
+
+/* -- panel : css pour les elements dans le panel */
+.ui-panel .ui-panel-content {    
+    padding: 0.5em 0.5em 0em 0.5em;
+}
+
+/* -- tab */
+.ui-tabs .ui-tabs-panel {
+    padding: 0.5em 0.5em;
+}
+
+
+/* -- datatable */
+/* -- Alternating DataTable Rows */
+.ui-datatable-odd {
+    background: none repeat scroll 0 0 #F2F5F9;
+}
+
+.ui-selectonemenu-items-wrapper{
+	min-width: 135px;
+}
+
+/* -- Couleur de la ligne selectionne */
+.ui-datatable .ui-datatable-even.ui-state-highlight {
+   background: #FFF9E5;
+}
+
+.ui-datatable .ui-datatable-odd.ui-state-highlight {
+   background: #FFF9E5;
+}
+
+
+/* -- alignement des colonnes a droite ou a gauche pour les criteres de recherche */ 
+.alignmentRight {
+ 	text-align : right;
+}
+
+.alignmentLeft {   
+   text-align : left;
+}

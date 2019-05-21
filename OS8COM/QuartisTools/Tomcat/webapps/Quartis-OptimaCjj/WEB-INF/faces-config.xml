@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+	version="2.0">
+	
+	<application>
+		<!-- Les beans sont managés par Spring -->		
+		<el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>		
+		<!-- Ajout de la langue par défaut et des langues supportées -->
+		<locale-config>
+			<default-locale>en</default-locale>
+ 			<supported-locale>fr</supported-locale> 
+ 			<supported-locale>en</supported-locale> 
+		</locale-config>
+		<!-- URL du package contenant les message_XX.properties -->
+		<resource-bundle>
+			<base-name>fr.osys.optima.cjj.web.lang.language</base-name>
+			<var>bundle</var>
+		</resource-bundle>
+		<!-- Gestion de la locale -->			
+  		<view-handler>fr.osys.optima.cjj.web.view.common.handler.CommonViewHandler</view-handler>  
+  		
+  		<!-- Afficher une fenetre dialog (jsf) qui est definit dans un fichier '.xhtml'-->  	
+<!--    		   		
+		<action-listener>org.primefaces.application.DialogActionListener</action-listener>
+  		<navigation-handler>org.primefaces.application.DialogNavigationHandler</navigation-handler>
+  		<view-handler>org.primefaces.application.DialogViewHandler</view-handler>
+-->  		  		  		
+	</application>
+		
+	<managed-bean>
+		<managed-bean-name>paramUrl</managed-bean-name>
+		<managed-bean-class>fr.osys.optima.cjj.web.view.common.beans.ParamUrl</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>		
+	 	
+	<managed-bean>
+		<managed-bean-name>serviceManager</managed-bean-name>
+		<managed-bean-class>fr.osys.optima.cjj.web.view.common.beans.ServiceManager</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+ 		<managed-property>
+			<property-name>evtProdCorrServices</property-name>
+			<value>#{evtProdCorrServices}</value>			
+		</managed-property>	
+		<managed-property>
+			<property-name>prodServices</property-name>
+			<value>#{prodServices}</value>			
+		</managed-property>	
+		<managed-property>
+			<property-name>persServices</property-name>
+			<value>#{persServices}</value>			
+		</managed-property>					
+	</managed-bean>
+	
+	<managed-bean>
+		<managed-bean-name>evtProdViewModel</managed-bean-name>
+		<managed-bean-class>fr.osys.optima.cjj.web.view.correction.production.EvtProdViewModel</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+		
+	<managed-bean>
+		<managed-bean-name>evtProdCorrController</managed-bean-name>
+		<managed-bean-class>fr.osys.optima.cjj.web.view.correction.production.EvtProdCorrController</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<property-name>paramUrl</property-name>
+			<property-class>fr.osys.optima.cjj.web.view.common.beans.ParamUrl</property-class>
+			<value>#{paramUrl}</value>
+		</managed-property>
+ 		<managed-property>
+			<property-name>serviceManager</property-name>
+			<property-class>fr.osys.optima.cjj.web.view.common.beans.ServiceManager</property-class>
+			<value>#{serviceManager}</value>
+		</managed-property>	
+		<managed-property>
+			<property-name>evtProdViewModel</property-name>
+			<property-class>fr.osys.optima.cjj.web.view.correction.production.EvtProdViewModel</property-class>
+			<value>#{evtProdViewModel}</value>
+		</managed-property>			
+	</managed-bean>
+	
+	<managed-bean>
+		<managed-bean-name>evtPersViewModel</managed-bean-name>
+		<managed-bean-class>fr.osys.optima.cjj.web.view.correction.personnel.EvtPersViewModel</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+		
+	<managed-bean>
+		<managed-bean-name>evtPersCorrController</managed-bean-name>
+		<managed-bean-class>fr.osys.optima.cjj.web.view.correction.personnel.EvtPersCorrController</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<property-name>paramUrl</property-name>
+			<property-class>fr.osys.optima.cjj.web.view.common.beans.ParamUrl</property-class>
+			<value>#{paramUrl}</value>
+		</managed-property>
+ 		<managed-property>
+			<property-name>serviceManager</property-name>
+			<property-class>fr.osys.optima.cjj.web.view.common.beans.ServiceManager</property-class>
+			<value>#{serviceManager}</value>
+		</managed-property>	
+		<managed-property>
+			<property-name>evtPersViewModel</property-name>
+			<property-class>fr.osys.optima.cjj.web.view.correction.personnel.EvtPersViewModel</property-class>
+			<value>#{evtPersViewModel}</value>
+		</managed-property>			
+	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>multiTimeline</managed-bean-name>
+		<managed-bean-class>fr.osys.optima.cjj.web.view.correction.data.component.MultiTimeLine</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<property-name>locale</property-name>
+			<value>#{locale}</value>			
+		</managed-property>
+	</managed-bean>
+	
+	<managed-bean>
+		<managed-bean-name>multiTimelinePers</managed-bean-name>
+		<managed-bean-class>fr.osys.optima.cjj.web.view.correction.data.component.MultiTimeLinePers</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<property-name>locale</property-name>
+			<value>#{locale}</value>			
+		</managed-property>
+	</managed-bean>            
+   
+	<navigation-rule>
+		<from-view-id>/jsf/production/initEvtProdTabView.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>initView</from-outcome>
+			<to-view-id>/jsf/production/evtProdTabView.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>/jsf/personnel/initEvtPersTabView.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>initViewPers</from-outcome>
+			<to-view-id>/jsf/personnel/evtPersTabView.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+</faces-config>

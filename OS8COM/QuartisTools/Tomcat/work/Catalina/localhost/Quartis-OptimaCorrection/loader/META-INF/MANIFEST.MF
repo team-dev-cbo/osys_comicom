@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.6.5
+Created-By: 1.5.0_10-b03 (Sun Microsystems Inc.)
+
+Name: com.icesoft.faces
+Implementation-Title: ICEfaces
+Implementation-Version: 1.8.2_7 (2009-09-30 12:37 MDT)
+Implementation-Vendor: ICEsoft Technologies, Inc.
+

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration scan="true" scanPeriod="30 seconds">
+
+	<!-- <property resource="configSod.properties" /> -->
+
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<!-- revoir pattern -->
+			<pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %class[%L]-%msg%n</pattern>
+		</encoder>
+
+	</appender>
+<!-- 
+	<appender name="FILE_ARCHIVE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		Support multiple-JVM writing to the same log file
+		<append>true</append>
+
+		<file>${catalina.base}/logs/archives/optimaTmlCore.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			daily rollover
+			<fileNamePattern>${catalina.base}/logs/archives/optimaTmlCore.%d{yyyy-MM-dd}.%i.log.zip
+			</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				or whenever the file size reaches 10MB
+				<maxFileSize>100MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %class[%L]-%msg%n</pattern>
+		</encoder>
+	</appender> -->
+<!-- 
+	<appender name="FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		Support multiple-JVM writing to the same log file
+		<append>true</append>
+		<file>${catalina.base}/logs/optimaWorkflowServer.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			daily rollover
+			<MaxHistory>10</MaxHistory>
+			<fileNamePattern>${catalina.base}/logs/optimaTmlCore.%d{yyyy-MM-dd}.%i.log
+			</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				or whenever the file size reaches 10MB
+				<maxFileSize>10MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %class[%L]-%msg%n</pattern>
+		</encoder>
+	</appender> -->
+ 
+ 	<logger name="org.hibernate" level="ERROR" />
+	<logger name="org.hibernate.event.def" level="ERROR" />
+	<logger name="org.hibernate.hql" level="INFO" />
+	<logger name="org.hibernate.hql.internal.ast" level="ERROR" />
+	<logger name="org.hibernate.hql.internal.antlr" level="ERROR" />
+	<logger name="org.hibernate.cfg" level="ERROR" />
+	<logger name="org.hibernate.id.factory" level="ERROR" />
+	<logger name="org.hibernate.jdbc" level="INFO" />
+	<logger name="org.hibernate.engine" level="ERROR" />
+	<logger name="org.hibernate.loader" level="ERROR" />
+	<logger name="org.hibernate.persister.entity" level="ERROR" />
+	<logger name="org.hibernate.persister.collection" level="ERROR" />
+	<logger name="org.hibernate.tool" level="ERROR" />
+	<logger name="org.hibernate.type" level="ERROR" />
+<!--  <logger name="org.hibernate.type.BasicTypeRegistry" level="INFO" /> -->
+<!--  <logger name="org.hibernate.type.descriptor.sql.BasicExtractor" level="DEBUG" />  -->
+	<logger name="org.hibernate.type.descriptor.sql" level="ERROR" />  
+	<logger name="org.hibernate.type.EnumType" level="ERROR" />
+	<logger name="org.hibernate.type.TypeFactory" level="ERROR" />
+	<logger name="org.hibernate.SQL" level="ERROR" />
+	<logger name="org.hibernate.util.DTDEntityResolver" level="INFO" />
+	<logger name="org.springframework" level="ERROR" />
+	<logger name="org.springframework.beans" level="ERROR" />
+	<logger name="org.springframework.beans.support" level="ERROR" />
+	<logger name="org.springframework.beans.factory.support" level="ERROR" />
+	<logger name="org.springframework.beans.factory.xml" level="ERROR" />
+	<logger name="org.springframework.web.jsf" level="ERROR" />
+	<logger name="org.springframework.aop" level="ERROR" />
+	<logger name="org.springframework.aop.framework" level="ERROR" />
+	<logger name="org.springframework.aop.framework.autoproxy" level="ERROR" />
+	<logger name="org.springframework.core.env" level="ERROR" />
+	<logger name="org.springframework.ui.velocity" level="ERROR" />
+	<logger name="fr.osys.optima.tml" level="WARN" />	
+	<logger name="fr.osys.optima.tml.core" level="ERROR" /> 	
+	<logger name="org.quartz.core.QuartzSchedulerThread" level="INFO" />
+	
+	<root>
+	  	<level value="INFO" />  
+		<appender-ref ref="CONSOLE" />
+		<!-- <appender-ref ref="FILE" /> -->
+		<!-- <appender-ref ref="FILE_ARCHIVE" /> -->
+	</root>
+</configuration>
+
+

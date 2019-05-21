@@ -1,0 +1,16 @@
+/*
+ * $Id: f_image.css,v 1.2 2006/09/20 17:55:24 oeuillot Exp $
+ */
+
+/**
+ *
+ * @class f_image
+ *
+ * @author Olivier Oeuillot (latest modification by $Author: oeuillot $)
+ * @version $Revision: 1.2 $ $Date: 2006/09/20 17:55:24 $ 
+ */
+ 
+.f_image  {
+	-moz-user-select: none;
+	user-select: none;
+}

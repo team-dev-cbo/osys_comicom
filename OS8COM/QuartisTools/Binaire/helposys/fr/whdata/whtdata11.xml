@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<tocdata>
+<item name="QuartisMsgChemin" url="scenario/lpx/fonctions/QuartisMessenger/HIDD_QuartisMsgChemin.htm" />
+<item name="QuartisMsgEnvoieMessage" url="scenario/lpx/fonctions/QuartisMessenger/HIDD_QuartisMsgEnvoieMessage.htm" />
+<item name="QuartisMsgFermeReponse" url="scenario/lpx/fonctions/QuartisMessenger/HIDD_QuartisMsgFermeReponse.htm" />
+<item name="QuartisMsgLigne" url="scenario/lpx/fonctions/QuartisMessenger/HIDD_QuartisMsgLigne.htm" />
+<item name="QuartisMsgLitMessage" url="scenario/lpx/fonctions/QuartisMessenger/HIDD_QuartisMsgLitMessage.htm" />
+<item name="QuartisMsgNombreReponse" url="scenario/lpx/fonctions/QuartisMessenger/HIDD_QuartisMsgNombreReponse.htm" />
+
+</tocdata>

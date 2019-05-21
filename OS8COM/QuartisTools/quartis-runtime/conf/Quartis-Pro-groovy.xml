@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<web-instance name="Quartis-Pro-groovy">
+    <short-label>Quartis-Pro-groovy</short-label>
+    <description>Instance hébergeant le moteur d'exécution des scripts groovy de QuartisPro</description>
+    <environment/>
+    <resources/>
+    <web-app context-path="/quartispro-groovy" war-file="wars\Quartis-Pro-groovy.war" active="true">
+        <environment>
+            <environment-variable name="dispatcher-url" type="java.lang.String" value="http://localhost:8384/quartistools-web" override="true"/>
+            <environment-variable name="application-path" type="java.lang.String" value="C:\Osys\QUARTIS_PRO\quartis-pro-web" override="true"/>
+            <environment-variable name="Quartis-Pro-tools-webservices" type="java.lang.String" value="http://localhost:8388/quartispro-tools/wserv" override="true"/>
+        </environment>
+        <resources/>
+    </web-app>
+</web-instance>

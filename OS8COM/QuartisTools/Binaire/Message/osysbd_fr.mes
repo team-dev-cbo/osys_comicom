@@ -1,0 +1,86 @@
+Version 1
+APP 6
+
+1 Canal %1 : Demande d'exécution de la requête numéro %2
+2 Canal %1 : Début exécution de la requête %2 ( %3 ) 
+3 Canal %1 : Fin exécution de la requête %2 ( %3 )
+4 Canal %1 : Requête d'action %2 effectuée 
+5 Canal %1 : Requête de selection %2 effectuée 
+6 Erreur Oracle %1 sur le canal %2 de l'exécution de la requête %3
+7 Tentative de connexion (canal=%1 - base de données = "%2" - chaîne de connexion ="%3")
+8 Erreur Oracle %1 : Erreur de connexion à la base de données sur le canal %2
+9 Canal %1 : Connexion OK à la BD "%2" 
+10 Erreur d'allocation pour les descripteurs
+11 Demande de réservation d'un canal par l'utilisateur "%1" du groupe "%2"
+12 Demande de libération du canal %1 par l'utilisateur "%2" du groupe "%3"
+13 Impossible d'exécuter une requête si son numero ID vaut 0 et que son code source SQL est vide
+14 Le canal %1 n'est pas réservé en ce moment
+15 La requête (ID=%1) n'existe pas
+16 L'utilisateur "%1" du groupe "%2" n'a pas le droit d'exécuter une requête
+17 L'utilisateur "%1" du groupe "%2" n'a pas le droit de lire la configuration de la base de données
+18 L'utilisateur "%1" du groupe "%2" n'a pas le droit d'administrer la base de données
+19 Erreur d'écriture dans l'archive
+20 Lecture de la configuration des différentes base de données 
+21 Lecture de la configuration des différentes base de données effectuée
+22 Ecriture de la configuration des différentes base de données 
+23 Ecriture de la configuration des différentes base de données effectuée
+24 Erreur : Le nombre de canaux réservés est saturé
+25 Canal %1 réservé par l'utilisateur "%2" du groupe "%3"
+26 Canal %1 libéré par l'utilisateur "%2" du groupe "%3"
+27 Libération du canal %1 est impossible parce qu'il n'a pas été réservé
+28 Le canal %1 n'existe pas dans la liste des canaux 
+29 Demande d'exécution d'une requête (IdRequete:%1 - SQL:"%2" - SGBD:"%3")
+30 SGBD "%1" - Canal %2 : Erreur d'exécution du thread 
+31 Thread mal libéré pour le canal %1 (Base de données "%2")
+32 Ajout de la requête exécutable lente n°%1 dans le canal n°%2
+33 Ajout de la requête exécutable rapide n°%1 dans le canal n°%2
+34 Libération du canal %1 impossible parce que le canal est réservé par l'utilisateur "%2" du groupe "%3" 
+35 Aucune instance ne correspond à la condition where de la requête exécutable %1
+36 La mémoire (ID=%1) n'existe pas
+37 La mémoire (ID=%1) n'existe pas dans la liste de paramètres
+38 Erreur d'ouverture du fichier temporaire %1
+39 Erreur de connexion à la liste des différentes bases de données
+40 Lecture du type de la base de données "%1"
+41 Lecture du type de la base de données "%1" effectuée
+42 Lecture de la structure de la base de données "%1"
+43 Lecture de la structure de la base de données "%1" effectuée
+44 ADO : SGBD "%1" - Erreur sur le canal %2 (Source d'erreur:"%3")
+45 ADO : SGBD "%1" - Erreur de connexion (Canal : %2 - Source d'erreur:"%3" - Description:"%4")
+46 Le provider contenu dans la chaîne de connexion est incorrecte sur le canal %1 (Base de données "%2")
+47 ADO : Base de données "%1" - Erreur du schéma sur le canal %2 ( Source:"%3" Description:"%4" )
+48 ADO : Base de données "%1" - Erreur de lecture des champs de la table "%2" sur le canal %3 (Source de l'erreur:"%4" Description:"%5")
+49 Erreur Oracle
+50 La liste des différentes bases de données est vide
+51 Exécution de la requête - numExec:%1- SGBD:"%2" - SQL="%3 ..."
+52 Réponse de la requête par ADO (numExec:%1) (SGBD:"%2")
+53 Réponse de la requête (numExec:%1  - SGBD:%2 - NbEnreg:%3 - debutSql:"%4 ...")
+54 SGBD "%1" - Envoi la réponse de la requête (NumExec:%2) au client
+55 SGBD "%1" n'existe pas. Impossible d'ajouter la requête exécutable "%2"
+56 SGBD "%1" - Perte de connexion - Impossible d'ajouter la requête exécutable ("%2")
+57 Description:"%1"
+58 RequêteSQL:"%1" 
+59 SGBD "%1" - Perte de connexion
+60 SGBD "%1" - Reconnexion du réseau
+61 SGBD "%1" - Problème de lancement du thread pour pouvoir reconnecter la base de données
+62 SGBD "%1" - Erreur d'initialisation de la base de données
+63 SGBD "%1" - Initialisation de la base de données OK
+64 SGBD "%1" - Tentative de reconnexion à la base de données
+65 Profiler : Erreur d'envoi : Serveur Occupé (Mémoire partagée)
+66 Profiler : Erreur d'envoi : délai dépassé (Mémoire partagée)
+67 Profiler : Erreur d'envoi du message="%1"
+68 Profiler : Erreur d'initialisation de la communication entre le profiler et le moteur (Mémoire partagée)
+69 Profiler : Erreur d'initialisation de la communication entre le profiler et le moteur (Socket)
+70 Profiler : Erreur d'envoi sur la socket (message="%1")
+71 Profiler : Connexion de la socket non établit (message="%1")
+72 Scénario "%1" - Erreur d'exécution de la requête 
+73 Avant Close Connexion (SGBD:%1 - NumCanal=%2 - etatConn=%3)
+74 Apres Close Connexion (SGBD:%1 - NumCanal=%2 - etatConn=%3) 
+75 Module OsysBD
+76 Réinitialisation de la base de données 
+77 ADO : SGBD "%1" - Erreur sur le canal %2 (NumErr:%3 - Source d'erreur:"%4")
+78 Erreur de connexion à la base de données : SGBD "%1" - Canal:%2 - NumErr:%3 - Source d'erreur:"%4"
+79 Erreur Deadlock #%1: Réexécution de la requête (SGBD:"%2" - Scénario:"%3" - SQL="%4") 
+80 Erreur Deadlock #%1: Abandon de la réexécution de la requête (SGBD:"%2" - Scénario:"%3" - SQL="%4")
+81 ADO : SGBD "%1" - Erreur canal %2 (NumErr:%3 - SqlState:%4 - Source:"%5")
+
+

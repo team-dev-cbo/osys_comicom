@@ -1,0 +1,68 @@
+09:10:41.544 INFO [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+09:10:43.765 INFO [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextDestroyed()  
+09:10:43.765 INFO [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextDestroyed()  
+09:10:43.788 INFO [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+11:34:33.496 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+11:34:51.213 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+11:34:54.892 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextInitialized()  
+11:34:54.892 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextInitialized()  
+11:48:45.431 GRAVE [org.apache.catalina.core.StandardWrapperValve invoke] - "Servlet.service()" pour la servlet ActionServlet a généré une exception 
+java.lang.IllegalStateException: "getOutputStream()" a déjà été appelé pour cette réponse
+	at org.apache.catalina.connector.Response.getWriter(Response.java:611)
+	at org.apache.catalina.connector.ResponseFacade.getWriter(ResponseFacade.java:198)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:333)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+ 
+12:42:17.808 SEVERE [org.apache.catalina.core.StandardWrapperValve invoke] - "Servlet.service()" pour la servlet ActionServlet a généré une exception 
+java.lang.IllegalStateException: "getOutputStream()" a déjà été appelé pour cette réponse
+	at org.apache.catalina.connector.Response.getWriter(Response.java:611)
+	at org.apache.catalina.connector.ResponseFacade.getWriter(ResponseFacade.java:198)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:333)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+ 
+14:06:00.327 SEVERE [org.apache.catalina.core.StandardWrapperValve invoke] - "Servlet.service()" pour la servlet ActionServlet a généré une exception 
+java.lang.IllegalStateException: "getOutputStream()" a déjà été appelé pour cette réponse
+	at org.apache.catalina.connector.Response.getWriter(Response.java:611)
+	at org.apache.catalina.connector.ResponseFacade.getWriter(ResponseFacade.java:198)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:333)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+ 

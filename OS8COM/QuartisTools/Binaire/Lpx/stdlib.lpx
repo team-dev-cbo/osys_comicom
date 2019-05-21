@@ -1,0 +1,212 @@
+WITH TYPES_DEFS;
+
+MODULE STDLIB; C;
+
+
+
+//math
+FUNCTION Racine(Reel : REAL) RETURN REAL; 140;
+
+
+//temps
+FUNCTION TempsSysteme RETURN INTEGER;	
+        201;
+FUNCTION FormaterTempsSysteme(Format :GrandeChaine) RETURN GrandeChaine;
+	202;
+FUNCTION FormaterTemps(Format : GrandeChaine;Date : INTEGER) return GrandeChaine;
+	203;
+FUNCTION DeFormaterTemps(Format , Date : GrandeChaine) return INTEGER;
+	204;
+
+FUNCTION FormaterDateHeure(Date : INTEGER) return  GrandeChaine ; 205 ;
+FUNCTION FormaterDate(Date : INTEGER) return GrandeChaine ; 206 ;
+FUNCTION FormaterDuree(Date : INTEGER) return GrandeChaine ; 207 ;
+FUNCTION DeformaterDateHeure(Date : GrandeChaine) return INTEGER ; 208 ;
+FUNCTION AjouterTemps(Format : GrandeChaine; Date:GrandeChaine; Duree:integer) return GrandeChaine ; 209 ;
+
+FUNCTION JourSemaineAnneeIso( p_date, p_premierJour : Integer ; p_jourSemaine , p_semaine , p_annee : INFO_VARIABLE ) RETURN Integer ; 210 ;
+
+FUNCTION FormaterTempsSystemeUTC(Format :GrandeChaine) RETURN GrandeChaine; 211;
+FUNCTION DecalageUTC(FuseauHoraire:GrandeChaine; GestionHeureEte:Integer) return Integer; 212;
+FUNCTION FormaterTempsUTC(Format : GrandeChaine;Date : INTEGER) return GrandeChaine; 213;
+FUNCTION TempsUTC(Date : INTEGER; FuseauHoraire:GrandeChaine; GestionHeureEte:Integer) return Integer; 214;
+FUNCTION DeformaterTempsUTC(Format : GrandeChaine; Date : GrandeChaine) return Integer; 215;
+FUNCTION DeformaterDateTZEnUTC(Format : GrandeChaine; Date : GrandeChaine; FuseauHoraire:GrandeChaine; GestionHeureEte:Integer) return Integer; 216;
+FUNCTION FormaterDateUTCEnTZ(Format : GrandeChaine; Date : Integer; FuseauHoraire:GrandeChaine; GestionHeureEte:Integer) return GrandeChaine; 217;
+FUNCTION DeltaDateTZUTC(Format : GrandeChaine; Date : GrandeChaine; FuseauHoraire:GrandeChaine; GestionHeureEte:Integer) return Integer; 218;
+FUNCTION DeformaterDateUTCEnTZ(Format : GrandeChaine; Date : GrandeChaine; FuseauHoraire:GrandeChaine; GestionHeureEte:Integer) return Integer; 219;
+FUNCTION FormaterDateTZEnUTC(Format : GrandeChaine; Date : Integer; FuseauHoraire:GrandeChaine; GestionHeureEte:Integer) return GrandeChaine; 220;
+
+
+
+PROCEDURE Randomize(Init : INTEGER); 301;
+
+FUNCTION Random RETURN INTEGER; 302;
+
+procedure Sleep(duree:integer);303;
+
+
+// Fonction sur les scénarios
+//////////
+
+FUNCTION  AjouteScenarioTemp(p_dateExec : T_Date; p_numTerm : INTEGER; p_nomScenario : GrandeChaine; p_listParam : GrandeChaine; p_listPeriph : PetiteChaine) return T_ScenarioExec; 620;
+FUNCTION  SupprimeScenarioTemp(p_numExecScenario : T_ScenarioExec) return INTEGER ; 621;
+PROCEDURE EcritValRetour(p_valeur : GrandeChaine) ; 622;
+FUNCTION  LitValRetour return GrandeChaine ; 623;
+FUNCTION  LitParam(p_numero : INTEGER) return GrandeChaine; 624;
+PROCEDURE ExecScenario(p_nomScenario : GrandeChaine; p_parametre : GrandeChaine); 625;
+
+PROCEDURE EcritTerminal(mess : GrandeChaine) ; 450;
+PROCEDURE EcritTerminalAvecNumero(term : INTEGER; mess : GrandeChaine) ; 451;
+PROCEDURE AttenteSaisie ;452;
+FUNCTION  LitMessage return GrandeChaine ; 453 ;
+FUNCTION  LitPeriphMessage return char ; 454 ;
+FUNCTION  LitDateHeureMessage return GrandeChaine ; 455 ;
+FUNCTION  AttenteSaisieTempo(duree:integer) return T_AttenteTempo; 456;
+FUNCTION  LitValAttenteSaisieTempo(AttenteTempo:T_AttenteTempo) return integer; 457;
+
+
+// Fonction sur les mémoires
+//////////
+
+FUNCTION IndexMaxMemoireUtilisateur(p_nomMem : GrandeChaine; p_nomUtilisateur : GrandeChaine) return Integer; 464;	
+FUNCTION MemoireReponseSQLUtilisateur(p_nomMem:GrandeChaine; p_nomUtilisateur : GrandeChaine; p_repSQL:T_ReponseSQL) return Boolean; 465;
+FUNCTION EffaceMemoireUtilisateur(p_nomMem : GrandeChaine; p_nomUtilisateur : GrandeChaine) return Boolean; 466;	
+FUNCTION IndexMaxMemoireGroupe(p_groupe : GrandeChaine; p_nomMem : GrandeChaine) return Integer; 467;	
+FUNCTION NbMaxValeurMemoireGroupe(p_groupe : GrandeChaine; p_nomMem : GrandeChaine) return Integer; 468;
+FUNCTION EffaceMemoireGroupe(p_groupe : GrandeChaine; p_nomMem:GrandeChaine) return Boolean; 469;
+FUNCTION EcritMemoire(p_nom : GrandeChaine ; p_val : TresGrandeChaine) return boolean ; 470;
+FUNCTION LitMemoire(p_nom : GrandeChaine) return TresGrandeChaine; 471;
+FUNCTION EcritMemoireTerminal(p_nom : GrandeChaine ; p_val : TresGrandeChaine; p_numTerm : Integer ) return boolean ; 472;
+FUNCTION LitMemoireTerminal(p_nom : GrandeChaine ; p_numTerm : Integer ) return TresGrandeChaine; 473;
+FUNCTION EcritMemoireUtilisateur(p_nom : GrandeChaine ; p_val : TresGrandeChaine; p_nomUtilisateur : GrandeChaine ) return boolean ; 474;
+FUNCTION LitMemoireUtilisateur(p_nom : GrandeChaine ; p_nomUtilisateur : GrandeChaine ) return TresGrandeChaine; 475;
+FUNCTION EcritMemoireIndexUtilisateur(p_nom : GrandeChaine ; p_val : TresGrandeChaine; p_nomUtilisateur : GrandeChaine;p_index:Integer ) return boolean ; 476;
+FUNCTION LitMemoireIndexUtilisateur(p_nom : GrandeChaine ; p_nomUtilisateur : GrandeChaine;p_index:Integer ) return TresGrandeChaine; 477;
+FUNCTION EcritMemoireIndex(p_nom : GrandeChaine ; p_val : TresGrandeChaine; p_index:Integer ) return boolean ; 478;
+FUNCTION LitMemoireIndex(p_nom : GrandeChaine ; p_index:Integer ) return TresGrandeChaine; 479;
+FUNCTION NbMaxValeurMemoire(p_nomMem : GrandeChaine) return Integer; 480;
+FUNCTION IndexMaxMemoire(p_nomMem : GrandeChaine) return Integer; 481;
+FUNCTION EffaceMemoire(p_nomMem:GrandeChaine) return Boolean; 482;
+FUNCTION EffaceMemoireIndex(p_nomMem:GrandeChaine; IndexDebut,IndexFin:Integer) return Boolean; 483;
+FUNCTION MemoireExiste(p_nomMem:GrandeChaine) return Boolean; 484;
+FUNCTION MemoireReponseSQL(p_nomMem:GrandeChaine; p_repSQL:T_ReponseSQL) return Boolean; 485;
+FUNCTION EcritMemoireSystem(p_nom : GrandeChaine ; p_val : TresGrandeChaine) return boolean ; 486;
+FUNCTION LitMemoireSystem(p_nom : GrandeChaine) return TresGrandeChaine; 487;
+FUNCTION EcritMemoireGroupe(p_groupe:GrandeChaine ; p_nom : GrandeChaine ; p_val : TresGrandeChaine) return boolean ; 488;
+FUNCTION LitMemoireGroupe(p_groupe:GrandeChaine ; p_nom : GrandeChaine) return TresGrandeChaine; 489;
+FUNCTION EcritMemoireGroupeIndex(p_groupe : GrandeChaine; p_nom : GrandeChaine ; p_val : TresGrandeChaine; p_index:Integer ) return boolean ; 490;
+FUNCTION LitMemoireGroupeIndex(p_groupe : GrandeChaine; p_nom : GrandeChaine ; p_index:Integer ) return TresGrandeChaine; 491;
+FUNCTION EcritMemoireGroupeIndexUtilisateur(p_groupe : GrandeChaine; p_nom : GrandeChaine ; p_val : TresGrandeChaine; p_nomUtilisateur : GrandeChaine;p_index:Integer ) return boolean ; 492;
+FUNCTION LitMemoireGroupeIndexUtilisateur(p_groupe : GrandeChaine; p_nom : GrandeChaine ; p_nomUtilisateur : GrandeChaine;p_index:Integer ) return TresGrandeChaine; 493;
+FUNCTION EcritMemoireGroupeUtilisateur(p_groupe : GrandeChaine; p_nom : GrandeChaine ; p_val : TresGrandeChaine; p_nomUtilisateur : GrandeChaine ) return boolean ; 494;
+FUNCTION LitMemoireGroupeUtilisateur(p_groupe : GrandeChaine ; p_nom : GrandeChaine ; p_nomUtilisateur : GrandeChaine ) return TresGrandeChaine; 495;
+FUNCTION EcritMemoireGroupeTerminal(p_groupe : GrandeChaine; p_nom : GrandeChaine ; p_val : TresGrandeChaine; p_numTerm : Integer ) return boolean ; 496;
+FUNCTION LitMemoireGroupeTerminal(p_groupe : GrandeChaine; p_nom : GrandeChaine ; p_numTerm : Integer ) return TresGrandeChaine; 497;
+FUNCTION MemoireGroupeReponseSQL(p_groupe : GrandeChaine; p_nomMem:GrandeChaine; p_repSQL:T_ReponseSQL) return Boolean; 498;
+FUNCTION MemoireGroupeExiste(p_groupe : GrandeChaine; p_nomMem:GrandeChaine) return Boolean; 499;
+
+FUNCTION LitNiveauDebug return INTEGER; 500;
+PROCEDURE EcritMessageErreur(p_message : GrandeChaine) ; 501;
+FUNCTION LitNumeroTerminal return INTEGER;502;
+FUNCTION LitNomTraitementLPX return GrandeChaine ; 503 ;
+
+FUNCTION CreeVerrou( Nom : GrandeChaine) RETURN T_Verrou ; 504 ;
+FUNCTION PositionneVerrou( p_verrou : T_Verrou ) return BOOLEAN ; 505 ;
+FUNCTION LibereVerrou( p_verrou : T_Verrou ) return BOOLEAN ; 506 ;
+PROCEDURE FermeVerrou( p_verrou : T_Verrou ); 507;
+
+
+FUNCTION  OuvreFichierLecture(Nom : GrandeChaine) RETURN T_Fichier; 520;
+FUNCTION  CreeFichier(Nom : GrandeChaine) RETURN T_Fichier; 521;
+FUNCTION  OuvreFichierEcriture(Nom : GrandeChaine) RETURN T_Fichier; 522;
+FUNCTION  LectureFichier(Fichier : T_Fichier) RETURN TresGrandeChaine; 523;
+FUNCTION  EcritureFichier(Fichier : T_Fichier; Ligne : TresGrandeChaine) return INTEGER; 524;
+PROCEDURE FermeFichier(Fichier : T_Fichier); 525;
+FUNCTION  OuvreFichier( Nom : GrandeChaine ; p_acces,p_partage : Integer ) RETURN T_Fichier; 526;
+FUNCTION  ProprieteFichier( Nom : GrandeChaine ; p_propriete : INFO_VARIABLE ) return BOOLEAN ; 527 ;
+FUNCTION  PositionFichier( p_fichier : T_Fichier ; p_positionDepart , p_deplacement : Integer )return BOOLEAN ; 528 ;
+
+FUNCTION CopierFichier(CheminFichierSource:GrandeChaine; CheminFichierDestination:GrandeChaine; DelaiMax:Integer) return T_Fichier; 529;
+FUNCTION SupprimerFichier(CheminFichier:GrandeChaine; DelaiMax:Integer) return T_Fichier; 530;
+FUNCTION DeplacerFichier(CheminFichierSource : GrandeChaine; CheminFichierDestination : GrandeChaine; DelaiMax:Integer) return T_Fichier; 531;
+FUNCTION ListeFichier(CheminRepertoire : GrandeChaine; Masque : PetiteChaine; DelaiMax:Integer) return T_Fichier; 532;
+FUNCTION ReponseListeFichier(ReponseFic : T_Fichier; Fermeture : Integer) return ChaineEx; 533;
+FUNCTION ReponseFichier(ReponseFic : T_Fichier; Fermeture : Integer) return Integer; 534;
+PROCEDURE FermeReponseFichier(ReponseFic : T_Fichier); 535;
+FUNCTION  LectureGrandFichier(Fichier : T_Fichier) RETURN Chaine2048; 536;
+
+
+// appels systeme
+FUNCTION  CommandeShell(Commande : TresGrandeChaine) RETURN INTEGER; 601;
+FUNCTION Getenv(Variable : GrandeChaine) return GrandeChaine ; 602;
+FUNCTION CommandeShellTempo(Commande : TresGrandeChaine; Duree:Integer) return T_AttenteTempo; 603;
+FUNCTION LitValAttenteTempo(AttenteTempo:T_AttenteTempo) return Integer; 604;
+
+// lecture du nom de l'ordinateur
+FUNCTION  LitNomOrdinateur return GrandeChaine ; 640 ;
+
+// lecture du port du serveur Web
+// retour : -1 si inactif , sinon >0
+FUNCTION  LitPortHttp return Integer ; 641 ; 
+
+
+
+// Imprime un état 
+// Rq: Le programme LPX continu de s'exécuter même si l'impression de 
+// l'état n'est pas terminée
+// Return 0:OK, 1: Etat n'existe pas, 2: Driver n'existe pas
+FUNCTION  ImprimeEtat( p_nomEtat,p_typeImpression,p_destination,p_nomDriver : GrandeChaine ) RETURN INTEGER; 880 ;
+
+// Imprime un état en attendant la fin de l'impression avant de continuer
+// le programme LPX
+// Return 0:OK, 1: Etat n'existe pas, 2: Driver n'existe pas
+FUNCTION  ImprimeEtatEtAttend( p_nomEtat,p_typeImpression,p_destination,p_nomDriver : GrandeChaine ) RETURN INTEGER; 881 ;
+
+
+// Arrêt de Imprime état
+FUNCTION  ArretImprimeEtat( p_nomDriver : GrandeChaine ) RETURN INTEGER; 882 ;
+
+
+// Fonction sur les fenêtres
+//////////
+
+// Ouverture de la fenêtre
+PROCEDURE  OuvreFenetre(p_nomFenetre:GrandeChaine; p_flagCloseFenCour:Boolean); 890 ; 
+// Fermeture de la fenêtre
+PROCEDURE  FermeFenetre(p_nomFenetre:GrandeChaine); 891 ;
+// Ouverture d'une page Web
+PROCEDURE  OuvreURL(p_url:TresGrandeChaine); 892 ; 
+// Ouverture de la fenêtre pour un utilisateur donné
+PROCEDURE  OuvreFenetreUtilisateur(p_nomFenetre:GrandeChaine; p_flagCloseFenCour:Boolean; p_nomUtilisateur:GrandeChaine); 893 ; 
+// Fermeture de la fenêtre pour un utilisateur donné
+PROCEDURE  FermeFenetreUtilisateur(p_nomFenetre:GrandeChaine; p_nomUtilisateur:GrandeChaine); 894 ;
+// Ouverture d'une console web
+PROCEDURE  OuvreConsoleWeb(p_url:TresGrandeChaine); 895 ; 
+// Fermeture d'une console web
+PROCEDURE  FermeConsoleWeb(p_url:TresGrandeChaine); 896 ; 
+
+
+// Fonctions pour Quartis Messenger
+//
+
+FUNCTION QuartisMsgChemin( p_cheminQuartisMsg : GrandeChaine ) RETURN INTEGER ;900 ;
+
+FUNCTION QuartisMsgLitMessage( p_liste:GrandeChaine ) RETURN T_ReponseQuartisMsg ;901 ;
+
+FUNCTION QuartisMsgEnvoieMessage( p_liste ,p_message : GrandeChaine ; p_dateExpir : INTEGER ) RETURN BOOLEAN ; 902 ;
+
+FUNCTION QuartisMsgNombreReponse( p_repQuartisMsg : T_ReponseQuartisMsg ) RETURN INTEGER ; 903 ;
+
+FUNCTION QuartisMsgLigne( p_repQuartisMsg : T_ReponseQuartisMsg ; p_ligne : INTEGER ; p_resLigne : INFO_VARIABLE ) RETURN INTEGER ; 904 ;
+
+FUNCTION QuartisMsgFermeReponse( p_repQuartisMsg : T_ReponseQuartisMsg ) RETURN BOOLEAN ; 905 ;
+
+
+// Fonctions pour SPC
+PROCEDURE  ExecuteSPC(p_param : T_ParamSPC ); 906 ;
+PROCEDURE  OuvreSPC( p_flagMinimise : BOOLEAN ; p_delaiMinimise : INTEGER ; p_nomLPX : GrandeChaine ) ; 907 ; 
+PROCEDURE  FermeSPC( p_flagBrut : BOOLEAN ) ; 908 ;  
+
+
+END STDLIB;

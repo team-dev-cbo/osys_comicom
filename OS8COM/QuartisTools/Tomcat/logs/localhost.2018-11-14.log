@@ -1,0 +1,12 @@
+10:08:55.124 INFO [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+10:09:03.719 INFO [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextDestroyed()  
+10:09:03.720 INFO [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextDestroyed()  
+10:09:03.779 INFO [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+10:09:29.403 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+10:09:36.685 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+10:09:39.457 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextInitialized()  
+10:09:39.457 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextInitialized()  
+10:10:25.328 INFOS [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+10:10:26.274 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextDestroyed()  
+10:10:26.274 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextDestroyed()  
+10:10:26.301 INFOS [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  

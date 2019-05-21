@@ -1,0 +1,24 @@
+17:39:59.832 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+17:40:01.178 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:40:26.627 DEBUG - DisconnectDispatcher Déconnexion demandée pour : administrateur, session ID : #1A8A1A75E44944F72135594BFBDA8045 
+17:40:37.310 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+17:40:39.848 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+17:40:39.848 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+17:40:41.094 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:41:04.585 DEBUG - ConnexionManagedBean Déconnexion de : administrateur (ADMINISTRATEUR ADMINISTRATEUR) 
+17:41:05.042 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:41:05.106 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+17:41:05.106 DEBUG - FiltreSession Requête pour page non login (http://192.168.1.43:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+17:41:05.229 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+17:41:07.692 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+17:41:07.692 DEBUG - FiltreSession Requête pour page non login (http://192.168.1.43:8383/Quartis-Web/base.jsf) mais pas de user en session. 
+17:41:07.692 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+17:41:10.367 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+17:41:10.367 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+17:41:11.913 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:41:19.535 DEBUG - DisconnectDispatcher Déconnexion demandée pour : administrateur, session ID : #E40ACC9CC805083F2CD0E495EB3823E8 
+17:41:19.535 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+17:41:21.735 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+17:41:21.735 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+17:41:23.297 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:08:30.283 DEBUG - DisconnectDispatcher Déconnexion demandée pour : administrateur, session ID : #E40ACC9CC805083F2CD0E495EB3823E8 

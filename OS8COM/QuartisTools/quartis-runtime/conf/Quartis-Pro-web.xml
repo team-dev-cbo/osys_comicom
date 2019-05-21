@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<web-instance name="Quartis-Pro-web">
+    <short-label>Quartis-Pro-web</short-label>
+    <description>Instance hébergeant le dispatcher vers les serveurs de QuartisPro</description>
+    <environment/>
+    <resources/>
+    <web-app context-path="/quartistools-web" war-file="wars\Quartis-Pro-web.war" active="true">
+        <environment>
+            <environment-variable name="Quartis-Pro-auth-url" type="java.lang.String" value="http://localhost:8385/quartispro-auth" override="true"/>
+            <environment-variable name="Quartis-Pro-console-url" type="java.lang.String" value="http://localhost:8386/quartispro-console" override="true"/>
+            <environment-variable name="Quartis-Pro-groovy-url" type="java.lang.String" value="http://localhost:8387/quartispro-groovy" override="true"/>
+            <environment-variable name="Quartis-Pro-tools-url" type="java.lang.String" value="http://localhost:8388/quartispro-tools" override="true"/>
+        </environment>
+        <resources/>
+    </web-app>
+</web-instance>

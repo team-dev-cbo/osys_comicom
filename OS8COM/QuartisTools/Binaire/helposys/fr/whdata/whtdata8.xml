@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<tocdata>
+<item name="CopierFichier" url="scenario/lpx/fonctions/fichiers/HIDD_CopierFichier.htm" />
+<item name="CreeFichier" url="scenario/lpx/fonctions/fichiers/HIDD_CreeFichier.htm" />
+<item name="DeplacerFichier" url="scenario/lpx/fonctions/fichiers/HIDD_DeplacerFichier.htm" />
+<item name="EcritureFichier" url="scenario/lpx/fonctions/fichiers/HIDD_EcritureFichier.htm" />
+<item name="FermeFichier" url="scenario/lpx/fonctions/fichiers/HIDD_FermeFichier.htm" />
+<item name="FermeReponseFichier" url="scenario/lpx/fonctions/fichiers/HIDD_FermeReponseFichier.htm" />
+<item name="LectureFichier" url="scenario/lpx/fonctions/fichiers/HIDD_LectureFichier.htm" />
+<item name="LectureGrandFichier" url="scenario/lpx/fonctions/fichiers/HIDD_LectureGrandFichier.htm" />
+<item name="ListeFichier" url="scenario/lpx/fonctions/fichiers/HIDD_ListeFichier.htm" />
+<item name="OuvreFichier" url="scenario/lpx/fonctions/fichiers/HIDD_OuvreFichier.htm" />
+<item name="OuvreFichierEcriture" url="scenario/lpx/fonctions/fichiers/HIDD_OuvreFichierEcriture.htm" />
+<item name="OuvreFichierLecture" url="scenario/lpx/fonctions/fichiers/HIDD_OuvreFichierLecture.htm" />
+<item name="PositionFichier" url="scenario/lpx/fonctions/fichiers/HIDD_PositionFichier.htm" />
+<item name="ProprieteFichier" url="scenario/lpx/fonctions/fichiers/HIDD_ProprieteFichier.htm" />
+<item name="ReponseFichier" url="scenario/lpx/fonctions/fichiers/HIDD_ReponseFichier.htm" />
+<item name="ReponseListeFichier" url="scenario/lpx/fonctions/fichiers/HIDD_ReponseListeFichier.htm" />
+<item name="SupprimerFichier" url="scenario/lpx/fonctions/fichiers/HIDD_SupprimerFichier.htm" />
+
+</tocdata>

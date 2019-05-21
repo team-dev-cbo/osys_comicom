@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<tocdata>
+<item name="CommandeShell" url="scenario/lpx/fonctions/systeme/HIDD_CommandeShell.htm" />
+<item name="CommandeShellTempo" url="scenario/lpx/fonctions/systeme/HIDD_CommandeShellTempo.htm" />
+<item name="GetEnv" url="scenario/lpx/fonctions/systeme/HIDD_GetEnv.htm" />
+<item name="LitNomOrdinateur" url="scenario/lpx/fonctions/systeme/HIDD_LitNomOrdinateur.htm" />
+<item name="LitPortHttp" url="scenario/lpx/fonctions/systeme/HIDD_LitPortHttp.htm" />
+<item name="LitValAttenteTempo" url="scenario/lpx/fonctions/systeme/HIDD_LitValAttenteTempo.htm" />
+<item name="Sleep" url="scenario/lpx/fonctions/systeme/HIDD_Sleep.htm" />
+
+</tocdata>

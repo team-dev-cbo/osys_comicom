@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"	
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:p="http://primefaces.org/ui">     
+<!-- 
+<h:head>			
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="EmulateIE8" />
+	<title>evtProductionSearchTab</title>			
+   	<script type="text/javascript" src="../../resources/js/primefaces-i18n.js"></script>
+</h:head>
+-->
+<h:body>	
+    <ui:composition>
+		  
+  		<h:form id="formTabSearch">  	
+  		
+<!-- 		<p:messages id="messages" showDetail="true" autoUpdate="true" closable="true" /> --> 
+<!-- 		<p:growl id="growl" showDetail="true" /> -->   	
+<!--  		<p:growl id="growl" autoUpdate="true" showDetail="true" showSummary="false" sticky="false" /> --> 
+<!-- 		<p:growl id="msgs" showDetail="true" /> -->	
+			 											  							 											  							
+			<p:panel id="pnl" header="#{bundle['common.title.criteria']}" toggleable="true" >			
+
+<!--   		   <h:panelGrid columns="2" cellpadding="5"  style="margin-left: 200px;padding-left: 200px !important; border: 1px dashed blue;" > --> 
+			   <h:panelGrid id="searchEvtProd" columns="2" cellpadding="5"  style="margin-bottom:10px;" >  						    
+					<h:panelGrid columns="4" cellpadding="5">														
+						<h:outputLabel value="#{bundle['common.criterion.date.begin']}:" />       						
+        				<p:calendar id="criterionDateBegin" showOn="button"
+       					    pattern="#{bundle['common.format.date']}"       	
+       					    locale="#{evtProdCorrController.paramUrl.paramLocale}"	           
+       					    value="#{evtProdCorrController.evtProdViewModel.evtProdCorrCriteria.dateBegin}" /> 			       						
+       					
+       					<h:outputLabel value="#{bundle['common.criterion.date.end']}:" />
+       					<p:calendar id="criterionDateEnd" showOn="button"        						
+ 							pattern="#{bundle['common.format.date']}"
+ 							locale="#{evtProdCorrController.paramUrl.paramLocale}"
+       					    value="#{evtProdCorrController.evtProdViewModel.evtProdCorrCriteria.dateEnd}" />         						       						       						
+       					
+       					<h:outputLabel value="#{bundle['common.criterion.atelier']}:" />
+       					<p:selectOneMenu id="criterionAtelier" 
+       						value="#{evtProdCorrController.evtProdViewModel.evtProdCorrCriteria.atelier}"             							
+       						converter="#{evtProdCorrController.atelierConverter}"
+       						style="width: 150px" >         
+       						<f:selectItem itemLabel="" itemValue="" />			       											       					
+       						<f:selectItems value="#{evtProdCorrController.evtProdViewModel.lstAtelier}"  
+       							var="atel" itemLabel="#{atel.desiAtel}" itemValue="#{atel.codeAtel}"/>	        								                        							          											
+       					</p:selectOneMenu>         					       						  
+       					
+       					<h:outputLabel value="#{bundle['common.criterion.secteur_geo']}:" />
+       					<p:selectOneMenu id="criterionSectGeo" 
+       					    value="#{evtProdCorrController.evtProdViewModel.evtProdCorrCriteria.sectionGeo}"             							
+       						converter="#{evtProdCorrController.sectionGeoConverter}"
+       						style="width: 150px" >         
+       						<f:selectItem itemLabel="" itemValue="" />			       											       					
+       						<f:selectItems value="#{evtProdCorrController.evtProdViewModel.lstSectGeo}"  
+       							var="sectGeo" itemLabel="#{sectGeo.desiSectGeog}" itemValue="#{sectGeo.codeSectGeog}"/>	        								                        							          											
+       					</p:selectOneMenu>           					         						
+       					
+       					<h:outputLabel value="#{bundle['common.criterion.equipe']}:" />
+       					<p:selectOneMenu id="criterionEquipe" 
+       						value="#{evtProdCorrController.evtProdViewModel.evtProdCorrCriteria.equipe}"             							
+       						converter="#{evtProdCorrController.equipeConverter}"
+       						style="width: 150px" >       							         
+       						<f:selectItem itemLabel="" itemValue="" />			       											       					
+       						<f:selectItems value="#{evtProdCorrController.evtProdViewModel.lstEquipe}"  
+       							var="equi" itemLabel="#{equi.desiEqui}" itemValue="#{equi.codeEqui}"/>	        								                        							          											
+       					</p:selectOneMenu>         					       						                 		        						  
+       						
+       					<h:outputLabel value="#{bundle['common.criterion.of']}:" />
+       					<h:panelGroup id="groupAutoCompletedOf">
+	       					<p:autoComplete id="criterionOf" 
+	       					    value="#{evtProdCorrController.evtProdViewModel.evtProdCorrCriteria.ofListe}" 
+	       					    completeMethod="#{evtProdCorrController.completeOfListe}"
+	       					    var="ofListe" itemLabel="#{ofListe.codeOfSite}" itemValue="#{ofListe}" 
+	       					    converter="#{evtProdCorrController.ofListeConverter}" forceSelection="false" 
+	       					    maxResults="10" minQueryLength="1" 
+	       					    scrollHeight="250" >       					
+	       					    <p:ajax event="itemSelect" update="criterionOfOut" 
+	       					    		listener="#{evtProdCorrController.onItemSelectOf}" />         					
+	       					    <p:ajax event="change" process="criterionOf" update="criterionOfOut" 
+	       					    		listener="#{evtProdCorrController.onChangedValueOf}" />           					   				   					         						        					         					
+	       					   	<p:column>
+	                				<h:outputText value="#{ofListe.codeOfSite}" />
+						        </p:column>
+						        <p:column>
+	                				<h:outputText value="#{ofListe.desiOf}" />
+						        </p:column>        						       						
+	       				 	</p:autoComplete>
+	       				 	<h:outputText id="criterionOfOut"        				 		
+	       				 		value="#{evtProdCorrController.evtProdViewModel.evtProdCorrCriteria.ofListe.desiOf}" />  
+       				 	</h:panelGroup>
+       	 			</h:panelGrid>
+       	 			       	 			
+       	 			<p:commandButton value="#{bundle['common.button.refresh']}"
+      					action="#{evtProdCorrController.onRefresh}" 
+      					update="formTabSearch:tableEvtProd" />	
+<!--  update="formTabSearch:tableEvtProd,growl" />	-->      						       
+
+    	 		</h:panelGrid>    	 		  	      	 		  	           					
+            </p:panel>                	
+					
+			<div id="tbl">
+			<p:dataTable id="tableEvtProd" var="evtProd" widgetVar="evtProdDataTable"
+				value="#{evtProdCorrController.evtProdViewModel.lstEvtProd}"					
+				selection="#{evtProdCorrController.evtProdViewModel.selectedEvtProd}" 
+				selectionMode="single" rowKey="#{evtProd.pk}"  				
+			 	emptyMessage="#{bundle['common.no_rows']}"
+			 	paginator="true" rows="10"  rowsPerPageTemplate="5,10,15,20,25"			 	
+			 	height="150">	
+			 	
+				<f:facet name="header">List Evt Prod</f:facet>			
+  			  	
+				<p:ajax event="rowSelect" listener="#{evtProdCorrController.onRowSelect}" process="@this"/>
+<!--			
+				<p:ajax event="rowUnselect" listener="#{evtProdCorrController.onRowUnselect}"/>   
+				<p:ajax event="rowUnselect" listener="#{evtProdCorrController.onRowUnselect}" process="@this" update="@this"/>        				          				
+-->		
+				<p:column > 
+				   	<f:facet name="header">  
+                		<h:outputText value="#{bundle['prod.search.liste.date']}" />  
+            		</f:facet>              		
+            		<h:outputText value="#{evtProd.dateCale}" >
+            			<f:convertDateTime type="date" pattern="#{bundle['common.format.date']}"/>
+            		</h:outputText>	  
+        		</p:column>  
+        		
+        		<p:column> 
+				   	<f:facet name="header">  
+                		<h:outputText value="#{bundle['prod.search.liste.atelier']}" />  
+            		</f:facet>  
+            		<h:outputText value="#{evtProd.mach.atel.desiAtel}" />  
+        		</p:column>    
+        		<p:column> 
+				   	<f:facet name="header">  
+                		<h:outputText value="#{bundle['prod.search.liste.sectGeo']}" />  
+            		</f:facet>  
+            		<h:outputText value="#{evtProd.mach.sectGeog.desiSectGeog}" />  
+        		</p:column>   
+        		<p:column> 
+				   	<f:facet name="header">  
+                		<h:outputText value="#{bundle['prod.search.liste.machine']}" />  
+            		</f:facet>  
+            		<h:outputText value="#{evtProd.mach.desiMach}" />  
+        		</p:column>  
+        		<p:column> 
+				   	<f:facet name="header">  
+                		<h:outputText value="#{bundle['prod.search.liste.equipe']}" />  
+            		</f:facet>  
+            		<h:outputText value="#{evtProd.equi.desiEqui}" />  
+        		</p:column>    
+        		<p:column> 
+				   	<f:facet name="header">  
+                		<h:outputText value="#{bundle['prod.search.liste.of']}" />  
+            		</f:facet>  
+            		<h:outputText value="#{evtProd.ofOper.pk.codeOf}" />  
+        		</p:column>   
+        		<p:column> 
+				   	<f:facet name="header">  
+                		<h:outputText value="#{bundle['prod.search.liste.oper']}" />  
+            		</f:facet>  
+            		<h:outputText value="#{evtProd.ofOper.pk.codeOper}" />  
+        		</p:column>    
+        		<p:column> 
+				   	<f:facet name="header">  
+                		<h:outputText value="#{bundle['prod.search.liste.tempsProd']}" />  
+            		</f:facet>  
+             		<h:outputText value="#{evtProd.tempsProd}" />     
+<!-- 	          	<h:outputText value="#{evtProd.tempsProd}" converter="#{evtProdCorrController.timeConverter}" /> -->               		
+        		</p:column>  
+        		<p:column> 
+				   	<f:facet name="header">  
+                		<h:outputText value="#{bundle['prod.search.liste.quanBonne']}" />  
+            		</f:facet>  
+            		<h:outputText value="#{evtProd.sumQuanBonn}" />  
+        		</p:column>  
+        		<p:column> 
+				   	<f:facet name="header">  
+                		<h:outputText value="#{bundle['prod.search.liste.quanRebut']}" />  
+            		</f:facet>  
+            		<h:outputText value="#{evtProd.sumQuanRebu}" />  
+        		</p:column>   
+        		<p:column> 
+				   	<f:facet name="header">  
+                		<h:outputText value="#{bundle['prod.search.liste.corr']}" />  
+            		</f:facet>              				
+             		<p:graphicImage library="img" name="#{evtProd.image}" />             	 				              	 		    
+        		</p:column>      
+        	</p:dataTable>	
+        	</div>          
+  		</h:form>    		
+    </ui:composition>
+</h:body>
+</html>
+
+
+	
+	

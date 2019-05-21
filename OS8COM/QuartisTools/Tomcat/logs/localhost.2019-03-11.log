@@ -1,0 +1,326 @@
+09:11:32.340 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+09:11:43.369 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+09:11:53.057 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextInitialized()  
+09:11:53.057 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextInitialized()  
+09:24:07.171 INFOS [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+09:24:09.859 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextDestroyed()  
+09:24:09.859 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextDestroyed()  
+09:24:09.875 INFOS [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+09:28:50.251 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+09:28:55.079 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+09:28:58.113 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextInitialized()  
+09:28:58.114 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextInitialized()  
+09:43:46.027 INFOS [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+09:43:46.997 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextDestroyed()  
+09:43:46.997 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextDestroyed()  
+09:43:47.005 INFOS [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+09:51:06.745 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+09:51:21.031 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+09:51:23.206 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextInitialized()  
+09:51:23.206 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextInitialized()  
+10:05:27.005 INFOS [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+10:05:27.949 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextDestroyed()  
+10:05:27.949 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextDestroyed()  
+10:05:27.958 INFOS [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+10:13:42.498 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+10:13:46.465 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+10:13:49.471 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextInitialized()  
+10:13:49.471 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextInitialized()  
+11:14:22.289 GRAVE [org.apache.catalina.core.StandardWrapperValve invoke] - "Servlet.service()" pour la servlet ActionServlet a généré une exception 
+java.lang.IllegalStateException: "getOutputStream()" a déjà été appelé pour cette réponse
+	at org.apache.catalina.connector.Response.getWriter(Response.java:611)
+	at org.apache.catalina.connector.ResponseFacade.getWriter(ResponseFacade.java:198)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:333)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+ 
+11:14:46.755 GRAVE [org.apache.catalina.core.StandardWrapperValve invoke] - "Servlet.service()" pour la servlet ActionServlet a généré une exception 
+java.lang.IllegalStateException: "getOutputStream()" a déjà été appelé pour cette réponse
+	at org.apache.catalina.connector.Response.getWriter(Response.java:611)
+	at org.apache.catalina.connector.ResponseFacade.getWriter(ResponseFacade.java:198)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:333)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+ 
+16:00:46.623 INFOS [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+16:00:47.905 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextDestroyed()  
+16:00:47.906 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextDestroyed()  
+16:00:47.914 INFOS [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+16:14:56.154 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+16:15:06.559 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+16:15:12.205 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextInitialized()  
+16:15:12.205 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextInitialized()  
+16:15:51.114 INFOS [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+16:15:52.115 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextDestroyed()  
+16:15:52.116 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextDestroyed()  
+16:15:52.125 INFOS [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+16:24:14.969 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+16:24:27.122 GRAVE [org.apache.catalina.core.StandardContext listenerStart] - Exception lors de l'envoi de l'évènement contexte initialisé (context initialized) à l'instance de classe d'écoute (listener) org.springframework.web.context.ContextLoaderListener 
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'evtGanttServices' defined in URL [jar:file:/C:/Osys/QuartisTools/Tomcat/webapps/Quartis-OptimaCjj/WEB-INF/lib/Quartis-OptimaCjj-core.jar!/spring/optimaCjjCoreContext.xml]: Invocation of init method failed; nested exception is org.springframework.transaction.CannotCreateTransactionException: Could not open Hibernate Session for transaction; nested exception is org.hibernate.exception.GenericJDBCException: Could not open connection
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1455)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:385)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:284)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4135)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4630)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:791)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:771)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:546)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:905)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:740)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:500)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1277)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:321)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1053)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:785)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:445)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:519)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:581)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+Caused by: org.springframework.transaction.CannotCreateTransactionException: Could not open Hibernate Session for transaction; nested exception is org.hibernate.exception.GenericJDBCException: Could not open connection
+	at org.springframework.orm.hibernate4.HibernateTransactionManager.doBegin(HibernateTransactionManager.java:440)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:371)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:335)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:105)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:202)
+	at com.sun.proxy.$Proxy70.findBySiteConstHeureChangementDate(Unknown Source)
+	at fr.osys.optima.core.cjj.manager.eventgantt.services.impl.EventGanttPersServicesImpl.findBySiteConstHeureChangementDate(EventGanttPersServicesImpl.java:216)
+	at fr.osys.optima.core.cjj.manager.eventgantt.GestionEventGanttPers.findMapConstHeureChangeDate(GestionEventGanttPers.java:1699)
+	at fr.osys.optima.core.cjj.services.correctionmanagement.impl.EvtGanttServicesImpl.init(EvtGanttServicesImpl.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1581)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1522)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1452)
+	... 36 more
+Caused by: org.hibernate.exception.GenericJDBCException: Could not open connection
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:54)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:125)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:110)
+	at org.hibernate.engine.jdbc.internal.LogicalConnectionImpl.obtainConnection(LogicalConnectionImpl.java:304)
+	at org.hibernate.engine.jdbc.internal.LogicalConnectionImpl.getConnection(LogicalConnectionImpl.java:169)
+	at org.hibernate.engine.transaction.internal.jdbc.JdbcTransaction.doBegin(JdbcTransaction.java:67)
+	at org.hibernate.engine.transaction.spi.AbstractTransactionImpl.begin(AbstractTransactionImpl.java:160)
+	at org.hibernate.internal.SessionImpl.beginTransaction(SessionImpl.java:1395)
+	at org.springframework.orm.hibernate4.HibernateTransactionManager.doBegin(HibernateTransactionManager.java:399)
+	... 52 more
+Caused by: java.sql.SQLException: Impossible d'ouvrir la base de données "QUARTIS_PRO" demandée par la connexion. La connexion a échoué.
+	at net.sourceforge.jtds.jdbc.SQLDiagnostic.addDiagnostic(SQLDiagnostic.java:368)
+	at net.sourceforge.jtds.jdbc.TdsCore.tdsErrorToken(TdsCore.java:2820)
+	at net.sourceforge.jtds.jdbc.TdsCore.nextToken(TdsCore.java:2258)
+	at net.sourceforge.jtds.jdbc.TdsCore.login(TdsCore.java:603)
+	at net.sourceforge.jtds.jdbc.ConnectionJDBC2.<init>(ConnectionJDBC2.java:345)
+	at net.sourceforge.jtds.jdbc.ConnectionJDBC3.<init>(ConnectionJDBC3.java:50)
+	at net.sourceforge.jtds.jdbc.Driver.connect(Driver.java:184)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:173)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:164)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:149)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:128)
+	at org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:141)
+	at org.hibernate.internal.AbstractSessionImpl$NonContextualJdbcConnectionAccess.obtainConnection(AbstractSessionImpl.java:292)
+	at org.hibernate.engine.jdbc.internal.LogicalConnectionImpl.obtainConnection(LogicalConnectionImpl.java:297)
+	... 57 more
+ 
+16:24:27.153 INFOS [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+16:24:36.154 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+16:24:38.416 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextInitialized()  
+16:24:38.416 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextInitialized()  
+16:35:27.931 INFOS [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+16:35:28.893 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextDestroyed()  
+16:35:28.893 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextDestroyed()  
+16:35:49.902 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+16:35:55.436 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+16:35:57.962 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextInitialized()  
+16:35:57.962 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextInitialized()  
+16:38:03.215 INFOS [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+16:38:04.223 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextDestroyed()  
+16:38:04.224 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextDestroyed()  
+16:38:04.233 INFOS [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+17:46:03.493 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+17:46:13.449 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+17:46:20.999 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextInitialized()  
+17:46:20.999 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextInitialized()  
+17:49:05.738 WARNING [org.apache.catalina.session.StandardSession writeObject] - Impossible de sérialiser l'attribut de session serviceManager pour la session D7A67E602CF782FFE7EF2F4D8F990D44 
+java.io.NotSerializableException: fr.osys.optima.core.tml.services.productionmanagement.impl.MachineServicesImpl
+	at java.io.ObjectOutputStream.writeObject0(Unknown Source)
+	at java.io.ObjectOutputStream.defaultWriteFields(Unknown Source)
+	at java.io.ObjectOutputStream.writeSerialData(Unknown Source)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(Unknown Source)
+	at java.io.ObjectOutputStream.writeObject0(Unknown Source)
+	at java.io.ObjectOutputStream.defaultWriteFields(Unknown Source)
+	at java.io.ObjectOutputStream.writeSerialData(Unknown Source)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(Unknown Source)
+	at java.io.ObjectOutputStream.writeObject0(Unknown Source)
+	at java.io.ObjectOutputStream.defaultWriteFields(Unknown Source)
+	at java.io.ObjectOutputStream.writeSerialData(Unknown Source)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(Unknown Source)
+	at java.io.ObjectOutputStream.writeObject0(Unknown Source)
+	at java.io.ObjectOutputStream.defaultWriteFields(Unknown Source)
+	at java.io.ObjectOutputStream.writeSerialData(Unknown Source)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(Unknown Source)
+	at java.io.ObjectOutputStream.writeObject0(Unknown Source)
+	at java.io.ObjectOutputStream.defaultWriteFields(Unknown Source)
+	at java.io.ObjectOutputStream.writeSerialData(Unknown Source)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(Unknown Source)
+	at java.io.ObjectOutputStream.writeObject0(Unknown Source)
+	at java.io.ObjectOutputStream.defaultWriteFields(Unknown Source)
+	at java.io.ObjectOutputStream.writeSerialData(Unknown Source)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(Unknown Source)
+	at java.io.ObjectOutputStream.writeObject0(Unknown Source)
+	at java.io.ObjectOutputStream.writeObject(Unknown Source)
+	at org.apache.catalina.session.StandardSession.writeObject(StandardSession.java:1551)
+	at org.apache.catalina.session.StandardSession.writeObjectData(StandardSession.java:994)
+	at org.apache.catalina.session.StandardManager.doUnload(StandardManager.java:523)
+	at org.apache.catalina.session.StandardManager.unload(StandardManager.java:469)
+	at org.apache.catalina.session.StandardManager.stop(StandardManager.java:673)
+	at org.apache.catalina.core.StandardContext.stop(StandardContext.java:4774)
+	at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:924)
+	at org.apache.catalina.startup.HostConfig.undeployApps(HostConfig.java:1319)
+	at org.apache.catalina.startup.HostConfig.stop(HostConfig.java:1290)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:323)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.core.ContainerBase.stop(ContainerBase.java:1086)
+	at org.apache.catalina.core.ContainerBase.stop(ContainerBase.java:1098)
+	at org.apache.catalina.core.StandardEngine.stop(StandardEngine.java:450)
+	at org.apache.catalina.core.StandardService.stop(StandardService.java:587)
+	at org.apache.catalina.core.StandardServer.stop(StandardServer.java:744)
+	at org.apache.catalina.startup.Catalina.stop(Catalina.java:648)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:615)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+ 
+17:49:05.739 INFO [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+17:49:06.664 INFO [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextDestroyed()  
+17:49:06.665 INFO [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextDestroyed()  
+17:49:06.673 INFO [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+17:52:02.539 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+17:52:09.068 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+17:52:21.380 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextInitialized()  
+17:52:21.380 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextInitialized()  
+17:53:55.842 INFOS [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+17:53:56.931 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextDestroyed()  
+17:53:56.932 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextDestroyed()  
+17:53:56.941 INFOS [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+18:12:09.050 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+18:12:14.304 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+18:12:18.724 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextInitialized()  
+18:12:18.725 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextInitialized()  
+18:14:09.926 INFOS [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+18:14:10.918 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextDestroyed()  
+18:14:10.919 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextDestroyed()  
+18:14:10.927 INFOS [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+18:31:13.847 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+18:31:18.399 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+18:31:20.294 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextInitialized()  
+18:31:20.295 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextInitialized()  
+18:40:28.657 WARNING [org.apache.catalina.session.StandardSession writeObject] - Impossible de sérialiser l'attribut de session serviceManager pour la session 093A962D746A4CD31DB328E696735C74 
+java.io.NotSerializableException: fr.osys.optima.core.tml.services.productionmanagement.impl.MachineServicesImpl
+	at java.io.ObjectOutputStream.writeObject0(Unknown Source)
+	at java.io.ObjectOutputStream.defaultWriteFields(Unknown Source)
+	at java.io.ObjectOutputStream.writeSerialData(Unknown Source)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(Unknown Source)
+	at java.io.ObjectOutputStream.writeObject0(Unknown Source)
+	at java.io.ObjectOutputStream.defaultWriteFields(Unknown Source)
+	at java.io.ObjectOutputStream.writeSerialData(Unknown Source)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(Unknown Source)
+	at java.io.ObjectOutputStream.writeObject0(Unknown Source)
+	at java.io.ObjectOutputStream.defaultWriteFields(Unknown Source)
+	at java.io.ObjectOutputStream.writeSerialData(Unknown Source)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(Unknown Source)
+	at java.io.ObjectOutputStream.writeObject0(Unknown Source)
+	at java.io.ObjectOutputStream.defaultWriteFields(Unknown Source)
+	at java.io.ObjectOutputStream.writeSerialData(Unknown Source)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(Unknown Source)
+	at java.io.ObjectOutputStream.writeObject0(Unknown Source)
+	at java.io.ObjectOutputStream.defaultWriteFields(Unknown Source)
+	at java.io.ObjectOutputStream.writeSerialData(Unknown Source)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(Unknown Source)
+	at java.io.ObjectOutputStream.writeObject0(Unknown Source)
+	at java.io.ObjectOutputStream.defaultWriteFields(Unknown Source)
+	at java.io.ObjectOutputStream.writeSerialData(Unknown Source)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(Unknown Source)
+	at java.io.ObjectOutputStream.writeObject0(Unknown Source)
+	at java.io.ObjectOutputStream.writeObject(Unknown Source)
+	at org.apache.catalina.session.StandardSession.writeObject(StandardSession.java:1551)
+	at org.apache.catalina.session.StandardSession.writeObjectData(StandardSession.java:994)
+	at org.apache.catalina.session.StandardManager.doUnload(StandardManager.java:523)
+	at org.apache.catalina.session.StandardManager.unload(StandardManager.java:469)
+	at org.apache.catalina.session.StandardManager.stop(StandardManager.java:673)
+	at org.apache.catalina.core.StandardContext.stop(StandardContext.java:4774)
+	at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:924)
+	at org.apache.catalina.startup.HostConfig.undeployApps(HostConfig.java:1319)
+	at org.apache.catalina.startup.HostConfig.stop(HostConfig.java:1290)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:323)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.core.ContainerBase.stop(ContainerBase.java:1086)
+	at org.apache.catalina.core.ContainerBase.stop(ContainerBase.java:1098)
+	at org.apache.catalina.core.StandardEngine.stop(StandardEngine.java:450)
+	at org.apache.catalina.core.StandardService.stop(StandardService.java:587)
+	at org.apache.catalina.core.StandardServer.stop(StandardServer.java:744)
+	at org.apache.catalina.startup.Catalina.stop(Catalina.java:648)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:615)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+ 
+18:40:28.658 INFO [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+18:40:29.587 INFO [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextDestroyed()  
+18:40:29.587 INFO [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextDestroyed()  
+18:40:29.596 INFO [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+18:43:53.335 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+18:44:07.261 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+18:44:09.739 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextInitialized()  
+18:44:09.740 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextInitialized()  

@@ -1,0 +1,1835 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+
+
+	<p:dialog id="idStatisDialog" modal="true" widgetVar="statusDialogWdgt"
+		header="#{bundle['common.information']}" draggable="false"
+		closable="false" resizable="false">
+		<h:form id="formDialog">
+			<h:panelGrid id="display" columns="2" cellpadding="4">
+				<h:graphicImage value="../../resources/img/design/ajaxloading.gif" />
+				<h:outputText value="#{bundle['common.process_running']}"
+					style="font-size:24px; color:blue;" />
+			</h:panelGrid>
+		</h:form>
+	</p:dialog>
+
+	<p:growl id="growl" class="growl" showSummary="false" showDetail="true"
+		autoUpdate="true" life="5000" widgetVar="growlProd"/>
+
+	<ui:insert name="toprint" />
+	
+	<h4>#{bundle['prod.gantt.title.ressource']}</h4>
+	<pe:timeline id="timeline_MA" value="#{List_MA}" var="evtEtatProd"
+		widgetVar="timelineFirstWdgt" start="#{start}" end="#{end}"
+		groupsWidth="#{groupsWidth}" zoomable="#{zoomable}" editable="false"
+		axisOnTop="#{axisOnTop}" stackEvents="false" animate="false"
+		timeChangeable="false" locale="#{locale}" groupMinHeight="70">
+		<pe:javascript event="rangechange" execute="onrangechange1();saveVisibleRange();" />
+		<pe:javascript event="rangechanged" execute="PF('timelineFirstWdgt').getInstance().setOptions({'animate':false, 'animateZoom':false})"/>
+		<p:ajax event="add" update="@none" onstart="timelineFirstWdgt.cancelAdd()"/>
+	    <p:ajax event="select" update="addModEtat"
+			listener="#{evtProdCorrController.multitimeline.onEdit}"
+			oncomplete="PF('detailTimelineWdgtEtatPers').show();loadBackgroundEvtEtatMach();loadModifyIconEtatMach();" /> 
+		<h:panelGrid columns="1">
+			<h:outputText class="#{evtEtatProd.flagcorr}"
+				value=" #{evtEtatProd.desietatinitial} ( #{evtEtatProd.duree} #{bundle['prod.gantt.dialog.time.detail']} ) "
+				style="background-color: #{evtEtatProd.color}" />
+			<h:panelGrid columns="2">
+				<h:outputText value="#{bundle['prod.gantt.detail.from']} " />
+				<h:outputText value="#{evtEtatProd.dateheuredebut}">
+					<!--             	<f:convertDateTime type="date" timeZone="Etc/GMT-1" pattern="#{bundle['common.format.date.hour']}" /> -->
+					<f:convertDateTime type="date"
+						pattern="#{bundle['common.format.date.hour']}" />
+				</h:outputText>
+				<h:outputText value="#{bundle['prod.gantt.detail.to']} " />
+				<h:outputText value="#{evtEtatProd.dateheurefin}">
+					<!--             	<f:convertDateTime type="date" timeZone="Etc/GMT-1" pattern="#{bundle['common.format.date.hour']}" /> -->
+					<f:convertDateTime type="date"
+						pattern="#{bundle['common.format.date.hour']}" />
+				</h:outputText>
+
+			</h:panelGrid>
+		</h:panelGrid>
+	</pe:timeline>
+	
+	<script>
+		PF('timelineFirstWdgt').getInstance().setOptions({'animate':false, 'animateZoom':false})
+	</script>
+
+	<p:dialog id="detailsTimeline" class="detailsTimeline"
+		header="#{bundle['prod.gantt.detail.mach.title']}"
+		widgetVar="detailTimelineWdgtEtatPers" showEffect="clip" hideEffect="clip">
+		<h:panelGroup id="addModEtat">
+			<h:form id="formEtatprod">
+				<div style="width: 750px; margin-left: auto; margin-right: auto;">
+					<table width="100%" cellspacing="3" border="0">
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="MA_equipement">#{bundle['prod.gantt.dialog.equipment']}
+									: </label></td>
+							<td class="dlg_left"><p:inputText id="MA_equipement"
+									style="width:280px;" readonly="true"
+									value="#{evtProdCorrController.multitimeline.currentmachine.desiequipement}"></p:inputText></td>
+						</tr>
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="MA_etatinitial">#{bundle['prod.gantt.dialog.mach.etat_init']}
+									: </label></td>
+							<td class="dlg_left"><p:inputText id="MA_etatinitial"
+									style="width:280px;" class="readonly" readonly="true"
+									value="#{evtProdCorrController.multitimeline.currentmachine.desietatinitial}"></p:inputText></td>
+						</tr>
+					</table>
+					<br />
+					<hr />
+					<table width="100%" cellspacing="3" border="0">
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="MA_fami_etat">#{bundle['prod.gantt.dialog.mach.family_equipment']}
+									: </label> <!-- <p:inputText id="MA_fami_etat"></p:inputText><br/> -->
+							</td>
+							<td class="dlg_left"><p:selectOneMenu
+									id="lstFamilleEtatMach" disabled="true"
+									value="#{evtProdCorrController.multitimeline.currentmachine.familleetatequipement}"
+									style="width: auto" class="listBox">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtProdCorrController.evtProdViewModel.lstFamilleEtatMach}"
+										var="fmach" itemLabel="#{fmach.desiFamiEtat}"
+										itemValue="#{fmach.codeFamiEtat}" />
+								</p:selectOneMenu></td>
+						</tr>
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="MA_etat">#{bundle['prod.gantt.dialog.mach.new_equipment']}
+									: </label> <!-- <p:inputText id="MA_etat"></p:inputText><br/> --></td>
+							<td class="dlg_left"><p:selectOneMenu id="lstEtatMach"
+									value="#{evtProdCorrController.multitimeline.currentmachine.nouveauetatequipement}"
+									style="width: auto" class="listBox">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtProdCorrController.evtProdViewModel.lstEtatMach}"
+										var="mach" itemLabel="#{mach.desiEtatMach}"
+										itemValue="#{mach.codeEtatMach}" />
+									<p:ajax event="valueChange" 
+									 	listener="#{evtProdCorrController.updateEtatMachine}" 
+									 	update=":tabView:formEtatprod:lstFamilleEtatMach"/>	
+								</p:selectOneMenu></td>
+						</tr>
+					</table>
+
+					<hr />
+					<table width="100%" cellspacing="3" border="0">
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="ofcriterionDateBegin">#{bundle['prod.gantt.dialog.date_begin']}
+									: </label></td>
+							<td class="dlg_left"><p:calendar id="ofcriterionDateBegin"
+									showOn="button" pattern="#{bundle['common.format.date.hour']}"
+									locale="#{evtProdCorrController.paramUrl.paramLocale}"
+									value="#{evtProdCorrController.multitimeline.currentmachine.dateheuredebut}"
+									class="calendar">
+									<p:ajax process="@this" event="dateSelect"
+										listener="#{evtProdCorrController.multitimeline.currentmachine.calculDuree}"
+										partialSubmit="true" update=":tabView:formEtatprod:opduree" />
+									<p:ajax process="@this" event="change"
+										listener="#{evtProdCorrController.multitimeline.currentmachine.calculDuree}"
+										partialSubmit="true" update=":tabView:formEtatprod:opduree" />
+								</p:calendar></td>
+							<td class="dlg_left" rowspan="2">
+								<div class="dureForm">
+									<label for="opduree">#{bundle['prod.gantt.dialog.time']}
+										(#{bundle['prod.gantt.dialog.time.detail']}) : </label>
+									<p:inputText id="opduree" readonly="true" class="duree"
+										value="#{evtProdCorrController.multitimeline.currentmachine.duree}"></p:inputText>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="ofcriterionDateEnd">#{bundle['prod.gantt.dialog.date_end']}
+									: </label></td>
+							<td class="dlg_left"><p:calendar id="ofcriterionDateEnd"
+									showOn="button" pattern="#{bundle['common.format.date.hour']}"
+									locale="#{evtProdCorrController.paramUrl.paramLocale}"
+									value="#{evtProdCorrController.multitimeline.currentmachine.dateheurefin}"
+									class="calendar">
+									<p:ajax process="@this" event="dateSelect"
+										listener="#{evtProdCorrController.multitimeline.currentmachine.calculDuree}"
+										partialSubmit="true" update=":tabView:formEtatprod:opduree" />
+									<p:ajax process="@this" event="change"
+										listener="#{evtProdCorrController.multitimeline.currentmachine.calculDuree}"
+										partialSubmit="true" update=":tabView:formEtatprod:opduree" />
+								</p:calendar></td>
+						</tr>
+					</table>
+
+
+					<center>
+						<p:messages id="messages" showDetail="true" autoUpdate="true"
+							closable="true" />
+					</center>
+					<br /> <br /> <br />
+				</div>
+				<table width="100%">
+					<tr>
+						<td class="quit"><p:commandButton id="addModEtatQuit"
+								class="addModEtatQuit commandButton btnCancel" type="button"
+								value="#{bundle['common.button.quit']}"
+								onclick="PF('detailTimelineWdgtEtatPers').hide()" /></td>
+						<td class="rollback"><p:commandButton
+								value="#{bundle['common.button.rollback']}"
+								actionListener="#{evtProdCorrController.rollBack}"
+								disabled="#{evtProdCorrController.multitimeline.currentmachine.flagcorrinverse}"
+								class="commandButton btnOther">
+								<f:param name="dateDebut"
+									value="#{evtProdCorrController.multitimeline.currentmachine.dateheuredebut}" />
+								<f:param name="dateFin"
+									value="#{evtProdCorrController.multitimeline.currentmachine.dateheurefin}" />
+								<f:param name="equipement"
+									value="#{evtProdCorrController.multitimeline.currentmachine.equipement}" />
+								<f:param name="form" value="em" />
+							</p:commandButton></td>
+						<td class="reset"><p:commandButton
+								value="#{bundle['common.button.reset']}"
+								actionListener="#{evtProdCorrController.resetCM}"
+								update=":tabView:addModEtat" ajax="true"
+								class="commandButton btnOther" /></td>
+						<td class="validate"><p:commandButton
+								value="#{bundle['common.button.validate']}"
+								actionListener="#{evtProdCorrController.verifFormEtatProd}"
+								class="commandButton btnOk">
+							</p:commandButton></td>
+					</tr>
+				</table>
+			</h:form>
+		</h:panelGroup>
+	</p:dialog>
+	<!-- <div style="text-align:right; margin-bottom:8px;"><button value="Ajouter une plage Machine" id="add_ma" type="button">Ajouter</button></div> -->
+	<div style="text-align: right; margin-bottom: 8px;">
+		<p:commandButton type="button" id="add_maa"
+			value="#{bundle['common.button.add']}" class="commandButton btnOther"
+			onclick="PF('detailTimelineWdgtEtatPers').show()">
+			<p:ajax event="click" update="addModEtat"
+				listener="#{evtProdCorrController.onResetAddCM}" />
+		</p:commandButton>
+	</div>
+
+	<h4>#{bundle['prod.gantt.title.of']}</h4>
+	<pe:timeline id="timeline_OF" value="#{List_OF}"
+		widgetVar="timelineSecondWdgt" var="evtOfOper" start="#{start}"
+		end="#{end}" groupsWidth="#{groupsWidth}" zoomable="#{zoomable}"
+		editable="false" axisOnTop="#{axisOnTop}" stackEvents="#{stackEvents}"
+		locale="#{locale}" animate="false" animateZoom="false" groupMinHeight="90">
+		<pe:javascript event="rangechange" execute="onrangechange2();saveVisibleRange();PF('timelineSecondWdgt').getInstance().setOptions({'animate':false, 'animateZoom':false});" />
+		<pe:javascript event="rangechanged" execute="PF('timelineSecondWdgt').getInstance().setOptions({'animate':false, 'animateZoom':false})"/>
+		<p:ajax event="select" update="addModOF"
+			listener="#{evtProdCorrController.multitimeline.onEdit}"
+			oncomplete="PF('detailTimelineOFWdgt').show();loadBackgroundEvtOfOper();loadModifyIconOF();" />
+			
+		<h:panelGrid columns="1">
+			<h:outputText class="#{evtOfOper.flagcorr}"
+				value=" #{evtOfOper.libGantt} ( #{evtOfOper.duree} #{bundle['prod.gantt.dialog.time.detail']} )"
+				style="background-color: #{evtOfOper.color}" />
+			<h:panelGrid columns="2">
+				<h:outputText value="#{bundle['prod.gantt.detail.from']} " />
+				<h:outputText
+					value="#{evtOfOper.dateheuredebut}">
+					<!-- 	        	<f:convertDateTime type="date" timeZone="Etc/GMT-1" pattern="#{bundle['common.format.date.hour']}" /> -->
+					<f:convertDateTime type="date"
+						pattern="#{bundle['common.format.date.hour']}" />
+				</h:outputText>
+				<h:outputText value="#{bundle['prod.gantt.detail.to']} " />
+				<h:outputText
+					value="#{evtOfOper.dateheurefin}">
+					<!-- 	        	<f:convertDateTime type="date" timeZone="Etc/GMT-1" pattern="#{bundle['common.format.date.hour']}" /> -->
+					<f:convertDateTime type="date"
+						pattern="#{bundle['common.format.date.hour']}" />
+				</h:outputText>
+				<h:outputText value="#{bundle['prod.gantt.detail.quan']} " />
+				<h:outputText
+					value="#{evtOfOper.quandprod}/#{evtOfOper.quandbonne}/#{evtOfOper.quandrebut}" />
+			</h:panelGrid>
+		</h:panelGrid>
+	</pe:timeline>
+	
+	<script>
+	PF('timelineSecondWdgt').getInstance().setOptions({'animate':false, 'animateZoom':false})
+	</script>
+
+	<!-- Ajout bouton supprimer ajouter style="max-width:1000px;" dans dialog -->
+	<p:dialog id="detailsTimelineOF" class="detailsTimeline" style="max-width:1000px;"
+		header="#{bundle['prod.gantt.detail.of.title']}"
+		widgetVar="detailTimelineOFWdgt" showEffect="clip" hideEffect="clip">
+
+		<h:panelGroup id="addModOF">
+
+			<h:form id="formOf">
+				<div style="width: 900px; margin-left: auto; margin-right: auto;">
+					<table width="100%" cellspacing="3" border="0">
+<!--  					<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OF_etat">#{bundle['prod.gantt.dialog.etat']} : </label></td>
+							<td class="dlg_left"><p:selectOneMenu id="OF_listEtatMach"
+									value="#{evtProdCorrController.multitimeline.currentof.nouveauetatequipement}"
+									converter="#{evtProdCorrController.etatMachConverter}"
+									style="width: auto" class="listBox">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtProdCorrController.evtProdViewModel.lstEtatMach}"
+										var="etatMach" itemLabel="#{etatMach.desiEtatMach}"
+										itemValue="#{etatMach.codeEtatMach}" />
+								</p:selectOneMenu></td>
+						</tr> -->
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><h:outputLabel
+									id="OF_oflabel" for="OF_of"
+									value="#{bundle['prod.gantt.dialog.of']}:" /></td>
+							<td class="dlg_left"><h:panelGroup id="groupOf">
+									<p:autoComplete id="OF_of"
+										value="#{evtProdCorrController.multitimeline.currentof.ofList}"
+										completeMethod="#{evtProdCorrController.completeOfListe}"
+										var="of" itemLabel="#{of.codeOfSite}" itemValue="#{of}"
+										converter="#{evtProdCorrController.ofListeConverter}"
+										forceSelection="false" maxResults="10" minQueryLength="1"
+										scrollHeight="250">
+<!--									<p:ajax process="@this" event="blur"
+											listener="#{evtProdCorrController.updateOf}"
+											partialSubmit="true" update=":tabView:formOf:OF_article" /> -->
+										<p:ajax event="itemSelect" process="OF_of" listener="#{evtProdCorrController.updateOf}"
+										    	update=":tabView:formOf:groupOfOut,
+										    	 	    :tabView:formOf:OF_operation,:tabView:formOf:groupOperOut,
+										                :tabView:formOf:OF_article,:tabView:formOf:groupArticleOut"/>
+										<p:column>
+											<h:outputText value="#{of.codeOfSite}" />
+										</p:column>
+										<p:column>
+											<h:outputText value="#{of.desiOf}" />
+										</p:column>
+									</p:autoComplete>
+									<h:outputText id="groupOfOut"		
+										value="#{evtProdCorrController.multitimeline.currentof.desiof}" />
+								</h:panelGroup></td>
+						</tr>
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><h:outputLabel
+									id="OF_operationlabel" for="OF_operation"
+									value="#{bundle['prod.gantt.dialog.oper']}:" /></td>
+							<td class="dlg_left"><h:panelGroup id="groupOper">
+									<p:autoComplete id="OF_operation"
+										value="#{evtProdCorrController.multitimeline.currentof.ofOperList}"
+										completeMethod="#{evtProdCorrController.completeOfOper}"
+										var="ofOper" itemLabel="#{ofOper.pk.codeOper}"
+										itemValue="#{ofOper}"
+										converter="#{evtProdCorrController.ofOperConverter}"
+										forceSelection="false" maxResults="10" minQueryLength="1"
+										scrollHeight="250">
+										<p:ajax process="@this" event="blur"
+											listener="#{evtProdCorrController.updateOper}"
+											partialSubmit="true" update=":tabView:formOf:OF_article, :tabView:formOf:groupArticleOut" />
+										<p:column>
+											<h:outputText value="#{ofOper.pk.codeOper}" />
+										</p:column>
+										<p:column>
+											<h:outputText value="#{ofOper.desiOper}" />
+										</p:column>
+									</p:autoComplete>
+									<h:outputText id="groupOperOut"		
+										value="#{evtProdCorrController.multitimeline.currentof.desioperation}" />
+								</h:panelGroup></td>
+						</tr>
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><h:outputLabel
+									id="OF_articlelabel" for="OF_article"
+									value="#{bundle['prod.gantt.dialog.arti']}:" /></td>
+							<td class="dlg_left"><h:panelGroup id="groupArticle">
+									<p:autoComplete id="OF_article"
+										value="#{evtProdCorrController.multitimeline.currentof.articleList}"
+										completeMethod="#{evtProdCorrController.completeArticle}"
+										var="arti" itemLabel="#{arti.codeArti}" itemValue="#{arti}"
+										converter="#{evtProdCorrController.articleConverter}"
+										forceSelection="false" maxResults="10" minQueryLength="1"
+										scrollHeight="250">
+										<p:ajax process="@this" event="blur"
+											listener="#{evtProdCorrController.updateArticle}"
+											partialSubmit="true" update=":tabView:formOf:OF_article" />
+										<p:column>
+											<h:outputText value="#{arti.codeArti}" />
+										</p:column>
+										<p:column>
+											<h:outputText value="#{arti.desiArti}" />
+										</p:column>
+									</p:autoComplete>
+									<h:outputText id="groupArticleOut"		
+										value="#{evtProdCorrController.multitimeline.currentof.desiarticle}" />
+								</h:panelGroup></td>
+						</tr>
+					</table>
+
+					<hr />
+
+
+					<table width="100%" cellspacing="3" border="0">
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="ofcriterionDateBegin">#{bundle['prod.gantt.dialog.date_begin']}
+									:</label></td>
+							<td class="dlg_left"><p:calendar id="ofcriterionDateBegin"
+									showOn="button" pattern="#{bundle['common.format.date.hour']}"
+									locale="#{evtProdCorrController.paramUrl.paramLocale}"
+									value="#{evtProdCorrController.multitimeline.currentof.dateheuredebut}"
+									class="calendar">
+									<p:ajax process="@this" event="dateSelect"
+										listener="#{evtProdCorrController.multitimeline.currentof.calculDuree}"
+										partialSubmit="true" update=":tabView:formOf:opduree" />
+									<p:ajax process="@this" event="change"
+										listener="#{evtProdCorrController.multitimeline.currentof.calculDuree}"
+										partialSubmit="true" update=":tabView:formOf:opduree" />
+								</p:calendar></td>
+							<td class="dlg_left" rowspan="2">
+								<div class="dureForm">
+									<label for="opduree">#{bundle['prod.gantt.dialog.time']}
+										(#{bundle['prod.gantt.dialog.time.detail']}) : </label>
+									<p:inputText id="opduree" readonly="true" class="duree"
+										value="#{evtProdCorrController.multitimeline.currentof.duree}"></p:inputText>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="ofcriterionDateEnd">#{bundle['prod.gantt.dialog.date_end']}
+									:</label></td>
+							<td class="dlg_left"><p:calendar id="ofcriterionDateEnd"
+									showOn="button" pattern="#{bundle['common.format.date.hour']}"
+									locale="#{evtProdCorrController.paramUrl.paramLocale}"
+									value="#{evtProdCorrController.multitimeline.currentof.dateheurefin}"
+									class="calendar">
+									<p:ajax process="@this" event="dateSelect"
+										listener="#{evtProdCorrController.multitimeline.currentof.calculDuree}"
+										partialSubmit="true" update=":tabView:formOf:opduree" />
+									<p:ajax process="@this" event="change"
+										listener="#{evtProdCorrController.multitimeline.currentof.calculDuree}"
+										partialSubmit="true" update=":tabView:formOf:opduree" />
+								</p:calendar></td>
+						</tr>
+					</table>
+
+
+					<hr />
+
+					<table width="100%" cellspacing="3" border="0">
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OF_listMachines">#{bundle['prod.gantt.dialog.equipment']}
+									: </label></td>
+							<td class="dlg_left"><p:selectOneMenu id="OF_listMachines"
+									value="#{evtProdCorrController.multitimeline.currentof.equipement}"
+									style="width: auto" class="listBox" disabled="true">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtProdCorrController.evtProdViewModel.lstMachine}"
+										var="mach" itemLabel="#{mach.desiMach}"
+										itemValue="#{mach.codeMach}" />									
+								</p:selectOneMenu></td>
+						</tr>
+<!-- 					<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OF_listEquipes">#{bundle['prod.gantt.dialog.equipe']}
+									: </label></td>
+							<td class="dlg_left"><p:selectOneMenu id="OF_listEquipes"
+									value="#{evtProdCorrController.multitimeline.currentof.equipe}"
+									style="width: auto" class="listBox" disabled="true">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtProdCorrController.evtProdViewModel.lstEquipe}"
+										var="equi" itemLabel="#{equi.desiEqui}"
+										itemValue="#{equi.codeEqui}" />
+								</p:selectOneMenu></td>
+						</tr> -->
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OF_listAteliers">#{bundle['prod.gantt.dialog.atelier']}
+									: </label></td>
+							<td class="dlg_left"><p:selectOneMenu id="OF_listAteliers"
+									value="#{evtProdCorrController.multitimeline.currentof.atelier}"
+									style="width: auto" class="listBox" disabled="true">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtProdCorrController.evtProdViewModel.lstAtelier}"
+										var="atel" itemLabel="#{atel.desiAtel}"
+										itemValue="#{atel.codeAtel}" />
+								</p:selectOneMenu></td>
+						</tr>
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OF_listSectGeo">#{bundle['prod.gantt.dialog.sect_geo']}
+									: </label></td>
+							<td class="dlg_left"><p:selectOneMenu id="OF_listSectGeo"
+									value="#{evtProdCorrController.multitimeline.currentof.secteurgeo}"
+									style="width: auto" class="listBox" disabled="true">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtProdCorrController.evtProdViewModel.lstSectGeo}"
+										var="sectGeo" itemLabel="#{sectGeo.desiSectGeog}"
+										itemValue="#{sectGeo.codeSectGeog}" />
+								</p:selectOneMenu></td>
+						</tr>
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OF_listOutil">#{bundle['prod.gantt.dialog.of.tool']}
+									: </label></td>
+							<td class="dlg_left"><p:selectOneMenu id="OF_listOutil"
+									value="#{evtProdCorrController.multitimeline.currentof.outil}"
+									style="width: auto" class="listBox">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtProdCorrController.evtProdViewModel.lstOutil}"
+										var="outi" itemLabel="#{outi.desiOuti}"
+										itemValue="#{outi.codeOuti}" />
+								</p:selectOneMenu></td>
+						</tr>
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OF_sectAna">#{bundle['prod.gantt.dialog.sect_anal']}
+									: </label></td>
+							<td class="dlg_left"><p:selectOneMenu id="OF_listSectAna"
+									value="#{evtProdCorrController.multitimeline.currentof.secteurana}"
+									style="width: auto" class="listBox" disabled="true">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtProdCorrController.evtProdViewModel.lstSectionAna}"
+										var="sectAna" itemLabel="#{sectAna.desiSectAnal}"
+										itemValue="#{sectAna.codeSectAnal}" />
+								</p:selectOneMenu></td>
+						</tr>
+					</table>
+					<hr />
+				</div>
+				<br />
+				<div style="width: 930px; margin-left: auto; margin-right: auto;"
+					id="divTableOfEvt">
+					<p:dataTable id="tabbleOf" var="of"
+						value="#{evtProdCorrController.multitimeline.currentof.listEvtOfOper}"
+						editable="true" editMode="cell" widgetVar="tableOfdetail">
+					    <f:facet name="header">
+				           #{bundle['prod.gantt.detail.list.of']}
+				        </f:facet>
+
+						<p:column headerText="#{bundle['prod.gantt.dialog.etat']}">
+							<h:outputText value="#{of.desietatequipement}" class="readonly" />
+						</p:column>
+
+						<p:column headerText="#{bundle['prod.gantt.dialog.date_begin']}">
+							<h:outputText value="#{of.dateheuredebut}" class="readonly">
+								<f:convertDateTime
+									pattern="#{bundle['common.format.date.hour']}" type="date" />
+							</h:outputText>
+						</p:column>
+						<p:column headerText="#{bundle['prod.gantt.dialog.date_end']}">
+							<h:outputText value="#{of.dateheurefin}" class="readonly">
+								<f:convertDateTime
+									pattern="#{bundle['common.format.date.hour']}" type="date" />
+							</h:outputText>
+						</p:column>
+						<p:column headerText="#{bundle['prod.gantt.dialog.equipe']}">
+							<h:outputText value="#{of.desiequipe}" class="readonly" />
+						</p:column>
+						<p:column
+							headerText="#{bundle['prod.gantt.dialog.quantity.produced']}"
+							styleClass="ui-editable-column">
+							<p:cellEditor>
+								<f:facet name="output">
+									<h:outputText value="#{of.quandprod}" />
+								</f:facet>
+								<f:facet name="input">
+									<p:inputText value="#{of.quandprod}" style="width:96%"
+										label="Equipe" />
+								</f:facet>
+							</p:cellEditor>
+						</p:column>
+						<p:column
+							headerText="#{bundle['prod.gantt.dialog.quantity.succeeded']}"
+							styleClass="ui-editable-column">
+							<p:cellEditor>
+								<f:facet name="output">
+									<h:outputText value="#{of.quandbonne}" />
+								</f:facet>
+								<f:facet name="input">
+									<p:inputText value="#{of.quandbonne}" style="width:96%"
+										label="Equipe">
+										<f:attribute name="of" value="#{of}" />
+										<p:ajax event="change" listener="#{evtProdCorrController.updateQuanProd}" update=":tabView:formOf" />  
+									</p:inputText>
+								</f:facet>
+							</p:cellEditor>
+						</p:column>
+						<p:column
+							headerText="#{bundle['prod.gantt.dialog.quantity.rebut']}">
+							<p:cellEditor>
+								<f:facet name="output">
+									<h:outputText value="#{of.quandrebut}" />
+								</f:facet>
+								<f:facet name="input">
+									<p:inputText value="#{of.quandrebut}" style="width:96%"
+										label="Equipe">
+										<f:attribute name="of" value="#{of}" />
+										<p:ajax event="change" listener="#{evtProdCorrController.updateQuanProd}" update=":tabView:formOf" />  
+									</p:inputText>
+								</f:facet>
+							</p:cellEditor>
+						</p:column>
+						<p:column headerText="#{bundle['prod.gantt.dialog.cadence_theo']}">
+							<p:cellEditor>
+								<f:facet name="output">
+									<h:outputText value="#{of.cadtheo}" />
+								</f:facet>
+								<f:facet name="input">
+									<p:inputText value="#{of.cadtheo}" style="width:96%"
+										label="Equipe" />
+								</f:facet>
+							</p:cellEditor>
+						</p:column>
+						<p:column
+							headerText="#{bundle['prod.gantt.dialog.of.piece_theo']}">
+							<p:cellEditor>
+								<f:facet name="output">
+									<h:outputText value="#{of.pcycletheo}" />
+								</f:facet>
+								<f:facet name="input">
+									<p:inputText value="#{of.pcycletheo}" style="width:96%"
+										label="Equipe" />
+								</f:facet>
+							</p:cellEditor>
+						</p:column>
+						<p:column
+							headerText="#{bundle['prod.gantt.dialog.of.piece_real']}">
+							<p:cellEditor>
+								<f:facet name="output">
+									<h:outputText value="#{of.ppcyclereel}" />
+								</f:facet>
+								<f:facet name="input">
+									<p:inputText value="#{of.ppcyclereel}" style="width:96%"
+										label="Equipe" />
+								</f:facet>
+							</p:cellEditor>
+						</p:column>				   						
+
+   						<p:column headerText="#{bundle['prod.gantt.dialog.of.corr']}" 
+   								  style="text-align: center; width:25px;">   								
+   							<h:graphicImage value="../../resources/img/modify.png" rendered="#{of.flagcorr}" />
+						</p:column>
+   					
+						<p:column style="text-align: center; width:25px;"> 						
+	  						<f:facet name="header">									
+                           		<p:selectBooleanCheckbox id="suppAllOF" 
+                           				value="#{evtProdCorrController.multitimeline.flagSuppAllOF}" 
+                           				style="border: 1px solid #f8f8f8;background-color: #f8f8f8;" >  
+                           			<p:ajax event="change"                     				
+                           				listener="#{evtProdCorrController.checkAll}" 
+                           				update=":tabView:formOf:tabbleOf,:tabView:formOf:removeOF" />                           					
+                           		</p:selectBooleanCheckbox>
+                            </f:facet>                            					
+           					<p:selectBooleanCheckbox value="#{of.flagSupp}" >
+           						<p:ajax event="change"               				
+                           				listener="#{evtProdCorrController.checkOF}" 
+                           				update=":tabView:formOf:removeOF,:tabView:formOf:tabbleOf" />   
+							</p:selectBooleanCheckbox>
+           				</p:column>
+           				           			
+					</p:dataTable>
+				</div>
+
+				<br />
+				<hr />
+				<br />
+				<center>
+					<p:messages id="messages" showDetail="true" autoUpdate="true"
+						closable="true" />
+				</center>
+				<br />
+
+				<table width="100%">
+					<tr>
+						<td class="quit"><p:commandButton id="addModOFQuit"
+								type="button" value="#{bundle['common.button.quit']}"
+								class="commandButton btnCancel"
+								onclick="PF('detailTimelineOFWdgt').hide()" /></td>
+						<td class="rollback"><p:commandButton
+								value="#{bundle['common.button.rollback']}"
+								disabled="#{evtProdCorrController.multitimeline.currentof.flagcorrinverse}"
+								update=":tabView:addModOF"
+								actionListener="#{evtProdCorrController.rollBack}"								
+								class="commandButton btnOther">
+								<f:param name="dateDebut"
+									value="#{evtProdCorrController.multitimeline.currentof.dateheuredebut}" />
+								<f:param name="dateFin"
+									value="#{evtProdCorrController.multitimeline.currentof.dateheurefin}" />
+								<f:param name="equipement"
+									value="#{evtProdCorrController.multitimeline.currentof.equipement}" />
+								<f:param name="form" value="of" />
+							</p:commandButton></td>
+						<td class="reset"><p:commandButton
+								value="#{bundle['common.button.reset']}"
+								actionListener="#{evtProdCorrController.resetCOF}"
+								update=":tabView:addModOF" ajax="true"
+								class="commandButton btnOther" /></td>
+	 					<td class="remove">	 		
+	 						<p:commandButton id="removeOF" disabled="#{evtProdCorrController.multitimeline.btnOfRemoveDisabled}"
+	 							value="#{bundle['common.button.remove']}"
+								actionListener="#{evtProdCorrController.removeOF}" 
+								class="commandButton btnCancel" >
+								<p:confirm header="#{bundle['common.dialog.confirm.title']}" 
+										   message="#{bundle['prod.gantt.detail.removeOF.confirm']}" 
+										   icon="ui-icon-alert"/>	
+							</p:commandButton>
+							
+							 <p:confirmDialog global="true" showEffect="fade" hideEffect="fade">        						
+        						<p:commandButton value="#{bundle['common.dialog.confirm.yes']}" type="button" styleClass="ui-confirmdialog-yes" />
+        						<p:commandButton value="#{bundle['common.dialog.confirm.no']}" type="button" styleClass="ui-confirmdialog-no" />
+    						</p:confirmDialog>
+						</td>						
+						<td class="validate"><p:commandButton
+								value="#{bundle['common.button.validate']}"
+								actionListener="#{evtProdCorrController.verifFormOF}"
+								class="commandButton btnOk">
+							</p:commandButton></td>
+					</tr>
+				</table>
+			</h:form>
+			<!-- fin div -->
+		</h:panelGroup>
+
+	</p:dialog>
+
+	<p:dialog id="detailsTimelineOFA" class="detailsTimeline"
+		header="#{bundle['prod.gantt.detail.of.title']}"
+		widgetVar="detailTimelineOFWdgtA" showEffect="clip" hideEffect="clip">
+
+		<h:panelGroup id="addModOFA">
+			<h:form id="formOfA">
+				<div style="width: 900px; margin-left: auto; margin-right: auto;">
+					<table width="100%" cellspacing="3" border="0">
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OFA_etat">#{bundle['prod.gantt.dialog.etat']} : </label></td>
+							<td class="dlg_left"><p:selectOneMenu id="OFA_listEtatMach"
+									value="#{evtProdCorrController.multitimeline.currentof.nouveauetatequipement}"
+									converter="#{evtProdCorrController.etatMachConverter}"
+									style="width: auto" class="listBox">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtProdCorrController.evtProdViewModel.lstEtatMach}"
+										var="etatMach" itemLabel="#{etatMach.desiEtatMach}"
+										itemValue="#{etatMach.codeEtatMach}" />
+								</p:selectOneMenu></td>
+						</tr>
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><h:outputLabel
+									id="OF_oflabel" for="OF_of"
+									value="#{bundle['prod.gantt.dialog.of']}:" /></td>
+							<td class="dlg_left"><h:panelGroup id="groupOfA">
+									<p:autoComplete id="OFA_of"
+										value="#{evtProdCorrController.multitimeline.currentof.ofList}"
+										completeMethod="#{evtProdCorrController.completeOfListe}"
+										var="of" itemLabel="#{of.codeOfSite}" itemValue="#{of}"
+										converter="#{evtProdCorrController.ofListeConverter}"
+										forceSelection="false" maxResults="10" minQueryLength="1"
+										scrollHeight="250">
+<!-- 									<p:ajax process="@this" event="blur"
+											listener="#{evtProdCorrController.updateOf}"
+											partialSubmit="true" update=":tabView:formOfA:OFA_article" /> -->
+										<p:ajax event="itemSelect" process="OFA_of" listener="#{evtProdCorrController.updateOf}"
+										    	update=":tabView:formOfA:groupOfAOut,
+										    	 	    :tabView:formOfA:OFA_operation,:tabView:formOfA:groupOperAOut,
+														:tabView:formOfA:OFA_article,:tabView:formOfA:groupArticleAOut"/>
+										<p:ajax event="change" process="OFA_of" listener="#{evtProdCorrController.updateOf}" 
+												update=":tabView:formOfA:groupOfAOut"/>
+										<p:column>
+											<h:outputText value="#{of.codeOfSite}" />
+										</p:column>
+										<p:column>
+											<h:outputText value="#{of.desiOf}" />
+										</p:column>
+									</p:autoComplete>
+									<h:outputText id="groupOfAOut"		
+										value="#{evtProdCorrController.multitimeline.currentof.desiof}" />
+								</h:panelGroup></td>
+						</tr>
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><h:outputLabel
+									id="OFA_operationlabel" for="OFA_operation"
+									value="#{bundle['prod.gantt.dialog.oper']}:" /></td>
+							<td class="dlg_left"><h:panelGroup id="groupOperA">
+									<p:autoComplete id="OFA_operation"
+										value="#{evtProdCorrController.multitimeline.currentof.ofOperList}"
+										completeMethod="#{evtProdCorrController.completeOfOper}"
+										var="ofOper" itemLabel="#{ofOper.pk.codeOper}"
+										itemValue="#{ofOper}"
+										converter="#{evtProdCorrController.ofOperConverter}"
+										forceSelection="false" maxResults="10" minQueryLength="1"
+										scrollHeight="250">
+										<p:ajax process="OFA_operation" event="change" listener="#{evtProdCorrController.updateOper}" 
+											update=":tabView:formOfA:groupOperAOut, :tabView:formOfA:OFA_article, :tabView:formOfA:groupArticleAOut"/> 
+										<p:ajax event="itemSelect" process="OFA_operation" 
+											listener="#{evtProdCorrController.updateOper}"
+											update=":tabView:formOfA:groupOperAOut, :tabView:formOfA:OFA_article, :tabView:formOfA:groupArticleAOut" />
+										<p:column>
+											<h:outputText value="#{ofOper.pk.codeOper}" />
+										</p:column>
+										<p:column>
+											<h:outputText value="#{ofOper.desiOper}" />
+										</p:column>
+									</p:autoComplete>
+									<h:outputText id="groupOperAOut"		
+										value="#{evtProdCorrController.multitimeline.currentof.desioperation}" />
+								</h:panelGroup></td>
+						</tr>
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><h:outputLabel
+									id="OFA_articlelabel" for="OFA_article"
+									value="#{bundle['prod.gantt.dialog.arti']}:" /></td>
+							<td class="dlg_left"><h:panelGroup id="groupArticleA">
+									<p:autoComplete id="OFA_article"
+										value="#{evtProdCorrController.multitimeline.currentof.articleList}"
+										completeMethod="#{evtProdCorrController.completeArticle}"
+										var="arti" itemLabel="#{arti.codeArti}" itemValue="#{arti}"
+										converter="#{evtProdCorrController.articleConverter}"
+										forceSelection="false" maxResults="10" minQueryLength="1"
+										scrollHeight="250">
+										<p:ajax process="@this" event="blur"
+											listener="#{evtProdCorrController.updateArticle}"
+											partialSubmit="true" update=":tabView:formOfA:OFA_article" />
+										<p:ajax process="@this" event="change" listener="#{evtProdCorrController.updateArticle}" 
+											update=":tabView:formOfA:groupArticleA"/>
+										<p:column>
+											<h:outputText value="#{arti.codeArti}" />
+										</p:column>
+										<p:column>
+											<h:outputText value="#{arti.desiArti}" />
+										</p:column>
+									</p:autoComplete>
+									<h:outputText id="groupArticleAOut"		
+										value="#{evtProdCorrController.multitimeline.currentof.desiarticle}" />
+								</h:panelGroup></td>
+						</tr>
+					</table>
+					<hr />
+					<table width="100%" cellspacing="3" border="0">
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="ofacriterionDateBegin" class="labelDate">#{bundle['prod.gantt.dialog.date_begin']}
+									:</label></td>
+							<td class="dlg_left"><p:calendar id="ofacriterionDateBegin"
+									showOn="button" pattern="#{bundle['common.format.date.hour']}"
+									locale="#{evtProdCorrController.paramUrl.paramLocale}"
+									value="#{evtProdCorrController.multitimeline.currentof.dateheuredebut}"
+									class="calendar">
+									<p:ajax process="@this" event="dateSelect"
+										listener="#{evtProdCorrController.multitimeline.currentof.calculDuree}"
+										partialSubmit="true" update=":tabView:formOfA:ofaduree" />
+									<p:ajax process="@this" event="change"
+										listener="#{evtProdCorrController.multitimeline.currentof.calculDuree}"
+										partialSubmit="true" update=":tabView:formOfA:ofaduree" />
+								</p:calendar></td>
+							<td class="dlg_left" rowspan="2"><label for="ofaduree">#{bundle['prod.gantt.dialog.time']}
+									: (#{bundle['prod.gantt.dialog.time.detail']})</label> <p:inputText
+									id="ofaduree" class="duree" readonly="true"
+									value="#{evtProdCorrController.multitimeline.currentof.duree}"></p:inputText>
+							</td>
+						</tr>
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="ofacriterionDateEnd" class="labelDate">#{bundle['prod.gantt.dialog.date_end']}
+									:</label></td>
+							<td class="dlg_left"><p:calendar id="ofacriterionDateEnd"
+									showOn="button" pattern="#{bundle['common.format.date.hour']}"
+									locale="#{evtProdCorrController.paramUrl.paramLocale}"
+									value="#{evtProdCorrController.multitimeline.currentof.dateheurefin}"
+									class="calendar">
+									<p:ajax process="@this" event="dateSelect"
+										listener="#{evtProdCorrController.multitimeline.currentof.calculDuree}"
+										partialSubmit="true" update=":tabView:formOfA:ofaduree" />
+									<p:ajax process="@this" event="change"
+										listener="#{evtProdCorrController.multitimeline.currentof.calculDuree}"
+										partialSubmit="true" update=":tabView:formOfA:ofaduree" />
+								</p:calendar></td>
+						</tr>
+					</table>
+					<hr />
+					<table width="100%" cellspacing="3" border="0">
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OFA_listMachines">#{bundle['prod.gantt.dialog.equipment']}
+									: </label></td>
+							<td class="dlg_left"><p:selectOneMenu id="OFA_listMachines"
+									value="#{evtProdCorrController.multitimeline.currentof.equipement}"
+									style="width: auto" class="listBox">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtProdCorrController.evtProdViewModel.lstMachine}"
+										var="mach" itemLabel="#{mach.desiMach}"
+										itemValue="#{mach.codeMach}" />
+									<p:ajax event="valueChange" 
+									 	listener="#{evtProdCorrController.updateMachine}" 
+									 	update=":tabView:formOfA:OFA_listAteliers,:tabView:formOfA:OFA_listSectGeo,
+									 	        :tabView:formOfA:OFA_listSectAna" />			
+								</p:selectOneMenu></td>
+						</tr>
+<!-- 					<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OFA_listEquipes">#{bundle['prod.gantt.dialog.equipe']}
+									: </label></td>
+							<td class="dlg_left"><p:selectOneMenu id="OFA_listEquipes"
+									value="#{evtProdCorrController.multitimeline.currentof.equipe}"
+									style="width: auto" class="listBox">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtProdCorrController.evtProdViewModel.lstEquipe}"
+										var="equi" itemLabel="#{equi.desiEqui}"
+										itemValue="#{equi.codeEqui}" />
+								</p:selectOneMenu></td>
+						</tr> -->
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OFA_listAteliers">#{bundle['prod.gantt.dialog.atelier']}
+									: </label></td>
+							<td class="dlg_left"><p:selectOneMenu id="OFA_listAteliers"
+									value="#{evtProdCorrController.multitimeline.currentof.atelier}"
+									style="width: auto" class="listBox" disabled="true">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtProdCorrController.evtProdViewModel.lstAtelier}"
+										var="atel" itemLabel="#{atel.desiAtel}"
+										itemValue="#{atel.codeAtel}" />
+								</p:selectOneMenu></td>
+						</tr>
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OFA_listSectGeo">#{bundle['prod.gantt.dialog.sect_geo']}
+									: </label></td>
+							<td class="dlg_left"><p:selectOneMenu id="OFA_listSectGeo"
+									value="#{evtProdCorrController.multitimeline.currentof.secteurgeo}"
+									style="width: auto" class="listBox" disabled="true">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtProdCorrController.evtProdViewModel.lstSectGeo}"
+										var="sectGeo" itemLabel="#{sectGeo.desiSectGeog}"
+										itemValue="#{sectGeo.codeSectGeog}" />
+								</p:selectOneMenu></td>
+						</tr>
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OFA_listOutil">#{bundle['prod.gantt.dialog.of.tool']}
+									: </label></td>
+							<td class="dlg_left"><p:selectOneMenu id="OFA_listOutil"
+									value="#{evtProdCorrController.multitimeline.currentof.outil}"
+									style="width: auto" class="listBox">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtProdCorrController.evtProdViewModel.lstOutil}"
+										var="outi" itemLabel="#{outi.desiOuti}"
+										itemValue="#{outi.codeOuti}" />
+								</p:selectOneMenu></td>
+						</tr>
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OFA_sectAna">#{bundle['prod.gantt.dialog.sect_anal']}
+									: </label></td>
+							<td class="dlg_left"><p:selectOneMenu id="OFA_listSectAna"
+									value="#{evtProdCorrController.multitimeline.currentof.secteurana}"
+									style="width: auto" class="listBox" disabled="true">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtProdCorrController.evtProdViewModel.lstSectionAna}"
+										var="sectAnal" itemLabel="#{sectAnal.desiSectAnal}"
+										itemValue="#{sectAnal.codeSectAnal}" />
+								</p:selectOneMenu></td>
+						</tr>
+					</table>
+					<hr />
+					<br />
+					<div class="tabInputQte">
+						<label for="OF_qteProd">#{bundle['prod.gantt.dialog.quantity.produced']}: </label>
+						<p:inputText id="OF_qteProd"
+						 			 class="inputQte"
+									 value="#{evtProdCorrController.multitimeline.currentof.quandprod}"></p:inputText>
+						<label for="OF_qteBonne">#{bundle['prod.gantt.dialog.quantity.succeeded']}: </label>
+						<p:inputText id="OF_qteBonne"
+									 class="inputQte"
+									 value="#{evtProdCorrController.multitimeline.currentof.quandbonne}"></p:inputText>
+						<label for="OF_qteRebu">#{bundle['prod.gantt.dialog.quantity.rebut']}: </label>
+						<p:inputText id="OF_qteRebu"
+									 class="inputQte"
+									 value="#{evtProdCorrController.multitimeline.currentof.quandrebut}"></p:inputText>								
+						<label for="OF_cadTheo">#{bundle['prod.gantt.dialog.cadence_theo']}: </label>
+						<p:inputText id="OF_cadTheo"
+									 class="inputQte"
+									 value="#{evtProdCorrController.multitimeline.currentof.cadtheo}"></p:inputText>								
+						<label for="OF_pcTheo">#{bundle['prod.gantt.dialog.of.piece_theo']} : </label>
+						<p:inputText id="OF_pcTheo"
+									 class="inputQte"
+									 value="#{evtProdCorrController.multitimeline.currentof.pcycletheo}"></p:inputText>										
+						<label for="OF_pcReel">#{bundle['prod.gantt.dialog.of.piece_real']} : </label>
+						<p:inputText id="OF_pcReel"
+									 class="inputQte"
+									 value="#{evtProdCorrController.multitimeline.currentof.ppcyclereel}"></p:inputText>
+					</div>
+
+					<br />
+					<hr />
+					<br />
+				</div>
+				<center>
+					<p:messages id="messages" showDetail="true" autoUpdate="true"
+						closable="true" />
+				</center>
+				<br />
+				<table width="100%">
+					<tr>
+						<td class="quit"><p:commandButton id="addModOFAQuit"
+								type="button" value="#{bundle['common.button.quit']}"
+								class="commandButton btnCancel"
+								onclick="PF('detailTimelineOFWdgtA').hide()" /></td>
+						<td class="rollback"></td>
+						<td class="reset"><p:commandButton
+								value="#{bundle['common.button.reset']}"
+								actionListener="#{evtProdCorrController.onResetCOF}"
+								update=":tabView:addModOFA" ajax="true"
+								class="commandButton btnOther" /></td>
+						<td class="validate"><p:commandButton
+								value="#{bundle['common.button.validate']}"
+								actionListener="#{evtProdCorrController.verifFormOFA}"
+								class="commandButton btnOk">
+							</p:commandButton></td>
+					</tr>
+				</table>
+			</h:form>
+		</h:panelGroup>
+	</p:dialog>
+	<div style="text-align: right; margin-bottom: 8px;">
+		<p:commandButton type="button" id="add_off"
+			value="#{bundle['common.button.add']}" class="commandButton btnOther"
+			onclick="PF('detailTimelineOFWdgtA').show()">
+			<p:ajax event="click" update="addModOFA"
+				listener="#{evtProdCorrController.onResetAddOF}" />
+		</p:commandButton>
+	</div>
+
+
+	<h4>#{bundle['prod.gantt.title.op']}</h4>
+	<pe:timeline id="timeline_OP" value="#{List_OP}" var="evtPers"
+		widgetVar="timelineThirdWdgt" start="#{start}" end="#{end}"
+		groupsWidth="#{groupsWidth}" zoomable="#{zoomable}"
+		axisOnTop="#{axisOnTop}" stackEvents="#{stackEvents}"
+		rendered="#{evtProdCorrController.multitimeline.visibleOP}"
+		locale="#{locale}" editable="false" animate="false" animateZoom="false" groupMinHeight="70">
+		<pe:javascript event="rangechange" execute="onrangechange3();saveVisibleRange();PF('timelineThirdWdgt').getInstance().setOptions({'animate':false, 'animateZoom':false});" />
+		<pe:javascript event="rangechanged" execute="PF('timelineThirdWdgt').getInstance().setOptions({'animate':false, 'animateZoom':false})"/>
+		<p:ajax event="select" update="addModOP"
+			listener="#{evtProdCorrController.multitimeline.onEdit}"
+			oncomplete="PF('detailTimelineOPWdgt').show();loadBackgroundEvtPers();loadModifyIconOP();" />
+		<h:panelGrid columns="1">
+			<h:outputText class="#{evtPers.flagCorr}"
+				value=" #{evtPers.desiEtatPers} ( #{evtPers.duree} #{bundle['prod.gantt.dialog.time.detail']} )"
+				style="background-color: #{evtPers.color}" />
+			<h:panelGrid columns="2">
+				<h:outputText value="#{bundle['prod.gantt.detail.from']} " />
+				<h:outputText
+					value="#{evtPers.dateheuredebut}">
+					<!-- 	        	<f:convertDateTime type="date" timeZone="Etc/GMT-1" pattern="#{bundle['common.format.date.hour']}" /> -->
+					<f:convertDateTime type="date"
+						pattern="#{bundle['common.format.date.hour']}" />
+				</h:outputText>
+				<h:outputText value="#{bundle['prod.gantt.detail.to']} " />
+				<h:outputText
+					value="#{evtPers.dateheurefin}">
+					<!-- 	        	<f:convertDateTime type="date" timeZone="Etc/GMT-1" pattern="#{bundle['common.format.date.hour']}" /> -->
+					<f:convertDateTime type="date"
+						pattern="#{bundle['common.format.date.hour']}" />
+				</h:outputText>
+			</h:panelGrid>
+		</h:panelGrid>
+	</pe:timeline>
+	
+	<script>
+	PF('timelineThirdWdgt').getInstance().setOptions({'animate':false, 'animateZoom':false})
+	</script>
+
+	<p:dialog id="detailsTimelineOP" class="detailsTimeline" style="max-width:1050px;"
+		header="#{bundle['prod.gantt.detail.pers.title']}"
+		widgetVar="detailTimelineOPWdgt" showEffect="clip" hideEffect="clip">
+		<h:panelGroup id="addModOP">
+			<div style="width: 1000px; margin-left: auto; margin-right: auto;">
+				<h:form id="formOP">
+					<!-- -->
+					<table width="100%" cellspacing="3" border="0">
+						<tr>
+							<td class="dlg_right" style="width: 30%;">
+								<h:outputLabel id="OF_LMatricule" for="OP_matricule"							
+										value="#{bundle['pers.gantt.dialog.matricule']}:" />
+							</td>
+							<td class="dlg_left">
+								<h:panelGroup id="groupMatr">
+									<p:autoComplete id="OP_matricule"
+										value="#{evtProdCorrController.multitimeline.currentpersonnel.persList}"
+										completeMethod="#{evtPersCorrController.completeMatricule}"
+										var="pers" itemLabel="#{pers.matrSite}"
+										itemValue="#{pers}"
+										converter="#{evtPersCorrController.personnelConverter}"
+										forceSelection="false" maxResults="10" minQueryLength="1"
+										scrollHeight="250">
+										<p:column>
+											<h:outputText value="#{pers.matrSite}" /> 
+										</p:column>
+										<p:column>
+											<h:outputText value="#{pers.pren} #{pers.nom}" />
+										</p:column>
+									</p:autoComplete>
+								</h:panelGroup>
+							</td>
+						</tr>
+					</table>
+					<hr />
+					<table width="100%" cellspacing="3" border="0">
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OP_criterionDateBegin" class="labelDate">#{bundle['prod.gantt.dialog.date_begin']}
+							</label></td>
+							<td class="dlg_left"><p:calendar id="OP_criterionDateBegin"
+									showOn="button" pattern="dd/MM/yyyy HH:mm:ss"
+									locale="#{evtProdCorrController.paramUrl.paramLocale}"
+									value="#{evtProdCorrController.multitimeline.currentpersonnel.dateheuredebut}"
+									class="calendar">
+									<p:ajax process="@this" event="dateSelect"
+										listener="#{evtProdCorrController.multitimeline.currentpersonnel.calculDuree}"
+										partialSubmit="true" update=":tabView:formOP:OP_duree" />
+									<p:ajax process="@this" event="change"
+										listener="#{evtProdCorrController.multitimeline.currentpersonnel.calculDuree}"
+										partialSubmit="true" update=":tabView:formOP:OP_duree" />
+								</p:calendar></td>
+							<td rowspan="2"><label for="OP_duree">#{bundle['prod.gantt.dialog.time']}
+									: (#{bundle['prod.gantt.dialog.time.detail']})</label> <p:inputText
+									id="OP_duree" readonly="true" class="duree"
+									value="#{evtProdCorrController.multitimeline.currentpersonnel.duree}"></p:inputText>
+							</td>
+						</tr>
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OP_criterionDateEnd" class="labelDate">#{bundle['prod.gantt.dialog.date_end']}
+							</label></td>
+							<td class="dlg_left"><p:calendar id="OP_criterionDateEnd"
+									showOn="button" pattern="dd/MM/yyyy HH:mm:ss"
+									locale="#{evtProdCorrController.paramUrl.paramLocale}"
+									value="#{evtProdCorrController.multitimeline.currentpersonnel.dateheurefin}"
+									class="calendar">
+									<p:ajax process="@this" event="dateSelect"
+										listener="#{evtProdCorrController.multitimeline.currentpersonnel.calculDuree}"
+										partialSubmit="true" update=":tabView:formOP:OP_duree" />
+									<p:ajax process="@this" event="change"
+										listener="#{evtProdCorrController.multitimeline.currentpersonnel.calculDuree}"
+										partialSubmit="true" update=":tabView:formOP:OP_duree" />
+								</p:calendar></td>
+						</tr>
+					</table>
+					<hr />
+
+					<!-- <label for="OF_of">{bundle['prod.gantt.dialog.of']} : </label><p:inputText id="OF_of" value="{multitimeline.currentpersonnel.of}"></p:inputText><br/>-->
+
+					<table width="100%" cellspacing="3" border="0">
+						
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><h:outputLabel
+									id="OP_persListlabel" for="OP_persList"
+									value="#{bundle['prod.gantt.dialog.of']}:" /></td>
+							<td class="dlg_left"><h:panelGroup id="groupOfPers">
+									<p:autoComplete id="OP_persList"
+										value="#{evtProdCorrController.multitimeline.currentpersonnel.ofList}"
+										completeMethod="#{evtProdCorrController.completeOfListe}"
+										var="of" itemLabel="#{of.codeOfSite}" itemValue="#{of}"
+										converter="#{evtProdCorrController.ofListeConverter}"
+										forceSelection="false" maxResults="10" minQueryLength="1"
+										scrollHeight="250">
+<!-- 									<p:ajax process="@this" event="blur"
+											listener="#{evtProdCorrController.updateOf}"
+											partialSubmit="true" update=":tabView:formOf:OF_article" /> -->  
+  										<p:ajax event="itemSelect" process="OP_persList" listener="#{evtProdCorrController.updateOfPers}"											
+										    	update=":tabView:formOP:groupOfPersOut,
+										    			:tabView:formOP:OP_operation,:tabView:formOP:groupOperPersOut,
+										            	:tabView:formOP:OP_article,:tabView:formOP:groupArticlePersOut"/>  										
+										<p:column>
+											<h:outputText value="#{of.codeOfSite}" />
+										</p:column>
+										<p:column>
+											<h:outputText value="#{of.desiOf}" />
+										</p:column>
+									</p:autoComplete>
+									<h:outputText id="groupOfPersOut"		
+										value="#{evtProdCorrController.multitimeline.currentpersonnel.desiOf}" />
+								</h:panelGroup></td>
+						</tr>
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><h:outputLabel
+									id="OP_operationlabel" for="OP_operation"
+									value="#{bundle['prod.gantt.dialog.oper']}:" /></td>
+							<td class="dlg_left"><h:panelGroup id="groupOperPers">
+									<p:autoComplete id="OP_operation"
+										value="#{evtProdCorrController.multitimeline.currentpersonnel.ofOperList}"
+										completeMethod="#{evtProdCorrController.completeOfOperPers}"
+										var="ofOper" itemLabel="#{ofOper.pk.codeOper}"
+										itemValue="#{ofOper}"
+										converter="#{evtProdCorrController.ofOperConverter}"
+										forceSelection="false" maxResults="10" minQueryLength="1"
+										scrollHeight="250">
+										<p:ajax process="@this" event="blur"
+											listener="#{evtProdCorrController.updateOperPers}"
+											partialSubmit="true" update=":tabView:formOP:OP_article, :tabView:formOP:groupArticlePersOut" />
+										<p:column>
+											<h:outputText value="#{ofOper.pk.codeOper}" />
+										</p:column>
+										<p:column>
+											<h:outputText value="#{ofOper.desiOper}" />
+										</p:column>
+									</p:autoComplete>
+									<h:outputText id="groupOperPersOut"		
+										value="#{evtProdCorrController.multitimeline.currentpersonnel.desiOperation}" />
+								</h:panelGroup></td>
+						</tr>
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><h:outputLabel
+									id="OP_articlelabel" for="OF_article"
+									value="#{bundle['prod.gantt.dialog.arti']}:" /></td>
+							<td class="dlg_left"><h:panelGroup id="groupArticlePers">
+									<p:autoComplete id="OP_article"
+										value="#{evtProdCorrController.multitimeline.currentpersonnel.articleList}"
+										completeMethod="#{evtProdCorrController.completeArticlePers}"
+										var="arti" itemLabel="#{arti.codeArti}" itemValue="#{arti}"
+										converter="#{evtProdCorrController.articleConverter}"
+										forceSelection="false" maxResults="10" minQueryLength="1"
+										scrollHeight="250">
+										<p:ajax process="@this" event="blur"
+											listener="#{evtProdCorrController.updateArticlePers}"
+											partialSubmit="true" update=":tabView:formOP:OP_article" />
+										<p:column>
+											<h:outputText value="#{arti.codeArti}" />
+										</p:column>
+										<p:column>
+											<h:outputText value="#{arti.desiArti}" />
+										</p:column>
+									</p:autoComplete>
+									<h:outputText id="groupArticlePersOut"		
+										value="#{evtProdCorrController.multitimeline.currentpersonnel.desiArticle}" />
+								</h:panelGroup></td>
+						</tr>
+ 						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OP_famEtat">#{bundle['prod.gantt.dialog.family.etat']}
+									: </label></td>
+							<td class="dlg_left"><p:selectOneMenu id="OP_famEtat"
+									value="#{evtProdCorrController.multitimeline.currentpersonnel.familleetatpers}"
+									style="width: auto" class="listBox" disabled="true">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtProdCorrController.evtProdViewModel.lstFamilleEtatPers}"
+										var="famiEtat" itemLabel="#{famiEtat.desiFamiEtat}"
+										itemValue="#{famiEtat.codeFamiEtat}" />
+								</p:selectOneMenu></td>
+						</tr> 
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OP_etatPers">#{bundle['prod.gantt.dialog.etat']} :
+							</label></td>
+							<td class="dlg_left"><p:selectOneMenu id="OP_etatPers"
+									value="#{evtProdCorrController.multitimeline.currentpersonnel.etatpers}"
+									style="width: auto" class="listBox">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtProdCorrController.evtProdViewModel.lstEtatPers}"
+										var="etatPers" itemLabel="#{etatPers.desiEtatPers}"
+										itemValue="#{etatPers.codeEtatPers}" />
+									<p:ajax event="valueChange" 
+									 	listener="#{evtProdCorrController.updateEtatPersonnel}" 
+									 	update=":tabView:formOP:OP_famEtat "/>
+								</p:selectOneMenu></td>
+						</tr> 
+					</table>
+					<hr />
+
+					<table width="100%" cellspacing="3" border="0">
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OP_listMachines">#{bundle['prod.gantt.dialog.equipment']}
+									: </label></td>
+							<td class="dlg_left"><p:selectOneMenu id="OP_listMachines"
+									value="#{evtProdCorrController.multitimeline.currentpersonnel.equipement}"
+									style="width: auto" class="listBox" >
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtProdCorrController.evtProdViewModel.lstMachine}"
+										var="mach" itemLabel="#{mach.desiMach}"
+										itemValue="#{mach.codeMach}" />
+									<p:ajax event="valueChange" 
+									 	listener="#{evtProdCorrController.updateMachinePers}" 
+									 	update=":tabView:formOP:OP_listAteliers,:tabView:formOP:OP_listSectGeo,
+									 	        :tabView:formOP:OP_listSectAna" />		
+								</p:selectOneMenu></td>
+						</tr>
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OP_listAteliers">#{bundle['prod.gantt.dialog.atelier']}
+									: </label></td>
+							<td class="dlg_left"><p:selectOneMenu id="OP_listAteliers"
+									value="#{evtProdCorrController.multitimeline.currentpersonnel.atelier}"
+									style="width: auto" class="listBox" disabled="true">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtProdCorrController.evtProdViewModel.lstAtelier}"
+										var="atel" itemLabel="#{atel.desiAtel}"
+										itemValue="#{atel.codeAtel}" />
+								</p:selectOneMenu></td>
+						</tr>
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OP_listSectGeo">#{bundle['prod.gantt.dialog.sect_geo']}
+									: </label></td>
+							<td class="dlg_left"><p:selectOneMenu id="OP_listSectGeo"
+									value="#{evtProdCorrController.multitimeline.currentpersonnel.secteurgeo}"
+									style="width: auto" class="listBox" disabled="true">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtProdCorrController.evtProdViewModel.lstSectGeo}"
+										var="sectGeo" itemLabel="#{sectGeo.desiSectGeog}"
+										itemValue="#{sectGeo.codeSectGeog}" />
+								</p:selectOneMenu></td>
+						</tr>
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OP_sectAna">#{bundle['prod.gantt.dialog.sect_anal']}
+									: </label></td>
+							<td class="dlg_left"><p:selectOneMenu id="OP_listSectAna"
+									value="#{evtProdCorrController.multitimeline.currentpersonnel.secteurana}"
+									style="width: auto" class="listBox" disabled="true">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtProdCorrController.evtProdViewModel.lstSectionAna}"
+										var="sectAna" itemLabel="#{sectAna.desiSectAnal}"
+										itemValue="#{sectAna.codeSectAnal}" />
+								</p:selectOneMenu></td>
+						</tr>
+<!-- 					<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OP_listEquipes">#{bundle['prod.gantt.dialog.equipe']}
+									: </label></td>
+							<td class="dlg_left"><p:selectOneMenu id="OP_listEquipes"
+									value="#{evtProdCorrController.multitimeline.currentpersonnel.equipe}"
+									style="width: auto" class="listBox">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtProdCorrController.evtProdViewModel.lstEquipe}"
+										var="equi" itemLabel="#{equi.desiEqui}"
+										itemValue="#{equi.codeEqui}" />
+								</p:selectOneMenu></td>
+						</tr> -->
+					</table>
+
+					<hr />
+
+					<p:dataTable id="tabblePers" class="tablePers" var="pers"
+						value="#{evtProdCorrController.multitimeline.currentpersonnel.listEvtPers}"
+						editable="true" editMode="cell" widgetVar="tablePersdetail">
+						<f:facet name="header">
+				           #{bundle['prod.gantt.detail.list.of']}
+				       </f:facet>
+
+						<p:column headerText="#{bundle['prod.gantt.dialog.etat']}">
+							<h:outputText value="#{pers.desiEtatPers}" class="readonly" />
+						</p:column>
+
+						<p:column headerText="#{bundle['prod.gantt.dialog.date_begin.pers']}">
+							<h:outputText value="#{pers.dateheuredebut}" class="readonly">
+								<f:convertDateTime
+									pattern="#{bundle['common.format.date.hour']}" type="date" />
+							</h:outputText>
+						</p:column>
+						<p:column headerText="#{bundle['prod.gantt.dialog.date_end.pers']}">
+							<h:outputText value="#{pers.dateheurefin}" class="readonly">
+								<f:convertDateTime
+									pattern="#{bundle['common.format.date.hour']}" type="date" />
+							</h:outputText>
+						</p:column>
+						<p:column headerText="#{bundle['prod.gantt.dialog.equipe']}">
+							<h:outputText value="#{pers.desiEquipe}" class="readonly" />
+						</p:column>
+						<p:column
+							headerText="#{bundle['prod.gantt.dialog.quantity.succeeded']}"
+							styleClass="ui-editable-column">
+							<p:cellEditor>
+								<f:facet name="output">
+									<h:outputText value="#{pers.quandbonne}" />
+								</f:facet>
+								<f:facet name="input">
+									<p:inputText value="#{pers.quandbonne}" style="width:96%"
+										label="quandbonne" />
+								</f:facet>
+							</p:cellEditor>
+						</p:column>
+						<p:column
+							headerText="#{bundle['prod.gantt.dialog.quantity.rebut']}">
+							<p:cellEditor>
+								<f:facet name="output">
+									<h:outputText value="#{pers.quandrebut}" />
+								</f:facet>
+								<f:facet name="input">
+									<p:inputText value="#{pers.quandrebut}" style="width:96%"
+										label="quandrebut" />
+								</f:facet>
+							</p:cellEditor>
+						</p:column>
+						<p:column
+							headerText="#{bundle['prod.gantt.dialog.cadence_theo']}">
+							<p:cellEditor>
+								<f:facet name="output">
+									<h:outputText value="#{pers.cadtheo}" />
+								</f:facet>
+								<f:facet name="input">
+									<p:inputText value="#{pers.cadtheo}" style="width:96%"
+										label="cadtheo" />
+								</f:facet>
+							</p:cellEditor>
+						</p:column>
+						<p:column headerText="#{bundle['prod.gantt.dialog.of.corr']}" 
+   								  style="text-align: center; width:25px;">   								
+   							<h:graphicImage value="../../resources/img/modify.png" rendered="#{pers.flagCorr}" />
+						</p:column>
+						<p:column style="text-align: center; width:25px;">						
+	  						<f:facet name="header">
+                           		<p:selectBooleanCheckbox id="suppAllOP" 
+                           				value="#{evtProdCorrController.multitimeline.flagSuppAllOp}" 
+                           				style="border: 1px solid #f8f8f8;background-color: #f8f8f8;" >  
+                           			<p:ajax event="change"                     				
+                           				listener="#{evtProdCorrController.checkAllOP}" 
+                           				update=":tabView:formOP:tabblePers,:tabView:formOP:removeOP" />                           					
+                           		</p:selectBooleanCheckbox>
+                           	</f:facet>	
+           						<p:selectBooleanCheckbox value="#{pers.flagSupp}" >
+           							<p:ajax event="change"               				
+                           					listener="#{evtProdCorrController.checkOP}" 
+                           					update=":tabView:formOP:removeOP,:tabView:formOP:tabblePers" />   
+								</p:selectBooleanCheckbox>           					
+           				</p:column>         				
+					</p:dataTable>
+
+					<br />
+					<hr />
+					<br />
+					<center>
+						<p:messages id="messages" showDetail="true" autoUpdate="true"
+							closable="true" />
+					</center>
+					<br />
+					<table width="100%">
+						<tr>
+							<td class="quit"><p:commandButton id="addModOPQuit"
+									type="button" value="#{bundle['common.button.quit']}"
+									class="commandButton btnCancel"
+									onclick="PF('detailTimelineOPWdgt').hide()" /></td>
+							<td class="rollback"><p:commandButton
+								value="#{bundle['common.button.rollback']}"
+								actionListener="#{evtProdCorrController.rollBack}"
+								disabled="#{evtProdCorrController.multitimeline.currentpersonnel.flagCorrInverse}"
+								class="commandButton btnOther">
+								<f:param name="dateDebut"
+									value="#{evtProdCorrController.multitimeline.currentpersonnel.dateheuredebut}" />
+								<f:param name="dateFin"
+									value="#{evtProdCorrController.multitimeline.currentpersonnel.dateheurefin}" />
+								<f:param name="equipement"
+									value="#{evtProdCorrController.multitimeline.currentpersonnel.matricule}" />
+								<f:param name="form" value="op" />
+							</p:commandButton></td>
+							<td class="reset"><p:commandButton
+									value="#{bundle['common.button.reset']}"
+									actionListener="#{evtProdCorrController.resetCOP}" update=":tabView:formOP" ajax="true"
+									class="commandButton btnOther">
+									<f:param name="dateDebut"
+										value="#{evtProdCorrController.multitimeline.currentpersonnel.dateheuredebut}" />
+									<f:param name="dateFin"
+										value="#{evtProdCorrController.multitimeline.currentpersonnel.dateheurefin}" />
+								</p:commandButton></td>
+							<td class="remove">	 		
+		 						<p:commandButton id="removeOP" disabled="#{evtProdCorrController.multitimeline.btnOpRemoveDisabled}"
+		 							value="#{bundle['common.button.remove']}"
+									actionListener="#{evtProdCorrController.removeOP}" 
+									class="commandButton btnCancel" >
+									<p:confirm header="#{bundle['common.dialog.confirm.title']}" 
+											   message="#{bundle['prod.gantt.detail.removeOP.confirm']}" 
+											   icon="ui-icon-alert"/>	
+								</p:commandButton>
+								
+								 <p:confirmDialog global="true" showEffect="fade" hideEffect="fade">        						
+	        						<p:commandButton value="#{bundle['common.dialog.confirm.yes']}" type="button" styleClass="ui-confirmdialog-yes" />
+	        						<p:commandButton value="#{bundle['common.dialog.confirm.no']}" type="button" styleClass="ui-confirmdialog-no" />
+	    						</p:confirmDialog>
+							</td>		
+							<td class="validate"><p:commandButton
+									value="#{bundle['common.button.validate']}"
+									actionListener="#{evtProdCorrController.verifFormOP}"
+									class="commandButton btnOk">
+								</p:commandButton></td>
+						</tr>
+					</table>
+				</h:form>
+			</div>
+		</h:panelGroup>
+	</p:dialog>
+	
+	
+    <p:dialog id="detailsTimelineOPA" class="detailsTimeline"
+		header="#{bundle['prod.gantt.detail.pers.title']}"
+		widgetVar="detailTimelineOPWdgtA" showEffect="clip" hideEffect="clip">
+		<h:panelGroup id="addModOPA">
+			<div style="width: 900px; margin-left: auto; margin-right: auto;">
+				<h:form id="formOPA">
+					<!-- -->
+					<table width="100%" cellspacing="3" border="0">
+						<tr>
+							<td class="dlg_right" style="width: 30%;">
+								<h:outputLabel id="OF_LMatricule" for="OPA_matricule"							
+										value="#{bundle['pers.gantt.dialog.matricule']}:" />
+							</td>
+							<td class="dlg_left">
+								<h:panelGroup id="groupMatr">
+									<p:autoComplete id="OPA_matricule"
+										value="#{evtProdCorrController.multitimeline.currentpersonnel.persList}"
+										completeMethod="#{evtPersCorrController.completeMatricule}"
+										var="pers" itemLabel="#{pers.matrSite}"
+										itemValue="#{pers}"
+										converter="#{evtPersCorrController.personnelConverter}"
+										forceSelection="false" maxResults="10" minQueryLength="1"
+										scrollHeight="250">
+										<p:column>
+											<h:outputText value="#{pers.matrSite}" /> 
+										</p:column>
+										<p:column>
+											<h:outputText value="#{pers.pren} #{pers.nom}" />
+										</p:column>
+									</p:autoComplete>
+								</h:panelGroup>
+							</td> <br/>	
+						</tr>
+					</table>
+					<hr />
+					<table width="100%" cellspacing="3" border="0">
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OP_criterionDateBegin" class="labelDate">#{bundle['prod.gantt.dialog.date_begin']}
+							</label></td>
+							<td class="dlg_left"><p:calendar id="OP_criterionDateBegin"
+									showOn="button" pattern="dd/MM/yyyy HH:mm:ss"
+									locale="#{evtProdCorrController.paramUrl.paramLocale}"
+									value="#{evtProdCorrController.multitimeline.currentpersonnel.dateheuredebut}"
+									class="calendar">
+									<p:ajax process="@this" event="dateSelect"
+										listener="#{evtProdCorrController.multitimeline.currentpersonnel.calculDuree}"
+										partialSubmit="true" update=":tabView:formOPA:OP_duree" />
+									<p:ajax process="@this" event="change"
+										listener="#{evtProdCorrController.multitimeline.currentpersonnel.calculDuree}"
+										partialSubmit="true" update=":tabView:formOPA:OP_duree" />
+								</p:calendar></td>
+							<td rowspan="2"><label style="width: auto;" for="OP_duree">#{bundle['prod.gantt.dialog.time']}
+									: (#{bundle['prod.gantt.dialog.time.detail']})</label> <p:inputText
+									id="OP_duree" readonly="true" class="duree"
+									value="#{evtProdCorrController.multitimeline.currentpersonnel.duree}"></p:inputText>
+							</td>
+						</tr>
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OP_criterionDateEnd" class="labelDate">#{bundle['prod.gantt.dialog.date_end']}
+							</label></td>
+							<td class="dlg_left"><p:calendar id="OP_criterionDateEnd"
+									showOn="button" pattern="dd/MM/yyyy HH:mm:ss"
+									locale="#{evtProdCorrController.paramUrl.paramLocale}"
+									value="#{evtProdCorrController.multitimeline.currentpersonnel.dateheurefin}"
+									class="calendar">
+									<p:ajax process="@this" event="dateSelect"
+										listener="#{evtProdCorrController.multitimeline.currentpersonnel.calculDuree}"
+										partialSubmit="true" update=":tabView:formOPA:OP_duree" />
+									<p:ajax process="@this" event="change"
+										listener="#{evtProdCorrController.multitimeline.currentpersonnel.calculDuree}"
+										partialSubmit="true" update=":tabView:formOPA:OP_duree" />
+								</p:calendar></td>
+						</tr>
+					</table>
+					<hr />
+
+					<!-- <label for="OF_of">{bundle['prod.gantt.dialog.of']} : </label><p:inputText id="OF_of" value="{multitimeline.currentpersonnel.of}"></p:inputText><br/>-->
+
+					<table width="100%" cellspacing="3" border="0">
+<tr>
+							<td class="dlg_right" style="width: 30%;"><h:outputLabel
+									id="OP_persListlabel" for="OP_persList"
+									value="#{bundle['prod.gantt.dialog.of']}:" /></td>
+							<td class="dlg_left"><h:panelGroup id="groupOfPersA">
+									<p:autoComplete id="OPA_persList"
+										value="#{evtProdCorrController.multitimeline.currentpersonnel.ofList}"
+										completeMethod="#{evtProdCorrController.completeOfListe}"
+										var="of" itemLabel="#{of.codeOfSite}" itemValue="#{of}"
+										converter="#{evtProdCorrController.ofListeConverter}"
+										forceSelection="false" maxResults="10" minQueryLength="1"
+										scrollHeight="250">
+<!-- 									<p:ajax process="@this" event="blur"
+											listener="#{evtProdCorrController.updateOf}"
+											partialSubmit="true" update=":tabView:formOf:OF_article" />  -->
+										<p:ajax event="itemSelect" process="OPA_persList" listener="#{evtProdCorrController.updateOfPers}"											
+										    update=":tabView:formOPA:groupOfPersAOut,
+										    		:tabView:formOPA:OPA_operation,:tabView:formOPA:groupOperPersAOut,
+													:tabView:formOPA:OPA_article,:tabView:formOPA:groupArticlePersAOut"/>
+										<p:ajax event="change" process="OPA_persList" listener="#{evtProdCorrController.updateOfPers}" 
+											update=":tabView:formOPA:groupOfPersAOut"/>													
+										<p:column>
+											<h:outputText value="#{of.codeOfSite}" />
+										</p:column>
+										<p:column>
+											<h:outputText value="#{of.desiOf}" />
+										</p:column>
+									</p:autoComplete>
+									<h:outputText id="groupOfPersAOut"		
+										value="#{evtProdCorrController.multitimeline.currentpersonnel.desiOf}" />  	
+								</h:panelGroup></td>								
+						</tr>
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><h:outputLabel
+									id="OP_operationlabel" for="OP_operation"
+									value="#{bundle['prod.gantt.dialog.oper']}:" /></td>
+							<td class="dlg_left"><h:panelGroup id="groupOperPersA">
+									<p:autoComplete id="OPA_operation"
+										value="#{evtProdCorrController.multitimeline.currentpersonnel.ofOperList}"
+										completeMethod="#{evtProdCorrController.completeOfOperPers}"
+										var="ofOper" itemLabel="#{ofOper.pk.codeOper}"
+										itemValue="#{ofOper}"
+										converter="#{evtProdCorrController.ofOperConverter}"
+										forceSelection="false" maxResults="10" minQueryLength="1"
+										scrollHeight="250">
+										<p:ajax process="OPA_operation" event="itemSelect"
+											listener="#{evtProdCorrController.updateOperPers}"
+											update=":tabView:formOPA:OPA_article,:tabView:formOPA:groupOperPersAOut,:tabView:formOPA:groupArticlePersAOut" />
+										<p:ajax event="change" process="OPA_operation" listener="#{evtProdCorrController.updateOperPers}" 
+											update=":tabView:formOPA:OPA_article,:tabView:formOPA:groupOperPersAOut,:tabView:formOPA:groupArticlePersAOut"/>
+										<p:column>
+											<h:outputText value="#{ofOper.pk.codeOper}" />
+										</p:column>
+										<p:column>
+											<h:outputText value="#{ofOper.desiOper}" />
+										</p:column>
+									</p:autoComplete>
+									<h:outputText id="groupOperPersAOut"		
+										value="#{evtProdCorrController.multitimeline.currentpersonnel.desiOperation}" />
+								</h:panelGroup></td>
+						</tr>
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><h:outputLabel
+									id="OP_articlelabel" for="OF_article"
+									value="#{bundle['prod.gantt.dialog.arti']}:" /></td>
+							<td class="dlg_left"><h:panelGroup id="groupArticlePersA">
+									<p:autoComplete id="OPA_article"
+										value="#{evtProdCorrController.multitimeline.currentpersonnel.articleList}"
+										completeMethod="#{evtProdCorrController.completeArticlePers}"
+										var="arti" itemLabel="#{arti.codeArti}" itemValue="#{arti}"
+										converter="#{evtProdCorrController.articleConverter}"
+										forceSelection="false" maxResults="10" minQueryLength="1"
+										scrollHeight="250">
+										<p:ajax process="@this" event="blur"
+											listener="#{evtProdCorrController.updateArticlePers}"
+											partialSubmit="true" update=":tabView:formOPA:OPA_article" />
+										<p:ajax process="@this" event="change"
+											listener="#{evtProdCorrController.updateArticlePers}"
+											partialSubmit="true" update=":tabView:formOPA:OPA_article, :tabView:formOPA:groupArticlePersAOut" />
+										<p:column>
+											<h:outputText value="#{arti.codeArti}" />
+										</p:column>
+										<p:column>
+											<h:outputText value="#{arti.desiArti}" />
+										</p:column>
+									</p:autoComplete>
+									<h:outputText id="groupArticlePersAOut"		
+										value="#{evtProdCorrController.multitimeline.currentpersonnel.desiArticle}" />
+								</h:panelGroup></td>
+						</tr>
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OP_famEtat">#{bundle['prod.gantt.dialog.family.etat']}
+									: </label></td>
+							<td class="dlg_left"><p:selectOneMenu id="OP_famEtat"
+									value="#{evtProdCorrController.multitimeline.currentpersonnel.familleetatpers}"
+									style="width: auto" class="listBox" disabled="true">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtProdCorrController.evtProdViewModel.lstFamilleEtatPers}"
+										var="famiEtat" itemLabel="#{famiEtat.desiFamiEtat}"
+										itemValue="#{famiEtat.codeFamiEtat}" />
+								</p:selectOneMenu></td>
+						</tr>
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OP_etatPers">#{bundle['prod.gantt.dialog.etat']} :
+							</label></td>
+							<td class="dlg_left"><p:selectOneMenu id="OP_etatPers"
+									value="#{evtProdCorrController.multitimeline.currentpersonnel.etatpers}"
+									style="width: auto" class="listBox">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtProdCorrController.evtProdViewModel.lstEtatPers}"
+										var="etatPers" itemLabel="#{etatPers.desiEtatPers}"
+										itemValue="#{etatPers.codeEtatPers}" />
+									<p:ajax event="valueChange" 
+									 	listener="#{evtProdCorrController.updateEtatPersonnel}" 
+									 	update=":tabView:formOPA:OP_famEtat "/>
+								</p:selectOneMenu></td>
+						</tr>
+					</table>
+					<hr />
+
+					<table width="100%" cellspacing="3" border="0">
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OP_listMachines">#{bundle['prod.gantt.dialog.equipment']}
+									: </label></td>
+							<td class="dlg_left"><p:selectOneMenu id="OP_listMachines"
+									value="#{evtProdCorrController.multitimeline.currentpersonnel.equipement}"
+									style="width: auto" class="listBox">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtProdCorrController.evtProdViewModel.lstMachine}"
+										var="mach" itemLabel="#{mach.desiMach}"
+										itemValue="#{mach.codeMach}" />
+									<p:ajax event="valueChange" 
+									 	listener="#{evtProdCorrController.updateMachinePers}" 
+									 	update=":tabView:formOPA:OP_listAteliers,:tabView:formOPA:OP_listSectGeo,
+									 	        :tabView:formOPA:OP_listSectAna" />	
+								</p:selectOneMenu></td>
+						</tr>
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OP_listAteliers">#{bundle['prod.gantt.dialog.atelier']}
+									: </label></td>
+							<td class="dlg_left"><p:selectOneMenu id="OP_listAteliers"
+									value="#{evtProdCorrController.multitimeline.currentpersonnel.atelier}"
+									style="width: auto" class="listBox" disabled="true">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtProdCorrController.evtProdViewModel.lstAtelier}"
+										var="atel" itemLabel="#{atel.desiAtel}"
+										itemValue="#{atel.codeAtel}" />
+								</p:selectOneMenu></td>
+						</tr>
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OP_listSectGeo">#{bundle['prod.gantt.dialog.sect_geo']}
+									: </label></td>
+							<td class="dlg_left"><p:selectOneMenu id="OP_listSectGeo"
+									value="#{evtProdCorrController.multitimeline.currentpersonnel.secteurgeo}"
+									style="width: auto" class="listBox" disabled="true">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtProdCorrController.evtProdViewModel.lstSectGeo}"
+										var="sectGeo" itemLabel="#{sectGeo.desiSectGeog}"
+										itemValue="#{sectGeo.codeSectGeog}" />
+								</p:selectOneMenu></td>
+						</tr>
+						<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OP_sectAna">#{bundle['prod.gantt.dialog.sect_anal']}
+									: </label></td>
+							<td class="dlg_left"><p:selectOneMenu id="OP_listSectAna"
+									value="#{evtProdCorrController.multitimeline.currentpersonnel.secteurana}"
+									style="width: auto" class="listBox" disabled="true">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtProdCorrController.evtProdViewModel.lstSectionAna}"
+										var="sectAna" itemLabel="#{sectAna.desiSectAnal}"
+										itemValue="#{sectAna.codeSectAnal}" />
+								</p:selectOneMenu></td>
+						</tr>
+<!--  					<tr>
+							<td class="dlg_right" style="width: 30%;"><label
+								for="OP_listEquipes">#{bundle['prod.gantt.dialog.equipe']}
+									: </label></td>
+							<td class="dlg_left"><p:selectOneMenu id="OP_listEquipes"
+									value="#{evtProdCorrController.multitimeline.currentpersonnel.equipe}"
+									style="width: auto" class="listBox">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtProdCorrController.evtProdViewModel.lstEquipe}"
+										var="equi" itemLabel="#{equi.desiEqui}"
+										itemValue="#{equi.codeEqui}" />
+								</p:selectOneMenu></td>
+						</tr> -->
+					</table>
+
+					<hr />
+					
+					<div class="tabInputQte">
+						<label for="OP_qteBonne">#{bundle['prod.gantt.dialog.quantity.succeeded']}
+								: </label> <p:inputText id="OF_qteBonne" class="inputQte"
+								value="#{evtProdCorrController.multitimeline.currentpersonnel.quandbonne}"></p:inputText>
+						<label for="OP_qteRebu">#{bundle['prod.gantt.dialog.quantity.rebut']}
+								: </label> <p:inputText id="OF_qteRebu" class="inputQte"
+								value="#{evtProdCorrController.multitimeline.currentpersonnel.quandrebut}"></p:inputText>
+						<label for="OP_cadTheo">#{bundle['prod.gantt.dialog.cadence_theo']}
+								: </label> <p:inputText id="OF_cadTheo" class="inputQte"
+								value="#{evtProdCorrController.multitimeline.currentpersonnel.cadtheo}"></p:inputText>
+					</div>
+					<br />
+					<hr />
+					<br />
+					<center>
+						<p:messages id="messages" showDetail="true" autoUpdate="true"
+							closable="true" />
+					</center>
+					<br />
+					<table width="100%">
+						<tr>
+							<td class="quit"><p:commandButton id="addModOPQuit"
+									type="button" value="#{bundle['common.button.quit']}"
+									class="commandButton btnCancel"
+									onclick="PF('detailTimelineOPWdgtA').hide()" /></td>
+							<td class="rollback"><p:commandButton
+									value="#{bundle['common.button.rollback']}"
+									actionListener="#{evtProdCorrController.resetCM}"
+									class="commandButton btnOther">
+								</p:commandButton></td>
+							<td class="reset"><p:commandButton
+									value="#{bundle['common.button.reset']}"
+									actionListener="#{evtProdCorrController.resetCOP}" update=":tabView:formOPA" ajax="true"
+									class="commandButton btnOther" >
+									<f:param name="dateDebut"
+										value="#{evtProdCorrController.multitimeline.currentpersonnel.dateheuredebut}" />
+									<f:param name="dateFin"
+										value="#{evtProdCorrController.multitimeline.currentpersonnel.dateheurefin}" />
+								</p:commandButton></td>
+							<td class="validate"><p:commandButton
+									value="#{bundle['common.button.validate']}"
+									actionListener="#{evtProdCorrController.verifFormOPA}"
+									class="commandButton btnOk">
+								</p:commandButton></td>
+						</tr>
+					</table>
+				</h:form>
+			</div>
+		</h:panelGroup>
+	</p:dialog>
+	
+	<div style="text-align: right; margin-bottom: 8px;">
+		<p:commandButton type="button" id="add_opp"
+			value="#{bundle['common.button.add']}" class="commandButton btnOther"
+			onclick="PF('detailTimelineOPWdgtA').show()">
+			<p:ajax event="click" update="addModOPA"
+				listener="#{evtProdCorrController.onResetAddOP}" />
+		</p:commandButton>
+	</div>
+
+</ui:composition>

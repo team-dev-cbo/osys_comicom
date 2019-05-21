@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+	<!-- <bean id="quartisProperties" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"> 
+		<property name="locations"> <list> <value>file:${catalina.base}/conf/Quartis.properties</value> 
+		<value>file:${gdt.project.dir}/conf/hibernate.properties</value> <value>file:${gdt.project.dir}/conf/configGdt.properties</value> 
+		</list> </property> </bean> -->
+	<util:properties id="quartisProperties"
+		location="file:${catalina.base}/conf/quartis.properties"></util:properties>
+	<util:properties id="hibernateProperties"
+		location="file:#{quartisProperties['cjj.project.dir']}/conf/hibernate/hibernate.properties"></util:properties>
+	<util:properties id="configCjjProperties"
+		location="file:#{quartisProperties['cjj.project.dir']}/conf/configCjj.properties"></util:properties>
+</beans>

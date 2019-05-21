@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<web-instance name="Quartis-Pro-tools">
+    <short-label>Quartis-Pro-tools</short-label>
+    <description>Instance hébergeant le moteur de communication de QuartisPro avec QuartisTools</description>
+    <environment/>
+    <resources/>
+    <web-app context-path="/quartispro-tools" war-file="wars\Quartis-Pro-tools.war" active="true">
+        <environment>
+            <environment-variable name="dispatcher-url" type="java.lang.String" value="http://localhost:8384/quartistools-web" override="true"/>
+            <environment-variable name="application-path" type="java.lang.String" value="C:\Osys\QUARTIS_PRO\quartis-pro-web" override="true"/>
+            <environment-variable name="quartistools-hostname" type="java.lang.String" value="localhost" override="true"/>
+            <environment-variable name="quartistools-serverport" type="java.lang.Integer" value="5060" override="true"/>
+            <environment-variable name="quartistools-memoryport" type="java.lang.Integer" value="5050" override="true"/>
+            <environment-variable name="quartistools-internalport" type="java.lang.Integer" value="5070" override="true"/>
+            <environment-variable name="Quartis-Pro-console-animation-speed" type="java.lang.Integer" value="400" override="true"/>
+            <environment-variable name="Sedapta-Connector-url" type="java.lang.String" value="http://localhost:53101/api/notification" override="true"/>
+            <environment-variable name="Sedapta-Connector-activated" type="java.lang.Boolean" value="false" override="true"/>
+            <environment-variable name="Sedapta-Connector-periodic-users" type="java.lang.String" value="Std_ExpArticleSED,Std_ExpEquipeSED,Std_ExpHoraMachSED,Std_ExpMachineSED,Std_ExpOFOperSED,Std_ExpOFCompSED,Std_ExpOutilSED" override="true"/>
+            <environment-variable name="Sedapta-Connector-users-ws" type="java.lang.String" value="ws://localhost:8388/quartispro-tools/wsock" override="true"/>
+            <environment-variable name="QuartisTools-Login-url" type="java.lang.String" value="http://localhost:8385/quartispro-auth/login" override="true"/>
+        </environment>
+        <resources/>
+    </web-app>
+</web-instance>

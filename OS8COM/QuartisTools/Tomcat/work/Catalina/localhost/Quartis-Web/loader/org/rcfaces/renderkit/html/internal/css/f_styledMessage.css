@@ -1,0 +1,16 @@
+/*
+ * $Id: f_styledMessage.css,v 1.2 2007/01/05 17:09:59 oeuillot Exp $
+ */
+
+/**
+ *
+ * @class f_styledMessage
+ *
+ * @author Olivier Oeuillot (latest modification by $Author: oeuillot $)
+ * @version $Revision: 1.2 $ $Date: 2007/01/05 17:09:59 $ 
+ */
+ 
+.f_styledMessage {
+	display: inline;
+}
+ 

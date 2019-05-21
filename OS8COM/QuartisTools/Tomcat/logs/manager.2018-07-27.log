@@ -1,0 +1,6 @@
+10:28:23.970 INFO [org.apache.catalina.core.ApplicationContext log] - HTMLManager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'  
+10:28:23.971 INFO [org.apache.catalina.core.ApplicationContext log] - HTMLManager: init: Global resources are available  
+10:28:23.971 INFO [org.apache.catalina.core.ApplicationContext log] - HTMLManager: list: Listing contexts for virtual host 'localhost'  
+13:44:06.895 INFOS [org.apache.catalina.core.ApplicationContext log] - HTMLManager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'  
+13:44:06.895 INFOS [org.apache.catalina.core.ApplicationContext log] - HTMLManager: init: Global resources are available  
+13:44:06.897 INFOS [org.apache.catalina.core.ApplicationContext log] - HTMLManager: list: Listing contexts for virtual host 'localhost'  

@@ -1,0 +1,4 @@
+08:00:54.712 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+08:01:14.446 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+08:01:21.310 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextInitialized()  
+08:01:21.310 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextInitialized()  

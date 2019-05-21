@@ -1,0 +1,854 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"	
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+    xmlns:pe="http://primefaces.org/ui/extensions">
+    
+<p:dialog id="idStatisDialog" modal="true" widgetVar="statusDialogWdgt"
+	header="#{bundle['common.information']}" draggable="false"
+	closable="false" resizable="false">
+	<h:form id="formDialog">
+	  <h:panelGrid id="display" columns="2" cellpadding="4">
+		<h:graphicImage value="../../resources/img/design/ajaxloading.gif" />
+		<h:outputText value="#{bundle['common.process_running']}"
+			style="font-size:24px; color:blue;" />
+	  </h:panelGrid>
+	</h:form>
+</p:dialog>
+
+<p:growl id="growl" showSummary="false" showDetail="true" autoUpdate="true" life="2000" />
+    
+
+  <h4> #{bundle['pers.gantt.title.ep']}</h4>
+    <pe:timeline id="timeline_P" value="#{List_P}" var="evtEtatPers" widgetVar="timelineFirstWdgt"
+    	start="#{start}" end="#{end}" groupsWidth="#{groupsWidth}" zoomable="#{zoomable}"
+        axisOnTop="#{axisOnTop}" stackEvents="false" editable="false" timeChangeable="false"
+        locale="#{locale}" animate="false" groupMinHeight="70">
+        <pe:javascript event="rangechange" execute="onRangehangeGanttPers();saveVisibleRangePers();PF('timelineFirstWdgt').getInstance().setOptions({'animate':false, 'animateZoom':false});" />  
+        <pe:javascript event="rangechanged" execute="PF('timelineFirstWdgt').getInstance().setOptions({'animate':false, 'animateZoom':false})"/>   
+   		<p:ajax event="select" update="addModEtatPers" listener="#{evtPersCorrController.multitimeline.onEdit}" oncomplete="PF('detailTimelineWdgtEtatPers').show();loadBackgroundEvtEtatPers();loadModifyIconEtatPers();"/>
+   		<h:panelGrid columns="1">
+				<h:outputText class="#{evtEtatPers.flagcorr}"
+					value=" #{evtEtatPers.desiEtatPers} ( #{evtEtatPers.duree} #{bundle['prod.gantt.dialog.time.detail']} ) "
+					style="background-color: #{evtEtatPers.color}" />
+				<h:panelGrid columns="2">
+					<h:outputText value="#{bundle['prod.gantt.detail.from']} " />
+					<h:outputText value="#{evtEtatPers.dateDebut}">
+						<!--             	<f:convertDateTime type="date" timeZone="Etc/GMT-1" pattern="#{bundle['common.format.date.hour']}" /> -->
+						<f:convertDateTime type="date"
+							pattern="#{bundle['common.format.date.hour']}" />
+					</h:outputText>
+					<h:outputText value="#{bundle['prod.gantt.detail.to']} " />
+					<h:outputText value="#{evtEtatPers.dateFin}">
+						<!--             	<f:convertDateTime type="date" timeZone="Etc/GMT-1" pattern="#{bundle['common.format.date.hour']}" /> -->
+						<f:convertDateTime type="date"
+							pattern="#{bundle['common.format.date.hour']}" />
+					</h:outputText>
+				</h:panelGrid>
+		</h:panelGrid>
+	</pe:timeline>
+	
+	<script>
+		PF('timelineFirstWdgt').getInstance().setOptions({'animate':false, 'animateZoom':false})
+	</script>
+	
+	<p:dialog id="detailsTimeline" class="detailsTimeline" header="#{bundle['pers.gantt.evtpers.title']}" widgetVar="detailTimelineWdgtEtatPers"  
+	          showEffect="clip" hideEffect="clip">  
+	   <h:panelGroup id="addModEtatPers" >
+		      	<h:form id="formEtatPers">
+			      		<div style="width:750px; margin-left:auto; margin-right:auto;">
+						<h:outputLabel id="OF_LMatricule" for="OF_matricule" class="label250"							
+								value="#{bundle['pers.gantt.dialog.matricule']}:" />
+						<h:panelGroup id="groupMatr">
+							<p:autoComplete id="OF_matricule"
+								value="#{evtPersCorrController.multitimeline.currentEtatPers.persList}"
+								completeMethod="#{evtPersCorrController.completeMatricule}"
+								var="pers" itemLabel="#{pers.matrSite}"
+								itemValue="#{pers}"
+								converter="#{evtPersCorrController.personnelConverter}"
+								forceSelection="false" maxResults="10" minQueryLength="1"
+								scrollHeight="250">
+								<p:column>
+									<h:outputText value="#{pers.matrSite}" /> 
+								</p:column>
+								<p:column>
+									<h:outputText value="#{pers.pren} #{pers.nom}" />
+								</p:column>
+							</p:autoComplete>
+						</h:panelGroup> <br/>					    
+					    <hr/>				    	    
+						<div class="dateForm">
+							<label for="ofcriterionDateBegin" class="label250">#{bundle['pers.gantt.dialog.date_begin']} :</label>
+				   		  	<p:calendar id="ofcriterionDateBegin" showOn="button"
+	     				    	pattern="#{bundle['common.format.date.hour']}"       	
+	       				    	locale="#{evtPersCorrController.paramUrl.paramLocale}"	           
+	       				    	value="#{evtPersCorrController.multitimeline.currentEtatPers.dateDebut}"
+	       				    	class="calendar" >
+	       				    	<p:ajax process="@this" event="dateSelect" listener="#{evtPersCorrController.multitimeline.currentEtatPers.calculDuree}" partialSubmit="true" update=":tabView:formEtatPers:epduree"/>
+	       						<p:ajax process="@this" event="change" listener="#{evtPersCorrController.multitimeline.currentEtatPers.calculDuree}" partialSubmit="true" update=":tabView:formEtatPers:epduree"/>
+	       				  	</p:calendar>
+	       				  	<br/>
+       				  		<label for="ofcriterionDateEnd" class="label250">#{bundle['pers.gantt.dialog.date_end']} :</label>
+		       				  	<p:calendar id="ofcriterionDateEnd" showOn="button"
+		       				    	pattern="#{bundle['common.format.date.hour']}"     	
+		       				    	locale="#{evtPersCorrController.paramUrl.paramLocale}"	           
+		       				    	value="#{evtPersCorrController.multitimeline.currentEtatPers.dateFin}"
+		       				    	class="calendar" >
+		       				        <p:ajax process="@this" event="dateSelect" listener="#{evtPersCorrController.multitimeline.currentEtatPers.calculDuree}" partialSubmit="true" update=":tabView:formEtatPers:epduree"/>
+		       					    <p:ajax process="@this" event="change" listener="#{evtPersCorrController.multitimeline.currentEtatPers.calculDuree}" partialSubmit="true" update=":tabView:formEtatPers:epduree"/>
+		       				  </p:calendar>
+		       				  <br/>
+		       			</div>
+		       			<div class="dureForm">
+       				  		<label for="epduree" class="label250">#{bundle['prod.gantt.dialog.time']} (#{bundle['pers.gantt.dialog.duree']}) : </label>
+	      					<p:inputText id="epduree" readonly="true"  class="duree" value="#{evtPersCorrController.multitimeline.currentEtatPers.duree}"></p:inputText>
+						</div>	
+					
+					<hr/>
+						<label for="EP_equipement" class="label250">#{bundle['pers.gantt.dialog.equipement']} :  </label><!-- <p:inputText id="MA_fami_etat"></p:inputText><br/> -->
+						<p:selectOneMenu id="lstEquipement"
+							value="#{evtPersCorrController.multitimeline.currentEtatPers.equipement}"
+							style="width: auto" class="listBox">
+							<f:selectItem itemLabel="" itemValue="" />
+							<f:selectItems
+								value="#{evtPersCorrController.evtPersViewModel.lstMachine}"
+								var="mach" itemLabel="#{mach.desiMach}"
+								itemValue="#{mach.codeMach}" />
+						</p:selectOneMenu> <br/>
+						
+					    <label for="EP_fami_etat" class="label250">#{bundle['pers.gantt.dialog.famietatpers']} :  </label><!-- <p:inputText id="MA_fami_etat"></p:inputText><br/> -->
+						<p:selectOneMenu id="lstFamilleEtatPers" disabled="true"
+							value="#{evtPersCorrController.multitimeline.currentEtatPers.famiEtatPers}"
+							style="width: auto" class="listBox">
+							<f:selectItem itemLabel="" itemValue="" />
+							<f:selectItems
+								value="#{evtPersCorrController.evtPersViewModel.lstFamilleEtatPers}"
+								var="fa" itemLabel="#{fa.desiFamiEtat}"
+								itemValue="#{fa.codeFamiEtat}" />
+						</p:selectOneMenu> <br/>
+						
+			    		<label for="EP_etat" class="label250">#{bundle['pers.gantt.dialog.etatpers']} : </label> <!-- <p:inputText id="MA_etat"></p:inputText><br/> -->
+					    <p:selectOneMenu id="lstEtatMach"
+							value="#{evtPersCorrController.multitimeline.currentEtatPers.etatPers}"
+							style="width: auto" class="listBox">
+							<f:selectItem itemLabel="" itemValue="" />
+							<f:selectItems
+								value="#{evtPersCorrController.evtPersViewModel.lstEtatPers}"
+								var="et" itemLabel="#{et.desiEtatPers}"
+								itemValue="#{et.codeEtatPers}" />
+							<p:ajax event="valueChange" 
+								listener="#{evtPersCorrController.updateEtatPersonnel}" 
+								update=":tabView:formEtatPers:lstFamilleEtatPers"/>									
+						</p:selectOneMenu> <br/>
+					</div>	
+					<br/>
+					<center>
+						<p:messages id="messages" showDetail="true" autoUpdate="true" closable="true" />
+					</center>
+					<br/><br/><br/>	
+					
+					<table width="100%">
+						<tr>
+							<td class="quit">
+			      				<p:commandButton id="addModEtatQuitPers" class="addModEtatQuit commandButton btnCancel" type="button" value="#{bundle['common.button.quit']}">
+									<p:ajax event="click" oncomplete="PF('detailTimelineWdgtEtatPers').hide()"></p:ajax>
+								</p:commandButton>	
+							</td>
+							<td class="rollback">						
+								<p:commandButton value="#{bundle['common.button.rollback']}"  actionListener="#{evtPersCorrController.rollBack}" disabled="#{evtPersCorrController.multitimeline.currentEtatPers.flagcorrinverse}" class="commandButton btnOther">
+									    <f:param name="dateDebut" value="#{evtPersCorrController.multitimeline.currentEtatPers.dateDebut}" />
+									    <f:param name="dateFin" value="#{evtPersCorrController.multitimeline.currentEtatPers.dateFin}" />
+ 								    	<f:param name="matr" value="#{evtPersCorrController.multitimeline.currentEtatPers.matricule}" /> 
+									    <f:param name="form" value="em" />
+							    </p:commandButton>								
+							</td>
+							<td class="reset">
+								<p:commandButton value="#{bundle['common.button.reset']}" actionListener="#{evtPersCorrController.resetEP}" update=":tabView:addModEtatPers" ajax="true" class="commandButton btnOther" />
+							</td>
+							<td class="validate">	
+			      				<p:commandButton value="#{bundle['common.button.validate']}" actionListener="#{evtPersCorrController.verifFormEtatPers}" class="commandButton btnOk">
+							    </p:commandButton>
+							</td>
+						</tr>
+					</table>
+		      	  </h:form>
+			</h:panelGroup>	
+	</p:dialog>
+	
+	<div style="text-align:right; margin-bottom:8px;">
+		<p:commandButton type="button" id="add_ep" value="#{bundle['common.button.add']}" class="commandButton btnOther">
+			<p:ajax event="click" update="addModEtatPers" listener="#{evtPersCorrController.onResetAddEP}" oncomplete="PF('detailTimelineWdgtEtatPers').show()"/>
+		</p:commandButton> 
+	</div>
+	
+	  <h4> #{bundle['pers.gantt.title.ofp']}</h4>
+	
+	<pe:timeline id="timeline_EP" value="#{List_POP}" var="evtOfPers" widgetVar="timelineSecondWdgt"  		
+    	start="#{start}" end="#{end}" groupsWidth="#{groupsWidth}" zoomable="#{zoomable}" editable="false"
+        axisOnTop="#{axisOnTop}" stackEvents="#{stackEvents}" animate="false"
+        locale="#{locale}" groupMinHeight="90">
+        <pe:javascript event="rangechange" execute="onRangehangeGanttPers2();saveVisibleRangePers();PF('timelineSecondWdgt').getInstance().setOptions({'animate':false, 'animateZoom':false});" />
+        <pe:javascript event="rangechanged" execute="PF('timelineSecondWdgt').getInstance().setOptions({'animate':false, 'animateZoom':false})"/>   
+        <p:ajax event="select" update="ModOfPersT" listener="#{evtPersCorrController.multitimeline.onEdit}" oncomplete="PF('detailTimelineOfPersWdgtT').show();loadBackgroundEvtOfPers();loadModifyIconOFPers();"/>
+  		<p:ajax event="delete" update="@none"/>
+   		<h:panelGrid columns="1">
+			<h:outputText class="#{evtOfPers.flagcorr}"
+				value=" #{evtOfPers.libGantt} ( #{evtOfPers.duree} #{bundle['prod.gantt.dialog.time.detail']} )"
+				style="background-color: #{evtOfPers.color}" />
+			<h:panelGrid columns="2">
+				<h:outputText value="#{bundle['prod.gantt.detail.from']} " />
+				<h:outputText value="#{evtOfPers.dateDebut}">
+					<!--             	<f:convertDateTime type="date" timeZone="Etc/GMT-1" pattern="#{bundle['common.format.date.hour']}" /> -->
+					<f:convertDateTime type="date"
+						pattern="#{bundle['common.format.date.hour']}" />
+				</h:outputText>
+				<h:outputText value="#{bundle['prod.gantt.detail.to']} " />
+				<h:outputText value="#{evtOfPers.dateFin}">
+					<!--             	<f:convertDateTime type="date" timeZone="Etc/GMT-1" pattern="#{bundle['common.format.date.hour']}" /> -->
+					<f:convertDateTime type="date"
+						pattern="#{bundle['common.format.date.hour']}" />
+				</h:outputText>
+				<h:outputText value="#{bundle['prod.gantt.detail.quan']} " />
+				<h:outputText
+					value="#{evtOfPers.quandprod}/#{evtOfPers.quandbonne}/#{evtOfPers.quandrebut}" />
+			</h:panelGrid>
+		</h:panelGrid>
+	</pe:timeline>
+	
+	<script>
+		PF('timelineSecondWdgt').getInstance().setOptions({'animate':false, 'animateZoom':false})
+	</script>
+	
+	<p:dialog id="detailsTimelineEtatPersT" class="detailsTimeline" style="max-width:1000px;"
+	          header="#{bundle['pers.gantt.ofpers.title']}" widgetVar="detailTimelineOfPersWdgtT"  
+	          showEffect="clip" hideEffect="clip" >  
+			<h:panelGroup id="ModOfPersT" >
+		      	<h:form id="formOfPersT">
+		      		<div style="width:900px; margin-left:auto; margin-right:auto;">
+							
+							<h:outputLabel id="OF_LMatriculeT" for="OF_matriculeT"							
+									value="#{bundle['pers.gantt.dialog.matricule']}:" />
+							<h:panelGroup id="groupMatrT">
+								<p:autoComplete id="OF_matriculeT"
+									value="#{evtPersCorrController.multitimeline.currentOfPers.persList}"
+									completeMethod="#{evtPersCorrController.completeMatricule}"
+									var="pers" itemLabel="#{pers.matrSite}"
+									itemValue="#{pers}"
+									converter="#{evtPersCorrController.personnelConverter}"
+									forceSelection="false" maxResults="10" minQueryLength="1"
+									scrollHeight="250">
+									<p:column>
+										<h:outputText value="#{pers.matrSite}" /> 
+									</p:column>
+									<p:column>
+										<h:outputText value="#{pers.pren} #{pers.nom}" />
+									</p:column>
+								</p:autoComplete>
+							</h:panelGroup> <br/>
+							
+							<h:outputLabel id="OF_oflabelT" for="OF_ofT"							
+									value="#{bundle['pers.gantt.dialog.of']}:" />
+							<h:panelGroup id="groupOfT">
+								<p:autoComplete id="OF_ofT"
+									value="#{evtPersCorrController.multitimeline.currentOfPers.ofList}"
+									completeMethod="#{evtPersCorrController.completeOfListe}"
+									var="of" itemLabel="#{of.codeOfSite}"
+									itemValue="#{of}"
+									converter="#{evtPersCorrController.ofListeConverter}"
+									forceSelection="false" maxResults="10" minQueryLength="1"
+									scrollHeight="250">
+<!-- 							    <p:ajax process="@this" event="blur" listener="#{evtPersCorrController.updateOf}" partialSubmit="true" update=":tabView:formOfPersT:OF_articleT"/> -->
+									<p:ajax event="itemSelect" process="OF_ofT" listener="#{evtPersCorrController.updateOf}"
+										    update=":tabView:formOfPersT:groupOfTOut,
+										    		:tabView:formOfPersT:OF_operationT,:tabView:formOfPersT:groupOperTOut,
+										            :tabView:formOfPersT:OF_articleT,:tabView:formOfPersT:groupArticleTOut"/> 
+									<p:column>
+										<h:outputText value="#{of.codeOfSite}" /> 
+									</p:column>
+									<p:column>
+										<h:outputText value="#{of.desiOf}" />
+									</p:column>
+								</p:autoComplete>
+								<h:outputText id="groupOfTOut"		
+									value="#{evtPersCorrController.multitimeline.currentOfPers.desiOf}" />
+							</h:panelGroup> <br/>
+			
+			    		    
+			    		    <h:outputLabel id="OF_operationlabelT" for="OF_operationT"							
+									value="#{bundle['pers.gantt.dialog.op']}:" />
+							<h:panelGroup id="groupOperT">
+								<p:autoComplete id="OF_operationT"
+									value="#{evtPersCorrController.multitimeline.currentOfPers.ofOperList}"
+									completeMethod="#{evtPersCorrController.completeOfOper}"
+									var="ofOper" itemLabel="#{ofOper.pk.codeOper}"
+									itemValue="#{ofOper}"
+									converter="#{evtPersCorrController.ofOperConverter}"
+									forceSelection="false" maxResults="10" minQueryLength="1"
+									scrollHeight="250">
+									<p:ajax process="@this" event="blur" listener="#{evtPersCorrController.updateOper}" partialSubmit="true" update=":tabView:formOfPersT:OF_articleT,:tabView:formOfPersT:groupArticleTOut"/>
+									<p:column>
+										<h:outputText value="#{ofOper.pk.codeOper}" />
+									</p:column>
+									<p:column>
+										<h:outputText value="#{ofOper.desiOper}" />
+									</p:column>
+								</p:autoComplete>
+								<h:outputText id="groupOperTOut"		
+									value="#{evtPersCorrController.multitimeline.currentOfPers.desiOperation}" />									
+							</h:panelGroup> <br/>
+			    
+							<h:outputLabel id="OF_articlelabelT" for="OF_articleT" value="#{bundle['prod.gantt.dialog.arti']}:" />
+							<h:panelGroup id="groupArticleT">
+									<p:autoComplete id="OF_articleT"
+										value="#{evtPersCorrController.multitimeline.currentOfPers.articleList}"
+										completeMethod="#{evtPersCorrController.completeArticle}"
+										var="arti" itemLabel="#{arti.codeArti}" itemValue="#{arti}"
+										converter="#{evtPersCorrController.articleConverter}"
+										forceSelection="false" maxResults="10" minQueryLength="1"
+										scrollHeight="250">
+										<p:column>
+											<h:outputText value="#{arti.codeArti}" />
+										</p:column>
+										<p:column>
+											<h:outputText value="#{arti.desiArti}" />
+										</p:column>
+									</p:autoComplete>
+									<h:outputText id="groupArticleTOut"		
+										value="#{evtPersCorrController.multitimeline.currentOfPers.desiArticle}" />
+								</h:panelGroup>
+							    
+							    <hr/>
+<!--  									    
+							    <label for="EPOP_fami_etatT">#{bundle['pers.gantt.dialog.famietatpers']} :  </label> --><!-- <p:inputText id="MA_fami_etat"></p:inputText><br/> -->
+<!--  							    
+								<p:selectOneMenu id="lstFamilleEtatMachT"
+									value="#{evtPersCorrController.multitimeline.currentOfPers.famiEtatPers}"
+									style="width: auto" class="listBox">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtPersCorrController.evtPersViewModel.lstFamilleEtatPers}"
+										var="fa" itemLabel="#{fa.desiFamiEtat}"
+										itemValue="#{fa.codeFamiEtat}" />
+								</p:selectOneMenu> <br/>
+								
+					    		<label for="EPOP_etatT">#{bundle['pers.gantt.dialog.etatpers']} : </label> --><!-- <p:inputText id="MA_etat"></p:inputText><br/> -->
+<!--  							    <p:selectOneMenu id="lstEtatMachT"
+									value="#{evtPersCorrController.multitimeline.currentOfPers.etatPers}"
+									style="width: auto" class="listBox">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtPersCorrController.evtPersViewModel.lstEtatPers}"
+										var="et" itemLabel="#{et.desiEtatPers}"
+										itemValue="#{et.codeEtatPers}" />
+								</p:selectOneMenu> <br/>
+								
+								<hr/> -->
+								<div class="dateForm">
+									<label for="ofcriterionDateBeginT">#{bundle['pers.gantt.dialog.date_begin']} :</label>
+						   		  	<p:calendar id="ofcriterionDateBeginT" showOn="button"
+			     				    	pattern="#{bundle['common.format.date.hour']}"       	
+			       				    	locale="#{evtPersCorrController.paramUrl.paramLocale}"	           
+			       				    	value="#{evtPersCorrController.multitimeline.currentOfPers.dateDebut}"
+			       				    	class="calendar" >
+			       				    	<p:ajax process="@this" event="dateSelect" listener="#{evtPersCorrController.multitimeline.currentOfPers.calculDuree}" partialSubmit="true" update=":tabView:formOfPersT:epdureeT"/>
+			       						<p:ajax process="@this" event="change" listener="#{evtPersCorrController.multitimeline.currentOfPers.calculDuree}" partialSubmit="true" update=":tabView:formOfPersT:epdureeT"/>
+			       				  	</p:calendar>
+			       				  	<br/>
+		       				  		<label for="ofcriterionDateEndT">#{bundle['pers.gantt.dialog.date_end']} :</label>
+				       				  	<p:calendar id="ofcriterionDateEndT" showOn="button"
+				       				    	pattern="#{bundle['common.format.date.hour']}"     	
+				       				    	locale="#{evtPersCorrController.paramUrl.paramLocale}"	           
+				       				    	value="#{evtPersCorrController.multitimeline.currentOfPers.dateFin}"
+				       				    	class="calendar" >
+				       				        <p:ajax process="@this" event="dateSelect" listener="#{evtPersCorrController.multitimeline.currentOfPers.calculDuree}" partialSubmit="true" update=":tabView:formOfPersT:epdureeT"/>
+				       					    <p:ajax process="@this" event="change" listener="#{evtPersCorrController.multitimeline.currentOfPers.calculDuree}" partialSubmit="true" update=":tabView:formOfPersT:epdureeT"/>
+				       				  </p:calendar>
+				       				  <br/>
+			       				</div>
+			       			<div class="dureForm">
+	       				  		<label for="epdureeT">#{bundle['prod.gantt.dialog.time']} (#{bundle['pers.gantt.dialog.duree']}) : </label>
+		      					<p:inputText id="epdureeT" readonly="true"  class="duree" value="#{evtPersCorrController.multitimeline.currentOfPers.duree}"></p:inputText>
+							</div>
+							<br/>
+							<hr/>
+				    		<label for="EPOP_listMachineT">#{bundle['pers.gantt.dialog.equipement']} : </label> 		
+				    	    <p:selectOneMenu id="EPOP_listMachineT"
+											value="#{evtPersCorrController.multitimeline.currentOfPers.equipement}"
+											style="width: auto"
+											class="listBox">
+											<f:selectItem itemLabel="" itemValue="" />	
+											<f:selectItems
+													value="#{evtPersCorrController.evtPersViewModel.lstMachine}"
+													var="mach" itemLabel="#{mach.desiMach}"
+													itemValue="#{mach.codeMach}" />
+											<p:ajax event="valueChange" 
+									 				listener="#{evtPersCorrController.updateMachine}" 
+									 				update=":tabView:formOfPersT:EPOP_listAtelierT,:tabView:formOfPersT:EPOP_listSectGeoT,
+									 	        			:tabView:formOfPersT:EPOP_listSectAnaT" />		
+							</p:selectOneMenu><br/>
+							
+<!-- 			    		<label for="EPOP_listEquipesT">#{bundle['prod.gantt.dialog.equipe']} : </label> 		
+				    	    <p:selectOneMenu id="EPOP_listEquipesT"
+											value="#{evtPersCorrController.multitimeline.currentOfPers.equipe}"
+											style="width: auto"
+											class="listBox">
+											<f:selectItem itemLabel="" itemValue="" />	
+											<f:selectItems
+													value="#{evtPersCorrController.evtPersViewModel.lstEquipe}"
+													var="equi" itemLabel="#{equi.desiEqui}"
+													itemValue="#{equi.codeEqui}" />
+							</p:selectOneMenu><br/> -->
+				    		<label for="EPOP_listAtelierT">#{bundle['pers.gantt.dialog.atelier']} : </label> 		
+				    	    <p:selectOneMenu id="EPOP_listAtelierT"
+											value="#{evtPersCorrController.multitimeline.currentOfPers.atelier}"
+											style="width: auto"
+											class="listBox" disabled="true">
+											<f:selectItem itemLabel="" itemValue="" />	
+											<f:selectItems
+													value="#{evtPersCorrController.evtPersViewModel.lstAtelier}"
+													var="atel" itemLabel="#{atel.desiAtel}"
+													itemValue="#{atel.codeAtel}" />
+							</p:selectOneMenu><br/>
+							
+				    		<label for="EPOP_listSectGeoT">#{bundle['pers.gantt.dialog.sectgeo']} : </label> 		
+				    	    <p:selectOneMenu id="EPOP_listSectGeoT"
+											value="#{evtPersCorrController.multitimeline.currentOfPers.sectGeo}"
+											style="width: auto"
+											class="listBox"
+											disabled="true">
+											<f:selectItem itemLabel="" itemValue="" />	
+											<f:selectItems
+													value="#{evtPersCorrController.evtPersViewModel.lstSecteurGeo}"
+													var="sectGeo" itemLabel="#{sectGeo.desiSectGeog}"
+													itemValue="#{sectGeo.codeSectGeog}" />
+							</p:selectOneMenu><br/>
+				    		<label for="EPOP_listSectAnaT">#{bundle['pers.gantt.dialog.sectana']} : </label> 		
+				    	    <p:selectOneMenu id="EPOP_listSectAnaT"
+											value="#{evtPersCorrController.multitimeline.currentOfPers.sectAna}"
+											style="width: auto"
+											class="listBox"
+											disabled="true">
+											<f:selectItem itemLabel="" itemValue="" />	
+											<f:selectItems
+													value="#{evtPersCorrController.evtPersViewModel.lstSecteurAna}"
+													var="sectAna" itemLabel="#{sectAna.desiSectAnal}"
+													itemValue="#{sectAna.codeSectAnal}" />
+							</p:selectOneMenu><br/>
+							<br/>
+							<hr/>
+							<br/>
+						</div>	
+						<div style="width: 950px;">
+							<p:dataTable id="tabbleOfPersT" class="tableOfPers" var="ofPers"
+								value="#{evtPersCorrController.multitimeline.currentOfPers.listEvtOfPers}"
+								editable="true" editMode="cell" widgetVar="tableOfPersdetail">
+								<f:facet name="header">
+						           #{bundle['prod.gantt.detail.list.of']}
+						       </f:facet>
+		
+								<p:column headerText="#{bundle['prod.gantt.dialog.etat']}">
+									<h:outputText value="#{ofPers.desiEtatPers}" class="readonly" />
+								</p:column>
+								
+								<p:column headerText="#{bundle['prod.gantt.dialog.oper']}">
+									<h:outputText value="#{ofPers.desiOperation}" class="readonly" />
+								</p:column>
+		
+								<p:column headerText="#{bundle['prod.gantt.dialog.date_begin.pers']}">
+									<h:outputText value="#{ofPers.dateDebut}" class="readonly">
+										<f:convertDateTime
+											pattern="#{bundle['common.format.date.hour']}" type="date" />
+									</h:outputText>
+								</p:column>
+								<p:column headerText="#{bundle['prod.gantt.dialog.date_end.pers']}">
+									<h:outputText value="#{ofPers.dateFin}" class="readonly">
+										<f:convertDateTime
+											pattern="#{bundle['common.format.date.hour']}" type="date" />
+									</h:outputText>
+								</p:column>
+ 								<p:column headerText="#{bundle['prod.gantt.dialog.equipe']}">
+									<h:outputText value="#{ofPers.desiEquipe}" class="readonly" />
+								</p:column>
+								<p:column
+									headerText="#{bundle['prod.gantt.dialog.quantity.succeeded']}"
+									styleClass="ui-editable-column">
+									<p:cellEditor>
+										<f:facet name="output">
+											<h:outputText value="#{ofPers.quandbonne}" />
+										</f:facet>
+										<f:facet name="input">
+											<p:inputText value="#{ofPers.quandbonne}" style="width:96%"
+												label="quandbonne" />
+										</f:facet>
+									</p:cellEditor>
+								</p:column>
+								<p:column
+									headerText="#{bundle['prod.gantt.dialog.quantity.rebut']}">
+									<p:cellEditor>
+										<f:facet name="output">
+											<h:outputText value="#{ofPers.quandrebut}" />
+										</f:facet>
+										<f:facet name="input">
+											<p:inputText value="#{ofPers.quandrebut}" style="width:96%"
+												label="quandrebut" />
+										</f:facet>
+									</p:cellEditor>
+								</p:column>
+								<p:column
+									headerText="#{bundle['prod.gantt.dialog.cadence_theo']}">
+									<p:cellEditor>
+										<f:facet name="output">
+											<h:outputText value="#{ofPers.cadtheo}" />
+										</f:facet>
+										<f:facet name="input">
+											<p:inputText value="#{ofPers.cadtheo}" style="width:96%"
+												label="cadtheo" />
+										</f:facet>
+									</p:cellEditor>
+								</p:column>
+								<p:column headerText="#{bundle['prod.gantt.dialog.of.corr']}" 
+   								  		  style="text-align: center; width:25px;">   								
+   									<h:graphicImage value="../../resources/img/modify.png" rendered="#{ofPers.flagcorr}" />
+								</p:column>
+								<p:column style="text-align: center; width:25px;">						
+			  						<f:facet name="header">
+		                           		<p:selectBooleanCheckbox id="suppAllOF" 
+		                           				value="#{evtPersCorrController.multitimeline.flagSuppAllOF}" 
+		                           				style="border: 1px solid #f8f8f8;background-color: #f8f8f8;" >  
+		                           			<p:ajax event="change"                     				
+		                           				listener="#{evtPersCorrController.checkAll}" 
+		                           				update=":tabView:formOfPersT:tabbleOfPersT,:tabView:formOfPersT:removeOFPersT" />                           					
+		                           		</p:selectBooleanCheckbox>
+		                            </f:facet>		                           
+		           					<p:selectBooleanCheckbox value="#{ofPers.flagSupp}" >
+		           						<p:ajax event="change"               				
+		                           				listener="#{evtPersCorrController.checkOF}" 
+		                           				update=":tabView:formOfPersT:removeOFPersT,:tabView:formOfPersT:tabbleOfPersT" />   
+									</p:selectBooleanCheckbox>                           					
+		           				</p:column>		           									
+							</p:dataTable>
+							
+							<center>
+								<p:messages id="messages" showDetail="true" autoUpdate="true" closable="true" />
+							</center>
+							<br/><br/><br/>		
+					</div>			
+					<table width="100%">
+						<tr>
+							<td class="quit">
+			      				<p:commandButton id="ModOfPersQuit" class="addModOfPersQuit commandButton btnCancel" type="button" value="#{bundle['common.button.quit']}">
+									<p:ajax event="click" oncomplete="PF('detailTimelineOfPersWdgtT').hide();"></p:ajax>
+								</p:commandButton>	
+							</td>
+							<td class="rollback">						
+								<p:commandButton value="#{bundle['common.button.rollback']}"  actionListener="#{evtPersCorrController.rollBack}" disabled="#{evtPersCorrController.multitimeline.currentOfPers.flagcorrinverse}" class="commandButton btnOther">
+									    <f:param name="dateDebut" value="#{evtPersCorrController.multitimeline.currentOfPers.dateDebut}" />
+									    <f:param name="dateFin" value="#{evtPersCorrController.multitimeline.currentOfPers.dateFin}" />
+									    <f:param name="matr" value="#{evtPersCorrController.multitimeline.currentOfPers.matricule}" />
+									    <f:param name="form" value="of" />
+							    </p:commandButton>								
+							</td>
+							<td class="reset">
+								<p:commandButton value="#{bundle['common.button.reset']}" actionListener="#{evtPersCorrController.resetEPOP}" update=":tabView:ModOfPersT" ajax="true" class="commandButton btnOther" />
+							</td>
+							<td class="remove">	 		
+		 						<p:commandButton id="removeOFPersT" disabled="#{evtPersCorrController.multitimeline.btnRemoveDisabled}"
+		 							value="#{bundle['common.button.remove']}"
+									actionListener="#{evtPersCorrController.removeOF}" 
+									class="commandButton btnCancel" >
+									<p:confirm header="#{bundle['common.dialog.confirm.title']}" 
+										   	   message="#{bundle['pers.gantt.dialog.removeOF.confirm']}" 
+										       icon="ui-icon-alert"/>		
+								</p:commandButton>
+							
+								 <p:confirmDialog global="true" showEffect="fade" hideEffect="fade">        						
+	        						<p:commandButton value="#{bundle['common.dialog.confirm.yes']}" type="button" styleClass="ui-confirmdialog-yes" />
+	        						<p:commandButton value="#{bundle['common.dialog.confirm.no']}" type="button" styleClass="ui-confirmdialog-no" />
+	    						</p:confirmDialog>
+							</td>
+							<td class="validate">	
+			      				<p:commandButton value="#{bundle['common.button.validate']}" actionListener="#{evtPersCorrController.verifFormOfPers}" class="commandButton btnOk">
+							    </p:commandButton>
+							</td>
+						</tr>
+					</table>
+		      	  </h:form>
+	</h:panelGroup>	
+	</p:dialog>
+	<p:dialog id="detailsTimelineEtatPersAdd" class="detailsTimeline" header="#{bundle['pers.gantt.ofpers.title']}" widgetVar="detailTimelineOfPersAddWdgt" style="width:900px;" 
+	          showEffect="clip" hideEffect="clip">  
+			<h:panelGroup id="addModOfPers" >
+		      	<h:form id="formOfPersAdd">
+		      		<div style="width:900px; margin-left:auto; margin-right:auto;">
+							
+							<h:outputLabel id="OFA_LMatricule" for="OFA_matricule"							
+									value="#{bundle['pers.gantt.dialog.matricule']}:" />
+							<h:panelGroup id="groupMatrA">
+								<p:autoComplete id="OFA_matricule"
+									value="#{evtPersCorrController.multitimeline.currentOfPers.persList}"
+									completeMethod="#{evtPersCorrController.completeMatricule}"
+									var="pers" itemLabel="#{pers.matrSite}"
+									itemValue="#{pers}"
+									converter="#{evtPersCorrController.personnelConverter}"
+									forceSelection="false" maxResults="10" minQueryLength="1"
+									scrollHeight="250">
+									<p:column>
+										<h:outputText value="#{pers.matrSite}" /> 
+									</p:column>
+									<p:column>
+										<h:outputText value="#{pers.pren} #{pers.nom}" />
+									</p:column>
+								</p:autoComplete>
+							</h:panelGroup> <br/>
+							
+							<h:outputLabel id="OFA_oflabel" for="OFA_of"							
+									value="#{bundle['pers.gantt.dialog.of']}:" />
+							<h:panelGroup id="groupOfA">
+								<p:autoComplete id="OFA_of"
+									value="#{evtPersCorrController.multitimeline.currentOfPers.ofList}"
+									completeMethod="#{evtPersCorrController.completeOfListe}"
+									var="of" itemLabel="#{of.codeOfSite}"
+									itemValue="#{of}"
+									converter="#{evtPersCorrController.ofListeConverter}"
+									forceSelection="false" maxResults="10" minQueryLength="1"
+									scrollHeight="250">
+<!--  							    <p:ajax process="@this" event="blur" listener="#{evtPersCorrController.updateOf}" partialSubmit="true" update=":tabView:formOfPersAdd:OFA_article"/> -->
+									<p:ajax event="itemSelect" process="OFA_of" listener="#{evtPersCorrController.updateOf}"
+										    update=":tabView:formOfPersAdd:groupOfAOut,
+										    		:tabView:formOfPersAdd:OFA_operation,:tabView:formOfPersAdd:groupOperAOut,
+													:tabView:formOfPersAdd:OFA_article,:tabView:formOfPersAdd:groupArticleAOut"/>
+									<p:ajax event="change" process="OFA_of" listener="#{evtPersCorrController.updateOf}"
+											update=":tabView:formOfPersAdd:groupOfAOut"/>								            
+									<p:column>
+										<h:outputText value="#{of.codeOfSite}" /> 
+									</p:column>
+									<p:column>
+										<h:outputText value="#{of.desiOf}" />
+									</p:column>
+								</p:autoComplete>
+								<h:outputText id="groupOfAOut"		
+									value="#{evtPersCorrController.multitimeline.currentOfPers.desiOf}" />  									
+							</h:panelGroup> <br/>
+			
+			    		    
+			    		    <h:outputLabel id="OFA_operationlabel" for="OFA_operation"							
+									value="#{bundle['pers.gantt.dialog.op']}:" />
+							<h:panelGroup id="groupOperA">
+								<p:autoComplete id="OFA_operation"
+									value="#{evtPersCorrController.multitimeline.currentOfPers.ofOperList}"
+									completeMethod="#{evtPersCorrController.completeOfOper}"
+									var="ofOper" itemLabel="#{ofOper.pk.codeOper}"
+									itemValue="#{ofOper}"
+									converter="#{evtPersCorrController.ofOperConverter}"
+									forceSelection="false" maxResults="10" minQueryLength="1"
+									scrollHeight="250">
+									<!--<p:ajax process="@this" event="blur" listener="#{evtPersCorrController.updateOper}" partialSubmit="true" update=":tabView:formOfPersAdd:OFA_article"/>-->
+									<p:ajax event="itemSelect" process="OFA_operation" listener="#{evtPersCorrController.updateOper}"
+											update=":tabView:formOfPersAdd:groupOperAOut,:tabView:formOfPersAdd:groupArticleA"/>
+									<p:ajax event="change" process="OFA_operation" listener="#{evtPersCorrController.updateOper}"
+											update=":tabView:formOfPersAdd:groupOperAOut"/>
+									<p:column>
+										<h:outputText value="#{ofOper.pk.codeOper}" />
+									</p:column>
+									<p:column>
+										<h:outputText value="#{ofOper.desiOper}" />
+									</p:column>
+								</p:autoComplete>
+								<h:outputText id="groupOperAOut"		
+									value="#{evtPersCorrController.multitimeline.currentOfPers.desiOperation}" />
+							</h:panelGroup> <br/>
+			    
+							<h:outputLabel id="OFA_articlelabel" for="OFA_article" value="#{bundle['prod.gantt.dialog.arti']}:" />
+							<h:panelGroup id="groupArticleA">
+									<p:autoComplete id="OFA_article"
+										value="#{evtPersCorrController.multitimeline.currentOfPers.articleList}"
+										completeMethod="#{evtPersCorrController.completeArticle}"
+										var="arti" itemLabel="#{arti.codeArti}" itemValue="#{arti}"
+										converter="#{evtPersCorrController.articleConverter}"
+										forceSelection="false" maxResults="10" minQueryLength="1"
+										scrollHeight="250">
+										<p:ajax process="@this" event="blur"
+											listener="#{evtPersCorrController.updateArticle}"
+											partialSubmit="true" update=":tabView:formOfPersAdd:OFA_article,:tabView:formOfPersAdd:groupArticleAOut" />
+										<p:ajax process="@this" event="change" listener="#{evtPersCorrController.updateArticle}" 
+											update=":tabView:formOfPersAdd:groupArticleAOut"/>
+										<p:column>
+											<h:outputText value="#{arti.codeArti}" />
+										</p:column>
+										<p:column>
+											<h:outputText value="#{arti.desiArti}" />
+										</p:column>
+									</p:autoComplete>
+									<h:outputText id="groupArticleAOut"		
+										value="#{evtPersCorrController.multitimeline.currentOfPers.desiArticle}" />
+								</h:panelGroup>
+							    
+							    <hr/>
+									    
+							    <label for="AEPOP_fami_etat">#{bundle['pers.gantt.dialog.famietatpers']} :  </label><!-- <p:inputText id="MA_fami_etat"></p:inputText><br/> -->
+							    
+								<p:selectOneMenu id="lstFamilleEtatMachAdd"
+									value="#{evtPersCorrController.multitimeline.currentOfPers.famiEtatPers}"
+									style="width: auto" class="listBox" disabled="true">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtPersCorrController.evtPersViewModel.lstFamilleEtatPers}"
+										var="fa" itemLabel="#{fa.desiFamiEtat}"
+										itemValue="#{fa.codeFamiEtat}" />
+								</p:selectOneMenu> <br/>
+								
+					    		<label for="AEPOP_etat">#{bundle['pers.gantt.dialog.etatpers']} : </label> <!-- <p:inputText id="MA_etat"></p:inputText><br/> -->
+							    <p:selectOneMenu id="lstEtatMachAdd"
+									value="#{evtPersCorrController.multitimeline.currentOfPers.etatPers}"
+									style="width: auto" class="listBox">
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{evtPersCorrController.evtPersViewModel.lstEtatPers}"
+										var="et" itemLabel="#{et.desiEtatPers}"
+										itemValue="#{et.codeEtatPers}" />
+									<p:ajax event="valueChange" 
+									 	listener="#{evtPersCorrController.updateEtatPersOf}" 
+									 	update=":tabView:formOfPersAdd:lstFamilleEtatMachAdd "/>	
+								</p:selectOneMenu> <br/>
+								
+								<hr/>
+								<div class="dateForm">
+									<label for="ofcriterionDateBeginA">#{bundle['pers.gantt.dialog.date_begin']} :</label>
+						   		  	<p:calendar id="ofcriterionDateBeginA" showOn="button"
+			     				    	pattern="#{bundle['common.format.date.hour']}"       	
+			       				    	locale="#{evtPersCorrController.paramUrl.paramLocale}"	           
+			       				    	value="#{evtPersCorrController.multitimeline.currentOfPers.dateDebut}"
+			       				    	class="calendar" >
+			       				    	<p:ajax process="@this" event="dateSelect" listener="#{evtPersCorrController.multitimeline.currentOfPers.calculDuree}" partialSubmit="true" update=":tabView:formOfPersAdd:epdureeA"/>
+			       						<p:ajax process="@this" event="change" listener="#{evtPersCorrController.multitimeline.currentOfPers.calculDuree}" partialSubmit="true" update=":tabView:formOfPersAdd:epdureeA"/>
+			       				  	</p:calendar>
+			       				  	<br/>
+		       				  		<label for="ofcriterionDateEndA">#{bundle['pers.gantt.dialog.date_end']} :</label>
+				       				  	<p:calendar id="ofcriterionDateEndA" showOn="button"
+				       				    	pattern="#{bundle['common.format.date.hour']}"     	
+				       				    	locale="#{evtPersCorrController.paramUrl.paramLocale}"	           
+				       				    	value="#{evtPersCorrController.multitimeline.currentOfPers.dateFin}"
+				       				    	class="calendar" >
+				       				        <p:ajax process="@this" event="dateSelect" listener="#{evtPersCorrController.multitimeline.currentOfPers.calculDuree}" partialSubmit="true" update=":tabView:formOfPersAdd:epdureeA"/>
+				       					    <p:ajax process="@this" event="change" listener="#{evtPersCorrController.multitimeline.currentOfPers.calculDuree}" partialSubmit="true" update=":tabView:formOfPersAdd:epdureeA"/>
+				       				  </p:calendar>
+				       				  <br/>
+			       				</div>
+			       			<div class="dureForm">
+	       				  		<label for="epdureeA">#{bundle['prod.gantt.dialog.time']} (#{bundle['pers.gantt.dialog.duree']}) : </label>
+		      					<p:inputText id="epdureeA" readonly="true"  class="duree" value="#{evtPersCorrController.multitimeline.currentOfPers.duree}"></p:inputText>
+							</div>
+							<br/>
+							<hr/>
+				    		<label for="AEPOP_listMachine">#{bundle['pers.gantt.dialog.equipement']} : </label> 		
+				    	    <p:selectOneMenu id="AEPOP_listMachine"
+											value="#{evtPersCorrController.multitimeline.currentOfPers.equipement}"
+											style="width: auto"
+											class="listBox">
+											<f:selectItem itemLabel="" itemValue="" />	
+											<f:selectItems
+													value="#{evtPersCorrController.evtPersViewModel.lstMachine}"
+													var="mach" itemLabel="#{mach.desiMach}"
+													itemValue="#{mach.codeMach}" />
+											<p:ajax event="valueChange" 
+									 				listener="#{evtPersCorrController.updateMachine}" 
+									 				update=":tabView:formOfPersAdd:AEPOP_listAtelier,:tabView:formOfPersAdd:AEPOP_listSectGeo,
+									 	        			:tabView:formOfPersAdd:AEPOP_listSectAna" />		
+							</p:selectOneMenu><br/>
+							
+<!--  			    		<label for="AEPOP_listEquipes">#{bundle['prod.gantt.dialog.equipe']} : </label> 		
+				    	    <p:selectOneMenu id="AEPOP_listEquipes"
+											value="#{evtPersCorrController.multitimeline.currentOfPers.equipe}"
+											style="width: auto"
+											class="listBox">
+											<f:selectItem itemLabel="" itemValue="" />	
+											<f:selectItems
+													value="#{evtPersCorrController.evtPersViewModel.lstEquipe}"
+													var="equi" itemLabel="#{equi.desiEqui}"
+													itemValue="#{equi.codeEqui}" />
+							</p:selectOneMenu><br/> -->
+							
+				    		<label for="AEPOP_listAtelier">#{bundle['pers.gantt.dialog.atelier']} : </label> 		
+				    	    <p:selectOneMenu id="AEPOP_listAtelier"
+											value="#{evtPersCorrController.multitimeline.currentOfPers.atelier}"
+											style="width: auto" disabled="true"
+											class="listBox">
+											<f:selectItem itemLabel="" itemValue="" />	
+											<f:selectItems
+													value="#{evtPersCorrController.evtPersViewModel.lstAtelier}"
+													var="atel" itemLabel="#{atel.desiAtel}"
+													itemValue="#{atel.codeAtel}" />
+							</p:selectOneMenu><br/>
+							
+				    		<label for="AEPOP_listSectGeo">#{bundle['pers.gantt.dialog.sectgeo']} : </label> 		
+				    	    <p:selectOneMenu id="AEPOP_listSectGeo"
+											value="#{evtPersCorrController.multitimeline.currentOfPers.sectGeo}"
+											style="width: auto" disabled="true"
+											class="listBox">
+											<f:selectItem itemLabel="" itemValue="" />	
+											<f:selectItems
+													value="#{evtPersCorrController.evtPersViewModel.lstSecteurGeo}"
+													var="sectGeo" itemLabel="#{sectGeo.desiSectGeog}"
+													itemValue="#{sectGeo.codeSectGeog}" />
+							</p:selectOneMenu><br/>
+				    		<label for="AEPOP_listSectAna">#{bundle['pers.gantt.dialog.sectana']} : </label> 		
+				    	    <p:selectOneMenu id="AEPOP_listSectAna"
+											value="#{evtPersCorrController.multitimeline.currentOfPers.sectAna}"
+											style="width: auto" disabled="true"
+											class="listBox">
+											<f:selectItem itemLabel="" itemValue="" />	
+											<f:selectItems
+													value="#{evtPersCorrController.evtPersViewModel.lstSecteurAna}"
+													var="sectAna" itemLabel="#{sectAna.desiSectAnal}"
+													itemValue="#{sectAna.codeSectAnal}" />
+							</p:selectOneMenu><br/>
+							<br/>
+							<hr/>
+							<br/>
+							<table id="epop_qteA">
+							   	<tr>
+							   		<td><label for="AEPOP_qteBonne">#{bundle['pers.gantt.dialog.quantity.succeeded']} : </label><p:inputText id="AEPOP_qteBonne" class="inputQte" value="#{evtPersCorrController.multitimeline.currentOfPers.quandbonne}"></p:inputText></td>
+							   		<td><label for="AEPOP_qteRebu">#{bundle['pers.gantt.dialog.quantity.rebut']} : </label><p:inputText id="AEPOP_qteRebu" class="inputQte" value="#{evtPersCorrController.multitimeline.currentOfPers.quandrebut}"></p:inputText></td>
+				       				<td><label for="AEPOP_cadTheo">#{bundle['pers.gantt.dialog.cad.theo']} : </label><p:inputText id="AEPOP_cadTheo" class="inputQte" value="#{evtPersCorrController.multitimeline.currentOfPers.cadtheo}"></p:inputText></td>
+				       			</tr>
+							</table>
+							
+							
+							<center>
+								<p:messages id="messages" showDetail="true" autoUpdate="true" closable="true" />
+							</center>
+							<br/><br/><br/>		
+					</div>			
+					<table width="100%">
+						<tr>
+							<td class="quit">
+			      				<p:commandButton id="addModOfPersQuit" class="addModOfPersQuit commandButton btnCancel" type="button" value="#{bundle['common.button.quit']}">
+									<p:ajax event="click" oncomplete="PF('detailTimelineOfPersAddWdgt').hide();"></p:ajax>
+								</p:commandButton>	
+							</td>
+							<td class="rollback">						
+								
+							</td>
+							<td class="reset">
+								<p:commandButton value="#{bundle['common.button.reset']}" actionListener="#{evtPersCorrController.resetEPOP}" update=":tabView:addModOfPers" ajax="true" class="commandButton btnOther" />
+							</td>
+							<td class="validate">	
+			      				<p:commandButton value="#{bundle['common.button.validate']}" actionListener="#{evtPersCorrController.verifFormOfPers}" class="commandButton btnOk">
+							    </p:commandButton>
+							</td>
+						</tr>
+					</table>
+		      	  </h:form>
+	</h:panelGroup>	
+	</p:dialog>
+	
+	<div style="text-align:right; margin-bottom:8px;">
+		<p:commandButton type="button" id="add_ofp" value="#{bundle['common.button.add']}" class="commandButton btnOther">
+			<p:ajax event="click" update="addModOfPers" listener="#{evtPersCorrController.multitimeline.onResetAddOFP}" oncomplete="PF('detailTimelineOfPersAddWdgt').show()"/>
+		</p:commandButton> 
+	</div>
+	
+	
+</ui:composition>

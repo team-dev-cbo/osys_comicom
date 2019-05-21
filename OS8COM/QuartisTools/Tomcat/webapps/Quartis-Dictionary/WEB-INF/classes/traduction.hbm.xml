@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class dynamic-insert="false" dynamic-update="false" mutable="true" name="dictionary.entity.translation.TranslationEntity" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="TRADUCTION">
+    <composite-id class="dictionary.entity.translation.TranslationPK" name="translationPK">
+      <key-property column="CLE" length="79" name="key"/>
+      <key-property column="LOCA" length="10" name="language"/>
+    </composite-id>
+    <!--<property column="CLE_VALE" name="value""/>-->
+    <property name="value">
+      <column name="CLE_VALE" sql-type="nvarchar(255)"/>
+    </property>
+    <property column="GROU" name="context"/>
+  </class>
+</hibernate-mapping>

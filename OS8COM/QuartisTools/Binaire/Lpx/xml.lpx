@@ -1,0 +1,140 @@
+WITH TYPES_DEFS;
+
+MODULE XML; C;
+
+
+// Création d'une structure Xml
+// paramètres : norme et version de la structure
+// retour :	identifiant structure Xml
+FUNCTION 	XmlCree( p_normeVersion : GrandeChaine ) RETURN T_Xml ; 800 ;
+
+
+// Fermeture d'une structure Xml
+// paramètres : identifiant structure Xml
+// retour : 0: OK , 1: erreur identifiant structure Xml
+FUNCTION  	XmlFerme( p_xml : T_Xml ) RETURN Integer ; 801 ;
+
+
+// Ecriture du contenu d'un fichier dans une structure Xml
+// paramètres : identifiant structure Xml , nom du fichier source
+// retour : 0: OK , 1: erreur fichier ,  2: erreur de syntaxe dans le contenu , 3: erreur identifiant structure Xml ,
+FUNCTION 	XmlFichierLit( p_xml : T_Xml ; p_nomFichier : GrandeChaine ) RETURN Integer ; 802 ;
+
+
+// Ecriture du contenu de la structure Xml dans un fichier 
+// paramètres : identifiant structure Xml , nom du fichier de destination 
+// retour : 0: OK , 1: erreur fichier , 2: erreur identifiant structure Xml 
+FUNCTION 	XmlFichierEcrit( p_xml : T_Xml ; p_nomFichier : GrandeChaine ) RETURN Integer ; 803 ;
+
+
+// Mise à vide de la structure Xml
+// paramètres : identifiant structure Xml
+// retour : 0: OK , 1: erreur identifiant structure Xml 
+FUNCTION	XmlEfface( p_xml : T_Xml ) RETURN Integer ; 804 ;
+
+
+// Ecriture du contenu d'une chaine dans une structure Xml
+// paramètres : identifiant structure Xml , chaine source
+// retour : 0: OK , 1: erreur de syntaxe dans le contenu , 2: erreur identifiant structure Xml 
+FUNCTION 	XmlLit( p_xml : T_Xml ; p_chaine : ChaineEx )	RETURN Integer ; 805 ;
+
+
+// Ecriture du contenu de la structure Xml dans une chaine
+// paramètres : identifiant structure Xml , chaine destination
+// retour : 0: OK , 1: taille chaine insuffisante , 2: erreur identifiant structure Xml 
+FUNCTION 	XmlEcrit( p_xml : T_Xml ; p_chaine : INFO_VARIABLE )	RETURN Integer ; 806 ;
+
+
+// Positionnemement à la racine de la structure Xml
+// paramètres : identifiant structure Xml 
+// retour : 0: OK , 1: erreur de positionnement, 2: erreur identifiant structure Xml 
+FUNCTION	XmlPositionInit( p_xml : T_Xml ) RETURN Integer ; 807 ;
+
+
+// Ajout d'un élément à la position courante
+// paramètres : identifiant structure Xml , nom de l'élément , valeur de l’élément
+// retour : 0: OK , 1: erreur ajout, 2: erreur identifiant structure Xml 
+FUNCTION	XmlElementAjoute( p_xml : T_Xml ; p_element , p_valeur : GrandeChaine ) RETURN Integer ; 808 ;
+
+
+// Suppression de l'élément courant
+// paramètres : identifiant structure Xml 
+// retour : 0: OK , 1: erreur suppression, 2: erreur identifiant structure Xml 
+FUNCTION	XmlElementSupprime( p_xml : T_Xml ) RETURN Integer ; 809 ;
+
+
+// Lecture de la valeur de l'élément courant
+// paramètres : identifiant structure Xml , chaine valeur destination
+// retour : 0: OK , 1: taille chaine insuffisante , 2: erreur identifiant structure Xml 
+FUNCTION 	XmlValeurLit( p_xml : T_Xml ; p_chaine : INFO_VARIABLE  ) RETURN Integer ; 810 ;
+
+// Ecriture d'un attribut à l'élément courant
+// paramètres : identifiant structure Xml , attribut , valeur de l’attribut
+// retour : 0: OK , 1: erreur écriture, 2: erreur identifiant structure Xml 
+FUNCTION 	XmlAttributEcrit( p_xml : T_Xml ; p_attribut , p_valeur : GrandeChaine ) RETURN Integer ; 811 ;
+
+
+// Lecture de la valeur d'un attribut de l'élément courant
+// paramètres : identifiant structure Xml , attribut , chaine valeur destination
+// retour : 0: OK , 1: taille chaine insuffisante , 2: erreur identifiant structure Xml 
+FUNCTION 	XmlAttributLit( p_xml : T_Xml ; p_attribut : GrandeChaine ; p_chaine : INFO_VARIABLE ) RETURN Integer ; 812 ;
+
+
+// Positionnement sur le 1er fils de l'élément courant
+// paramètres : identifiant structure Xml 
+// retour : 0: OK , 1: erreur positionnement, 2: erreur identifiant structure Xml 
+FUNCTION 	XmlElementFils( p_xml : T_Xml ) RETURN Integer ; 813 ;
+
+
+// Positionnement sur l'élément père de l'élément courant
+// paramètres : identifiant structure Xml 
+// retour : 0: OK , 1: erreur positionnement, 2: erreur identifiant structure Xml 
+FUNCTION 	XmlElementPere( p_xml : T_Xml ) RETURN Integer ; 814 ;
+
+
+// Positionnement sur l'élément suivant de l'élément courant
+// paramètres : identifiant structure Xml 
+// retour : 0: OK , 1: erreur positionnement, 2: erreur identifiant structure Xml 
+FUNCTION 	XmlElementSuivant( p_xml : T_Xml ) RETURN Integer ; 815 ;
+
+
+// Positionnement sur le 1er élément de même niveau que l'élément courant
+// paramètres : identifiant structure Xml 
+// retour : 0: OK , 1: erreur positionnement, 2: erreur identifiant structure Xml 
+FUNCTION XmlElementPremier( p_xml : T_Xml ) RETURN Integer ; 816 ;
+
+
+// Positonnement sur un élément suivant, de même niveau que l'élément courant 
+// paramètres : identifiant structure Xml , nom de l'élément
+// retour : 0: OK , 1: erreur positionnement, 2: erreur identifiant structure Xml 
+FUNCTION 	XmlElementPositionne( p_xml : T_Xml ; p_element : GrandeChaine ) RETURN Integer ; 817 ;
+
+
+// Ecriture du résultat d’une requête dans une structure Xml
+// paramètres : identifiant structure Xml , identifiant réponse SQL , 
+//			prototype de la structure Xml
+// retour : 0: OK , n: nombre de colonnes non utilisées ,
+//		-1: erreur identifiant structure Xml , -2: erreur identifiant reponse SQL , -3: erreur prototype
+
+FUNCTION  XmlReponseSQL( p_xml : T_Xml ; p_repSQL : T_ReponseSQL ; p_prototype : GrandeChaine ) RETURN Integer ; 818 ;
+
+
+// Ajout d'un fils à l'élément courant
+// paramètres : identifiant structure Xml , nom du fils , valeur du fils
+// retour : 0: OK , 1: erreur ajout, 2: erreur identifiant structure Xml 
+FUNCTION	XmlFilsAjoute( p_xml : T_Xml ; p_fils , p_valeur : GrandeChaine ) RETURN Integer ; 819 ;
+
+
+// Suppression du fils courant
+// paramètres : identifiant structure Xml 
+// retour : 0: OK , 1: erreur suppression, 2: erreur identifiant structure Xml 
+FUNCTION	XmlFilsSupprime( p_xml : T_Xml ) RETURN Integer ; 820 ;
+
+// Positonnement sur un fils donné  
+// paramètres : identifiant structure Xml , nom du fils
+// retour : 0: OK , 1: erreur positionnement, 2: erreur identifiant structure Xml 
+FUNCTION 	XmlFilsPositionne( p_xml : T_Xml ; p_fils: GrandeChaine ) RETURN Integer ; 821 ;
+
+
+
+END XML;

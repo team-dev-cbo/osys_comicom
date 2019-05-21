@@ -1,0 +1,21 @@
+Version 1
+APP 3
+
+1 Le fichier de configuration de Osystrace est erroné pour la propriété %1
+2 Mauvaise version du fichier de configuration
+3 Erreur d'ouverture du fichier %1 %2 
+4 Erreur de lecture du répertoire %1, 
+5 Erreur d'écriture dans le fichier %1
+6 Impossible créer le répertoire %1
+7 Lecture de la configuration
+8 Ecriture de la configuration
+9 Lecture du niveau de débug
+10 Ecriture d'un niveau de débug
+11 Suppression d'un niveau de débug
+12 Liste des débugs 
+13 Ajout d'un message débug
+14 Lancement du serveur Trace
+15 L'utilisateur n'a pas les droits de lecture
+16 L'utilisateur n'a pas les droits d'écriture
+17 L'utilisateur n'a pas les droits de suppression
+18 L'utilisateur n'a pas les droits d'ajout 

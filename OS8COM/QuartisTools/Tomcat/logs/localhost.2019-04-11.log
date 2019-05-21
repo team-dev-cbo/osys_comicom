@@ -1,0 +1,36 @@
+13:47:42.180 INFO [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+13:48:04.067 INFO [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextDestroyed()  
+13:48:04.067 INFO [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextDestroyed()  
+13:48:04.239 INFO [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+14:00:51.246 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+14:01:10.122 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+14:01:17.532 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextInitialized()  
+14:01:17.532 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextInitialized()  
+14:24:42.555 INFOS [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+14:24:47.423 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextDestroyed()  
+14:24:47.423 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextDestroyed()  
+14:24:47.454 INFOS [org.apache.catalina.core.ApplicationContext log] - Closing Spring root WebApplicationContext  
+14:25:09.809 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+14:25:20.011 INFOS [org.apache.catalina.core.ApplicationContext log] - Initializing Spring root WebApplicationContext  
+14:25:24.745 INFOS [org.apache.catalina.core.ApplicationContext log] - ContextListener: contextInitialized()  
+14:25:24.745 INFOS [org.apache.catalina.core.ApplicationContext log] - SessionListener: contextInitialized()  
+14:45:50.570 GRAVE [org.apache.catalina.core.StandardWrapperValve invoke] - "Servlet.service()" pour la servlet ActionServlet a généré une exception 
+java.lang.IllegalStateException: "getOutputStream()" a déjà été appelé pour cette réponse
+	at org.apache.catalina.connector.Response.getWriter(Response.java:611)
+	at org.apache.catalina.connector.ResponseFacade.getWriter(ResponseFacade.java:198)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:333)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+ 

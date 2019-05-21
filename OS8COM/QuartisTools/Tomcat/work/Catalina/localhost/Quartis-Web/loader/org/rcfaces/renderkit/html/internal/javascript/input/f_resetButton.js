@@ -1,0 +1,1 @@
+new f_class("f_resetButton",{extend:f_button});

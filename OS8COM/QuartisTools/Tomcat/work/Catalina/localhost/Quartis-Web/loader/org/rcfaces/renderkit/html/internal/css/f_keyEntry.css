@@ -1,0 +1,36 @@
+/*
+ * $Id: f_keyEntry.css,v 1.1 2010/06/16 13:28:53 oeuillot Exp $
+ */
+
+/**
+ *
+ * @class f_keyEntry
+ *
+ * @author Olivier Oeuillot (latest modification by $Author: oeuillot $)
+ * @version $Revision: 1.1 $ $Date: 2010/06/16 13:28:53 $ 
+ */
+ 
+.f_keyEntry {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	
+	border-width: 1px;
+}
+
+.f_keyEntry_disabled,
+.f_keyEntry_disabled_error {
+	border-color: #BBB;
+}
+
+.f_keyEntry_input_verifying {
+	background: url("suggestTextEntry/waiting.gif") no-repeat right center;
+}
+
+.f_keyEntry_input_error {
+	background: #FFFFDD url("comboGrid/warning.gif") no-repeat right center;
+}
+
+.f_keyEntry_input_empty_message {
+	color: #888;
+	font-style: italic;
+}

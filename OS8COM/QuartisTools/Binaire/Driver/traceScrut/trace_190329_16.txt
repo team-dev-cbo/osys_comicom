@@ -1,0 +1,11 @@
+29/03/2019 16:07:16.215-Perte de connexion du driver
+29/03/2019 16:22:10.915-Perte de connexion du driver
+29/03/2019 16:39:26.633-Perte de connexion du driver
+29/03/2019 16:51:06.589-Perte de connexion du driver
+29/03/2019 16:51:55.308-Perte de connexion du driver
+29/03/2019 16:52:33.835-Perte de connexion du driver
+29/03/2019 16:52:53.912-Perte de connexion du driver
+29/03/2019 16:54:03.689-Perte de connexion du driver
+29/03/2019 16:54:29.646-Perte de connexion du driver
+29/03/2019 16:55:19.894-Perte de connexion du driver
+29/03/2019 16:55:54.042-Perte de connexion du driver

@@ -1,0 +1,256 @@
+MODULE TYPES_DEFS;
+
+//
+//  Fichier : TYPE_DEFS.LPX
+//  Role    : fichier contenant une definition de tous les types qui vont etre
+//            utilises dans les modules de SXAO. Il suffit, pour utiliser ces types,
+//            de mettre dans le fichier LPX : WITH TYPE_DEFS;
+//
+
+
+
+EXPORT  NombreTexte    // ....
+        ;
+
+TYPE
+        DateTexte        =      STRING[4];
+        NombreTexte      =      STRING[19];
+        PetiteChaine     =      STRING[79];
+        GrandeChaine     =      STRING[255];	
+        TresGrandeChaine =      STRING[1023];
+        Test             =      STRING[780];		
+        Chaine10000      =      STRING[9999];
+        Chaine4          =      STRING[4];
+		Chaine2048		 =	    STRING[2047]; 	
+	    ChaineEx		 =	    STRING[65000]; // pour chargement d'un fichier		
+			
+
+
+        T_ErreurChaine   =      STRING[1];
+        CONSCAR          =      STRING[1];
+	  CONSCAR2	       =	  STRING[2]; // modif V1.1.0.3
+
+
+	  
+CONST   LF               :      CONSCAR = ""+'\n';
+        RC               :      CONSCAR = ""+'\r';
+	  GU			 :	  CONSCAR = ""+'\034'; // guillemets
+        ESC              :      CONSCAR = ""+'\027'; // escape
+	  CRLF          	 :	  CONSCAR2 = "" + '\013' + '\010';  // modif V1.1.0.3	  
+
+// ajout V1.1.0.3
+	  CR               :      CONSCAR = "" + '\r';
+	  TAB		       :	  CONSCAR = "" + '\009' ;
+	  AntiSlash	       :	  CONSCAR = "" + '\092' ;
+	  Slash	 	 :	  CONSCAR = "" + '\047' ;
+
+
+TYPE
+        T_ParametreExtraction   =       RECORD
+                                                Position : INTEGER;
+                                                Longueur : INTEGER;
+                                        END RECORD;
+        T_ParametresExtraction  =       ARRAY [1..20] OF T_ParametreExtraction;
+        T_ResultatExtraction    =       ARRAY [1..20] OF PetiteChaine;
+
+        T_RetourRenseigneSemaine =      RECORD
+                                                DebutSemaine    : INTEGER;
+                                                FinSemaine      : INTEGER;
+                                                RRS_Erreur      : INTEGER;
+                                        END RECORD;
+        T_RetourAssocieSemaine  =       RECORD
+                                                NumeroSemaine   : INTEGER;
+                                                NumeroAnnee     : INTEGER;
+                                                ValeurChaine    : DateTexte;
+                                                RAS_Erreur      : INTEGER;
+                                        END RECORD;
+
+      
+
+//pour reponse a une requete SQL
+TYPE
+        T_ReponseSQL =  RECORD
+		                    IdReponse : INTEGER;   
+				END RECORD;
+
+	  T_Verrou    =  RECORD
+		                    IdVerrou : INTEGER;   
+			     END RECORD;
+		
+
+// Pour réserver un canal
+//	  exécuter une requête sur ce canal
+//  et libérer le canal
+TYPE
+	  T_CanalBD   =  RECORD
+		                    IdCanal : INTEGER;   
+			     END RECORD;
+
+CONST   // constantes pour le type de canal 
+
+	LENT		:	Integer = 0 ;   // canal lent
+	RAPIDE	:	Integer = 1 ;   // canal rapide
+
+
+
+// pour scenario periodique executable
+TYPE
+	  T_ScenarioExec = RECORD
+					  NumScenExec : INTEGER;
+				 END RECORD;
+	
+	  T_Date         = RECORD
+					  Date : INTEGER;
+				 END RECORD;
+
+
+TYPE
+        T_JourSemaine           =       (Dimanche,Lundi,Mardi,Mercredi,Jeudi,
+                                        Vendredi,Samedi);
+
+        T_Mois                  =       (Janvier,Fevrier,Mars,Avril,Mai,Juin,
+                                        Juillet,Aout,Septembre,Octobre,Novembre,
+                                        Decembre);
+
+
+//
+// Type definis pour la gestion des fichiers Unix
+//
+
+TYPE
+	T_Fichier	=	RECORD
+					PointeurFichier : INTEGER;
+				END RECORD;
+CONST	
+	MAUVAIS_FICHIER	: T_Fichier		= {0};
+	EOF		: T_ErreurChaine	= "" +'\001';
+	ERREUR_CHAINE	: T_ErreurChaine	= "" + '\001';
+
+TYPE 
+	t_DefBoite = record
+					modifCouleur : boolean ;
+					couleurFond  : NombreTexte;
+					couleurTexte : NombreTexte;
+					mess1aModifier : BOOLEAN;
+					message1    : PetiteChaine;
+					mess2aModifier : BOOLEAN;
+					message2   : PetiteChaine;
+					mess3aModifier : BOOLEAN;
+					message3  :  PetiteChaine;
+				end record;
+
+	t_paramLien = record
+					param1	:	GrandeChaine;
+					param2	:	GrandeChaine;
+					param3	:	GrandeChaine;
+					param4	:	GrandeChaine;
+					param5	:	GrandeChaine;
+					param6	:	GrandeChaine;
+					param7	:	GrandeChaine;
+					param8	:	GrandeChaine;
+				end record;
+
+
+// 
+//	HTML
+//
+
+CONST
+
+//
+// constantes pour le format du texte 
+//
+
+	GRAS		:	Integer = 1 ; // caractère
+	ITALIQUE	:	Integer = 2 ; // caractère
+	SOULIGNE	:	Integer = 4 ; // caractère
+	CENTRE	:	Integer = 8 ; // alignement
+	DROITE	:	Integer = 16 ;// alignement
+	FIXE		:	Integer = 32 ;// taille des caractères identiques
+	CONTROLE	:	Integer = 64 ; // pour affichage bouton pour la vidéo
+
+// couleur
+    	BLANC       :     Integer = 512 ; // 2^9
+	NOIR		:	Integer = 1024 ; // 2^10
+	MARRON	:	Integer = 2048 ; // 2^11
+	ROUGE		:	Integer = 4096 ; // 2^12
+	ORANGE	:	Integer = 8192 ; // 2^13
+	JAUNE		:	Integer = 16384 ; // 2^14
+	VERT		:	Integer = 32768 ; // 2^15
+	BLEU		:	Integer = 65536 ; // 2^16
+	VIOLET	:	Integer = 131072 ; // 2^17
+	GRIS		:	Integer = 262144 ; // 2^18
+	CIEL		:	Integer = 524288; // 2^19
+	MARINE	:	Integer = 1048576 ; // 2^20
+	ROSE		:	Integer = 2097152 ; // 2^21
+
+// Taille des caractères
+	TAILLE1	:	Integer = 8388608 ; 	// 2^23
+	TAILLE2	:	Integer = 16777216 ; 	// 2^24
+	TAILLE3	:	Integer = 33554432 ; 	// 2^25
+	TAILLE4	:	Integer = 67108864 ; 	// 2^26
+	TAILLE5	:	Integer = 134217728 ; 	// 2^27
+	TAILLE6	:	Integer = 268435456 ; 	// 2^28
+	TAILLE7	:	Integer = 536870912 ; 	// 2^29
+
+//
+// constantes pour le positionnement d'une image / texte sur une meme ligne
+//
+	HAUT	      :	Integer = 1 ;
+	BAS		:	Integer = 2 ;
+	MILIEU	:	Integer = 4 ;
+
+//
+// constantes pour fichiers
+//	
+
+	ECRITURE : Integer = 1 ;
+	LECTURE  : Integer = 2 ;
+	DEBUT	   : Integer = 4 ; 
+	FIN	   : Integer = 8 ;
+	COURANT  : Integer = 16 ;
+	EXCLUSIF : Integer = 32 ;
+
+TYPE
+    T_PropFichier =  RECORD
+		            dateCreation : INTEGER ; 
+				dateModification : INTEGER ;
+				taille		: INTEGER ;  
+			   END RECORD;
+
+
+TYPE
+	T_Xml = 	RECORD
+		           IdXml : INTEGER;   
+			END RECORD;
+
+
+TYPE
+	T_AttenteTempo = RECORD
+		           IdAttente : INTEGER;   
+			END RECORD;
+TYPE
+	T_ReponseQuartisMsg = RECORD
+				IdReponseQtsMsg : INTEGER ;
+			      END RECORD ;
+TYPE
+	T_LigneQuartisMsg = RECORD
+				Qliste 		: GRANDECHAINE ;
+				Qmessage 	: GRANDECHAINE ;
+				QdateRecept 	: INTEGER ;
+				END RECORD ;
+
+TYPE
+	T_ParamSPC = RECORD
+				langage		: PETITECHAINE ;
+				flagAutoClose   : BOOLEAN ;
+				codeAtelier	: GRANDECHAINE ;
+				codeMachine	: GRANDECHAINE ;
+				codeProduit	: GRANDECHAINE ;
+				codeGammeControle : GRANDECHAINE ;
+				codeOF		: GRANDECHAINE ;
+				codeOperateur : GRANDECHAINE ;
+				END RECORD ;
+				
+
+END TYPES_DEFS;

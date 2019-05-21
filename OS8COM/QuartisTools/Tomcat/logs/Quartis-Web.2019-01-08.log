@@ -1,0 +1,1446 @@
+09:49:23.032 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:49:23.054 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/moduleChange.ajx?moduleID=OPTIMA_Standard&userID=administrateur) mais pas de user en session. 
+09:49:23.057 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:49:23.082 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:49:23.082 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/xxx.cas?action=deconnexion&userID=administrateur) mais pas de user en session. 
+09:49:23.084 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:49:23.090 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:49:25.497 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+09:49:25.501 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+09:49:27.083 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+09:49:28.107 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+09:49:28.107 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+09:49:28.108 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+09:49:28.108 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+09:49:28.108 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+09:49:28.108 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+09:49:28.113 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+09:49:28.113 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+09:49:31.700 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+09:49:31.700 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+09:49:31.700 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+09:49:31.704 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+09:49:31.869 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+09:49:31.869 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+09:49:31.869 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+09:49:31.874 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+09:49:36.930 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Production_OF_EnCours_1 
+09:49:36.930 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Production_OF_EnCours_1 
+09:49:36.930 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'... 
+09:49:36.930 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'... 
+09:49:36.930 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'... 
+09:49:36.930 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'... 
+09:49:36.944 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+09:49:36.944 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+09:49:46.908 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Production_OF_EnCours_1 
+09:49:46.908 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'... 
+09:49:46.908 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'... 
+09:49:46.921 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+09:49:56.926 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Production_OF_EnCours_1 
+09:49:56.926 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'... 
+09:49:56.926 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'... 
+09:49:56.939 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+09:50:04.025 DEBUG - GSqlQueryGeneratorSqlServer --->table =OF_LISTE query =set rowcount 3000  SELECT CODE_OF_SITE  , CODE_OF  , dbo.OPTIMA_TRADUCTION(DESI_OF,'fr') +'@KEYLANG_'+DESI_OF AS DESI_OF  , CODE_CLIE  , NUME_COMM  , CONVERT(NVARCHAR, DATE_LIVR, 103) AS DATE_LIVR  , CONVERT(NVARCHAR, DATE_LANC, 103) AS DATE_LANC  , CHAM_LIBR_1  , CHAM_LIBR_2  , CHAM_LIBR_3  , QUAN_LANC  , QUAN_STOC_AFFE  , NOMB_ARTI  , CODE_ETAT_AVAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 108) AS DATE_DEBU_REEL  , DELT_HEUR_UTC_DEBU_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 108) AS DATE_FIN_REEL  , DELT_HEUR_UTC_FIN_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 108) AS DATE_IMPO  , CODE_OF_SIMP  , CODE_ARTI  , CODE_SITE  , DELT_HEUR_UTC  , FLAG_SUPP FROM OF_LISTE  WHERE ( CODE_SITE = 'MAR')  AND ( CODE_OF_SITE LIKE  '%'  OR CODE_OF_SITE IS NULL  )  ORDER BY CODE_OF_SITE ASC  
+09:57:22.791 DEBUG - GSqlQueryGeneratorSqlServer --->table =OF_LISTE query =set rowcount 3000  SELECT CODE_OF_SITE  , CODE_OF  , dbo.OPTIMA_TRADUCTION(DESI_OF,'fr') +'@KEYLANG_'+DESI_OF AS DESI_OF  , CODE_CLIE  , NUME_COMM  , CONVERT(NVARCHAR, DATE_LIVR, 103) AS DATE_LIVR  , CONVERT(NVARCHAR, DATE_LANC, 103) AS DATE_LANC  , CHAM_LIBR_1  , CHAM_LIBR_2  , CHAM_LIBR_3  , QUAN_LANC  , QUAN_STOC_AFFE  , NOMB_ARTI  , CODE_ETAT_AVAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 108) AS DATE_DEBU_REEL  , DELT_HEUR_UTC_DEBU_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 108) AS DATE_FIN_REEL  , DELT_HEUR_UTC_FIN_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 108) AS DATE_IMPO  , CODE_OF_SIMP  , CODE_ARTI  , CODE_SITE  , DELT_HEUR_UTC  , FLAG_SUPP FROM OF_LISTE  WHERE ( CODE_SITE = 'MAR')  AND ( CODE_OF_SITE LIKE  '%'  OR CODE_OF_SITE IS NULL  )  ORDER BY CODE_OF_SITE ASC  
+09:59:14.829 DEBUG - GSqlQueryGeneratorSqlServer --->table =OF_LISTE query =set rowcount 3000  SELECT CODE_OF_SITE  , CODE_OF  , dbo.OPTIMA_TRADUCTION(DESI_OF,'fr') +'@KEYLANG_'+DESI_OF AS DESI_OF  , CODE_CLIE  , NUME_COMM  , CONVERT(NVARCHAR, DATE_LIVR, 103) AS DATE_LIVR  , CONVERT(NVARCHAR, DATE_LANC, 103) AS DATE_LANC  , CHAM_LIBR_1  , CHAM_LIBR_2  , CHAM_LIBR_3  , QUAN_LANC  , QUAN_STOC_AFFE  , NOMB_ARTI  , CODE_ETAT_AVAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 108) AS DATE_DEBU_REEL  , DELT_HEUR_UTC_DEBU_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 108) AS DATE_FIN_REEL  , DELT_HEUR_UTC_FIN_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 108) AS DATE_IMPO  , CODE_OF_SIMP  , CODE_ARTI  , CODE_SITE  , DELT_HEUR_UTC  , FLAG_SUPP FROM OF_LISTE  WHERE ( CODE_SITE = 'MAR')  AND ( CODE_OF_SITE LIKE  '%'  OR CODE_OF_SITE IS NULL  )  ORDER BY CODE_OF_SITE ASC  
+09:59:21.019 DEBUG - GSqlQueryGeneratorSqlServer --->table =OF_LISTE query =set rowcount 3000  SELECT CODE_OF_SITE  , CODE_OF  , dbo.OPTIMA_TRADUCTION(DESI_OF,'fr') +'@KEYLANG_'+DESI_OF AS DESI_OF  , CODE_CLIE  , NUME_COMM  , CONVERT(NVARCHAR, DATE_LIVR, 103) AS DATE_LIVR  , CONVERT(NVARCHAR, DATE_LANC, 103) AS DATE_LANC  , CHAM_LIBR_1  , CHAM_LIBR_2  , CHAM_LIBR_3  , QUAN_LANC  , QUAN_STOC_AFFE  , NOMB_ARTI  , CODE_ETAT_AVAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 108) AS DATE_DEBU_REEL  , DELT_HEUR_UTC_DEBU_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 108) AS DATE_FIN_REEL  , DELT_HEUR_UTC_FIN_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 108) AS DATE_IMPO  , CODE_OF_SIMP  , CODE_ARTI  , CODE_SITE  , DELT_HEUR_UTC  , FLAG_SUPP FROM OF_LISTE  WHERE ( CODE_SITE = 'MAR')  AND ( CODE_OF_SITE LIKE  '%'  OR CODE_OF_SITE IS NULL  )  ORDER BY CODE_OF_SITE ASC  
+09:59:21.235 DEBUG - GSqlQueryGeneratorSqlServer --->table =OF_LISTE query =set rowcount 3000  SELECT CODE_OF_SITE  , CODE_OF  , dbo.OPTIMA_TRADUCTION(DESI_OF,'fr') +'@KEYLANG_'+DESI_OF AS DESI_OF  , CODE_CLIE  , NUME_COMM  , CONVERT(NVARCHAR, DATE_LIVR, 103) AS DATE_LIVR  , CONVERT(NVARCHAR, DATE_LANC, 103) AS DATE_LANC  , CHAM_LIBR_1  , CHAM_LIBR_2  , CHAM_LIBR_3  , QUAN_LANC  , QUAN_STOC_AFFE  , NOMB_ARTI  , CODE_ETAT_AVAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 108) AS DATE_DEBU_REEL  , DELT_HEUR_UTC_DEBU_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 108) AS DATE_FIN_REEL  , DELT_HEUR_UTC_FIN_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 108) AS DATE_IMPO  , CODE_OF_SIMP  , CODE_ARTI  , CODE_SITE  , DELT_HEUR_UTC  , FLAG_SUPP FROM OF_LISTE  WHERE ( CODE_SITE = 'MAR')  AND ( CODE_OF_SITE LIKE  '%'  OR CODE_OF_SITE IS NULL  )  ORDER BY CODE_OF_SITE ASC  
+10:01:23.252 DEBUG - GSqlQueryGeneratorSqlServer --->table =OF_LISTE query =set rowcount 3000  SELECT CODE_OF_SITE  , CODE_OF  , dbo.OPTIMA_TRADUCTION(DESI_OF,'fr') +'@KEYLANG_'+DESI_OF AS DESI_OF  , CODE_CLIE  , NUME_COMM  , CONVERT(NVARCHAR, DATE_LIVR, 103) AS DATE_LIVR  , CONVERT(NVARCHAR, DATE_LANC, 103) AS DATE_LANC  , CHAM_LIBR_1  , CHAM_LIBR_2  , CHAM_LIBR_3  , QUAN_LANC  , QUAN_STOC_AFFE  , NOMB_ARTI  , CODE_ETAT_AVAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 108) AS DATE_DEBU_REEL  , DELT_HEUR_UTC_DEBU_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 108) AS DATE_FIN_REEL  , DELT_HEUR_UTC_FIN_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 108) AS DATE_IMPO  , CODE_OF_SIMP  , CODE_ARTI  , CODE_SITE  , DELT_HEUR_UTC  , FLAG_SUPP FROM OF_LISTE  WHERE ( CODE_SITE = 'MAR')  AND ( CODE_OF_SITE LIKE  '%'  OR CODE_OF_SITE IS NULL  )  ORDER BY CODE_OF_SITE ASC  
+10:03:01.824 DEBUG - GSqlQueryGeneratorSqlServer --->table =OF_LISTE query =set rowcount 3000  SELECT CODE_OF_SITE  , CODE_OF  , dbo.OPTIMA_TRADUCTION(DESI_OF,'fr') +'@KEYLANG_'+DESI_OF AS DESI_OF  , CODE_CLIE  , NUME_COMM  , CONVERT(NVARCHAR, DATE_LIVR, 103) AS DATE_LIVR  , CONVERT(NVARCHAR, DATE_LANC, 103) AS DATE_LANC  , CHAM_LIBR_1  , CHAM_LIBR_2  , CHAM_LIBR_3  , QUAN_LANC  , QUAN_STOC_AFFE  , NOMB_ARTI  , CODE_ETAT_AVAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 108) AS DATE_DEBU_REEL  , DELT_HEUR_UTC_DEBU_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 108) AS DATE_FIN_REEL  , DELT_HEUR_UTC_FIN_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 108) AS DATE_IMPO  , CODE_OF_SIMP  , CODE_ARTI  , CODE_SITE  , DELT_HEUR_UTC  , FLAG_SUPP FROM OF_LISTE  WHERE ( CODE_SITE = 'MAR')  AND ( CODE_OF_SITE LIKE  '%'  OR CODE_OF_SITE IS NULL  )  ORDER BY CODE_OF_SITE ASC  
+10:56:35.202 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+10:56:35.203 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/xxx.cas?action=deconnexion&userID=administrateur) mais pas de user en session. 
+10:56:35.205 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+10:56:53.562  INFO - PropertiesDelegate Destruction du properties manager ! 
+10:57:04.875 DEBUG - TomcatListener contextInitialized - servletContext.realPath : C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web 
+10:57:04.891  INFO - PropertiesDelegate Ouverture du fichier de configuration à l'emplacement : C:\Osys\QuartisTools\Tomcat/conf/quartis-web.properties 
+10:57:04.922  INFO - TomcatListener -----> Supression des fichier temporaires 
+10:57:05.343  INFO - TomcatListener Ouverture du fichier indiquant la base de données : C:\Osys\QuartisTools\Tomcat/conf/datasources.xml... 
+10:57:05.405  INFO - DataSourceManager Création de la datasource : QuartisWeb-PU 
+11:00:15.615 DEBUG - AuthManagedBean autoconnect - Tentative de connexion SSO... 
+11:00:15.615 DEBUG - ConnexionManagedBean User renseigné par filtre SSO LDAP : null 
+11:00:15.615 DEBUG - ConnexionManagedBean ldapActive = false 
+11:00:15.615 DEBUG - AuthManagedBean autoconnect - Echec de la connexion par SSO. 
+11:00:21.167 DEBUG - AuthManagedBean autoconnect - Tentative de connexion SSO... 
+11:00:21.167 DEBUG - ConnexionManagedBean User renseigné par filtre SSO LDAP : null 
+11:00:21.167 DEBUG - ConnexionManagedBean ldapActive = false 
+11:00:21.167 DEBUG - AuthManagedBean autoconnect - Echec de la connexion par SSO. 
+11:00:23.386 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+11:00:24.993 DEBUG - TransfertFile copyFile (pls) - Copie de 18 fichiers vers 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\language.properties'... 
+11:00:24.993 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 0/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language.properties'. 
+11:00:24.993 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language.properties'... 
+11:00:25.010 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.010 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 1/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language.properties'. 
+11:00:25.010 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language.properties'... 
+11:00:25.010 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.011 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 2/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language.properties'. 
+11:00:25.011 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language.properties'... 
+11:00:25.011 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.011 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 3/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language.properties'. 
+11:00:25.011 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language.properties'... 
+11:00:25.011 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.011 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 4/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language.properties'. 
+11:00:25.011 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language.properties'... 
+11:00:25.021 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.021 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 5/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language.properties'. 
+11:00:25.022 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language.properties'... 
+11:00:25.031 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.031 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 6/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language.properties'. 
+11:00:25.031 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language.properties'... 
+11:00:25.032 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.032 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 7/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language.properties'. 
+11:00:25.032 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language.properties'... 
+11:00:25.041 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.042 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 8/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language.properties'. 
+11:00:25.042 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language.properties'... 
+11:00:25.047 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.047 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 9/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language.properties'. 
+11:00:25.047 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language.properties'... 
+11:00:25.063 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.063 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 10/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language.properties'. 
+11:00:25.063 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language.properties'... 
+11:00:25.066 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.066 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 11/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language.properties'. 
+11:00:25.067 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language.properties'... 
+11:00:25.067 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.067 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 12/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language.properties'. 
+11:00:25.067 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language.properties'... 
+11:00:25.067 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.067 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 13/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language.properties'. 
+11:00:25.067 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language.properties'... 
+11:00:25.068 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.068 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 14/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language.properties'. 
+11:00:25.068 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language.properties'... 
+11:00:25.068 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.068 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 15/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language.properties'. 
+11:00:25.068 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language.properties'... 
+11:00:25.069 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.069 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 16/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language.properties'. 
+11:00:25.069 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language.properties'... 
+11:00:25.069 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.069 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 17/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language.properties'. 
+11:00:25.069 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language.properties'... 
+11:00:25.069 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.069 DEBUG - TransfertFile copyFile (pls) - Fin de la copie. 
+11:00:25.467 DEBUG - TransfertFile copyFile (pls) - Copie de 18 fichiers vers 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\language_fr.properties'... 
+11:00:25.467 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 0/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language_fr.properties'. 
+11:00:25.468 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language_fr.properties'... 
+11:00:25.468 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.468 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 1/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language_fr.properties'. 
+11:00:25.468 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language_fr.properties'... 
+11:00:25.468 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.468 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 2/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language_fr.properties'. 
+11:00:25.468 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language_fr.properties'... 
+11:00:25.469 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.469 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 3/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language_fr.properties'. 
+11:00:25.469 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language_fr.properties'... 
+11:00:25.469 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.469 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 4/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language_fr.properties'. 
+11:00:25.469 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language_fr.properties'... 
+11:00:25.475 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.475 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 5/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language_fr.properties'. 
+11:00:25.475 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language_fr.properties'... 
+11:00:25.487 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.487 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 6/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language_fr.properties'. 
+11:00:25.487 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language_fr.properties'... 
+11:00:25.487 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.487 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 7/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language_fr.properties'. 
+11:00:25.487 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language_fr.properties'... 
+11:00:25.495 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.495 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 8/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language_fr.properties'. 
+11:00:25.495 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language_fr.properties'... 
+11:00:25.508 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.508 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 9/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language_fr.properties'. 
+11:00:25.508 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language_fr.properties'... 
+11:00:25.522 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.522 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 10/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language_fr.properties'. 
+11:00:25.522 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language_fr.properties'... 
+11:00:25.522 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.522 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 11/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language_fr.properties'. 
+11:00:25.522 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language_fr.properties'... 
+11:00:25.523 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.523 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 12/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language_fr.properties'. 
+11:00:25.523 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language_fr.properties'... 
+11:00:25.523 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.523 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 13/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language_fr.properties'. 
+11:00:25.523 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language_fr.properties'... 
+11:00:25.523 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.523 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 14/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language_fr.properties'. 
+11:00:25.523 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language_fr.properties'... 
+11:00:25.524 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.524 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 15/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language_fr.properties'. 
+11:00:25.524 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language_fr.properties'... 
+11:00:25.524 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.524 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 16/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language_fr.properties'. 
+11:00:25.524 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language_fr.properties'... 
+11:00:25.524 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.524 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 17/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language_fr.properties'. 
+11:00:25.524 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language_fr.properties'... 
+11:00:25.525 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:00:25.525 DEBUG - TransfertFile copyFile (pls) - Fin de la copie. 
+11:00:25.525 DEBUG - LanguageFileManager buildPropertiesGen - Création de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\language_fr.properties'... 
+11:00:25.553 DEBUG - LanguageFileManager buildPropertiesGen - Fin de la création. 
+11:00:33.573 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+11:00:41.028 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+11:00:49.606 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Production_OF_EnCours_1 
+11:00:49.618 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'... 
+11:00:49.618 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'... 
+11:00:49.620 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Production_OF_EnCours_1 
+11:00:49.620 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'... 
+11:00:49.620 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_1\_Production_OF_EnCours_1.xls'... 
+11:00:49.821 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:00:49.821 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:00:53.687 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:00:53.687 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:00:53.687 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:00:53.702 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:00:53.702 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:00:53.703 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:00:53.709 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:00:53.709 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:00:57.419 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:00:57.419 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:00:57.420 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:00:57.425 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:15:45.222 DEBUG - DataEtatManagedBean showEtat - identifiants de connexion : administrateur, (mdp chiffré encodé : 'XqD1Bm+3JXu9Wth+Xc4xHBNCyHZ7mRAoPQ1esVH8UchXGKPV3MulxXoGcw9iVEorGHOJab8/k52Dh4M63cLz2toQuM9pNlK3No/OkZ83EN+VYtd44BtXGOxY2MI/Sljv26u9UqFCOQ77KtkMO1R86eWiAqLgcGZiD/VoNepdjAM5dqDLCZK+IrB4+Gm76Cfl8WHddPIXe/n2BVZd5qnsWpPmo1l5L/tZWbePXcSoyxDmSogwIXwjMZeZpL0E1OM5FBkkO/A9P8ybMi5yKTLq2hxyzfKImK0fnqJo6xP9xd5EwWYRpGEBwpXAQ+jCjLenGBtl4Smzwy9GeQ9auJXd1Q=='), mdp déchiffré : '' rechiffré en '[]' 
+11:15:45.305 DEBUG - DataEtatManagedBean showEtat - administrateur connecté a Quartis Tools 
+11:15:52.124 DEBUG - DataEtatManagedBean showEtat - administrateur déconnecté de Quartis Tools 
+11:15:55.468 DEBUG - DataEtatManagedBean showEtat - identifiants de connexion : administrateur, (mdp chiffré encodé : 'XqD1Bm+3JXu9Wth+Xc4xHBNCyHZ7mRAoPQ1esVH8UchXGKPV3MulxXoGcw9iVEorGHOJab8/k52Dh4M63cLz2toQuM9pNlK3No/OkZ83EN+VYtd44BtXGOxY2MI/Sljv26u9UqFCOQ77KtkMO1R86eWiAqLgcGZiD/VoNepdjAM5dqDLCZK+IrB4+Gm76Cfl8WHddPIXe/n2BVZd5qnsWpPmo1l5L/tZWbePXcSoyxDmSogwIXwjMZeZpL0E1OM5FBkkO/A9P8ybMi5yKTLq2hxyzfKImK0fnqJo6xP9xd5EwWYRpGEBwpXAQ+jCjLenGBtl4Smzwy9GeQ9auJXd1Q=='), mdp déchiffré : '' rechiffré en '[]' 
+11:15:55.506 DEBUG - DataEtatManagedBean showEtat - administrateur connecté a Quartis Tools 
+11:16:23.309 DEBUG - DataEtatManagedBean showEtat - administrateur déconnecté de Quartis Tools 
+11:18:23.028 DEBUG - DataEtatManagedBean showEtat - identifiants de connexion : administrateur, (mdp chiffré encodé : 'XqD1Bm+3JXu9Wth+Xc4xHBNCyHZ7mRAoPQ1esVH8UchXGKPV3MulxXoGcw9iVEorGHOJab8/k52Dh4M63cLz2toQuM9pNlK3No/OkZ83EN+VYtd44BtXGOxY2MI/Sljv26u9UqFCOQ77KtkMO1R86eWiAqLgcGZiD/VoNepdjAM5dqDLCZK+IrB4+Gm76Cfl8WHddPIXe/n2BVZd5qnsWpPmo1l5L/tZWbePXcSoyxDmSogwIXwjMZeZpL0E1OM5FBkkO/A9P8ybMi5yKTLq2hxyzfKImK0fnqJo6xP9xd5EwWYRpGEBwpXAQ+jCjLenGBtl4Smzwy9GeQ9auJXd1Q=='), mdp déchiffré : '' rechiffré en '[]' 
+11:18:23.067 DEBUG - DataEtatManagedBean showEtat - administrateur connecté a Quartis Tools 
+11:18:26.219 DEBUG - DataEtatManagedBean showEtat - administrateur déconnecté de Quartis Tools 
+11:18:31.063 DEBUG - DataEtatManagedBean showEtat - identifiants de connexion : administrateur, (mdp chiffré encodé : 'XqD1Bm+3JXu9Wth+Xc4xHBNCyHZ7mRAoPQ1esVH8UchXGKPV3MulxXoGcw9iVEorGHOJab8/k52Dh4M63cLz2toQuM9pNlK3No/OkZ83EN+VYtd44BtXGOxY2MI/Sljv26u9UqFCOQ77KtkMO1R86eWiAqLgcGZiD/VoNepdjAM5dqDLCZK+IrB4+Gm76Cfl8WHddPIXe/n2BVZd5qnsWpPmo1l5L/tZWbePXcSoyxDmSogwIXwjMZeZpL0E1OM5FBkkO/A9P8ybMi5yKTLq2hxyzfKImK0fnqJo6xP9xd5EwWYRpGEBwpXAQ+jCjLenGBtl4Smzwy9GeQ9auJXd1Q=='), mdp déchiffré : '' rechiffré en '[]' 
+11:18:31.105 DEBUG - DataEtatManagedBean showEtat - administrateur connecté a Quartis Tools 
+11:18:58.257 DEBUG - DataEtatManagedBean showEtat - administrateur déconnecté de Quartis Tools 
+12:10:20.972 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+12:10:20.973 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+12:10:20.975 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+12:10:21.394 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+12:10:21.394 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+12:10:21.396 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+13:48:32.089 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+13:48:32.089 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/xxx.cas?moduleID=OPTIMA_Standard&menu=true&locale=fr_FR&type=formulaire&userID=administrateur&_i18n=fr&_deltaUTC=0&_codeSite=MAR&pageID=OPTIMA_Terminal_Console_Resolution&action=url&_matr=administrateur&CodeSite=MAR&i18n=fr&_login=administrateur&webContainerWidth=785&webContainerHeight=531) mais pas de user en session. 
+13:48:32.092 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+13:48:32.166 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+13:48:32.167 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+13:48:32.168 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+13:48:32.169 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/xxx.cas?action=deconnexion&userID=administrateur) mais pas de user en session. 
+13:48:32.170 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+13:48:32.170 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+13:48:32.179 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+13:48:34.701 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+13:48:34.706 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+13:48:36.286 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+13:48:36.289 ERROR - AjaxAction  quartisspv.action.ActionException: Erreur : transformation XML du superviseur impossible.
+	at quartisspv.action.level1.Level1RefreshAction.processPerformed(Level1RefreshAction.java:74)
+	at quartisspv.action.AjaxAction.actionPerformed(AjaxAction.java:33)
+	at quartisspv.action.AbstractAction.run(AbstractAction.java:94)
+	at quartisspv.servlet.ActionServlet.processRequest(ActionServlet.java:76)
+	at quartisspv.servlet.ActionServlet.doPost(ActionServlet.java:117)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:637)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:151)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: javax.xml.transform.TransformerException: org.xml.sax.SAXException
+ClientAbortException:  java.io.IOException: Une connexion établie a été abandonnée par un logiciel de votre ordinateur hôte
+	at org.apache.xalan.transformer.TransformerIdentityImpl.transform(TransformerIdentityImpl.java:400)
+	at quartisspv.action.level1.Level1RefreshAction.processPerformed(Level1RefreshAction.java:69)
+	... 33 more
+Caused by: org.xml.sax.SAXException
+ClientAbortException:  java.io.IOException: Une connexion établie a été abandonnée par un logiciel de votre ordinateur hôte
+	at org.apache.xml.serializer.ToStream.endElement(ToStream.java:2253)
+	at org.apache.xalan.transformer.TransformerIdentityImpl.endElement(TransformerIdentityImpl.java:1101)
+	at org.apache.xml.serializer.TreeWalker.endNode(TreeWalker.java:460)
+	at org.apache.xml.serializer.TreeWalker.traverse(TreeWalker.java:151)
+	at org.apache.xalan.transformer.TransformerIdentityImpl.transform(TransformerIdentityImpl.java:389)
+	... 34 more
+Caused by: ClientAbortException:  java.io.IOException: Une connexion établie a été abandonnée par un logiciel de votre ordinateur hôte
+	at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:358)
+	at org.apache.tomcat.util.buf.ByteChunk.append(ByteChunk.java:323)
+	at org.apache.catalina.connector.OutputBuffer.writeBytes(OutputBuffer.java:381)
+	at org.apache.catalina.connector.OutputBuffer.write(OutputBuffer.java:370)
+	at org.apache.catalina.connector.CoyoteOutputStream.write(CoyoteOutputStream.java:89)
+	at net.bull.javamelody.FilterServletOutputStream.write(FilterServletOutputStream.java:88)
+	at net.bull.javamelody.CounterResponseStream.write(CounterResponseStream.java:82)
+	at sun.nio.cs.StreamEncoder.writeBytes(Unknown Source)
+	at sun.nio.cs.StreamEncoder.implWrite(Unknown Source)
+	at sun.nio.cs.StreamEncoder.write(Unknown Source)
+	at sun.nio.cs.StreamEncoder.write(Unknown Source)
+	at java.io.OutputStreamWriter.write(Unknown Source)
+	at org.apache.xml.serializer.ToStream.writeAttrString(ToStream.java:2155)
+	at org.apache.xml.serializer.ToStream.processAttributes(ToStream.java:2079)
+	at org.apache.xml.serializer.ToStream.endElement(ToStream.java:2224)
+	... 38 more
+Caused by: java.io.IOException: Une connexion établie a été abandonnée par un logiciel de votre ordinateur hôte
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(Unknown Source)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.write(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.write(Unknown Source)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:116)
+	at org.apache.tomcat.util.net.NioBlockingSelector.write(NioBlockingSelector.java:93)
+	at org.apache.tomcat.util.net.NioSelectorPool.write(NioSelectorPool.java:156)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.writeToSocket(InternalNioOutputBuffer.java:440)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.flushBuffer(InternalNioOutputBuffer.java:784)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.addToBB(InternalNioOutputBuffer.java:624)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.access$000(InternalNioOutputBuffer.java:46)
+	at org.apache.coyote.http11.InternalNioOutputBuffer$SocketOutputBuffer.doWrite(InternalNioOutputBuffer.java:809)
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.doWrite(ChunkedOutputFilter.java:126)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.doWrite(InternalNioOutputBuffer.java:590)
+	at org.apache.coyote.Response.doWrite(Response.java:560)
+	at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:353)
+	... 52 more
+
+13:48:36.291 ERROR - FiltreSession Erreur relevée par le filtre général : null ClientAbortException:  java.io.IOException: Une connexion établie a été abandonnée par un logiciel de votre ordinateur hôte
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:319)
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:288)
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:98)
+	at net.bull.javamelody.FilterServletOutputStream.flush(FilterServletOutputStream.java:69)
+	at sun.nio.cs.StreamEncoder.implFlush(Unknown Source)
+	at sun.nio.cs.StreamEncoder.flush(Unknown Source)
+	at java.io.OutputStreamWriter.flush(Unknown Source)
+	at quartisspv.action.AjaxAction.actionPerformed(AjaxAction.java:41)
+	at quartisspv.action.AbstractAction.run(AbstractAction.java:94)
+	at quartisspv.servlet.ActionServlet.processRequest(ActionServlet.java:76)
+	at quartisspv.servlet.ActionServlet.doPost(ActionServlet.java:117)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:637)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:151)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.io.IOException: Une connexion établie a été abandonnée par un logiciel de votre ordinateur hôte
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(Unknown Source)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.write(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.write(Unknown Source)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:116)
+	at org.apache.tomcat.util.net.NioBlockingSelector.write(NioBlockingSelector.java:93)
+	at org.apache.tomcat.util.net.NioSelectorPool.write(NioSelectorPool.java:156)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.writeToSocket(InternalNioOutputBuffer.java:440)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.flushBuffer(InternalNioOutputBuffer.java:784)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.flush(InternalNioOutputBuffer.java:300)
+	at org.apache.coyote.http11.Http11NioProcessor.action(Http11NioProcessor.java:1063)
+	at org.apache.coyote.Response.action(Response.java:183)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:314)
+	... 39 more
+
+13:48:36.430 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+13:48:36.430 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+13:48:36.430 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+13:48:36.437 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+13:48:36.452 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+13:48:36.452 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+13:48:36.452 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+13:48:36.458 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+13:48:38.947 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+13:48:38.947 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+13:48:38.947 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+13:48:38.953 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+13:48:38.956 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+13:48:38.957 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+13:48:38.957 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+13:48:38.962 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+14:03:22.522 DEBUG - DataEtatManagedBean showEtat - identifiants de connexion : administrateur, (mdp chiffré encodé : 'cMCdhaS65AYXnA5ZRbzJXsc/n8UFtngEFKUSwXK+Uz/OqDRdMRQP7ZaWYgguji5wWDNnY9qP/zrM7RViI6J5YYPpGaPop/KR280IMft54tj348jmjdeqMKqzzYMKAAfBdYPfyrOO0O4+c5Pb+Ub5vVgwLY1PgfMkBFyU0F9mYFTBovH8+eFmBQ5nOLV5vHNqZMIBjv5JRX+kZsCeba8NoWRIcmNE2fQaJ7dlc4RPTfzwfqeGD2cqWdvucnzJl3qW1VFq/CNVwTetEj5wD0F427y/xNxTkgxmF2EusBwmawol7SvR4Y4VdLJEm87kHsb649lKMFozcp0e2eL9lK68Fg=='), mdp déchiffré : '' rechiffré en '[]' 
+14:03:22.559 DEBUG - DataEtatManagedBean showEtat - administrateur connecté a Quartis Tools 
+14:03:26.161 DEBUG - DataEtatManagedBean showEtat - administrateur déconnecté de Quartis Tools 
+14:03:45.137 DEBUG - DataEtatManagedBean showEtat - identifiants de connexion : administrateur, (mdp chiffré encodé : 'cMCdhaS65AYXnA5ZRbzJXsc/n8UFtngEFKUSwXK+Uz/OqDRdMRQP7ZaWYgguji5wWDNnY9qP/zrM7RViI6J5YYPpGaPop/KR280IMft54tj348jmjdeqMKqzzYMKAAfBdYPfyrOO0O4+c5Pb+Ub5vVgwLY1PgfMkBFyU0F9mYFTBovH8+eFmBQ5nOLV5vHNqZMIBjv5JRX+kZsCeba8NoWRIcmNE2fQaJ7dlc4RPTfzwfqeGD2cqWdvucnzJl3qW1VFq/CNVwTetEj5wD0F427y/xNxTkgxmF2EusBwmawol7SvR4Y4VdLJEm87kHsb649lKMFozcp0e2eL9lK68Fg=='), mdp déchiffré : '' rechiffré en '[]' 
+14:03:45.174 DEBUG - DataEtatManagedBean showEtat - administrateur connecté a Quartis Tools 
+14:03:58.275 DEBUG - DataEtatManagedBean showEtat - administrateur déconnecté de Quartis Tools 
+14:04:12.153 DEBUG - DataEtatManagedBean showEtat - identifiants de connexion : administrateur, (mdp chiffré encodé : 'cMCdhaS65AYXnA5ZRbzJXsc/n8UFtngEFKUSwXK+Uz/OqDRdMRQP7ZaWYgguji5wWDNnY9qP/zrM7RViI6J5YYPpGaPop/KR280IMft54tj348jmjdeqMKqzzYMKAAfBdYPfyrOO0O4+c5Pb+Ub5vVgwLY1PgfMkBFyU0F9mYFTBovH8+eFmBQ5nOLV5vHNqZMIBjv5JRX+kZsCeba8NoWRIcmNE2fQaJ7dlc4RPTfzwfqeGD2cqWdvucnzJl3qW1VFq/CNVwTetEj5wD0F427y/xNxTkgxmF2EusBwmawol7SvR4Y4VdLJEm87kHsb649lKMFozcp0e2eL9lK68Fg=='), mdp déchiffré : '' rechiffré en '[]' 
+14:04:12.190 DEBUG - DataEtatManagedBean showEtat - administrateur connecté a Quartis Tools 
+14:04:30.342 DEBUG - DataEtatManagedBean showEtat - administrateur déconnecté de Quartis Tools 
+14:15:59.134 ERROR - MultiLanguageManager  java.io.IOException: Server returned HTTP response code: 500 for URL: http://localhost:8383/Quartis-Dictionary/RequestTranslation
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at quartisweb.i18n.MultiLanguageManager.loadContextDataLanguage(MultiLanguageManager.java:539)
+	at quartisweb.i18n.MultiLanguageManager.getContextValueLanguage(MultiLanguageManager.java:192)
+	at quartisweb.generic.sql.GSql.getGenericSitesSelectItemListRequete(GSql.java:596)
+	at quartisweb.generic.sql.GSql.getSitesSelectItemList(GSql.java:576)
+	at quartisweb.jsf.managedBean.UserManagedBean.<init>(UserManagedBean.java:144)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at com.sun.faces.config.ManagedBeanFactoryImpl.newInstance(ManagedBeanFactoryImpl.java:277)
+	at com.sun.faces.application.ApplicationAssociate.createAndMaybeStoreManagedBeans(ApplicationAssociate.java:546)
+	at com.sun.faces.el.ManagedBeanELResolver.getValue(ManagedBeanELResolver.java:82)
+	at javax.el.CompositeELResolver.getValue(CompositeELResolver.java:54)
+	at com.sun.faces.el.FacesCompositeELResolver.getValue(FacesCompositeELResolver.java:64)
+	at org.apache.el.parser.AstIdentifier.getValue(AstIdentifier.java:68)
+	at org.apache.el.parser.AstValue.getValue(AstValue.java:112)
+	at org.apache.el.ValueExpressionImpl.getValue(ValueExpressionImpl.java:186)
+	at org.apache.jasper.el.JspValueExpression.getValue(JspValueExpression.java:101)
+	at com.sun.faces.taglib.jsf_core.ViewTag.setProperties(ViewTag.java:332)
+	at javax.faces.webapp.UIComponentClassicTagBase.findComponent(UIComponentClassicTagBase.java:604)
+	at javax.faces.webapp.UIComponentClassicTagBase.doStartTag(UIComponentClassicTagBase.java:1126)
+	at com.sun.faces.taglib.jsf_core.ViewTag.doStartTag(ViewTag.java:183)
+	at org.apache.jsp.admin_005fusers_jsp._jspx_meth_f_005fview_005f0(admin_005fusers_jsp.java:239)
+	at org.apache.jsp.admin_005fusers_jsp._jspService(admin_005fusers_jsp.java:213)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:377)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:646)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:436)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:374)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:302)
+	at sun.reflect.GeneratedMethodAccessor304.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.bull.javamelody.JspWrapper.invoke(JspWrapper.java:150)
+	at net.bull.javamelody.JdbcWrapper$DelegatingInvocationHandler.invoke(JdbcWrapper.java:286)
+	at com.sun.proxy.$Proxy119.forward(Unknown Source)
+	at com.sun.faces.context.ExternalContextImpl.dispatch(ExternalContextImpl.java:408)
+	at com.sun.faces.application.ViewHandlerImpl.executePageToBuildView(ViewHandlerImpl.java:442)
+	at com.sun.faces.application.ViewHandlerImpl.renderView(ViewHandlerImpl.java:115)
+	at com.sun.faces.lifecycle.RenderResponsePhase.execute(RenderResponsePhase.java:106)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.render(LifecycleImpl.java:144)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:245)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:646)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:436)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:374)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:302)
+	at sun.reflect.GeneratedMethodAccessor304.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.bull.javamelody.JspWrapper.invoke(JspWrapper.java:150)
+	at net.bull.javamelody.JdbcWrapper$DelegatingInvocationHandler.invoke(JdbcWrapper.java:286)
+	at com.sun.proxy.$Proxy119.forward(Unknown Source)
+	at quartisweb.servlet.dispatcher.URLDispatcher.dispatch(URLDispatcher.java:127)
+	at quartisweb.servlet.ClientAccessServlet.doPost(ClientAccessServlet.java:194)
+	at quartisweb.servlet.ClientAccessServlet.doGet(ClientAccessServlet.java:63)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:233)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+14:15:59.137 ERROR - GSql  java.sql.SQLException: I/O Error: Connection reset by peer: socket write error
+	at net.sourceforge.jtds.jdbc.TdsCore.executeSQL(TdsCore.java:1052)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeSQLQuery(JtdsStatement.java:465)
+	at net.sourceforge.jtds.jdbc.JtdsPreparedStatement.executeQuery(JtdsPreparedStatement.java:777)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:93)
+	at sun.reflect.GeneratedMethodAccessor88.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.bull.javamelody.JdbcWrapper.doExecute(JdbcWrapper.java:404)
+	at net.bull.javamelody.JdbcWrapper$StatementInvocationHandler.invoke(JdbcWrapper.java:129)
+	at net.bull.javamelody.JdbcWrapper$DelegatingInvocationHandler.invoke(JdbcWrapper.java:286)
+	at com.sun.proxy.$Proxy121.executeQuery(Unknown Source)
+	at quartisweb.generic.sql.GSql.getGenericSitesSelectItemListRequete(GSql.java:616)
+	at quartisweb.generic.sql.GSql.getSitesSelectItemList(GSql.java:576)
+	at quartisweb.jsf.managedBean.UserManagedBean.<init>(UserManagedBean.java:144)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at com.sun.faces.config.ManagedBeanFactoryImpl.newInstance(ManagedBeanFactoryImpl.java:277)
+	at com.sun.faces.application.ApplicationAssociate.createAndMaybeStoreManagedBeans(ApplicationAssociate.java:546)
+	at com.sun.faces.el.ManagedBeanELResolver.getValue(ManagedBeanELResolver.java:82)
+	at javax.el.CompositeELResolver.getValue(CompositeELResolver.java:54)
+	at com.sun.faces.el.FacesCompositeELResolver.getValue(FacesCompositeELResolver.java:64)
+	at org.apache.el.parser.AstIdentifier.getValue(AstIdentifier.java:68)
+	at org.apache.el.parser.AstValue.getValue(AstValue.java:112)
+	at org.apache.el.ValueExpressionImpl.getValue(ValueExpressionImpl.java:186)
+	at org.apache.jasper.el.JspValueExpression.getValue(JspValueExpression.java:101)
+	at com.sun.faces.taglib.jsf_core.ViewTag.setProperties(ViewTag.java:332)
+	at javax.faces.webapp.UIComponentClassicTagBase.findComponent(UIComponentClassicTagBase.java:604)
+	at javax.faces.webapp.UIComponentClassicTagBase.doStartTag(UIComponentClassicTagBase.java:1126)
+	at com.sun.faces.taglib.jsf_core.ViewTag.doStartTag(ViewTag.java:183)
+	at org.apache.jsp.admin_005fusers_jsp._jspx_meth_f_005fview_005f0(admin_005fusers_jsp.java:239)
+	at org.apache.jsp.admin_005fusers_jsp._jspService(admin_005fusers_jsp.java:213)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:377)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:646)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:436)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:374)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:302)
+	at sun.reflect.GeneratedMethodAccessor304.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.bull.javamelody.JspWrapper.invoke(JspWrapper.java:150)
+	at net.bull.javamelody.JdbcWrapper$DelegatingInvocationHandler.invoke(JdbcWrapper.java:286)
+	at com.sun.proxy.$Proxy119.forward(Unknown Source)
+	at com.sun.faces.context.ExternalContextImpl.dispatch(ExternalContextImpl.java:408)
+	at com.sun.faces.application.ViewHandlerImpl.executePageToBuildView(ViewHandlerImpl.java:442)
+	at com.sun.faces.application.ViewHandlerImpl.renderView(ViewHandlerImpl.java:115)
+	at com.sun.faces.lifecycle.RenderResponsePhase.execute(RenderResponsePhase.java:106)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.render(LifecycleImpl.java:144)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:245)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:646)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:436)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:374)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:302)
+	at sun.reflect.GeneratedMethodAccessor304.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.bull.javamelody.JspWrapper.invoke(JspWrapper.java:150)
+	at net.bull.javamelody.JdbcWrapper$DelegatingInvocationHandler.invoke(JdbcWrapper.java:286)
+	at com.sun.proxy.$Proxy119.forward(Unknown Source)
+	at quartisweb.servlet.dispatcher.URLDispatcher.dispatch(URLDispatcher.java:127)
+	at quartisweb.servlet.ClientAccessServlet.doPost(ClientAccessServlet.java:194)
+	at quartisweb.servlet.ClientAccessServlet.doGet(ClientAccessServlet.java:63)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:233)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(Unknown Source)
+	at java.net.SocketOutputStream.write(Unknown Source)
+	at java.io.DataOutputStream.write(Unknown Source)
+	at net.sourceforge.jtds.jdbc.SharedSocket.sendNetPacket(SharedSocket.java:671)
+	at net.sourceforge.jtds.jdbc.RequestStream.putPacket(RequestStream.java:560)
+	at net.sourceforge.jtds.jdbc.RequestStream.flush(RequestStream.java:508)
+	at net.sourceforge.jtds.jdbc.TdsCore.executeSQL(TdsCore.java:1039)
+	... 108 more
+
+14:15:59.138 ERROR - AccesBD  java.sql.SQLException: Already closed.
+	at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:84)
+	at org.apache.commons.dbcp.PoolingDataSource$PoolGuardConnectionWrapper.close(PoolingDataSource.java:181)
+	at sun.reflect.GeneratedMethodAccessor116.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.bull.javamelody.JdbcWrapper$ConnectionInvocationHandler.invoke(JdbcWrapper.java:189)
+	at net.bull.javamelody.JdbcWrapper$DelegatingInvocationHandler.invoke(JdbcWrapper.java:286)
+	at com.sun.proxy.$Proxy120.close(Unknown Source)
+	at quartisweb.bd.AccesBD.closeConnection(AccesBD.java:100)
+	at quartisweb.generic.sql.GSql.getGenericSitesSelectItemListRequete(GSql.java:640)
+	at quartisweb.generic.sql.GSql.getSitesSelectItemList(GSql.java:576)
+	at quartisweb.jsf.managedBean.UserManagedBean.<init>(UserManagedBean.java:144)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at com.sun.faces.config.ManagedBeanFactoryImpl.newInstance(ManagedBeanFactoryImpl.java:277)
+	at com.sun.faces.application.ApplicationAssociate.createAndMaybeStoreManagedBeans(ApplicationAssociate.java:546)
+	at com.sun.faces.el.ManagedBeanELResolver.getValue(ManagedBeanELResolver.java:82)
+	at javax.el.CompositeELResolver.getValue(CompositeELResolver.java:54)
+	at com.sun.faces.el.FacesCompositeELResolver.getValue(FacesCompositeELResolver.java:64)
+	at org.apache.el.parser.AstIdentifier.getValue(AstIdentifier.java:68)
+	at org.apache.el.parser.AstValue.getValue(AstValue.java:112)
+	at org.apache.el.ValueExpressionImpl.getValue(ValueExpressionImpl.java:186)
+	at org.apache.jasper.el.JspValueExpression.getValue(JspValueExpression.java:101)
+	at com.sun.faces.taglib.jsf_core.ViewTag.setProperties(ViewTag.java:332)
+	at javax.faces.webapp.UIComponentClassicTagBase.findComponent(UIComponentClassicTagBase.java:604)
+	at javax.faces.webapp.UIComponentClassicTagBase.doStartTag(UIComponentClassicTagBase.java:1126)
+	at com.sun.faces.taglib.jsf_core.ViewTag.doStartTag(ViewTag.java:183)
+	at org.apache.jsp.admin_005fusers_jsp._jspx_meth_f_005fview_005f0(admin_005fusers_jsp.java:239)
+	at org.apache.jsp.admin_005fusers_jsp._jspService(admin_005fusers_jsp.java:213)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:377)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:646)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:436)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:374)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:302)
+	at sun.reflect.GeneratedMethodAccessor304.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.bull.javamelody.JspWrapper.invoke(JspWrapper.java:150)
+	at net.bull.javamelody.JdbcWrapper$DelegatingInvocationHandler.invoke(JdbcWrapper.java:286)
+	at com.sun.proxy.$Proxy119.forward(Unknown Source)
+	at com.sun.faces.context.ExternalContextImpl.dispatch(ExternalContextImpl.java:408)
+	at com.sun.faces.application.ViewHandlerImpl.executePageToBuildView(ViewHandlerImpl.java:442)
+	at com.sun.faces.application.ViewHandlerImpl.renderView(ViewHandlerImpl.java:115)
+	at com.sun.faces.lifecycle.RenderResponsePhase.execute(RenderResponsePhase.java:106)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.render(LifecycleImpl.java:144)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:245)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:646)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:436)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:374)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:302)
+	at sun.reflect.GeneratedMethodAccessor304.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.bull.javamelody.JspWrapper.invoke(JspWrapper.java:150)
+	at net.bull.javamelody.JdbcWrapper$DelegatingInvocationHandler.invoke(JdbcWrapper.java:286)
+	at com.sun.proxy.$Proxy119.forward(Unknown Source)
+	at quartisweb.servlet.dispatcher.URLDispatcher.dispatch(URLDispatcher.java:127)
+	at quartisweb.servlet.ClientAccessServlet.doPost(ClientAccessServlet.java:194)
+	at quartisweb.servlet.ClientAccessServlet.doGet(ClientAccessServlet.java:63)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:233)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+14:16:18.086 DEBUG - GSqlQueryGeneratorSqlServer --->table =SCENARIO query =set rowcount 3000  SELECT CODE_SCEN  , dbo.OPTIMA_TRADUCTION(DESI_SCEN,'fr') +'@KEYLANG_'+DESI_SCEN AS DESI_SCEN  , dbo.OPTIMA_TRADUCTION(DESC_SCEN,'fr') +'@KEYLANG_'+DESC_SCEN AS DESC_SCEN  , NOM_SCEN  , FLAG_HABI_ACTI  , CODE_DECL  , dbo.OPTIMA_TRADUCTION(DESI_SCEN_COUR,'fr') +'@KEYLANG_'+DESI_SCEN_COUR AS DESI_SCEN_COUR  , COUL_SCEN  , LOGO_SCEN  , FLAG_SUPP FROM SCENARIO  ORDER BY CODE_SCEN ASC  
+14:16:18.087 ERROR - GSql  java.sql.SQLException: I/O Error: Connection reset by peer: socket write error
+	at net.sourceforge.jtds.jdbc.TdsCore.executeSQL(TdsCore.java:1052)
+	at net.sourceforge.jtds.jdbc.TdsCore.microsoftPrepare(TdsCore.java:1178)
+	at net.sourceforge.jtds.jdbc.ConnectionJDBC2.prepareSQL(ConnectionJDBC2.java:657)
+	at net.sourceforge.jtds.jdbc.JtdsPreparedStatement.executeQuery(JtdsPreparedStatement.java:776)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:93)
+	at sun.reflect.GeneratedMethodAccessor88.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.bull.javamelody.JdbcWrapper.doExecute(JdbcWrapper.java:404)
+	at net.bull.javamelody.JdbcWrapper$StatementInvocationHandler.invoke(JdbcWrapper.java:129)
+	at net.bull.javamelody.JdbcWrapper$DelegatingInvocationHandler.invoke(JdbcWrapper.java:286)
+	at com.sun.proxy.$Proxy121.executeQuery(Unknown Source)
+	at quartisweb.generic.sql.GSql.getGenericRecordList(GSql.java:109)
+	at quartisweb.generic.GenericManager.getGenericRecordList(GenericManager.java:79)
+	at quartisweb.generic.GenericProfilManager.getGenericRecordList(GenericProfilManager.java:37)
+	at quartisweb.jsf.managedBean.DataGridManagedBean.majListe(DataGridManagedBean.java:38)
+	at quartisweb.jsf.managedBean.FormulairesManagedBean.<init>(FormulairesManagedBean.java:347)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at com.sun.faces.config.ManagedBeanFactoryImpl.newInstance(ManagedBeanFactoryImpl.java:277)
+	at com.sun.faces.application.ApplicationAssociate.createAndMaybeStoreManagedBeans(ApplicationAssociate.java:546)
+	at com.sun.faces.el.ManagedBeanELResolver.getValue(ManagedBeanELResolver.java:82)
+	at javax.el.CompositeELResolver.getValue(CompositeELResolver.java:54)
+	at com.sun.faces.el.FacesCompositeELResolver.getValue(FacesCompositeELResolver.java:64)
+	at org.apache.el.parser.AstIdentifier.getValue(AstIdentifier.java:68)
+	at org.apache.el.parser.AstValue.getValue(AstValue.java:112)
+	at org.apache.el.ValueExpressionImpl.getValue(ValueExpressionImpl.java:186)
+	at org.apache.jasper.el.JspValueExpression.getValue(JspValueExpression.java:101)
+	at com.sun.faces.taglib.jsf_core.ViewTag.setProperties(ViewTag.java:332)
+	at javax.faces.webapp.UIComponentClassicTagBase.findComponent(UIComponentClassicTagBase.java:604)
+	at javax.faces.webapp.UIComponentClassicTagBase.doStartTag(UIComponentClassicTagBase.java:1126)
+	at com.sun.faces.taglib.jsf_core.ViewTag.doStartTag(ViewTag.java:183)
+	at org.apache.jsp.formulaire_jsp._jspx_meth_f_005fview_005f0(formulaire_jsp.java:470)
+	at org.apache.jsp.formulaire_jsp._jspService(formulaire_jsp.java:444)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:377)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:646)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:436)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:374)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:302)
+	at sun.reflect.GeneratedMethodAccessor304.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.bull.javamelody.JspWrapper.invoke(JspWrapper.java:150)
+	at net.bull.javamelody.JdbcWrapper$DelegatingInvocationHandler.invoke(JdbcWrapper.java:286)
+	at com.sun.proxy.$Proxy119.forward(Unknown Source)
+	at com.sun.faces.context.ExternalContextImpl.dispatch(ExternalContextImpl.java:408)
+	at com.sun.faces.application.ViewHandlerImpl.executePageToBuildView(ViewHandlerImpl.java:442)
+	at com.sun.faces.application.ViewHandlerImpl.renderView(ViewHandlerImpl.java:115)
+	at com.sun.faces.lifecycle.RenderResponsePhase.execute(RenderResponsePhase.java:106)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.render(LifecycleImpl.java:144)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:245)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:646)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:436)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:374)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:302)
+	at sun.reflect.GeneratedMethodAccessor304.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.bull.javamelody.JspWrapper.invoke(JspWrapper.java:150)
+	at net.bull.javamelody.JdbcWrapper$DelegatingInvocationHandler.invoke(JdbcWrapper.java:286)
+	at com.sun.proxy.$Proxy119.forward(Unknown Source)
+	at quartisweb.servlet.dispatcher.URLDispatcher.dispatch(URLDispatcher.java:127)
+	at quartisweb.servlet.ClientAccessServlet.doPost(ClientAccessServlet.java:194)
+	at quartisweb.servlet.ClientAccessServlet.doGet(ClientAccessServlet.java:63)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:233)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(Unknown Source)
+	at java.net.SocketOutputStream.write(Unknown Source)
+	at java.io.DataOutputStream.write(Unknown Source)
+	at net.sourceforge.jtds.jdbc.SharedSocket.sendNetPacket(SharedSocket.java:671)
+	at net.sourceforge.jtds.jdbc.RequestStream.putPacket(RequestStream.java:560)
+	at net.sourceforge.jtds.jdbc.RequestStream.flush(RequestStream.java:508)
+	at net.sourceforge.jtds.jdbc.TdsCore.executeSQL(TdsCore.java:1039)
+	... 111 more
+
+14:16:18.089 ERROR - AccesBD  java.sql.SQLException: Already closed.
+	at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:84)
+	at org.apache.commons.dbcp.PoolingDataSource$PoolGuardConnectionWrapper.close(PoolingDataSource.java:181)
+	at sun.reflect.GeneratedMethodAccessor116.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.bull.javamelody.JdbcWrapper$ConnectionInvocationHandler.invoke(JdbcWrapper.java:189)
+	at net.bull.javamelody.JdbcWrapper$DelegatingInvocationHandler.invoke(JdbcWrapper.java:286)
+	at com.sun.proxy.$Proxy120.close(Unknown Source)
+	at quartisweb.bd.AccesBD.closeConnection(AccesBD.java:100)
+	at quartisweb.generic.sql.GSql.getGenericRecordList(GSql.java:212)
+	at quartisweb.generic.GenericManager.getGenericRecordList(GenericManager.java:79)
+	at quartisweb.generic.GenericProfilManager.getGenericRecordList(GenericProfilManager.java:37)
+	at quartisweb.jsf.managedBean.DataGridManagedBean.majListe(DataGridManagedBean.java:38)
+	at quartisweb.jsf.managedBean.FormulairesManagedBean.<init>(FormulairesManagedBean.java:347)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at com.sun.faces.config.ManagedBeanFactoryImpl.newInstance(ManagedBeanFactoryImpl.java:277)
+	at com.sun.faces.application.ApplicationAssociate.createAndMaybeStoreManagedBeans(ApplicationAssociate.java:546)
+	at com.sun.faces.el.ManagedBeanELResolver.getValue(ManagedBeanELResolver.java:82)
+	at javax.el.CompositeELResolver.getValue(CompositeELResolver.java:54)
+	at com.sun.faces.el.FacesCompositeELResolver.getValue(FacesCompositeELResolver.java:64)
+	at org.apache.el.parser.AstIdentifier.getValue(AstIdentifier.java:68)
+	at org.apache.el.parser.AstValue.getValue(AstValue.java:112)
+	at org.apache.el.ValueExpressionImpl.getValue(ValueExpressionImpl.java:186)
+	at org.apache.jasper.el.JspValueExpression.getValue(JspValueExpression.java:101)
+	at com.sun.faces.taglib.jsf_core.ViewTag.setProperties(ViewTag.java:332)
+	at javax.faces.webapp.UIComponentClassicTagBase.findComponent(UIComponentClassicTagBase.java:604)
+	at javax.faces.webapp.UIComponentClassicTagBase.doStartTag(UIComponentClassicTagBase.java:1126)
+	at com.sun.faces.taglib.jsf_core.ViewTag.doStartTag(ViewTag.java:183)
+	at org.apache.jsp.formulaire_jsp._jspx_meth_f_005fview_005f0(formulaire_jsp.java:470)
+	at org.apache.jsp.formulaire_jsp._jspService(formulaire_jsp.java:444)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:377)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:646)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:436)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:374)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:302)
+	at sun.reflect.GeneratedMethodAccessor304.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.bull.javamelody.JspWrapper.invoke(JspWrapper.java:150)
+	at net.bull.javamelody.JdbcWrapper$DelegatingInvocationHandler.invoke(JdbcWrapper.java:286)
+	at com.sun.proxy.$Proxy119.forward(Unknown Source)
+	at com.sun.faces.context.ExternalContextImpl.dispatch(ExternalContextImpl.java:408)
+	at com.sun.faces.application.ViewHandlerImpl.executePageToBuildView(ViewHandlerImpl.java:442)
+	at com.sun.faces.application.ViewHandlerImpl.renderView(ViewHandlerImpl.java:115)
+	at com.sun.faces.lifecycle.RenderResponsePhase.execute(RenderResponsePhase.java:106)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.render(LifecycleImpl.java:144)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:245)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:646)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:436)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:374)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:302)
+	at sun.reflect.GeneratedMethodAccessor304.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.bull.javamelody.JspWrapper.invoke(JspWrapper.java:150)
+	at net.bull.javamelody.JdbcWrapper$DelegatingInvocationHandler.invoke(JdbcWrapper.java:286)
+	at com.sun.proxy.$Proxy119.forward(Unknown Source)
+	at quartisweb.servlet.dispatcher.URLDispatcher.dispatch(URLDispatcher.java:127)
+	at quartisweb.servlet.ClientAccessServlet.doPost(ClientAccessServlet.java:194)
+	at quartisweb.servlet.ClientAccessServlet.doGet(ClientAccessServlet.java:63)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:233)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+14:16:21.308 DEBUG - GSqlQueryGeneratorSqlServer --->table =SCENARIO query =set rowcount 3000  SELECT CODE_SCEN  , dbo.OPTIMA_TRADUCTION(DESI_SCEN,'fr') +'@KEYLANG_'+DESI_SCEN AS DESI_SCEN  , dbo.OPTIMA_TRADUCTION(DESC_SCEN,'fr') +'@KEYLANG_'+DESC_SCEN AS DESC_SCEN  , NOM_SCEN  , FLAG_HABI_ACTI  , CODE_DECL  , dbo.OPTIMA_TRADUCTION(DESI_SCEN_COUR,'fr') +'@KEYLANG_'+DESI_SCEN_COUR AS DESI_SCEN_COUR  , COUL_SCEN  , LOGO_SCEN  , FLAG_SUPP FROM SCENARIO  ORDER BY CODE_SCEN ASC  
+14:16:26.980 ERROR - MultiLanguageManager  java.io.IOException: Server returned HTTP response code: 500 for URL: http://localhost:8383/Quartis-Dictionary/RequestTranslation
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at quartisweb.i18n.MultiLanguageManager.loadAllDataLanguage(MultiLanguageManager.java:460)
+	at quartisweb.i18n.MultiLanguageManager.getAllValueLanguage(MultiLanguageManager.java:154)
+	at quartisweb.jsf.managedBean.FormulairesManagedBean.selectData(FormulairesManagedBean.java:713)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.el.parser.AstValue.invoke(AstValue.java:191)
+	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:276)
+	at org.rcfaces.core.internal.listener.AbstractActionListener.tryMethodExpression(AbstractActionListener.java:203)
+	at org.rcfaces.core.internal.listener.AbstractActionListener.process(AbstractActionListener.java:162)
+	at org.rcfaces.core.internal.listener.DoubleClickActionListener.processDoubleClick(DoubleClickActionListener.java:35)
+	at org.rcfaces.core.event.DoubleClickEvent.processListener(DoubleClickEvent.java:66)
+	at javax.faces.component.UIComponentBase.broadcast(UIComponentBase.java:746)
+	at org.rcfaces.core.internal.component.UIData0.broadcast(UIData0.java:999)
+	at org.rcfaces.core.internal.component.UIData0.broadcast(UIData0.java:1011)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:447)
+	at javax.faces.component.UIViewRoot.processApplication(UIViewRoot.java:752)
+	at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:97)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:117)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:244)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.RepeteurFilter.doFilter(RepeteurFilter.java:104)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:233)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+15:34:43.057 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+15:34:43.057 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/xxx.cas?moduleID=OPTIMA_Standard&menu=true&locale=fr_FR&userID=administrateur&_i18n=fr&_deltaUTC=0&_codeSite=MAR&forward=admin_users.jsf&pageID=admin_users&action=url&_matr=administrateur&CodeSite=MAR&i18n=fr&_login=administrateur&webContainerWidth=785&webContainerHeight=531) mais pas de user en session. 
+15:34:43.057 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+15:34:43.304 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+15:34:43.304 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/remoteLog.ajx) mais pas de user en session. 
+15:34:43.306 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+15:34:43.306 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/xxx.cas?action=deconnexion&userID=administrateur) mais pas de user en session. 
+15:34:43.308 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+15:34:43.308 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+15:34:43.316 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+15:34:45.954 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+15:34:45.954 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+15:34:47.531 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+15:34:48.553 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+15:34:48.554 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+15:34:48.554 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+15:34:48.559 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+15:34:48.563 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+15:34:48.563 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+15:34:48.563 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+15:34:48.569 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+17:21:40.445 DEBUG - AuthManagedBean autoconnect - Tentative de connexion SSO... 
+17:21:40.445 DEBUG - ConnexionManagedBean User renseigné par filtre SSO LDAP : null 
+17:21:40.445 DEBUG - ConnexionManagedBean ldapActive = false 
+17:21:40.445 DEBUG - AuthManagedBean autoconnect - Echec de la connexion par SSO. 
+17:22:02.636  WARN - LoginManagedBean Utilisateur null à la connexion. Affichage d'un message d'erreur. 
+17:22:06.703 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+17:22:10.757 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:22:18.144 DEBUG - NavigationAction module : OPTIMA_15_Equipement, level : 2, path : Standard/OPTIMA_15_Equipement/Superviseurs/Niveau1/Equipement_Pareto_Temps_Global_1 
+17:22:18.144 DEBUG - NavigationAction module : OPTIMA_15_Equipement, level : null, path : Standard/OPTIMA_15_Equipement/Superviseurs/Niveau1/Equipement_Pareto_Temps_Global_1 
+17:22:20.062 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:22:27.122 DEBUG - NavigationAction module : OPTIMA_15_Equipement, level : 2, path : Standard/OPTIMA_15_Equipement/Superviseurs/Niveau1/Equipement_Pareto_Temps_Global_1 
+17:22:27.122 DEBUG - NavigationAction module : OPTIMA_15_Equipement, level : null, path : Standard/OPTIMA_15_Equipement/Superviseurs/Niveau1/Equipement_Pareto_Temps_Global_1 
+17:22:28.761 DEBUG - NavigationAction module : OPTIMA_45_Controle, level : null, path : Standard/OPTIMA_45_Controle/Superviseurs/Niveau1/Controle_Gammes_EnCours_Synthese 
+17:22:28.761 DEBUG - NavigationAction module : OPTIMA_45_Controle, level : 2, path : Standard/OPTIMA_45_Controle/Superviseurs/Niveau1/Controle_Gammes_EnCours_Synthese 
+17:22:30.038 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:22:31.428 DEBUG - Level1StoreDelegate store - Ecriture dans le fichier : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\level1.xml'... 
+17:22:31.438 DEBUG - Level1StoreDelegate store - Fin de l'écriture dans le fichier. 
+17:22:32.417 DEBUG - NavigationAction module : OPTIMA_15_Equipement, level : 2, path : Standard/OPTIMA_15_Equipement/Superviseurs/Niveau1/Equipement_Pareto_Temps_Global_1 
+17:22:32.417 DEBUG - NavigationAction module : OPTIMA_15_Equipement, level : null, path : Standard/OPTIMA_15_Equipement/Superviseurs/Niveau1/Equipement_Pareto_Temps_Global_1 
+17:22:33.496 DEBUG - NavigationAction module : OPTIMA_45_Controle, level : 2, path : Standard/OPTIMA_45_Controle/Superviseurs/Niveau1/Controle_Gammes_EnCours_Synthese 
+17:22:33.496 DEBUG - NavigationAction module : OPTIMA_45_Controle, level : null, path : Standard/OPTIMA_45_Controle/Superviseurs/Niveau1/Controle_Gammes_EnCours_Synthese 
+17:22:33.616 DEBUG - NavigationAction module : OPTIMA_45_Controle, level : 2, path : Standard/OPTIMA_45_Controle/Superviseurs/Niveau1/Controle_Gammes_EnCours_Synthese 
+17:22:33.616 DEBUG - NavigationAction module : OPTIMA_45_Controle, level : null, path : Standard/OPTIMA_45_Controle/Superviseurs/Niveau1/Controle_Gammes_EnCours_Synthese 
+17:22:40.054 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:22:50.027 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:23:00.057 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:23:10.037 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:23:20.055 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:23:30.047 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:23:40.060 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:23:50.092 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:24:00.052 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:24:10.106 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:24:20.091 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:24:30.089 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:24:40.080 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:24:50.083 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:25:00.126 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:25:10.093 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:25:20.125 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:25:30.142 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:25:40.142 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:25:50.103 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:26:00.129 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:26:10.153 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:26:20.179 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:26:30.177 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:26:40.178 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:26:50.194 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:27:00.209 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:27:10.335 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:27:20.227 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:27:30.229 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:27:40.258 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:27:50.243 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:28:00.253 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:28:10.268 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:28:20.269 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:28:30.288 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:28:40.262 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:28:50.292 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:29:00.308 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:29:10.308 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:29:20.324 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:29:30.356 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:29:40.324 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:29:50.356 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:30:00.374 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:30:10.389 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:30:20.389 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:30:30.390 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:30:40.406 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:30:50.437 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:31:00.423 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:31:10.437 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:31:20.440 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:31:30.454 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:31:40.439 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:31:50.455 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:32:00.456 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:32:10.471 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:32:20.471 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:32:30.488 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:32:40.504 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:32:50.504 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:33:00.520 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:33:10.536 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:33:20.531 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:33:30.533 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:33:40.550 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:33:50.566 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:34:00.566 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:34:10.598 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:34:20.584 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:34:30.600 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:34:40.585 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:34:50.617 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:35:00.602 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:35:10.634 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:35:20.637 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:35:30.634 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:35:40.651 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:35:50.668 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:36:00.667 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:36:10.668 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:36:20.668 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:36:30.699 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:36:40.717 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:36:50.716 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:37:00.701 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:37:10.717 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:37:20.749 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:37:30.749 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:37:40.749 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:37:50.750 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:38:00.799 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:38:10.781 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:38:20.798 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:38:30.767 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:38:40.783 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:38:50.830 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:39:00.815 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:39:10.838 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:39:20.826 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:39:30.827 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:39:40.828 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:39:50.862 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:40:00.861 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:40:10.862 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:40:20.919 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:40:30.947 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:40:40.963 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:40:50.930 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:41:00.929 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:41:10.953 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:41:20.938 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:41:30.954 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:41:40.971 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:41:50.988 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:42:00.989 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:42:10.990 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:42:21.006 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:42:31.023 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:42:41.024 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:42:51.024 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:43:01.025 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:43:11.027 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:43:21.056 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:43:31.058 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:43:41.058 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:43:51.073 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:44:01.091 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:44:11.091 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:44:21.103 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:44:31.107 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:44:41.109 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:44:51.125 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:45:01.143 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:45:11.143 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:45:21.159 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:45:31.175 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:45:41.175 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:45:51.190 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:46:01.175 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:46:11.176 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:46:21.221 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:46:31.227 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:46:41.238 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:46:51.240 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:47:01.240 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:47:11.271 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:47:21.303 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:47:31.288 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:47:41.288 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:47:51.304 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:48:01.320 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:48:11.353 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:48:21.346 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:48:31.347 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:48:41.362 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:48:51.380 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:49:01.394 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:49:11.381 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:49:21.414 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:49:31.415 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:49:41.431 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:49:51.416 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:50:01.434 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:50:11.449 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:50:21.450 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:50:31.466 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:50:41.483 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:50:51.484 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:51:01.484 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:51:11.499 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:51:21.515 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:51:31.516 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:51:41.549 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:51:51.564 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:52:01.579 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:52:11.579 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:52:21.596 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:52:31.581 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:52:41.612 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:52:51.597 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:53:01.598 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:53:11.646 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:53:21.629 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:53:31.645 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:53:41.645 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:53:51.662 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:54:01.662 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:54:11.677 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:54:21.679 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:54:31.665 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:54:41.694 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:54:51.711 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:55:01.712 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:55:11.726 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:55:21.727 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:55:32.445 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:55:41.760 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:55:51.777 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:56:01.792 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:56:11.807 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:56:21.793 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:56:31.808 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:56:41.824 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:56:51.825 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:57:01.843 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:57:11.841 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:57:21.857 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:57:31.873 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:57:41.874 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:57:51.874 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:58:01.889 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:58:11.905 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:58:21.900 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:58:31.917 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:58:41.919 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:58:51.934 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:59:01.935 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:59:11.936 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:59:21.968 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:59:31.969 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:59:41.986 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+17:59:51.987 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:00:01.988 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:00:12.004 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:00:22.004 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:00:32.083 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:00:42.010 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:00:52.038 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:01:02.040 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:01:12.059 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:01:22.055 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:01:32.055 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:01:42.065 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:01:52.082 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:02:02.097 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:02:12.097 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:02:22.100 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:02:32.116 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:02:42.134 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:02:52.149 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:03:02.134 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:03:12.151 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:03:22.167 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:03:32.169 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:03:42.154 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:03:52.187 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:04:02.202 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:04:12.202 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:04:22.203 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:04:32.218 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:04:42.218 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:04:52.234 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:05:02.235 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:05:12.236 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:05:22.266 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:05:32.283 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:05:42.299 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:05:52.316 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:06:02.316 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:06:12.324 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:06:22.336 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:06:32.332 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:06:42.349 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:06:52.349 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:07:02.384 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:07:12.389 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:07:22.390 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:07:32.407 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:07:42.408 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:07:52.424 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:08:02.409 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:08:12.432 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:08:22.461 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:08:32.478 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:08:42.492 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:08:52.494 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:09:02.479 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:09:12.501 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:09:22.534 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:09:32.536 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:09:42.521 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:09:52.538 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:10:02.961 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:10:12.554 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:10:22.571 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:10:32.555 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:10:42.587 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:10:52.587 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:11:02.590 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:11:12.604 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:11:22.606 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:11:32.622 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:11:42.639 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:11:52.656 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:12:02.657 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:12:12.672 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:12:22.705 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:12:32.705 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:12:42.721 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:12:52.721 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:13:02.705 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:13:12.737 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:13:22.738 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:13:32.757 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:13:42.770 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:13:52.770 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:14:02.770 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:14:12.771 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:14:22.789 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:14:32.787 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:14:42.804 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:14:52.819 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:15:02.821 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:15:12.834 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:15:22.866 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:15:32.851 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:15:42.853 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:15:52.868 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:16:02.870 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:16:12.885 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:16:22.886 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:16:32.903 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:16:42.902 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:16:52.934 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:17:02.927 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:17:12.946 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:17:22.945 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:17:32.948 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:17:42.964 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:17:52.982 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:18:02.999 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:18:12.967 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:18:22.985 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:18:33.000 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:18:43.017 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:18:53.000 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:19:03.016 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:19:13.064 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:19:23.049 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:19:33.050 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:19:43.067 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:19:53.082 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:20:03.085 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:20:13.114 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:20:23.115 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:20:33.100 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:20:43.115 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:20:53.131 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:21:03.133 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:21:13.130 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:21:23.163 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:21:33.166 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:21:43.165 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:21:53.180 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:22:03.177 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:22:13.206 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:22:23.192 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:22:33.209 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:22:43.210 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:22:53.240 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:23:03.236 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:23:13.256 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:23:23.250 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:23:33.246 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:23:43.278 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:23:53.294 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:24:03.311 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:24:13.311 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:24:23.327 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:24:33.343 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:24:43.342 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:24:53.357 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:25:00.481 DEBUG - DisconnectDispatcher Déconnexion demandée pour : administrateur, session ID : #599411EC514E12A11599FFB78104581A 

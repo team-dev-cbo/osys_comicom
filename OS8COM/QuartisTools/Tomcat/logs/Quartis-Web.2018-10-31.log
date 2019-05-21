@@ -1,0 +1,153 @@
+12:51:46.387 DEBUG - FiltreSession Requête pour page non login (http://192.168.1.43:8383/Quartis-Web/base.sso) mais pas de user en session. 
+12:51:50.217 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+12:51:52.448 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+12:51:53.598 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Controle_Gammes_EnCours_Liste 
+12:51:53.598 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.102-administrateur\_Controle_Gammes_EnCours_Liste\_Controle_Gammes_EnCours_Liste.xls'... 
+12:51:53.598 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.102-administrateur\_Controle_Gammes_EnCours_Liste\_Controle_Gammes_EnCours_Liste.xls'... 
+12:51:53.613 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+12:51:53.629 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Controle_Gammes_EnCours_Liste 
+12:51:53.629 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.102-administrateur\_Controle_Gammes_EnCours_Liste\_Controle_Gammes_EnCours_Liste.xls'... 
+12:51:53.629 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.102-administrateur\_Controle_Gammes_EnCours_Liste\_Controle_Gammes_EnCours_Liste.xls'... 
+12:51:53.660 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+12:51:56.982 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Controle_Gammes_EnCours_Liste 
+12:51:56.982 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.102-administrateur\_Controle_Gammes_EnCours_Liste\_Controle_Gammes_EnCours_Liste.xls'... 
+12:51:56.982 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.102-administrateur\_Controle_Gammes_EnCours_Liste\_Controle_Gammes_EnCours_Liste.xls'... 
+12:51:57.014 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+12:51:57.029 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Controle_Gammes_EnCours_Liste 
+12:51:57.029 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.102-administrateur\_Controle_Gammes_EnCours_Liste\_Controle_Gammes_EnCours_Liste.xls'... 
+12:51:57.029 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.102-administrateur\_Controle_Gammes_EnCours_Liste\_Controle_Gammes_EnCours_Liste.xls'... 
+12:51:57.060 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+12:51:59.870 DEBUG - GSqlQueryGeneratorSqlServer --->table =CONTROLE_GAMME query =set rowcount 3000  SELECT CODE_ARTI  , CODE_CONT  , CODE_MACH  , CODE_TYPE_FREQ  , VALE_FREQ  , CONVERT(NVARCHAR, DEBU_FREQ, 103) AS DEBU_FREQ  , CODE_ETAT_MACH  , CODE_SITE  FROM CONTROLE_GAMME  WHERE ( CODE_SITE = 'MAR')  ORDER BY CODE_ARTI ASC  
+12:52:41.061 DEBUG - GSqlQueryGeneratorSqlServer --->table =CONTROLE_GAMME query =set rowcount 3000  SELECT CODE_ARTI  , CODE_CONT  , CODE_MACH  , CODE_TYPE_FREQ  , VALE_FREQ  , CONVERT(NVARCHAR, DEBU_FREQ, 103) AS DEBU_FREQ  , CODE_ETAT_MACH  , CODE_SITE  FROM CONTROLE_GAMME  WHERE ( CODE_SITE = 'MAR')  ORDER BY CODE_ARTI ASC  
+12:52:54.109 DEBUG - GSqlQueryGeneratorSqlServer --->table =CONTROLE_LISTE query =set rowcount 3000  SELECT CODE_ARTI  , CODE_CONT  , dbo.OPTIMA_TRADUCTION(DESI_CONT,'fr') +'@KEYLANG_'+DESI_CONT AS DESI_CONT  , CODE_SITE  FROM CONTROLE_LISTE  WHERE ( CODE_SITE = 'MAR')  ORDER BY CODE_ARTI ASC  
+12:53:39.517 DEBUG - GSqlQueryGeneratorSqlServer --->table =CONTROLE_LISTE query =set rowcount 3000  SELECT CODE_ARTI  , CODE_CONT  , dbo.OPTIMA_TRADUCTION(DESI_CONT,'fr') +'@KEYLANG_'+DESI_CONT AS DESI_CONT  , CODE_SITE  FROM CONTROLE_LISTE  WHERE ( CODE_SITE = 'MAR')  ORDER BY CODE_ARTI ASC  
+13:01:43.479 DEBUG - GSqlQueryGeneratorSqlServer --->table =CONTROLE_MESURE query =set rowcount 3000  SELECT CODE_ARTI  , CODE_CONT  , CODE_MESU  , NUME_ORDR  , CODE_APPA  , NOMB_MESU  , CODE_TYPE_SAIS  , CODE_TYPE_LIST  , VALE_MINI  , VALE_MAXI  , VALE_CIBL  , COEF_FREQ  , FLAG_DEBU_PROD  , dbo.OPTIMA_TRADUCTION(QUES,'fr') +'@KEYLANG_'+QUES AS QUES  , dbo.OPTIMA_TRADUCTION(COMM,'fr') +'@KEYLANG_'+COMM AS COMM  , CODE_SITE  FROM CONTROLE_MESURE  WHERE ( CODE_SITE = 'MAR')  ORDER BY CODE_ARTI ASC  
+14:19:25.179 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+14:19:25.179 DEBUG - FiltreSession Requête pour page non login (http://192.168.1.43:8383/Quartis-Web/moduleChange.ajx?moduleID=OPTIMA_Controle_Process&userID=administrateur) mais pas de user en session. 
+14:19:25.218 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+14:19:25.263 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+14:19:25.263 DEBUG - FiltreSession Requête pour page non login (http://192.168.1.43:8383/Quartis-Web/xxx.cas?action=deconnexion&userID=administrateur) mais pas de user en session. 
+14:19:25.277 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+14:19:25.319 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+14:19:31.234 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+14:19:31.238 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+14:19:32.986 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+14:19:34.810 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Controle_Gammes_EnCours_Liste 
+14:19:34.810 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.102-administrateur\_Controle_Gammes_EnCours_Liste\_Controle_Gammes_EnCours_Liste.xls'... 
+14:19:34.810 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.102-administrateur\_Controle_Gammes_EnCours_Liste\_Controle_Gammes_EnCours_Liste.xls'... 
+14:19:34.832 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+14:19:34.855 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Controle_Gammes_EnCours_Liste 
+14:19:34.855 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.102-administrateur\_Controle_Gammes_EnCours_Liste\_Controle_Gammes_EnCours_Liste.xls'... 
+14:19:34.856 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.102-administrateur\_Controle_Gammes_EnCours_Liste\_Controle_Gammes_EnCours_Liste.xls'... 
+14:19:34.876 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+14:19:39.554 DEBUG - GSqlQueryGeneratorSqlServer --->table =CONTROLE_MESURE query =set rowcount 3000  SELECT CODE_ARTI  , CODE_CONT  , CODE_MESU  , NUME_ORDR  , CODE_APPA  , NOMB_MESU  , CODE_TYPE_SAIS  , CODE_TYPE_LIST  , VALE_MINI  , VALE_MAXI  , VALE_CIBL  , COEF_FREQ  , FLAG_DEBU_PROD  , dbo.OPTIMA_TRADUCTION(QUES,'fr') +'@KEYLANG_'+QUES AS QUES  , dbo.OPTIMA_TRADUCTION(COMM,'fr') +'@KEYLANG_'+COMM AS COMM  , CODE_SITE  FROM CONTROLE_MESURE  WHERE ( CODE_SITE = 'MAR')  ORDER BY CODE_ARTI ASC  
+14:22:04.358 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Controle_Gammes_EnCours_Liste 
+14:22:04.358 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.102-administrateur\_Controle_Gammes_EnCours_Liste\_Controle_Gammes_EnCours_Liste.xls'... 
+14:22:04.358 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.102-administrateur\_Controle_Gammes_EnCours_Liste\_Controle_Gammes_EnCours_Liste.xls'... 
+14:22:04.380 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+14:22:04.401 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Controle_Gammes_EnCours_Liste 
+14:22:04.401 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.102-administrateur\_Controle_Gammes_EnCours_Liste\_Controle_Gammes_EnCours_Liste.xls'... 
+14:22:04.401 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.102-administrateur\_Controle_Gammes_EnCours_Liste\_Controle_Gammes_EnCours_Liste.xls'... 
+14:22:04.420 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+14:22:06.698 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Controle_Gammes_EnCours_Liste 
+14:22:06.698 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.102-administrateur\_Controle_Gammes_EnCours_Liste\_Controle_Gammes_EnCours_Liste.xls'... 
+14:22:06.698 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.102-administrateur\_Controle_Gammes_EnCours_Liste\_Controle_Gammes_EnCours_Liste.xls'... 
+14:22:06.716 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+14:22:06.724 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Controle_Gammes_EnCours_Liste 
+14:22:06.724 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.102-administrateur\_Controle_Gammes_EnCours_Liste\_Controle_Gammes_EnCours_Liste.xls'... 
+14:22:06.724 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.102-administrateur\_Controle_Gammes_EnCours_Liste\_Controle_Gammes_EnCours_Liste.xls'... 
+14:22:06.742 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+14:22:08.593 DEBUG - GSqlQueryGeneratorSqlServer --->table =CONTROLE_MESURE query =set rowcount 3000  SELECT CODE_ARTI  , CODE_CONT  , CODE_MESU  , NUME_ORDR  , CODE_APPA  , NOMB_MESU  , CODE_TYPE_SAIS  , CODE_TYPE_LIST  , VALE_MINI  , VALE_MAXI  , VALE_CIBL  , COEF_FREQ  , FLAG_DEBU_PROD  , dbo.OPTIMA_TRADUCTION(QUES,'fr') +'@KEYLANG_'+QUES AS QUES  , dbo.OPTIMA_TRADUCTION(COMM,'fr') +'@KEYLANG_'+COMM AS COMM  , CODE_SITE  FROM CONTROLE_MESURE  WHERE ( CODE_SITE = 'MAR')  ORDER BY CODE_ARTI ASC  
+14:24:14.042 ERROR - GSql  java.sql.SQLException: Impossible d'insérer la valeur NULL dans la colonne 'VALE_CIBL', table 'QUARTIS_PRO.dbo.CONTROLE_MESURE'. Cette colonne n'accepte pas les valeurs NULL. Échec de INSERT.
+	at net.sourceforge.jtds.jdbc.SQLDiagnostic.addDiagnostic(SQLDiagnostic.java:368)
+	at net.sourceforge.jtds.jdbc.TdsCore.tdsErrorToken(TdsCore.java:2816)
+	at net.sourceforge.jtds.jdbc.TdsCore.nextToken(TdsCore.java:2254)
+	at net.sourceforge.jtds.jdbc.TdsCore.getMoreResults(TdsCore.java:631)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.processResults(JtdsStatement.java:584)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeSQL(JtdsStatement.java:546)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeImpl(JtdsStatement.java:723)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeUpdate(JtdsStatement.java:1163)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeUpdate(JtdsStatement.java:1116)
+	at org.apache.commons.dbcp.DelegatingStatement.executeUpdate(DelegatingStatement.java:228)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.bull.javamelody.JdbcWrapper.doExecute(JdbcWrapper.java:404)
+	at net.bull.javamelody.JdbcWrapper$StatementInvocationHandler.invoke(JdbcWrapper.java:129)
+	at net.bull.javamelody.JdbcWrapper$DelegatingInvocationHandler.invoke(JdbcWrapper.java:286)
+	at com.sun.proxy.$Proxy126.executeUpdate(Unknown Source)
+	at quartisweb.generic.sql.GSql.insertGeneric(GSql.java:276)
+	at quartisweb.generic.GenericProfilManager.insertGeneric(GenericProfilManager.java:58)
+	at quartisweb.jsf.managedBean.FormulairesManagedBean.updateData(FormulairesManagedBean.java:1082)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.el.parser.AstValue.invoke(AstValue.java:191)
+	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:276)
+	at org.apache.jasper.el.JspMethodExpression.invoke(JspMethodExpression.java:68)
+	at javax.faces.event.MethodExpressionActionListener.processAction(MethodExpressionActionListener.java:88)
+	at javax.faces.event.ActionEvent.processListener(ActionEvent.java:77)
+	at javax.faces.component.UIComponentBase.broadcast(UIComponentBase.java:746)
+	at javax.faces.component.UICommand.broadcast(UICommand.java:368)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:447)
+	at javax.faces.component.UIViewRoot.processApplication(UIViewRoot.java:752)
+	at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:97)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:117)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:244)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.RepeteurFilter.doFilter(RepeteurFilter.java:104)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:233)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+14:41:28.231 DEBUG - GSqlQueryGeneratorSqlServer --->table =CONTROLE_MESURE query =set rowcount 3000  SELECT CODE_ARTI  , CODE_CONT  , CODE_MESU  , NUME_ORDR  , CODE_APPA  , NOMB_MESU  , CODE_TYPE_SAIS  , CODE_TYPE_LIST  , VALE_MINI  , VALE_MAXI  , VALE_CIBL  , COEF_FREQ  , FLAG_DEBU_PROD  , dbo.OPTIMA_TRADUCTION(QUES,'fr') +'@KEYLANG_'+QUES AS QUES  , dbo.OPTIMA_TRADUCTION(COMM,'fr') +'@KEYLANG_'+COMM AS COMM  , CODE_SITE  FROM CONTROLE_MESURE  WHERE ( CODE_SITE = 'MAR')  ORDER BY CODE_ARTI ASC  
+18:12:45.563 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+18:12:45.563 DEBUG - FiltreSession Requête pour page non login (http://192.168.1.43:8383/Quartis-Web/formulaire.jsf) mais pas de user en session. 
+18:12:45.590 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+18:12:50.417 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+18:12:50.417 DEBUG - FiltreSession Requête pour page non login (http://192.168.1.43:8383/Quartis-Web/base.sso) mais pas de user en session. 
+18:12:50.426 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+18:12:54.295 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+18:12:54.299 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+18:12:55.935 DEBUG - TableDivTransformer buildLevel1Or2 ()--> Nom du fichier export2 = Table- 
+18:13:03.014 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Controle_Gammes_EnCours_Liste 
+18:13:03.014 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.102-administrateur\_Controle_Gammes_EnCours_Liste\_Controle_Gammes_EnCours_Liste.xls'... 
+18:13:03.014 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.102-administrateur\_Controle_Gammes_EnCours_Liste\_Controle_Gammes_EnCours_Liste.xls'... 
+18:13:03.032 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+18:13:03.073 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Controle_Gammes_EnCours_Liste 
+18:13:03.074 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.102-administrateur\_Controle_Gammes_EnCours_Liste\_Controle_Gammes_EnCours_Liste.xls'... 
+18:13:03.074 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_192.168.1.102-administrateur\_Controle_Gammes_EnCours_Liste\_Controle_Gammes_EnCours_Liste.xls'... 
+18:13:03.091 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+18:13:05.416 DEBUG - GSqlQueryGeneratorSqlServer --->table =CONTROLE_MESURE query =set rowcount 3000  SELECT CODE_ARTI  , CODE_CONT  , CODE_MESU  , NUME_ORDR  , CODE_APPA  , NOMB_MESU  , CODE_TYPE_SAIS  , CODE_TYPE_LIST  , VALE_MINI  , VALE_MAXI  , VALE_CIBL  , COEF_FREQ  , FLAG_DEBU_PROD  , dbo.OPTIMA_TRADUCTION(QUES,'fr') +'@KEYLANG_'+QUES AS QUES  , dbo.OPTIMA_TRADUCTION(COMM,'fr') +'@KEYLANG_'+COMM AS COMM  , CODE_SITE  FROM CONTROLE_MESURE  WHERE ( CODE_SITE = 'MAR')  ORDER BY CODE_ARTI ASC  
+18:13:51.096 DEBUG - GSqlQueryGeneratorSqlServer --->table =CONTROLE_MESURE query =set rowcount 3000  SELECT CODE_ARTI  , CODE_CONT  , CODE_MESU  , NUME_ORDR  , CODE_APPA  , NOMB_MESU  , CODE_TYPE_SAIS  , CODE_TYPE_LIST  , VALE_MINI  , VALE_MAXI  , VALE_CIBL  , COEF_FREQ  , FLAG_DEBU_PROD  , dbo.OPTIMA_TRADUCTION(QUES,'fr') +'@KEYLANG_'+QUES AS QUES  , dbo.OPTIMA_TRADUCTION(COMM,'fr') +'@KEYLANG_'+COMM AS COMM  , CODE_SITE  FROM CONTROLE_MESURE  WHERE ( CODE_SITE = 'MAR')  ORDER BY CODE_ARTI ASC  
+18:13:54.121 DEBUG - GSqlQueryGeneratorSqlServer --->table =CONTROLE_FREQUENTIEL query =set rowcount 3000  SELECT CODE_TYPE_FREQ  , dbo.OPTIMA_TRADUCTION(DESI_TYPE_FREQ,'fr') +'@KEYLANG_'+DESI_TYPE_FREQ AS DESI_TYPE_FREQ  FROM CONTROLE_FREQUENTIEL  ORDER BY CODE_TYPE_FREQ ASC  
+18:13:57.014 DEBUG - GSqlQueryGeneratorSqlServer --->table =CONTROLE_LISTE query =set rowcount 3000  SELECT CODE_ARTI  , CODE_CONT  , dbo.OPTIMA_TRADUCTION(DESI_CONT,'fr') +'@KEYLANG_'+DESI_CONT AS DESI_CONT  , CODE_SITE  FROM CONTROLE_LISTE  WHERE ( CODE_SITE = 'MAR')  ORDER BY CODE_ARTI ASC  
+18:31:55.904 DEBUG - DisconnectDispatcher Déconnexion demandée pour : administrateur, session ID : #70EAA78840D94114E41A2B365096B9FF 

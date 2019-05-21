@@ -1,0 +1,1 @@
+new f_class("f_progressMonitor",null,{UNKNOWN:-1},{f_beginTask:function(){},f_done:function(){},ch:function(){},f_isCanceled:function(){return this._iC},f_cancel:function(){this._iC=!0},f_setTaskName:function(){},f_subTask:function(){},f_worked:function(e){this.ch(e)}},f_object);

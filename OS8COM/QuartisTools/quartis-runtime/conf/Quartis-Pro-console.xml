@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<web-instance name="Quartis-Pro-console">
+    <short-label>QuartisPro Console</short-label>
+    <description>Instance hébergeant le moteur de génération des consoles de QuartisPro</description>
+    <environment/>
+    <resources/>
+    <web-app context-path="/quartispro-console" war-file="wars\Quartis-Pro-console.war" active="true">
+        <environment>
+            <environment-variable name="dispatcher-url" type="java.lang.String" value="http://localhost:8384/quartistools-web" override="true"/>
+            <environment-variable name="application-path" type="java.lang.String" value="C:\Osys\QUARTIS_PRO\quartis-pro-web" override="true"/>
+            <environment-variable name="Quartis-Pro-tools-websocket" type="java.lang.String" value="ws://localhost:8388/quartispro-tools/wsock" override="true"/>
+            <environment-variable name="Quartis-Pro-tools-webservices" type="java.lang.String" value="http://localhost:8388/quartispro-tools/wserv" override="true"/>
+            <environment-variable name="Quartis-Pro-console-animation-speed" type="java.lang.Integer" value="400" override="true"/>
+        </environment>
+        <resources/>
+    </web-app>
+</web-instance>

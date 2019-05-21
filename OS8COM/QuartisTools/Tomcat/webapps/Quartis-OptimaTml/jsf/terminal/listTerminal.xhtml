@@ -1,0 +1,877 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+    xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+
+	<h:head>
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- 		<meta http-equiv="X-UA-Compatible" content="EmulateIE8" /> -->
+			<title>#{bundle['terminal.title']}</title>
+
+		   <!--  <script type="text/javascript"
+				src="../../resources/js/primefaces-i18n.js"></script>-->
+			<script type="text/javascript"
+				src="../../resources/js/primeui-1.1-min.js"></script>
+
+			<link rel="stylesheet" media="screen" type="text/css" href="../../resources/css/primeui-1.1-min.css" />
+
+	        <link rel="stylesheet" media="screen" type="text/css" href="../../resources/css/style.css" />
+	        <link rel="stylesheet" media="screen" type="text/css" href="../../resources/css/styleTerminal.css" />
+	        <link rel="stylesheet" media="screen" type="text/css" href="../../resources/css/bootstrap.min.css" />
+
+			<script type="text/javascript"
+				src="../../resources/js/primeui/button/button.js"></script>
+			<script type="text/javascript"
+				src="../../resources/js/primeui/dialog/dialog.js"></script>
+
+	</h:head>
+	<h:body>
+
+	    <p:tabView id="tabView" activeIndex="#{terminalController.terminalViewModel.tabView}" >
+	    <!-- binding={terminalController.terminalViewModel.tabView} -->
+
+      	    <p:ajax event="tabChange" listener="#{terminalController.refreshListTerminaux}" update=":tabView"/>
+
+	        <p:tab id="t1" title="#{bundle['terminal.tab.terminal.saisie']}">
+	        	<h:form id="formTabSearch" prependId="false">
+
+					<div class="lineFormInput">
+
+						 <div class="labelAtel">
+							<h:outputLabel value="#{bundle['terminal.form.atelier']} : " id="labelAtelSearch" for="atelSearch" />
+						</div>
+
+						<div class="inputAtel">
+							<p:selectOneMenu id="atelSearch" class="listBoxMargin"
+									value="#{terminalController.atelCriterion}"
+									converter="#{terminalController.atelierConverter}"
+									style="width: 240px" >
+									<f:selectItem itemLabel="" itemValue="" />
+									<f:selectItems
+										value="#{terminalController.terminalViewModel.listAtelier}"
+										var="atel" itemLabel="#{atel.desiAtel}"
+										itemValue="#{atel.codeAtel}" />
+							</p:selectOneMenu>
+						</div>
+
+						<div class="btnAtel">
+							<p:commandButton id="searchTerminal"
+								value="#{bundle['terminal.common.button.rechercher']}"
+								class="commandButton btnOther col-md-12"
+								actionListener="#{terminalController.getListTerminaux}"
+								update=":tabView" />
+						</div>
+				</div>
+
+
+
+				<p:dataTable paginator="true" rows="10"  rowsPerPageTemplate="5,10,15,20,25"
+			 	height="150" var="term" value="#{terminalController.terminalViewModel.listTerminal}"
+			 	selection="#{terminalController.terminalViewModel.selectedTerminal}"
+				selectionMode="single" rowKey="#{term.codeTerm}" >
+
+				<p:ajax event="rowSelect" listener="#{terminalController.onRowSelect}" process="@form" update=":tabView"/>
+
+			 	<f:facet name="header">#{bundle['terminal.tab.table.title']}</f:facet>
+				    <p:column headerText="#{bundle['terminal.tab.table.numero']}">
+            			<h:outputText value="#{term.codeTerm}" />
+				    </p:column>
+
+				    <p:column headerText="#{bundle['terminal.tab.table.designation']}">
+				        <h:outputText value="#{term.desiTerm}" />
+				    </p:column>
+
+				    <p:column headerText="#{bundle['terminal.tab.table.secteur']}">
+				        <h:outputText value="#{term.sectGeog.desiSectGeog}" />
+				    </p:column>
+
+				    <p:column headerText="#{bundle['terminal.tab.table.atelier']}">
+				        <h:outputText value="#{term.atel.desiAtel}" />
+				    </p:column>
+
+				    <p:column headerText="#{bundle['terminal.tab.table.multmach']}">
+				        <h:outputText value="#{term.flagMultMach}" />
+				    </p:column>
+
+				    <p:column headerText="#{bundle['terminal.tab.table.machine']}">
+				        <h:outputText value="#{term.machDefa.desiMach}" />
+				    </p:column>
+				    <p:column headerText="#{bundle['terminal.tab.table.dernconn']}">
+				        <h:outputText value="#{term.dateDernConn}" />
+				    </p:column>
+				</p:dataTable>
+				</h:form>
+	        </p:tab>
+
+	        <p:tab id="t2" title="#{bundle['terminal.tab.terminal.formulaire']}">
+	        	<h:form id="formAddTerminal">
+	        		<p:panel id="panelForm" class="panelForm" header="#{bundle['terminal.tab.terminal.saisie']}" toggleable="false" closable="false" toggleSpeed="500" closeSpeed="500" widgetVar="panelForm" style="margin-bottom:20px">
+						<div class="row">
+							<div class="col-md-6">
+
+	 							<div class="lineFormInput">
+									<h:outputLabel value="#{bundle['terminal.form.numeterm']} : " id="labelNumeTerm" for="numeTerm" />
+									<p:inputText id="numeTerm" name="numeTerm" label="#{bundle['terminal.form.numeterm']}" value="#{terminalController.terminalViewModel.modiTerm.codeTerm}"/>
+									<span class="required">*</span>
+								</div>
+								<div class="lineFormInput">
+									<h:outputLabel value="#{bundle['terminal.form.desiterm']} : " id="labelDesiTerm" for="desiTerm" />
+									<p:inputText id="desiTerm" name="desiTerm" label="#{bundle['terminal.form.desiterm']}" value="#{terminalController.terminalViewModel.modiTerm.desiTerm}" />
+									<p:commandButton value="" class="commandButton btnOther buttonImgDesiLang" onclick="PF('dlgDesiLang').show();"
+										actionListener="#{terminalController.saveLangueUser}" process="@form" update=":tabView:formAddTerminal:yolo">
+									</p:commandButton>
+
+									<p:dialog header="#{bundle['terminal.form.title.desiterm']}" id="dlgDesiLang" class="overflowHidden" widgetVar="dlgDesiLang" modal="true" height="275" width="550">
+										<h:panelGroup id="yolo">
+								           <div class="row" >
+									           <h:outputLabel value="#{bundle['terminal.common.lang.fr']} : " id="langfr" for="inputfr" />
+											   <p:inputText id="inputfr" name="inputfr" value="#{terminalController.desiTerm.desiFR}" /> <br/><br/>
+											   <h:outputLabel value="#{bundle['terminal.common.lang.en']} : " id="langen" for="inputen" />
+											   <p:inputText id="inputen" name="inputen" value="#{terminalController.desiTerm.desiEN}" /> <br/><br/>
+											   <h:outputLabel value="#{bundle['terminal.common.lang.ch']} : " id="langch" for="inputch" />
+											   <p:inputText id="inputch" name="inputch" value="#{terminalController.desiTerm.desiCH}" /> <br/><br/>
+											   <h:outputLabel value="#{bundle['terminal.common.lang.es']} : " id="langes" for="inputes" />
+											   <p:inputText id="inputes" name="inputes" value="#{terminalController.desiTerm.desiES}" /> <br/><br/>
+											   <h:outputLabel value="#{bundle['terminal.common.lang.de']} : " id="langde" for="inputde" />
+											   <p:inputText id="inputde" name="inputde" value="#{terminalController.desiTerm.desiDE}" /> <br/><br/>
+											   <h:outputLabel value="#{bundle['terminal.common.lang.nl']} : " id="langnl" for="inputnl" />
+											   <p:inputText id="inputnl" name="inputnl" value="#{terminalController.desiTerm.desiNL}" /> <br/><br/>
+										   </div>
+
+										   <div class="row">
+										   		<div class="col-sm-8">
+
+										   		</div>
+										   		<div class="col-md-2 col-md-offset-1)">
+										   			<p:commandButton id="btnAnnulerMessDefa" value="#{bundle['terminal.common.button.fermer']}"
+										   			class="commandButton btnCancel" onclick="PF('dlgDesiLang').hide();"
+										   			process="@this" />
+										   		</div>
+										   </div>
+										  </h:panelGroup>
+									</p:dialog>
+								</div>
+
+								<div class="lineFormInput">
+									<h:outputLabel value="#{bundle['terminal.form.sectgeo']} : " id="labelSectGeo" for="sectGeo" />
+									<p:selectOneMenu id="sectGeo" class="listBoxMargin"
+											value="#{terminalController.terminalViewModel.modiTerm.sectGeog}"
+											converter="#{terminalController.sectionGeoConverter}"
+											style="width: 150px">
+											<f:selectItem itemLabel="" itemValue="" />
+											<f:selectItems
+												value="#{terminalController.terminalViewModel.listSectGeo}"
+												var="sectGeo" itemLabel="#{sectGeo.desiSectGeog}"
+												itemValue="#{sectGeo.codeSectGeog}" />
+									</p:selectOneMenu>
+								</div>
+								<div class="lineFormInput">
+									<h:outputLabel value="#{bundle['terminal.form.atelier']} : " id="labelAtel" for="atel" />
+									<p:selectOneMenu id="atel" class="listBoxMargin"
+											value="#{terminalController.terminalViewModel.modiTerm.atel}"
+											converter="#{terminalController.atelierConverter}"
+											style="width: 150px">
+											<f:selectItem itemLabel="" itemValue="" />
+											<f:selectItems
+												value="#{terminalController.terminalViewModel.listAtelier}"
+												var="atel" itemLabel="#{atel.desiAtel}"
+												itemValue="#{atel.codeAtel}" />
+									</p:selectOneMenu>
+								</div>
+								<!-- <div class="lineFormInput">
+							        <p:outputLabel for="machMult" id="labelMachMult" value="#{bundle['terminal.form.multmach']} :" />
+									<h:selectOneRadio id="machMult" name="machMult" value="#{terminalController.terminalViewModel.modiTerm.flagMultMach}" display="inline" >
+									        <f:selectItem itemLabel="Oui" itemValue="O" />
+									        <f:selectItem itemLabel="Non" itemValue="N" />
+									</h:selectOneRadio>
+								</div>
+								-->
+								
+								<!-- <div class="lineFormInput">
+									<h:outputLabel value="{bundle['terminal.form.machdefa']} : " id="labelMachDefa" for="machDefa" />
+									<p:autoComplete id="machDefa" name="machDefa"
+										value="{terminalController.terminalViewModel.modiTerm.machDefa}"
+										completeMethod="{terminalController.completeMachine}"
+										var="ma" itemLabel="{ma.codeMachSite}" itemValue="#{ma}"
+										converter="{terminalController.machineConverter}"
+										forceSelection="false" maxResults="10" minQueryLength="1"
+										scrollHeight="250">
+										<p:column>
+											<h:outputText value="{ma.codeMachSite}" />
+										</p:column>
+										<p:column>
+											<h:outputText value="{ma.desiMach}" />
+										</p:column>
+									</p:autoComplete>
+								</div>
+								-->
+								<div class="lineFormInput">
+							        <h:outputLabel value="#{bundle['terminal.form.typeterm']} : " id="labelTypeTerm" for="typeTerm" />
+			       					<p:selectOneMenu id="typeTerm" value="#{terminalController.terminalViewModel.modiTerm.typeAffi}" class="listBoxMargin"
+			       						style="width: 150px">
+			       						<p:ajax listener="#{terminalController.disableTabView}" process="@form" update=":tabView" />
+			       						<!-- <p:ajax listener="#{terminalController.disableFormInput}" process="@form" update=":tabView" /> -->
+			       						<f:selectItem itemLabel="" itemValue="" />
+			       						<f:selectItem itemLabel="BADGEUSE" itemValue="BADGEUSE"/>
+			       						<f:selectItem itemLabel="CONSOLE" itemValue="CONSOLE"/>
+			       						<f:selectItem itemLabel="DAM" itemValue="DAM"/>
+			       						<f:selectItem itemLabel="PORTABLE" itemValue="PORTABLE"/>
+			       						<f:selectItem itemLabel="2x16" itemValue="2x16"/>
+			       						<f:selectItem itemLabel="2x40" itemValue="2x40"/>
+			       						<f:selectItem itemLabel="4x40" itemValue="4x40"/>
+			       					</p:selectOneMenu>
+			       					<span class="required">*</span>
+								</div>
+								<div class="lineFormInput">
+									<h:outputLabel value="#{bundle['terminal.form.grouutil']} : " id="labelGrouUser" for="grouUser" />
+									<p:inputText id="grouUser" name="grouUser" label="#{bundle['terminal.form.grouutil']}" value="#{terminalController.terminalViewModel.modiTerm.grouUtilQt}" disabled="#{terminalController.disableTerminalPortable}"/>
+								</div>
+								<div class="lineFormInput">
+									<h:outputLabel value="#{bundle['terminal.form.motdepass']} : " id="labelPass" for="pass" />
+<!-- 									<p:inputText id="pass" name="pass" label="#{bundle['terminal.form.motdepass']}" value="#{terminalController.terminalViewModel.modiTerm.passUtilQt}" />  -->
+									<p:inputText type	="password" id="pass" name="pass" label="#{bundle['terminal.form.motdepass']}" value="#{terminalController.terminalViewModel.modiTerm.passUtilQt}" disabled="#{terminalController.disableTerminalPortable}"/>
+								</div>
+								<div class="lineFormInput">
+									<h:outputLabel value="#{bundle['terminal.form.host']} : " id="labelHost" for="host" />
+									<p:inputText id="host" name="host" label="#{bundle['terminal.form.host']}" value="#{terminalController.terminalViewModel.modiTerm.hostUtilQt}" disabled="#{terminalController.disableTerminalPortable}"/>
+								</div>
+								<div class="lineFormInput">
+									<h:outputLabel value="#{bundle['terminal.form.langterm']} : " id="labelLangTerm" for="langTerm" />
+									<p:selectOneMenu id="langTerm" value="#{terminalController.terminalViewModel.modiTerm.langUtilQt}" class="listBoxMargin" style="width: 150px" disabled="#{terminalController.disableTerminalPortable}" >
+			       						<f:selectItem itemLabel="" itemValue="" />
+			       						<f:selectItem itemLabel="Anglais" itemValue="EN"/>
+			       						<f:selectItem itemLabel="Anglais (US)" itemValue="EN_US"/>
+			       						<f:selectItem itemLabel="Français" itemValue="FR"/>
+			       						<f:selectItem itemLabel="Allemand" itemValue="AL"/>
+			       						<f:selectItem itemLabel="Espagnol" itemValue="ES"/>
+			       						<f:selectItem itemLabel="Portugais" itemValue="PR" />
+			       						<f:selectItem itemLabel="Portugais (Bresilien)" itemValue="PR_BE"/>
+			       						<f:selectItem itemLabel="Italien" itemValue="IT"/>
+			       						<f:selectItem itemLabel="Hollandais" itemValue="HL"/>
+			       						<f:selectItem itemLabel="Chinois" itemValue="ZH"/>
+			       					</p:selectOneMenu>
+								</div>
+								<div class="lineFormInput">
+									<h:outputLabel value="#{bundle['terminal.form.dpi']} : " id="labelDpi" for="dpi" />
+									<p:selectOneMenu id="dpi" value="#{terminalController.terminalViewModel.modiTerm.dpiUtilQt}" class="listBoxMargin" style="width: 150px" disabled="#{terminalController.disableTerminalPortable}" >
+			       						<f:selectItem itemLabel="" itemValue=" " />
+			       						<f:selectItem itemLabel="ldpi" itemValue="ldpi"/>
+			       						<f:selectItem itemLabel="mdpi" itemValue="mdpi"/>
+			       						<f:selectItem itemLabel="hdpi" itemValue="hdpi"/>
+			       						<f:selectItem itemLabel="xhdpi" itemValue="xhdpi"/>
+			       					</p:selectOneMenu>
+								</div>
+								<div class="lineFormInput">
+									<h:outputLabel value="#{bundle['terminal.form.modeCade']} : " id="labelModeAffiCade" for="modeAffiCade" />
+									<p:selectOneMenu id="modeAffiCade" value="#{terminalController.terminalViewModel.modiTerm.modeAffiCade}"  class="listBoxMargin" style="width: 150px" >
+			       						<f:selectItem itemLabel="#{bundle['terminal.form.modeCade.tpscyc']}" itemValue="0" />
+			       						<f:selectItem itemLabel="#{bundle['terminal.form.modeCade.cycmin']}" itemValue="1"/>
+			       						<f:selectItem itemLabel="#{bundle['terminal.form.modeCade.cycheu']}" itemValue="2"/>
+			       						<f:selectItem itemLabel="#{bundle['terminal.form.modeCade.tpspie']}" itemValue="3"/>
+			       						<f:selectItem itemLabel="#{bundle['terminal.form.modeCade.piemin']}" itemValue="4"/>
+			       						<f:selectItem itemLabel="#{bundle['terminal.form.modeCade.pieheu']}" itemValue="5"/>
+			       					</p:selectOneMenu>
+								</div>
+
+								<p:tabView id="tabViewType" activeIndex="#{terminalController.terminalViewModel.tabViewType}" styleClass="tabViewTabDark">
+									<p:tab title="#{bundle['terminal.form.title.typetr']}" disabled="#{terminalController.disableTabViewTypeTr}">
+										<div class="lineFormInput">
+											<h:outputLabel value="#{bundle['terminal.form.messdefa1']} : " id="labelMessDefa1" for="messDefa1" />
+											<p:inputText id="messDefa1" name="messDefa1" class="inputWithImg" readonly="true" value="#{terminalController.terminalViewModel.messageDefault1.desi}"/>
+											<p:commandButton value="" actionListener="#{terminalController.selectMessage}"
+												class="commandButton btnOther buttonImgMessDefa" onclick="PF('dlgMessDefa').show();">
+												<f:param name="id" value="1" />
+											</p:commandButton>
+										</div>
+										<div class="lineFormInput">
+									        <p:outputLabel for="messDefa2" id="labelMessDefa2" value="#{bundle['terminal.form.messdefa2']} :" />
+											<p:inputText id="messDefa2" name="messDefa2" class="inputWithImg" readonly="true" value="#{terminalController.terminalViewModel.messageDefault2.desi}" />
+											<p:commandButton value="" actionListener="#{terminalController.selectMessage}"
+												class="commandButton btnOther buttonImgMessDefa" onclick="PF('dlgMessDefa').show();">
+												<f:param name="id" value="2" />
+											</p:commandButton>
+										</div>
+										<div class="lineFormInput">
+											<h:outputLabel value="#{bundle['terminal.form.messdefa3']} : " id="labelMessDefa3" for="messDefa3" />
+											<p:inputText id="messDefa3" name="messDefa3" class="inputWithImg" readonly="true" value="#{terminalController.terminalViewModel.messageDefault3.desi}"/>
+											<p:commandButton value="" actionListener="#{terminalController.selectMessage}"
+												class="commandButton btnOther buttonImgMessDefa" onclick="PF('dlgMessDefa').show();">
+												<f:param name="id" value="3" />
+											</p:commandButton>
+										</div>
+										<div class="lineFormInput">
+											<h:outputLabel value="#{bundle['terminal.form.messdefa4']} : " id="labelMessDefa4" for="messDefa4" />
+											<p:inputText id="messDefa4" name="messDefa4" class="inputWithImg" readonly="true" value="#{terminalController.terminalViewModel.messageDefault4.desi}"/>
+											<p:commandButton value="" actionListener="#{terminalController.selectMessage}"
+												class="commandButton btnOther buttonImgMessDefa" onclick="PF('dlgMessDefa').show();">
+												<f:param name="id" value="4" />
+											</p:commandButton>
+										</div>
+
+										<p:dialog header="#{bundle['terminal.form.title.messdefa']}" class="overflowHidden" widgetVar="dlgMessDefa" modal="true" height="400" width="550">
+										   <p:tabView style="height: 360px;">
+											   <p:tab title="#{bundle['terminal.form.title.production']}">
+													 <p:dataTable var="mes" class="tableMessageDefaut" value="#{terminalController.terminalViewModel.listMessageDefaultSimpleOf}" rowKey="#{mes}" scrollable="true" scrollHeight="300"
+													selectionMode="single" selection="#{terminalController.terminalViewModel.messageDefault}" update=":tabView">
+													    <p:ajax event="rowSelect" listener="#{terminalController.selectDefaultMessage}" update=":tabView" />
+													    <p:column >
+									            			<h:outputText value="#{mes.desi}" />
+													    </p:column>
+													 </p:dataTable>
+											   </p:tab>
+											   <p:tab title="#{bundle['terminal.form.title.multof']}">
+													<p:dataTable var="mes" class="tableMessageDefaut" value="#{terminalController.terminalViewModel.listMessageDefaultMultiOf}" rowKey="#{mes}" scrollable="true" scrollHeight="300"
+														selectionMode="single" selection="#{terminalController.terminalViewModel.messageDefault}" update=":tabView">
+													    <p:ajax event="rowSelect" listener="#{terminalController.selectDefaultMessage}" update=":tabView" />
+													    <p:column >
+									            			<h:outputText value="#{mes.desi}" />
+													    </p:column>
+													 </p:dataTable>
+											   </p:tab>
+										   </p:tabView>
+										   <div class="row">
+										   		<div class="col-md-8">
+										   		</div>
+										   		<div class="col-md-2 col-md-offset-1)">
+										   			<p:commandButton id="btnAnnulerMessDefa" value="#{bundle['terminal.common.button.annuler']}" class="commandButton btnCancel btnAnnulerMessDefa" onclick="PF('dlgMessDefa').hide();" />
+										   		</div>
+										   </div>
+										</p:dialog>
+									</p:tab>
+									<p:tab id="tabTypeTcl" title="#{bundle['terminal.form.title.typetcl']}" disabled="#{terminalController.disableTabViewTypeTcl}">
+										<div class="lineFormInput">
+										  <h:outputLabel value="#{bundle['terminal.form.nomconsaccutcl']} : " id="labelNomConsAccuTcl" for="nomConsAccuTcl" />
+										  <p:selectOneMenu id="nomConsAccuTcl" class="listBoxMargin"
+													converter="#{terminalController.terminalConsoleConverter}"
+													value="#{terminalController.terminalViewModel.modiTerm.codeCons}"
+													style="width: 200px">
+													<f:selectItems
+														value="#{terminalController.terminalViewModel.listTerminalConsole}"
+														var="tc" itemLabel="#{tc.codeCons}"
+														itemValue="#{tc.codeCons}" />
+											</p:selectOneMenu>
+											<span id="requiredNomConsAccu" class="required">*</span>
+										</div>
+										<div class="lineFormInput">
+											 <h:outputLabel value="#{bundle['terminal.form.codeThem']} : " id="labelCodeThemTerm" for="codeThemTerm" />
+											 <p:selectOneMenu id="codeThemTerm" class="listBoxMargin"
+													converter="#{terminalController.terminalConsoleThemeConverter}"
+													value="#{terminalController.terminalViewModel.modiTerm.codeThem}"
+													style="width: 200px">
+													<f:selectItems
+														value="#{terminalController.terminalViewModel.listTerminalConsoleTheme}"
+														var="tc" itemLabel="#{tc.desiThem}"
+														itemValue="#{tc.codeThem}" />
+											</p:selectOneMenu>
+										</div>
+										<div class="lineFormInput">
+									        <p:outputLabel for="supeHtml" id="labelSupeHtml" value="#{bundle['terminal.form.supehtml']} :" />
+											<h:selectOneRadio id="supeHtml" display="inline" value="#{terminalController.terminalViewModel.modiTerm.flagSupe}">
+											        <f:selectItem itemLabel="Oui" itemValue="O" />
+											        <f:selectItem itemLabel="Non" itemValue="N" />
+											</h:selectOneRadio>
+										</div>
+										<!-- <div class="lineFormInput">
+											<h:outputLabel value="#{bundle['terminal.form.nomsupehtml']} : " id="labelNomSupeHtml" for="nomSupeHtml" />
+											<p:inputText id="nomSupeHtml" name="nomSupeHtml" label="#{bundle['terminal.form.nomsupehtml']}" value="#{terminalController.terminalViewModel.modiTerm.nomSupe}"/>
+										</div> -->
+										<div class="lineFormInput">
+											<h:outputLabel value="#{bundle['terminal.form.feneinit']} : " id="labelFeneInit" for="feneInit" />
+											<p:inputText id="feneInit" name="feneInit" label="#{bundle['terminal.form.feneinit']}" value="#{terminalController.terminalViewModel.modiTerm.consUtilQt}" />
+											<span class="required">*</span>
+										</div>
+									</p:tab>
+									<p:tab title="" titleStyleClass="tabInvisible">
+
+									</p:tab>
+								</p:tabView>
+							</div>
+
+							<div class="col-md-6 contentRight">
+								<p:tabView widgetVar="tabViewTabRight" id="tabViewTabRight" activeIndex="#{terminalController.terminalViewModel.tabViewRight}" styleClass="tabViewTabDark">
+									<p:tab title="#{bundle['terminal.form.title.menu']}" disabled="#{terminalController.disableTabViewMenu}">
+										<div class="row">
+											<p:dataTable id="tableMenu" class="col-md-12 tabRight" value="#{terminalController.terminalViewModel.listTerminalMenu}"
+											var="termMenu" rowKey="#{termMenu.pk.scen.codeScen}" height="300" scrollable="true" scrollHeight="300"
+											selectionMode="single" selection="#{terminalController.terminalViewModel.selectedTerminalMenu}">
+
+											    <p:ajax event="rowSelect" listener="#{terminalController.onRowSelectTermMenu}" process="@form" update=":tabView:formAddTerminal:tabViewTabRight:formMenu :tabView:formAddTerminal:tabViewTabRight:tableMenu"/>
+											    <p:column headerText="#{bundle['terminal.form.tab.title.service']}">
+											        <h:outputText value="#{termMenu.pk.serv.desiServ}" />
+											    </p:column>
+
+											    <p:column headerText="#{bundle['terminal.form.tab.title.scenario']}">
+											        <h:outputText value="#{termMenu.pk.scen.codeScen}" />
+											    </p:column>
+
+											    <p:column headerText="#{bundle['terminal.form.tab.title.numemenu']}">
+											        <h:outputText value="#{termMenu.numeMenu}" />
+											    </p:column>
+
+											    <p:column headerText="#{bundle['terminal.form.tab.title.numefonc']}">
+											        <h:outputText value="#{termMenu.numeFonc}" />
+											    </p:column>
+											</p:dataTable>
+										</div>
+										<h:panelGroup id="formMenu">
+											<div class="row">
+												<div class="lineFormInput">
+													<h:outputLabel value="#{bundle['terminal.form.codeserv']} : " id="labelCodeServMenu" for="codeServMenu" />
+													<p:selectOneMenu id="codeServMenu" class="listBoxMargin"
+															converter="#{terminalController.serviceConverter}"
+															value="#{terminalController.terminalViewModel.modiTermMenu.pk.serv}"
+															style="width: 150px">
+															<f:selectItem itemLabel="" itemValue="" />
+															<f:selectItems
+																value="#{terminalController.terminalViewModel.listService}"
+																var="serv" itemLabel="#{serv.desiServ}"
+																itemValue="#{serv}" />
+													</p:selectOneMenu> <span class="required">*</span>
+
+												</div>
+												<div class="lineFormInput">
+													<h:outputLabel value="#{bundle['terminal.form.codescen']} : " id="labelCodeScenMenu" for="codeScenMenu" />
+													<p:autoComplete id="codeScenMenu" name="codeScenMenu"
+														value="#{terminalController.terminalViewModel.modiTermMenu.pk.scen}"
+														completeMethod="#{terminalController.completeScenario}"
+														var="scen" itemLabel="#{scen.codeScen}" itemValue="#{scen}"
+														converter="#{terminalController.scenarioConverter}"
+														forceSelection="false" maxResults="10" minQueryLength="1"
+														scrollHeight="250">
+														<p:column>
+															<h:outputText value="#{scen.codeScen}" />
+														</p:column>
+														<p:column>
+															<h:outputText value="#{scen.desiScen}" />
+														</p:column>
+													</p:autoComplete>
+													<span class="required">*</span>
+												</div>
+												<div class="lineFormInput">
+													<h:outputLabel value="#{bundle['terminal.form.numemenu']} : " id="labelNumeMenu" for="numeMenu" />
+													<p:inputText id="numeMenu" name="numeMenu" label="#{bundle['terminal.form.numemenu']}" value="#{terminalController.terminalViewModel.modiTermMenu.numeMenu}"/>
+													<span class="required">*</span>
+												</div>
+												<div class="lineFormInput">
+													<h:outputLabel value="#{bundle['terminal.form.numefonc']} : " id="labelNumeFonc" for="numeFonc" />
+													<p:inputText id="numeFonc" name="numeFonc" label="#{bundle['terminal.form.numefonc']}" value="#{terminalController.terminalViewModel.modiTermMenu.numeFonc}"/>
+													<span class="required">*</span>
+												</div>
+											</div>
+										</h:panelGroup>
+										<div class="row">
+											<div class="col-sm-4 alignCenter">
+												<p:commandButton id="btnMenuTclSupr"
+													value="#{bundle['terminal.common.button.supprimer']}"
+													class="commandButton btnOther"
+													actionListener="#{terminalController.deleteSelectedMenu}"
+													process="@form"
+													update=":tabView:formAddTerminal:tabViewTabRight:tableMenu :tabView:formAddTerminal:tabViewTabRight:formMenu" />
+											</div>
+											<div class="col-sm-4 alignCenter">
+												<p:commandButton id="btnMenuTclNouv" type="submit"
+													value="#{bundle['terminal.common.button.nouveau']}"
+													class="commandButton btnOther"
+													actionListener="#{terminalController.addNewMenu}"
+													process="@form"
+													update=":tabView:formAddTerminal:tabViewTabRight:tableMenu :tabView:formAddTerminal:tabViewTabRight:formMenu" />
+											</div>
+											<div class="col-sm-4 alignCenter">
+												<p:commandButton id="btnMenuTclEnre" value="#{bundle['terminal.common.button.ajouter']}"
+													class="commandButton btnOther" type="submit"
+													actionListener="#{terminalController.addSaveMenu}"
+													process="@form"
+													update=":tabView:formAddTerminal:tabViewTabRight:tableMenu :tabView:formAddTerminal:tabViewTabRight:formMenu" />
+											</div>
+										</div>
+									</p:tab>
+									<p:tab title="#{bundle['terminal.form.title.decltcl']}" disabled="#{terminalController.disableTabViewDeclTcl}">
+										<div class="row">
+											<p:dataTable id="tableDeclTcl" class="col-md-12 tabRight" value="#{terminalController.terminalViewModel.listTerminalDeclTcl}"
+											var="termDeclTcl" rowKey="#{termDeclTcl.pk.codeDecl}" height="300" scrollable="true" scrollHeight="300"
+											selectionMode="single" selection="#{terminalController.terminalViewModel.selectedTermDeclTcl}">
+
+											    <p:ajax event="rowSelect" listener="#{terminalController.onRowSelectDeclTcl}" process="@form" update=":tabView:formAddTerminal:tabViewTabRight:formDeclTcl :tabView:formAddTerminal:tabViewTabRight:tableDeclTcl"/>
+											    <p:column headerText="#{bundle['terminal.form.tab.title.terminal']}">
+											        <h:outputText value="#{termDeclTcl.pk.term.codeTerm}" />
+											    </p:column>
+
+											    <p:column headerText="#{bundle['terminal.form.tab.title.scenario']}">
+											        <h:outputText value="#{termDeclTcl.scen.codeScen}" />
+											    </p:column>
+
+											    <p:column headerText="#{bundle['terminal.form.tab.title.declenchement']}">
+											        <h:outputText value="#{termDeclTcl.pk.codeDecl}" />
+											    </p:column>
+
+											    <p:column headerText="#{bundle['terminal.form.tab.title.peripherique']}">
+											        <h:outputText value="#{termDeclTcl.pk.codePeri}" />
+											    </p:column>
+											</p:dataTable>
+										</div>
+										<h:panelGroup id="formDeclTcl">
+											<div class="row">
+												<div class="lineFormInput">
+													<h:outputLabel value="#{bundle['terminal.form.codescen']} : " id="labelCodeScen" for="codeScen" />
+													<p:autoComplete id="codeScen" name="codeScen"
+														value="#{terminalController.terminalViewModel.modiTermDeclTcl.scen}"
+														completeMethod="#{terminalController.completeScenario}"
+														var="scen" itemLabel="#{scen.codeScen}" itemValue="#{scen}"
+														converter="#{terminalController.scenarioConverter}"
+														forceSelection="false" maxResults="10" minQueryLength="1"
+														scrollHeight="250">
+														<p:column>
+															<h:outputText value="#{scen.codeScen}" />
+														</p:column>
+														<p:column>
+															<h:outputText value="#{scen.desiScen}" />
+														</p:column>
+													</p:autoComplete>
+													<span class="required">*</span>
+												</div>
+												<div class="lineFormInput">
+													<h:outputLabel value="#{bundle['terminal.form.codedecl']} : " id="labelCodeDecl" for="codeDecl" />
+													<p:inputText id="codeDecl" name="codeDecl" label="#{bundle['terminal.form.codedecl']}" value="#{terminalController.terminalViewModel.modiTermDeclTcl.pk.codeDecl}"/>
+													<span class="required">*</span>
+												</div>
+												<div class="lineFormInput">
+													<h:outputLabel value="#{bundle['terminal.form.codeperi']} : " id="labelCodePeri" for="codePeri" />
+													<p:inputText id="codePeri" name="codePeri" class="inputOneLetter" label="#{bundle['terminal.form.codeperi']}" value="#{terminalController.terminalViewModel.modiTermDeclTcl.pk.codePeri}"/>
+												</div>
+											</div>
+										</h:panelGroup>
+										<div class="row">
+											<div class="col-sm-4 alignCenter">
+												<p:commandButton id="btnDeclTclSupr"
+													value="#{bundle['terminal.common.button.supprimer']}"
+													class="commandButton btnOther"
+													actionListener="#{terminalController.deleteSelectedDeclTcl}"
+													process="@form"
+													update=":tabView:formAddTerminal:tabViewTabRight:tableDeclTcl :tabView:formAddTerminal:tabViewTabRight:formDeclTcl" />
+											</div>
+											<div class="col-sm-4 alignCenter">
+												<p:commandButton id="btnDeclTclNouv" value="#{bundle['terminal.common.button.nouveau']}"
+													class="commandButton btnOther" type="submit"
+													actionListener="#{terminalController.addNewDeclTcl}"
+													process="@form"
+													update=":tabView:formAddTerminal:tabViewTabRight:tableDeclTcl :tabView:formAddTerminal:tabViewTabRight:formDeclTcl" />
+											</div>
+											<div class="col-sm-4 alignCenter">
+												<p:commandButton id="btnDeclTclEnre" value="#{bundle['terminal.common.button.ajouter']}"
+													class="commandButton btnOther" type="submit"
+													actionListener="#{terminalController.addSaveDeclTcl}"
+													process="@form"
+													update=":tabView:formAddTerminal:tabViewTabRight:tableDeclTcl :tabView:formAddTerminal:tabViewTabRight:formDeclTcl"/>
+											</div>
+										</div>
+									</p:tab>
+									<p:tab title="#{bundle['terminal.form.title.decltr']}" disabled="#{terminalController.disableTabViewDeclTr}">
+										<div class="row">
+											<p:dataTable id="tableDeclTr" class="col-md-12 tabRight" value="#{terminalController.terminalViewModel.listTerminalDeclTr}"
+											var="termDeclTr" rowKey="#{termDeclTr.pk.codeDecl}" height="300" scrollable="true" scrollHeight="300"
+											selectionMode="single" selection="#{terminalController.terminalViewModel.selectedTermDeclTr}">
+
+											    <p:ajax event="rowSelect" listener="#{terminalController.onRowSelectDeclTr}" process="@form" update=":tabView:formAddTerminal:tabViewTabRight:formDeclTr :tabView:formAddTerminal:tabViewTabRight:tableDeclTr"/>
+												<p:column headerText="#{bundle['terminal.form.tab.title.terminal']}">
+											        <h:outputText value="#{termDeclTr.pk.term.codeTerm}" />
+											    </p:column>
+
+											    <p:column headerText="#{bundle['terminal.form.tab.title.scenario']}">
+											        <h:outputText value="#{termDeclTr.scen.codeScen}" />
+											    </p:column>
+
+											    <p:column headerText="#{bundle['terminal.form.tab.title.declenchement']}">
+											        <h:outputText value="#{termDeclTr.pk.codeDecl}" />
+											    </p:column>
+
+											    <p:column headerText="#{bundle['terminal.form.tab.title.peripherique']}">
+											        <h:outputText value="#{termDeclTr.codePeri}" />
+											    </p:column>
+											</p:dataTable>
+										</div>
+										<h:panelGroup id="formDeclTr">
+											<div class="row">
+												<div class="lineFormInput">
+													<h:outputLabel value="#{bundle['terminal.form.codescen']} : " id="labelCodeScenDeclTr" for="codeScenDeclTr" />
+													<p:autoComplete id="codeScenDeclTr" name="codeScenDeclTr"
+														value="#{terminalController.terminalViewModel.modiTermDeclTr.scen}"
+														completeMethod="#{terminalController.completeScenario}"
+														var="scen" itemLabel="#{scen.codeScen}" itemValue="#{scen}"
+														converter="#{terminalController.scenarioConverter}"
+														forceSelection="false" maxResults="10" minQueryLength="1"
+														scrollHeight="250">
+														<p:column>
+															<h:outputText value="#{scen.codeScen}" />
+														</p:column>
+														<p:column>
+															<h:outputText value="#{scen.desiScen}" />
+														</p:column>
+													</p:autoComplete>
+													<span class="required">*</span>
+												</div>
+												<div class="lineFormInput">
+													<h:outputLabel value="#{bundle['terminal.form.declenchement']} : " id="labelDeclDeclTr" for="declDeclTr" />
+													<p:inputText id="declDeclTr" name="declDeclTr" label="#{bundle['terminal.form.declenchement']}" value="#{terminalController.terminalViewModel.modiTermDeclTr.pk.codeDecl}"/>
+													<span class="required">*</span>
+												</div>
+												<div class="lineFormInput">
+													<h:outputLabel value="#{bundle['terminal.form.codeperi']} : " id="labelCodePeriDeclTr" for="codePeriDeclTr" />
+													<p:inputText id="codePeriDeclTr" name="codePeriDeclTr" label="#{bundle['terminal.form.codeperi']}" class="inputOneLetter" value="#{terminalController.terminalViewModel.modiTermDeclTr.codePeri}"/>
+												</div>
+											</div>
+										</h:panelGroup>
+										<div class="row">
+											<div class="col-sm-4 alignCenter">
+												<p:commandButton id="btnDeclTrSupr"
+													value="#{bundle['terminal.common.button.supprimer']}"
+													class="commandButton btnOther"
+													actionListener="#{terminalController.deleteSelectedDeclTr}"
+													process="@form"
+													update=":tabView:formAddTerminal:tabViewTabRight:tableDeclTr :tabView:formAddTerminal:tabViewTabRight:formDeclTr" />
+											</div>
+											<div class="col-sm-4 alignCenter">
+												<p:commandButton id="btnDeclTrNouv" value="#{bundle['terminal.common.button.nouveau']}"
+													class="commandButton btnOther" type="submit"
+													actionListener="#{terminalController.addNewDeclTr}"
+													process="@form"
+													update=":tabView:formAddTerminal:tabViewTabRight:tableDeclTr :tabView:formAddTerminal:tabViewTabRight:formDeclTr" />
+											</div>
+											<div class="col-sm-4 alignCenter">
+												<p:commandButton id="btnDeclTrEnre" value="#{bundle['terminal.common.button.ajouter']}"
+													class="commandButton btnOther" type="submit"
+													actionListener="#{terminalController.addSaveDeclTr}"
+													process="@form"
+													update=":tabView:formAddTerminal:tabViewTabRight:tableDeclTr :tabView:formAddTerminal:tabViewTabRight:formDeclTr" />
+											</div>
+										</div>
+									</p:tab>
+									<p:tab title="#{bundle['terminal.form.title.portseri']}" disabled="#{terminalController.disableTabViewPortSeri}">
+										<div class="row">
+											<p:dataTable id="tablePortSeri" var="portSeri" value="#{terminalController.terminalViewModel.listTerminalPortSerie}" class="col-md-12 tabRight"
+												rowKey="#{portSeri.pk}" height="300" scrollable="true" scrollHeight="300"
+												selectionMode="single" selection="#{terminalController.terminalViewModel.selectedTermPortSeri}">
+
+												<p:ajax event="rowSelect" listener="#{terminalController.onRowSelectPortSeri}" process="@form" update=":tabView:formAddTerminal:tabViewTabRight:formPortSeri :tabView:formAddTerminal:tabViewTabRight:tablePortSeri"/>
+											    <p:column headerText="#{bundle['terminal.form.tab.title.code']}">
+											        <h:outputText value="#{portSeri.pk.term.codeTerm}" />
+											    </p:column>
+
+											    <p:column headerText="#{bundle['terminal.form.tab.title.codeport']}">
+											        <h:outputText value="#{portSeri.pk.codePort}" />
+											    </p:column>
+
+											    <p:column headerText="#{bundle['terminal.form.tab.title.mode']}">
+											        <h:outputText value="#{portSeri.modeGest}" />
+											    </p:column>
+
+											    <p:column headerText="#{bundle['terminal.form.tab.title.tramdebu']}">
+											        <h:outputText value="#{portSeri.tramUtilDebu}" />
+											    </p:column>
+											    <p:column headerText="#{bundle['terminal.form.tab.title.tramfin']}">
+											        <h:outputText value="#{portSeri.tramUtilFin}" />
+											    </p:column>
+											    <p:column headerText="#{bundle['terminal.form.tab.title.coef']}">
+											        <h:outputText value="#{portSeri.coefMult}" />
+											    </p:column>
+											</p:dataTable>
+										</div>
+										<h:panelGroup id="formPortSeri">
+											<div class="row" id="testTab">
+												<div class="row littleSelectMenu">
+													<div class="lineFormInput">
+															<h:outputLabel value="#{bundle['terminal.form.codeport']} : " id="labelCodePortPortSeri" for="codePortPortSeri" class="labelMarginRight"/>
+									       					<p:selectOneMenu id="codePortPortSeri" style="width: 120px" value="#{terminalController.terminalViewModel.modiTermPortSeri.pk.codePort}" >
+									       						<f:selectItem itemLabel="" itemValue="" />
+									       						<f:selectItem itemLabel="Port A" itemValue="A"/>
+									       						<f:selectItem itemLabel="Port B" itemValue="B"/>
+									       						<f:selectItem itemLabel="Port C" itemValue="C"/>
+									       						<f:selectItem itemLabel="Port D" itemValue="D"/>
+									       					</p:selectOneMenu>
+									       					<span class="required">*</span>
+
+								       					<div class="twoSelectmenu">
+															<h:outputLabel value="#{bundle['terminal.form.modegest']} : " id="labelModeGestPortSerie" for="modeGestPortSeri" class="labelMarginRight"/>
+									       					<p:selectOneMenu id="modeGestPortSeri" style="width: 120px" label="#{bundle['terminal.form.modegest']}" value="#{terminalController.terminalViewModel.modiTermPortSeri.modeGest}">
+									       						<f:selectItem itemLabel="" itemValue="" />
+									       						<f:selectItem itemLabel="#{bundle['terminal.form.emission']}" itemValue="E"/>
+									       						<f:selectItem itemLabel="#{bundle['terminal.form.reception']}" itemValue="R"/>
+									       					</p:selectOneMenu>
+								       					</div>
+													</div>
+												</div>
+												<div class="lineFormInput">
+													<h:outputLabel value="#{bundle['terminal.form.tramdebu']} : " id="labelTramDebuPortSerie" for="tramDebuPortSeri" />
+													<p:inputText id="tramDebuPortSeri" name="tramDebuPortSeri" label="#{bundle['terminal.form.tramdebu']}" class="littleInput" value="#{terminalController.terminalViewModel.modiTermPortSeri.tramUtilDebu}"/>
+												</div>
+												<div class="lineFormInput">
+													<h:outputLabel value="#{bundle['terminal.form.tramfin']} : " id="labelTramFinPortSerie" for="tramFinPortSeri" />
+													<p:inputText id="tramFinPortSeri" name="tramFinPortSeri" class="littleInput" value="#{terminalController.terminalViewModel.modiTermPortSeri.tramUtilFin}"/>
+												</div>
+												<div class="lineFormInput">
+													<h:outputLabel value="#{bundle['terminal.form.coefmultmesu']} : " id="labelCoefMultMesuPortSeri" for="coefMultMesuPortSeri" />
+													<p:inputText id="coefMultMesuPortSeri" name="coefMultMesuPortSeri" label="#{bundle['terminal.form.coefmultmesu']}" class="littleInput" value="#{terminalController.terminalViewModel.modiTermPortSeri.coefMult}"/>
+												</div>
+												<div class="lineFormInput">
+													<h:outputLabel value="#{bundle['terminal.form.traminit']} : " id="labelTramInitPortSeri" for="tramInitPortSeri" />
+													<p:inputText id="tramInitPortSeri" name="tramInitPortSeri" label="#{bundle['terminal.form.traminit']}" value="#{terminalController.terminalViewModel.modiTermPortSeri.sequInit}"/>
+												</div>
+												<div class="lineFormInput">
+													<h:outputLabel value="#{bundle['terminal.form.derntramlue']} : " id="labelDernTramLuePortSeri" for="dernTramLuePortSeri"/>
+													<p:inputText id="dernTramLuePortSeri" name="dernTramLuePortSeri" label="#{bundle['terminal.form.derntramlue']}" value="#{terminalController.terminalViewModel.modiTermPortSeri.dernTramLue}"/>
+												</div>
+											</div>
+										</h:panelGroup>
+										<div class="row">
+											<div class="col-sm-4 alignCenter">
+												<p:commandButton id="btnPortSeriSupr"
+													value="#{bundle['terminal.common.button.supprimer']}"
+													class="commandButton btnOther"
+													actionListener="#{terminalController.deleteSelectedPortSeri}"
+													process="@form"
+													update=":tabView:formAddTerminal:tabViewTabRight:tablePortSeri :tabView:formAddTerminal:tabViewTabRight:formPortSeri" />
+											</div>
+											<div class="col-sm-4 alignCenter">
+												<p:commandButton id="btnPortSeriNouv" value="#{bundle['terminal.common.button.nouveau']}"
+												class="commandButton btnOther" type="submit"
+												actionListener="#{terminalController.addNewPortSeri}"
+												process="@form"
+												update=":tabView:formAddTerminal:tabViewTabRight:tablePortSeri :tabView:formAddTerminal:tabViewTabRight:formPortSeri" />
+											</div>
+											<div class="col-sm-4 alignCenter">
+												<p:commandButton id="btnPortSeriEnre" value="#{bundle['terminal.common.button.ajouter']}"
+													class="commandButton btnOther" type="submit"
+													actionListener="#{terminalController.addSavePortSeri}"
+													process="@form"
+													update=":tabView:formAddTerminal:tabViewTabRight:tablePortSeri :tabView:formAddTerminal:tabViewTabRight:formPortSeri" />
+											</div>
+										</div>
+									</p:tab>
+								</p:tabView>
+							</div>
+						</div>
+					</p:panel>
+
+				<div class="row messageAlert">
+					<div class="col-md-8 col-md-offset-2 alignCenter">
+						<p:messages id="messages" showDetail="true" autoUpdate="true" closable="true"/>
+					</div>
+				</div>
+				<div id="buttonBottom">
+				<div class="row btnBottom">
+			    	<div class="col-sm-3 alignCenter">
+				    	<p:commandButton id="btnSupprimerOpenModal" value="#{bundle['terminal.common.button.supprimer']}"
+			    			class="commandButton btnCancel" onclick="PF('suprModal').show();"/>
+			    	</div>
+			    	<div class="col-sm-3 alignRight">
+			    		<p:commandButton id="btnDupliquer" value="#{bundle['terminal.common.button.dupliquer']}"
+			    		class="commandButton btnOther" onclick="PF('duplModal').show();"/>
+			    	</div>
+			    	<div class="col-sm-3 alignLeft">
+			    		<p:commandButton id="btnNouveau" value="#{bundle['terminal.common.button.nouveau']}"
+				    		class="commandButton btnOther"
+				    		actionListener="#{terminalController.nouveau}"
+				    		update=":tabView" />
+			    	</div>
+			    	<div class="col-sm-3 alignCenter">
+			    		<p:commandButton id="btnEnregistrer" value="#{bundle['terminal.common.button.enregistrer']}"
+			    			class="commandButton btnOk" type="submit"
+			    			actionListener="#{terminalController.enregistrer}"
+			    			process="@form"
+			    			update=":tabView:formAddTerminal :tabView:formModalDupl" />
+			    	</div>
+			    </div>
+			    </div>
+			    </h:form>
+			    
+			    <p:dialog header="#{bundle['terminal.common.button.supprimer']}" id="suprModal" class="modalSuppression" widgetVar="suprModal" modal="true" height="80" width="420">
+						<h:form id="formModalSupr" style="overflow: hidden;">
+							<div class="row" style="margin-bottom: 15px;margin-top: 8px;height: 15px;">
+								<div class="col-sm-10 col-sm-offset-1">
+									<h:outputText value="#{bundle['terminal.common.dialog.supr.confirm']} #{terminalController.terminalViewModel.modiTerm.codeTerm} ?"/>
+								</div>
+							</div>
+							<div class="row">
+								<p:commandButton id="btnSuprModa" value="#{bundle['terminal.common.button.annuler']}"
+							    		class="commandButton btnOther col-md-4 col-md-offset-1"
+										process="@this"
+										update=":tabView:formModalSupr"
+										onclick="PF('suprModal').hide();"/>
+								<p:commandButton id="btnSupprimerModa" value="#{bundle['terminal.common.button.supprimer']}"
+												class="commandButton btnCancel col-md-4 col-md-offset-1" type="submit"
+												actionListener="#{terminalController.supprimer}"
+												process="@this"
+												update=":tabView:suprModal" />
+							</div>
+						</h:form>
+				</p:dialog>
+				
+				<p:dialog header="Duplication" id="duplModal" class="modalDuplication" widgetVar="duplModal" modal="true" height="125" width="420">
+				    <h:form id="formModalDupl">
+				    	<div class="lineFormInputModal">
+							<h:outputLabel value="#{bundle['terminal.modal.numeform']} : " id="labelNumeTermModa" for="numeTermModa"/>
+							<p:inputText id="numeTermModa" name="numeTermModa" readonly="true" value="#{terminalController.terminalViewModel.modiTerm.codeTerm}"/>
+						</div>
+						<div class="lineFormInputModal">
+							<h:outputLabel value="#{bundle['terminal.modal.nouvterm']} : " id="labelNouvTermModa" for="nouvTermModa"/>
+							<p:inputText id="nouvTermModa" name="nouvTermModa" value="#{terminalController.terminalViewModel.nouvNumeTerm}"/>
+						</div>
+						<div class="row" style="margin-bottom: 15px;height: 15px;">
+							<div class="col-md-10 col-md-offset-1 alignCenter">
+								<h:outputText value="#{terminalController.terminalViewModel.errorDuplModal}" class="error"/>
+							</div>
+						</div>
+						<div class="row">
+							<p:commandButton id="btnAnnulerModa" value="#{bundle['terminal.common.button.annuler']}"
+					    		class="commandButton btnCancel col-md-4 col-md-offset-1"
+					    		actionListener="#{terminalController.resetNouvTermDupl}"
+								process="@this,nouvTermModa,numeTermModa"
+								update=":tabView:formModalDupl"
+								onclick="PF('duplModal').hide();"/>
+
+							<p:commandButton id="btnEnregistrerModa" value="#{bundle['terminal.common.button.enregistrer']}"
+								class="commandButton btnOk col-md-4 col-md-offset-1" type="submit"
+								actionListener="#{terminalController.dupliquer}"
+								process="@this,nouvTermModa,numeTermModa"
+								update=":tabView:formModalDupl" />
+						</div>
+					</h:form>
+				</p:dialog>
+	        </p:tab>
+	    </p:tabView>
+	</h:body>
+	<script type="text/javascript">
+		function closeDuplModal() {
+			PF('duplModal').hide();
+		}
+
+		function showConsoleInfo() {
+			var labelThem = $("#tabView\\:formAddTerminal\\:tabViewType\\:labelCodeThemTerm");
+			var selectThem = $("#tabView\\:formAddTerminal\\:tabViewType\\:codeThemTerm");
+			var labelNomCons = $("#tabView\\:formAddTerminal\\:tabViewType\\:labelNomConsAccuTcl");
+			var selectNomCons = $("#tabView\\:formAddTerminal\\:tabViewType\\:nomConsAccuTcl");
+			var required = $("#requiredNomConsAccu");
+			required.show();
+			labelThem.show();
+			selectThem.show();
+			labelNomCons.show();
+			selectNomCons.show();
+		}
+
+		function hideConsoleInfo() {
+			var labelThem = $("#tabView\\:formAddTerminal\\:tabViewType\\:labelCodeThemTerm");
+			var selectThem = $("#tabView\\:formAddTerminal\\:tabViewType\\:codeThemTerm");
+			var labelNomCons = $("#tabView\\:formAddTerminal\\:tabViewType\\:labelNomConsAccuTcl");
+			var selectNomCons = $("#tabView\\:formAddTerminal\\:tabViewType\\:nomConsAccuTcl");
+			var required = $("#requiredNomConsAccu");
+			required.hide();
+			labelThem.hide();
+			selectThem.hide();
+			labelNomCons.hide();
+			selectNomCons.hide();
+		}
+
+	</script>
+</html>

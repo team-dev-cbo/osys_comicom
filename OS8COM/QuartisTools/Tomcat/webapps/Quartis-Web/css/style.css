@@ -1,0 +1,1971 @@
+/* Optimised for 1680 x 1050 */
+/* Other resolution on media queries */
+body {
+    padding: 0 0 0 0;
+    margin : 0 0 0 0;
+    height: 100%;
+    width: 100%;
+    /*background-color: #EFF4FA;*/
+}
+
+
+table.identitaire {
+    background-image: url('../images/fond_titre.png');
+    width: 100%;
+    height: 45px;
+}
+
+
+table.navigation_secondaire {
+    width: 100%;
+    height: 23px;
+    border-bottom: 1px solid #EFF4FA;
+}
+
+table.navigation_principale {
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+}
+
+.tab2 {
+    height: 555px !important;
+}
+
+td.navigation_principale {
+    border: 1px solid #dddddd;
+}
+
+td.navigation_principale_contenu {
+    padding: 10 0 0 0px;
+}
+
+.f_tabbedPane_content {
+    height: 100%;
+    z-index: 0;
+    border-right: 1px solid #919B9C;
+    border-left: 1px solid #919B9C;
+    width: auto !important;
+}
+
+.f_tabbedPane_content .f_tabbedPane_tab {
+    height: 95% !important;
+    z-index: 0;
+}
+
+.f_tabbedPane {
+    border: 1px solid #919B9C;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+.f_tabbedPane_tab {
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+    background: none;
+}
+
+.f_tabbedPane_tab_mask {
+    border: none;
+    background-color: white;
+}
+
+.f_grid_dataTitle_scroll {
+    width: auto !important;
+}
+
+.f_grid_dataTitle_scroll, .f_grid_dataBody_scroll {
+    width: auto !important;
+}
+/*
+.f_dataGrid {
+    width: 1300px !important;
+}
+
+.adminProfil .dataGrid1, .adminUsers .datagrid1 {
+    width: 735px !important
+}*/
+
+.f_tabbedPane_content .navigation_principale table tbody tr td {
+    width: auto;
+    vertical-align: middle;
+}
+
+.adminprofil tr .navigation_principale_titre {
+    height: 100%;
+}
+
+/* override rcfaces - form in gray */
+input {
+    border: 1px solid #BBBBBB !important;
+}
+
+/* override rcfaces - form in gray */
+input[type=radio]{
+    border: 0px solid #BBBBBB !important;
+}
+
+.f_dateEntry {
+    border: none !important;
+    width: auto !important;
+}
+.formPanelStyle {
+    border: 1px solid #808080 !important;
+}
+
+select {
+    border: 1px solid #BBBBBB !important;
+}
+
+td.navigation_principale_titre {
+ height: 22px !important;
+ background-color: #535C69;
+ background-repeat: repeat-x;
+}
+
+td.navigation_principale_titre_texte {
+ font-family: "Arial";
+ font-size: 11px;
+ color: #FFFFFF;
+ font-weight: bold;
+ cursor: default;
+}
+
+.btnCancel, .restSearchButton {
+    background-color: #f44336 !important;/* f34a4a #fc6b6b*/
+}
+
+.btnCancelLeft {
+    margin-left: 10%;
+}
+
+.btnOk {
+    background-color: #0f9d58 !important; /*#76cf8c #91e8a6  #67C15D*/
+    color: white;
+}
+
+.btnOkRight {
+    margin-right: 10%;
+}
+
+
+.grise {
+    opacity: 0.5;
+}
+
+/** overriude commandubbton 268 line */
+.commandButton {
+    background: none;
+    background-color: #4285f4; /*#6aa6d7*/
+    border: none !important;
+    color: white;
+    font-weight: normal;
+    width: 120px;
+    height: 25px;
+    font-family: "Arial";
+    background-image: none !important;
+    cursor: pointer;
+}
+
+.commandButtonLarge {
+    width: 200px;
+}
+
+.btnImport, .btnExport, .btnOther{ /*#3872A8*  - v2 #5899CD/ #6aa6d7 */
+    background-color: #4285f4 !important;
+    background: none;
+    font-weight: normal !important;
+    background-image: none !important;
+    border: none;
+    border: 1px solid #6aa6d7 !important;
+    color: white;
+}
+
+.f_dateEntry_dd, .f_dateEntry_MM{
+    width: 22px !important;
+}
+
+.f_dateEntry_yyyy {
+    width: 34px !important;
+}
+
+.ombre, .ombre_tableau {
+    background: none !important;
+}
+
+.textAlignCenter .gridBtnCommandLink tr td{
+    width: 25% !important;
+}
+
+.textAlignRight .ombre {
+    background: none;
+}
+
+#form1:commandButtonDoExport {
+    background-color: #3872AB;
+}
+/* end override */
+
+body, td, th, p, div, span {
+ font-family: "Arial";
+ font-size: 11px;
+ color : #333333;
+}
+
+.ombre {
+    /*test*/
+  background: url(../images/ombre1.png) no-repeat bottom right;
+  margin: 7px 0px 0px 6px !important;
+  /*margin: 10px 0 10px 5px;*/
+  padding: 0px;
+}
+
+.ombre1 {
+  background: url(../images/ombre1.png) no-repeat bottom right;
+  margin: 7px 0px 0px 6px !important;
+  /*margin: 10px 0 10px 5px;*/
+  padding: 0px;
+}
+
+
+.ombre_tableau {
+  background: url(../images/ombre_tableau.png) no-repeat bottom right;
+  margin: 10px 0 10px 10px !important;
+  margin: 10px 0 10px 5px;
+  padding: 0px;
+}
+
+.boite {
+  
+  background: #FFFFFF;
+  position: relative;
+  bottom: 6px;
+  right: 6px;
+  top: -10px; /*On colle la barre au nav*/
+  }
+
+/*.popupCenter .boite, .popUpExportBtn .boite {
+    right: 0px;
+}*/
+  
+.boiteTxt {
+  padding:4px;
+}
+
+
+a {
+ color : #3872AB;
+ text-decoration: underline;
+ font-family: "Arial";
+ font-size: 10px;
+ font-weight: bold;
+}
+
+a.sub_form {
+ color : #3872AB;
+ text-decoration: underline;
+ font-family: "Arial";
+ font-size: 12px;
+ font-weight: bold;
+}
+
+a.alpha_search {
+ font-family: "Arial";
+ font-size: 11px;
+ font-weight: bold;
+ color: #C0C0C0;
+ text-decoration : none;
+}
+
+a.alpha_search:hover {
+ font-family: "Arial";
+ font-size: 15px;
+ font-weight: bold;
+ color: #3872AB;
+ text-decoration : none;
+}
+
+a.alpha_search_active {
+ font-family: "Arial";
+ font-size: 15px;
+ font-weight: bold;
+ color: #3872AB;
+ text-decoration : none;
+}
+
+td.pied {
+ font-family: "Arial";
+ font-size: 10px;
+ text-align: center;
+ width: 60%;
+}
+
+div.navigation_principale {
+ width: 213px;
+ height: 203px;
+}
+
+div.raccourcis {
+ width: 213px;
+ height: 178px;
+}
+
+div.contenu {
+ width: 752px;
+ height: 605px;
+}
+
+div.outils {
+ width: 24px;
+ height: 585px;
+}
+
+table.contenu {
+ width: 752px;
+ height: 581px;
+}
+
+table.data {
+ border-collapse: collapse;
+ width: 100%;
+}
+
+table.conteneur {
+ width: 1024px;
+ height: 100%;
+ background-color : #FFFFFF;
+}
+
+th.data {
+ height: 20px;
+ text-align : center;
+ font-family: "Arial";
+ font-weight: bold;
+}
+
+th.data_left {
+ border-left : 1px solid #EEF3F9;
+ border-right : 1px solid #3877AA;
+}
+
+th.data_right {
+ border-left : 1px solid #3877AA;
+ border-right : 1px solid #EEF3F9;
+}
+
+th.data_into {
+ border-left : 1px solid #3877AA;
+ border-right : 1px solid #3877AA;
+}
+
+
+td.data {
+ height: 20px;
+}
+
+td.data_left {
+ border-left : 1px solid #EEF3F9;
+ border-right : 1px solid #3877AA;
+}
+
+td.data_right {
+ border-left : 1px solid #3877AA;
+ border-right : 1px solid #EEF3F9;
+}
+
+td.data_into {
+ border-left : 1px solid #3877AA;
+ border-right : 1px solid #3877AA;
+}
+
+div.move {
+ position: absolute;
+ border: 2px dotted #808080;
+ cursor: move;
+}
+
+.unselectable {
+ -moz-user-focus: ignore;
+ -moz-user-input: disabled;
+ -moz-user-select: none;
+}
+
+.pager {
+ text-align: center;
+ background-color: #FFFFFF;
+ border: 0px;
+ margin: 0 auto;
+width: 100%;
+}
+
+.button {
+ border: 1px solid #3877AA;
+ background-color: #FFFFFF;
+ text-align: left;
+ vertical-align: middle;
+}
+
+/*
+.tabbedpane {
+ background-color: #6692BC;
+}
+*/
+/*
+.commandButton {
+ border: 1px solid #3877AA;
+ background-color: #FFFFFF;
+ width: 120px;
+ height: 25px;
+ font-family: "Arial";
+ font-weight: bold;
+ background-repeat: no-repeat;
+ background-position: 5px center;
+}
+*/
+.commandLink {
+ border: 1px solid #3877AA;
+ background-color: #FFFFFF;
+ width: 180px;
+ height: 23px;
+ background-repeat: no-repeat;
+ background-position: 5px center;
+ font-weight: bold !important;
+ display: block;
+ text-align: center;
+ color: white !important;
+ line-height: 22px;
+ font-size: 12px;
+ text-decoration: none;
+ cursor: default;
+ font-family: "Arial";
+ background-image: url(../images/display.png);
+}
+/*
+.commandButtonFavoris {
+ border: 1px solid #3877AA;
+ background-color: #FFFFFF;
+ width: 120px;
+ height: 25px;
+ font-weight: bold;
+ font-family: "Arial";
+ background-image: url(../images/button_ok.png);
+ background-repeat: no-repeat;
+ background-position: 5px center;
+}*/
+
+.subFormButton {
+ border: 1px solid #3877AA;
+ background-color: #FFFFFF;
+ width: 150px;
+ height: 25px;
+ /*font-weight: bold;*/
+ font-family: "Arial";
+ background-repeat: no-repeat;
+ background-position: 5px center;
+}
+
+.alphaColumns {
+ border-right: 1px solid #EEEEEE;
+ padding-left: 5;
+}
+
+.disabledButton {
+ filter: 'alpha(opacity=30)';
+}
+
+.favoriteTitle {
+ font-family: "Arial";
+ font-size: 15px;
+ font-weight: bold;
+ color: #3877AA;
+}
+
+.profilDroitsTableColumn {
+ border-top: 1px solid #C0C0C0;
+ border-bottom: 1px solid #C0C0C0;
+}
+
+.profilDroitsTableColumnCheck {
+ border-top: 1px solid #C0C0C0;
+ border-bottom: 1px solid #C0C0C0;
+ text-align: center;
+}
+
+.profilDroitsTableHeader {
+ background-color: #d4d4d4;
+ color: black;
+}
+
+.paramColumn {
+ vertical-align: top;
+ padding-top: 5px;
+}
+
+.paramColumnButton {
+ vertical-align: top;
+}
+
+/*
+.restSearchButton {
+    background-image:url(../images/undo.png);
+}*/
+
+#divMarginBtn {
+    margin-top: 3px;
+}
+
+.deleted {
+ color: #A0A0A0;
+ font-style: italic;
+}
+
+.outputParam {
+ font-family: "Arial";
+ font-weight: bold;
+}
+
+.toolbarContainer {
+ box-shadow: 0px 0px 5px #000;
+ background-color: #F5F5F5;
+ width: 100%;
+ padding-left: 0;
+ height: 97%;
+}
+
+.toolbarStatique {
+    position: absolute;
+    width: 30px; 
+    height: 91%;
+    right: 1px; 
+    top: 31px;
+}
+
+.top {
+    vertical-align: top;
+    padding-bottom: 10px;
+}
+
+
+.toolbarElementsHeight {
+ height: 25px;
+}
+
+.colTabbedPane {
+ width: 100%;
+ vertical-align: top;
+}
+
+.colToolBar {
+    
+ width: 31px;
+ vertical-align: top;
+ padding-top: 27px;
+float: right;
+}
+
+#container {
+    width: 97.6% !important;
+}
+
+.textAlignCenter {
+ text-align: center;
+}
+
+.textAlignRight {
+ text-align: right;
+}
+
+.textAlignLeft {
+ text-align: left;
+}
+
+.textAlignSpan {
+ width: 140px;
+ text-align: right;
+ display: block;
+}
+
+.formContenuDiv {
+ padding:4 10 4 4;
+}
+
+.popupCenter {
+ text-align: center;
+ vertical-align:middle;
+}
+
+.popupCenter .ombre .boite {
+    border :1px solid #C0C0C0;
+    padding: 1px;
+}
+
+.popupTextTitle{
+ font-family: "Arial";
+ font-size: 14px;
+ font-weight: bold;
+ color : #333333;
+}
+.popupTextBold{
+ font-family: "Arial";
+ font-size: 11px;
+ font-weight: bold;
+ color : #333333;
+ border: none;
+}
+
+#groupeBtnCommandLink {
+    margin-top: 10px;
+}
+
+.popupText{
+ font-family: "Arial";
+ font-size: 11px;
+ color : #333333;
+}
+
+.maximalWith {
+ width: 93%;
+}
+.maximalWith-aligne {
+ text-align: right;;
+}
+
+
+
+.maximalHeight {
+ height: 100%;
+}
+
+columnsOutputText {
+ color : #3872AB;
+ text-decoration: underline;
+ font-size: 10px;
+ font-weight: bold;
+}
+
+.letterCells {
+ width: 45px;
+ height: 20px;
+ text-align: center;
+}
+
+.dataGrid {
+    border: 1px solid #919B9C;
+    height: 600px ;
+}
+
+/* Alignement des éléments du bandeau sur une seule ligne 
+    (cf. http://stackoverflow.com/a/525972/2112089)
+    Le principe est simple : le header contient trois parties (logo, titre et 
+    zone utilisateur) qui sont alignées en mettant les zones en "float".
+    Les width à 33% sont pour séparation équitable et ainsi le centrage du 
+    titre.
+    Par ailleurs, pour aligner le texte verticalement (compliqué en CSS), le 
+    header est en "display: inline-block" ET avec une valeur pour "line-height"
+    qui colle au plus près de la version Swing.
+*/
+div#header {
+    width: 100%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    border: none;
+    /*µbackground-image: url('../images/fond_titre.png');*/
+    background-color: #535C69;
+    background-repeat: repeat-x;
+    min-height: 45px;
+    height: 45px;
+    line-height: 45px;
+    display:block;    
+}
+
+div.bandeauLogo {    
+    float: left;
+    width: 27%; 
+    font-weight: bold;
+    font-size: 9pt;
+    height: 42px;
+    line-height: 70px;
+    color : #ffffff;
+}
+
+div.bandeauTitre {
+    float: left;
+    width: 45%;
+
+}
+
+div.bandeauZoneUtilisateur {
+    float: right;
+    height: 45px;
+    text-align: right;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+img.bandeauImg {
+    vertical-align: middle; /* Pour aligner le texte au milieu des images. */
+    cursor: pointer; 
+    cursor: hand;
+    border: 0;
+    height: 24px;
+    padding-right: 3px;
+    padding-bottom: 3px; /* pour que le vertical-align marche, il faut que la */
+    padding-top: 3px;    /* balise ait la même taille que sa mère (qui a une */
+                         /* hauteur de 23 px) */
+}
+
+img.menuImg {
+    vertical-align: middle; /* Pour aligner le texte au milieu des images. */
+    cursor: pointer; 
+    cursor: hand;
+    border: 0;
+    height:18px;
+    width:18px;
+    padding-left: 4px;
+    padding-right: 5px;
+    padding-bottom: 3px; /* pour que le vertical-align marche, il faut que la */
+    padding-top: 0px;    /* balise ait la même taille que sa mère (qui a une */
+                         /* hauteur de 23 px) */
+}
+
+div#bandeauTitreTexte {
+    color : #ffffff;
+    font-weight: normal;
+    font-family : Century Gothic;
+    font-size: 18pt;
+    text-align: center;
+}
+
+div.bandeauZoneUtilisateurTexte {
+    font-weight: bold;
+    color : #ffffff;
+    font-family : Century Gothic;
+    display: inline;
+}
+
+.bandeauZoneUtilisateurTexte form {
+    display: inline;
+    line-height: 36px;
+}
+
+.bandeauZoneUtilisateurTexte input {
+    border: none !important;
+    line-height: 36px;
+    vertical-align: text-bottom;
+}
+
+.UserBandeau{
+    float: left;
+    color : #ffffff;
+    font-family : Century Gothic;
+    
+    line-height: 36px;
+}
+
+span.bandeauZoneUtilisateurPropre {
+    font-weight: lighter;
+    font-size: 10pt;
+    color: #000;
+    
+}
+
+a.navigation {
+    font-size: inherit;
+}
+
+div#navigationGenerale {
+    display: block;
+    width : 100% ;
+    height: 45px;
+    
+    background: #F5F5F5;
+    color: #3872AB;
+    font-size: 10pt;
+    padding-top: 15px;
+    border-color: #E3E3E3;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+}
+
+div.navigationDroite {
+    text-align: left;
+    float: left;
+    color: #3872AB;
+    display: inline-block;
+    margin-left: 210px;
+}
+
+div#filAriane {
+    text-align: right;
+    float: right;
+    padding-right: 10px;
+}
+
+span.modulesandFriends {
+    float: left;
+    text-align: left;
+    padding-left: 12px;
+}
+
+
+div.listeSites {
+    float: right;
+}
+
+#menuGeneral {
+    margin-left: 0px;
+    margin-right: 0px;
+    font-size: 9pt;
+    text-align: left;
+    padding-left: 1px;
+    overflow: auto;
+    vertical-align: top;
+    width: 220px;
+    background: #F5F5F5;
+    display: block;
+
+
+}
+
+div.menuTitre {
+    background-color: #F5F5F5;
+    background: #F5F5F5 url('../images/collapse1.png') no-repeat right center;
+    font-family: Century Gothic;
+    font-weight: bold;
+    line-height: 23px;
+    width: 100%;
+    display:inline-block;
+    margin-bottom: -5px;
+    cursor: pointer; 
+    cursor: hand;
+}
+
+/* Menu étendu */
+div.expanded {
+    background: #F5F5F5 url('../images/collapse1.png') no-repeat right center;
+
+}
+
+/* Menu rétracté */
+div.collapsed {
+    background: #F5F5F5 url('../images/expand1.png') no-repeat right center;
+}
+
+/* Menu rétracté survolé */
+div.hoveredCollapsed {
+    color: #ABA5A5;
+    background: #F7F7F7 url('../images/expand2.png') no-repeat right center;
+}
+
+/* Menu étendu survolé */
+div.hoveredExpanded {
+    color: #ABA5A5;
+    background: #F7F7F7 url('../images/collapse2.png') no-repeat right center;
+}
+
+div.menuContainer {
+    border-width: 0px;
+    border-color: green;
+    border-style: solid;
+    border-collapse: collapse;
+}
+
+div.contenantHorloge{
+    margin-right: auto;
+    margin-left: auto;
+    width: 150px;
+}
+
+div.closed {
+    max-height: 0px;
+    overflow-y: hidden;
+}
+
+div.opened {
+    overflow-y: hidden;
+}
+
+img.hiddenImage {
+    display: none;
+}
+
+img.hoveredImage {
+    border-width: 1px;
+    border-color: #ABA5A5;
+    border-style: solid;
+}
+
+img.rightImage {
+    margin-left: 00%;
+    margin-right: 0.5%;
+    margin-bottom: 3px;
+}
+
+ul.menuContent {
+    padding-left: 30px;
+}
+
+li.menuLink {
+    list-style-type: none;
+    padding-top : 3px;
+    padding-bottom: 3px;
+    white-space: nowrap;
+
+}
+
+.fullwebLinkStyle{
+    color: #3872ab;
+    font-family: "Arial";
+    font-weight: bold;
+    display: inline-block;
+}
+
+.fullwebLink {
+    cursor: pointer;
+    cursor: hand;
+}
+
+div.menuLink {
+    text-decoration: none;
+    font-size: inherit;
+    /* Pour mettre des pointillés en cas de lien trop long */
+    /* cf. http://stackoverflow.com/a/1199957/2112089 */
+    overflow: hidden;              /* "overflow" value must be different from  visible"*/ 
+    text-overflow: ellipsis;
+    width: 100%; /* dimensions pour le menu */
+    vertical-align: middle;
+    
+        
+    color : #269FD9;
+    font-family : Century Gothic;
+    margin-bottom : -5px;
+}
+
+.fullwebLinkStyle:hover {
+    text-decoration: underline;
+}
+
+#framePrincipale {
+    display:block; /* cf . http://stackoverflow.com/a/8366972/2112089 */
+    width: 100% !important; /*CF Refonte QuartisWeb 2017/12 CJ */
+    position: relative;
+    z-index: 15;
+    background-color: white;
+}
+
+div.messageErreurAjax {
+    border: 1px solid red; 
+    height: 40px; 
+    line-height: 40px; 
+    background-color: white;
+    padding-right: 5px;
+    padding-left: 5px;
+    color: red;
+    position: absolute;
+    top: 10px; 
+    right: 50px; 
+    z-index: 16; /* #framePrincipale + 1 */
+}
+
+span.croixMessageErreur {
+    cursor: pointer; 
+    position: relative; 
+    top: -1em;
+}
+
+/*
+  Ajout P. Mahé du 30/01/2015
+  Ajout de la classe pour le tableau compacté de la page de base
+*/
+.tableauCompact {
+    height: 100%; 
+    border-collapse: collapse; 
+    border-spacing: 0px;
+    padding : 0;
+}
+
+.tableauLarge {
+    width:100%
+}
+
+.tableauCompactColonneMenu {
+    
+    vertical-align: top;
+    height:100%;
+    background-color: #F5F5F5;
+    
+    border-color: #E3E3E3;
+    border-width: 0px 1px 0px 0px;
+    border-style: solid;
+}
+
+.tableauCompactColonneFrame {
+    vertical-align: top;
+}
+
+/* 
+    * Ajout Nicolas B du 19/09/2014
+    * Modificaiton du css pour les tableaux et formulaire.
+    *
+*/
+.f_tabbedPane_content table tbody tr td {
+    width: 96.5%;
+}
+
+.f_tabbedPane_content table tbody {
+    vertical-align: top;
+}
+
+.f_tabbedPane_content .top table tbody {
+    vertical-align: inherit;
+}
+
+.f_tabbedPane_content .top table tbody tr td {
+    width: auto;
+    vertical-align: middle;
+}
+
+.f_tabbedPane_content table tbody tr td .maximalWith{
+    width: 90%;   
+}
+
+.textAlignCenter table {
+    margin: 0 auto;
+    height: auto;
+}
+
+.arrowPadding img{
+    padding-top: 20px;
+}
+
+#table_task_pane_search_OPTIMA_Suivi_Equipement_OPTIMA_Evt_Comptage tbody tr .navigation_principale_titre table {
+    height: auto;
+}
+
+.popupCenter .ombre {
+    margin: 0 auto !important;
+    height: auto !important;
+}
+
+.popupCenter .boite {
+    height: auto !important;
+}
+
+.popupCenter table .boite {
+    height: auto !important;
+}
+
+.popUpExportBtn {
+    width: 100%;
+    margin: 0 auto;
+    margin-top : 8px;
+}
+
+.btnBottomAdmin .ombre {
+    position: absolute;
+    bottom: 5px;
+    right:5px;
+}
+
+.popUpDeleteBtn {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 8px;
+}
+
+.f_tabbedPane_tab  .textAlignRight .ombre {
+    margin: 0 auto !important;
+}
+
+.textAlignCenter table tbody tr td {
+    width: 50%;
+}
+
+.f_tabbedPane_content table tbody tr .textAlignRight {
+    width: auto;
+}
+
+.textAlignCenter table tbody tr td .ombre {
+    margin: 0 auto !important;
+}
+
+
+.f_tabbedPane_tab .top .textAlignCenter .ombre {
+    margin: 0 auto !important;
+}
+
+.contentForPager .ombre, .contentForPager .boite {
+    width: 98% !important;
+}
+
+.contentOmbre .ombre {
+    width: 98.5% !important;
+}
+
+#form_etat {
+    width: 99%;
+}
+
+#form_etat .colTabbedPane {
+    width: 97%;
+}
+
+#form_etat .colToolbar {
+    margin-left: 6px;
+}
+
+.tabAdminProfilTd1 {
+    vertical-align: baseline;
+}
+
+.tabAdminProfilTd2 {
+    vertical-align: top;
+}
+
+.tabAdminProfilTd2 .ombre {
+    height: 823px;
+}
+
+.tabAdminProfilTd2 .boite {
+    height: 823px;
+}
+
+/*  for admin users page */
+.adminUsers {
+    height: 100%;
+}
+
+.adminUsers form {
+    height: 100%;
+}
+
+#span_browse .boite {
+    background-color: white !important;
+}
+
+#browse_iframe {
+    width: 430px !important;
+}
+
+/*
+.adminUsers .panelAdminUsers {
+    height: 100%;
+}
+*/
+
+.adminUsers .panelAdminUsers tr {
+    vertical-align: top;
+}
+
+.adminUsers .panelAdminUsers tr td {
+    height: 100%;
+    vertical-align: top;
+    height: 100%;
+}
+
+
+.adminProfil .tabAdminProfilTd1 {
+    vertical-align: top;
+}
+
+.adminProfil tr td {
+    height: 100%;
+}
+
+.centerBtnParam .ombre {
+    margin: 0 auto !important;
+}
+
+.panelFormEtat {
+   /*  width: 97% !important; */
+    overflow: hidden !important;
+}
+
+#form_etat table_task_pane_form_OPTIMA_Suivi_Personnel_OPTIMA_Personnel_Anomalie_Presence{
+    width: 99%;
+}
+
+#table_task_pane_form_OPTIMA_Suivi_Production_OPTIMA_Production_Indicateurs {
+    height: 365px;
+}
+
+#table_task_pane_form_OPTIMA_Suivi_Personnel_OPTIMA_Personnel {
+    height: 640px;
+}
+
+#table_task_pane_form_OPTIMA_Suivi_Equipement_OPTIMA_Personnel {
+    height: 90px;
+}
+
+#table_task_pane_search_OPTIMA_Suivi_Equipement_OPTIMA_Evt_Comptage {
+    height: 230px;
+}
+
+/* Media queries for Iframe when user resize window*/
+
+#paramContent #container {
+    background: none;
+}
+
+iframe html {
+    overflow: hidden;
+}
+
+#formFavoris .ombre {
+    width: 99% !important; 
+    background: none !important;
+    
+}
+
+#formFavoris #container {
+    width: 98.8% !important;
+}
+
+.popupCenter .ombre .boite {
+    bottom: 0px;
+}
+
+#login {
+    width: 100%;
+    height: 100%;
+}
+
+.trenteTrois {
+    height: 33%;
+}
+
+.test {
+    font-size: 18px;
+}
+
+#login .soixante {
+    width: 60%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+}
+
+#login .quarante {
+    width: 39%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+}
+
+/**
+    Ajout P.MAHE du 17/09/2014
+    Classes pour la page de login
+*/
+body.loginBody {
+    border: 0px none #FFFFFF;
+    
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+/**
+    Ajout P.MAHE du 15/09/2016
+    Classes pour la page de login QuartisPro / QuartisWeb
+*/
+
+/* .loginQuartisPro {
+    background-image: url('../images/accueil_login_quartis_pro.png');
+} */
+
+.loginQuartisWeb {
+    background-image: url('../images/accueil_login_quartis_web.png');
+}
+
+form.loginForm {
+    
+    width: 100%; 
+    height: 100%; 
+    /* background-image: url('../images/fond_login.png');  */
+    background-repeat: no-repeat; 
+    background-position: center;
+}
+
+table.loginTable {
+    width: 472px; 
+    height: 236px;
+    border: 8px solid #b8cfe5;
+    background-color: #fff;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+
+table.loginTableStructure {
+    width: 100%; 
+    height: 100%; 
+}
+/*
+table.loginTable {
+    width: 472px; 
+    height: 236px; 
+    position: absolute;               
+    
+    left: 50%;
+    top: 50%;
+    
+    transform: translate(-50%, -50%);    
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}*/
+
+td.loginTd {
+    color: #036AB2;
+    font-size: 20px;
+    font-style: italic;
+    font-family: Verdana;
+    letter-spacing: 5;
+}
+
+
+tr.loginTr {
+    height: 33%;
+}
+
+div.Apropos-container {
+    width: 33%;
+    margin-left: 20px;
+    
+}
+
+div.Apropos-titre {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    overflow: auto;
+    text-align: center;
+}
+
+div.Apropos-Texte {
+    
+}
+
+.Apropos {
+    font-size: 11px;
+}
+
+div.Apropos-license-logo {
+    float: right;
+}
+
+
+div.Apropos-copyright {
+    
+}
+
+p.Apropos-titre-nom {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+/* SiteMap */
+
+div.LiensArbo{
+    padding-top: 10px;
+}
+
+div.TitreSoft{
+    width: 100%;
+    height: 32px;
+    text-align: center;
+    
+    font-size: 18pt;
+    font-family: Century Gothic;
+    color: #000;
+    
+    background-color: #F5F5F5;
+}
+
+div.listePage {
+    font-size: 14px;
+}
+
+div.titreListePage {
+    float: left;
+    width: 25%;
+    
+}
+
+div.titreBranche {
+    font-size: 15px;
+    font-family: Century Gothic;
+    color: #000;
+    
+    height: 40px;
+    border: 1px solid #E3E3E3;
+    background-color: #F5F5F5;
+    
+    text-align: center;
+    line-height: 40px;
+}
+
+div.titreBranche:hover {
+    background-color: #FCFCFC;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+ul.site-map-ul-modules {
+    padding-left: 25px;
+    position: relative;
+}
+
+ul.site-map-ul-modules::before {
+    content: '';
+    position: absolute;
+    top: 0px; 
+    right: 0;
+    left: 0;
+    bottom: 15px;
+    z-index: -1;
+    background-image: url(../images/mapLiContinu.png);
+    background-repeat: repeat-y;
+    background-position: 25px 0px;
+}
+
+ul.site-map-ul-pages {
+    padding-left: 25px;
+    position: relative;
+}
+
+ul.site-map-ul-pages::before {
+    content: '';
+    position: absolute;
+    top: 0px; 
+    right: 0;
+    left: 0;
+    bottom: 15px;
+    z-index: -1;
+    background-image: url(../images/mapLiContinu.png);
+    background-repeat: repeat-y;
+    background-position: 25px 0px;
+}
+
+.site-map-hidden {
+   display: none;
+}
+
+li.site-map-li-gen {
+    background-repeat: no-repeat;
+    background-position: 0px 18px; 
+    padding-left: 20px;
+}
+
+ul li.site-map-li {
+    background-image: url(../images/mapLi.png);
+}
+
+li.site-map-li-fin {
+    background-position: 0px 0px; 
+    background-image: url(../images/mapLiFin.png);
+}
+
+div.site-map-page {
+    cursor: hand;
+    cursor: pointer;
+}
+
+.fondChargement {
+    width: 0;
+    height: 0;
+    position:absolute;
+    
+    left:44%;
+    top:35%;
+    
+    margin-top: - height/2 - 10;
+    margin-left: - width/2 - 30;
+}
+
+.classeFondChargement {
+    width: 0;
+    height: 0;
+    position:absolute;
+    
+    left:45%;
+    top:35%;
+    
+    margin-top: - height/2;
+    margin-left: - width/2;
+}
+
+.classeFondChargementAfter {
+    width: 0;
+    height: 0;
+    position:absolute;
+    
+    left:37.3%;
+    top:27.2%;
+    
+    margin-top: - height/2;
+    margin-left: - width/2;
+}
+
+/* Ajout P.MAHE du 6/12/2014
+    Ajout de la classe pour le message d'erreur en cas 
+    de connexions trop nombreuses
+ */
+#alerteConnexion {
+    background-color: #ff0000;
+    color: white;
+    font-size: 15pt;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+/* Ajout P.MAHE du 23/03/2015
+    Ajout de la classe pour le message d'erreur en cas 
+    de connexions trop nombreuses
+ */
+#alerteLicence {
+    background-color: #feed00;
+    color: black;
+    text-align: center;    
+    width: 100%;
+}
+
+.fondue{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.texteAlerteLicence {
+    font-size: 15pt;
+    font-weight: bold;
+
+}
+
+.fermerFondue {
+    font-size: 15pt;
+    font-weight: normal;
+    cursor: pointer;
+    
+    float: right;
+    margin-left: 5px;
+}
+
+.navigationSuperviseur {
+    position: absolute; 
+    left: 0px; 
+    top: 0px; 
+    border-color: #E3E3E3;
+    border-style: solid;
+    border-width:2px 1px 1px 1px;
+    width: 100%;
+    /*background: url('images/level1.png') repeat;*/
+    background: linear-gradient(#F5F5F5,#F5F5F5);
+    border-radius: 0px 0px 10px 10px;
+}
+
+.titreOngletPreferences {
+    cursor: pointer;
+    background: #6699CC; 
+    color: white;
+    font-weight: bold;
+}
+
+.titreOngletPreferences:hover {
+    text-decoration: underline;
+}
+
+.titreOngletSelectionnePreferences {
+    background: white; 
+    color: black;
+    font-weight: bold;
+}
+
+/* MEDIA QUERIES DEBUG */
+@media screen and (min-width: 200px) and (max-width: 640px) {
+    
+}
+
+@media screen and (min-height: 200px) and (max-height: 600px) {
+    #div_liste_droits {
+        height: 260px !important;
+    }
+    
+    #param .contentOmbre {
+        height: 360px !important;
+    }
+    
+    #param .contentOmbreDiv {
+        height: 320px !important;
+    }
+}
+
+@media screen and (min-height: 601px) and (max-height: 740px) {
+    #div_liste_droits {
+        height: 350px !important;
+    }
+    
+    #param .contentOmbre {
+        height: 460px !important;
+    }
+    
+    
+    #param .contentOmbreDiv {
+        height: 430px !important;
+    }
+}
+
+/*
+ * Ajout P.MAHE du 31/03/2015 :
+ * Les classes pour les message lors du changement de mot de passe.
+ */
+.conformeMdP {
+    color: #0f9d58;
+}
+
+.nonConformeMdP {
+    font-weight:bold; 
+    color: #ff0000;
+}
+
+/*
+ * Ajout P.MAHE du 10/04/2015 :
+ * La classe pour couvrir le menu et la navigation pendant que l'utilisateur est
+ * forcé à changer de mot de passe
+ */
+.couvertureGrise {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0.5;
+    background-color: #666666;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    z-index: 10;
+}
+
+object {
+    position: relative;
+    z-index: 5;
+}
+
+#preference select {
+    visibility: inherit !important;
+}
+
+
+/**
+    Ajout P.MAHE du 16/06/2016
+    Classes pour la page admin_users
+*/
+.labelAdminUsers {
+    width: 100px;
+    text-align: right;
+}
+
+.champAdminUsers {
+    width: 200px;
+    text-align: left;
+}
+
+.champBordure {
+    border:1px solid #7F9DB9;
+}
+
+.carreAdminUsers {
+    width: 120px;
+    text-align: right;
+    v-align: top;
+}
+
+.btnOkAdminUsers{
+    background-image: url(images/button_ok.png);
+}
+
+.troisColonnesDeLarge {
+    width: 300px;
+    text-align: left;
+}
+
+.deuxColonnesDeLarge {
+    width:100%;
+    text-align:left;
+}
+
+.compColorPicker .f_imageButton_image {
+    margin-bottom: -3px !important;
+} 
+
+.loginErrorMessage{
+    text-align: center;
+    color: #FF0000;
+    font-size: 12px;
+    font-weight: bold;
+    font-family:'Arial';
+}
+
+.panelGrid {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 300;
+    top: 0px;
+    left: 0px;
+}
+
+.inputLang {
+    display: block;
+    width: 620px;
+    cursor: default;
+    text-align: left;
+}
+
+.labelLang {
+    display: block;
+    width: 100px;
+    cursor: default;
+    text-align: right;
+}
+
+.panelMultiGrid {
+    width: 100%;
+    text-align: center;
+    border: 1px solid #C0C0C0;
+    display: inline;
+}
+
+.panelGroup {
+    width: 100%;
+    text-align: center;
+}
+
+.infoSuppr{
+    border: 1px solid #C0C0C0;
+    display: none;
+}
+
+.prendToutePlace {
+    width: 100%;
+    height: 100%;
+}
+
+.BoutonLogoutDiv {}
+
+.BoutonLogoutDevant{
+   border-radius: 5px;
+   padding-top:2px;
+   background: transparent;
+}
+
+.BoutonLogoutDevant:hover {
+   background: linear-gradient( transparent, #838B96);
+}
+
+.BoutonPass {
+   border-radius: 5px;
+   padding-top:2px;
+   background: transparent;
+}
+
+.BoutonPass:hover {
+   background: linear-gradient( transparent, #838B96);
+}
+
+.BoutonAide {
+   border-radius: 5px;
+   margin : 0 10px;
+   padding-top : 2px;
+   background: transparent;
+}
+
+.BoutonAide:hover {
+   background: linear-gradient( transparent, #838B96);
+}
+
+.BoiteLogo{
+    display:inline-block;
+    width: 48px;
+    height: 48px;
+    border-radius: 1px;
+    margin-left: 5px;
+    margin-top: 2px;
+    background:linear-gradient( #1BB5ED, #269FD9);
+    border:1px solid gray;
+    position: relative;
+    z-index: 1;
+    
+    text-align: center;
+    font-size: 40px;
+    font-family: "Segoe UI", Arial, Sans-serif;
+    line-height:40px;
+    font-weight: normal;
+    color: #FFFFFF;
+}
+
+.BandeauLogoTexte{
+    display:inline-block;
+    height: 48px;
+    position: relative;
+    z-index: 1;
+    
+    text-align: center;
+    font-size: 20px;
+    font-family : Century Gothic;
+    line-height:48px;
+    font-weight: normal;
+    color: #FFFFFF;
+}
+
+.body{
+    font-family: "Segoe UI", Arial, Sans-serif;
+}
+
+.toolbarOnTop{
+    margin-top: 0px;
+    margin-left: 0px;
+    background-color: #F5F5F5;
+    width: 100% !important;
+    height :40px; 
+    left: 0px;
+   
+    position : absolute;
+}
+
+.TextesModules{
+    font-size: 11pt;
+    font-family: "Arial";
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes fadein { /* sur Safari et Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+.toolbarOnTopSup{
+
+    background-color: #F5F5F5;
+    width: 100% !important;
+    height: 33px;
+    
+    padding-top:7px;
+    text-align: right;
+
+    position : relative;
+   
+}
+
+.imgArbo{
+    width:50px;
+    position: absolute;
+    margin-left: 5px;
+}
+
+.tdTexteSup{
+    width:220px !important;
+    color: #269FD9;
+    font-family:"Segoe UI", Arial, Sans-serif;
+    font-size: 15pt;
+}
+
+.EspaceTool{
+    display: inline-block;
+    width:32px;
+}
+
+.FormChgmtPass{
+    padding-top: 50px;
+    border-style: solid; 
+    border: 2px;
+    border-color:#000;
+}
+
+table.loginTableChgmtPass {
+    width: 472px; 
+    height: 236px;
+    border: 8px solid #b8cfe5;
+    background-color: #fff;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+.toolbarOnTopAdmin{
+    background-color: #F5F5F5;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+.content {
+    margin: 15px;
+}
+
+.sedaptaTable {
+    width: 100%;
+}
+
+.sedaptaTable tr td {
+    text-align: center;
+}
+
+.sedaptaTable .tableHeader {
+    background-color: #269FD9;
+}
+
+.sedaptaTable .tableHeader th {
+    color: white;
+}
+
+.sedaptaTable tr {
+    height: 32px;
+} 
+
+.sedaptaTable tr td {
+    border: 1px solid #DEDEDE;
+}
+
+.hidden {
+    display: none;
+}
+
+.alert {
+    font-size: 15px;
+    text-align: center;
+    margin: 15px;
+}
+
+.alert-info {
+    color: #0f9d58;
+}
+
+.alert-error {
+    color: #0f9d58;
+}
+
+.DivFormRech {
+    
+}

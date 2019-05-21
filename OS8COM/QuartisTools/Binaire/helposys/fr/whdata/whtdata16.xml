@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<tocdata>
+<item name="XmlAttributEcrit" url="scenario/lpx/fonctions/xml/HIDD_XmlAttributEcrit.htm" />
+<item name="XmlAttributLit" url="scenario/lpx/fonctions/xml/HIDD_XmlAttributLit.htm" />
+<item name="XmlCree" url="scenario/lpx/fonctions/xml/HIDD_XmlCree.htm" />
+<item name="XmlEcrit" url="scenario/lpx/fonctions/xml/HIDD_XmlEcrit.htm" />
+<item name="XmlEfface" url="scenario/lpx/fonctions/xml/HIDD_XmlEfface.htm" />
+<item name="XmlElementAjoute" url="scenario/lpx/fonctions/xml/HIDD_XmlElementAjoute.htm" />
+<item name="XmlElementFils" url="scenario/lpx/fonctions/xml/HIDD_XmlElementFils.htm" />
+<item name="XmlElementFilsSuivant" url="scenario/lpx/fonctions/xml/HIDD_XmlElementSuivant.htm" />
+<item name="XmlElementPere" url="scenario/lpx/fonctions/xml/HIDD_XmlElementPere.htm" />
+<item name="XmlElementPositionne" url="scenario/lpx/fonctions/xml/HIDD_XmlElementPositionne.htm" />
+<item name="XmlElementPremier" url="scenario/lpx/fonctions/xml/HIDD_XmlElementPremier.htm" />
+<item name="XmlElementSupprime" url="scenario/lpx/fonctions/xml/HIDD_XmlElementSupprime.htm" />
+<item name="XmlFerme" url="scenario/lpx/fonctions/xml/HIDD_XmlFerme.htm" />
+<item name="XmlFichierEcrit" url="scenario/lpx/fonctions/xml/HIDD_XmlFichierEcrit.htm" />
+<item name="XmlFichierLit" url="scenario/lpx/fonctions/xml/HIDD_XmlFichierLit.htm" />
+<item name="XmlFilsAjoute" url="scenario/lpx/fonctions/xml/HIDD_XmlFilsAjoute.htm" />
+<item name="XmlFilsPositionne" url="scenario/lpx/fonctions/xml/HIDD_XmlFilsPositionne.htm" />
+<item name="XmlFilsSupprime" url="scenario/lpx/fonctions/xml/HIDD_XmlFilsSupprime.htm" />
+<item name="XmlLit" url="scenario/lpx/fonctions/xml/HIDD_XmlLit.htm" />
+<item name="XmlPositionInit" url="scenario/lpx/fonctions/xml/HIDD_XmlPositionInit.htm" />
+<item name="XmlReponseSQL" url="scenario/lpx/fonctions/xml/HIDD_XmlReponseSQL.htm" />
+<item name="XmlValeurLit" url="scenario/lpx/fonctions/xml/HIDD_XmlValeurLit.htm" />
+
+</tocdata>

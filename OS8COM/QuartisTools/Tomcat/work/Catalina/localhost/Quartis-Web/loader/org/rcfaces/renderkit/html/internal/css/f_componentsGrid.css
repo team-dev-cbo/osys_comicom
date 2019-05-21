@@ -1,0 +1,43 @@
+/*
+ * $Id: f_componentsGrid.css,v 1.1.12.2 2011/01/04 14:47:34 oeuillot Exp $
+ */
+
+/**
+ *
+ * @class f_componentsGrid
+ *
+ * @author Olivier Oeuillot (latest modification by $Author: oeuillot $)
+ * @version $Revision: 1.1.12.2 $ $Date: 2011/01/04 14:47:34 $ 
+ */
+
+.f_cGrid_row {
+	xxx-moz-user-select: text;
+}
+
+.f_grid_row_selected .f_cGrid_cell {
+	color: #000;
+	background-color: #C0C0C0;
+}
+
+.f_grid_row_selected_focus .f_cGrid_cell {
+	color: HighlightText;
+	background-color: #3D80DF;	
+}
+
+.f_cGrid_cell_shadow,
+.f_cGrid_cell {
+	empty-cells: show;
+	padding: 1px 4px 1px 4px;
+	vertical-align: middle;
+	white-space:nowrap;
+	overflow: hidden;
+	background-color: inherit;
+	
+	// Et oui ! Sinon sous firefox les champs INPUTs peuvent se superposer/anhiler 
+	position: relative;
+}
+
+.f_cGrid_cell {
+	border-left: 1px solid #D9D9D9;
+	padding-left: 3px;
+}

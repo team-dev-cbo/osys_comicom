@@ -1,0 +1,39 @@
+/*
+ * $Id: f_numberEntry.css,v 1.4 2007/03/23 16:26:43 oeuillot Exp $
+ */
+
+/**
+ *
+ * @class f_numberEntry
+ *
+ * @author Olivier Oeuillot (latest modification by $Author: oeuillot $)
+ * @version $Revision: 1.4 $ $Date: 2007/03/23 16:26:43 $ 
+ */
+ 
+.f_numberEntry {
+	margin: 0;
+	border: 1px solid #7F9DB9;
+	text-align: left;
+	display: inline;
+}
+
+.f_numberEntry_input {
+	border: 0;
+	margin: 0;
+	background-color: transparent;
+}
+
+.f_numberEntry_I {
+	text-align: right;
+} 
+
+.f_numberEntry_D {
+	text-align: left;
+}
+
+
+/*
+.f_numberEntry_error {
+	color: red;
+}
+*/

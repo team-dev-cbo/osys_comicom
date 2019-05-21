@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/Quartis-OptimaCorrection">
+  <!--  <ResourceLink global="bean/QuartisDatasourceManager" name="bean/QuartisDatasourceManager" type="com.bodetosys.quartis.tomcat.quartisweb.datasource.QuartisDatasourceManager"/>
+    <ResourceLink global="QuartisDatasource" name="QuartisDatasource" type="javax.sql.DataSource"/> -->
+  <!--Resource auth="Container"
+driverClassName="oracle.jdbc.driver.OracleDriver"
+logAbandoned="true"
+maxActive="8"
+maxldle="8"
+maxWait="1000"
+name="QuartisOptima-PU"
+removeAbandoned="true"
+removeAbandonedTimeout="20"
+type="javax.sql.DataSource"
+url="jdbc:oracle:thin:@MBO11:1521:OPTIMA"
+username="sa"
+password="manager"/>
+-->
+  <Resource auth="Container" driverClassName="net.sourceforge.jtds.jdbc.Driver" logAbandoned="true" maxActive="8" maxWait="1000" maxldle="8" name="QuartisOptima-PU" password="manager" removeAbandoned="true" removeAbandonedTimeout="20" type="javax.sql.DataSource" url="jdbc:jtds:sqlserver://localhost:1433/QUARTIS_PRO" username="sa"/>
+</Context>

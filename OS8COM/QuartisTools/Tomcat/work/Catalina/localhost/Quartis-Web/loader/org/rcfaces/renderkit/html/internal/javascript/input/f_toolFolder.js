@@ -1,0 +1,1 @@
+new f_class("f_toolFolder",{extend:f_component});

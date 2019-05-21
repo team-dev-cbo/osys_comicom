@@ -1,0 +1,29 @@
+/*
+ * $Id: f_messageFieldSet.css,v 1.1 2006/10/13 18:04:38 oeuillot Exp $
+ */
+
+/**
+ *
+ * @class f_messageFieldSet
+ *
+ * @author Olivier Oeuillot (latest modification by $Author: oeuillot $)
+ * @version $Revision: 1.1 $ $Date: 2006/10/13 18:04:38 $ 
+ */
+
+.f_messageFieldSet {
+	text-align: left;
+	vertical-align: baseline;
+}
+
+/*
+.f_messageFieldSet_body {
+	top: 0;
+	left: 0;
+}
+
+.f_messageFieldSet_cellBody {
+	position:relative;
+}
+
+*/
+

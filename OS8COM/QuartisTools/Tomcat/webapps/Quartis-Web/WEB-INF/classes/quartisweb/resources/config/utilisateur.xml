@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<lst_ident>
+    <utilisateur ident="admin">
+        <nom>ADMIN</nom>
+        <prenom>ADMIN</prenom>
+        <mdp>563382a8c5981ad8a5d5693ac4c9818c</mdp>
+        <code_profil>ADMIN</code_profil>
+        <locale>fr_FR</locale>
+        <code_site>-</code_site>
+        <date_expiration_mdp></date_expiration_mdp>
+    </utilisateur>
+    <utilisateur ident="administrateur">
+        <nom>ADMINISTRATEUR</nom>
+        <prenom>ADMINISTRATEUR</prenom>
+        <mdp>d41d8cd98f00b204e9800998ecf8427e</mdp>
+        <code_profil>ADMIN</code_profil>
+        <locale>fr_FR</locale>
+        <code_site>-</code_site>
+        <date_expiration_mdp></date_expiration_mdp>
+    </utilisateur>
+    <utilisateur ident="tech">
+        <nom>__tech</nom>
+        <prenom>__tech</prenom>
+        <mdp>d41d8cd98f00b204e9800998ecf8427e</mdp>
+        <code_profil>ADMIN</code_profil>
+        <locale>fr_FR</locale>
+        <code_site>-</code_site>
+        <date_expiration_mdp></date_expiration_mdp>
+    </utilisateur>
+</lst_ident>

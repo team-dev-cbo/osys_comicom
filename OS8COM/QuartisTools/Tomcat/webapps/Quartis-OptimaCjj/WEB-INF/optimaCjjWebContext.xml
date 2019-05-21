@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd	  	    
+       http://www.springframework.org/schema/context 
+       http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	
+  	<import resource="classpath*:spring/optimaCjjCoreContext.xml" />      
+<!-- 
+ 	<context:annotation-config />
+    <context:component-scan base-package="fr.osys.optima.cjj.web"/>
+  
+  	<bean id="evtProductionRpcServices"
+		class="fr.osys.optima.cjj.web.services.correctionmanagement.EvtProductionRpcServicesImpl">
+		<property name="evtProductionServices" ref="evtProductionServices"></property>
+	</bean>
+-->	
+ 
+	<bean id="contextlanguageBean"
+		  class="fr.osys.optima.cjj.web.view.common.lang.ContextLanguageBean">				
+		<property name="serverName" value="#{configCjjProperties['server.dictionary.name']}" />
+		<property name="serverPort" value="#{configCjjProperties['server.dictionary.port']}" />
+	</bean>
+		
+	<bean id="evtProdCorrServices"
+		class="fr.osys.optima.cjj.web.services.correctionmanagement.impl.EvtProdCorrServicesImpl">
+		<property name="evtProductionServices" ref="evtProductionServices"></property>		
+	</bean>
+	
+	<bean id="evtPersCorrServices"
+		class="fr.osys.optima.cjj.web.services.correctionmanagement.impl.EvtPersCorrServicesImpl">
+		<property name="evtPersonnelServices" ref="evtPersonnelServices"></property>		
+	</bean>
+	
+	<bean id="prodServices"
+		class="fr.osys.optima.cjj.web.services.correctionmanagement.impl.ProdServicesImpl">
+		<property name="machineServices" ref="machineServices"></property>	
+		<property name="ofOperServices" ref="ofOperServices"></property>		
+	</bean>
+	
+	<bean id="persServices"
+		class="fr.osys.optima.cjj.web.services.correctionmanagement.impl.PersServicesImpl">
+		<property name="personnelServices" ref="personnelServices"></property>		
+	</bean>
+</beans>

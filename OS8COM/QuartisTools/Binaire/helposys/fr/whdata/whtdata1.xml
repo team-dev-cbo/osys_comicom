@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<tocdata>
+<book name="base de données" >
+  <item name="Ajout d'une table" url="module/base_de_donnees/HIDD_REQ_AJOUT_TABLE.htm" />
+  <item name="Choix de la table de référence" url="module/base_de_donnees/HIDD_REQ_AJOUT_SIMPLE.htm" />
+  <item name="Delete" url="module/base_de_donnees/HIDR_REQ_DELETE.htm" />
+  <item name="Descriptif de la table" url="module/base_de_donnees/HIDD_REQ_TABLE_PROPRIETE.htm" />
+  <item name="Insert" url="module/base_de_donnees/HIDR_REQ_INSERT.htm" />
+  <item name="Select" url="module/base_de_donnees/HIDR_REQ_SELECT.htm" />
+  <item name="Update" url="module/base_de_donnees/HIDR_REQ_UPDATE.htm" />
+</book>
+<book name="déclenchement" >
+  <item name="Déclenchement" url="module/declenchement/HIDR_DECLENCHEMENT.htm" />
+</book>
+<book name="état" >
+  <item name="Etat" url="module/etat/HIDR_ETAT.htm" />
+</book>
+<book name="événement" >
+  <item name="Evénement périodique" url="module/evenement/HIDR_EVT.htm" />
+</book>
+<book name="fenêtre" >
+  <book name="Action" >
+    <item name="Définition du scénario associé" url="module/fenetre/Action/HIDD_ACTION_SCENARIO.htm" />
+    <item name="Propriétés action bouton" url="module/fenetre/Action/Proprietes_action_bouton.htm" />
+  </book>
+  <book name="bouton" >
+    <item name="3DMeter" url="module/fenetre/bouton/3DMeter.htm" />
+    <item name="Bouton" url="module/fenetre/bouton/Bouton.htm" />
+    <item name="Chaîne multi-lignes" url="module/fenetre/bouton/Chaine_multilignes.htm" />
+    <item name="Chaîne simple" url="module/fenetre/bouton/Chaine_simple.htm" />
+    <item name="Check box" url="module/fenetre/bouton/Check_box.htm" />
+    <item name="Edit" url="module/fenetre/bouton/Edit.htm" />
+    <item name="Edit multi" url="module/fenetre/bouton/Edit_multi.htm" />
+    <item name="Ellipse" url="module/fenetre/bouton/Ellipse.htm" />
+    <item name="Ellipse pleine" url="module/fenetre/bouton/Ellipse_pleine.htm" />
+    <item name="Liste" url="module/fenetre/bouton/Liste.htm" />
+    <item name="Liste tombante" url="module/fenetre/bouton/Liste_tombante.htm" />
+    <item name="Radio groupe" url="module/fenetre/bouton/Radio_groupe.htm" />
+    <item name="Rectangle" url="module/fenetre/bouton/Rectangle.htm" />
+    <item name="Rectangle plein" url="module/fenetre/bouton/Rectangle_plein.htm" />
+    <item name="Tableau" url="module/fenetre/bouton/Tableau.htm" />
+    <item name="Trait" url="module/fenetre/bouton/Trait.htm" />
+    <item name="Webbrowser" url="module/fenetre/bouton/Webbrowser.htm" />
+    <item name="Zone de dessin" url="module/fenetre/bouton/Zone_de_dessin.htm" />
+  </book>
+  <item name="Fenêtre" url="module/fenetre/HIDR_FENETRE.htm" />
+</book>
+<book name="généralité" >
+  <item name="Créer, renommer un groupe ou un élément" url="module/generalite/HIDD_NOM.htm" />
+  <item name="Définition d'un élément" url="module/generalite/HIDR_WORKSPACE_ELEMENT.htm" />
+  <item name="Définition d'un Groupe" url="module/generalite/HIDR_WORKSPACE_GROUPE.htm" />
+  <item name="Définition d'un Module" url="module/generalite/HIDR_WORKSPACE_TYPE.htm" />
+  <item name="Propriétés" url="module/generalite/HIDD_PROPRIETES.htm" />
+</book>
+<book name="mémoire" >
+  <item name="Mémoire" url="module/memoire/HIDR_MEMOIRE.htm" />
+  <item name="Mémoire Système" url="module/memoire/Memoire_Systeme.htm" />
+</book>
+<chunk name="scénario" ref="whtdata2.xml" />
+<book name="trace" >
+  <item name="Affichage de la trace" url="module/trace/HIDD_WORKSPACE_AFFICHAGE.htm" />
+  <item name="Niveau de la trace pour les modules" url="module/trace/HIDD_FENETRE_CARACTERISTIQUES.htm" />
+  <item name="Trace de la compilation d'un scénario LPX" url="module/trace/HIDD_GRAPHIQUE_LPX_CARACTERISTIQUES.htm" />
+  <item name="Valeur des mémoires suivant un utilisateur" url="module/trace/HIDD_MEMOIRE_CARACTERISTIQUES.htm" />
+</book>
+<book name="utilisateur" >
+  <item name="Driver" url="module/utilisateur/HIDR_DRIVERS.htm" />
+  <item name="Propriétés driver scrut" url="module/utilisateur/Proprietes_driver_scrut.htm" />
+  <item name="Terminal" url="module/utilisateur/HIDR_TERMINAUX.htm" />
+  <item name="Utilisateur" url="module/utilisateur/HIDR_USER.htm" />
+</book>
+<item name="Confirmation du mot de passe" url="module/HIDD_CONFIRMATION_MOT_PASSE.htm" />
+
+</tocdata>

@@ -1,0 +1,1304 @@
+10:44:50.723 DEBUG - TomcatListener contextInitialized - servletContext.realPath : C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web 
+10:44:50.723  INFO - PropertiesDelegate Ouverture du fichier de configuration à l'emplacement : C:\Osys\QuartisTools\Tomcat/conf/quartis-web.properties 
+10:44:50.723  INFO - PropertiesDelegate Fichier de configuration non trouvé, il va être copié depuis le fichier C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web/conf/quartis-web.properties... 
+10:44:50.754  INFO - PropertiesDelegate Copie effectuée. 
+10:44:50.785  INFO - TomcatListener -----> Supression des fichier temporaires 
+10:44:50.785  INFO - ConfigFileManager Création du fichier C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\Config\profil.xml... 
+10:44:50.785 DEBUG - ConfigFileManager Copie à partir du fichier : C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\WEB-INF\classes\quartisweb\resources\config\profil.xml 
+10:44:50.785 DEBUG - Util copyFile - Copie de 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\WEB-INF\classes\quartisweb\resources\config\profil.xml' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\Config\profil.xml'. 
+10:44:50.785 DEBUG - Util copyFile - Fin de la copie. 
+10:44:50.785  INFO - ConfigFileManager Création du fichier C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\Config\utilisateur.xml... 
+10:44:50.785 DEBUG - ConfigFileManager Copie à partir du fichier : C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\WEB-INF\classes\quartisweb\resources\config\utilisateur.xml 
+10:44:50.785 DEBUG - Util copyFile - Copie de 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\WEB-INF\classes\quartisweb\resources\config\utilisateur.xml' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\Config\utilisateur.xml'. 
+10:44:50.785 DEBUG - Util copyFile - Fin de la copie. 
+10:44:50.785  INFO - ConfigFileManager Création du fichier C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\Config\restrict.xml... 
+10:44:50.785 DEBUG - ConfigFileManager Copie à partir du fichier : C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\WEB-INF\classes\quartisweb\resources\config\restrict.xml 
+10:44:50.785 DEBUG - Util copyFile - Copie de 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\WEB-INF\classes\quartisweb\resources\config\restrict.xml' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\Config\restrict.xml'. 
+10:44:50.785 DEBUG - Util copyFile - Fin de la copie. 
+10:44:50.785 DEBUG - Util copyFile - Copie de 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\WEB-INF\classes\quartisweb\resources\allusers\preferences.xml' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\All Users\Standard\preferences.xml'. 
+10:44:50.785 DEBUG - Util copyFile - Fin de la copie. 
+10:44:50.785 DEBUG - Util copyFile - Copie de 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\WEB-INF\classes\quartisweb\resources\allusers\preferences-sup.xml' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\All Users\preferences.xml'. 
+10:44:50.785 DEBUG - Util copyFile - Fin de la copie. 
+10:44:50.785 DEBUG - Util copyFile - Copie de 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\WEB-INF\classes\quartisweb\resources\allusers\level1.xml' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\All Users\level1.xml'. 
+10:44:50.785 DEBUG - Util copyFile - Fin de la copie. 
+10:44:50.785 DEBUG - Util copyFile - Copie de 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\WEB-INF\classes\quartisweb\resources\allusers\favoris.xml' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\All Users\Standard\favoris.xml'. 
+10:44:50.785 DEBUG - Util copyFile - Fin de la copie. 
+10:44:50.785  INFO - TomcatListener Ouverture du fichier indiquant la base de données : C:\Osys\QuartisTools\Tomcat/conf/datasources.xml... 
+10:44:50.785  INFO - TomcatListener Le fichier C:\Osys\QuartisTools\Tomcat/conf/datasources.xml n'existe pas, il va être créé... 
+10:44:50.785  INFO - TomcatListener Copie effectuée. 
+10:44:50.895  INFO - DataSourceManager Création de la datasource : QuartisWeb-PU 
+10:44:53.235 ERROR - GSql  org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Unknown server host name 'BESRV'.)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1225)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:880)
+	at quartisweb.bd.AccesBD.getConnection(AccesBD.java:140)
+	at quartisweb.generic.sql.GSql.getListCodeSites(GSql.java:923)
+	at quartisweb.id.global.UserGlobalManager.verifySiteTiret(UserGlobalManager.java:124)
+	at quartisweb.id.global.UserGlobalManager.creerListUser(UserGlobalManager.java:85)
+	at quartisweb.id.global.UserGlobalManager.init(UserGlobalManager.java:35)
+	at quartisweb.tomcat.TomcatListener.contextInitialized(TomcatListener.java:109)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4135)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4630)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:791)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:771)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:546)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:905)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:740)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:500)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1277)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:321)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1053)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:785)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:445)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:519)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:581)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+Caused by: java.sql.SQLException: Unknown server host name 'BESRV'.
+	at net.sourceforge.jtds.jdbc.ConnectionJDBC2.<init>(ConnectionJDBC2.java:377)
+	at net.sourceforge.jtds.jdbc.ConnectionJDBC3.<init>(ConnectionJDBC3.java:50)
+	at net.sourceforge.jtds.jdbc.Driver.connect(Driver.java:182)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:294)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1247)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1221)
+	... 31 more
+Caused by: java.net.UnknownHostException: BESRV
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.sourceforge.jtds.jdbc.SharedSocket.createSocketForJDBC3(SharedSocket.java:304)
+	at net.sourceforge.jtds.jdbc.SharedSocket.<init>(SharedSocket.java:255)
+	at net.sourceforge.jtds.jdbc.ConnectionJDBC2.<init>(ConnectionJDBC2.java:310)
+	... 37 more
+
+10:45:08.833  INFO - PropertiesDelegate Destruction du properties manager ! 
+11:46:48.461 DEBUG - TomcatListener contextInitialized - servletContext.realPath : C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web 
+11:46:48.477  INFO - PropertiesDelegate Ouverture du fichier de configuration à l'emplacement : C:\Osys\QuartisTools\Tomcat/conf/quartis-web.properties 
+11:46:48.508  INFO - TomcatListener -----> Supression des fichier temporaires 
+11:46:48.508  INFO - TomcatListener Ouverture du fichier indiquant la base de données : C:\Osys\QuartisTools\Tomcat/conf/datasources.xml... 
+11:46:48.571  INFO - DataSourceManager Création de la datasource : QuartisWeb-PU 
+11:47:44.862 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+11:47:44.912  INFO - ParamMdP Pas de valeur trouvée pour la clé 'password_param_duree_validite' ou la valeur n'est pas numérique : remise à 0 
+11:47:44.912 DEBUG - ParamMdP saveParams - Ecriture dans 'C:\Osys\QuartisTools\Tomcat/conf/quartis-web.properties'... 
+11:47:44.913 DEBUG - ParamMdP saveParams - Fin de la l'écriture. 
+11:47:45.039 DEBUG - SiteManager createFavoriteFile - Création et écriture dans le fichier : 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\preferences.xml'... 
+11:47:45.071 DEBUG - SiteManager createFavoriteFile - Fin de l'écriture dans le fichier. 
+11:47:45.557 DEBUG - ParameterManager getNodeXmlParameters - Création de 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\Standard'... 
+11:47:45.557 DEBUG - ParameterManager getNodeXmlParameters - Fichier créé. 
+11:47:45.557 DEBUG - ParameterManager getNodeXmlParameters - Création de 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\Standard'... 
+11:47:45.558 DEBUG - ParameterManager getNodeXmlParameters - Fichier créé. 
+11:47:45.564 DEBUG - Util copyFile - Copie de 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language_fr.properties'. 
+11:47:45.564 ERROR - Util Fichier non trouvé, impossible de copier 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language_fr.properties'. java.io.FileNotFoundException: C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties (Le fichier spécifié est introuvable)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at quartisspv.util.Util.copyFile(Util.java:30)
+	at quartisweb.language.LanguageFileManager.buildPropertiesGen(LanguageFileManager.java:192)
+	at quartisweb.service.UserLanguageService.buildFicLangueGen(UserLanguageService.java:54)
+	at quartisweb.service.UserLanguageService.getFichierLangue(UserLanguageService.java:41)
+	at quartisweb.language.LanguageGlobal.openBundle(LanguageGlobal.java:208)
+	at quartisweb.language.LanguageGlobal.addUserLanguage(LanguageGlobal.java:202)
+	at quartisweb.language.LanguageGlobal.getLocalisedLabel(LanguageGlobal.java:88)
+	at quartisweb.ui.UiManager.creerMenuAccueil(UiManager.java:115)
+	at quartisweb.ui.UiManager.buildMenu(UiManager.java:81)
+	at quartisweb.jsf.managedBean.ConnexionManagedBean.chargerDonneesUserEnSession(ConnexionManagedBean.java:207)
+	at quartisweb.jsf.managedBean.ConnexionManagedBean.connexion(ConnexionManagedBean.java:334)
+	at quartisweb.jsf.managedBean.LoginManagedBean.authenticate(LoginManagedBean.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.el.parser.AstValue.invoke(AstValue.java:191)
+	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:276)
+	at org.apache.jasper.el.JspMethodExpression.invoke(JspMethodExpression.java:68)
+	at javax.faces.component.MethodBindingMethodExpressionAdapter.invoke(MethodBindingMethodExpressionAdapter.java:77)
+	at com.sun.faces.application.ActionListenerImpl.processAction(ActionListenerImpl.java:91)
+	at javax.faces.component.UICommand.broadcast(UICommand.java:383)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:447)
+	at javax.faces.component.UIViewRoot.processApplication(UIViewRoot.java:752)
+	at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:97)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:117)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:244)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at waffle.servlet.NegotiateSecurityFilter.doFilterPrincipal(NegotiateSecurityFilter.java:251)
+	at waffle.servlet.NegotiateSecurityFilter.doFilter(NegotiateSecurityFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+11:47:45.566 DEBUG - Util copyFile - Fin de la copie. 
+11:47:45.568 DEBUG - Util copyFile - Copie de 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language_fr.properties'. 
+11:47:45.568 ERROR - Util Fichier non trouvé, impossible de copier 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language_fr.properties'. java.io.FileNotFoundException: C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties (Le fichier spécifié est introuvable)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at quartisspv.util.Util.copyFile(Util.java:30)
+	at quartisweb.language.LanguageFileManager.buildPropertiesGen(LanguageFileManager.java:192)
+	at quartisweb.service.UserLanguageService.buildFicLangueGen(UserLanguageService.java:54)
+	at quartisweb.service.UserLanguageService.getFichierLangue(UserLanguageService.java:41)
+	at quartisweb.language.LanguageGlobal.openBundle(LanguageGlobal.java:208)
+	at quartisweb.language.LanguageGlobal.addUserLanguage(LanguageGlobal.java:202)
+	at quartisweb.language.LanguageGlobal.getLocalisedLabel(LanguageGlobal.java:88)
+	at quartisweb.ui.UiManager.creerMenuAccueil(UiManager.java:121)
+	at quartisweb.ui.UiManager.buildMenu(UiManager.java:81)
+	at quartisweb.jsf.managedBean.ConnexionManagedBean.chargerDonneesUserEnSession(ConnexionManagedBean.java:207)
+	at quartisweb.jsf.managedBean.ConnexionManagedBean.connexion(ConnexionManagedBean.java:334)
+	at quartisweb.jsf.managedBean.LoginManagedBean.authenticate(LoginManagedBean.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.el.parser.AstValue.invoke(AstValue.java:191)
+	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:276)
+	at org.apache.jasper.el.JspMethodExpression.invoke(JspMethodExpression.java:68)
+	at javax.faces.component.MethodBindingMethodExpressionAdapter.invoke(MethodBindingMethodExpressionAdapter.java:77)
+	at com.sun.faces.application.ActionListenerImpl.processAction(ActionListenerImpl.java:91)
+	at javax.faces.component.UICommand.broadcast(UICommand.java:383)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:447)
+	at javax.faces.component.UIViewRoot.processApplication(UIViewRoot.java:752)
+	at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:97)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:117)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:244)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at waffle.servlet.NegotiateSecurityFilter.doFilterPrincipal(NegotiateSecurityFilter.java:251)
+	at waffle.servlet.NegotiateSecurityFilter.doFilter(NegotiateSecurityFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+11:47:45.569 DEBUG - Util copyFile - Fin de la copie. 
+11:47:45.570 DEBUG - Util copyFile - Copie de 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language_fr.properties'. 
+11:47:45.570 ERROR - Util Fichier non trouvé, impossible de copier 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language_fr.properties'. java.io.FileNotFoundException: C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties (Le fichier spécifié est introuvable)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at quartisspv.util.Util.copyFile(Util.java:30)
+	at quartisweb.language.LanguageFileManager.buildPropertiesGen(LanguageFileManager.java:192)
+	at quartisweb.service.UserLanguageService.buildFicLangueGen(UserLanguageService.java:54)
+	at quartisweb.service.UserLanguageService.getFichierLangue(UserLanguageService.java:41)
+	at quartisweb.language.LanguageGlobal.openBundle(LanguageGlobal.java:208)
+	at quartisweb.language.LanguageGlobal.addUserLanguage(LanguageGlobal.java:202)
+	at quartisweb.language.LanguageGlobal.getLocalisedLabel(LanguageGlobal.java:88)
+	at quartisweb.ui.UiManager.creerMenuAccueil(UiManager.java:129)
+	at quartisweb.ui.UiManager.buildMenu(UiManager.java:81)
+	at quartisweb.jsf.managedBean.ConnexionManagedBean.chargerDonneesUserEnSession(ConnexionManagedBean.java:207)
+	at quartisweb.jsf.managedBean.ConnexionManagedBean.connexion(ConnexionManagedBean.java:334)
+	at quartisweb.jsf.managedBean.LoginManagedBean.authenticate(LoginManagedBean.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.el.parser.AstValue.invoke(AstValue.java:191)
+	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:276)
+	at org.apache.jasper.el.JspMethodExpression.invoke(JspMethodExpression.java:68)
+	at javax.faces.component.MethodBindingMethodExpressionAdapter.invoke(MethodBindingMethodExpressionAdapter.java:77)
+	at com.sun.faces.application.ActionListenerImpl.processAction(ActionListenerImpl.java:91)
+	at javax.faces.component.UICommand.broadcast(UICommand.java:383)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:447)
+	at javax.faces.component.UIViewRoot.processApplication(UIViewRoot.java:752)
+	at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:97)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:117)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:244)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at waffle.servlet.NegotiateSecurityFilter.doFilterPrincipal(NegotiateSecurityFilter.java:251)
+	at waffle.servlet.NegotiateSecurityFilter.doFilter(NegotiateSecurityFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+11:47:45.570 DEBUG - Util copyFile - Fin de la copie. 
+11:47:45.621 DEBUG - Util copyFile - Copie de 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language_fr.properties'. 
+11:47:45.621 ERROR - Util Fichier non trouvé, impossible de copier 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language_fr.properties'. java.io.FileNotFoundException: C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties (Le fichier spécifié est introuvable)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at quartisspv.util.Util.copyFile(Util.java:30)
+	at quartisweb.language.LanguageFileManager.buildPropertiesGen(LanguageFileManager.java:192)
+	at quartisweb.service.UserLanguageService.buildFicLangueGen(UserLanguageService.java:54)
+	at quartisweb.service.UserLanguageService.getFichierLangue(UserLanguageService.java:41)
+	at quartisweb.language.LanguageGlobal.openBundle(LanguageGlobal.java:208)
+	at quartisweb.language.LanguageGlobal.addUserLanguage(LanguageGlobal.java:202)
+	at quartisweb.language.LanguageGlobal.getLocalisedLabel(LanguageGlobal.java:88)
+	at quartisweb.ui.bean.MenuCategory.<init>(MenuCategory.java:91)
+	at quartisweb.ui.bean.Menu.ajoutFavoris(Menu.java:53)
+	at quartisweb.ui.UiManager.buildMenu(UiManager.java:96)
+	at quartisweb.jsf.managedBean.ConnexionManagedBean.chargerDonneesUserEnSession(ConnexionManagedBean.java:207)
+	at quartisweb.jsf.managedBean.ConnexionManagedBean.connexion(ConnexionManagedBean.java:334)
+	at quartisweb.jsf.managedBean.LoginManagedBean.authenticate(LoginManagedBean.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.el.parser.AstValue.invoke(AstValue.java:191)
+	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:276)
+	at org.apache.jasper.el.JspMethodExpression.invoke(JspMethodExpression.java:68)
+	at javax.faces.component.MethodBindingMethodExpressionAdapter.invoke(MethodBindingMethodExpressionAdapter.java:77)
+	at com.sun.faces.application.ActionListenerImpl.processAction(ActionListenerImpl.java:91)
+	at javax.faces.component.UICommand.broadcast(UICommand.java:383)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:447)
+	at javax.faces.component.UIViewRoot.processApplication(UIViewRoot.java:752)
+	at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:97)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:117)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:244)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at waffle.servlet.NegotiateSecurityFilter.doFilterPrincipal(NegotiateSecurityFilter.java:251)
+	at waffle.servlet.NegotiateSecurityFilter.doFilter(NegotiateSecurityFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+11:47:45.622 DEBUG - Util copyFile - Fin de la copie. 
+11:47:45.624 DEBUG - Util copyFile - Copie de 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language_fr.properties'. 
+11:47:45.625 ERROR - Util Fichier non trouvé, impossible de copier 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language_fr.properties'. java.io.FileNotFoundException: C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties (Le fichier spécifié est introuvable)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at quartisspv.util.Util.copyFile(Util.java:30)
+	at quartisweb.language.LanguageFileManager.buildPropertiesGen(LanguageFileManager.java:192)
+	at quartisweb.service.UserLanguageService.buildFicLangueGen(UserLanguageService.java:54)
+	at quartisweb.service.UserLanguageService.getFichierLangue(UserLanguageService.java:41)
+	at quartisweb.language.LanguageGlobal.openBundle(LanguageGlobal.java:208)
+	at quartisweb.language.LanguageGlobal.addUserLanguage(LanguageGlobal.java:202)
+	at quartisweb.language.LanguageGlobal.getLocalisedLabel(LanguageGlobal.java:88)
+	at quartisweb.ui.bean.MenuLink.sousConstructeurAdminFavoris(MenuLink.java:60)
+	at quartisweb.ui.bean.MenuLink.<init>(MenuLink.java:48)
+	at quartisweb.ui.bean.MenuCategory.creerListeMenuLinkPourFavoris(MenuCategory.java:129)
+	at quartisweb.ui.bean.MenuCategory.<init>(MenuCategory.java:94)
+	at quartisweb.ui.bean.Menu.ajoutFavoris(Menu.java:53)
+	at quartisweb.ui.UiManager.buildMenu(UiManager.java:96)
+	at quartisweb.jsf.managedBean.ConnexionManagedBean.chargerDonneesUserEnSession(ConnexionManagedBean.java:207)
+	at quartisweb.jsf.managedBean.ConnexionManagedBean.connexion(ConnexionManagedBean.java:334)
+	at quartisweb.jsf.managedBean.LoginManagedBean.authenticate(LoginManagedBean.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.el.parser.AstValue.invoke(AstValue.java:191)
+	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:276)
+	at org.apache.jasper.el.JspMethodExpression.invoke(JspMethodExpression.java:68)
+	at javax.faces.component.MethodBindingMethodExpressionAdapter.invoke(MethodBindingMethodExpressionAdapter.java:77)
+	at com.sun.faces.application.ActionListenerImpl.processAction(ActionListenerImpl.java:91)
+	at javax.faces.component.UICommand.broadcast(UICommand.java:383)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:447)
+	at javax.faces.component.UIViewRoot.processApplication(UIViewRoot.java:752)
+	at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:97)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:117)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:244)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at waffle.servlet.NegotiateSecurityFilter.doFilterPrincipal(NegotiateSecurityFilter.java:251)
+	at waffle.servlet.NegotiateSecurityFilter.doFilter(NegotiateSecurityFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+11:47:45.625 DEBUG - Util copyFile - Fin de la copie. 
+11:47:45.670 DEBUG - Util copyFile - Copie de 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language_fr.properties'. 
+11:47:45.670 ERROR - Util Fichier non trouvé, impossible de copier 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language_fr.properties'. java.io.FileNotFoundException: C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties (Le fichier spécifié est introuvable)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at quartisspv.util.Util.copyFile(Util.java:30)
+	at quartisweb.language.LanguageFileManager.buildPropertiesGen(LanguageFileManager.java:192)
+	at quartisweb.service.UserLanguageService.buildFicLangueGen(UserLanguageService.java:54)
+	at quartisweb.service.UserLanguageService.getFichierLangue(UserLanguageService.java:41)
+	at quartisweb.language.LanguageGlobal.openBundle(LanguageGlobal.java:208)
+	at quartisweb.language.LanguageGlobal.addUserLanguage(LanguageGlobal.java:202)
+	at quartisweb.language.LanguageGlobal.getLocalisedLabel(LanguageGlobal.java:88)
+	at quartisweb.jsf.managedBean.ConnexionManagedBean.chargerDonneesUserEnSession(ConnexionManagedBean.java:211)
+	at quartisweb.jsf.managedBean.ConnexionManagedBean.connexion(ConnexionManagedBean.java:334)
+	at quartisweb.jsf.managedBean.LoginManagedBean.authenticate(LoginManagedBean.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.el.parser.AstValue.invoke(AstValue.java:191)
+	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:276)
+	at org.apache.jasper.el.JspMethodExpression.invoke(JspMethodExpression.java:68)
+	at javax.faces.component.MethodBindingMethodExpressionAdapter.invoke(MethodBindingMethodExpressionAdapter.java:77)
+	at com.sun.faces.application.ActionListenerImpl.processAction(ActionListenerImpl.java:91)
+	at javax.faces.component.UICommand.broadcast(UICommand.java:383)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:447)
+	at javax.faces.component.UIViewRoot.processApplication(UIViewRoot.java:752)
+	at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:97)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:117)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:244)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at waffle.servlet.NegotiateSecurityFilter.doFilterPrincipal(NegotiateSecurityFilter.java:251)
+	at waffle.servlet.NegotiateSecurityFilter.doFilter(NegotiateSecurityFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+11:47:45.671 DEBUG - Util copyFile - Fin de la copie. 
+11:48:06.026 DEBUG - ConnexionManagedBean Déconnexion de : administrateur (ADMINISTRATEUR ADMINISTRATEUR) 
+11:48:47.436 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+11:48:47.533 DEBUG - Util copyFile - Copie de 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language_fr.properties'. 
+11:48:47.533 ERROR - Util Fichier non trouvé, impossible de copier 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language_fr.properties'. java.io.FileNotFoundException: C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties (Le fichier spécifié est introuvable)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at quartisspv.util.Util.copyFile(Util.java:30)
+	at quartisweb.language.LanguageFileManager.buildPropertiesGen(LanguageFileManager.java:192)
+	at quartisweb.service.UserLanguageService.buildFicLangueGen(UserLanguageService.java:54)
+	at quartisweb.service.UserLanguageService.getFichierLangue(UserLanguageService.java:41)
+	at quartisweb.language.LanguageGlobal.openBundle(LanguageGlobal.java:208)
+	at quartisweb.language.LanguageGlobal.addUserLanguage(LanguageGlobal.java:202)
+	at quartisweb.language.LanguageGlobal.getLocalisedLabel(LanguageGlobal.java:88)
+	at quartisweb.ui.UiManager.creerMenuAccueil(UiManager.java:115)
+	at quartisweb.ui.UiManager.buildMenu(UiManager.java:81)
+	at quartisweb.jsf.managedBean.ConnexionManagedBean.chargerDonneesUserEnSession(ConnexionManagedBean.java:207)
+	at quartisweb.jsf.managedBean.ConnexionManagedBean.connexion(ConnexionManagedBean.java:334)
+	at quartisweb.jsf.managedBean.LoginManagedBean.authenticate(LoginManagedBean.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.el.parser.AstValue.invoke(AstValue.java:191)
+	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:276)
+	at org.apache.jasper.el.JspMethodExpression.invoke(JspMethodExpression.java:68)
+	at javax.faces.component.MethodBindingMethodExpressionAdapter.invoke(MethodBindingMethodExpressionAdapter.java:77)
+	at com.sun.faces.application.ActionListenerImpl.processAction(ActionListenerImpl.java:91)
+	at javax.faces.component.UICommand.broadcast(UICommand.java:383)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:447)
+	at javax.faces.component.UIViewRoot.processApplication(UIViewRoot.java:752)
+	at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:97)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:117)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:244)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at waffle.servlet.NegotiateSecurityFilter.doFilterPrincipal(NegotiateSecurityFilter.java:251)
+	at waffle.servlet.NegotiateSecurityFilter.doFilter(NegotiateSecurityFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+11:48:47.534 DEBUG - Util copyFile - Fin de la copie. 
+11:48:47.534 DEBUG - Util copyFile - Copie de 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language_fr.properties'. 
+11:48:47.534 ERROR - Util Fichier non trouvé, impossible de copier 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language_fr.properties'. java.io.FileNotFoundException: C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties (Le fichier spécifié est introuvable)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at quartisspv.util.Util.copyFile(Util.java:30)
+	at quartisweb.language.LanguageFileManager.buildPropertiesGen(LanguageFileManager.java:192)
+	at quartisweb.service.UserLanguageService.buildFicLangueGen(UserLanguageService.java:54)
+	at quartisweb.service.UserLanguageService.getFichierLangue(UserLanguageService.java:41)
+	at quartisweb.language.LanguageGlobal.openBundle(LanguageGlobal.java:208)
+	at quartisweb.language.LanguageGlobal.addUserLanguage(LanguageGlobal.java:202)
+	at quartisweb.language.LanguageGlobal.getLocalisedLabel(LanguageGlobal.java:88)
+	at quartisweb.ui.UiManager.creerMenuAccueil(UiManager.java:121)
+	at quartisweb.ui.UiManager.buildMenu(UiManager.java:81)
+	at quartisweb.jsf.managedBean.ConnexionManagedBean.chargerDonneesUserEnSession(ConnexionManagedBean.java:207)
+	at quartisweb.jsf.managedBean.ConnexionManagedBean.connexion(ConnexionManagedBean.java:334)
+	at quartisweb.jsf.managedBean.LoginManagedBean.authenticate(LoginManagedBean.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.el.parser.AstValue.invoke(AstValue.java:191)
+	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:276)
+	at org.apache.jasper.el.JspMethodExpression.invoke(JspMethodExpression.java:68)
+	at javax.faces.component.MethodBindingMethodExpressionAdapter.invoke(MethodBindingMethodExpressionAdapter.java:77)
+	at com.sun.faces.application.ActionListenerImpl.processAction(ActionListenerImpl.java:91)
+	at javax.faces.component.UICommand.broadcast(UICommand.java:383)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:447)
+	at javax.faces.component.UIViewRoot.processApplication(UIViewRoot.java:752)
+	at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:97)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:117)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:244)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at waffle.servlet.NegotiateSecurityFilter.doFilterPrincipal(NegotiateSecurityFilter.java:251)
+	at waffle.servlet.NegotiateSecurityFilter.doFilter(NegotiateSecurityFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+11:48:47.535 DEBUG - Util copyFile - Fin de la copie. 
+11:48:47.536 DEBUG - Util copyFile - Copie de 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language_fr.properties'. 
+11:48:47.536 ERROR - Util Fichier non trouvé, impossible de copier 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language_fr.properties'. java.io.FileNotFoundException: C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties (Le fichier spécifié est introuvable)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at quartisspv.util.Util.copyFile(Util.java:30)
+	at quartisweb.language.LanguageFileManager.buildPropertiesGen(LanguageFileManager.java:192)
+	at quartisweb.service.UserLanguageService.buildFicLangueGen(UserLanguageService.java:54)
+	at quartisweb.service.UserLanguageService.getFichierLangue(UserLanguageService.java:41)
+	at quartisweb.language.LanguageGlobal.openBundle(LanguageGlobal.java:208)
+	at quartisweb.language.LanguageGlobal.addUserLanguage(LanguageGlobal.java:202)
+	at quartisweb.language.LanguageGlobal.getLocalisedLabel(LanguageGlobal.java:88)
+	at quartisweb.ui.UiManager.creerMenuAccueil(UiManager.java:129)
+	at quartisweb.ui.UiManager.buildMenu(UiManager.java:81)
+	at quartisweb.jsf.managedBean.ConnexionManagedBean.chargerDonneesUserEnSession(ConnexionManagedBean.java:207)
+	at quartisweb.jsf.managedBean.ConnexionManagedBean.connexion(ConnexionManagedBean.java:334)
+	at quartisweb.jsf.managedBean.LoginManagedBean.authenticate(LoginManagedBean.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.el.parser.AstValue.invoke(AstValue.java:191)
+	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:276)
+	at org.apache.jasper.el.JspMethodExpression.invoke(JspMethodExpression.java:68)
+	at javax.faces.component.MethodBindingMethodExpressionAdapter.invoke(MethodBindingMethodExpressionAdapter.java:77)
+	at com.sun.faces.application.ActionListenerImpl.processAction(ActionListenerImpl.java:91)
+	at javax.faces.component.UICommand.broadcast(UICommand.java:383)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:447)
+	at javax.faces.component.UIViewRoot.processApplication(UIViewRoot.java:752)
+	at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:97)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:117)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:244)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at waffle.servlet.NegotiateSecurityFilter.doFilterPrincipal(NegotiateSecurityFilter.java:251)
+	at waffle.servlet.NegotiateSecurityFilter.doFilter(NegotiateSecurityFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+11:48:47.536 DEBUG - Util copyFile - Fin de la copie. 
+11:48:47.611 DEBUG - Util copyFile - Copie de 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language_fr.properties'. 
+11:48:47.611 ERROR - Util Fichier non trouvé, impossible de copier 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language_fr.properties'. java.io.FileNotFoundException: C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties (Le fichier spécifié est introuvable)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at quartisspv.util.Util.copyFile(Util.java:30)
+	at quartisweb.language.LanguageFileManager.buildPropertiesGen(LanguageFileManager.java:192)
+	at quartisweb.service.UserLanguageService.buildFicLangueGen(UserLanguageService.java:54)
+	at quartisweb.service.UserLanguageService.getFichierLangue(UserLanguageService.java:41)
+	at quartisweb.language.LanguageGlobal.openBundle(LanguageGlobal.java:208)
+	at quartisweb.language.LanguageGlobal.addUserLanguage(LanguageGlobal.java:202)
+	at quartisweb.language.LanguageGlobal.getLocalisedLabel(LanguageGlobal.java:88)
+	at quartisweb.ui.bean.MenuCategory.<init>(MenuCategory.java:91)
+	at quartisweb.ui.bean.Menu.ajoutFavoris(Menu.java:53)
+	at quartisweb.ui.UiManager.buildMenu(UiManager.java:96)
+	at quartisweb.jsf.managedBean.ConnexionManagedBean.chargerDonneesUserEnSession(ConnexionManagedBean.java:207)
+	at quartisweb.jsf.managedBean.ConnexionManagedBean.connexion(ConnexionManagedBean.java:334)
+	at quartisweb.jsf.managedBean.LoginManagedBean.authenticate(LoginManagedBean.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.el.parser.AstValue.invoke(AstValue.java:191)
+	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:276)
+	at org.apache.jasper.el.JspMethodExpression.invoke(JspMethodExpression.java:68)
+	at javax.faces.component.MethodBindingMethodExpressionAdapter.invoke(MethodBindingMethodExpressionAdapter.java:77)
+	at com.sun.faces.application.ActionListenerImpl.processAction(ActionListenerImpl.java:91)
+	at javax.faces.component.UICommand.broadcast(UICommand.java:383)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:447)
+	at javax.faces.component.UIViewRoot.processApplication(UIViewRoot.java:752)
+	at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:97)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:117)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:244)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at waffle.servlet.NegotiateSecurityFilter.doFilterPrincipal(NegotiateSecurityFilter.java:251)
+	at waffle.servlet.NegotiateSecurityFilter.doFilter(NegotiateSecurityFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+11:48:47.612 DEBUG - Util copyFile - Fin de la copie. 
+11:48:47.612 DEBUG - Util copyFile - Copie de 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language_fr.properties'. 
+11:48:47.612 ERROR - Util Fichier non trouvé, impossible de copier 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language_fr.properties'. java.io.FileNotFoundException: C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties (Le fichier spécifié est introuvable)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at quartisspv.util.Util.copyFile(Util.java:30)
+	at quartisweb.language.LanguageFileManager.buildPropertiesGen(LanguageFileManager.java:192)
+	at quartisweb.service.UserLanguageService.buildFicLangueGen(UserLanguageService.java:54)
+	at quartisweb.service.UserLanguageService.getFichierLangue(UserLanguageService.java:41)
+	at quartisweb.language.LanguageGlobal.openBundle(LanguageGlobal.java:208)
+	at quartisweb.language.LanguageGlobal.addUserLanguage(LanguageGlobal.java:202)
+	at quartisweb.language.LanguageGlobal.getLocalisedLabel(LanguageGlobal.java:88)
+	at quartisweb.ui.bean.MenuLink.sousConstructeurAdminFavoris(MenuLink.java:60)
+	at quartisweb.ui.bean.MenuLink.<init>(MenuLink.java:48)
+	at quartisweb.ui.bean.MenuCategory.creerListeMenuLinkPourFavoris(MenuCategory.java:129)
+	at quartisweb.ui.bean.MenuCategory.<init>(MenuCategory.java:94)
+	at quartisweb.ui.bean.Menu.ajoutFavoris(Menu.java:53)
+	at quartisweb.ui.UiManager.buildMenu(UiManager.java:96)
+	at quartisweb.jsf.managedBean.ConnexionManagedBean.chargerDonneesUserEnSession(ConnexionManagedBean.java:207)
+	at quartisweb.jsf.managedBean.ConnexionManagedBean.connexion(ConnexionManagedBean.java:334)
+	at quartisweb.jsf.managedBean.LoginManagedBean.authenticate(LoginManagedBean.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.el.parser.AstValue.invoke(AstValue.java:191)
+	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:276)
+	at org.apache.jasper.el.JspMethodExpression.invoke(JspMethodExpression.java:68)
+	at javax.faces.component.MethodBindingMethodExpressionAdapter.invoke(MethodBindingMethodExpressionAdapter.java:77)
+	at com.sun.faces.application.ActionListenerImpl.processAction(ActionListenerImpl.java:91)
+	at javax.faces.component.UICommand.broadcast(UICommand.java:383)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:447)
+	at javax.faces.component.UIViewRoot.processApplication(UIViewRoot.java:752)
+	at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:97)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:117)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:244)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at waffle.servlet.NegotiateSecurityFilter.doFilterPrincipal(NegotiateSecurityFilter.java:251)
+	at waffle.servlet.NegotiateSecurityFilter.doFilter(NegotiateSecurityFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+11:48:47.613 DEBUG - Util copyFile - Fin de la copie. 
+11:48:47.656 DEBUG - Util copyFile - Copie de 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language_fr.properties'. 
+11:48:47.656 ERROR - Util Fichier non trouvé, impossible de copier 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties' vers 'C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language_fr.properties'. java.io.FileNotFoundException: C:\Osys\QUARTIS_PRO\Quartis-Pro\quartis-pro-web\users\administrateur\language.properties (Le fichier spécifié est introuvable)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at quartisspv.util.Util.copyFile(Util.java:30)
+	at quartisweb.language.LanguageFileManager.buildPropertiesGen(LanguageFileManager.java:192)
+	at quartisweb.service.UserLanguageService.buildFicLangueGen(UserLanguageService.java:54)
+	at quartisweb.service.UserLanguageService.getFichierLangue(UserLanguageService.java:41)
+	at quartisweb.language.LanguageGlobal.openBundle(LanguageGlobal.java:208)
+	at quartisweb.language.LanguageGlobal.addUserLanguage(LanguageGlobal.java:202)
+	at quartisweb.language.LanguageGlobal.getLocalisedLabel(LanguageGlobal.java:88)
+	at quartisweb.jsf.managedBean.ConnexionManagedBean.chargerDonneesUserEnSession(ConnexionManagedBean.java:211)
+	at quartisweb.jsf.managedBean.ConnexionManagedBean.connexion(ConnexionManagedBean.java:334)
+	at quartisweb.jsf.managedBean.LoginManagedBean.authenticate(LoginManagedBean.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.el.parser.AstValue.invoke(AstValue.java:191)
+	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:276)
+	at org.apache.jasper.el.JspMethodExpression.invoke(JspMethodExpression.java:68)
+	at javax.faces.component.MethodBindingMethodExpressionAdapter.invoke(MethodBindingMethodExpressionAdapter.java:77)
+	at com.sun.faces.application.ActionListenerImpl.processAction(ActionListenerImpl.java:91)
+	at javax.faces.component.UICommand.broadcast(UICommand.java:383)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:447)
+	at javax.faces.component.UIViewRoot.processApplication(UIViewRoot.java:752)
+	at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:97)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:117)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:244)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at waffle.servlet.NegotiateSecurityFilter.doFilterPrincipal(NegotiateSecurityFilter.java:251)
+	at waffle.servlet.NegotiateSecurityFilter.doFilter(NegotiateSecurityFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+11:48:47.657 DEBUG - Util copyFile - Fin de la copie. 
+11:48:53.775 DEBUG - ConnexionManagedBean Déconnexion de : administrateur (ADMINISTRATEUR ADMINISTRATEUR) 
+11:49:47.500  INFO - PropertiesDelegate Destruction du properties manager ! 
+11:50:46.773 DEBUG - TomcatListener contextInitialized - servletContext.realPath : C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web 
+11:50:46.773  INFO - PropertiesDelegate Ouverture du fichier de configuration à l'emplacement : C:\Osys\QuartisTools\Tomcat/conf/quartis-web.properties 
+11:50:46.804  INFO - TomcatListener -----> Supression des fichier temporaires 
+11:50:46.867  INFO - ConfigFileManager Création du fichier C:\Osys\QUARTIS_PRO\quartis-pro-web\users\Config\profil.xml... 
+11:50:46.867 DEBUG - ConfigFileManager Copie à partir du fichier : C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\WEB-INF\classes\quartisweb\resources\config\profil.xml 
+11:50:46.867 DEBUG - Util copyFile - Copie de 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\WEB-INF\classes\quartisweb\resources\config\profil.xml' vers 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\Config\profil.xml'. 
+11:50:46.867 DEBUG - Util copyFile - Fin de la copie. 
+11:50:46.867  INFO - ConfigFileManager Création du fichier C:\Osys\QUARTIS_PRO\quartis-pro-web\users\Config\utilisateur.xml... 
+11:50:46.882 DEBUG - ConfigFileManager Copie à partir du fichier : C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\WEB-INF\classes\quartisweb\resources\config\utilisateur.xml 
+11:50:46.882 DEBUG - Util copyFile - Copie de 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\WEB-INF\classes\quartisweb\resources\config\utilisateur.xml' vers 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\Config\utilisateur.xml'. 
+11:50:46.882 DEBUG - Util copyFile - Fin de la copie. 
+11:50:46.882  INFO - ConfigFileManager Création du fichier C:\Osys\QUARTIS_PRO\quartis-pro-web\users\Config\restrict.xml... 
+11:50:46.882 DEBUG - ConfigFileManager Copie à partir du fichier : C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\WEB-INF\classes\quartisweb\resources\config\restrict.xml 
+11:50:46.882 DEBUG - Util copyFile - Copie de 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\WEB-INF\classes\quartisweb\resources\config\restrict.xml' vers 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\Config\restrict.xml'. 
+11:50:46.882 DEBUG - Util copyFile - Fin de la copie. 
+11:50:46.882 DEBUG - Util copyFile - Copie de 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\WEB-INF\classes\quartisweb\resources\allusers\preferences.xml' vers 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\All Users\Standard\preferences.xml'. 
+11:50:46.882 DEBUG - Util copyFile - Fin de la copie. 
+11:50:46.882 DEBUG - Util copyFile - Copie de 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\WEB-INF\classes\quartisweb\resources\allusers\preferences-sup.xml' vers 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\All Users\preferences.xml'. 
+11:50:46.882 DEBUG - Util copyFile - Fin de la copie. 
+11:50:46.882 DEBUG - Util copyFile - Copie de 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\WEB-INF\classes\quartisweb\resources\allusers\level1.xml' vers 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\All Users\level1.xml'. 
+11:50:46.882 DEBUG - Util copyFile - Fin de la copie. 
+11:50:46.882 DEBUG - Util copyFile - Copie de 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\WEB-INF\classes\quartisweb\resources\allusers\favoris.xml' vers 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\All Users\Standard\favoris.xml'. 
+11:50:46.882 DEBUG - Util copyFile - Fin de la copie. 
+11:50:46.882  INFO - TomcatListener Ouverture du fichier indiquant la base de données : C:\Osys\QuartisTools\Tomcat/conf/datasources.xml... 
+11:50:46.945  INFO - DataSourceManager Création de la datasource : QuartisWeb-PU 
+11:51:15.863 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+11:51:16.047 DEBUG - SiteManager createFavoriteFile - Création et écriture dans le fichier : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\preferences.xml'... 
+11:51:16.052 DEBUG - SiteManager createFavoriteFile - Fin de l'écriture dans le fichier. 
+11:51:16.556 DEBUG - ParameterManager getNodeXmlParameters - Création de 'C:/Osys/QUARTIS_PRO/quartis-pro-web\users\administrateur\Standard'... 
+11:51:16.556 DEBUG - ParameterManager getNodeXmlParameters - Fichier créé. 
+11:51:16.556 DEBUG - ParameterManager getNodeXmlParameters - Création de 'C:/Osys/QUARTIS_PRO/quartis-pro-web\users\administrateur\Standard'... 
+11:51:16.556 DEBUG - ParameterManager getNodeXmlParameters - Fichier créé. 
+11:51:16.760 DEBUG - TransfertFile copyFile (pls) - Copie de 18 fichiers vers 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\language.properties'... 
+11:51:16.760 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 0/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language.properties'. 
+11:51:16.760 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language.properties'... 
+11:51:16.761 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.761 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 1/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language.properties'. 
+11:51:16.761 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language.properties'... 
+11:51:16.761 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.761 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 2/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language.properties'. 
+11:51:16.761 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language.properties'... 
+11:51:16.762 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.762 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 3/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language.properties'. 
+11:51:16.762 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language.properties'... 
+11:51:16.762 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.762 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 4/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language.properties'. 
+11:51:16.762 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language.properties'... 
+11:51:16.762 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.762 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 5/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language.properties'. 
+11:51:16.762 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language.properties'... 
+11:51:16.763 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.763 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 6/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language.properties'. 
+11:51:16.763 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language.properties'... 
+11:51:16.763 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.763 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 7/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language.properties'. 
+11:51:16.763 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language.properties'... 
+11:51:16.763 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.763 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 8/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language.properties'. 
+11:51:16.763 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language.properties'... 
+11:51:16.764 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.764 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 9/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language.properties'. 
+11:51:16.764 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language.properties'... 
+11:51:16.764 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.764 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 10/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language.properties'. 
+11:51:16.764 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language.properties'... 
+11:51:16.765 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.765 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 11/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language.properties'. 
+11:51:16.765 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language.properties'... 
+11:51:16.765 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.765 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 12/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language.properties'. 
+11:51:16.765 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language.properties'... 
+11:51:16.765 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.765 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 13/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language.properties'. 
+11:51:16.765 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language.properties'... 
+11:51:16.765 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.766 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 14/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language.properties'. 
+11:51:16.766 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language.properties'... 
+11:51:16.766 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.766 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 15/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language.properties'. 
+11:51:16.766 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language.properties'... 
+11:51:16.766 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.766 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 16/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language.properties'. 
+11:51:16.766 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language.properties'... 
+11:51:16.766 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.766 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 17/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language.properties'. 
+11:51:16.767 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language.properties'... 
+11:51:16.767 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.767 DEBUG - TransfertFile copyFile (pls) - Fin de la copie. 
+11:51:16.958 DEBUG - TransfertFile copyFile (pls) - Copie de 18 fichiers vers 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\language_fr.properties'... 
+11:51:16.958 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 0/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language_fr.properties'. 
+11:51:16.958 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language_fr.properties'... 
+11:51:16.959 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.959 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 1/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language_fr.properties'. 
+11:51:16.959 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language_fr.properties'... 
+11:51:16.959 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.959 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 2/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language_fr.properties'. 
+11:51:16.959 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language_fr.properties'... 
+11:51:16.959 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.959 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 3/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language_fr.properties'. 
+11:51:16.959 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language_fr.properties'... 
+11:51:16.960 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.960 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 4/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language_fr.properties'. 
+11:51:16.960 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language_fr.properties'... 
+11:51:16.960 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.960 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 5/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language_fr.properties'. 
+11:51:16.960 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language_fr.properties'... 
+11:51:16.960 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.960 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 6/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language_fr.properties'. 
+11:51:16.960 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language_fr.properties'... 
+11:51:16.961 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.961 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 7/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language_fr.properties'. 
+11:51:16.961 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language_fr.properties'... 
+11:51:16.961 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.961 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 8/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language_fr.properties'. 
+11:51:16.961 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language_fr.properties'... 
+11:51:16.961 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.961 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 9/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language_fr.properties'. 
+11:51:16.962 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language_fr.properties'... 
+11:51:16.962 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.962 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 10/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language_fr.properties'. 
+11:51:16.962 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language_fr.properties'... 
+11:51:16.962 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.962 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 11/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language_fr.properties'. 
+11:51:16.962 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language_fr.properties'... 
+11:51:16.962 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.962 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 12/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language_fr.properties'. 
+11:51:16.962 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language_fr.properties'... 
+11:51:16.963 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.963 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 13/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language_fr.properties'. 
+11:51:16.963 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language_fr.properties'... 
+11:51:16.963 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.963 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 14/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language_fr.properties'. 
+11:51:16.963 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language_fr.properties'... 
+11:51:16.963 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.963 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 15/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language_fr.properties'. 
+11:51:16.963 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language_fr.properties'... 
+11:51:16.964 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.964 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 16/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language_fr.properties'. 
+11:51:16.964 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language_fr.properties'... 
+11:51:16.964 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.964 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 17/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language_fr.properties'. 
+11:51:16.964 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language_fr.properties'... 
+11:51:16.964 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+11:51:16.964 DEBUG - TransfertFile copyFile (pls) - Fin de la copie. 
+11:51:16.965 DEBUG - LanguageFileManager buildPropertiesGen - Création de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\language_fr.properties'... 
+11:51:16.992 DEBUG - LanguageFileManager buildPropertiesGen - Fin de la création. 
+11:51:20.098 DEBUG - ApplicationProperties generateEmptyPreferencesFile - Ecriture dans le fichier : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\level1.xml'... 
+11:51:20.099 DEBUG - ApplicationProperties generateEmptyPreferencesFile - Fin de l'écriture dans le fichier. 
+11:51:20.099 DEBUG - Util copyFile - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\All Users\level1.xml' vers 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\level1.xml'. 
+11:51:20.099 DEBUG - Util copyFile - Fin de la copie. 
+11:51:20.286 DEBUG - FavoriteManager createFavoriteFile - Ecriture dans le fichier : 'C:/Osys/QUARTIS_PRO/quartis-pro-web\users\administrateur\Standard\favoris.xml'... 
+11:51:20.287 DEBUG - FavoriteManager createFavoriteFile - Fin de l'écriture dans le fichier. 
+11:51:21.127 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:51:21.127 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:51:21.131 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:51:21.131 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:51:21.131 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:51:21.131 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:51:21.471 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:51:21.471 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:51:23.903 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:51:23.903 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:51:23.904 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:51:23.914 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:51:23.920 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:51:23.920 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:51:23.920 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:51:23.931 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:51:34.685 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:51:34.685 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:51:34.685 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:51:34.685 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:51:45.656 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:51:45.656 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:51:45.656 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:51:45.656 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:51:55.644 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:51:55.644 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:51:55.644 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:51:55.660 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:52:06.660 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:52:06.660 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:52:06.660 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:52:06.676 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:52:16.665 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:52:16.665 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:52:16.665 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:52:16.665 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:52:26.652 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:52:26.652 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:52:26.652 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:52:26.667 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:52:37.641 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:52:37.641 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:52:37.641 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:52:37.641 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:52:47.631 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:52:47.631 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:52:47.631 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:52:47.647 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:52:57.667 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:52:57.667 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:52:57.667 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:52:57.682 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:53:08.802 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:53:08.802 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:53:08.802 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:53:08.817 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:53:19.636 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:53:19.636 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:53:19.636 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:53:19.652 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:53:24.401 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:53:24.402 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:53:24.402 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:53:24.411 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:53:24.523 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:53:24.523 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:53:24.523 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:53:24.532 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:53:34.576 DEBUG - XmlFile saveXmlFile - needsLock : true, pathFicXml : C:/Osys/QUARTIS_PRO/quartis-pro-web/users/Config\profil.xml 
+11:53:34.576 DEBUG - XmlFile saveXmlFile - Verrouillage du fichier 'C:/Osys/QUARTIS_PRO/quartis-pro-web/users/Config\profil.xml'. 
+11:53:34.598 DEBUG - XmlFile saveXmlFile - Déverrouillage du fichier 'C:/Osys/QUARTIS_PRO/quartis-pro-web/users/Config\profil.xml'. 
+11:53:38.163 DEBUG - ConnexionManagedBean Déconnexion de : administrateur (ADMINISTRATEUR ADMINISTRATEUR) 
+11:53:40.646 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+11:53:47.288 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:53:47.288 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:53:47.288 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:53:47.298 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:53:47.313 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:53:47.313 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:53:47.313 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:53:47.323 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:53:51.423 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:53:51.424 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:53:51.424 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:53:51.433 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:53:51.565 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:53:51.565 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:53:51.565 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:53:51.574 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:53:53.343 DEBUG - GSqlQueryGeneratorSqlServer --->table =SITE query =set rowcount 3000  SELECT CODE_SITE  , dbo.OPTIMA_TRADUCTION(DESI_SITE,'fr') +'@KEYLANG_'+DESI_SITE AS DESI_SITE  , ZONE_UTC  , FLAG_HEUR_ETE  , LANG_IMPO_DEFA  , CODE_GROU  , FLAG_SUPP FROM SITE  ORDER BY CODE_SITE ASC  
+11:54:05.026 DEBUG - GSqlQueryGeneratorSqlServer --->table =SITE query =set rowcount 3000  SELECT CODE_SITE  , dbo.OPTIMA_TRADUCTION(DESI_SITE,'fr') +'@KEYLANG_'+DESI_SITE AS DESI_SITE  , ZONE_UTC  , FLAG_HEUR_ETE  , LANG_IMPO_DEFA  , CODE_GROU  , FLAG_SUPP FROM SITE  ORDER BY CODE_SITE ASC  
+11:54:05.046 DEBUG - SiteManager saveUserCodeSites - Ecriture dans le fichier : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\admin\preferences.xml'... 
+11:54:05.047 DEBUG - SiteManager saveUserCodeSites - Fin de l'écriture dans le fichier. 
+11:54:18.041 DEBUG - DataEtatManagedBean showEtat - identifiants de connexion : administrateur, (mdp chiffré encodé : 'VW0b+4dXXhee739cOJUrDKaz5KfdAS2CtC3hJK85+ik0dY5n6odVHV62y7OSlNDqLYZvkN+zMBOQa3kTqwp9MJLBfJV7qXhTGNFr4idCzKfmb76oA4uNDN+haIhLFiA8JvGTLKJyLUUbQgJFaJ3/1qY6jxksTtXsIGUNST8ZeNm1BkFAtCe3Dvu5zw7tRvDNM2foTgU/pX4AeT3bKlNpcn5yorloA9ExeOtX6FJBTVDNijByMfNM/sVRiTVzlbP6LeikMLUJ5qBqKjLs15Y3Ixz/ysQklotIoyxLGXyhdsdxtqva+7nFZwS0RpsQtlZDR1Qi/4FbZN3o1o88EZNCBg=='), mdp déchiffré : '' rechiffré en '[]' 
+11:54:18.091 DEBUG - DataEtatManagedBean showEtat - administrateur connecté a Quartis Tools 
+11:54:21.294 DEBUG - DataEtatManagedBean showEtat - administrateur déconnecté de Quartis Tools 
+11:54:23.703 ERROR - UserManager updateSiteDefautUser - Erreur lors de la modification du dom (codeSiteDefau:MAR nom:ADMIN) erreur: Impossible de modifier le site dans le DOM parceque UserManager est null. 
+11:54:23.703 ERROR - UserManager updateSiteDefautUser - Erreur lors de la modification du dom (codeSiteDefau:MAR nom:ADMINISTRATEUR) erreur: Impossible de modifier le site dans le DOM parceque UserManager est null. 
+11:54:23.703 ERROR - UserManager updateSiteDefautUser - Erreur lors de la modification du dom (codeSiteDefau:MAR nom:__tech) erreur: Impossible de modifier le site dans le DOM parceque UserManager est null. 
+11:54:23.703 DEBUG - XmlFile saveXmlFile - needsLock : true, pathFicXml : C:/Osys/QUARTIS_PRO/quartis-pro-web/users/Config\utilisateur.xml 
+11:54:23.703 DEBUG - XmlFile saveXmlFile - Verrouillage du fichier 'C:/Osys/QUARTIS_PRO/quartis-pro-web/users/Config\utilisateur.xml'. 
+11:54:23.703  INFO - XmlFile Création d'un sauvegarde pour le fichier utilisateur.xml... 
+11:54:23.703 ERROR - XmlFile Erreur lors de la tentative de lecture du fichier utilisateur.xml pour le copier, fichier corrompu : Premature end of file. org.xml.sax.SAXParseException; Premature end of file.
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at javax.xml.parsers.DocumentBuilder.parse(Unknown Source)
+	at quartisweb.file.XmlFile.sauvegardeFichierUtilisateur(XmlFile.java:296)
+	at quartisweb.file.XmlFile.saveXmlFile(XmlFile.java:254)
+	at quartisweb.id.user.UserManager.saveFileXml(UserManager.java:1260)
+	at quartisweb.id.user.UserManager.updateSiteDefautUser(UserManager.java:1178)
+	at quartisweb.id.global.UserGlobalManager.verifySiteTiret(UserGlobalManager.java:145)
+	at quartisweb.id.global.UserGlobalManager.reloadListUser(UserGlobalManager.java:206)
+	at quartisweb.jsf.managedBean.ConnexionManagedBean.<init>(ConnexionManagedBean.java:95)
+	at quartisweb.jsf.managedBean.LoginManagedBean.<init>(LoginManagedBean.java:35)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at com.sun.faces.config.ManagedBeanFactoryImpl.newInstance(ManagedBeanFactoryImpl.java:277)
+	at com.sun.faces.application.ApplicationAssociate.createAndMaybeStoreManagedBeans(ApplicationAssociate.java:546)
+	at com.sun.faces.el.ManagedBeanELResolver.getValue(ManagedBeanELResolver.java:82)
+	at javax.el.CompositeELResolver.getValue(CompositeELResolver.java:54)
+	at com.sun.faces.el.FacesCompositeELResolver.getValue(FacesCompositeELResolver.java:64)
+	at org.apache.el.parser.AstIdentifier.getValue(AstIdentifier.java:68)
+	at org.apache.el.parser.AstValue.getTarget(AstValue.java:68)
+	at org.apache.el.parser.AstValue.invoke(AstValue.java:187)
+	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:276)
+	at org.apache.jasper.el.JspMethodExpression.invoke(JspMethodExpression.java:68)
+	at javax.faces.component.MethodBindingMethodExpressionAdapter.invoke(MethodBindingMethodExpressionAdapter.java:77)
+	at com.sun.faces.application.ActionListenerImpl.processAction(ActionListenerImpl.java:91)
+	at javax.faces.component.UICommand.broadcast(UICommand.java:383)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:447)
+	at javax.faces.component.UIViewRoot.processApplication(UIViewRoot.java:752)
+	at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:97)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:117)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:244)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at waffle.servlet.NegotiateSecurityFilter.doFilterPrincipal(NegotiateSecurityFilter.java:251)
+	at waffle.servlet.NegotiateSecurityFilter.doFilter(NegotiateSecurityFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:233)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+11:54:23.703 DEBUG - XmlFile saveXmlFile - Déverrouillage du fichier 'C:/Osys/QUARTIS_PRO/quartis-pro-web/users/Config\utilisateur.xml'. 
+11:54:23.703 DEBUG - ConnexionManagedBean Déconnexion de : administrateur (ADMINISTRATEUR ADMINISTRATEUR) 
+11:54:25.630 ERROR - XmlFile Erreur au parsing XML du fichier 'C:/Osys/QUARTIS_PRO/quartis-pro-web/users/Config\utilisateur.xml' : Premature end of file. org.xml.sax.SAXParseException; Premature end of file.
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at javax.xml.parsers.DocumentBuilder.parse(Unknown Source)
+	at quartisweb.file.XmlFile.getDocument(XmlFile.java:80)
+	at quartisweb.id.user.UserManager.<init>(UserManager.java:82)
+	at quartisweb.jsf.managedBean.LoginManagedBean.authenticate(LoginManagedBean.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.el.parser.AstValue.invoke(AstValue.java:191)
+	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:276)
+	at org.apache.jasper.el.JspMethodExpression.invoke(JspMethodExpression.java:68)
+	at javax.faces.component.MethodBindingMethodExpressionAdapter.invoke(MethodBindingMethodExpressionAdapter.java:77)
+	at com.sun.faces.application.ActionListenerImpl.processAction(ActionListenerImpl.java:91)
+	at javax.faces.component.UICommand.broadcast(UICommand.java:383)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:447)
+	at javax.faces.component.UIViewRoot.processApplication(UIViewRoot.java:752)
+	at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:97)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:117)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:244)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at waffle.servlet.NegotiateSecurityFilter.doFilterPrincipal(NegotiateSecurityFilter.java:251)
+	at waffle.servlet.NegotiateSecurityFilter.doFilter(NegotiateSecurityFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+11:54:25.630 ERROR - XmlFile Tentative de restauration du fichier... 
+11:54:25.630 DEBUG - XmlFile saveXmlFile - Verrouillage du fichier 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\Config\utilisateur.xml'. 
+11:54:25.646  INFO - XmlFile Restauration à partir du fichier par défaut... 
+11:54:25.646 DEBUG - Util copyFile - Copie de 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\WEB-INF\classes\quartisweb\resources\config\utilisateur.xml' vers 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\Config\utilisateur.xml'. 
+11:54:25.647 DEBUG - Util copyFile - Fin de la copie. 
+11:54:25.647 DEBUG - XmlFile saveXmlFile - Déverrouillage du fichier 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\Config\utilisateur.xml'. 
+11:54:25.647 ERROR - XmlFile Restauration effectuée. 
+11:54:25.647 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+11:54:41.105 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:54:41.105 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:54:41.106 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:54:41.119 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:54:41.122 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:54:41.123 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:54:41.123 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:54:41.135 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:54:52.375 DEBUG - XmlFile saveXmlFile - needsLock : true, pathFicXml : C:/Osys/QUARTIS_PRO/quartis-pro-web/users/Config\profil.xml 
+11:54:52.375 DEBUG - XmlFile saveXmlFile - Verrouillage du fichier 'C:/Osys/QUARTIS_PRO/quartis-pro-web/users/Config\profil.xml'. 
+11:54:52.385 DEBUG - XmlFile saveXmlFile - Déverrouillage du fichier 'C:/Osys/QUARTIS_PRO/quartis-pro-web/users/Config\profil.xml'. 
+11:54:53.662 DEBUG - ConnexionManagedBean Déconnexion de : administrateur (ADMINISTRATEUR ADMINISTRATEUR) 
+11:54:56.034 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+11:55:03.571 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:55:03.571 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:55:03.571 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:55:03.579 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:55:03.579 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:55:03.579 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:55:03.583 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:55:03.591 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+11:55:05.508 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+11:55:05.508 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:55:05.508 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+11:55:05.520 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+12:10:11.538 DEBUG - DisconnectDispatcher Déconnexion demandée pour : administrateur, session ID : #07512E1ED527C540FA264475C526EDC5 

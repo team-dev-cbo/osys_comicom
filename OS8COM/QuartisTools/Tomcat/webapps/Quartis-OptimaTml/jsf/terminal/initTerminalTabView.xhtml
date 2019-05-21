@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"	
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<f:view>
+ 	<f:metadata>	
+		<f:viewParam name="_login" value="#{paramUrl.login}"></f:viewParam>
+		<f:viewParam name="_i18n" value="#{paramUrl.i18n}"></f:viewParam>
+		<f:viewParam name="locale" value="#{paramUrl.lang}"></f:viewParam>
+		<f:viewParam name="_codeSite" value="#{paramUrl.site}"></f:viewParam>
+		<f:viewParam name="_deltaUTC" value="#{paramUrl.deltaUTC}"></f:viewParam>
+	</f:metadata>	
+	<h:head>		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- 	<meta http-equiv="X-UA-Compatible" content="EmulateIE8" /> -->
+		<title>initEvtProdTabView</title>		
+		
+		<link rel="stylesheet" href="../../resources/css/theme-tml.css" />   
+	</h:head>
+  	<h:body onload="document.getElementById('redirectForm:idButtonRedirect').click();">	
+				
+ 		<div id="loading" class="centre"> 
+		  <table cellspacing="0px" cellpadding="3px;" rules="none" 
+		         style="border: solid 1px #777777;border-collapse: collapse;"  >		  		
+			<tr>
+				<td rowspan="2"><h:graphicImage value="../../resources/img/design/ajaxloading.gif"/></td>
+				<td><h:outputText value="Module Tml" style="font-size:20px; color:black;font-weight:bold"/></td>
+			</tr>	
+			<tr>
+	 			<td><h:outputText value="#{terminalController.messageLoading}" style="font-size:14px; color:black;"/></td> 		
+			</tr>		
+		  </table>			
+		</div>
+		
+		<h:form id="redirectForm">		
+			<h:commandButton immediate="true" style="display:none"
+				id="idButtonRedirect"  value="Redirection"
+				actionListener="#{terminalController.initView}" action="initView" />								
+		</h:form>
+	</h:body>	
+</f:view>
+</html>
+

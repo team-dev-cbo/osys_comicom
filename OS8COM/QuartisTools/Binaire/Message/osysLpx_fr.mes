@@ -1,0 +1,479 @@
+Version 1
+APP 9
+
+
+1 Erreur d'ouverture en écriture du fichier %1
+2 Erreur d'ouverture en lecture du fichier %1
+3 Erreur de suppression du fichier %1
+4 Erreur : le nom du fichier %1 n'a pas été modifié 
+5 Erreur de création du répertoire %1
+6 Le fichier "%1" n'existe pas
+7 Le groupe n°%1 n'existe pas 
+8 Le fichier LPX global (ID=%1) n'existe pas
+9 Compilation de tous les fichiers LPX 
+10 Compilation du fichier LPX "%1" du groupe "%2"
+11 Erreur InitFichier : %1
+12 EstMajuscule (%1)->%2
+13 EstMinuscule (%1)->%2
+14 EstAlphabetique (%1)->%2
+15 EstChiffreDecimal (%1)->%2
+16 EstAlphaNumerique (%1)->%2
+17 EstChiffreHexadecimal (%1)->%2
+18 EstBlanc (%1)->%2
+19 EstControle (%1)->%2
+20 EstPonctuation (%1)->%2
+21 EstGraphique (%1)->%2
+22 EstImprimable (%1)->%2
+23 Majuscule (%1)->%2
+24 Minuscule (%1)->%2
+25 Str (%1)->"%2"
+26 Str : Operation impossible plus de mémoire
+27 Val ("%1")->%2
+28 Longueur ("%1")->%2
+29 EnleveBlancs -> "%1"
+30 ExtraitChaines ("%1",...)->"%2"
+31 EstEntierPositif ("%1")->%2
+32 EstEntier ("%1")->%2
+33 Strq ->"%1"
+34 ExtraitChainePosLong ("%1",%2,%3)->"%4"
+35 ExtraitChaineNumDel ("%1",%2,%3)->"%4"
+36 AjouteNFoisCaractere ("%1",%2,%3)->"%4"
+37 ComposeMessage2x40 ("%1","%2")->"%3"
+38 ChaineEnReel ("%1")->%2
+39 ReelEnChaine ( %1 , %2 )->"%3"
+40 ChaineEnMajuscule ("%1")->"%2"
+41 ASCIIEnCaractere (%1)->'%2'
+42 ChaineEnMinuscule ("%1")->"%2"
+43 ComposeMessage2x16 ("%1","%2")->"%3"
+44 EstNumerique ("%1")->%2
+45 PosSousChaine ("%1","%2",%3)->%4
+46 Racine (%1)->%2
+47 TempsSysteme ->%1
+48 FormaterTempsSysteme ("%1")->"%2"
+49 FormaterTemps ("%1",%2)->"%3"
+50 DeformaterTemps ("%1","%2")->%3
+51 Randomize (%1)
+52 Random ->%1
+53 Sleep (%1)
+54 FichierVersChaineEx ("%1","%2...")->%3
+55 LongueurEx ("%1...")->%2
+56 ExtraitChainePosLongEx ("%1...",%2,%3)->"%4..."
+57 PosSousChaineEx ("%1...","%2...",%3)->%4
+58 InserePosSousChaine ("%1...","%2...",%3)->%4
+59 InserePosSousChaineEx ("%1...","%2...",%3)->%4
+60 SupprimePosSousChaine ("%1...",%2,%3)->%4
+61 SupprimePosSousChaineEx ("%1...",%2,%3)->%4
+62 RemplaceSousChaine ("%1...","%2...","%3...",%4)->%5
+63 RemplaceSousChaineEx ("%1...","%2...","%3...",%4)->%5
+64 ChaineExVersFichier ("%1...","%2")->%3
+65 EcritMemoire ("%1","%2")->%3
+66 LitMemoire ("%1")->%2
+67 La mémoire "%1" n'est pas définie
+68 EcritMemoireTerminal ("%1","%2" ,%3)->%4
+69 LitMemoireTerminal ("%1",%2)->%3
+70 EcritMemoireUtilisateur ("%1","%2","%3")->%4
+71 LitMemoireUtilisateur ("%1","%2")->%3
+72 L'utilisateur "%1" n'existe pas
+73 OuvreFichierLecture ("%1")->%2
+74 CreeFichier ("%1")->%2
+75 OuvreFichierEcriture ("%1")->%2
+76 LectureFichier (%1)->%2
+77 EcritureFichier (%1,"%2")->%3
+78 FermeFichier (%1)
+79 CommandeShell ("%1")->%2
+80 ExecuteRequeteSQL ("%1")->%2
+81 Erreur grave dans l'objet CListDonneesLPX : L'indice %1 n'existe pas dans la liste des données LPX
+82 ValeurChamp (%1,%2,%3)->"%4"
+83 ValeurChamp : Reponse SQL non définie
+84 FermeReponseSQL (%1)->%2
+85 ExecuteOk (%1)->%2
+86 SourceErreurSQL (%1)->%2
+87 DescriptionErreurSQL (%1)->%2
+88 NombreReponseSQL (%1)->%2
+89 NombreChampSQL (%1)->%2
+90 LitMessage ->"%1"
+91 LitDateHeureMessage ->"%1"
+92 LitPeriphMessage ->%1
+93 EcritTerminal (%1,"%2")
+94 EcritTerminalAvecNumero ("%1")
+95 AttenteSaisie
+96 GetEnv ("%1")->"%2"
+97 LitNumeroTerminal ->%1
+98 LitNomTraitementLPX ->%1
+99 Programme %1 : Le nom du Verrou est inconnu 
+100 CreeVerrou ("%1")->%2
+101 PositionneVerrou (%1)->%2
+102 LibereVerrou (%1)->%2
+103 FermeVerrou (%1)->%2
+104 AjouteScenarioTemp (%1,%2,"%3","%4","%5")->%6
+105 SupprimeScenarioTemp (%1)->%2
+106 Le programme %1 est inconnu
+107 LitValRetour ->"%1"
+108 LitParam (%1)->"%2"
+109 OuvreFichier ("%1")->%2
+110 ProprieteFichier ("%1")->%2
+111 PositionFichier (%1,%2,%3)->%4
+112 HtmlFormDebut "%1"
+113 HtmlFormFin
+114 HtmlZoneSaisie ("%1","%2",%3)
+115 HtmlZoneMotPasse ("%1","%2",%3)
+116 HtmlZoneTexte ("%1","%2",%3,%4,%5)
+117 HtmlCaseCocher ("%1",%2)
+118 HtmlRadio ("%1","%2",%3)
+119 HtmlListeDebut ("%1",%2,%3)
+120 HtmlListeFin
+121 HtmlListeAjout ("%1","%2",%3)
+122 HtmlBoutonValide ("%1","%2")
+123 CGILitValeur ("%1")->%2
+124 CGILitValeurEx ("%1")->"%2..."
+125 HtmlFichier ("%1","%2")
+126 HtmlTitre ("%1",%2,%3)
+127 HtmlParagDebut
+128 HtmlParagFin
+129 HtmlComment ("%1")
+130 HtmlTexteASCII ("%1",%2)
+131 HtmlLigneFin
+132 HtmlTexte ("%1",%2)
+133 HtmlTexteLien ("%1","%2",%3)
+134 HtmlTexteLienInterne ("%1","%2",%3)
+135 HtmlEtiquette ("%1")
+136 HtmlImage ("%1",%2)
+137 HtmlImageLien ("%1","%2",%3)
+138 HtmlImageLienInterne ("%1","%2",%3)
+139 HtmlVideo ("%1","%2",%3)
+140 HtmlTableauDebut 
+141 HtmlTableauLigneDebut 
+142 HtmlTableauLigneFin
+143 HtmlTableauCellule ("%1",%2,%3)
+144 HtmlTableauCelluleLien ("%1","%2",%3,%4)
+145 HtmlTexteBrut ("%1")
+146 HtmlPageDebut ("%1","%2",%3)
+147 HtmlPageFin
+148 HtmlTableauFin
+149 HtmlTableauCelluleDebut
+150 HtmlTableauCelluleFin
+151 CGILitFichier ("%1","%2")->%3
+152 HtmlTexteBrutEx ("%1...")
+153 HtmlFichierBrut ("%1")->%2
+154 HtmlZoneCache ("%1","%2")
+155 HtmlAligneDebut (%1)
+156 HtmlAligneFin
+157 HtmlFormDebutNom ("%1","%2")
+158 HtmlActiveElement ("%1","%2")
+159 HtmlTableauCelluleDebutA ("%1","%2",%3,"%4","%5")
+160 HtmlCentrerDebut
+161 HtmlCentrerFin
+162 HtmlTableauDebutA (%1,%2,%3,"%4","%5","%6")
+163 HtmlDebutJavaScript
+164 HtmlFinJavaScript
+165 HtmlTexteLienA ("%1","%2",%3,"%4")
+166 HtmlLitEnv ("%1")->%2
+167 XmlCree ("%1")->%2
+168 XmlFerme (%1)->%2
+169 XmlFichierLit (%1,"%2")->%3
+170 XmlFichierEcrit (%1,"%2")->%3
+171 XmlEfface (%1)->%2
+172 XmlLit (%1,"%2...")->%3
+173 XmlEcrit (%1,"%2...")->%3
+174 XmlPositionInit (%1)->%2
+175 XmlElementAjoute (%1,"%2","%3")->%4
+176 XmlElementSupprime (%1)->%2
+177 XmlValeurLit (%1,"%2")->%3
+178 XmlAttributEcrit (%1,"%2","%3")->%4
+179 XmlAttributLit (%1,"%2","%3")->%4
+180 XmlElementFils (%1)->%2
+181 XmlElementPere (%1)->%2
+182 XmlElementSuivant (%1)->%2
+183 XmlElementPremier (%1)->%2
+184 XmlElementPositionne (%1,"%2")->%3
+185 XmlReponseSQL (%1,%2,"%3")->%4
+186 La structure Xml est inconnue
+187 XmlFilsAjoute (%1,"%2","%3")->%4
+188 XmlFilsSupprime (%1)->%2
+189 XmlFilsPositionne (%1,"%2")->%3
+190 HtmlXml ("%1",%2)->%3
+191 Librairie graphique
+192 Exécution OK  de l'action numéro %1 du scénario graphique "%2"
+193 L'action numéro %1 du scénario graphique "%2" n'existe pas
+194 EcritMemoireIndexUtilisateur ("%1","%2","%3","%4")->%5
+195 LitMemoireIndexUtilisateur ("%1","%2","%3")->%4
+196 Attente d'une saisie
+197 Fin de l'attente d'une saisie (message:"%1", periph:"%2")
+198 LitNomOrdinateur ->%1
+199 LitPortHttp ->%1
+200 Langue -> "%1"
+201 Message ( "%1" , "%2" )->%3
+202 MessageLangue ("%1","%2","%3")->%4
+203 MessageFormat1 ("%1","%2","%3" )->%4
+204 MessageFormat2 ("%1","%2","%3","%4" )->%5
+205 MessageFormat3 ("%1","%2","%3","%4","%5" )->%6
+206 MessageFormat4 ("%1","%2","%3","%4","%5","%6" )->%7
+207 MessageFormat5 ("%1","%2","%3","%4","%5","%6","%7" )->%8
+208 MessageFormat6 ("%1","%2","%3","%4","%5","%6","%7","%8" )->%9
+209 MessageFormat7 ("%1","%2","%3","%4","%5","%6","%7","%8","%9" )->%10
+210 MessageFormat8 ("%1","%2","%3","%4","%5","%6","%7","%8","%9","%10" )->%11
+211 MessageFormat9 ("%1","%2","%3","%4","%5","%6","%7","%8","%9","%10","%11" )->%12
+212 Impossible de modifier le nom du groupe des librairies graphiques
+213 Temporisation de %1 secondes
+214 Exécution d'un sous scenario
+215 Tant que : "%1" -> %2
+216 Faire tant que : "%1" -> %2
+217 Test mémoire : "%1" -> %2
+218 Fin du scénario
+219 Operation sur une mémoire : "%1 (%2) %3 %4 (%5)" -> %6 (%7)
+220 Operation sur une mémoire : "%1 (%2)"-> %3
+221 Fin de la boucle
+222 Erreur sur l'opération "%1 (%2) %3 (%4)": Impossible de divisier par zéro 
+223 Erreur sur l'opération "%1 (%2) %3 (%4)": Un des types des valeurs est incorrect par rapport a l'opération 
+224 Filtrage : "%1" -> "%2"
+225 ExecuteRequete ("%1")->%2
+226 ExecuteRequeteId ("%1")->%2
+227 Erreur d'exécution de la requête "%1"
+228 Execution de la requête "%1"
+229 Requête "%1" : Exécution OK (Nombre de champs:%2, Nombre d'enregistrements:%3)
+230 ImprimeEtat ("%1","%2","%3","%4") -> %5
+231 ImprimeEtatEtAttend ("%1","%2","%3","%4") -> %5
+232 Ordre du terminal %1 : "%2"->%3
+233 ExecuteRequeteSQLEx ("%1")->%2
+234 Interpréteur LIX : AfficheEntier -> %1
+235 Interpréteur LIX : AfficheReel -> %1
+236 Interpréteur LIX : AfficheChaine -> %1
+237 Interpréteur LIX : AfficheCar -> %1
+238 DeformaterDateHeure : "%1" n'est pas une date valide
+239 FormaterDateHeure : (%1)->"%2"
+240 DeformaterDateHeure : ("%1")->%2
+241 FormaterDuree : (%1)->"%2"
+242 FormaterDate : (%1)->"%2"
+243 ExecuteRequeteIdTC ("%1",%2) -> %3
+244 ExecuteRequeteTC ("%1",%2) -> %3
+245 ExecuteRequeteSQLTC ("%1",%2) -> %3
+246 ReserveCanal -> %1
+247 LibereCanal (%1) -> %2
+248 Erreur : Impossible d'exécuter le scénario "%1"
+249 Fichier LPX "%1" : Problème de réentrance (pour le calcul du statut)
+250 Statut "%1" à déjà été calculé
+251 Le module "%1" inclus dans le fichier "%2" n'existe pas
+252 Le module "%1" inclus dans le fichier "%2" n'est pas un module
+253 Statut de "%1" -> Ré-entrance avec sous module "%2"
+254 Statut de "%1" -> A compiler et ainsi que ses sous modules
+255 Statut de "%1" à déjà été calculé (Pb de ré-entrance)
+256 Statut de "%1" -> A compiler 
+257 Statut de "%1" -> OK 
+258 Statut de "%1" -> A compiler (pas de fichier LIX)
+259 Statut de "%1" -> A compiler (date fichier LIX < date fichier LPX)
+260 Compilation de "%1" -> problème de ré-entrance 
+261 Le fichier "%1" à déjà été compilé
+262 Compilation de "%1" -> Erreur(s) de compilation dans un (ou plusieurs) de ses sous module(s)
+263 Compilation de "%1" -> OK 
+264 Erreur de Compilation du fichier "%1"
+265 Pas besoin de recompiler le fichier "%1"   
+266 Erreur d'exécution du programme LPX "%1" (Le nombre de sous scénarios est supérieur à %2)
+267 Erreur d'exécution du programme LPX "%1" (aucun nom de fichier LPX globaux ne correspond a l'id %2)
+268 Erreur d'exécution du programme LPX "%1" : PLUS DE MEMOIRE
+269 Erreur Fin de programme LPX : le scenario père (numéro %1) n'existe plus
+270 Erreur d'exécution du programme LPX "%1" : Erreur dans l'ajout d'un contexte.
+271 Fin du programme LPX "%1" (code retour = %2 ; Num exec = %3)
+272 Le programme "%1" est introuvable sur le disque
+273 Impossible d'allouer de la mémoire nécessaire à l'exécution du programme LIX "%1"
+274 Méthode "%1" : Problème d'allocation
+275 Interpréteur LIX : Erreur de création de l'événement "%1"
+276 Interpréteur LIX : L'événement "%1" a déjà été créé par un autre programme
+277 Interpréteur LIX : Impossible de lancer le thread
+278 ExecScenario "%1(%2)"
+279 Erreur d'exécution du sous scénario "%1"
+280 "%1" : Erreur d'exécution 
+281 Impossible de supprimer le groupe des librairies graphiques
+282 ExecuteRequeteC ("%1",%2) -> %3
+283 ExecuteRequeteSQLC ("%1",%2) -> %3
+284 ExecuteRequeteIdC (%1,%2) -> %3
+285 ReprendLeProgrammeId (IDProg:%1,ConnHttp:%2)
+286 ReprendLeProgramme(Transaction:%1,ConnHttp:%2)
+287 Action Terminal : Le contenu de la mémoire %1 n'est pas un numéro de terminal
+288 L'utilisateur "%1" n'a pas le droit d'exécuter un programme LPX
+289 Le terminal n'a pas le droit d'exécuter un programme LPX
+290 Mémoire "%1" : Le nombre maximum de valeurs de la mémoire est inférieur à %2
+291 Début du programme LPX "%1" ( NumExec=%2 )
+292 %1-Impossible d'écrire dans la mémoire système "%2"
+293 GrandeChaineEnReel ("%1")->%2
+294 ReelEnGrandeChaine (%1,%2)->"%3"
+295 JourSemaineAnneeIso (%1,%2,%3,%4,%5)->%6 
+296 Le driver "%1" associé au terminal "%2" n'est pas connecté au moteur
+297 EcritTerminal - Erreur - Le driver n'existe pas (numTerm=%1 - mess='%2')
+298 Le message "%1" est envoyé au driver "%2"
+299 Action Affichage : Efface l'afficheur du terminal %1
+300 Affiche le message "%1" sur le terminal "%2"
+301 Envoi de la position de la zone de saisie au terminal %1
+302 Envoi le bloc "%1" au terminal "%2"
+303 MessageAjoute ( "%1" , "%2" )->%3
+304 MessageModifie ( "%1" , "%2" )->%3
+305 MessageSupprime ( "%1" )->%2
+306 MessageRazListe
+307 ExecuteRequeteSQLExC ("%1",%2) -> %3
+308 ExecuteRequeteLente ("%1")->%2
+309 ExecuteRequeteSQLLente ("%1")->%2
+310 ExecuteRequeteSQLExLente ("%1")->%2
+311 ExecuteRequeteIdLente ("%1")->%2
+312 ExecRequeteSQLExTC("%1",%2)->%3
+313 ReserveCanalLent -> %1
+314 OuvreFenetre("%1", %2) -> %3
+315 FermeFenetre("%1")->%2
+316 ExtraitChaineNumDelEx ("%1",%2,%3)->"%4"
+317 Mémoire "%1" : L'index de la mémoire doit être supérieur ou égale à 0 
+318 EcritMemoireIndex ("%1","%2",%3)->%4
+319 LitMemoireIndex ("%1",%2)->%3
+320 RequeteVersMemoire ("%1",%2)->%3
+321 NbMaxValeurMemoire ("%1")->%2
+322 IndexMaxMemoire ("%1")->%2
+323 EffaceMemoire ("%1")->%2
+324 EffaceMemoireIndex ("%1",%2,%3)->%4
+325 MemoireExiste ("%1")->%2
+326 MemoireReponseSQL ("%1",%2)->%3
+327 La mémoire "%1" est une mémoire système
+328 Mémoire "%1" (groupe "%2") : Nombre maximum valeurs (=%3) < nombre d'enregistrements de la requête (=%4)
+329 ImprimeEtatEtAttend ("%1","%2","%3","%4") -> Attend la fin de l'impression
+330 ImprimeEtatEtAttend - Fin de l'impression
+331 ImprimeEtatEtAttend - Erreur d'impression numéro %1
+332 ExecuteRequeteSQLBD ("%1","%2")->%3
+333 ExecuteRequeteSQLExBD ("%1,"%2"")->%3
+334 Demande d'ouverture de la fenêtre "%1" - OK
+335 Demande d'ouverture de la fenêtre "%1" - Pas OK
+336 Erreur d'ouverture de la fenêtre "%1" - Elle n'existe pas
+337 Effacement de toutes les données de la requête (FermeReponseSQL)
+338 Erreur de l'effacement des données de la requête
+339 Début d'exécution de la requête "%1"
+340 Erreur d'exécution de la requête "%1"
+341 Début exécution commande shell "%1"
+342 Fin exécution commande shell "%1"
+343 Début de la page HTML
+344 Fin de la page HTML
+345 Création de la page XML
+346 Fermeture de la page XML
+347 DEBUT - Demande Liste des scénarios en cours
+348 FIN - Demande Liste des scénarios en cours
+349 Compilateur LPX - Ecrit Lst Scen En cours dans l'archive
+350 QuartisMsgChemin ("%1")->%2
+351 QuartisMsgLitMessage ("%1")->%2
+352 QuartisMsgEnvoieMessage ("%1","%2",%3)->%4
+353 QuartisMsgNombreReponse (%1)->%2
+354 QuartisMsgLigne (%1,%2,"%3","%4",%5)->%6
+355 QuartisMsgFermeReponse (%1)->%2
+356 Erreur N°ligne Quartis Messenger - %1 
+357 Erreur Chemin Quartis Messenger  - %1
+358 Erreur BD Quartis Messenger - %1
+359 Erreur Chemin BD Quartis Messenger - %1 
+360 AttenteSaisieTempo(%1)->Attend
+361 EtatConnexion("%1")->%2
+362 SoumissionOk (%1)->%2
+363 OuvreURL("%1")
+364 CalculDate("%1","%2",%3)->%4
+365 Le nom de l'utilisateur '%1' est inconnu
+366 OuvreFenetreUtilisateur("%1", %2,"%3") -> %4
+367 FermeFenetreUtilisateur("%1", "%2") -> %3
+368 ArretImprimeEtat("%1") -> %2
+369 La mémoire Système "%1" n'existe pas 
+370 LitMemoireSystem ("%1")->%2
+371 EcritMemoireSystem ("%1","%2")->%3
+372 La mémoire "%1" du groupe "%2" n'existe pas
+373 OuvreConsoleWeb("%1")
+374 FermeConsoleWeb("%1")
+375 EcritMemoireGroupe ("%1","%2","%3")->%4
+376 LitMemoireGroupe ("%1","%2")->%3
+377 EcritMemoireGroupeIndex ("%1","%2","%3",%4)->%5
+378 LitMemoireGroupeIndex ("%1","%2",%3)->%4
+379 EcritMemoireGroupeIndexUtilisateur ("%1","%2","%3","%4","%5")->%6
+380 LitMemoireGroupeIndexUtilisateur ("%1","%2","%3","%4")->%5
+381 EcritMemoireGroupeUtilisateur ("%1","%2","%3","%4")->%5
+382 LitMemoireGroupeUtilisateur ("%1","%2","%3")->%4
+383 EcritMemoireGroupeTerminal ("%1","%2","%3",%4)->%5
+384 LitMemoireGroupeTerminal ("%1","%2",%3)->%4
+385 Module Inconnu
+386 Erreur de re-entrance du module
+387 erreur(s) dans la liste des modules inclus
+388 Erreur dans le module
+389 MemoireGroupeReponseSQL ("%1","%2",%3)->%4
+390 FermeReponseSQL : Reponse SQL non définie
+391 ExecuteOkSQL : Reponse SQL non définie
+392 SourceErreurSQL : Reponse SQL non définie
+393 DescriptionErreurSQL : Reponse SQL non définie
+394 NombreReponseSQL : Reponse SQL non définie
+395 NombreChampSQL : Reponse SQL non définie
+396 QuartisMsgNombreReponse : Reponse SQL non définie
+397 QuartisMsgLigne : Reponse SQL non définie
+398 EffaceMemoireGroupe ("%1","%2")->%3
+399 MemoireGroupeExiste ("%1","%2")->%3
+400 IndexMaxMemoireGroupe ("%1","%2")->%3
+401 NbMaxValeurMemoireGroupe ("%1","%2")->%3
+402 ExecuteSPC("%1",%2,"%3","%4","%5","%6","%7","%8")
+403 OuvreSPC(%1,"%2","%3")
+404 FermeSPC(%1)
+405 EffaceMemoireUtilisateur ("%1","%2")->%3
+406 MemoireReponseSQLUtilisateur ("%1","%2",%3)->%4
+407 IndexMaxMemoireUtilisateur ("%1","%2")->%3
+408 ValeurChampEx (%1,%2,%3)->"%4"
+409 ReInitialiseConnexionBD - La base de données "%1" n'existe pas
+410 ReInitialiseConnexionBD - Erreur de connexion au module Base de données
+411 ReInitialiseConnexionBD ("%1")->%2
+412 Erreur DecalageUTC-Le fuseau horaire '%1' n'existe pas dans la liste des fuseaux.
+413 DecalageUTC ("%1",%2)->%3
+414 FormaterTempsSystemeUTC ("%1")->"%2"
+415 FormaterTempsUTC ("%1",%2)->"%3"
+416 TempsUTC (%1,"%2",%3)->%4
+417 Erreur TempsUTC-Le fuseau horaire '%1' n'existe pas dans la liste des fuseaux.
+418 Suppression du scénario '%1' en attente requête - Délai dépassé
+419 Suppression du scénario '%1' en attente saisie - Délai dépassé
+420 Suppression du scénario '%1' en attente de l'exécution d'un autre scénario - Délai dépassé
+421 Suppression du scénario '%1' en attente de l'impression d'un état - Délai dépassé
+422 L'utilisateur "%1" du groupe "%2" n'a pas le droit de lire la configuration des scénarios en attente
+423 L'utilisateur "%1" du groupe "%2" n'a pas le droit de modifier la configuration des scénarios en attente
+424 Suppression du scénario '%1' en attente de l'exécution d'une commande shell - Délai dépassé
+425 Erreur CommandeShell (scen:%1 - num:%2 - cmd:"%3")
+426 Desc : "%1"
+427 CommandeShellTempo ("%1",%2)->%3
+428 CopierFichier ("%1","%2",%3)->%4
+429 SupprimerFichier ("%1",%2)->%3
+430 DeplacerFichier ("%1","%2",%3)->%4
+431 ListeFichier ("%1",%2)->%3
+432 CopierFichier - NomLpx='%1' - Le fichier source '%2' n'existe pas
+433 SupprimerFichier - NomLpx='%1' - Le fichier '%2' n'existe pas
+434 DeplacerFichier - NomLpx='%1'- Le fichier source '%2' n'existe pas
+435 ListeFichier - NomLpx='%1'- Le répertoire '%2' n'existe pas
+436 DeplacerFichier : Erreur - scenLpx='%1' - ficSource="%2" - ficDest="%3"
+437 DeplacerFichier - Description Erreur : num=%1 - desc='%2'
+438 CopierFichier : Erreur - scenLpx='%1' - ficSource="%2" - ficDest="%3"
+439 CopierFichier - Description Erreur : num=%1 - desc='%2'
+440 SupprimerFichier : NomLpx='%1' - '%2' est un répertoire au lieu d'être un fichier 
+441 CopierFichier - Erreur - Le scénario "%1" a été supprimé
+442 CopierFichier - Erreur Timeout (scen:%1 - fichier source:'%2') 
+443 DeplacerFichier - Erreur - Le scénario "%1" a été supprimé
+444 DeplacerFichier - Erreur Timeout (scen:%1 - fichier source:'%2') 
+445 ListeFichier - Erreur - Le scénario "%1" a été supprimé
+446 ListeFichier - Erreur Timeout (scen:%1 - rep:'%2') 
+447 SupprimerFichier : Erreur - scenLpx='%1' - fic='%2'
+448 SupprimerFichier - Description Erreur : num=%1 - desc='%2'
+449 ListeFichier : Erreur - scenLpx='%1' - fic='%2'
+450 ListeFichier - Description Erreur : num=%1 - desc='%2'
+451 ListeFichier - NomLpx='%1' - '%2' n'est pas un répertoire
+452 ReponseFichier (%1,%2)->%3
+453 ReponseListeFichier (%1,%2)->"%3"
+454 FermeReponseFichier (%1)
+455 ReponseFichier : Réponse non définie
+456 ReponseListeFichier : Réponse non définie
+457 LectureGrandFichier (%1)->%2
+458 DeformaterTempsUTC ("%1","%2")->%3
+459 DeformaterDateTZEnUTC ("%1","%2","%3",%4)->%5
+460 FormaterDateUTCEnTZ ("%1",%2,"%3",%4)->"%5"
+461 DeltaDateTZUTC ("%1","%2","%3",%4)->%5
+462 DeformaterDateUTCEnTZ ("%1","%2","%3",%4)->%5
+463 FormaterDateTZEnUTC ("%1",%2,"%3",%4)->"%5"
+464 Trace sur la dernière instruction Lpx : Lancement du thread OK
+465 Trace sur la dernière instruction Lpx : ERREUR de Lancement du thread
+466 Trace sur la dernière instruction Lpx : Le thread est déjà lancé
+467 Trace sur la dernière instruction Lpx : Arrêt du thread OK
+468 Trace sur la dernière instruction Lpx : Le thread est déjà arrêté
+469 EcritTerminal : Impossible de trouver un driver pour le numéro de terminal '%1'
+
+
+
+ 
+
+

@@ -1,0 +1,1 @@
+new f_class("f_passwordEntry",{extend:f_textEntry});

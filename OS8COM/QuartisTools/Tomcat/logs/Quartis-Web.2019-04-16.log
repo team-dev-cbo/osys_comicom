@@ -1,0 +1,591 @@
+14:31:58.079 DEBUG - AuthManagedBean autoconnect - Tentative de connexion SSO... 
+14:31:58.085 DEBUG - ConnexionManagedBean User renseigné par filtre SSO LDAP : null 
+14:31:58.085 DEBUG - ConnexionManagedBean ldapActive = false 
+14:31:58.085 DEBUG - AuthManagedBean autoconnect - Echec de la connexion par SSO. 
+14:32:03.204 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+14:32:03.461 DEBUG - QTConnector connect - Connecting... 
+14:32:03.465 DEBUG - QTConnector connect - Connected. 
+14:32:03.468 DEBUG - QTConnector executeQuery - Sending 'USER @ID0 [] serveur_web SERVEUR-WEB'... 
+14:32:03.469 DEBUG - QTConnector executeQuery - Sent. 
+14:32:03.470 DEBUG - QTConnector executeQuery - Reading response... 
+14:32:03.470 DEBUG - QTConnector readResponse - starting to listen... 
+14:32:03.470 DEBUG - QTConnector readResponse - read trame : ACK 263172 
+14:32:03.499 DEBUG - QTConnector executeQuery - Read: 'ACK 263172'. 
+14:32:03.499 DEBUG - QTInternalCommunicator send_IdentifyOsysConsoleWeb - QTools returned : 263172 
+14:32:03.501 DEBUG - QTConnector executeQuery - Sending 'LST_USER_CONNECT'... 
+14:32:03.502 DEBUG - QTConnector executeQuery - Sent. 
+14:32:03.502 DEBUG - QTConnector executeQuery - Reading response... 
+14:32:03.502 DEBUG - QTConnector readResponse - starting to listen... 
+14:32:03.504 DEBUG - QTConnector readResponse - read trame : <lstuserconnect max="6" connect="3" />\x0a 
+14:32:03.504 DEBUG - QTConnector executeQuery - Read: '<lstuserconnect max="6" connect="3" />\x0a'. 
+14:32:03.505 DEBUG - QTConnector disconnect - Déconnexion... 
+14:32:03.505 DEBUG - QTConnector disconnect - Déconnecté. 
+14:32:03.766 DEBUG - QuartisToolsServiceImpl createOrUpdateUser - username : 'administrateur', groupName : 'Administrateurs'... 
+14:32:03.769 DEBUG - QTConnector connect - Connecting... 
+14:32:03.771 DEBUG - QTConnector connect - Connected. 
+14:32:03.772 DEBUG - QTConnector executeQuery - Sending 'USER @ID0 [] serveur_web SERVEUR-WEB'... 
+14:32:03.772 DEBUG - QTConnector executeQuery - Sent. 
+14:32:03.772 DEBUG - QTConnector executeQuery - Reading response... 
+14:32:03.773 DEBUG - QTConnector readResponse - starting to listen... 
+14:32:03.773 DEBUG - QTConnector readResponse - read trame : ACK 263172 
+14:32:03.773 DEBUG - QTConnector executeQuery - Read: 'ACK 263172'. 
+14:32:03.774 DEBUG - QTSrvCommunicator send_IdentifyOsysConsoleWeb - QTools returned : 263172 
+14:32:03.774 DEBUG - QTSrvCommunicator send_CreateUserQuartisTools - message =  USR USER OBJ ADD [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+ 
+14:32:03.774 DEBUG - QTConnector executeQuery - Sending ' USR USER OBJ ADD [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+'... 
+14:32:03.775 DEBUG - QTConnector executeQuery - Sent. 
+14:32:03.775 DEBUG - QTConnector executeQuery - Reading response... 
+14:32:03.775 DEBUG - QTConnector readResponse - starting to listen... 
+14:32:03.776 DEBUG - QTConnector readResponse - read trame : ACK -10 
+14:32:03.776 DEBUG - QTConnector executeQuery - Read: 'ACK -10'. 
+14:32:03.776 DEBUG - QTSrvCommunicator send_CreateUserQuartisTools - QTools returned : -10 
+14:32:03.776 DEBUG - QTSrvCommunicator send_UpdateUserQuartisTools - message :  USR USER OBJ SET [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+ 
+14:32:03.777 DEBUG - QTConnector executeQuery - Sending ' USR USER OBJ SET [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+'... 
+14:32:03.777 DEBUG - QTConnector executeQuery - Sent. 
+14:32:03.777 DEBUG - QTConnector executeQuery - Reading response... 
+14:32:03.777 DEBUG - QTConnector readResponse - starting to listen... 
+14:32:03.780 DEBUG - QTConnector readResponse - read trame : ACK 0 
+14:32:03.781 DEBUG - QTConnector executeQuery - Read: 'ACK 0'. 
+14:32:03.781 DEBUG - QTSrvCommunicator send_UpdateUserQuartisTools - QTools returned : 0 
+14:32:03.781 DEBUG - QTConnector disconnect - Déconnexion... 
+14:32:03.781 DEBUG - QTConnector disconnect - Déconnecté. 
+14:32:03.782  INFO - QuartisToolsServiceImpl Mise à jour du user QuartisTools 'administrateur' dans le groupe 'Administrateurs' réussie. 
+14:32:09.699 DEBUG - TransfertFile copyFile (pls) - Copie de 18 fichiers vers 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\language.properties'... 
+14:32:09.701 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 0/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language.properties'. 
+14:32:09.701 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language.properties'... 
+14:32:09.783 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:09.784 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 1/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language.properties'. 
+14:32:09.784 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language.properties'... 
+14:32:09.794 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:09.794 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 2/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language.properties'. 
+14:32:09.795 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language.properties'... 
+14:32:09.816 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:09.817 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 3/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language.properties'. 
+14:32:09.817 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language.properties'... 
+14:32:09.830 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:09.830 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 4/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language.properties'. 
+14:32:09.830 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language.properties'... 
+14:32:09.849 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:09.849 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 5/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language.properties'. 
+14:32:09.850 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language.properties'... 
+14:32:09.884 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:09.885 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 6/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language.properties'. 
+14:32:09.885 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language.properties'... 
+14:32:09.896 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:09.896 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 7/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language.properties'. 
+14:32:09.897 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language.properties'... 
+14:32:09.904 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:09.905 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 8/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language.properties'. 
+14:32:09.905 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language.properties'... 
+14:32:09.914 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:09.915 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 9/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language.properties'. 
+14:32:09.915 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language.properties'... 
+14:32:09.927 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:09.927 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 10/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language.properties'. 
+14:32:09.927 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language.properties'... 
+14:32:09.941 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:09.942 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 11/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language.properties'. 
+14:32:09.942 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language.properties'... 
+14:32:09.961 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:09.962 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 12/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language.properties'. 
+14:32:09.962 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language.properties'... 
+14:32:09.966 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:09.966 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 13/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language.properties'. 
+14:32:09.966 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language.properties'... 
+14:32:09.970 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:09.970 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 14/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language.properties'. 
+14:32:09.970 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language.properties'... 
+14:32:09.974 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:09.974 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 15/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language.properties'. 
+14:32:09.974 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language.properties'... 
+14:32:09.979 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:09.979 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 16/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language.properties'. 
+14:32:09.980 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language.properties'... 
+14:32:09.983 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:09.983 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 17/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language.properties'. 
+14:32:09.984 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language.properties'... 
+14:32:09.987 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:09.988 DEBUG - TransfertFile copyFile (pls) - Fin de la copie. 
+14:32:10.711 DEBUG - TransfertFile copyFile (pls) - Copie de 18 fichiers vers 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\language_fr.properties'... 
+14:32:10.712 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 0/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language_fr.properties'. 
+14:32:10.712 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_00_Standard\language_fr.properties'... 
+14:32:10.724 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:10.724 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 1/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language_fr.properties'. 
+14:32:10.725 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_10_Personnel\language_fr.properties'... 
+14:32:10.732 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:10.732 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 2/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language_fr.properties'. 
+14:32:10.733 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_15_Equipement\language_fr.properties'... 
+14:32:10.744 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:10.745 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 3/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language_fr.properties'. 
+14:32:10.745 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_20_Production\language_fr.properties'... 
+14:32:10.758 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:10.759 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 4/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language_fr.properties'. 
+14:32:10.759 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_30_Outil\language_fr.properties'... 
+14:32:10.771 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:10.771 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 5/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language_fr.properties'. 
+14:32:10.771 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_40_Maintenance\language_fr.properties'... 
+14:32:10.778 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:10.779 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 6/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language_fr.properties'. 
+14:32:10.779 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_45_Controle\language_fr.properties'... 
+14:32:10.783 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:10.783 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 7/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language_fr.properties'. 
+14:32:10.784 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_50_GF\language_fr.properties'... 
+14:32:10.788 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:10.788 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 8/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language_fr.properties'. 
+14:32:10.788 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_60_Tiers\language_fr.properties'... 
+14:32:10.801 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:10.801 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 9/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language_fr.properties'. 
+14:32:10.801 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_70_Tracabilite\language_fr.properties'... 
+14:32:10.814 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:10.815 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 10/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language_fr.properties'. 
+14:32:10.815 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_80_Documents\language_fr.properties'... 
+14:32:10.819 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:10.820 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 11/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language_fr.properties'. 
+14:32:10.820 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_90_GDT\language_fr.properties'... 
+14:32:10.829 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:10.830 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 12/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language_fr.properties'. 
+14:32:10.830 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\OPTIMA_98_About\language_fr.properties'... 
+14:32:10.833 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:10.834 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 13/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language_fr.properties'. 
+14:32:10.834 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\restrictions\language_fr.properties'... 
+14:32:10.838 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:10.838 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 14/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language_fr.properties'. 
+14:32:10.838 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-footer\language_fr.properties'... 
+14:32:10.842 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:10.842 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 15/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language_fr.properties'. 
+14:32:10.842 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Standard\templates\pdf-header\language_fr.properties'... 
+14:32:10.845 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:10.846 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 16/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language_fr.properties'. 
+14:32:10.846 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-footer\language_fr.properties'... 
+14:32:10.849 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:10.850 DEBUG - TransfertFile copyFile (pls) - Copie du fichier 17/18 : 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language_fr.properties'. 
+14:32:10.850 DEBUG - TransfertFile copyFile (fileChannel) - Copie de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\Specifiques\templates\pdf-header\language_fr.properties'... 
+14:32:10.854 DEBUG - TransfertFile copyFile (fileChannel) - Fin de la copie. 
+14:32:10.855 DEBUG - TransfertFile copyFile (pls) - Fin de la copie. 
+14:32:10.855 DEBUG - LanguageFileManager buildPropertiesGen - Création de 'C:\Osys\QUARTIS_PRO\quartis-pro-web\users\administrateur\language_fr.properties'... 
+14:32:10.944 DEBUG - LanguageFileManager buildPropertiesGen - Fin de la création. 
+14:32:22.901 DEBUG - GSqlQueryGeneratorSqlServer --->table =OF_OPERATION query =set rowcount 3000  SELECT CODE_OF  , CODE_OPER_TYPE  , CODE_OPER  , dbo.OPTIMA_TRADUCTION(DESI_OPER,'fr') +'@KEYLANG_'+DESI_OPER AS DESI_OPER  , CADE_THEO  , TEMP_PREP  , QUAN_PREV  , QUAN_STOC_AFFE  , UNIT_OPER  , TEMP_FABR  , NOMB_ARTI  , NOMB_OPER_THEO  , FLAG_DERN_OPER  , FLAG_EXPO_PLAN  , CODE_MACH  , CODE_FAMI_MACH  , CODE_MACH_PLAN  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_ETAT_AVAN  , CODE_FOND_PAGE  , dbo.OPTIMA_TRADUCTION(COMM_OPER,'fr') +'@KEYLANG_'+COMM_OPER AS COMM_OPER  , CHAM_LIBR_1  , CHAM_LIBR_2  , CHAM_LIBR_3  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PREV,DATE_DEBU_PREV), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PREV,DATE_DEBU_PREV), 108) AS DATE_DEBU_PREV  , DELT_HEUR_UTC_DEBU_PREV  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PREV,DATE_FIN_PREV), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PREV,DATE_FIN_PREV), 108) AS DATE_FIN_PREV  , DELT_HEUR_UTC_FIN_PREV  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PLAN,DATE_DEBU_PLAN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PLAN,DATE_DEBU_PLAN), 108) AS DATE_DEBU_PLAN  , DELT_HEUR_UTC_DEBU_PLAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PLAN,DATE_FIN_PLAN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PLAN,DATE_FIN_PLAN), 108) AS DATE_FIN_PLAN  , DELT_HEUR_UTC_FIN_PLAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 108) AS DATE_DEBU_REEL  , DELT_HEUR_UTC_DEBU_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 108) AS DATE_FIN_REEL  , DELT_HEUR_UTC_FIN_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DEBU_ACTU), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DEBU_ACTU), 108) AS DATE_DEBU_ACTU  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 108) AS DATE_IMPO  , COUL_PLAN_HEX  , CODE_BT  , TECH_AVAN_THEO  , COUT_UNIT  , CODE_SITE  , DELT_HEUR_UTC  , FLAG_SUPP FROM OF_OPERATION  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_OF ASC  
+14:32:23.917 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Production_OF_EnCours_2 
+14:32:23.922 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Production_OF_EnCours_2 
+14:32:23.948 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+14:32:23.949 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+14:32:23.949 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+14:32:23.953 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+14:32:25.863 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+14:32:25.864 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+14:33:14.763 DEBUG - GSqlQueryGeneratorSqlServer --->table =OF_OPERATION query =set rowcount 3000  SELECT CODE_OF  , CODE_OPER_TYPE  , CODE_OPER  , dbo.OPTIMA_TRADUCTION(DESI_OPER,'fr') +'@KEYLANG_'+DESI_OPER AS DESI_OPER  , CADE_THEO  , TEMP_PREP  , QUAN_PREV  , QUAN_STOC_AFFE  , UNIT_OPER  , TEMP_FABR  , NOMB_ARTI  , NOMB_OPER_THEO  , FLAG_DERN_OPER  , FLAG_EXPO_PLAN  , CODE_MACH  , CODE_FAMI_MACH  , CODE_MACH_PLAN  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_ETAT_AVAN  , CODE_FOND_PAGE  , dbo.OPTIMA_TRADUCTION(COMM_OPER,'fr') +'@KEYLANG_'+COMM_OPER AS COMM_OPER  , CHAM_LIBR_1  , CHAM_LIBR_2  , CHAM_LIBR_3  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PREV,DATE_DEBU_PREV), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PREV,DATE_DEBU_PREV), 108) AS DATE_DEBU_PREV  , DELT_HEUR_UTC_DEBU_PREV  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PREV,DATE_FIN_PREV), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PREV,DATE_FIN_PREV), 108) AS DATE_FIN_PREV  , DELT_HEUR_UTC_FIN_PREV  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PLAN,DATE_DEBU_PLAN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PLAN,DATE_DEBU_PLAN), 108) AS DATE_DEBU_PLAN  , DELT_HEUR_UTC_DEBU_PLAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PLAN,DATE_FIN_PLAN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PLAN,DATE_FIN_PLAN), 108) AS DATE_FIN_PLAN  , DELT_HEUR_UTC_FIN_PLAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 108) AS DATE_DEBU_REEL  , DELT_HEUR_UTC_DEBU_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 108) AS DATE_FIN_REEL  , DELT_HEUR_UTC_FIN_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DEBU_ACTU), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DEBU_ACTU), 108) AS DATE_DEBU_ACTU  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 108) AS DATE_IMPO  , COUL_PLAN_HEX  , CODE_BT  , TECH_AVAN_THEO  , COUT_UNIT  , CODE_SITE  , DELT_HEUR_UTC  , FLAG_SUPP FROM OF_OPERATION  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_OF ASC  
+14:33:15.060 DEBUG - GSqlQueryGeneratorSqlServer --->table =OF_OPERATION query =set rowcount 3000  SELECT CODE_OF  , CODE_OPER_TYPE  , CODE_OPER  , dbo.OPTIMA_TRADUCTION(DESI_OPER,'fr') +'@KEYLANG_'+DESI_OPER AS DESI_OPER  , CADE_THEO  , TEMP_PREP  , QUAN_PREV  , QUAN_STOC_AFFE  , UNIT_OPER  , TEMP_FABR  , NOMB_ARTI  , NOMB_OPER_THEO  , FLAG_DERN_OPER  , FLAG_EXPO_PLAN  , CODE_MACH  , CODE_FAMI_MACH  , CODE_MACH_PLAN  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_ETAT_AVAN  , CODE_FOND_PAGE  , dbo.OPTIMA_TRADUCTION(COMM_OPER,'fr') +'@KEYLANG_'+COMM_OPER AS COMM_OPER  , CHAM_LIBR_1  , CHAM_LIBR_2  , CHAM_LIBR_3  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PREV,DATE_DEBU_PREV), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PREV,DATE_DEBU_PREV), 108) AS DATE_DEBU_PREV  , DELT_HEUR_UTC_DEBU_PREV  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PREV,DATE_FIN_PREV), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PREV,DATE_FIN_PREV), 108) AS DATE_FIN_PREV  , DELT_HEUR_UTC_FIN_PREV  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PLAN,DATE_DEBU_PLAN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PLAN,DATE_DEBU_PLAN), 108) AS DATE_DEBU_PLAN  , DELT_HEUR_UTC_DEBU_PLAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PLAN,DATE_FIN_PLAN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PLAN,DATE_FIN_PLAN), 108) AS DATE_FIN_PLAN  , DELT_HEUR_UTC_FIN_PLAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 108) AS DATE_DEBU_REEL  , DELT_HEUR_UTC_DEBU_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 108) AS DATE_FIN_REEL  , DELT_HEUR_UTC_FIN_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DEBU_ACTU), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DEBU_ACTU), 108) AS DATE_DEBU_ACTU  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 108) AS DATE_IMPO  , COUL_PLAN_HEX  , CODE_BT  , TECH_AVAN_THEO  , COUT_UNIT  , CODE_SITE  , DELT_HEUR_UTC  , FLAG_SUPP FROM OF_OPERATION  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_OF ASC  
+14:34:09.463 DEBUG - GSqlQueryGeneratorSqlServer --->table =OF_OPERATION query =set rowcount 3000  SELECT CODE_OF  , CODE_OPER_TYPE  , CODE_OPER  , dbo.OPTIMA_TRADUCTION(DESI_OPER,'fr') +'@KEYLANG_'+DESI_OPER AS DESI_OPER  , CADE_THEO  , TEMP_PREP  , QUAN_PREV  , QUAN_STOC_AFFE  , UNIT_OPER  , TEMP_FABR  , NOMB_ARTI  , NOMB_OPER_THEO  , FLAG_DERN_OPER  , FLAG_EXPO_PLAN  , CODE_MACH  , CODE_FAMI_MACH  , CODE_MACH_PLAN  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_ETAT_AVAN  , CODE_FOND_PAGE  , dbo.OPTIMA_TRADUCTION(COMM_OPER,'fr') +'@KEYLANG_'+COMM_OPER AS COMM_OPER  , CHAM_LIBR_1  , CHAM_LIBR_2  , CHAM_LIBR_3  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PREV,DATE_DEBU_PREV), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PREV,DATE_DEBU_PREV), 108) AS DATE_DEBU_PREV  , DELT_HEUR_UTC_DEBU_PREV  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PREV,DATE_FIN_PREV), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PREV,DATE_FIN_PREV), 108) AS DATE_FIN_PREV  , DELT_HEUR_UTC_FIN_PREV  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PLAN,DATE_DEBU_PLAN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PLAN,DATE_DEBU_PLAN), 108) AS DATE_DEBU_PLAN  , DELT_HEUR_UTC_DEBU_PLAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PLAN,DATE_FIN_PLAN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PLAN,DATE_FIN_PLAN), 108) AS DATE_FIN_PLAN  , DELT_HEUR_UTC_FIN_PLAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 108) AS DATE_DEBU_REEL  , DELT_HEUR_UTC_DEBU_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 108) AS DATE_FIN_REEL  , DELT_HEUR_UTC_FIN_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DEBU_ACTU), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DEBU_ACTU), 108) AS DATE_DEBU_ACTU  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 108) AS DATE_IMPO  , COUL_PLAN_HEX  , CODE_BT  , TECH_AVAN_THEO  , COUT_UNIT  , CODE_SITE  , DELT_HEUR_UTC  , FLAG_SUPP FROM OF_OPERATION  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_OF ASC  
+14:34:26.900 DEBUG - GSqlQueryGeneratorSqlServer --->table =OF_OPERATION query =set rowcount 3000  SELECT CODE_OF  , CODE_OPER_TYPE  , CODE_OPER  , dbo.OPTIMA_TRADUCTION(DESI_OPER,'fr') +'@KEYLANG_'+DESI_OPER AS DESI_OPER  , CADE_THEO  , TEMP_PREP  , QUAN_PREV  , QUAN_STOC_AFFE  , UNIT_OPER  , TEMP_FABR  , NOMB_ARTI  , NOMB_OPER_THEO  , FLAG_DERN_OPER  , FLAG_EXPO_PLAN  , CODE_MACH  , CODE_FAMI_MACH  , CODE_MACH_PLAN  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_ETAT_AVAN  , CODE_FOND_PAGE  , dbo.OPTIMA_TRADUCTION(COMM_OPER,'fr') +'@KEYLANG_'+COMM_OPER AS COMM_OPER  , CHAM_LIBR_1  , CHAM_LIBR_2  , CHAM_LIBR_3  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PREV,DATE_DEBU_PREV), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PREV,DATE_DEBU_PREV), 108) AS DATE_DEBU_PREV  , DELT_HEUR_UTC_DEBU_PREV  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PREV,DATE_FIN_PREV), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PREV,DATE_FIN_PREV), 108) AS DATE_FIN_PREV  , DELT_HEUR_UTC_FIN_PREV  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PLAN,DATE_DEBU_PLAN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PLAN,DATE_DEBU_PLAN), 108) AS DATE_DEBU_PLAN  , DELT_HEUR_UTC_DEBU_PLAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PLAN,DATE_FIN_PLAN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PLAN,DATE_FIN_PLAN), 108) AS DATE_FIN_PLAN  , DELT_HEUR_UTC_FIN_PLAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 108) AS DATE_DEBU_REEL  , DELT_HEUR_UTC_DEBU_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 108) AS DATE_FIN_REEL  , DELT_HEUR_UTC_FIN_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DEBU_ACTU), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DEBU_ACTU), 108) AS DATE_DEBU_ACTU  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 108) AS DATE_IMPO  , COUL_PLAN_HEX  , CODE_BT  , TECH_AVAN_THEO  , COUT_UNIT  , CODE_SITE  , DELT_HEUR_UTC  , FLAG_SUPP FROM OF_OPERATION  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_OF ASC  
+14:44:54.009 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Personnel_Activite_EnCours_Liste_1 
+14:44:54.010 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'... 
+14:44:54.010 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'... 
+14:44:54.011 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Personnel_Activite_EnCours_Liste_1 
+14:44:54.011 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'... 
+14:44:54.011 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'... 
+14:44:54.040 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+14:44:54.041 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+14:44:59.091 DEBUG - GSqlQueryGeneratorSqlServer --->table =PERSONNEL query =set rowcount 3000  SELECT MATR_SITE  , MATR  , CODE_BADG  , FLAG_INTE  , NOM  , PREN  , ADRE_TELE  , ADRE_MAIL  , FLAG_BADG_BLOQ  , NOMB_ACTI_MAXI  , FLAG_SUIV_POIN  , KELI_KEY  , FLAG_GEST_PLAN  , FLAG_KELI_IMPO  , LIEN_IMAG  , CODE_HORA_1  , CODE_SERV  , CODE_EQUI_DEFA  , CODE_ATEL  , CODE_ATEL_DEFA  , CODE_SECT_GEOG  , CODE_SECT_GEOG_DEFA  , CODE_ETAT_PERS_DEFA  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DERN_POIN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DERN_POIN), 108) AS DATE_DERN_POIN  , CODE_SITE  , DELT_HEUR_UTC  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_HABI_MACH  , FLAG_SUPP FROM PERSONNEL  WHERE ( CODE_SITE = 'FAB')  ORDER BY MATR_SITE ASC  
+14:45:41.611 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Production_OF_EnCours_2 
+14:45:41.611 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+14:45:41.611 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+14:45:41.669 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Production_OF_EnCours_2 
+14:45:41.669 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+14:45:41.669 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+14:45:41.727 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+14:45:41.819 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+14:45:44.819 DEBUG - GSqlQueryGeneratorSqlServer --->table =OF_OPERATION query =set rowcount 3000  SELECT CODE_OF  , CODE_OPER_TYPE  , CODE_OPER  , dbo.OPTIMA_TRADUCTION(DESI_OPER,'fr') +'@KEYLANG_'+DESI_OPER AS DESI_OPER  , CADE_THEO  , TEMP_PREP  , QUAN_PREV  , QUAN_STOC_AFFE  , UNIT_OPER  , TEMP_FABR  , NOMB_ARTI  , NOMB_OPER_THEO  , FLAG_DERN_OPER  , FLAG_EXPO_PLAN  , CODE_MACH  , CODE_FAMI_MACH  , CODE_MACH_PLAN  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_ETAT_AVAN  , CODE_FOND_PAGE  , dbo.OPTIMA_TRADUCTION(COMM_OPER,'fr') +'@KEYLANG_'+COMM_OPER AS COMM_OPER  , CHAM_LIBR_1  , CHAM_LIBR_2  , CHAM_LIBR_3  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PREV,DATE_DEBU_PREV), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PREV,DATE_DEBU_PREV), 108) AS DATE_DEBU_PREV  , DELT_HEUR_UTC_DEBU_PREV  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PREV,DATE_FIN_PREV), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PREV,DATE_FIN_PREV), 108) AS DATE_FIN_PREV  , DELT_HEUR_UTC_FIN_PREV  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PLAN,DATE_DEBU_PLAN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PLAN,DATE_DEBU_PLAN), 108) AS DATE_DEBU_PLAN  , DELT_HEUR_UTC_DEBU_PLAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PLAN,DATE_FIN_PLAN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PLAN,DATE_FIN_PLAN), 108) AS DATE_FIN_PLAN  , DELT_HEUR_UTC_FIN_PLAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 108) AS DATE_DEBU_REEL  , DELT_HEUR_UTC_DEBU_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 108) AS DATE_FIN_REEL  , DELT_HEUR_UTC_FIN_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DEBU_ACTU), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DEBU_ACTU), 108) AS DATE_DEBU_ACTU  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 108) AS DATE_IMPO  , COUL_PLAN_HEX  , CODE_BT  , TECH_AVAN_THEO  , COUT_UNIT  , CODE_SITE  , DELT_HEUR_UTC  , FLAG_SUPP FROM OF_OPERATION  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_OF ASC  
+14:45:58.727 DEBUG - GSqlQueryGeneratorSqlServer --->table =OF_OPERATION query =set rowcount 3000  SELECT CODE_OF  , CODE_OPER_TYPE  , CODE_OPER  , dbo.OPTIMA_TRADUCTION(DESI_OPER,'fr') +'@KEYLANG_'+DESI_OPER AS DESI_OPER  , CADE_THEO  , TEMP_PREP  , QUAN_PREV  , QUAN_STOC_AFFE  , UNIT_OPER  , TEMP_FABR  , NOMB_ARTI  , NOMB_OPER_THEO  , FLAG_DERN_OPER  , FLAG_EXPO_PLAN  , CODE_MACH  , CODE_FAMI_MACH  , CODE_MACH_PLAN  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_ETAT_AVAN  , CODE_FOND_PAGE  , dbo.OPTIMA_TRADUCTION(COMM_OPER,'fr') +'@KEYLANG_'+COMM_OPER AS COMM_OPER  , CHAM_LIBR_1  , CHAM_LIBR_2  , CHAM_LIBR_3  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PREV,DATE_DEBU_PREV), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PREV,DATE_DEBU_PREV), 108) AS DATE_DEBU_PREV  , DELT_HEUR_UTC_DEBU_PREV  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PREV,DATE_FIN_PREV), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PREV,DATE_FIN_PREV), 108) AS DATE_FIN_PREV  , DELT_HEUR_UTC_FIN_PREV  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PLAN,DATE_DEBU_PLAN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PLAN,DATE_DEBU_PLAN), 108) AS DATE_DEBU_PLAN  , DELT_HEUR_UTC_DEBU_PLAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PLAN,DATE_FIN_PLAN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PLAN,DATE_FIN_PLAN), 108) AS DATE_FIN_PLAN  , DELT_HEUR_UTC_FIN_PLAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 108) AS DATE_DEBU_REEL  , DELT_HEUR_UTC_DEBU_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 108) AS DATE_FIN_REEL  , DELT_HEUR_UTC_FIN_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DEBU_ACTU), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DEBU_ACTU), 108) AS DATE_DEBU_ACTU  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 108) AS DATE_IMPO  , COUL_PLAN_HEX  , CODE_BT  , TECH_AVAN_THEO  , COUT_UNIT  , CODE_SITE  , DELT_HEUR_UTC  , FLAG_SUPP FROM OF_OPERATION  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_OF ASC  
+14:46:32.863 DEBUG - GSqlQueryGeneratorSqlServer --->table =OF_OPERATION query =set rowcount 3000  SELECT CODE_OF  , CODE_OPER_TYPE  , CODE_OPER  , dbo.OPTIMA_TRADUCTION(DESI_OPER,'fr') +'@KEYLANG_'+DESI_OPER AS DESI_OPER  , CADE_THEO  , TEMP_PREP  , QUAN_PREV  , QUAN_STOC_AFFE  , UNIT_OPER  , TEMP_FABR  , NOMB_ARTI  , NOMB_OPER_THEO  , FLAG_DERN_OPER  , FLAG_EXPO_PLAN  , CODE_MACH  , CODE_FAMI_MACH  , CODE_MACH_PLAN  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_ETAT_AVAN  , CODE_FOND_PAGE  , dbo.OPTIMA_TRADUCTION(COMM_OPER,'fr') +'@KEYLANG_'+COMM_OPER AS COMM_OPER  , CHAM_LIBR_1  , CHAM_LIBR_2  , CHAM_LIBR_3  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PREV,DATE_DEBU_PREV), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PREV,DATE_DEBU_PREV), 108) AS DATE_DEBU_PREV  , DELT_HEUR_UTC_DEBU_PREV  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PREV,DATE_FIN_PREV), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PREV,DATE_FIN_PREV), 108) AS DATE_FIN_PREV  , DELT_HEUR_UTC_FIN_PREV  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PLAN,DATE_DEBU_PLAN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PLAN,DATE_DEBU_PLAN), 108) AS DATE_DEBU_PLAN  , DELT_HEUR_UTC_DEBU_PLAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PLAN,DATE_FIN_PLAN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PLAN,DATE_FIN_PLAN), 108) AS DATE_FIN_PLAN  , DELT_HEUR_UTC_FIN_PLAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 108) AS DATE_DEBU_REEL  , DELT_HEUR_UTC_DEBU_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 108) AS DATE_FIN_REEL  , DELT_HEUR_UTC_FIN_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DEBU_ACTU), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DEBU_ACTU), 108) AS DATE_DEBU_ACTU  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 108) AS DATE_IMPO  , COUL_PLAN_HEX  , CODE_BT  , TECH_AVAN_THEO  , COUT_UNIT  , CODE_SITE  , DELT_HEUR_UTC  , FLAG_SUPP FROM OF_OPERATION  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_OF ASC  
+14:46:54.433 DEBUG - GSqlQueryGeneratorSqlServer --->table =OF_OPERATION query =set rowcount 3000  SELECT CODE_OF  , CODE_OPER_TYPE  , CODE_OPER  , dbo.OPTIMA_TRADUCTION(DESI_OPER,'fr') +'@KEYLANG_'+DESI_OPER AS DESI_OPER  , CADE_THEO  , TEMP_PREP  , QUAN_PREV  , QUAN_STOC_AFFE  , UNIT_OPER  , TEMP_FABR  , NOMB_ARTI  , NOMB_OPER_THEO  , FLAG_DERN_OPER  , FLAG_EXPO_PLAN  , CODE_MACH  , CODE_FAMI_MACH  , CODE_MACH_PLAN  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_ETAT_AVAN  , CODE_FOND_PAGE  , dbo.OPTIMA_TRADUCTION(COMM_OPER,'fr') +'@KEYLANG_'+COMM_OPER AS COMM_OPER  , CHAM_LIBR_1  , CHAM_LIBR_2  , CHAM_LIBR_3  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PREV,DATE_DEBU_PREV), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PREV,DATE_DEBU_PREV), 108) AS DATE_DEBU_PREV  , DELT_HEUR_UTC_DEBU_PREV  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PREV,DATE_FIN_PREV), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PREV,DATE_FIN_PREV), 108) AS DATE_FIN_PREV  , DELT_HEUR_UTC_FIN_PREV  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PLAN,DATE_DEBU_PLAN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PLAN,DATE_DEBU_PLAN), 108) AS DATE_DEBU_PLAN  , DELT_HEUR_UTC_DEBU_PLAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PLAN,DATE_FIN_PLAN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PLAN,DATE_FIN_PLAN), 108) AS DATE_FIN_PLAN  , DELT_HEUR_UTC_FIN_PLAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 108) AS DATE_DEBU_REEL  , DELT_HEUR_UTC_DEBU_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 108) AS DATE_FIN_REEL  , DELT_HEUR_UTC_FIN_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DEBU_ACTU), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DEBU_ACTU), 108) AS DATE_DEBU_ACTU  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 108) AS DATE_IMPO  , COUL_PLAN_HEX  , CODE_BT  , TECH_AVAN_THEO  , COUT_UNIT  , CODE_SITE  , DELT_HEUR_UTC  , FLAG_SUPP FROM OF_OPERATION  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_OF ASC  
+14:58:57.362 DEBUG - GSqlQueryGeneratorSqlServer --->table =OF_OPERATION query =set rowcount 3000  SELECT CODE_OF  , CODE_OPER_TYPE  , CODE_OPER  , dbo.OPTIMA_TRADUCTION(DESI_OPER,'fr') +'@KEYLANG_'+DESI_OPER AS DESI_OPER  , CADE_THEO  , TEMP_PREP  , QUAN_PREV  , QUAN_STOC_AFFE  , UNIT_OPER  , TEMP_FABR  , NOMB_ARTI  , NOMB_OPER_THEO  , FLAG_DERN_OPER  , FLAG_EXPO_PLAN  , CODE_MACH  , CODE_FAMI_MACH  , CODE_MACH_PLAN  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_ETAT_AVAN  , CODE_FOND_PAGE  , dbo.OPTIMA_TRADUCTION(COMM_OPER,'fr') +'@KEYLANG_'+COMM_OPER AS COMM_OPER  , CHAM_LIBR_1  , CHAM_LIBR_2  , CHAM_LIBR_3  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PREV,DATE_DEBU_PREV), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PREV,DATE_DEBU_PREV), 108) AS DATE_DEBU_PREV  , DELT_HEUR_UTC_DEBU_PREV  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PREV,DATE_FIN_PREV), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PREV,DATE_FIN_PREV), 108) AS DATE_FIN_PREV  , DELT_HEUR_UTC_FIN_PREV  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PLAN,DATE_DEBU_PLAN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PLAN,DATE_DEBU_PLAN), 108) AS DATE_DEBU_PLAN  , DELT_HEUR_UTC_DEBU_PLAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PLAN,DATE_FIN_PLAN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PLAN,DATE_FIN_PLAN), 108) AS DATE_FIN_PLAN  , DELT_HEUR_UTC_FIN_PLAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 108) AS DATE_DEBU_REEL  , DELT_HEUR_UTC_DEBU_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 108) AS DATE_FIN_REEL  , DELT_HEUR_UTC_FIN_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DEBU_ACTU), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DEBU_ACTU), 108) AS DATE_DEBU_ACTU  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 108) AS DATE_IMPO  , COUL_PLAN_HEX  , CODE_BT  , TECH_AVAN_THEO  , COUT_UNIT  , CODE_SITE  , DELT_HEUR_UTC  , FLAG_SUPP FROM OF_OPERATION  WHERE ( CODE_SITE = 'FAB')  AND ( CODE_OF LIKE  'FABOF19000092'  )  AND ( CODE_OPER LIKE  '70'  )  ORDER BY CODE_OF ASC  
+15:14:13.916 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Personnel_Activite_EnCours_Liste_1 
+15:14:13.919 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'... 
+15:14:13.921 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'... 
+15:14:13.951 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+15:14:13.986 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Personnel_Activite_EnCours_Liste_1 
+15:14:13.986 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'... 
+15:14:13.986 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'... 
+15:14:14.009 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+15:14:29.280 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE query =set rowcount 3000  SELECT CODE_MACH_SITE  , CODE_MACH  , TYPE_MACH  , dbo.OPTIMA_TRADUCTION(DESI_MACH,'fr') +'@KEYLANG_'+DESI_MACH AS DESI_MACH  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_HORA  , CODE_TERM  , CODE_FAMI_MACH  , FLAG_HABI  , FLAG_MAIN_PREV  , FLAG_ABSE_COMP  , DURE_ABSE_COMP  , NOMB_OPER_MAXI  , DURE_MAJO_CYCL  , FLAG_MACH_ACTI  , TAUX_REBU_THEO  , MODE_CALC_QUAN  , TYPE_GEST_GAMM  , TYPE_GEST_CYCL  , NOMB_PIEC_CYCL  , DURE_DETE_FIN_FABR  , NOMB_CYCL_MAXI  , DURE_MAXI_MICR_ARRE  , DURE_TEMP_PASS_ARRE  , DURE_ARRE_INDE_MAXI  , FLAG_CHAN_FABR_AUTO  , TECH_AVAN_CYCL_THEO  , NUME_BOIT_SUPE  , SUPE_NUME_ORDR  , LIEN_IMAG  , TAUX_HORA_PREP_MACH  , TAUX_HORA_PROD_MACH  , TAUX_HORA_PREP_MO  , TAUX_HORA_PROD_MO  , NUME_SERI  , dbo.OPTIMA_TRADUCTION(DESI_MARQ,'fr') +'@KEYLANG_'+DESI_MARQ AS DESI_MARQ  , CONVERT(NVARCHAR, DATE_MISE_SERV, 103) AS DATE_MISE_SERV  , FLAG_GEST_PLAN  , FLAG_OBLI_PERS  , CODE_ETAT_DEBU_OF  , CODE_ETAT_FIN_OF  , CAPA_CONT_MAXI  , CODE_UNIT  , CODE_SITE  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_EXPO_DIMO  , FLAG_SUPP FROM MACHINE  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_MACH_SITE ASC  
+15:14:34.426 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE query =set rowcount 3000  SELECT CODE_MACH_SITE  , CODE_MACH  , TYPE_MACH  , dbo.OPTIMA_TRADUCTION(DESI_MACH,'fr') +'@KEYLANG_'+DESI_MACH AS DESI_MACH  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_HORA  , CODE_TERM  , CODE_FAMI_MACH  , FLAG_HABI  , FLAG_MAIN_PREV  , FLAG_ABSE_COMP  , DURE_ABSE_COMP  , NOMB_OPER_MAXI  , DURE_MAJO_CYCL  , FLAG_MACH_ACTI  , TAUX_REBU_THEO  , MODE_CALC_QUAN  , TYPE_GEST_GAMM  , TYPE_GEST_CYCL  , NOMB_PIEC_CYCL  , DURE_DETE_FIN_FABR  , NOMB_CYCL_MAXI  , DURE_MAXI_MICR_ARRE  , DURE_TEMP_PASS_ARRE  , DURE_ARRE_INDE_MAXI  , FLAG_CHAN_FABR_AUTO  , TECH_AVAN_CYCL_THEO  , NUME_BOIT_SUPE  , SUPE_NUME_ORDR  , LIEN_IMAG  , TAUX_HORA_PREP_MACH  , TAUX_HORA_PROD_MACH  , TAUX_HORA_PREP_MO  , TAUX_HORA_PROD_MO  , NUME_SERI  , dbo.OPTIMA_TRADUCTION(DESI_MARQ,'fr') +'@KEYLANG_'+DESI_MARQ AS DESI_MARQ  , CONVERT(NVARCHAR, DATE_MISE_SERV, 103) AS DATE_MISE_SERV  , FLAG_GEST_PLAN  , FLAG_OBLI_PERS  , CODE_ETAT_DEBU_OF  , CODE_ETAT_FIN_OF  , CAPA_CONT_MAXI  , CODE_UNIT  , CODE_SITE  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_EXPO_DIMO  , FLAG_SUPP FROM MACHINE  WHERE ( CODE_SITE = 'FAB')  AND ( CODE_MACH_SITE LIKE  'C07PEIN2'  )  AND ( TYPE_MACH LIKE  '%'  OR TYPE_MACH IS NULL  )  AND ( FLAG_EXPO_DIMO LIKE  '%'  OR FLAG_EXPO_DIMO IS NULL  )  ORDER BY CODE_MACH_SITE ASC  
+15:24:30.604 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE_TERMINAL query =set rowcount 3000  SELECT CODE_MACH  , CODE_TERM  FROM MACHINE_TERMINAL  ORDER BY CODE_MACH ASC  
+15:24:32.645 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Production_OF_EnCours_2 
+15:24:32.646 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+15:24:32.646 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+15:24:32.655 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Production_OF_EnCours_2 
+15:24:32.655 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+15:24:32.655 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+15:24:32.737 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+15:24:32.744 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+15:24:34.002 DEBUG - GSqlQueryGeneratorSqlServer --->table =OF_OPERATION query =set rowcount 3000  SELECT CODE_OF  , CODE_OPER_TYPE  , CODE_OPER  , dbo.OPTIMA_TRADUCTION(DESI_OPER,'fr') +'@KEYLANG_'+DESI_OPER AS DESI_OPER  , CADE_THEO  , TEMP_PREP  , QUAN_PREV  , QUAN_STOC_AFFE  , UNIT_OPER  , TEMP_FABR  , NOMB_ARTI  , NOMB_OPER_THEO  , FLAG_DERN_OPER  , FLAG_EXPO_PLAN  , CODE_MACH  , CODE_FAMI_MACH  , CODE_MACH_PLAN  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_ETAT_AVAN  , CODE_FOND_PAGE  , dbo.OPTIMA_TRADUCTION(COMM_OPER,'fr') +'@KEYLANG_'+COMM_OPER AS COMM_OPER  , CHAM_LIBR_1  , CHAM_LIBR_2  , CHAM_LIBR_3  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PREV,DATE_DEBU_PREV), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PREV,DATE_DEBU_PREV), 108) AS DATE_DEBU_PREV  , DELT_HEUR_UTC_DEBU_PREV  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PREV,DATE_FIN_PREV), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PREV,DATE_FIN_PREV), 108) AS DATE_FIN_PREV  , DELT_HEUR_UTC_FIN_PREV  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PLAN,DATE_DEBU_PLAN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PLAN,DATE_DEBU_PLAN), 108) AS DATE_DEBU_PLAN  , DELT_HEUR_UTC_DEBU_PLAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PLAN,DATE_FIN_PLAN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PLAN,DATE_FIN_PLAN), 108) AS DATE_FIN_PLAN  , DELT_HEUR_UTC_FIN_PLAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 108) AS DATE_DEBU_REEL  , DELT_HEUR_UTC_DEBU_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 108) AS DATE_FIN_REEL  , DELT_HEUR_UTC_FIN_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DEBU_ACTU), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DEBU_ACTU), 108) AS DATE_DEBU_ACTU  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 108) AS DATE_IMPO  , COUL_PLAN_HEX  , CODE_BT  , TECH_AVAN_THEO  , COUT_UNIT  , CODE_SITE  , DELT_HEUR_UTC  , FLAG_SUPP FROM OF_OPERATION  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_OF ASC  
+15:24:42.481 DEBUG - GSqlQueryGeneratorSqlServer --->table =OF_OPERATION query =set rowcount 3000  SELECT CODE_OF  , CODE_OPER_TYPE  , CODE_OPER  , dbo.OPTIMA_TRADUCTION(DESI_OPER,'fr') +'@KEYLANG_'+DESI_OPER AS DESI_OPER  , CADE_THEO  , TEMP_PREP  , QUAN_PREV  , QUAN_STOC_AFFE  , UNIT_OPER  , TEMP_FABR  , NOMB_ARTI  , NOMB_OPER_THEO  , FLAG_DERN_OPER  , FLAG_EXPO_PLAN  , CODE_MACH  , CODE_FAMI_MACH  , CODE_MACH_PLAN  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_ETAT_AVAN  , CODE_FOND_PAGE  , dbo.OPTIMA_TRADUCTION(COMM_OPER,'fr') +'@KEYLANG_'+COMM_OPER AS COMM_OPER  , CHAM_LIBR_1  , CHAM_LIBR_2  , CHAM_LIBR_3  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PREV,DATE_DEBU_PREV), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PREV,DATE_DEBU_PREV), 108) AS DATE_DEBU_PREV  , DELT_HEUR_UTC_DEBU_PREV  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PREV,DATE_FIN_PREV), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PREV,DATE_FIN_PREV), 108) AS DATE_FIN_PREV  , DELT_HEUR_UTC_FIN_PREV  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PLAN,DATE_DEBU_PLAN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PLAN,DATE_DEBU_PLAN), 108) AS DATE_DEBU_PLAN  , DELT_HEUR_UTC_DEBU_PLAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PLAN,DATE_FIN_PLAN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PLAN,DATE_FIN_PLAN), 108) AS DATE_FIN_PLAN  , DELT_HEUR_UTC_FIN_PLAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 108) AS DATE_DEBU_REEL  , DELT_HEUR_UTC_DEBU_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 108) AS DATE_FIN_REEL  , DELT_HEUR_UTC_FIN_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DEBU_ACTU), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DEBU_ACTU), 108) AS DATE_DEBU_ACTU  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 108) AS DATE_IMPO  , COUL_PLAN_HEX  , CODE_BT  , TECH_AVAN_THEO  , COUT_UNIT  , CODE_SITE  , DELT_HEUR_UTC  , FLAG_SUPP FROM OF_OPERATION  WHERE ( CODE_SITE = 'FAB')  AND ( CODE_OF LIKE  'OF19000088'  )  AND ( CODE_OPER LIKE  '70'  )  ORDER BY CODE_OF ASC  
+15:24:49.756 DEBUG - GSqlQueryGeneratorSqlServer --->table =OF_OPERATION query =set rowcount 3000  SELECT CODE_OF  , CODE_OPER_TYPE  , CODE_OPER  , dbo.OPTIMA_TRADUCTION(DESI_OPER,'fr') +'@KEYLANG_'+DESI_OPER AS DESI_OPER  , CADE_THEO  , TEMP_PREP  , QUAN_PREV  , QUAN_STOC_AFFE  , UNIT_OPER  , TEMP_FABR  , NOMB_ARTI  , NOMB_OPER_THEO  , FLAG_DERN_OPER  , FLAG_EXPO_PLAN  , CODE_MACH  , CODE_FAMI_MACH  , CODE_MACH_PLAN  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_ETAT_AVAN  , CODE_FOND_PAGE  , dbo.OPTIMA_TRADUCTION(COMM_OPER,'fr') +'@KEYLANG_'+COMM_OPER AS COMM_OPER  , CHAM_LIBR_1  , CHAM_LIBR_2  , CHAM_LIBR_3  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PREV,DATE_DEBU_PREV), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PREV,DATE_DEBU_PREV), 108) AS DATE_DEBU_PREV  , DELT_HEUR_UTC_DEBU_PREV  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PREV,DATE_FIN_PREV), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PREV,DATE_FIN_PREV), 108) AS DATE_FIN_PREV  , DELT_HEUR_UTC_FIN_PREV  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PLAN,DATE_DEBU_PLAN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PLAN,DATE_DEBU_PLAN), 108) AS DATE_DEBU_PLAN  , DELT_HEUR_UTC_DEBU_PLAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PLAN,DATE_FIN_PLAN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PLAN,DATE_FIN_PLAN), 108) AS DATE_FIN_PLAN  , DELT_HEUR_UTC_FIN_PLAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 108) AS DATE_DEBU_REEL  , DELT_HEUR_UTC_DEBU_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 108) AS DATE_FIN_REEL  , DELT_HEUR_UTC_FIN_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DEBU_ACTU), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DEBU_ACTU), 108) AS DATE_DEBU_ACTU  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 108) AS DATE_IMPO  , COUL_PLAN_HEX  , CODE_BT  , TECH_AVAN_THEO  , COUT_UNIT  , CODE_SITE  , DELT_HEUR_UTC  , FLAG_SUPP FROM OF_OPERATION  WHERE ( CODE_SITE = 'FAB')  AND ( CODE_OF LIKE  'FABOF19000088'  )  AND ( CODE_OPER LIKE  '70'  )  ORDER BY CODE_OF ASC  
+15:26:32.238 DEBUG - GSqlQueryGeneratorSqlServer --->table =OF_OPERATION query =set rowcount 3000  SELECT CODE_OF  , CODE_OPER_TYPE  , CODE_OPER  , dbo.OPTIMA_TRADUCTION(DESI_OPER,'fr') +'@KEYLANG_'+DESI_OPER AS DESI_OPER  , CADE_THEO  , TEMP_PREP  , QUAN_PREV  , QUAN_STOC_AFFE  , UNIT_OPER  , TEMP_FABR  , NOMB_ARTI  , NOMB_OPER_THEO  , FLAG_DERN_OPER  , FLAG_EXPO_PLAN  , CODE_MACH  , CODE_FAMI_MACH  , CODE_MACH_PLAN  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_ETAT_AVAN  , CODE_FOND_PAGE  , dbo.OPTIMA_TRADUCTION(COMM_OPER,'fr') +'@KEYLANG_'+COMM_OPER AS COMM_OPER  , CHAM_LIBR_1  , CHAM_LIBR_2  , CHAM_LIBR_3  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PREV,DATE_DEBU_PREV), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PREV,DATE_DEBU_PREV), 108) AS DATE_DEBU_PREV  , DELT_HEUR_UTC_DEBU_PREV  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PREV,DATE_FIN_PREV), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PREV,DATE_FIN_PREV), 108) AS DATE_FIN_PREV  , DELT_HEUR_UTC_FIN_PREV  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PLAN,DATE_DEBU_PLAN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PLAN,DATE_DEBU_PLAN), 108) AS DATE_DEBU_PLAN  , DELT_HEUR_UTC_DEBU_PLAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PLAN,DATE_FIN_PLAN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PLAN,DATE_FIN_PLAN), 108) AS DATE_FIN_PLAN  , DELT_HEUR_UTC_FIN_PLAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 108) AS DATE_DEBU_REEL  , DELT_HEUR_UTC_DEBU_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 108) AS DATE_FIN_REEL  , DELT_HEUR_UTC_FIN_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DEBU_ACTU), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DEBU_ACTU), 108) AS DATE_DEBU_ACTU  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 108) AS DATE_IMPO  , COUL_PLAN_HEX  , CODE_BT  , TECH_AVAN_THEO  , COUT_UNIT  , CODE_SITE  , DELT_HEUR_UTC  , FLAG_SUPP FROM OF_OPERATION  WHERE ( CODE_SITE = 'FAB')  AND ( CODE_OF LIKE  'FABOF19000088'  )  AND ( CODE_OPER LIKE  '20'  )  ORDER BY CODE_OF ASC  
+15:26:51.907 DEBUG - GSqlQueryGeneratorSqlServer --->table =OF_OPERATION query =set rowcount 3000  SELECT CODE_OF  , CODE_OPER_TYPE  , CODE_OPER  , dbo.OPTIMA_TRADUCTION(DESI_OPER,'fr') +'@KEYLANG_'+DESI_OPER AS DESI_OPER  , CADE_THEO  , TEMP_PREP  , QUAN_PREV  , QUAN_STOC_AFFE  , UNIT_OPER  , TEMP_FABR  , NOMB_ARTI  , NOMB_OPER_THEO  , FLAG_DERN_OPER  , FLAG_EXPO_PLAN  , CODE_MACH  , CODE_FAMI_MACH  , CODE_MACH_PLAN  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_ETAT_AVAN  , CODE_FOND_PAGE  , dbo.OPTIMA_TRADUCTION(COMM_OPER,'fr') +'@KEYLANG_'+COMM_OPER AS COMM_OPER  , CHAM_LIBR_1  , CHAM_LIBR_2  , CHAM_LIBR_3  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PREV,DATE_DEBU_PREV), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PREV,DATE_DEBU_PREV), 108) AS DATE_DEBU_PREV  , DELT_HEUR_UTC_DEBU_PREV  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PREV,DATE_FIN_PREV), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PREV,DATE_FIN_PREV), 108) AS DATE_FIN_PREV  , DELT_HEUR_UTC_FIN_PREV  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PLAN,DATE_DEBU_PLAN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_PLAN,DATE_DEBU_PLAN), 108) AS DATE_DEBU_PLAN  , DELT_HEUR_UTC_DEBU_PLAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PLAN,DATE_FIN_PLAN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_PLAN,DATE_FIN_PLAN), 108) AS DATE_FIN_PLAN  , DELT_HEUR_UTC_FIN_PLAN  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_DEBU_REEL,DATE_DEBU_REEL), 108) AS DATE_DEBU_REEL  , DELT_HEUR_UTC_DEBU_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC_FIN_REEL,DATE_FIN_REEL), 108) AS DATE_FIN_REEL  , DELT_HEUR_UTC_FIN_REEL  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DEBU_ACTU), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DEBU_ACTU), 108) AS DATE_DEBU_ACTU  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_IMPO), 108) AS DATE_IMPO  , COUL_PLAN_HEX  , CODE_BT  , TECH_AVAN_THEO  , COUT_UNIT  , CODE_SITE  , DELT_HEUR_UTC  , FLAG_SUPP FROM OF_OPERATION  WHERE ( CODE_SITE = 'FAB')  AND ( CODE_OF LIKE  'FABOF19000088'  )  AND ( CODE_OPER LIKE  '10'  )  ORDER BY CODE_OF ASC  
+16:34:58.294 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+16:34:58.294 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/moduleChange.ajx?moduleID=OPTIMA_Standard&userID=administrateur) mais pas de user en session. 
+16:34:58.326 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+16:34:58.422 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+16:34:58.422 DEBUG - FiltreSession Requête pour page non login (http://localhost:8383/Quartis-Web/xxx.cas?action=deconnexion&userID=administrateur) mais pas de user en session. 
+16:34:58.428 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+16:34:58.495 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+16:35:01.602 DEBUG - FiltreSession doFilter - UCS indique que l'utilisateur n'est pas connecté 
+16:35:01.614 DEBUG - LoginManagedBean user.id = administrateur, connecté par login/mdp Osys 
+16:35:01.800 DEBUG - QTConnector connect - Connecting... 
+16:35:01.803 DEBUG - QTConnector connect - Connected. 
+16:35:01.804 DEBUG - QTConnector executeQuery - Sending 'USER @ID0 [] serveur_web SERVEUR-WEB'... 
+16:35:01.804 DEBUG - QTConnector executeQuery - Sent. 
+16:35:01.804 DEBUG - QTConnector executeQuery - Reading response... 
+16:35:01.805 DEBUG - QTConnector readResponse - starting to listen... 
+16:35:01.805 DEBUG - QTConnector readResponse - read trame : ACK 263172 
+16:35:01.805 DEBUG - QTConnector executeQuery - Read: 'ACK 263172'. 
+16:35:01.805 DEBUG - QTInternalCommunicator send_IdentifyOsysConsoleWeb - QTools returned : 263172 
+16:35:01.805 DEBUG - QTConnector executeQuery - Sending 'LST_USER_CONNECT'... 
+16:35:01.806 DEBUG - QTConnector executeQuery - Sent. 
+16:35:01.806 DEBUG - QTConnector executeQuery - Reading response... 
+16:35:01.806 DEBUG - QTConnector readResponse - starting to listen... 
+16:35:01.807 DEBUG - QTConnector readResponse - read trame : <lstuserconnect max="6" connect="4" />\x0a 
+16:35:01.808 DEBUG - QTConnector executeQuery - Read: '<lstuserconnect max="6" connect="4" />\x0a'. 
+16:35:01.808 DEBUG - QTConnector disconnect - Déconnexion... 
+16:35:01.808 DEBUG - QTConnector disconnect - Déconnecté. 
+16:35:01.833 DEBUG - QuartisToolsServiceImpl createOrUpdateUser - username : 'administrateur', groupName : 'Administrateurs'... 
+16:35:01.833 DEBUG - QTConnector connect - Connecting... 
+16:35:01.835 DEBUG - QTConnector connect - Connected. 
+16:35:01.835 DEBUG - QTConnector executeQuery - Sending 'USER @ID0 [] serveur_web SERVEUR-WEB'... 
+16:35:01.835 DEBUG - QTConnector executeQuery - Sent. 
+16:35:01.836 DEBUG - QTConnector executeQuery - Reading response... 
+16:35:01.836 DEBUG - QTConnector readResponse - starting to listen... 
+16:35:01.836 DEBUG - QTConnector readResponse - read trame : ACK 263172 
+16:35:01.836 DEBUG - QTConnector executeQuery - Read: 'ACK 263172'. 
+16:35:01.836 DEBUG - QTSrvCommunicator send_IdentifyOsysConsoleWeb - QTools returned : 263172 
+16:35:01.837 DEBUG - QTSrvCommunicator send_CreateUserQuartisTools - message =  USR USER OBJ ADD [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+ 
+16:35:01.837 DEBUG - QTConnector executeQuery - Sending ' USR USER OBJ ADD [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+'... 
+16:35:01.837 DEBUG - QTConnector executeQuery - Sent. 
+16:35:01.837 DEBUG - QTConnector executeQuery - Reading response... 
+16:35:01.838 DEBUG - QTConnector readResponse - starting to listen... 
+16:35:01.838 DEBUG - QTConnector readResponse - read trame : ACK -10 
+16:35:01.838 DEBUG - QTConnector executeQuery - Read: 'ACK -10'. 
+16:35:01.838 DEBUG - QTSrvCommunicator send_CreateUserQuartisTools - QTools returned : -10 
+16:35:01.838 DEBUG - QTSrvCommunicator send_UpdateUserQuartisTools - message :  USR USER OBJ SET [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+ 
+16:35:01.839 DEBUG - QTConnector executeQuery - Sending ' USR USER OBJ SET [administrateur] [Administrateurs]
+ {
+ PASSWORD []
+ }
+'... 
+16:35:01.839 DEBUG - QTConnector executeQuery - Sent. 
+16:35:01.839 DEBUG - QTConnector executeQuery - Reading response... 
+16:35:01.839 DEBUG - QTConnector readResponse - starting to listen... 
+16:35:01.842 DEBUG - QTConnector readResponse - read trame : ACK 0 
+16:35:01.842 DEBUG - QTConnector executeQuery - Read: 'ACK 0'. 
+16:35:01.842 DEBUG - QTSrvCommunicator send_UpdateUserQuartisTools - QTools returned : 0 
+16:35:01.843 DEBUG - QTConnector disconnect - Déconnexion... 
+16:35:01.843 DEBUG - QTConnector disconnect - Déconnecté. 
+16:35:01.843  INFO - QuartisToolsServiceImpl Mise à jour du user QuartisTools 'administrateur' dans le groupe 'Administrateurs' réussie. 
+16:35:05.477 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+16:35:05.478 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+16:35:05.478 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+16:35:05.517 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Standard_System_Event_List 
+16:35:05.517 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+16:35:05.517 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Standard_System_Event_List\_Standard_System_Event_List.xls'... 
+16:35:05.541 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+16:35:05.542 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+16:39:24.901 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE query =set rowcount 3000  SELECT CODE_MACH_SITE  , CODE_MACH  , TYPE_MACH  , dbo.OPTIMA_TRADUCTION(DESI_MACH,'fr') +'@KEYLANG_'+DESI_MACH AS DESI_MACH  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_HORA  , CODE_TERM  , CODE_FAMI_MACH  , FLAG_HABI  , FLAG_MAIN_PREV  , FLAG_ABSE_COMP  , DURE_ABSE_COMP  , NOMB_OPER_MAXI  , DURE_MAJO_CYCL  , FLAG_MACH_ACTI  , TAUX_REBU_THEO  , MODE_CALC_QUAN  , TYPE_GEST_GAMM  , TYPE_GEST_CYCL  , NOMB_PIEC_CYCL  , DURE_DETE_FIN_FABR  , NOMB_CYCL_MAXI  , DURE_MAXI_MICR_ARRE  , DURE_TEMP_PASS_ARRE  , DURE_ARRE_INDE_MAXI  , FLAG_CHAN_FABR_AUTO  , TECH_AVAN_CYCL_THEO  , NUME_BOIT_SUPE  , SUPE_NUME_ORDR  , LIEN_IMAG  , TAUX_HORA_PREP_MACH  , TAUX_HORA_PROD_MACH  , TAUX_HORA_PREP_MO  , TAUX_HORA_PROD_MO  , NUME_SERI  , dbo.OPTIMA_TRADUCTION(DESI_MARQ,'fr') +'@KEYLANG_'+DESI_MARQ AS DESI_MARQ  , CONVERT(NVARCHAR, DATE_MISE_SERV, 103) AS DATE_MISE_SERV  , FLAG_GEST_PLAN  , FLAG_OBLI_PERS  , CODE_ETAT_DEBU_OF  , CODE_ETAT_FIN_OF  , CAPA_CONT_MAXI  , CODE_UNIT  , CODE_SITE  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_EXPO_DIMO  , FLAG_SUPP FROM MACHINE  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_MACH_SITE ASC  
+16:39:43.208 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE query =set rowcount 3000  SELECT CODE_MACH_SITE  , CODE_MACH  , TYPE_MACH  , dbo.OPTIMA_TRADUCTION(DESI_MACH,'fr') +'@KEYLANG_'+DESI_MACH AS DESI_MACH  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_HORA  , CODE_TERM  , CODE_FAMI_MACH  , FLAG_HABI  , FLAG_MAIN_PREV  , FLAG_ABSE_COMP  , DURE_ABSE_COMP  , NOMB_OPER_MAXI  , DURE_MAJO_CYCL  , FLAG_MACH_ACTI  , TAUX_REBU_THEO  , MODE_CALC_QUAN  , TYPE_GEST_GAMM  , TYPE_GEST_CYCL  , NOMB_PIEC_CYCL  , DURE_DETE_FIN_FABR  , NOMB_CYCL_MAXI  , DURE_MAXI_MICR_ARRE  , DURE_TEMP_PASS_ARRE  , DURE_ARRE_INDE_MAXI  , FLAG_CHAN_FABR_AUTO  , TECH_AVAN_CYCL_THEO  , NUME_BOIT_SUPE  , SUPE_NUME_ORDR  , LIEN_IMAG  , TAUX_HORA_PREP_MACH  , TAUX_HORA_PROD_MACH  , TAUX_HORA_PREP_MO  , TAUX_HORA_PROD_MO  , NUME_SERI  , dbo.OPTIMA_TRADUCTION(DESI_MARQ,'fr') +'@KEYLANG_'+DESI_MARQ AS DESI_MARQ  , CONVERT(NVARCHAR, DATE_MISE_SERV, 103) AS DATE_MISE_SERV  , FLAG_GEST_PLAN  , FLAG_OBLI_PERS  , CODE_ETAT_DEBU_OF  , CODE_ETAT_FIN_OF  , CAPA_CONT_MAXI  , CODE_UNIT  , CODE_SITE  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_EXPO_DIMO  , FLAG_SUPP FROM MACHINE  WHERE ( CODE_SITE = 'FAB')  AND ( TYPE_MACH LIKE  '%'  OR TYPE_MACH IS NULL  )  AND ( FLAG_EXPO_DIMO LIKE  '%'  OR FLAG_EXPO_DIMO IS NULL  )  ORDER BY CODE_MACH_SITE ASC  
+16:41:06.168 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE_GROUPE query =set rowcount 3000  SELECT CODE_FAMI_MACH_SITE  , CODE_FAMI_MACH  , dbo.OPTIMA_TRADUCTION(DESI_FAMI_MACH,'fr') +'@KEYLANG_'+DESI_FAMI_MACH AS DESI_FAMI_MACH  , CODE_SITE  , CODE_ATEL  , CODE_SECT_GEOG  FROM MACHINE_GROUPE  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_FAMI_MACH_SITE ASC  
+16:41:19.807 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE_GROUPE query =set rowcount 3000  SELECT CODE_FAMI_MACH_SITE  , CODE_FAMI_MACH  , dbo.OPTIMA_TRADUCTION(DESI_FAMI_MACH,'fr') +'@KEYLANG_'+DESI_FAMI_MACH AS DESI_FAMI_MACH  , CODE_SITE  , CODE_ATEL  , CODE_SECT_GEOG  FROM MACHINE_GROUPE  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_FAMI_MACH_SITE ASC  
+16:42:17.992 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE query =set rowcount 3000  SELECT CODE_MACH_SITE  , CODE_MACH  , TYPE_MACH  , dbo.OPTIMA_TRADUCTION(DESI_MACH,'fr') +'@KEYLANG_'+DESI_MACH AS DESI_MACH  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_HORA  , CODE_TERM  , CODE_FAMI_MACH  , FLAG_HABI  , FLAG_MAIN_PREV  , FLAG_ABSE_COMP  , DURE_ABSE_COMP  , NOMB_OPER_MAXI  , DURE_MAJO_CYCL  , FLAG_MACH_ACTI  , TAUX_REBU_THEO  , MODE_CALC_QUAN  , TYPE_GEST_GAMM  , TYPE_GEST_CYCL  , NOMB_PIEC_CYCL  , DURE_DETE_FIN_FABR  , NOMB_CYCL_MAXI  , DURE_MAXI_MICR_ARRE  , DURE_TEMP_PASS_ARRE  , DURE_ARRE_INDE_MAXI  , FLAG_CHAN_FABR_AUTO  , TECH_AVAN_CYCL_THEO  , NUME_BOIT_SUPE  , SUPE_NUME_ORDR  , LIEN_IMAG  , TAUX_HORA_PREP_MACH  , TAUX_HORA_PROD_MACH  , TAUX_HORA_PREP_MO  , TAUX_HORA_PROD_MO  , NUME_SERI  , dbo.OPTIMA_TRADUCTION(DESI_MARQ,'fr') +'@KEYLANG_'+DESI_MARQ AS DESI_MARQ  , CONVERT(NVARCHAR, DATE_MISE_SERV, 103) AS DATE_MISE_SERV  , FLAG_GEST_PLAN  , FLAG_OBLI_PERS  , CODE_ETAT_DEBU_OF  , CODE_ETAT_FIN_OF  , CAPA_CONT_MAXI  , CODE_UNIT  , CODE_SITE  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_EXPO_DIMO  , FLAG_SUPP FROM MACHINE  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_MACH_SITE ASC  
+16:42:41.273 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE_GROUPE query =set rowcount 3000  SELECT CODE_FAMI_MACH_SITE  , CODE_FAMI_MACH  , dbo.OPTIMA_TRADUCTION(DESI_FAMI_MACH,'fr') +'@KEYLANG_'+DESI_FAMI_MACH AS DESI_FAMI_MACH  , CODE_SITE  , CODE_ATEL  , CODE_SECT_GEOG  FROM MACHINE_GROUPE  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_FAMI_MACH_SITE ASC  
+16:43:29.310 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE_GROUPE query =set rowcount 3000  SELECT CODE_FAMI_MACH_SITE  , CODE_FAMI_MACH  , dbo.OPTIMA_TRADUCTION(DESI_FAMI_MACH,'fr') +'@KEYLANG_'+DESI_FAMI_MACH AS DESI_FAMI_MACH  , CODE_SITE  , CODE_ATEL  , CODE_SECT_GEOG  FROM MACHINE_GROUPE  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_FAMI_MACH_SITE ASC  
+16:43:48.234 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE_GROUPE query =set rowcount 3000  SELECT CODE_FAMI_MACH_SITE  , CODE_FAMI_MACH  , dbo.OPTIMA_TRADUCTION(DESI_FAMI_MACH,'fr') +'@KEYLANG_'+DESI_FAMI_MACH AS DESI_FAMI_MACH  , CODE_SITE  , CODE_ATEL  , CODE_SECT_GEOG  FROM MACHINE_GROUPE  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_FAMI_MACH_SITE ASC  
+16:44:04.927 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE_GROUPE query =set rowcount 3000  SELECT CODE_FAMI_MACH_SITE  , CODE_FAMI_MACH  , dbo.OPTIMA_TRADUCTION(DESI_FAMI_MACH,'fr') +'@KEYLANG_'+DESI_FAMI_MACH AS DESI_FAMI_MACH  , CODE_SITE  , CODE_ATEL  , CODE_SECT_GEOG  FROM MACHINE_GROUPE  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_FAMI_MACH_SITE ASC  
+16:44:11.090 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE_GROUPE query =set rowcount 3000  SELECT CODE_FAMI_MACH_SITE  , CODE_FAMI_MACH  , dbo.OPTIMA_TRADUCTION(DESI_FAMI_MACH,'fr') +'@KEYLANG_'+DESI_FAMI_MACH AS DESI_FAMI_MACH  , CODE_SITE  , CODE_ATEL  , CODE_SECT_GEOG  FROM MACHINE_GROUPE  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_FAMI_MACH_SITE ASC  
+16:44:18.855 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE_GROUPE query =set rowcount 3000  SELECT CODE_FAMI_MACH_SITE  , CODE_FAMI_MACH  , dbo.OPTIMA_TRADUCTION(DESI_FAMI_MACH,'fr') +'@KEYLANG_'+DESI_FAMI_MACH AS DESI_FAMI_MACH  , CODE_SITE  , CODE_ATEL  , CODE_SECT_GEOG  FROM MACHINE_GROUPE  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_FAMI_MACH_SITE ASC  
+16:44:34.904 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE_GROUPE query =set rowcount 3000  SELECT CODE_FAMI_MACH_SITE  , CODE_FAMI_MACH  , dbo.OPTIMA_TRADUCTION(DESI_FAMI_MACH,'fr') +'@KEYLANG_'+DESI_FAMI_MACH AS DESI_FAMI_MACH  , CODE_SITE  , CODE_ATEL  , CODE_SECT_GEOG  FROM MACHINE_GROUPE  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_FAMI_MACH_SITE ASC  
+16:44:48.174 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE_GROUPE query =set rowcount 3000  SELECT CODE_FAMI_MACH_SITE  , CODE_FAMI_MACH  , dbo.OPTIMA_TRADUCTION(DESI_FAMI_MACH,'fr') +'@KEYLANG_'+DESI_FAMI_MACH AS DESI_FAMI_MACH  , CODE_SITE  , CODE_ATEL  , CODE_SECT_GEOG  FROM MACHINE_GROUPE  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_FAMI_MACH_SITE ASC  
+16:45:00.987 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE_GROUPE query =set rowcount 3000  SELECT CODE_FAMI_MACH_SITE  , CODE_FAMI_MACH  , dbo.OPTIMA_TRADUCTION(DESI_FAMI_MACH,'fr') +'@KEYLANG_'+DESI_FAMI_MACH AS DESI_FAMI_MACH  , CODE_SITE  , CODE_ATEL  , CODE_SECT_GEOG  FROM MACHINE_GROUPE  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_FAMI_MACH_SITE ASC  
+16:45:29.084 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE_GROUPE query =set rowcount 3000  SELECT CODE_FAMI_MACH_SITE  , CODE_FAMI_MACH  , dbo.OPTIMA_TRADUCTION(DESI_FAMI_MACH,'fr') +'@KEYLANG_'+DESI_FAMI_MACH AS DESI_FAMI_MACH  , CODE_SITE  , CODE_ATEL  , CODE_SECT_GEOG  FROM MACHINE_GROUPE  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_FAMI_MACH_SITE ASC  
+16:45:44.257 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE_GROUPE query =set rowcount 3000  SELECT CODE_FAMI_MACH_SITE  , CODE_FAMI_MACH  , dbo.OPTIMA_TRADUCTION(DESI_FAMI_MACH,'fr') +'@KEYLANG_'+DESI_FAMI_MACH AS DESI_FAMI_MACH  , CODE_SITE  , CODE_ATEL  , CODE_SECT_GEOG  FROM MACHINE_GROUPE  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_FAMI_MACH_SITE ASC  
+16:46:00.568 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE_GROUPE query =set rowcount 3000  SELECT CODE_FAMI_MACH_SITE  , CODE_FAMI_MACH  , dbo.OPTIMA_TRADUCTION(DESI_FAMI_MACH,'fr') +'@KEYLANG_'+DESI_FAMI_MACH AS DESI_FAMI_MACH  , CODE_SITE  , CODE_ATEL  , CODE_SECT_GEOG  FROM MACHINE_GROUPE  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_FAMI_MACH_SITE ASC  
+16:46:20.573 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE_GROUPE query =set rowcount 3000  SELECT CODE_FAMI_MACH_SITE  , CODE_FAMI_MACH  , dbo.OPTIMA_TRADUCTION(DESI_FAMI_MACH,'fr') +'@KEYLANG_'+DESI_FAMI_MACH AS DESI_FAMI_MACH  , CODE_SITE  , CODE_ATEL  , CODE_SECT_GEOG  FROM MACHINE_GROUPE  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_FAMI_MACH_SITE ASC  
+16:46:35.178 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE_GROUPE query =set rowcount 3000  SELECT CODE_FAMI_MACH_SITE  , CODE_FAMI_MACH  , dbo.OPTIMA_TRADUCTION(DESI_FAMI_MACH,'fr') +'@KEYLANG_'+DESI_FAMI_MACH AS DESI_FAMI_MACH  , CODE_SITE  , CODE_ATEL  , CODE_SECT_GEOG  FROM MACHINE_GROUPE  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_FAMI_MACH_SITE ASC  
+16:46:52.006 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE_GROUPE query =set rowcount 3000  SELECT CODE_FAMI_MACH_SITE  , CODE_FAMI_MACH  , dbo.OPTIMA_TRADUCTION(DESI_FAMI_MACH,'fr') +'@KEYLANG_'+DESI_FAMI_MACH AS DESI_FAMI_MACH  , CODE_SITE  , CODE_ATEL  , CODE_SECT_GEOG  FROM MACHINE_GROUPE  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_FAMI_MACH_SITE ASC  
+16:47:24.742 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE_GROUPE query =set rowcount 3000  SELECT CODE_FAMI_MACH_SITE  , CODE_FAMI_MACH  , dbo.OPTIMA_TRADUCTION(DESI_FAMI_MACH,'fr') +'@KEYLANG_'+DESI_FAMI_MACH AS DESI_FAMI_MACH  , CODE_SITE  , CODE_ATEL  , CODE_SECT_GEOG  FROM MACHINE_GROUPE  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_FAMI_MACH_SITE ASC  
+16:47:41.257 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE_GROUPE query =set rowcount 3000  SELECT CODE_FAMI_MACH_SITE  , CODE_FAMI_MACH  , dbo.OPTIMA_TRADUCTION(DESI_FAMI_MACH,'fr') +'@KEYLANG_'+DESI_FAMI_MACH AS DESI_FAMI_MACH  , CODE_SITE  , CODE_ATEL  , CODE_SECT_GEOG  FROM MACHINE_GROUPE  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_FAMI_MACH_SITE ASC  
+16:47:47.035 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE query =set rowcount 3000  SELECT CODE_MACH_SITE  , CODE_MACH  , TYPE_MACH  , dbo.OPTIMA_TRADUCTION(DESI_MACH,'fr') +'@KEYLANG_'+DESI_MACH AS DESI_MACH  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_HORA  , CODE_TERM  , CODE_FAMI_MACH  , FLAG_HABI  , FLAG_MAIN_PREV  , FLAG_ABSE_COMP  , DURE_ABSE_COMP  , NOMB_OPER_MAXI  , DURE_MAJO_CYCL  , FLAG_MACH_ACTI  , TAUX_REBU_THEO  , MODE_CALC_QUAN  , TYPE_GEST_GAMM  , TYPE_GEST_CYCL  , NOMB_PIEC_CYCL  , DURE_DETE_FIN_FABR  , NOMB_CYCL_MAXI  , DURE_MAXI_MICR_ARRE  , DURE_TEMP_PASS_ARRE  , DURE_ARRE_INDE_MAXI  , FLAG_CHAN_FABR_AUTO  , TECH_AVAN_CYCL_THEO  , NUME_BOIT_SUPE  , SUPE_NUME_ORDR  , LIEN_IMAG  , TAUX_HORA_PREP_MACH  , TAUX_HORA_PROD_MACH  , TAUX_HORA_PREP_MO  , TAUX_HORA_PROD_MO  , NUME_SERI  , dbo.OPTIMA_TRADUCTION(DESI_MARQ,'fr') +'@KEYLANG_'+DESI_MARQ AS DESI_MARQ  , CONVERT(NVARCHAR, DATE_MISE_SERV, 103) AS DATE_MISE_SERV  , FLAG_GEST_PLAN  , FLAG_OBLI_PERS  , CODE_ETAT_DEBU_OF  , CODE_ETAT_FIN_OF  , CAPA_CONT_MAXI  , CODE_UNIT  , CODE_SITE  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_EXPO_DIMO  , FLAG_SUPP FROM MACHINE  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_MACH_SITE ASC  
+16:48:12.114 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE query =set rowcount 3000  SELECT CODE_MACH_SITE  , CODE_MACH  , TYPE_MACH  , dbo.OPTIMA_TRADUCTION(DESI_MACH,'fr') +'@KEYLANG_'+DESI_MACH AS DESI_MACH  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_HORA  , CODE_TERM  , CODE_FAMI_MACH  , FLAG_HABI  , FLAG_MAIN_PREV  , FLAG_ABSE_COMP  , DURE_ABSE_COMP  , NOMB_OPER_MAXI  , DURE_MAJO_CYCL  , FLAG_MACH_ACTI  , TAUX_REBU_THEO  , MODE_CALC_QUAN  , TYPE_GEST_GAMM  , TYPE_GEST_CYCL  , NOMB_PIEC_CYCL  , DURE_DETE_FIN_FABR  , NOMB_CYCL_MAXI  , DURE_MAXI_MICR_ARRE  , DURE_TEMP_PASS_ARRE  , DURE_ARRE_INDE_MAXI  , FLAG_CHAN_FABR_AUTO  , TECH_AVAN_CYCL_THEO  , NUME_BOIT_SUPE  , SUPE_NUME_ORDR  , LIEN_IMAG  , TAUX_HORA_PREP_MACH  , TAUX_HORA_PROD_MACH  , TAUX_HORA_PREP_MO  , TAUX_HORA_PROD_MO  , NUME_SERI  , dbo.OPTIMA_TRADUCTION(DESI_MARQ,'fr') +'@KEYLANG_'+DESI_MARQ AS DESI_MARQ  , CONVERT(NVARCHAR, DATE_MISE_SERV, 103) AS DATE_MISE_SERV  , FLAG_GEST_PLAN  , FLAG_OBLI_PERS  , CODE_ETAT_DEBU_OF  , CODE_ETAT_FIN_OF  , CAPA_CONT_MAXI  , CODE_UNIT  , CODE_SITE  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_EXPO_DIMO  , FLAG_SUPP FROM MACHINE  WHERE ( CODE_SITE = 'FAB')  AND ( TYPE_MACH LIKE  '%'  OR TYPE_MACH IS NULL  )  AND ( FLAG_EXPO_DIMO LIKE  '%'  OR FLAG_EXPO_DIMO IS NULL  )  ORDER BY CODE_MACH_SITE ASC  
+16:48:25.829 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE query =set rowcount 3000  SELECT CODE_MACH_SITE  , CODE_MACH  , TYPE_MACH  , dbo.OPTIMA_TRADUCTION(DESI_MACH,'fr') +'@KEYLANG_'+DESI_MACH AS DESI_MACH  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_HORA  , CODE_TERM  , CODE_FAMI_MACH  , FLAG_HABI  , FLAG_MAIN_PREV  , FLAG_ABSE_COMP  , DURE_ABSE_COMP  , NOMB_OPER_MAXI  , DURE_MAJO_CYCL  , FLAG_MACH_ACTI  , TAUX_REBU_THEO  , MODE_CALC_QUAN  , TYPE_GEST_GAMM  , TYPE_GEST_CYCL  , NOMB_PIEC_CYCL  , DURE_DETE_FIN_FABR  , NOMB_CYCL_MAXI  , DURE_MAXI_MICR_ARRE  , DURE_TEMP_PASS_ARRE  , DURE_ARRE_INDE_MAXI  , FLAG_CHAN_FABR_AUTO  , TECH_AVAN_CYCL_THEO  , NUME_BOIT_SUPE  , SUPE_NUME_ORDR  , LIEN_IMAG  , TAUX_HORA_PREP_MACH  , TAUX_HORA_PROD_MACH  , TAUX_HORA_PREP_MO  , TAUX_HORA_PROD_MO  , NUME_SERI  , dbo.OPTIMA_TRADUCTION(DESI_MARQ,'fr') +'@KEYLANG_'+DESI_MARQ AS DESI_MARQ  , CONVERT(NVARCHAR, DATE_MISE_SERV, 103) AS DATE_MISE_SERV  , FLAG_GEST_PLAN  , FLAG_OBLI_PERS  , CODE_ETAT_DEBU_OF  , CODE_ETAT_FIN_OF  , CAPA_CONT_MAXI  , CODE_UNIT  , CODE_SITE  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_EXPO_DIMO  , FLAG_SUPP FROM MACHINE  WHERE ( CODE_SITE = 'FAB')  AND ( TYPE_MACH LIKE  '%'  OR TYPE_MACH IS NULL  )  AND ( FLAG_EXPO_DIMO LIKE  '%'  OR FLAG_EXPO_DIMO IS NULL  )  ORDER BY CODE_MACH_SITE ASC  
+17:00:31.825 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Personnel_Activite_EnCours_Liste_1 
+17:00:31.826 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'... 
+17:00:31.827 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'... 
+17:00:31.829 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Personnel_Activite_EnCours_Liste_1 
+17:00:31.830 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'... 
+17:00:31.830 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Personnel_Activite_EnCours_Liste_1\_Personnel_Activite_EnCours_Liste_1.xls'... 
+17:00:31.848 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+17:00:31.850 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+17:00:40.735 DEBUG - GSqlQueryGeneratorSqlServer --->table =PERSONNEL query =set rowcount 3000  SELECT MATR_SITE  , MATR  , CODE_BADG  , FLAG_INTE  , NOM  , PREN  , ADRE_TELE  , ADRE_MAIL  , FLAG_BADG_BLOQ  , NOMB_ACTI_MAXI  , FLAG_SUIV_POIN  , KELI_KEY  , FLAG_GEST_PLAN  , FLAG_KELI_IMPO  , LIEN_IMAG  , CODE_HORA_1  , CODE_SERV  , CODE_EQUI_DEFA  , CODE_ATEL  , CODE_ATEL_DEFA  , CODE_SECT_GEOG  , CODE_SECT_GEOG_DEFA  , CODE_ETAT_PERS_DEFA  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DERN_POIN), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_DERN_POIN), 108) AS DATE_DERN_POIN  , CODE_SITE  , DELT_HEUR_UTC  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_HABI_MACH  , FLAG_SUPP FROM PERSONNEL  WHERE ( CODE_SITE = 'FAB')  ORDER BY MATR_SITE ASC  
+17:01:23.050 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Production_OF_EnCours_2 
+17:01:23.051 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+17:01:23.051 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+17:01:23.066 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Production_OF_EnCours_2 
+17:01:23.067 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+17:01:23.067 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+17:01:23.081 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+17:01:23.091 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+17:01:28.187 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Production_OF_EnCours_2 
+17:01:28.187 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+17:01:28.188 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+17:01:28.207 DEBUG - TableDivTransformer createFileName ()--> Nom du fichier export = _Production_OF_EnCours_2 
+17:01:28.208 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+17:01:28.208 DEBUG - TableExcelTransformer actionPerformed - Ecriture dans le fichier 'C:\Osys\QuartisTools\Tomcat\webapps\Quartis-Web\.\work\_0.0.0.0.0.0.0.1-administrateur\_Production_OF_EnCours_2\_Production_OF_EnCours_2.xls'... 
+17:01:28.209 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+17:01:28.228 DEBUG - TableExcelTransformer actionPerformed - Fin de l'écriture dans le fichier. 
+17:01:36.877 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE query =set rowcount 3000  SELECT CODE_MACH_SITE  , CODE_MACH  , TYPE_MACH  , dbo.OPTIMA_TRADUCTION(DESI_MACH,'fr') +'@KEYLANG_'+DESI_MACH AS DESI_MACH  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_HORA  , CODE_TERM  , CODE_FAMI_MACH  , FLAG_HABI  , FLAG_MAIN_PREV  , FLAG_ABSE_COMP  , DURE_ABSE_COMP  , NOMB_OPER_MAXI  , DURE_MAJO_CYCL  , FLAG_MACH_ACTI  , TAUX_REBU_THEO  , MODE_CALC_QUAN  , TYPE_GEST_GAMM  , TYPE_GEST_CYCL  , NOMB_PIEC_CYCL  , DURE_DETE_FIN_FABR  , NOMB_CYCL_MAXI  , DURE_MAXI_MICR_ARRE  , DURE_TEMP_PASS_ARRE  , DURE_ARRE_INDE_MAXI  , FLAG_CHAN_FABR_AUTO  , TECH_AVAN_CYCL_THEO  , NUME_BOIT_SUPE  , SUPE_NUME_ORDR  , LIEN_IMAG  , TAUX_HORA_PREP_MACH  , TAUX_HORA_PROD_MACH  , TAUX_HORA_PREP_MO  , TAUX_HORA_PROD_MO  , NUME_SERI  , dbo.OPTIMA_TRADUCTION(DESI_MARQ,'fr') +'@KEYLANG_'+DESI_MARQ AS DESI_MARQ  , CONVERT(NVARCHAR, DATE_MISE_SERV, 103) AS DATE_MISE_SERV  , FLAG_GEST_PLAN  , FLAG_OBLI_PERS  , CODE_ETAT_DEBU_OF  , CODE_ETAT_FIN_OF  , CAPA_CONT_MAXI  , CODE_UNIT  , CODE_SITE  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_EXPO_DIMO  , FLAG_SUPP FROM MACHINE  WHERE ( CODE_SITE = 'FAB')  ORDER BY CODE_MACH_SITE ASC  
+17:04:17.769 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE query =set rowcount 3000  SELECT CODE_MACH_SITE  , CODE_MACH  , TYPE_MACH  , dbo.OPTIMA_TRADUCTION(DESI_MACH,'fr') +'@KEYLANG_'+DESI_MACH AS DESI_MACH  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_HORA  , CODE_TERM  , CODE_FAMI_MACH  , FLAG_HABI  , FLAG_MAIN_PREV  , FLAG_ABSE_COMP  , DURE_ABSE_COMP  , NOMB_OPER_MAXI  , DURE_MAJO_CYCL  , FLAG_MACH_ACTI  , TAUX_REBU_THEO  , MODE_CALC_QUAN  , TYPE_GEST_GAMM  , TYPE_GEST_CYCL  , NOMB_PIEC_CYCL  , DURE_DETE_FIN_FABR  , NOMB_CYCL_MAXI  , DURE_MAXI_MICR_ARRE  , DURE_TEMP_PASS_ARRE  , DURE_ARRE_INDE_MAXI  , FLAG_CHAN_FABR_AUTO  , TECH_AVAN_CYCL_THEO  , NUME_BOIT_SUPE  , SUPE_NUME_ORDR  , LIEN_IMAG  , TAUX_HORA_PREP_MACH  , TAUX_HORA_PROD_MACH  , TAUX_HORA_PREP_MO  , TAUX_HORA_PROD_MO  , NUME_SERI  , dbo.OPTIMA_TRADUCTION(DESI_MARQ,'fr') +'@KEYLANG_'+DESI_MARQ AS DESI_MARQ  , CONVERT(NVARCHAR, DATE_MISE_SERV, 103) AS DATE_MISE_SERV  , FLAG_GEST_PLAN  , FLAG_OBLI_PERS  , CODE_ETAT_DEBU_OF  , CODE_ETAT_FIN_OF  , CAPA_CONT_MAXI  , CODE_UNIT  , CODE_SITE  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_EXPO_DIMO  , FLAG_SUPP FROM MACHINE  WHERE ( CODE_SITE = 'FAB')  AND ( TYPE_MACH LIKE  '%'  OR TYPE_MACH IS NULL  )  AND ( FLAG_EXPO_DIMO LIKE  '%'  OR FLAG_EXPO_DIMO IS NULL  )  ORDER BY CODE_MACH_SITE ASC  
+17:11:19.748 ERROR - FormulairesManagedBean null 
+17:11:19.749 ERROR - FormulairesManagedBean null 
+17:11:19.749 ERROR - FormulairesManagedBean null 
+17:11:19.749 ERROR - FormulairesManagedBean null 
+17:11:19.750 ERROR - FormulairesManagedBean null 
+17:11:19.750 ERROR - FormulairesManagedBean null 
+17:11:19.750 ERROR - FormulairesManagedBean null 
+17:11:19.750 ERROR - FormulairesManagedBean null 
+17:11:19.751 ERROR - FormulairesManagedBean null 
+17:11:19.751 ERROR - FormulairesManagedBean null 
+17:11:19.751 ERROR - FormulairesManagedBean null 
+17:11:19.751 ERROR - FormulairesManagedBean null 
+17:11:19.752 ERROR - FormulairesManagedBean null 
+17:11:19.752 ERROR - FormulairesManagedBean null 
+17:23:30.361 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE query =set rowcount 3000  SELECT CODE_MACH_SITE  , CODE_MACH  , TYPE_MACH  , dbo.OPTIMA_TRADUCTION(DESI_MACH,'fr') +'@KEYLANG_'+DESI_MACH AS DESI_MACH  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_HORA  , CODE_TERM  , CODE_FAMI_MACH  , FLAG_HABI  , FLAG_MAIN_PREV  , FLAG_ABSE_COMP  , DURE_ABSE_COMP  , NOMB_OPER_MAXI  , DURE_MAJO_CYCL  , FLAG_MACH_ACTI  , TAUX_REBU_THEO  , MODE_CALC_QUAN  , TYPE_GEST_GAMM  , TYPE_GEST_CYCL  , NOMB_PIEC_CYCL  , DURE_DETE_FIN_FABR  , NOMB_CYCL_MAXI  , DURE_MAXI_MICR_ARRE  , DURE_TEMP_PASS_ARRE  , DURE_ARRE_INDE_MAXI  , FLAG_CHAN_FABR_AUTO  , TECH_AVAN_CYCL_THEO  , NUME_BOIT_SUPE  , SUPE_NUME_ORDR  , LIEN_IMAG  , TAUX_HORA_PREP_MACH  , TAUX_HORA_PROD_MACH  , TAUX_HORA_PREP_MO  , TAUX_HORA_PROD_MO  , NUME_SERI  , dbo.OPTIMA_TRADUCTION(DESI_MARQ,'fr') +'@KEYLANG_'+DESI_MARQ AS DESI_MARQ  , CONVERT(NVARCHAR, DATE_MISE_SERV, 103) AS DATE_MISE_SERV  , FLAG_GEST_PLAN  , FLAG_OBLI_PERS  , CODE_ETAT_DEBU_OF  , CODE_ETAT_FIN_OF  , CAPA_CONT_MAXI  , CODE_UNIT  , CODE_SITE  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_EXPO_DIMO  , FLAG_SUPP FROM MACHINE  WHERE ( CODE_SITE = 'FAB')  AND ( TYPE_MACH LIKE  '%'  OR TYPE_MACH IS NULL  )  AND ( FLAG_EXPO_DIMO LIKE  '%'  OR FLAG_EXPO_DIMO IS NULL  )  ORDER BY CODE_MACH_SITE ASC  
+17:23:41.947 ERROR - GSql  java.sql.DataTruncation: Data truncation
+	at net.sourceforge.jtds.jdbc.SQLDiagnostic.addDiagnostic(SQLDiagnostic.java:382)
+	at net.sourceforge.jtds.jdbc.TdsCore.tdsErrorToken(TdsCore.java:2816)
+	at net.sourceforge.jtds.jdbc.TdsCore.nextToken(TdsCore.java:2254)
+	at net.sourceforge.jtds.jdbc.TdsCore.getMoreResults(TdsCore.java:631)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.processResults(JtdsStatement.java:584)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeSQL(JtdsStatement.java:546)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeImpl(JtdsStatement.java:723)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeUpdate(JtdsStatement.java:1163)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeUpdate(JtdsStatement.java:1116)
+	at org.apache.commons.dbcp.DelegatingStatement.executeUpdate(DelegatingStatement.java:228)
+	at sun.reflect.GeneratedMethodAccessor1772.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.bull.javamelody.JdbcWrapper.doExecute(JdbcWrapper.java:404)
+	at net.bull.javamelody.JdbcWrapper$StatementInvocationHandler.invoke(JdbcWrapper.java:129)
+	at net.bull.javamelody.JdbcWrapper$DelegatingInvocationHandler.invoke(JdbcWrapper.java:286)
+	at com.sun.proxy.$Proxy126.executeUpdate(Unknown Source)
+	at quartisweb.generic.sql.GSql.insertGeneric(GSql.java:240)
+	at quartisweb.jsf.managedBean.FormulairesManagedBean.doImport(FormulairesManagedBean.java:1937)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.el.parser.AstValue.invoke(AstValue.java:191)
+	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:276)
+	at org.apache.jasper.el.JspMethodExpression.invoke(JspMethodExpression.java:68)
+	at javax.faces.event.MethodExpressionActionListener.processAction(MethodExpressionActionListener.java:88)
+	at javax.faces.event.ActionEvent.processListener(ActionEvent.java:77)
+	at javax.faces.component.UIComponentBase.broadcast(UIComponentBase.java:746)
+	at javax.faces.component.UICommand.broadcast(UICommand.java:368)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:447)
+	at javax.faces.component.UIViewRoot.processApplication(UIViewRoot.java:752)
+	at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:97)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:117)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:244)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.RepeteurFilter.doFilter(RepeteurFilter.java:104)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:233)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+17:23:42.133 ERROR - GSql  java.sql.DataTruncation: Data truncation
+	at net.sourceforge.jtds.jdbc.SQLDiagnostic.addDiagnostic(SQLDiagnostic.java:382)
+	at net.sourceforge.jtds.jdbc.TdsCore.tdsErrorToken(TdsCore.java:2816)
+	at net.sourceforge.jtds.jdbc.TdsCore.nextToken(TdsCore.java:2254)
+	at net.sourceforge.jtds.jdbc.TdsCore.getMoreResults(TdsCore.java:631)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.processResults(JtdsStatement.java:584)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeSQL(JtdsStatement.java:546)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeImpl(JtdsStatement.java:723)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeUpdate(JtdsStatement.java:1163)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeUpdate(JtdsStatement.java:1116)
+	at org.apache.commons.dbcp.DelegatingStatement.executeUpdate(DelegatingStatement.java:228)
+	at sun.reflect.GeneratedMethodAccessor1772.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.bull.javamelody.JdbcWrapper.doExecute(JdbcWrapper.java:404)
+	at net.bull.javamelody.JdbcWrapper$StatementInvocationHandler.invoke(JdbcWrapper.java:129)
+	at net.bull.javamelody.JdbcWrapper$DelegatingInvocationHandler.invoke(JdbcWrapper.java:286)
+	at com.sun.proxy.$Proxy126.executeUpdate(Unknown Source)
+	at quartisweb.generic.sql.GSql.insertGeneric(GSql.java:240)
+	at quartisweb.jsf.managedBean.FormulairesManagedBean.doImport(FormulairesManagedBean.java:1937)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.el.parser.AstValue.invoke(AstValue.java:191)
+	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:276)
+	at org.apache.jasper.el.JspMethodExpression.invoke(JspMethodExpression.java:68)
+	at javax.faces.event.MethodExpressionActionListener.processAction(MethodExpressionActionListener.java:88)
+	at javax.faces.event.ActionEvent.processListener(ActionEvent.java:77)
+	at javax.faces.component.UIComponentBase.broadcast(UIComponentBase.java:746)
+	at javax.faces.component.UICommand.broadcast(UICommand.java:368)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:447)
+	at javax.faces.component.UIViewRoot.processApplication(UIViewRoot.java:752)
+	at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:97)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:117)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:244)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.RepeteurFilter.doFilter(RepeteurFilter.java:104)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:233)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+17:23:42.192 ERROR - GSql  java.sql.DataTruncation: Data truncation
+	at net.sourceforge.jtds.jdbc.SQLDiagnostic.addDiagnostic(SQLDiagnostic.java:382)
+	at net.sourceforge.jtds.jdbc.TdsCore.tdsErrorToken(TdsCore.java:2816)
+	at net.sourceforge.jtds.jdbc.TdsCore.nextToken(TdsCore.java:2254)
+	at net.sourceforge.jtds.jdbc.TdsCore.getMoreResults(TdsCore.java:631)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.processResults(JtdsStatement.java:584)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeSQL(JtdsStatement.java:546)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeImpl(JtdsStatement.java:723)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeUpdate(JtdsStatement.java:1163)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeUpdate(JtdsStatement.java:1116)
+	at org.apache.commons.dbcp.DelegatingStatement.executeUpdate(DelegatingStatement.java:228)
+	at sun.reflect.GeneratedMethodAccessor1772.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.bull.javamelody.JdbcWrapper.doExecute(JdbcWrapper.java:404)
+	at net.bull.javamelody.JdbcWrapper$StatementInvocationHandler.invoke(JdbcWrapper.java:129)
+	at net.bull.javamelody.JdbcWrapper$DelegatingInvocationHandler.invoke(JdbcWrapper.java:286)
+	at com.sun.proxy.$Proxy126.executeUpdate(Unknown Source)
+	at quartisweb.generic.sql.GSql.insertGeneric(GSql.java:240)
+	at quartisweb.jsf.managedBean.FormulairesManagedBean.doImport(FormulairesManagedBean.java:1937)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.el.parser.AstValue.invoke(AstValue.java:191)
+	at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:276)
+	at org.apache.jasper.el.JspMethodExpression.invoke(JspMethodExpression.java:68)
+	at javax.faces.event.MethodExpressionActionListener.processAction(MethodExpressionActionListener.java:88)
+	at javax.faces.event.ActionEvent.processListener(ActionEvent.java:77)
+	at javax.faces.component.UIComponentBase.broadcast(UIComponentBase.java:746)
+	at javax.faces.component.UICommand.broadcast(UICommand.java:368)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:447)
+	at javax.faces.component.UIViewRoot.processApplication(UIViewRoot.java:752)
+	at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:97)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:251)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:117)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:244)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:201)
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.logging.log4j.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.RepeteurFilter.doFilter(RepeteurFilter.java:104)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.servlet.EncodingFilter.doFilter(EncodingFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at quartisweb.filter.FiltreSession.doFilter(FiltreSession.java:233)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11NioProcessor.process(Http11NioProcessor.java:886)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:721)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:2256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+17:23:42.899 DEBUG - GSqlQueryGeneratorSqlServer --->table =MACHINE query =set rowcount 3000  SELECT CODE_MACH_SITE  , CODE_MACH  , TYPE_MACH  , dbo.OPTIMA_TRADUCTION(DESI_MACH,'fr') +'@KEYLANG_'+DESI_MACH AS DESI_MACH  , CODE_ATEL  , CODE_SECT_GEOG  , CODE_SECT_ANAL  , CODE_HORA  , CODE_TERM  , CODE_FAMI_MACH  , FLAG_HABI  , FLAG_MAIN_PREV  , FLAG_ABSE_COMP  , DURE_ABSE_COMP  , NOMB_OPER_MAXI  , DURE_MAJO_CYCL  , FLAG_MACH_ACTI  , TAUX_REBU_THEO  , MODE_CALC_QUAN  , TYPE_GEST_GAMM  , TYPE_GEST_CYCL  , NOMB_PIEC_CYCL  , DURE_DETE_FIN_FABR  , NOMB_CYCL_MAXI  , DURE_MAXI_MICR_ARRE  , DURE_TEMP_PASS_ARRE  , DURE_ARRE_INDE_MAXI  , FLAG_CHAN_FABR_AUTO  , TECH_AVAN_CYCL_THEO  , NUME_BOIT_SUPE  , SUPE_NUME_ORDR  , LIEN_IMAG  , TAUX_HORA_PREP_MACH  , TAUX_HORA_PROD_MACH  , TAUX_HORA_PREP_MO  , TAUX_HORA_PROD_MO  , NUME_SERI  , dbo.OPTIMA_TRADUCTION(DESI_MARQ,'fr') +'@KEYLANG_'+DESI_MARQ AS DESI_MARQ  , CONVERT(NVARCHAR, DATE_MISE_SERV, 103) AS DATE_MISE_SERV  , FLAG_GEST_PLAN  , FLAG_OBLI_PERS  , CODE_ETAT_DEBU_OF  , CODE_ETAT_FIN_OF  , CAPA_CONT_MAXI  , CODE_UNIT  , CODE_SITE  , CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 103) +' '+CONVERT(NVARCHAR, DATEADD(SECOND, DELT_HEUR_UTC,DATE_EXPO_DIMO), 108) AS DATE_EXPO_DIMO  , FLAG_EXPO_DIMO  , FLAG_SUPP FROM MACHINE  WHERE ( CODE_SITE = 'FAB')  AND ( TYPE_MACH LIKE  '%'  OR TYPE_MACH IS NULL  )  AND ( FLAG_EXPO_DIMO LIKE  '%'  OR FLAG_EXPO_DIMO IS NULL  )  ORDER BY CODE_MACH_SITE ASC  
